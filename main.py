@@ -17,16 +17,16 @@ async def main():
     rythme = Tempo()
     filtre = Thalamus()
     
-    print("--- Système aNA en ligne ---")
+    print("--- aNA online system ---")
     
-    # 2. Lancement du cycle
-    # Puisque start_orchestrator contient une boucle 'while', 
-    # c'est elle qui va piloter le système.
+    # 2. Starting the cycle
+    # Since start_orchestrator contains a 'while' loop,
+    # it is this loop that will control the system.
     try:
-        await rythme.start_orchestrator(input_stream="données_test")
+        await rythme.start_orchestrator(input_stream="test_data")
     except KeyboardInterrupt:
-        print("\nArrêt sécurisé du système.")
+        print("\nSafe system shutdown.")
 
 if __name__ == "__main__":
-    # Point d'entrée unique pour la boucle asynchrone
+    # Single entry point for the asynchronous loop
     asyncio.run(main())
