@@ -1,1 +1,10 @@
+# Python
+__pycache__/
+*.pyc
 
+# VS Code (pour garder les préférences locales privées)
+.vscode/
+
+# Système
+.DS_Store
+Thumbs.db
