@@ -21,7 +21,7 @@
 │   └── learning-demo.html          # (To do)
 ├── README.md                       # The Manifesto
 ├── CONTRIBUTING.md                 # The rules of collaboration
-└── LICENSE.md                      # Your protection license
+└── LICENSE                         # Your protection license
 ```
 
 ### Level 1: Core brain simulation
