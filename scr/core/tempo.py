@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 """
 aNA v5.0 - Core Pacemaker (TEMPO)
 Orchestrator for the cognitive loop: Input -> Prediction -> Output
