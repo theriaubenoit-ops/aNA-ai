@@ -1,4 +1,4 @@
-"""
+""" 
 aNA v5.0 - Core Pacemaker (TEMPO)
 Orchestrator for the cognitive loop: Input -> Prediction -> Output
 """
