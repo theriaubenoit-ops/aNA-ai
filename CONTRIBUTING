@@ -15,7 +15,7 @@
 
 We are building an *Autonomous Neural Architecture* that reflects biological principles rather than statistical shortcuts. If you wish to engage with this project, we view you not as a "contributor" but as a research partner/observer.
 
-### **How to engage**
+### How to engage
 **Peer Review & critique:** The most valuable input is the challenge. If you see a logical flaw in our modeling of a *cortical layer* or a *neuromodulatory* pathway, point it out. Precision is our primary goal.
 
 **Architectural alignment:** Before proposing changes, please review the `/docs/philosophy.md` and `/docs/architecture.md`. All additions must respect the principles of energy sobriety and targeted plasticity.
@@ -24,17 +24,17 @@ We are building an *Autonomous Neural Architecture* that reflects biological pri
 
 **Documentation consistency:** Any change must update the relevant documentation. An undocumented feature is, for our research purposes, a non-existent one.
 
-### **Our shared ethos**
+### Our shared ethos
 We are moving away from the "open-source contribution" model—where the goal is often quantity—toward a "research collaboration" model, where the goal is accuracy. We are documenting a trajectory toward a more harmonious coexistence between biological and digital systems.
 
-### ***Join the "neuroinformatics" observers!***
+### Join the "neuroinformatics" observers!
 
 ```
 
 ```
 ---
 
-## **Future horizons: The potential of *aNA* **
+## Future horizons: The potential of *aNA*
 The **aNA** project is more than just a *codebase*; it is a *sandbox* for exploration at the intersection of *biology* and *computation*. By contributing to this project, you are helping to unlock several key areas of development:
 
 **Educational Toolset:** **aNA** serves as a living laboratory for teaching *neurosciences* and *AI*. By visualizing how *neural cascades* respond to stimuli, it makes complex biological concepts tangible and interactive.
