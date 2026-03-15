@@ -32,7 +32,7 @@ We are embarking on the "next wave" of artificial intelligence—an AI that does
 
 ---
 
-## Glossary: key cognitive terms
+## 📚 Glossary: key cognitive terms
 
 - **Six cortical layers**: The standard vertical organization of the mammalian _neocortex_. In **aNA**, these layers define the functional hierarchy: _Layer IV (input)_, _Layers II/III (association/prediction)_, and _Layer V/VI (motor output)_.
 

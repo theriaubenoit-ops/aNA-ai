@@ -38,7 +38,7 @@ We are moving away from the "open-source contribution" model—where the goal is
 
 ---
 
-## Future horizons: The potential of _aNA_
+## 💡 Future horizons: The potential of _aNA_
 
 The **aNA** project is more than just a _codebase_; it is a _sandbox_ for exploration at the intersection of _biology_ and _computation_. By contributing to this project, you are helping to unlock several key areas of development:
 
