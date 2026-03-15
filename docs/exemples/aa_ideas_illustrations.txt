@@ -1,7 +1,0 @@
-Cortex, lobes: occipital, frontal, temporal, parietal
-Thalamus
-Hippocampus
-Amygdala
-Cerebellum
-Cortical column, neurons
-Neurons, synapses, ...
