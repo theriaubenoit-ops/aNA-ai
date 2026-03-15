@@ -7,7 +7,7 @@
 │   │   ├── thalamus.py             # Enhanced Thalamus implementation
 │   │   └── neuron.py               # Represents a single neuron
 │   ├── anatomy/                    # Brain region implementations
-│   │   ├── neural_transmission     # The standardized data structure
+│   │   ├── neural_transmission.py  # The standardized data structure
 │   │   └── tempo.py                # Core Pacemaker
 │   ├── gui/                        # (To do) Web-based interface
 │   └── tests/                      # (To do) Comprehensive test suite
