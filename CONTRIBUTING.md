@@ -11,7 +11,7 @@
 ░                                                  ‾   ‾   ‾
 ```
 
-**aNA** is a collaborative research initiative, not a software product.
+**aNA** is a collaborative research initiative, not a software product. 
 
 We are building an *Autonomous Neural Architecture* that reflects biological principles rather than statistical shortcuts. If you wish to engage with this project, we view you not as a "contributor" but as a research partner/observer.
 
