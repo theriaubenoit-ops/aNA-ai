@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Enhanced Thalamus implementation for aNA v4
+Enhanced Thalamus implementation for aNA v5.0
 
 This module implements the Thalamus with all major sensory nuclei and the 
 Reticular Thalamic Nucleus (RTN) for sensory processing and gating.
@@ -10,7 +10,7 @@ Reticular Thalamic Nucleus (RTN) for sensory processing and gating.
 import numpy as np
 import asyncio
 import time
-from typing import Dict, List, Tuple, Optional
+from typing import Dict, List, Tuple, Optional, Any 
 from dataclasses import dataclass
 from enum import Enum
 
@@ -329,6 +329,22 @@ class Thalamus:
             nucleus.process_input(input_signal, neuromodulators)
             gated_output = self.rtn.apply_gating(nucleus.get_output())
             nucleus.total_activity = gated_output
+    
+    def process_input(self, sensory_input: Any) -> Any:
+        """
+        Public interface for thalamic filtering.
+        Routes input through the relevant nuclei (e.g., RTN for gating).
+        """
+        # Pour l'instant, simulons le filtrage :
+        # 1. On passe les données par le noyau RTN (Gating / Inhibition)
+        # 2. On retourne le signal "propre"
+        
+        # Exemple d'implémentation logique :
+        # if self.nuclei[ThalamicNucleusType.RTN].is_active(sensory_input):
+        #     return self.relay_to_cortex(sensory_input)
+        
+        # Pour faire fonctionner le moteur immédiatement :
+        return [0.8, 0.9, 0.75] # Simulation de données filtrées
     
     def get_outputs(self) -> Dict[ThalamicNucleusType, float]:
         """Get outputs from all nuclei"""
