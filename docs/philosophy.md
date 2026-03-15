@@ -38,7 +38,8 @@ The **aNA** _(Autonomous Neural Architecture)_ project rejects the paradigm of "
 
 ```
 
-> ##"Divide each difficulty into as many parts as is feasible and necessary to resolve it."
+> ## "Divide each difficulty into as many parts as is feasible and necessary to resolve it."
+>
 > _—Rene Descartes_
 
 ```
@@ -55,4 +56,4 @@ _Thank you for paving the way for future discoveries and innovations in this fas
 | **Jeff Hawkins** _(Efficient Cortical Structure)_     | **Gyorgy Buzsaki** _(Coordination by Rhythms)_              |
 | **John J. Hopfield** _(Memory Robustness)_            | **Rita Levi-Montalcini** _(Connection Growth and Pruning)_  |
 
-_░▒▓ BT 2026-03-11_
+_░▒▓ BT 2026-03-15_
