@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Neuron Class - The fundamental unit of the aNA v4 architecture
+Neuron Class - The fundamental unit of the aNA v5 architecture
 
 This class represents a single neuron with:
 - 3D spatial positioning and relationships
