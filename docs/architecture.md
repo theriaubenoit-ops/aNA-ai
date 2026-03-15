@@ -4,9 +4,13 @@
 ```
 ├── src/
 │   ├── core/                       # Core neural components
+│   │   ├── thalamus.py             # Enhanced Thalamus implementation
+│   │   └── neuron.py               # Represents a single neuron
 │   ├── anatomy/                    # Brain region implementations
-│   ├── gui/                        # Web-based interface
-│   └── tests/                      # Comprehensive test suite
+│   │   ├── neural_transmission     # The standardized data structure
+│   │   └── tempo.py                # Core Pacemaker
+│   ├── gui/                        # (To do) Web-based interface
+│   └── tests/                      # (To do) Comprehensive test suite
 ├── docs/
 │   ├── architecture.md             # The technical plan
 │   ├── legend.md                   # (To do)
@@ -19,6 +23,7 @@
 │   ├── basic-demo.html             # (To do)
 │   ├── memory-demo.html            # (To do)
 │   └── learning-demo.html          # (To do)
+├── main.py                         # The orchestrator
 ├── README.md                       # The Manifesto
 ├── CONTRIBUTING.md                 # The rules of collaboration
 └── LICENSE                         # Your protection license
