@@ -1,3 +1,5 @@
+🚀 Quick link: [installation.md](/docs/installation_en.md)
+
 # Contributing
 
 ```
@@ -32,7 +34,7 @@ We are moving away from the "open-source contribution" model—where the goal is
 
 ### Join the "neuroinformatics" observers!
 
-🚀 Quick link: [installation.md](/docs/installation_en.md)
+Link: [installation.md](/docs/installation_en.md)
 
 ---
 
