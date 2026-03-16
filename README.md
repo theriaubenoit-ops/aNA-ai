@@ -30,6 +30,10 @@ We are at a tipping point. The frantic race toward ever-larger and more energy-i
 
 We are embarking on the "next wave" of artificial intelligence—an AI that does not simply predict the next token, but truly integrates context, attention, and emotional modulation to act with discernment, even amidst "noise". This project is more than a technical achievement; it is a social commitment. By designing transparent, explainable, and resource-efficient systems, we are laying the groundwork for a more harmonious coexistence between humans and the machines of tomorrow.
 
+```
+
+```
+
 ---
 
 ## 📚 Glossary: key cognitive terms
