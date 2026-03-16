@@ -1,3 +1,7 @@
+[installation_en.md](/docs/installation_en.md)
+
+---
+
 ## Installation et utilisation projet aNA AI v5.0
 
 1. **Prérequis _(The Environment)_**
