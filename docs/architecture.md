@@ -1,6 +1,7 @@
-# aNA *(Autonomous Neural Architecture)* v5.0
+# aNA _(Autonomous Neural Architecture)_ v5.0
 
 ### Architecture overview
+
 ```
 ├── src/
 │   ├── core/                       # Core neural components
@@ -26,10 +27,11 @@
 ├── main.py                         # The orchestrator
 ├── README.md                       # The Manifesto
 ├── CONTRIBUTING.md                 # The rules of collaboration
-└── LICENSE                         # Your protection license
+└── LICENSE                         # The protection license
 ```
 
 ### Level 1: Core brain simulation
+
 ```
 aNA v5.0 Autonomous Neural Architecture
 ├── Main (Controller, the Pacemaker TEMPO):
@@ -45,6 +47,7 @@ aNA v5.0 Autonomous Neural Architecture
 ```
 
 ### Level 2: Primary brain structures
+
 ```
 ├── Cerebral Cortex (The "Thinking" Shell, 4 Lobes + 6 Layers)
 │   ├── Frontal Lobe (Logic, Planning, Motor)
@@ -108,7 +111,8 @@ aNA v5.0 Autonomous Neural Architecture
     aNA v5.0 optimizes prediction accuracy by minimizing the error between sensory reality and internal models (stored in the hippocampus/cortex). A high error triggers the release of neuromodulators (adrenaline/dopamine) to force learning or adaptation.
 ```
 
-### Level 3: The cognitive loop *("Cognitive heart")*
+### Level 3: The cognitive loop _("Cognitive heart")_
+
 ```
 Cognitive Loop
 ├── Thalamus: Sensory relay and prediction comparator
@@ -118,7 +122,8 @@ Cognitive Loop
     The discrepancy (prediction error) is sent to the amygdala to adjust the system's alertness
 ```
 
-### Level 4: Cortical layer organization *(in each Lobe)*
+### Level 4: Cortical layer organization _(in each Lobe)_
+
 ```
 Cortical Layer Dynamics (Each Lobe contains 6 Cortical Layers)
 ├── Layer I (Sensory Buffer): Volatile, immediate, high resolution
@@ -130,6 +135,7 @@ Cortical Layer Dynamics (Each Lobe contains 6 Cortical Layers)
 ```
 
 ### Level 5: Lobe-specific functional systems
+
 ```
 ├── Frontal Lobe System
 │   ├── Executive Function (Prefrontal)
@@ -157,6 +163,7 @@ Cortical Layer Dynamics (Each Lobe contains 6 Cortical Layers)
 ```
 
 ### Level 6: Cross-lobe integration
+
 ```
 ├── Inter-lobar Communication
 │   ├── Frontal-Pariental Network (Attention)
@@ -176,6 +183,7 @@ Cortical Layer Dynamics (Each Lobe contains 6 Cortical Layers)
 ```
 
 ### Level 7: Dynamic processing flow
+
 ```
 Dynamic Processing Flow:
 ├── Ascending (Bottom-Up): Thalamus → Occipital → Parietal → Frontal. (I see, I locate, I decide)
@@ -192,7 +200,8 @@ Processing Hierarchy:
 └── Integration Centers → Motor Planning (Frontal Layer V)
 ```
 
-### Level 8: Functional specialization by lobe *(Role summary)*
+### Level 8: Functional specialization by lobe _(Role summary)_
+
 ```
 ├── Occipital Lobe (Posterior “What” and “Where”)
 │   - Primary: Visual Processing
@@ -215,7 +224,8 @@ Processing Hierarchy:
     - Tertiary: Decision Making
 ```
 
-### Level 9: Neuromodulator matrix *(The chemical layer):*
+### Level 9: Neuromodulator matrix _(The chemical layer):_
+
 ```
 ├── NO (Nitric Oxide) -> Volumetric Retrograde Signaling
 │   └── Role: "Zone Strengthening". Diffuses from active neurons to nearby
@@ -243,4 +253,4 @@ Processing Hierarchy:
         (More charge sent to the Hippocampus/CA3).
 ```
 
-*BT 2026-03-12*
+_BT 2026-03-16_
