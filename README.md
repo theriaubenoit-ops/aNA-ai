@@ -1,4 +1,4 @@
-# Manifesto - For a more organic and sustainable AI
+# Manifesto: For a more organic and sustainable AI
 
 ```
 ░                     ░░░░░░░░░░▒▒▒▒▒▒░░                                                                ░░░░░░░░░░
