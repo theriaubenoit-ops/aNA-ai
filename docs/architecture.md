@@ -7,11 +7,23 @@
 ```
 ├── src/
 │   ├── core/                       # Core neural components
-│   │   ├── thalamus.py             # Enhanced Thalamus implementation
-│   │   └── neuron.py               # Represents a single neuron
-│   ├── anatomy/                    # Brain region implementations
+│   │   ├── input_gateway.py        # (To do)
 │   │   ├── neural_transmission.py  # The standardized data structure
+│   │   ├── neuromodulator.py       # (To do)
+│   │   ├── output_gateway.py       # (To do)
 │   │   └── tempo.py                # Core Pacemaker
+│   ├── anatomy/                    # Brain region implementations
+│   │   │   └── cortex/             # (To do)
+│   │   │       ├── frontal.py      # (To do)
+│   │   │       ├── occipital.py    # (To do)
+│   │   │       ├── parietal.py     # (To do)
+│   │   │       ├── temporal.py     # (To do)
+│   │   │       └── lobe_base.py    # (To do)
+│   │   ├── thalamus.py             # Enhanced Thalamus implementation
+│   │   ├── neuron.py               # Represents a single neuron
+│   │   ├── hippocampus.py          # (To do)
+│   │   ├── amygdala.py             # (To do)
+│   │   └── cerebellum.py           # (To do)
 │   ├── gui/                        # (To do) Web-based interface
 │   └── tests/                      # (To do) Comprehensive test suite
 ├── docs/
@@ -19,6 +31,8 @@
 │   ├── legend.md                   # (To do)
 │   ├── genesis.md                  # The story of the project
 │   ├── philosophy.md               # The ethical vision
+│   ├── installation_en.md          # Installation (EN)
+│   ├── installation_fr.md          # Installation (FR)
 │   ├── api-reference.md            # (To do)
 │   ├── assets/                     # Images
 │   └── examples/                   # (To do)
