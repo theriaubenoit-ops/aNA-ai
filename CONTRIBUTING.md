@@ -32,7 +32,7 @@ We are moving away from the "open-source contribution" model—where the goal is
 
 ### Join the "neuroinformatics" observers!
 
-🚀 Quick Start: [installation.md](/docs/installation_en.md)
+🚀 Direct link: [installation.md](/docs/installation_en.md)
 
 ---
 
