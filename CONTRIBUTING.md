@@ -32,7 +32,8 @@ We are building an _Autonomous Neural Architecture_ that reflects biological pri
 
 We are moving away from the "open-source contribution" model—where the goal is often quantity—toward a "research collaboration" model, where the goal is accuracy. We are documenting a trajectory toward a more harmonious coexistence between biological and digital systems.
 
-### Shape the future of AI. Join the aNA computational neuroscience community!
+**Shape the future of AI:**
+Join the _aNA_ computational neuroscience community!
 
 Link: [Installation.md](/docs/installation_en.md)
 
