@@ -17,6 +17,6 @@
 4. **Contributing and Communicating _(GitHub Workflow)_**
    - Issues: "Open an issue for any questions or bug reports."
    - Pull Requests: "Submit your improvements for neurons or modules."
-   - Discussions: "Use **GitHub** Discussions to exchange ideas on the model's behavioral psychology or simply to share how our code has inspired you."
+   - Discussions: "Use **GitHub** Discussions to exchange ideas on the model's behavioral psychology or simply to share how our code has inspired you." 
 
 _░▒▓ BT 2026-03-16_

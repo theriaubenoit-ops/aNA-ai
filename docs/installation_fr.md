@@ -1,4 +1,4 @@
-## Installation et utilisation projet aNA AI v5.0
+## Installation et utilisation projet aNA AI v5.0 
 
 1. **Prérequis _(The Environment)_**
    - Version _Python_ minimale (ex: 3.10+).
@@ -17,6 +17,6 @@
 4. **Contribuer et Communiquer _(GitHub Workflow)_**
    - Issues : "Ouvrez une issue pour toute question ou bug."
    - Pull Requests : "Pour soumettre vos améliorations de neurones ou de modules."
-   - Discussions : "Utilisez les discussions **GitHub** pour échanger sur la psychologie comportementale du modèle ou simplement pour nous dire que notre code vous a inspiré."
+   - Discussions : "Utilisez les discussions **GitHub** pour échanger sur la psychologie comportementale du modèle ou simplement pour nous dire que notre code vous a inspiré." 
 
 _░▒▓ BT 2026-03-16_
