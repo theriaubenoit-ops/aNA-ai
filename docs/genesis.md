@@ -1,4 +1,4 @@
-🚀 Quick links: [License](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/LICENSE), [Contributing.md](/CONTRIBUTING.md), [Installation.md](/docs/installation_en.md), [ReadMe.md](/README.md), [Philosophy.md](/docs/philosophy.md), [Architecture.md](/docs/architecture.md)
+🚀 Quick links: [License](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/LICENSE), [Contributing](/CONTRIBUTING.md), [Installation](/docs/installation_en.md), [ReadMe](/README.md), [Philosophy](/docs/philosophy.md), [Architecture](/docs/architecture.md)
 
 # Genesis: The heart of the neural adventure
 

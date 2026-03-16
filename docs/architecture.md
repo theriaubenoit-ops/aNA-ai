@@ -1,4 +1,4 @@
-🚀 Quick links: [License](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/LICENSE), [Contributing.md](/CONTRIBUTING.md), [Installation.md](/docs/installation_en.md), [ReadMe.md](/README.md), [Genesis.md](/docs/genesis.md), [Philosophy.md](/docs/philosophy.md)
+🚀 Quick links: [License](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/LICENSE), [Contributing](/CONTRIBUTING.md), [Installation](/docs/installation_en.md), [ReadMe](/README.md), [Genesis](/docs/genesis.md), [Philosophy](/docs/philosophy.md)
 
 # aNA _(Autonomous Neural Architecture)_ v5.0
 
