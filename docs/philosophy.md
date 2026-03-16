@@ -26,7 +26,7 @@ The **aNA** _(Autonomous Neural Architecture)_ project rejects the paradigm of "
 4. **Resource efficiency through relational storage:**
    _Biological brains_ do not store raw volumes; they store relationships. **aNA** mimics this by prioritizing relational structures over volume. This targeted approach allows the system to remain lean, sustainable, and capable of long-term scaling without environmental burden.
 
-5. **Digital homeostasis _(Background activity)_: **
+5. **Digital homeostasis _(Background activity)_:**
    **aNA** operates under the principle of constant internal maintenance. It is never truly "inactive"; it maintains a state of digital homeostasis, background-consolidating memories and optimizing connections to remain ready for interaction.
 
 6. **Open collaboration:**
@@ -42,18 +42,14 @@ The **aNA** _(Autonomous Neural Architecture)_ project rejects the paradigm of "
 >
 > _—Rene Descartes_
 
-```
-
-```
-
 _Thank you for paving the way for future discoveries and innovations in this fascinating field. Your contributions to neuroscience and artificial intelligence are invaluable. Some of your works have inspired me. It allows me to better understand and design more efficient bio-inspired neural networks._
 
-|                                                       |                                                             |
-| ----------------------------------------------------- | ----------------------------------------------------------- |
-| **Santiago Ramón y Cajal** _(Optimized Architecture)_ | **Carver Mead** _(Low Power Consumption)_                   |
-| **Karl Friston** _(Free Energy Optimization)_         | **Horace Barlow** _(Information Compression)_               |
-| **Donald Hebb** _(Local and Low-Power Learning)_      | **Alan Hodgkin & Andrew Huxley** _(The Energy Peak Signal)_ |
-| **Jeff Hawkins** _(Efficient Cortical Structure)_     | **Gyorgy Buzsaki** _(Coordination by Rhythms)_              |
-| **John J. Hopfield** _(Memory Robustness)_            | **Rita Levi-Montalcini** _(Connection Growth and Pruning)_  |
+|                                                                                                                    |                                                             |
+| ------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------- |
+| **[Santiago Ramón y Cajal](https://en.wikipedia.org/wiki/Santiago_Ram%C3%B3n_y_Cajal)** _(Optimized Architecture)_ | **Carver Mead** _(Low Power Consumption)_                   |
+| **Karl Friston** _(Free Energy Optimization)_                                                                      | **Horace Barlow** _(Information Compression)_               |
+| **Donald Hebb** _(Local and Low-Power Learning)_                                                                   | **Alan Hodgkin & Andrew Huxley** _(The Energy Peak Signal)_ |
+| **Jeff Hawkins** _(Efficient Cortical Structure)_                                                                  | **Gyorgy Buzsaki** _(Coordination by Rhythms)_              |
+| **John J. Hopfield** _(Memory Robustness)_                                                                         | **Rita Levi-Montalcini** _(Connection Growth and Pruning)_  |
 
-_░▒▓ BT 2026-03-15_
+_░▒▓ BT 2026-03-16_
