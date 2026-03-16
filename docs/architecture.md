@@ -255,4 +255,4 @@ Processing Hierarchy:
         (More charge sent to the Hippocampus/CA3).
 ```
 
-_BT 2026-03-16_
+_░▒▓ BT 2026-03-16_
