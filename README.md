@@ -1,4 +1,4 @@
-🚀 Quick links: [License](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/LICENSE), [Contributing.md](/docs/CONTRIBUTING.md), [installation.md](/docs/installation_en.md)
+🚀 Quick links: [License](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/LICENSE), [Contributing.md](/docs/CONTRIBUTING.md), [Installation.md](/docs/installation_en.md)
 
 # Manifesto: For a more organic and sustainable AI
 
