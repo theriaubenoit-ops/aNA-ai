@@ -32,11 +32,11 @@ We are moving away from the "open-source contribution" model—where the goal is
 
 ### Join the "neuroinformatics" observers!
 
-```
-
-```
-
 ---
+
+```
+
+```
 
 ## 💡 Future horizons: The potential of _aNA_
 

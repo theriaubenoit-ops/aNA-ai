@@ -32,11 +32,11 @@ The code deployed today is the result of a constant dialogue between human inten
 
 This project is an exploration at the threshold of _cortical_ memory. We are not building a product; we are documenting a trajectory. Your participation, through your reading or feedback, contributes to the precision of this research.
 
-```
-
-```
-
 ---
+
+```
+
+```
 
 ## 👤 About the Author
 
