@@ -1,4 +1,4 @@
-English version: [Installation_en.md](/docs/installation_en.md)
+🔧 English instructions: [Installation_en.md](/docs/installation_en.md)
 
 ## Installation et utilisation projet aNA AI v5.0
 
