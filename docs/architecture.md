@@ -25,7 +25,7 @@
 │   │   ├── amygdala.py             # (To do)
 │   │   └── cerebellum.py           # (To do)
 │   ├── gui/                        # (To do) Web-based interface
-│   │   └── dashboard.py            # (To do))
+│   │   └── dashboard.py            # (To do)
 │   └── tests/                      # (To do) Comprehensive test suite
 ├── docs/
 │   ├── architecture.md             # The technical plan
