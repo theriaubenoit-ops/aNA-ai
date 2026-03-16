@@ -1,9 +1,9 @@
 ## Installation et utilisation projet aNA AI v5.0
 
 1. **Prérequis _(The Environment)_**
-   - Version _Python_ minimale _(ex: 3.10+)_.
-   - Dépendances de base _(ex: `pip install -r requirements.txt`)_.
-   - Outils recommandés _(ex: venv ou conda pour l'isolation)_.
+   - Version _Python_ minimale _(ex: 3.10+)_
+   - Dépendances de base _(ex: `pip install -r requirements.txt`)_
+   - Outils recommandés _(ex: venv ou conda pour l'isolation)_
 
 2. **Installation _(ex: Terminal, Zsh, Konsole, Git Bash)_**
    - Clonage du repo : `git clone https://github.com/theriaubenoit-ops/aNA-ai.git`
