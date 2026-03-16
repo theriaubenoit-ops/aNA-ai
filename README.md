@@ -14,7 +14,7 @@
 
 ### The quest for AI reflecting life
 
-Current artificial intelligence, while powerful, relies on massive, rigid architectures disconnected from biological reality. **aNA** _(Autonomous Neural Architecture)_ breaks with this paradigm. Inspired by the organization of the _six cortical layers_, the precise management of _neuromodulators (dopamine, adrenaline, nitric oxide, acetylcholine, and serotonin)_, and _synaptic plasticity_, this project aims to create not a mere computational simulation, but an organic resonance. Far from being a repository of static data, **aNA** is a dynamic system that learns, forgets, adjusts, and focuses—much like our own minds.
+Current artificial intelligence, while powerful, relies on massive, rigid architectures that remain disconnected from biological reality. **aNA** _(Autonomous Neural Architecture)_ breaks with this paradigm. Inspired by the organization of the _six-layered cortical columns_, _synaptic plasticity_, and the precise management of the _thalamus_, _hippocampus_, _amygdala_, _cerebellum_, and _five key neuromodulators_ (_dopamine_, _adrenaline_, _nitric oxide_, _acetylcholine_, and _serotonin_), this project aims to create not a mere computational simulation, but an organic resonance. Far from being a static data repository, **aNA** is a dynamic system that learns, forgets, adjusts, and focuses—much like our own minds.
 
 ### Dynamic Cognitive Architecture
 
