@@ -14,7 +14,7 @@
 
 ### The quest for AI reflecting life
 
-Current artificial intelligence, while powerful, relies on massive, rigid architectures that remain disconnected from biological reality. **aNA** _(Autonomous Neural Architecture)_ breaks with this paradigm. Inspired by the organization of the _six-layered cortical columns_, _synaptic plasticity_, and the precise management of the _thalamus_, _hippocampus_, _amygdala_, _cerebellum_, and _five key neuromodulators_ (_dopamine_, _adrenaline_, _nitric oxide_, _acetylcholine_, and _serotonin_), this project aims to create not a mere computational simulation, but an organic resonance. Far from being a static data repository, **aNA** is a dynamic system that learns, forgets, adjusts, and focuses—much like our own minds.
+Current artificial intelligence, while powerful, relies on massive, rigid architectures that remain disconnected from biological reality. **aNA** _(Autonomous Neural Architecture)_ breaks with this paradigm. Inspired by the organization of the _six-layered cortical columns_, _synaptic plasticity_, and the precise management of the _thalamus_, _hippocampus_, _amygdala_, _cerebellum_, and _five key neuromodulators_ (_dopamine_, _adrenaline_, _nitric oxide_, _acetylcholine_, and _serotonin_). This project aims to create not a mere computational simulation, but an organic resonance. Far from being a static data repository, **aNA AI** is a dynamic system that learns, forgets, adjusts, and focuses—much like our own minds.
 
 ### Dynamic Cognitive Architecture
 
@@ -24,7 +24,7 @@ Current artificial intelligence, while powerful, relies on massive, rigid archit
 
 ### The imperative of energy sobriety
 
-We are at a tipping point. The frantic race toward ever-larger and more energy-intensive models is placing an unsustainable burden on our environment. The **aNA** project proposes a radical alternative: efficiency through targeted plasticity. By mimicking the economical functioning of the human brain—which achieves cognitive feats with a mere _20 watts_—we are developing algorithms that activate only the _neurons_ necessary to process specific information. Learn less to understand better; filter more to compute less. This is the path forward toward a sustainable, responsible AI.
+We are at a tipping point. The frantic race toward ever-larger and more energy-intensive models is placing an unsustainable burden on our environment. The **aNA AI** project proposes a radical alternative: efficiency through targeted plasticity. By mimicking the economical functioning of the human brain—which achieves cognitive feats with a mere _20 watts_—we are developing algorithms that activate only the _neurons_ necessary to process specific information. Learn less to understand better; filter more to compute less. This is the path forward toward a sustainable, responsible AI.
 
 ### Towards the next generation of intelligence
 
