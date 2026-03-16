@@ -1,14 +1,14 @@
-## Installation du projet aNA AI
+## Installation du projet aNA AI v5.0
 
-1. **Prérequis (The Environment)**
+1. **Prérequis _(The Environment)_**
 
    Version _Python_ minimale (ex: 3.10+).
 
-   Dépendances de base (ex: `pip install -r requirements.txt`).
+   Dépendances de base _(ex: `pip install -r requirements.txt`)_.
 
-   Outils recommandés (ex: _venv_ ou _conda_ pour l'isolation).
+   Outils recommandés _(ex: \_venv_ ou _conda_ pour l'isolation)\_.
 
-2. **Installation (Terminal)**
+2. **Installation _(ex: Terminal, Zsh, Konsole, Git Bash)_**
 
    Clonage du repo : `git clone https://github.com/theriaubenoit-ops/aNA-ai.git`
 
@@ -16,18 +16,18 @@
 
    Installation : `pip install -r requirements.txt`
 
-3. **Lancer les démonstrations (The "Running" part)**
+3. **Lancer les démonstrations _(The "Running" part)_**
 
    Exemple de commande pour lancer _basic-demo.html_ ou le _script Python_ associé.
 
-   Note sur le serveur local (ex: `python -m http.server` pour les démos web).
+   Note sur le serveur local _(ex: `python -m http.server` pour les démos web)_.
 
-4. **Contribuer et Communiquer (GitHub Workflow)**
+4. **Contribuer et Communiquer _(GitHub Workflow)_**
 
    Issues : "Ouvrez une issue pour toute question ou bug."
 
    Pull Requests : "Pour soumettre vos améliorations de neurones ou de modules."
 
-   Discussions : "Utilisez les discussions GitHub pour échanger sur la psychologie comportementale du modèle ou simplement pour nous dire que notre code vous a inspiré."
+   Discussions : "Utilisez les discussions **GitHub** pour échanger sur la psychologie comportementale du modèle ou simplement pour nous dire que notre code vous a inspiré."
 
 _░▒▓ BT 2026-03-16_
