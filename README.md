@@ -61,5 +61,5 @@ We are embarking on the "next wave" of artificial intelligence—an AI that does
 - **[Thalamus](scr/anatomy/thalamus.py) _(Sensory Gateway & Packet Router)_:** Acts as the system's central hub for incoming data. It filters and directs sensory signals to the appropriate cortical layers, preventing _"system overflow"_ by dropping irrelevant background noise.
 
 _Note: These definitions are adapted to the specific metabolic and cognitive constraints of the **aNA** v5.0 architecture._
-\*\*
+
 _░▒▓ BT 2026-03-17_
