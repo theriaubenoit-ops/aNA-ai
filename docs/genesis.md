@@ -20,7 +20,7 @@ The **aNA** AI project was born from a simple intuition: _artificial intelligenc
 
 ### The initial impulse _(Laboratory v1-v3 JS/Python)_
 
-Conceived in the crucible of initial exchanges with language models _(GPT)_, _v1_ aimed to translate abstract questions into tangible logic. This was a period of intense maturation, a "long march" where the pursuit of precision gradually took precedence over rapid deployment.
+Conceived in the crucible of initial exchanges with language models _(GPT)_, _v1_ aimed to translate abstract questions into tangible logic. This was a period of intense maturation, a _"long march"_ where the pursuit of precision gradually took precedence over rapid deployment.
 
 ### The turning point _(Collaboration v4-v5 Python)_
 
@@ -28,7 +28,7 @@ The introduction of structured collaboration with AI agents _(Gemini and Cline)_
 
 ### Current state
 
-The code deployed today is the result of a constant dialogue between human intention and digital rigor. The "Dashboard", more than just a monitor, is a window into this collaboration. It demonstrates that with a suitable architecture, the machine can become a faithful reflection of biological ingenuity.
+The code deployed today is the result of a constant dialogue between human intention and digital rigor. The _"Dashboard"_, more than just a monitor, is a window into this collaboration. It demonstrates that with a suitable architecture, the machine can become a faithful reflection of biological ingenuity.
 
 ### Invitation
 

@@ -18,12 +18,12 @@
 
 ### The quest for AI reflecting life
 
-Current artificial intelligence, while powerful, relies on massive, rigid architectures that remain disconnected from biological reality. Simultaneously, the AI community is increasingly concerned with the rising carbon footprint and unsustainable computing costs of these models. **aNA** _(Autonomous Neural Architecture)_ AI Project breaks with these paradigms. Inspired by the organization of the _six-layered cortical columns_, _synaptic plasticity_, and the precise management of the _[thalamus(.py)](scr/anatomy/thalamus.py)_, _hippocampus_, _amygdala_, _cerebellum_, and _five key neuromodulators_ (_dopamine_, _adrenaline_, _nitric oxide_, _acetylcholine_, and _serotonin_). This project aims to create not a mere computational simulation, but an organic resonance. Far from being a static data repository, **aNA** AI is a dynamic system that learns, forgets, adjusts, and focuses—much like our own minds.
+Current artificial intelligence, while powerful, relies on massive, rigid architectures that remain disconnected from biological reality. Simultaneously, the AI community is increasingly concerned with the rising carbon footprint and unsustainable computing costs of these models. **aNA** _(Autonomous Neural Architecture)_ AI Project breaks with these paradigms. Inspired by the organization of the _six-layered cortical columns_, _synaptic plasticity_, and the precise management of the _[thalamus(.py)](scr/anatomy/thalamus.py)_, _hippocampus_, _amygdala_, _cerebellum_, and _five key neuromodulators (dopamine, adrenaline, nitric oxide, acetylcholine, and serotonin)_. This project aims to create not a mere computational simulation, but an organic resonance. Far from being a static data repository, **aNA** AI is a dynamic system that learns, forgets, adjusts, and focuses—much like our own minds.
 
 ### Dynamic Cognitive Architecture
 
 - **Asynchronous Orchestration:** The _Tempo module_ acts as the system's pacemaker, ensuring efficient, non-blocking cycles.
-- **Thalamic Filtering:** _Sensory inputs_ are gated and processed through specific _nuclei_ to isolate relevant signals from stochastic background "noise".
+- **Thalamic Filtering:** _Sensory inputs_ are gated and processed through specific _nuclei_ to isolate relevant signals from stochastic background _"noise"_.
 - **Adaptive Fidelity:** _LAST UPDATE_ **aNA** dynamically simulates information fidelity based on _dopamine levels_, modulating the quality of internal representations in real-time.
 
 ### The imperative of energy sobriety
@@ -32,7 +32,7 @@ We are at a tipping point. The frantic race toward ever-larger and more energy-i
 
 ### Towards the next generation of intelligence
 
-We are embarking on the "next wave" of artificial intelligence—an AI that does not simply predict the next token, but truly integrates context, attention, and emotional modulation to act with discernment, even amidst "noise". This project is more than a technical achievement; it is a social commitment. By designing transparent, explainable, and resource-efficient systems, we are laying the groundwork for a more harmonious coexistence between humans and the machines of tomorrow.
+We are embarking on the _"next wave"_ of artificial intelligence—an AI that does not simply predict the next token, but truly integrates context, attention, and emotional modulation to act with discernment, even amidst _"noise"_. This project is more than a technical achievement; it is a social commitment. By designing transparent, explainable, and resource-efficient systems, we are laying the groundwork for a more harmonious coexistence between humans and the machines of tomorrow.
 
 ---
 

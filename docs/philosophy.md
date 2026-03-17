@@ -14,7 +14,7 @@
 ░                                                  ‾   ‾   ‾
 ```
 
-The **aNA** _(Autonomous Neural Architecture)_ AI project rejects the paradigm of "raw power" in favor of the elegance and economy observed in biological structures. We are not building a static database; we are fostering a dynamic cognitive process.
+The **aNA** _(Autonomous Neural Architecture)_ AI project rejects the paradigm of _"raw power"_ in favor of the elegance and economy observed in biological structures. We are not building a static database; we are fostering a dynamic cognitive process.
 
 1. **Hierarchical information reconstruction:**
    Unlike architectures that rely on massive data storage, **aNA** AI favors a hierarchical processing approach. Information is not "stored" in a static sense; it is reconstructed in real-time, ensuring that each processed bit is validated against established internal models.
@@ -29,7 +29,7 @@ The **aNA** _(Autonomous Neural Architecture)_ AI project rejects the paradigm o
    _Biological brains_ do not store raw volumes; they store relationships. **aNA** mimics this by prioritizing relational structures over volume. This targeted approach allows the system to remain lean, sustainable, and capable of long-term scaling without environmental burden.
 
 5. **Digital homeostasis _(Background activity)_:**
-   **aNA** operates under the principle of constant internal maintenance. It is never truly "inactive"; it maintains a state of digital homeostasis, background-consolidating memories and optimizing connections to remain ready for interaction.
+   **aNA** operates under the principle of constant internal maintenance. It is never truly _"inactive"_; it maintains a state of digital homeostasis, background-consolidating memories and optimizing connections to remain ready for interaction.
 
 6. **Open collaboration:**
    **aNA** is an open-research initiative. We believe that diverse perspectives are essential to understanding and refining this architecture. We invite contribution not as mere labor, but as a collective engagement in the accuracy of this cognitive simulation.

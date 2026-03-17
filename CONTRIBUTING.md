@@ -16,7 +16,7 @@
 
 **aNA** AI Project is a collaborative research initiative, not a software product.
 
-We are building an _Autonomous Neural Architecture_ that reflects biological principles rather than statistical shortcuts. If you wish to engage with this project, we view you not as a "contributor" but as a research partner/observer.
+We are building an _Autonomous Neural Architecture_ that reflects biological principles rather than statistical shortcuts. If you wish to engage with this project, we view you not as a _"contributor"_ but as a research partner/observer.
 
 ### How to engage
 
@@ -24,13 +24,13 @@ We are building an _Autonomous Neural Architecture_ that reflects biological pri
 
 **Architectural alignment:** Before proposing changes, please review the [philosophy](/docs/philosophy.md) and [architecture](/docs/architecture.md). All additions must respect the principles of energy sobriety and targeted plasticity.
 
-**Experimental validation:** If you implement a new feature (a new _nucleus_, a refined _synapse_), ensure it is backed by biological rationale. We favor "why it works biologically" over "it makes the model faster."
+**Experimental validation:** If you implement a new feature _(a new nucleus, a refined synapse)_, ensure it is backed by biological rationale. We favor "why it works biologically" over _"it makes the model faster"._
 
 **Documentation consistency:** Any change must update the relevant documentation. An undocumented feature is, for our research purposes, a non-existent one.
 
 ### Our shared ethos
 
-We are moving away from the "open-source contribution" model—where the goal is often quantity—toward a "research collaboration" model, where the goal is accuracy. We are documenting a trajectory toward a more harmonious coexistence between biological and digital systems.
+We are moving away from the "open-source contribution" model—where the goal is often quantity—toward a _"research collaboration"_ model, where the goal is accuracy. We are documenting a trajectory toward a more harmonious coexistence between biological and digital systems.
 
 ### _Shape the future of AI!_
 
@@ -50,10 +50,10 @@ The **aNA** AI project is more than just a _codebase_; it is a _sandbox_ for exp
 
 **Cognitive Research Platform:** As an open-source framework, **aNA** provides a baseline for researchers to test hypotheses in _cognitive science_, allowing for the simulation of _neural dynamics_ under various behavioral conditions.
 
-**Digital Artistic Expression:** The system's inherent "life-like" data outputs provide a unique aesthetic foundation for _digital art_, where neural states can be translated into stunning, real-time visual experiences.
+**Digital Artistic Expression:** The system's inherent _"life-like"_ data outputs provide a unique aesthetic foundation for _digital art_, where neural states can be translated into stunning, real-time visual experiences.
 
 **Therapeutic Simulation:** With its focus on _behavioral psychology_ and _stress modulation_, **aNA** holds potential for developing simulations used in _cognitive training_, _neuro-rehabilitation_, or _stress-management modeling_.
 
-**Philosophical & Ethical Inquiry:** By modeling artificial "intent" and "homeostasis," this project creates a platform for critical discussions regarding _the nature of consciousness_, _machine autonomy_, and the _ethics_ of _AI behavior_.
+**Philosophical & Ethical Inquiry:** By modeling artificial _"intent"_ and _"homeostasis,"_ this project creates a platform for critical discussions regarding _the nature of consciousness_, _machine autonomy_, and the _ethics_ of _AI behavior_.
 
 _░▒▓ BT 2026-03-16_
