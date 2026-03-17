@@ -1,4 +1,4 @@
-🚀 Quick links: [License](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/LICENSE), [ReadMe](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/README.md), [Contributing](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/CONTRIBUTING.md), Installation
+🚀 Quick links: [License](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/LICENSE), [ReadMe](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/README.md), [Contributing](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/CONTRIBUTING.md), Installation, [Philosophy](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/docs/philosophy.md), [Genesis](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/docs/genesis.md), [Architecture](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/docs/architecture.md)
 
 English instructions: [installation_en.md](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/docs/installation_en.md)
 
