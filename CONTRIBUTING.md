@@ -34,7 +34,7 @@ We are moving away from the "open-source contribution" model—where the goal is
 
 ### _Shape the future of AI!_
 
-Join the aNA computational neuroscience community: [installation.md](/docs/installation_en.md)
+Join the **aNA** computational neuroscience community: [installation.md](/docs/installation_en.md)
 
 ---
 
