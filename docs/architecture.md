@@ -5,46 +5,46 @@
 ### Architecture overview
 
 ```
+├── docs/
+│   ├── api-reference.md            # (To do)
+│   ├── architecture.md             # The technical plan
+│   ├── assets/                     # (To do) Images
+│   ├── examples/                   # (To do)
+│   ├── genesis.md                  # The story of the project
+│   ├── installation_en.md          # Installation (EN)
+│   ├── installation_fr.md          # Installation (FR)
+│   ├── legend.md                   # (To do)
+│   └── philosophy.md               # The ethical vision
+├── examples/
+│   ├── basic-demo.html             # (To do)
+│   ├── learning-demo.html          # (To do)
+│   └── memory-demo.html            # (To do)
 ├── src/
+│   ├── anatomy/                    # Brain region implementations
+│   │   ├── cortex/                 # (To do)
+│   │   │   ├── frontal.py          # (To do)
+│   │   │   ├── lobe_base.py        # (To do)
+│   │   │   ├── occipital.py        # (To do)
+│   │   │   ├── parietal.py         # (To do)
+│   │   │   └── temporal.py         # (To do)
+│   │   ├── amygdala.py             # (To do)
+│   │   ├── cerebellum.py           # (To do)
+│   │   ├── hippocampus.py          # (To do)
+│   │   ├── neuron.py               # Represents a single neuron
+│   │   └── thalamus.py             # Enhanced Thalamus implementation
 │   ├── core/                       # Core neural components
 │   │   ├── input_gateway.py        # (To do)
 │   │   ├── neural_transmission.py  # The standardized data structure
 │   │   ├── neuromodulator.py       # (To do)
 │   │   ├── output_gateway.py       # (To do)
 │   │   └── tempo.py                # Core Pacemaker
-│   ├── anatomy/                    # Brain region implementations
-│   │   ├── cortex/                 # (To do)
-│   │   │   ├── frontal.py          # (To do)
-│   │   │   ├── occipital.py        # (To do)
-│   │   │   ├── parietal.py         # (To do)
-│   │   │   ├── temporal.py         # (To do)
-│   │   │   └── lobe_base.py        # (To do)
-│   │   ├── thalamus.py             # Enhanced Thalamus implementation
-│   │   ├── neuron.py               # Represents a single neuron
-│   │   ├── hippocampus.py          # (To do)
-│   │   ├── amygdala.py             # (To do)
-│   │   └── cerebellum.py           # (To do)
 │   ├── gui/                        # (To do) Web-based interface
 │   │   └── dashboard.py            # (To do)
 │   └── tests/                      # (To do) Comprehensive test suite
-├── docs/
-│   ├── architecture.md             # The technical plan
-│   ├── legend.md                   # (To do)
-│   ├── genesis.md                  # The story of the project
-│   ├── philosophy.md               # The ethical vision
-│   ├── installation_en.md          # Installation (EN)
-│   ├── installation_fr.md          # Installation (FR)
-│   ├── api-reference.md            # (To do)
-│   ├── assets/                     # Images
-│   └── examples/                   # (To do)
-├── examples/
-│   ├── basic-demo.html             # (To do)
-│   ├── memory-demo.html            # (To do)
-│   └── learning-demo.html          # (To do)
-├── main.py                         # The orchestrator
-├── README.md                       # The Manifesto
 ├── CONTRIBUTING.md                 # The rules of collaboration
-└── LICENSE                         # The protection license
+├── LICENSE                         # The protection license
+├── main.py                         # The orchestrator
+└── README.md                       # The Manifesto
 ```
 
 ### Level 1: Core brain simulation
