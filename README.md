@@ -18,7 +18,7 @@
 
 ### The quest for AI reflecting life
 
-Current artificial intelligence, while powerful, relies on massive, rigid architectures that remain disconnected from biological reality. **aNA** _(Autonomous Neural Architecture)_ AI Project breaks with this paradigm. Inspired by the organization of the _six-layered cortical columns_, _synaptic plasticity_, and the precise management of the _[thalamus](scr/anatomy/thalamus.py)_, _hippocampus_, _amygdala_, _cerebellum_, and _five key neuromodulators_ (_dopamine_, _adrenaline_, _nitric oxide_, _acetylcholine_, and _serotonin_). This project aims to create not a mere computational simulation, but an organic resonance. Far from being a static data repository, **aNA** AI is a dynamic system that learns, forgets, adjusts, and focuses—much like our own minds.
+Current artificial intelligence, while powerful, relies on massive, rigid architectures that remain disconnected from biological reality. **aNA** _(Autonomous Neural Architecture)_ AI Project breaks with this paradigm. Inspired by the organization of the _six-layered cortical columns_, _synaptic plasticity_, and the precise management of the _[thalamus(py)](scr/anatomy/thalamus.py)_, _hippocampus_, _amygdala_, _cerebellum_, and _five key neuromodulators_ (_dopamine_, _adrenaline_, _nitric oxide_, _acetylcholine_, and _serotonin_). This project aims to create not a mere computational simulation, but an organic resonance. Far from being a static data repository, **aNA** AI is a dynamic system that learns, forgets, adjusts, and focuses—much like our own minds.
 
 ### Dynamic Cognitive Architecture
 
@@ -28,7 +28,7 @@ Current artificial intelligence, while powerful, relies on massive, rigid archit
 
 ### The imperative of energy sobriety
 
-We are at a tipping point. The frantic race toward ever-larger and more energy-intensive models is placing an unsustainable burden on our environment. The **aNA** AI project proposes a radical alternative: efficiency through targeted plasticity. By mimicking the economical functioning of the human brain—which achieves cognitive feats with a mere _20 watts_—we are developing algorithms that activate only the _[neurons](scr/anatomy/neuron.py)_ necessary to process specific information. Learn less to understand better; filter more to compute less. This is the path forward toward a sustainable, responsible AI.
+We are at a tipping point. The frantic race toward ever-larger and more energy-intensive models is placing an unsustainable burden on our environment. The **aNA** AI project proposes a radical alternative: efficiency through targeted plasticity. By mimicking the economical functioning of the human brain—which achieves cognitive feats with a mere _20 watts_—we are developing algorithms that activate only the _[neurons(py)](scr/anatomy/neuron.py)_ necessary to process specific information. Learn less to understand better; filter more to compute less. This is the path forward toward a sustainable, responsible AI.
 
 ### Towards the next generation of intelligence
 
@@ -52,7 +52,7 @@ We are embarking on the "next wave" of artificial intelligence—an AI that does
 
 - **Neuromodulators _(Global State Tags)_:** Chemical _"gain controls" (Dopamine, Adrenaline, Nitric Oxide, Acetylcholine, Serotonin)_ that regulate the global state of the network. They don't carry specific data but adjust how the brain processes information _(e.g., focus, reward, stress response)_.
 
-- **[Neurons](scr/anatomy/neuron.py) _(Atomic Processing Nodes)_:** The three functional types _(Sensory, Interneurons, Motor)_ operate as the basic logic gates of the architecture. Their Synaptic Plasticity represents a self-modifying code capability, where connection weights evolve dynamically based on the frequency and timing of data flow.
+- **[Neurons(py)](scr/anatomy/neuron.py) _(Atomic Processing Nodes)_:** The three functional types _(Sensory, Interneurons, Motor)_ operate as the basic logic gates of the architecture. Their Synaptic Plasticity represents a self-modifying code capability, where connection weights evolve dynamically based on the frequency and timing of data flow.
 
 - **"Noise" _(Stochastic Metadata / Non-relevant info)_:** In _neural processing_, background stochastic activity. In **aNA**, _"noise"_ represents irrelevant or chaotic data input that must be filtered out to maintain the coherence of internal predictive models.
 
@@ -60,7 +60,7 @@ We are embarking on the "next wave" of artificial intelligence—an AI that does
 
 - **Targeted plasticity _(Granular Weight Updates)_:** The biological principle of modifying only the necessary synaptic connections. This enables efficient learning without overwriting existing knowledge, contrasting with energy-intensive global weight updates in standard AI.
 
-- **[Thalamus](scr/anatomy/thalamus.py) _(Sensory Gateway & Packet Router)_:** Acts as the system's central hub for incoming data. It filters and directs sensory signals to the appropriate cortical layers, preventing _"system overflow"_ by dropping irrelevant background noise.
+- **[Thalamus(py)](scr/anatomy/thalamus.py) _(Sensory Gateway & Packet Router)_:** Acts as the system's central hub for incoming data. It filters and directs sensory signals to the appropriate cortical layers, preventing _"system overflow"_ by dropping irrelevant background noise.
 
 _Note: These definitions are adapted to the specific metabolic and cognitive constraints of the **aNA** v5.0 architecture._
 
