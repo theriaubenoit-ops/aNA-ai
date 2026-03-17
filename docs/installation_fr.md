@@ -1,4 +1,4 @@
-🔧 English instructions: [installation_en.md](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/docs/installation_en.md)
+🔧 English instructions: [installation_en.md](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/docs/installation_en.md), [ReadMe](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/README.md)
 
 ## Installation et utilisation projet _✴️ aNA_ AI v5.0
 
