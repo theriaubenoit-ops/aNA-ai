@@ -1,4 +1,4 @@
-🚀 Quick link: [ReadMe](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/README.md)
+🚀 Quick links: [License](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/LICENSE), [ReadMe](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/README.md), [Contributing](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/CONTRIBUTING.md)
 
 Instructions française : [installation_fr.md](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/docs/installation_fr.md)
 
