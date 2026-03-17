@@ -126,7 +126,7 @@ aNA v5.0 Autonomous Neural Architecture
     └── Labels incoming charges as "Important" or "Neutral"
 
     Computational Engine: Free Energy Principle (FEP)
-    **aNA** v5.0 optimizes prediction accuracy by minimizing the error between sensory reality and internal models (stored in the hippocampus/cortex). A high error triggers the release of neuromodulators (adrenaline/dopamine) to force learning or adaptation.
+    aNA v5.0 optimizes prediction accuracy by minimizing the error between sensory reality and internal models (stored in the hippocampus/cortex). A high error triggers the release of neuromodulators (adrenaline/dopamine) to force learning or adaptation.
 ```
 
 ### Level 3: The cognitive loop _("Cognitive heart")_
