@@ -38,27 +38,27 @@ We are embarking on the "next wave" of artificial intelligence—an AI that does
 
 ```
 
-## 📚 Glossary: key cognitive terms (Digital Mapping)
+## 📚 Glossary: key cognitive terms _(Digital Mapping)_
 
-- **Amygdala _(Priority Filter & Interrupt Controller)_:** Manages emotional valence and high-priority signals. It acts like an interrupt controller that can override standard processing cycles when "critical events" (stress or high-reward stimuli) are detected, ensuring immediate system response.
+- **Amygdala _(Priority Filter & Interrupt Controller)_:** Manages emotional valence and high-priority signals. It acts like an interrupt controller that can override standard processing cycles when "critical events" _(stress or high-reward stimuli)_ are detected, ensuring immediate system response.
 
-- **Cerebellum _(Timing Engine & Output Calibration)_:** The specialized unit for fine-tuning motor and cognitive outputs. In **aNA**, it ensures that the "Thinking Shell" operates with perfect mathematical synchronization, acting as a calibration layer for fluid, real-time interaction.
+- **Cerebellum _(Timing Engine & Output Calibration)_:** The specialized unit for fine-tuning motor and cognitive outputs. In **aNA**, it ensures that the _"Thinking Shell"_ operates with perfect mathematical synchronization, acting as a calibration layer for fluid, real-time interaction.
 
-- **Neocortex _(The "Thinking" Shell)_:** The structural integration of the 4 Lobes and 6 Cortical Layers. While the Neocortex handles complex reasoning and prediction, the Cerebellum (in **aNA**) fine-tunes motor outputs and timing, ensuring the system’s actions are fluid and mathematically synchronized.
+- **Neocortex _(The "Thinking" Shell)_:** The structural integration of the _4 Lobes_ and _6 Cortical Layers_. While the _Neocortex_ handles complex reasoning and prediction, the _Cerebellum (in **aNA**)_ fine-tunes _motor outputs_ and timing, ensuring the system’s actions are fluid and mathematically synchronized.
 
-- **Hippocampus _(Dynamic Buffer & Indexing System)_:** Functions as a high-speed memory buffer for short-term data. It manages the temporary storage of information and coordinates its eventual "migration" (consolidation) into long-term cortical databases, preventing immediate system saturation.
+- **Hippocampus _(Dynamic Buffer & Indexing System)_:** Functions as a high-speed memory buffer for short-term data. It manages the temporary storage of information and coordinates its eventual _"migration" (consolidation)_ into _long-term cortical databases_, preventing immediate system saturation.
 
-- **Neuromodulators _(Global State Tags)_:** Chemical "gain controls" (Dopamine, Adrenaline, Nitric Oxide, Acetylcholine, Serotonin) that regulate the global state of the network. They don't carry specific data but adjust how the brain processes information (e.g., focus, reward, stress response).
+- **Neuromodulators _(Global State Tags)_:** Chemical _"gain controls" (Dopamine, Adrenaline, Nitric Oxide, Acetylcholine, Serotonin)_ that regulate the global state of the network. They don't carry specific data but adjust how the brain processes information _(e.g., focus, reward, stress response)_.
 
-- **Neurons _(Atomic Processing Nodes)_:** The three functional types (Sensory, Interneurons, Motor) operate as the basic logic gates of the architecture. Their Synaptic Plasticity represents a self-modifying code capability, where connection weights evolve dynamically based on the frequency and timing of data flow.
+- **Neurons _(Atomic Processing Nodes)_:** The three functional types _(Sensory, Interneurons, Motor)_ operate as the basic logic gates of the architecture. Their Synaptic Plasticity represents a self-modifying code capability, where connection weights evolve dynamically based on the frequency and timing of data flow.
 
-- **"Noise" _(Stochastic Metadata / Non-relevant info)_:** In neural processing, background stochastic activity. In **aNA**, "noise" represents irrelevant or chaotic data input that must be filtered out to maintain the coherence of internal predictive models.
+- **"Noise" _(Stochastic Metadata / Non-relevant info)_:** In _neural processing_, background stochastic activity. In **aNA**, _"noise"_ represents irrelevant or chaotic data input that must be filtered out to maintain the coherence of internal predictive models.
 
-- **Six cortical layers _(Hierarchical Data Modules)_:** The standard vertical organization of the mammalian neocortex. In **aNA**, these layers define the functional hierarchy: Layer IV (input), Layers II/III (association/prediction), and Layer V/VI (motor output).
+- **Six cortical layers _(Hierarchical Data Modules)_:** The standard vertical organization of the mammalian _neocortex_. In **aNA**, these _layers_ define the functional hierarchy: _Layer IV (input)_, _Layers II/III (association/prediction)_, and _Layer V/VI (motor output)_.
 
 - **Targeted plasticity _(Granular Weight Updates)_:** The biological principle of modifying only the necessary synaptic connections. This enables efficient learning without overwriting existing knowledge, contrasting with energy-intensive global weight updates in standard AI.
 
-- **Thalamus _(Sensory Gateway & Packet Router)_:** Acts as the system's central hub for incoming data. It filters and directs sensory signals to the appropriate cortical layers, preventing "system overflow" by dropping irrelevant background noise.
+- **Thalamus _(Sensory Gateway & Packet Router)_:** Acts as the system's central hub for incoming data. It filters and directs sensory signals to the appropriate cortical layers, preventing _"system overflow"_ by dropping irrelevant background noise.
 
 _Note: These definitions are adapted to the specific metabolic and cognitive constraints of the aNA v5.0 architecture._
 
