@@ -1,6 +1,6 @@
 🚀 Quick links: [License](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/LICENSE), [ReadMe](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/README.md), [Contributing](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/CONTRIBUTING.md), [Installation](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/docs/installation_en.md), [Philosophy](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/docs/philosophy.md), [Genesis](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/docs/genesis.md), Architecture
 
-# _✴️ aNA (Autonomous Neural Architecture)_ AI Project v5.0
+# ✴️*aNA (Autonomous Neural Architecture)* AI Project v5.0
 
 ### Architecture overview
 
