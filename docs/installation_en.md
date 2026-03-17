@@ -2,7 +2,7 @@
 
 Instructions française : [installation_fr.md](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/docs/installation_fr.md)
 
-## Installation and Usage: ✴️ _aNA_ AI Project v5.0
+## Installation and Usage: ✴️*aNA* AI Project v5.0
 
 1. **Prerequisites _(The Environment)_**
    - Minimum _Python_ version _(e.g., 3.10+)_
