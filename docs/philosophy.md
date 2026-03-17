@@ -14,7 +14,7 @@
 ░                                                  ‾   ‾   ‾
 ```
 
-The **aNA** _(Autonomous Neural Architecture)_ project rejects the paradigm of "raw power" in favor of the elegance and economy observed in biological structures. We are not building a static database; we are fostering a dynamic cognitive process.
+The **aNA** _(Autonomous Neural Architecture)_ AI project rejects the paradigm of "raw power" in favor of the elegance and economy observed in biological structures. We are not building a static database; we are fostering a dynamic cognitive process.
 
 1. **Hierarchical information reconstruction:**
    Unlike architectures that rely on massive data storage, **aNA** AI favors a hierarchical processing approach. Information is not "stored" in a static sense; it is reconstructed in real-time, ensuring that each processed bit is validated against established internal models.
