@@ -14,7 +14,7 @@
 ░                                                   ‾   ‾   ‾
 ```
 
-`Projet status` [Beta] > Alpha > Release Candidate > Stable | `Language` Python 3.x | `License` MIT
+`Project status` [Beta] → Alpha → Release Candidate → Stable | `Language` Python 3.x | `License` MIT
 
 ### The quest for AI reflecting life
 
