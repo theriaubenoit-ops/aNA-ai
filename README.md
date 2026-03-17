@@ -50,7 +50,7 @@ We are embarking on the "next wave" of artificial intelligence—an AI that does
 
 - **Neuromodulators _(Global State Tags)_:** Chemical _"gain controls" (Dopamine, Adrenaline, Nitric Oxide, Acetylcholine, Serotonin)_ that regulate the global state of the network. They don't carry specific data but adjust how the brain processes information _(e.g., focus, reward, stress response)_.
 
-- **Neurons _(Atomic Processing Nodes)_:** The three functional types _(Sensory, Interneurons, Motor)_ operate as the basic logic gates of the architecture. Their Synaptic Plasticity represents a self-modifying code capability, where connection weights evolve dynamically based on the frequency and timing of data flow.
+- **[Neurons](scr/anatomy/neuron.py) _(Atomic Processing Nodes)_:** The three functional types _(Sensory, Interneurons, Motor)_ operate as the basic logic gates of the architecture. Their Synaptic Plasticity represents a self-modifying code capability, where connection weights evolve dynamically based on the frequency and timing of data flow.
 
 - **"Noise" _(Stochastic Metadata / Non-relevant info)_:** In _neural processing_, background stochastic activity. In **aNA**, _"noise"_ represents irrelevant or chaotic data input that must be filtered out to maintain the coherence of internal predictive models.
 
@@ -58,8 +58,8 @@ We are embarking on the "next wave" of artificial intelligence—an AI that does
 
 - **Targeted plasticity _(Granular Weight Updates)_:** The biological principle of modifying only the necessary synaptic connections. This enables efficient learning without overwriting existing knowledge, contrasting with energy-intensive global weight updates in standard AI.
 
-- **Thalamus _(Sensory Gateway & Packet Router)_:** Acts as the system's central hub for incoming data. It filters and directs sensory signals to the appropriate cortical layers, preventing _"system overflow"_ by dropping irrelevant background noise.
+- **[Thalamus](scr/anatomy/thalamus.py) _(Sensory Gateway & Packet Router)_:** Acts as the system's central hub for incoming data. It filters and directs sensory signals to the appropriate cortical layers, preventing _"system overflow"_ by dropping irrelevant background noise.
 
 _Note: These definitions are adapted to the specific metabolic and cognitive constraints of the aNA v5.0 architecture._
 
-_░▒▓ BT 2026-03-16_
+_░▒▓ BT 2026-03-17_
