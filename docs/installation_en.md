@@ -13,7 +13,7 @@
    - Install dependencies: `pip install -r requirements.txt`
 
 3. **COMING SOON - Running Demonstrations _(The "Running" part)_**
-   - Example commands to launch _basic-demo.html_ or the associated _Python scripts_ (e.g., `python dashboard.py --demo`, `python main.py --demo`, `python tempo.py --demo`).
+   - Example commands to launch _basic-demo.html_ or the associated _Python scripts_ (e.g., `python dashboard.py --demo`, `python main.py --demo`).
    - Note on local server _(e.g., `python -m http.server`for web-based demos)_.
 
 4. **Contributing and Communicating _(GitHub Workflow)_**

@@ -1,4 +1,4 @@
-🚀 Quick links: [License](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/LICENSE), [Contributing](/CONTRIBUTING.md), [Installation](/docs/installation_en.md), [ReadMe](/README.md), [Genesis](/docs/genesis.md), [Philosophy](/docs/philosophy.md)
+🚀 Quick links: [License](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/LICENSE), [ReadMe](/README.md), [Contributing](/CONTRIBUTING.md), [Installation](/docs/installation_en.md), [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md)
 
 # aNA _(Autonomous Neural Architecture)_ v5.0
 
@@ -8,42 +8,42 @@
 ├── docs/
 │   ├── api-reference.md            # (To do)
 │   ├── architecture.md             # The technical plan
-│   ├── assets/                     # (To do) Images
-│   ├── examples/                   # (To do)
+│   ├── assets/                     # Medias
+│   ├── examples/                   # (To do) Comprehensive example suite
 │   ├── genesis.md                  # The story of the project
 │   ├── installation_en.md          # Installation (EN)
 │   ├── installation_fr.md          # Installation (FR)
 │   ├── legend.md                   # (To do)
 │   └── philosophy.md               # The ethical vision
-├── examples/
+├── examples/                       # (To do) Comprehensive example suite
 │   ├── basic-demo.html             # (To do)
 │   ├── learning-demo.html          # (To do)
 │   └── memory-demo.html            # (To do)
 ├── src/
 │   ├── anatomy/                    # Brain region implementations
-│   │   ├── cortex/                 # (To do)
-│   │   │   ├── frontal.py          # (To do)
-│   │   │   ├── lobe_base.py        # (To do)
-│   │   │   ├── occipital.py        # (To do)
-│   │   │   ├── parietal.py         # (To do)
-│   │   │   └── temporal.py         # (To do)
-│   │   ├── amygdala.py             # (To do)
-│   │   ├── cerebellum.py           # (To do)
-│   │   ├── hippocampus.py          # (To do)
+│   │   ├── cortex/
+│   │   │   ├── frontal.py          # (Coming soon)
+│   │   │   ├── lobe_base.py        # (Coming soon)
+│   │   │   ├── occipital.py        # (Coming soon)
+│   │   │   ├── parietal.py         # (Coming soon)
+│   │   │   └── temporal.py         # (Coming soon)
+│   │   ├── amygdala.py             # (Coming soon)
+│   │   ├── cerebellum.py           # (Coming soon)
+│   │   ├── hippocampus.py          # (Coming soon)
 │   │   ├── neuron.py               # Represents a single neuron
 │   │   └── thalamus.py             # Enhanced Thalamus implementation
 │   ├── core/                       # Core neural components
-│   │   ├── input_gateway.py        # (To do)
+│   │   ├── input_gateway.py        # (Coming soon)
 │   │   ├── neural_transmission.py  # The standardized data structure
-│   │   ├── neuromodulator.py       # (To do)
-│   │   ├── output_gateway.py       # (To do)
+│   │   ├── neuromodulator.py       # Chemical "gain controls"
+│   │   ├── output_gateway.py       # (Coming soon)
 │   │   └── tempo.py                # Core Pacemaker
 │   ├── gui/                        # (To do) Web-based interface
-│   │   └── dashboard.py            # (To do)
+│   │   └── dashboard.py            # (Coming soon)
 │   └── tests/                      # (To do) Comprehensive test suite
 ├── CONTRIBUTING.md                 # The rules of collaboration
 ├── LICENSE                         # The protection license
-├── main.py                         # The orchestrator
+├── main.py                         # (Coming soon) The orchestrator
 └── README.md                       # The Manifesto
 ```
 

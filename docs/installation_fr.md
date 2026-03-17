@@ -13,7 +13,7 @@
    - Installation : `pip install -r requirements.txt`
 
 3. **À VENIR - Lancer les démonstrations _(The "Running" part)_**
-   - Exemple de commande pour lancer _basic-demo.html_ ou les _scripts Python_ associés (ex: `python dashboard.py --demo`, `python main.py --demo`, `python tempo.py --demo`).
+   - Exemple de commande pour lancer _basic-demo.html_ ou les _scripts Python_ associés (ex: `python dashboard.py --demo`, `python main.py --demo`).
    - Note sur le serveur local _(ex: `python -m http.server` pour les démos web)_.
 
 4. **Contribuer et Communiquer _(GitHub Workflow)_**
