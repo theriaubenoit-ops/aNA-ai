@@ -24,7 +24,7 @@ We are building an _Autonomous Neural Architecture_ that reflects biological pri
 
 **Architectural alignment:** Before proposing changes, please review the [philosophy](/docs/philosophy.md) and [architecture](/docs/architecture.md). All additions must respect the principles of energy sobriety and targeted plasticity.
 
-**Experimental validation:** If you implement a new feature _(a new nucleus, a refined synapse)_, ensure it is backed by biological rationale. We favor "why it works biologically" over _"it makes the model faster"._
+**Experimental validation:** If you implement a new feature _(a new nucleus, a refined synapse)_, ensure it is backed by biological rationale. We favor "why it works biologically" over _"it makes the model faster"_.
 
 **Documentation consistency:** Any change must update the relevant documentation. An undocumented feature is, for our research purposes, a non-existent one.
 
