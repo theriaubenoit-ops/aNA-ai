@@ -1,4 +1,4 @@
-🔧 Instructions française : [installation_fr.md](/docs/installation_fr.md)
+🔧 Instructions française : [installation_fr.md](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/docs/installation_fr.md)
 
 ## Installation and Usage: _aNA_ AI Project v5.0
 
