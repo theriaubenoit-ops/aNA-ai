@@ -8,7 +8,7 @@
 ░░░░░░░░░░░░░░░░▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▒░░░░░▒▒▒░░░░▒▓▒░░      ░░░░░░░░░░░░░░░░░░░░░░▒▒░░▒▒▒▓▓▓▓▓▓▒▒▒░░░░░░░░░░░░░░░░░░░░▒
 ░░░░░░░░░░░░░░▒▒▒▓▓▓▓▓▓▓▓▓▓▓▒░░▒▒▒░░░░▒▓▓▓▓▓▓▒▒▒▒▒░   ░▒▒▒▒▒▒▒▒▓▒▒░▒▓▒░░░░░░▒▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░░░░░░░▒▒
 ▒░░░░░▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▒░         ░░▒▒▒░▒▒▒▒▓▓▓▓▓▓▓▒▒░░           ░▒▒░░▒▒▓▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▓▓
-░▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓░                   ░░ ▒▒▓▒░▒▓▓▓░▒░░░        ░░░▒▒▓▓▒▒▓▓▓▓▓▓▓▓▓▒░      ░▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+░▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓░                   ░░ ▒▒▓▒░▒▓▓▓░▒▒░░        ░░░▒▒▓▓▒▒▓▓▓▓▓▓▓▓▓▒░      ░▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
 ▒▒▓▓▓▓▓▓▒▒▒░░                           ░▓▓▒░░▒▓▓░ _   _   _   ░▒▓▒▓▒▒▒▓▓▓▒▒░░                              ░░░▒▒▒
 ▓▓▓▒░  AI inspired by natural plasticity ░░   ░░░  a   N   A   ░▓▒▓░░▒▓░ Autonomous Neural Architecture v5.0
 ░                                                  ‾   ‾   ‾
@@ -22,7 +22,7 @@ We are building an _Autonomous Neural Architecture_ that reflects biological pri
 
 **Peer Review & critique:** The most valuable input is the challenge. If you see a logical flaw in our modeling of a _cortical layer_ or a _neuromodulatory_ pathway, point it out. Precision is our primary goal.
 
-**Architectural alignment:** Before proposing changes, please review the [philosophy.md](/docs/philosophy.md) and [architecture.md](/docs/architecture.md). All additions must respect the principles of energy sobriety and targeted plasticity.
+**Architectural alignment:** Before proposing changes, please review the [philosophy](/docs/philosophy.md) and [architecture](/docs/architecture.md). All additions must respect the principles of energy sobriety and targeted plasticity.
 
 **Experimental validation:** If you implement a new feature (a new _nucleus_, a refined _synapse_), ensure it is backed by biological rationale. We favor "why it works biologically" over "it makes the model faster."
 
@@ -34,7 +34,7 @@ We are moving away from the "open-source contribution" model—where the goal is
 
 ### _Shape the future of AI!_
 
-Join the **aNA** _computational neuroscience_ community: [installation.md](/docs/installation_en.md)
+Join the **aNA** _computational neuroscience_ community: [installation](/docs/installation_en.md)
 
 ---
 

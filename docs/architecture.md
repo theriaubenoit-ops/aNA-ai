@@ -6,10 +6,11 @@
 
 ```
 ├── docs/
-│   ├── api-reference.md            # (To do)
-│   ├── architecture.md             # The technical plan
+│   ├── adr/                        # (To do) Architecture Decision Records
 │   ├── assets/                     # Medias
 │   ├── examples/                   # (To do) Comprehensive example suite
+│   ├── api-reference.md            # (To do)
+│   ├── architecture.md             # The technical plan
 │   ├── genesis.md                  # The story of the project
 │   ├── installation_en.md          # Installation (EN)
 │   ├── installation_fr.md          # Installation (FR)
