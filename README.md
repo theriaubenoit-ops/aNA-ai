@@ -10,8 +10,8 @@
 ▒░░░░░▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▒░         ░░▒▒▒░▒▒▒▒▓▓▓▓▓▓▓▒▒░░           ░▒▒░░▒▒▓▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▓▓
 ░▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓░                     ░▒▒▓▒░▒▓▓▓░▒▒░░        ░░░▒▒▓▓▒▒▓▓▓▓▓▓▓▓▓▒░      ░▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
 ▒▒▓▓▓▓▓▓▒▒▒░░                           ░▓▓▒░░▒▓▓░ _   _   _  ░▒▓▓▒▓▒▒▒▓▓▓▒▒░░                              ░░░▒▒▒
-▓▓▓▒░   AI inspired by natural plasticity ░░   ░░░  a   N   A  ░▓▓▒▓░░▒▓░ Autonomous Neural Architecture v5.0
-░                                                   ‾   ‾   ‾
+▓▓▓▒░  AI inspired by natural plasticity ░░   ░░░  a   N   A  ░▓▓▒▓░░▒▓░ Autonomous Neural Architecture v5.0
+░                                                  ‾   ‾   ‾
 ```
 
 `Project status` [Beta] → Alpha → ReleaseCandidate → Stable | `Language` Python 3.x | `License` MIT

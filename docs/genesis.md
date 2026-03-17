@@ -10,8 +10,8 @@
 ▒░░░░░▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▒░         ░░▒▒▒░▒▒▒▒▓▓▓▓▓▓▓▒▒░░           ░▒▒░░▒▒▓▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▓▓
 ░▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓░                     ░▒▒▓▒░▒▓▓▓░▒▒░░        ░░░▒▒▓▓▒▒▓▓▓▓▓▓▓▓▓▒░      ░▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
 ▒▒▓▓▓▓▓▓▒▒▒░░                           ░▓▓▒░░▒▓▓░ _   _   _  ░▒▓▓▒▓▒▒▒▓▓▓▒▒░░                              ░░░▒▒▒
-▓▓▓▒░   AI inspired by natural plasticity ░░   ░░░  a   N   A  ░▓▓▒▓░░▒▓░ Autonomous Neural Architecture v5.0
-░                                                   ‾   ‾   ‾
+▓▓▓▒░  AI inspired by natural plasticity ░░   ░░░  a   N   A  ░▓▓▒▓░░▒▓░ Autonomous Neural Architecture v5.0
+░                                                  ‾   ‾   ‾
 ```
 
 ### Traces of thought
