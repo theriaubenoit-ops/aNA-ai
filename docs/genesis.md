@@ -18,11 +18,11 @@
 
 The **aNA** AI project was born from a simple intuition: _artificial intelligence_ should not be a mere matter of probabilities, but a matter of organization and structure.
 
-### The initial impulse _(v1-v3)_
+### The initial impulse _(Lab v1-v3 Javascript)_
 
 Conceived in the crucible of initial exchanges with language models _(GPT)_, _v1_ aimed to translate abstract questions into tangible logic. This was a period of intense maturation, a "long march" where the pursuit of precision gradually took precedence over rapid deployment.
 
-### The turning point _(Collaboration v4-v5)_
+### The turning point _(Collaboration v4-v5 Python)_
 
 The introduction of structured collaboration with AI agents _(Gemini and Cline)_ marked a radical shift. We abandoned statistical imitation to delve into the intricacies of neurobiology. Each class, each variable, each cortical layer was conceived as a faithful transposition of the principles of living organisms.
 
