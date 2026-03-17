@@ -13,12 +13,12 @@
 │   │   ├── output_gateway.py       # (To do)
 │   │   └── tempo.py                # Core Pacemaker
 │   ├── anatomy/                    # Brain region implementations
-│   │   │   └── cortex/             # (To do)
-│   │   │       ├── frontal.py      # (To do)
-│   │   │       ├── occipital.py    # (To do)
-│   │   │       ├── parietal.py     # (To do)
-│   │   │       ├── temporal.py     # (To do)
-│   │   │       └── lobe_base.py    # (To do)
+│   │   ├── cortex/                 # (To do)
+│   │   │   ├── frontal.py          # (To do)
+│   │   │   ├── occipital.py        # (To do)
+│   │   │   ├── parietal.py         # (To do)
+│   │   │   ├── temporal.py         # (To do)
+│   │   │   └── lobe_base.py        # (To do)
 │   │   ├── thalamus.py             # Enhanced Thalamus implementation
 │   │   ├── neuron.py               # Represents a single neuron
 │   │   ├── hippocampus.py          # (To do)
