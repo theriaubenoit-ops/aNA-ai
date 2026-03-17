@@ -7,15 +7,15 @@ Instructions française : [installation_fr.md](https://github.com/theriaubenoit-
 1. **Prerequisites _(The Environment)_**
    - Minimum _Python_ version _(e.g., 3.10+)_
    - Base dependencies _(e.g., `pip install -r requirements.txt`)_
-   - Recommended tools _(e.g., venv or conda for environment isolation)_
+   - Recommended tools _(e.g., `venv` or `conda` for environment isolation)_
 
-2. **Installation _(e.g., Terminal, Zsh, Konsole, Git Bash)_**
+2. **Installation _(e.g., Terminal, Zsh, Konsole or Git Bash)_**
    - Clone the repository: `git clone https://github.com/theriaubenoit-ops/aNA-ai.git`
    - Create the environment: `python -m venv venv && source venv/bin/activate`
    - Install dependencies: `pip install -r requirements.txt`
 
 3. **COMING SOON - Running Demonstrations _(The "Running" part)_**
-   - Example commands to launch _basic-demo.html_ or the associated _Python scripts_ (e.g., `python dashboard.py --demo`, `python main.py --demo`).
+   - Example commands to launch _"basic-demo.html"_ or the associated _Python scripts_ (e.g., `python dashboard.py --demo`, `python main.py --demo`).
    - Note on local server _(e.g., `python -m http.server`for web-based demos)_.
 
 4. **Contributing and Communicating _(GitHub Workflow)_**
