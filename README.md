@@ -40,13 +40,23 @@ We are embarking on the "next wave" of artificial intelligence—an AI that does
 
 ## 📚 Glossary: key cognitive terms
 
-- **Six cortical layers**: The standard vertical organization of the mammalian _neocortex_. In **aNA**, these layers define the functional hierarchy: _Layer IV (input)_, _Layers II/III (association/prediction)_, and _Layer V/VI (motor output)_.
+- **Amygdala** _(The "Priority Filter")_: Manages Emotional Valence and stress responses. It acts as a high-speed priority filter that can override standard processing when "threats" or high-importance stimuli (represented by specific neuromodulators) are detected.
 
-- **Neuromodulators**: Chemical "gain controls" _(Dopamine, Adrenaline, Nitric Oxide, Acetylcholine, Serotonin)_ that regulate the global state of the network. They don't carry specific data but adjust how the brain processes information (e.g., focus, reward, stress response).
+- **Cerebellum & Neocortex** _(The "Thinking" Shell)_: The structural integration of the 4 Lobes and 6 Cortical Layers. While the Neocortex handles complex reasoning and prediction, the Cerebellum (in **aNA**) fine-tunes motor outputs and timing, ensuring the system’s actions are fluid and mathematically synchronized.
 
-- **Targeted plasticity**: The biological principle of modifying only the necessary synaptic connections ("_[neurons](scr/anatomy/neuron.py)_ that fire together, wire together"). This enables efficient learning without overwriting existing knowledge, contrasting with energy-intensive global weight updates in standard AI.
+- **Hippocampus** _(The "Buffer")_: The core of the Memory System. It serves as a dynamic buffer for short-term information before it is consolidated into long-term storage within the cortical architecture, allowing **aNA** to learn from recent events without immediate saturation.
 
-- **"Noise"**: In neural processing, background stochastic activity. In **aNA**, "noise" represents irrelevant or chaotic data input. A robust cognitive system must filter this out to maintain the coherence of its internal predictive models.
+- **Neuromodulators** _(Global State Tags)_: Chemical "gain controls" _(Dopamine, Adrenaline, Nitric Oxide, Acetylcholine, Serotonin)_ that regulate the global state of the network. They don't carry specific data but adjust how the brain processes information (e.g., focus, reward, stress response).
+
+- **Neurons** _(Three types & Plasticity_): The fundamental units of **aNA**. We implement three distinct functional types—Sensory, Interneurons, and Motor neurons—integrated with Synaptic Plasticity. This allows the network to physically adapt its connection strengths based on activity, mimicking "Long-Term Potentiation" (LTP).
+
+- **"Noise"** _(Stochastic Metadata / Non-relevant info)_: In neural processing, background stochastic activity. In **aNA**, "noise" represents irrelevant or chaotic data input. A robust cognitive system must filter this out to maintain the coherence of its internal predictive models.
+
+- **Six cortical layers** _(Hierarchical Data Modules)_: The standard vertical organization of the mammalian _neocortex_. In **aNA**, these layers define the functional hierarchy: _Layer IV (input)_, _Layers II/III (association/prediction)_, and _Layer V/VI (motor output)_.
+
+- **Targeted plasticity** _(Granular Weight Updates)_: The biological principle of modifying only the necessary synaptic connections ("_[neurons](scr/anatomy/neuron.py)_ that fire together, wire together"). This enables efficient learning without overwriting existing knowledge, contrasting with energy-intensive global weight updates in standard AI.
+
+- **Thalamus** _(The "Router")_: Acting as the system's Sensory Gateway, the Thalamus filters and directs all incoming data to the appropriate cortical layers. It prevents cognitive overload by ensuring only relevant signals reach the higher processing centers.
 
 _Note: These definitions are adapted to the specific metabolic and cognitive constraints of the aNA v5.0 architecture._
 
