@@ -257,11 +257,11 @@ Processing Hierarchy:
 │   └── Role: "Learning Signal". Acts as a multiplier for LTP (Long-Term
 │       Potentiation) in the association layers. No Dopamine = No Memory growth.
 │
-├─── NEW - Serotonin -> Homeostatic Balance (Global)
+├── NEW - Serotonin -> Homeostatic Balance (Global)
 │   └── Role: "The Governor". Prevents runaway excitation (Epilepsy simulation)
 │       by stabilizing the global neural threshold.
 │
-└─── NEW - Adrenaline -> Hyper-Alertness & Flashbulb Memory
+└── NEW - Adrenaline -> Hyper-Alertness & Flashbulb Memory
     ├── Sensitivity: Acts as an overall win multiplier.
     │   All layers (I to VI) become extremely responsive.
     ├── Concentration: Reduces background “noise” by increasing the
