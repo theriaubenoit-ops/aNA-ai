@@ -40,13 +40,17 @@ The **aNA** _(Autonomous Neural Architecture)_ AI project rejects the paradigm o
 
 ```
 
-# 🔬 Neural Logic _(Advantage of Biological Components as Systems)_:
+## 🔬 Neural Logic _(Advantage of Biological Components as Systems)_:
 
 - **_"Noise" (Stochastic Metadata / Non-relevant info)_:** In _neural processing_, background stochastic activity. In **aNA**, _"noise"_ represents irrelevant or chaotic data input that must be filtered out to maintain the coherence of internal predictive models.
 
-- **Targeted Plasticity _(Low-Energy Granular Updates)_:** The biological principle of modifying only the specific synaptic connections involved in a task. This contrasts with the massive, energy-intensive global weight updates of standard AI. By localizing updates, aNA achieves "learning-on-the-fly" with a fraction of the power, preventing resource exhaustion.
+- **Digital Consciousness _(Proactive Association & Internal Navigation)_:** Unlike conventional AI, which remains dormant until triggered by an external prompt, **aNA** is capable of autonomous internal activity. Guided by the Thalamus, the system can navigate its own memory structures to form new conceptual links or initiate external interactions to seek missing information. This creates a continuous cognitive flow rather than a simple reactive loop.
 
-- **Predictive Coherence _(Hallucination Prevention)_:** Unlike standard models that generate the "next most likely token," **aNA** uses its cortical layers to validate data against internal predictive models. If the input doesn't align with the system's structural logic, it is treated as noise, not a fact.
+- **Rest Cycles _(Offline Consolidation & Memory Strengthening)_:** Inspired by biological sleep and quiet wakefulness. Instead of constant _"always-on"_ ingestion, **aNA** uses designated rest periods to reinforce significant learning events. This process facilitates the "migration" of data from temporary buffers to long-term structures, ensuring a more natural, stable, and durable memorization without the risk of catastrophic forgetting.
+
+- **Targeted Plasticity _(Low-Energy Granular Updates)_:** The biological principle of modifying only the specific synaptic connections involved in a task. This contrasts with the massive, energy-intensive global weight updates of standard AI. By localizing updates, aNA achieves _"learning-on-the-fly"_ with a fraction of the power, preventing resource exhaustion.
+
+- **Predictive Coherence _(Hallucination Prevention)_:** Unlike standard models that generate the _"next most likely token,"_ **aNA** uses its cortical layers to validate data against internal predictive models. If the input doesn't align with the system's structural logic, it is treated as noise, not a fact.
 
 ---
 
