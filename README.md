@@ -40,7 +40,7 @@ We are embarking on the _"next wave"_ of artificial intelligence—an AI that do
 
 ```
 
-## 📚 Cognitive Mapping _(The Digital Bridge)_:
+## 📚 Cognitive Mapping _(The Digital Bridge)_
 
 - **Amygdala _(Priority Filter & Interrupt Controller)_:** Manages emotional valence and high-priority signals. It acts like an interrupt controller that can override standard processing cycles when "critical events" _(stress or high-reward stimuli)_ are detected, ensuring immediate system response.
 
@@ -62,7 +62,7 @@ We are embarking on the _"next wave"_ of artificial intelligence—an AI that do
 
 - **[Neurons(.py)](scr/anatomy/neuron.py) _(Atomic Processing Nodes)_:** The three functional types _(Sensory, Interneurons, Motor)_ operate as the basic logic gates of the architecture. Their Synaptic Plasticity represents a self-modifying code capability, where connection weights evolve dynamically based on the frequency and timing of data flow.
 
-- **Six cortical layers _(Hierarchical Data Modules)_:** The standard vertical organization of the mammalian _Neocortex_. In **aNA**, these _layers_ define the functional hierarchy: _Layer IV (input)_, _Layers II/III (association/prediction)_, and _Layer V/VI (motor output)_.
+- **Columns cortical _(Hierarchical Data Modules)_:** The standard vertical organization of the mammalian _Neocortex_. In **aNA**, these _6 cortical layers_ define the functional hierarchy: _Layer IV (input)_, _Layers II/III (association/prediction)_, and _Layer V/VI (motor output)_.
 
 - **[Thalamus(.py)](scr/anatomy/thalamus.py) _(Sensory Gateway & Packet Router)_:** Acts as the system's central hub for incoming data. It filters and directs sensory signals to the appropriate cortical layers, preventing _"system overflow"_ by dropping irrelevant background noise.
 
