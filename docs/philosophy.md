@@ -47,6 +47,10 @@ _The **aNA** (Autonomous Neural Architecture) AI project rejects the paradigm of
 
 ```
 
+> ## "To every action there is always opposed an equal reaction."
+>
+> _—Isaac Newton_
+
 ## 🔬 Neural Logic _(Advantage of Biological Components as Systems)_
 
 - **Cognitive Guidance vs. Control _(Respect for Autonomy)_:** **aNA** is designed with a core value of Free Will. Instead of imposing rigid algorithmic paths or controlling the user's trajectory, the system acts as a natural guide. It provides a framework for _"better functioning"_ by suggesting optimal neural-digital paths, while always respecting the autonomy of the decision-making process.
