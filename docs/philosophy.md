@@ -76,7 +76,7 @@ _Thank you for paving the way for future discoveries and innovations in this fas
 ## 🏛️ Scientific Lineage & Inherited Principles
 
 **[Alan Hodgkin](https://en.wikipedia.org/wiki/Alan_Hodgkin) & [Andrew Huxley](https://en.wikipedia.org/wiki/Andrew_Huxley)**
-Signal Logic: Their mathematical model of the action potential is the source of our [neurons(.py)](scr/anatomy/neuron.py) communication protocol, ensuring high-fidelity signal propagation.
+Signal Logic: Their mathematical model of the action potential is the source of our _[neurons(.py)](scr/anatomy/neuron.py)_ communication protocol, ensuring high-fidelity signal propagation.
 
 **[Carver Mead](https://en.wikipedia.org/wiki/Carver_Mead)**
 **Neuromorphic Efficiency:** His focus on low-power hardware-software synergy drives our _Targeted Plasticity_. We aim for intelligence that operates within biological energy constraints.
@@ -88,12 +88,12 @@ Signal Logic: Their mathematical model of the action potential is the source of 
 **Rest Cycles:** His research on _neural oscillations_ justifies our background consolidation phases, where **aNA** stabilizes learning during _"quiet"_ periods.
 
 **[Horace Barlow](https://en.wikipedia.org/wiki/Horace_Barlow)**
-**Saliency Filtering:** His work on redundancy reduction is implemented in our [thalamus(.py)](scr/anatomy/thalamus.py), which acts as a gateway, passing only meaningful _"packets"_ to the _cortex_.
+**Saliency Filtering:** His work on redundancy reduction is implemented in our _[thalamus(.py)](scr/anatomy/thalamus.py)_, which acts as a gateway, passing only meaningful _"packets"_ to the _cortex_.
 
 **[Jeff Hawkins](https://en.wikipedia.org/wiki/Jeff_Hawkins)**
 **Hierarchical Stratums:** Our _6 Cortical Layers_ structure is an implementation of his _Thousand Brains Theory_, allowing for complex pattern recognition through hierarchy.
 
-**[John J. Hopfield](https://en.wikipedia.org/wiki/John_Hopfield)**
+**[John Hopfield](https://en.wikipedia.org/wiki/John_Hopfield)**
 **Associative Robustness:** We use his principles of recurrent networks to ensure that **aNA** can reconstruct complete ideas from partial or _noisy sensory inputs_.
 
 **[Karl J. Friston](https://en.wikipedia.org/wiki/Karl_J._Friston)**
