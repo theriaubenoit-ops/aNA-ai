@@ -14,13 +14,17 @@
 ░                                                  ‾   ‾   ‾
 ```
 
-The **aNA** _(Autonomous Neural Architecture)_ AI project rejects the paradigm of _"raw power"_ in favor of the elegance and economy observed in biological structures. We are not building a static database; we are fostering a dynamic cognitive process.
+> ## "Nothing is lost, nothing is created, everything is transformed"
+>
+> _—Antoine Lavoisier_
+
+_The **aNA** (Autonomous Neural Architecture) AI project rejects the paradigm of "raw power" in favor of the elegance and economy observed in biological structures. We are not building a static database; we are fostering a dynamic cognitive process._
 
 1. **Hierarchical information reconstruction:**
-   Unlike architectures that rely on massive data storage, **aNA** AI favors a hierarchical processing approach. Information is not "stored" in a static sense; it is reconstructed in real-time, ensuring that each processed bit is validated against established internal models.
+   Unlike architectures that rely on massive data storage, **aNA** AI favors a hierarchical processing approach. Information is not _"stored"_ in a static sense; it is reconstructed in real-time, ensuring that each processed bit is validated against established internal models.
 
 2. **Synaptic link economy:**
-   Robustness is derived from the density and quality of relational links, not model size. We transform information into relational nodes, making the system economically viable and avoiding the redundancy inherent in conventional "large-scale" models.
+   Robustness is derived from the density and quality of relational links, not model size. We transform information into relational nodes, making the system economically viable and avoiding the redundancy inherent in conventional _"large-scale"_ models.
 
 3. **Latency & plasticity management:**
    **aNA** maintains a fine-grained latency state. By keeping response paths dynamic rather than hard-coded, we preserve cognitive flexibility, drastically reducing the need for destructive relearning and allowing for continuous, low-compute evolution.
@@ -33,6 +37,9 @@ The **aNA** _(Autonomous Neural Architecture)_ AI project rejects the paradigm o
 
 6. **Open collaboration:**
    **aNA** is an open-research initiative. We believe that diverse perspectives are essential to understanding and refining this architecture. We invite contribution not as mere labor, but as a collective engagement in the accuracy of this cognitive simulation.
+
+7. **Natural Erasure & Transformation:**
+   Based on Lavoisier’s principle, information that loses relevance is naturally _"pruned"_ or transformed, preventing the accumulation of digital noise.
 
 ---
 
