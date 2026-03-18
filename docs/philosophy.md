@@ -40,6 +40,20 @@ The **aNA** _(Autonomous Neural Architecture)_ AI project rejects the paradigm o
 
 ```
 
+# 🔬 Neural Logic _(Advantage of Biological Components as Systems)_:
+
+- **_"Noise" (Stochastic Metadata / Non-relevant info)_:** In _neural processing_, background stochastic activity. In **aNA**, _"noise"_ represents irrelevant or chaotic data input that must be filtered out to maintain the coherence of internal predictive models.
+
+- **Targeted Plasticity _(Low-Energy Granular Updates)_:** The biological principle of modifying only the specific synaptic connections involved in a task. This contrasts with the massive, energy-intensive global weight updates of standard AI. By localizing updates, aNA achieves "learning-on-the-fly" with a fraction of the power, preventing resource exhaustion.
+
+- **Predictive Coherence _(Hallucination Prevention)_:** Unlike standard models that generate the "next most likely token," **aNA** uses its cortical layers to validate data against internal predictive models. If the input doesn't align with the system's structural logic, it is treated as noise, not a fact.
+
+---
+
+```
+
+```
+
 > ## "Divide each difficulty into as many parts as is feasible and necessary to resolve it."
 >
 > _—Rene Descartes_
