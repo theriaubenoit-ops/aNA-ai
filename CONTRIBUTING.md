@@ -38,8 +38,24 @@ Join the **aNA** _computational neuroscience_ community: [Download(.zip)](https:
 
 ---
 
-```
+```Python
+# From src/anatomy/thalamus.py
+# Example of proactive sensory gating and focus
 
+def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
+    """
+    Creates a thalamus optimized for high-clarity sensory processing.
+    By adjusting the 'size' of specific nuclei, we sharpen the system's
+    digital focus on priority inputs.
+    """
+    thalamus = Thalamus(position)
+
+    # ✅ Enhancing sensory focus for a clearer cognitive flow
+    thalamus.nuclei[ThalamicNucleusType.LGN].config.size = 800   # Optimized Vision
+    thalamus.nuclei[ThalamicNucleusType.MGN].config.size = 600   # Optimized Hearing
+
+    print("✅ Thalamic Gateway initialized: System is ready for focused interaction.")
+    return thalamus
 ```
 
 > ## "To every action there is always opposed an equal reaction."
