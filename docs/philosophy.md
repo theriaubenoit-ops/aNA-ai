@@ -84,7 +84,7 @@ Signal Logic: Their mathematical model of the action potential is the source of 
 **Saliency Filtering:** His work on redundancy reduction is implemented in our [thalamus(.py)](scr/anatomy/thalamus.py), which acts as a gateway, passing only meaningful _"packets"_ to the _cortex_.
 
 **[Jeff Hawkins](https://en.wikipedia.org/wiki/Jeff_Hawkins)**
-Hierarchical Stratums: Our 6 Cortical Layers structure is an implementation of his Thousand Brains Theory, allowing for complex pattern recognition through hierarchy.
+**Hierarchical Stratums:** Our _6 Cortical Layers_ structure is an implementation of his _Thousand Brains Theory_, allowing for complex pattern recognition through hierarchy.
 
 **[John J. Hopfield](https://en.wikipedia.org/wiki/John_Hopfield)**
 **Associative Robustness:** We use his principles of recurrent networks to ensure that **aNA** can reconstruct complete ideas from partial or _noisy sensory inputs_.
