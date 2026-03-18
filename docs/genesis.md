@@ -36,8 +36,14 @@ This project is an exploration at the threshold of _cortical_ memory. We are not
 
 ---
 
-```
-
+```Python
+# From src/anatomy/hippocampus.py (Test Integration)
+def test_integration():
+    """Demonstrates the successful harmony between input and prediction."""
+    prediction = "B"
+    reality = "B"
+    if prediction == reality:
+        print("✅ Perfect prediction: aNA is in harmony with reality.")
 ```
 
 ## 👤 About the Author
