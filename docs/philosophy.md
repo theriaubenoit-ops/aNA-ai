@@ -51,7 +51,7 @@ _The **aNA** (Autonomous Neural Architecture) AI project rejects the paradigm of
 >
 > _—Rene Descartes_
 
-_Thank you for paving the way for future discoveries and innovations in this fascinating field. Your [contributions](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/CONTRIBUTING.md) to neuroscience and artificial intelligence are invaluable. Some of your works have inspired me. It allows me to better understand and design more efficient bio-inspired neural networks._
+_Thank you for paving the way for future discoveries and innovations in this fascinating field. Your [contributions](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/CONTRIBUTING.md) to neuroscience and artificial intelligence are invaluable. Some of your works have inspired me; they allow me to better understand and design more efficient bio-inspired neural networks._
 
 ## 🏛️ Scientific Lineage & Inherited Principles
 
