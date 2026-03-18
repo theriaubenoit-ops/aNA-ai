@@ -74,34 +74,34 @@ _Thank you for paving the way for future discoveries and innovations in this fas
 
 ## 🏛️ Scientific Lineage & Inherited Principles
 
-**[Santiago Ramon y Cajal](https://en.wikipedia.org/wiki/Santiago_Ram%C3%B3n_y_Cajal)**
-**Discrete Architecture:** His _"Neuron Doctrine"_ is the DNA of our modular approach. We treat each processing node as an independent, discrete entity rather than a monolithic block.
+**[Alan Hodgkin](https://en.wikipedia.org/wiki/Alan_Hodgkin) & [Andrew Huxley](https://en.wikipedia.org/wiki/Andrew_Huxley)**
+Signal Logic: Their mathematical model of the action potential is the source of our [Neurons(.py)](scr/anatomy/neuron.py) communication protocol, ensuring high-fidelity signal propagation.Rita
 
 **[Carver Mead](https://en.wikipedia.org/wiki/Carver_Mead)**
 **Neuromorphic Efficiency:** His focus on low-power hardware-software synergy drives our Targeted Plasticity. We aim for intelligence that operates within biological energy constraints.
 
-**[Karl J. Friston](https://en.wikipedia.org/wiki/Karl_J._Friston)**
-**Predictive Coherence:** We implement his _"Free Energy Principle"_ by using cortical layers to validate inputs, ensuring the system minimizes noise and internal surprise.
-
-**[Horace Barlow](https://en.wikipedia.org/wiki/Horace_Barlow)**
-**Saliency Filtering:** His work on redundancy reduction is implemented in our Thalamus(.py), which acts as a gateway, passing only meaningful _"packets"_ to the cortex.
-
 **[Donald O. Hebb](https://en.wikipedia.org/wiki/Donald_O._Hebb)**
 **Synaptic Learning:** The engine of our learning network. _"Neurons that fire together, wire together"_ is translated into our granular weight update logic.
+
+**[Gyorgy Buzsaki](https://en.wikipedia.org/wiki/Gy%C3%B6rgy_Buzs%C3%A1ki)**
+**Rest Cycles:** His research on neural oscillations justifies our background consolidation phases, where **aNA** stabilizes learning during _"quiet"_ periods.
+
+**[Horace Barlow](https://en.wikipedia.org/wiki/Horace_Barlow)**
+**Saliency Filtering:** His work on redundancy reduction is implemented in our [Thalamus(.py)](scr/anatomy/thalamus.py), which acts as a gateway, passing only meaningful _"packets"_ to the cortex.
 
 **[Jeff Hawkins](https://en.wikipedia.org/wiki/Jeff_Hawkins)**
 Hierarchical Stratums: Our 6 Cortical Layers structure is an implementation of his Thousand Brains Theory, allowing for complex pattern recognition through hierarchy.
 
-**[Gyorgy Buzsaki](https://en.wikipedia.org/wiki/Gy%C3%B6rgy_Buzs%C3%A1ki)**
-**Rest Cycles:** His research on neural oscillations justifies our background consolidation phases, where aNA stabilizes learning during _"quiet"_ periods.
-
 **[John J. Hopfield](https://en.wikipedia.org/wiki/John_Hopfield)**
-**Associative Robustness:** We use his principles of recurrent networks to ensure that aNA can reconstruct complete ideas from partial or noisy sensory inputs.
+**Associative Robustness:** We use his principles of recurrent networks to ensure that **aNA** can reconstruct complete ideas from partial or noisy sensory inputs.
 
-**[Alan Hodgkin](https://en.wikipedia.org/wiki/Alan_Hodgkin) & [Andrew Huxley](https://en.wikipedia.org/wiki/Andrew_Huxley)**
-Signal Logic: Their mathematical model of the action potential is the source of our Neurons(.py) communication protocol, ensuring high-fidelity signal propagation.Rita
+**[Karl J. Friston](https://en.wikipedia.org/wiki/Karl_J._Friston)**
+**Predictive Coherence:** We implement his _"Free Energy Principle"_ by using cortical layers to validate inputs, ensuring the system minimizes noise and internal surprise.
 
 **[Rita Levi-Montalcini](https://en.wikipedia.org/wiki/Rita_Levi-Montalcini)**
 **Link Pruning:** Her discovery of Nerve Growth Factor inspires our _"garbage collection"_ logic, where inefficient or unused synaptic links are pruned to keep the system lean.
+
+**[Santiago Ramon y Cajal](https://en.wikipedia.org/wiki/Santiago_Ram%C3%B3n_y_Cajal)**
+**Discrete Architecture:** His _"Neuron Doctrine"_ is the DNA of our modular approach. We treat each processing node as an independent, discrete entity rather than a monolithic block.
 
 _░▒▓ BT 2026-03-18_
