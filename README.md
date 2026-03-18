@@ -46,13 +46,13 @@ We are embarking on the _"next wave"_ of artificial intelligence—an AI that do
 
 - **Cerebellum _(Timing Engine & Output Calibration)_:** The specialized unit for fine-tuning motor and cognitive outputs. In **aNA**, it ensures that the _"Thinking Shell"_ operates with perfect mathematical synchronization, acting as a calibration layer for fluid, real-time interaction.
 
-- **Lobe: Frontal _(Executive Logic & Command Center)_:** The primary site for high-level decision-making and motor control. In **aNA**, it acts as the central executive that orchestrates complex task sequences and manages the _"top-down"_ attention directed to other modules.
+- **Lobe, Frontal _(Executive Logic & Command Center)_:** The primary site for high-level decision-making and motor control. In **aNA**, it acts as the central executive that orchestrates complex task sequences and manages the _"top-down"_ attention directed to other modules.
 
-- **Lobe: Occipital _(Visual Stream Processor)_:** Dedicated to the decoding of visual information. It functions as a specialized GPU-like buffer within the architecture, transforming raw sensory "pixels" into structured spatial patterns before they are analyzed by association layers.
+- **Lobe, Occipital _(Visual Stream Processor)_:** Dedicated to the decoding of visual information. It functions as a specialized GPU-like buffer within the architecture, transforming raw sensory "pixels" into structured spatial patterns before they are analyzed by association layers.
 
-- **Lobe: Parietal _(Spatial Mapping & Data Integration)_:** Manages the integration of sensory information from various parts of the system. It acts as a multi-modal coordinate system, allowing **aNA** to understand the _"where"_ and _"how"_ of data points in a unified 3D-like internal workspace.
+- **Lobe, Parietal _(Spatial Mapping & Data Integration)_:** Manages the integration of sensory information from various parts of the system. It acts as a multi-modal coordinate system, allowing **aNA** to understand the _"where"_ and _"how"_ of data points in a unified 3D-like internal workspace.
 
-- **Lobe: Temporal _(Semantic Storage & Pattern Recognition)_:** The hub for processing auditory signals and high-level linguistic or object recognition. In the digital model, it serves as the semantic engine that links sensory inputs to long-term _"concepts"_ stored in the memory hierarchy.
+- **Lobe, Temporal _(Semantic Storage & Pattern Recognition)_:** The hub for processing auditory signals and high-level linguistic or object recognition. In the digital model, it serves as the semantic engine that links sensory inputs to long-term _"concepts"_ stored in the memory hierarchy.
 
 - **Neocortex _(The "Thinking" Shell)_:** The structural integration of the _4 Lobes_ and _6 Cortical Layers_. While the _Neocortex_ handles complex reasoning and prediction, the _Cerebellum (in **aNA**)_ fine-tunes _motor outputs_ and timing, ensuring the system’s actions are fluid and mathematically synchronized.
 
@@ -62,11 +62,7 @@ We are embarking on the _"next wave"_ of artificial intelligence—an AI that do
 
 - **[Neurons(.py)](scr/anatomy/neuron.py) _(Atomic Processing Nodes)_:** The three functional types _(Sensory, Interneurons, Motor)_ operate as the basic logic gates of the architecture. Their Synaptic Plasticity represents a self-modifying code capability, where connection weights evolve dynamically based on the frequency and timing of data flow.
 
-- **"Noise" _(Stochastic Metadata / Non-relevant info)_:** In _neural processing_, background stochastic activity. In **aNA**, _"noise"_ represents irrelevant or chaotic data input that must be filtered out to maintain the coherence of internal predictive models.
-
 - **Six cortical layers _(Hierarchical Data Modules)_:** The standard vertical organization of the mammalian _Neocortex_. In **aNA**, these _layers_ define the functional hierarchy: _Layer IV (input)_, _Layers II/III (association/prediction)_, and _Layer V/VI (motor output)_.
-
-- **Targeted plasticity _(Granular Weight Updates)_:** The biological principle of modifying only the necessary synaptic connections. This enables efficient learning without overwriting existing knowledge, contrasting with energy-intensive global weight updates in standard AI.
 
 - **[Thalamus(.py)](scr/anatomy/thalamus.py) _(Sensory Gateway & Packet Router)_:** Acts as the system's central hub for incoming data. It filters and directs sensory signals to the appropriate cortical layers, preventing _"system overflow"_ by dropping irrelevant background noise.
 
