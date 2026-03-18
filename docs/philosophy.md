@@ -44,9 +44,9 @@ The **aNA** _(Autonomous Neural Architecture)_ AI project rejects the paradigm o
 
 - **Cognitive Guidance vs. Control _(Respect for Autonomy)_:** **aNA** is designed with a core value of Free Will. Instead of imposing rigid algorithmic paths or controlling the user's trajectory, the system acts as a natural guide. It provides a framework for "better functioning" by suggesting optimal neural-digital paths, while always respecting the autonomy of the decision-making process.
 
-- **_"Noise" (Stochastic Metadata / Non-relevant info)_:** In _neural processing_, background stochastic activity. In **aNA**, _"noise"_ represents irrelevant or chaotic data input that must be filtered out to maintain the coherence of internal predictive models.
-
 - **Digital Consciousness _(Proactive Association & Internal Navigation)_:** Unlike conventional AI, which remains dormant until triggered by an external prompt, **aNA** is capable of autonomous internal activity. Guided by the Thalamus, the system can navigate its own memory structures to form new conceptual links or initiate external interactions to seek missing information. This creates a continuous cognitive flow rather than a simple reactive loop.
+
+- **_"Noise" (Stochastic Metadata / Non-relevant info)_:** In _neural processing_, background stochastic activity. In **aNA**, _"noise"_ represents irrelevant or chaotic data input that must be filtered out to maintain the coherence of internal predictive models.
 
 - **Rest Cycles _(Offline Consolidation & Memory Strengthening)_:** Inspired by biological sleep and quiet wakefulness. Instead of constant _"always-on"_ ingestion, **aNA** uses designated rest periods to reinforce significant learning events. This process facilitates the "migration" of data from temporary buffers to long-term structures, ensuring a more natural, stable, and durable memorization without the risk of catastrophic forgetting.
 
