@@ -9,9 +9,9 @@
 ░░░░░░░░░░░░░░▒▒▒▓▓▓▓▓▓▓▓▓▓▓▒░░▒▒▒░░░░▒▓▓▓▓▓▓▒▒▒▒▒░   ░▒▒▒▒▒▒▒▒▓▒▒░▒▓▒░░░░░░▒▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░░░░░░░▒▒
 ▒░░░░░▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▒░         ░░▒▒▒░▒▒▒▒▓▓▓▓▓▓▓▒▒░░           ░▒▒░░▒▒▓▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▓▓
 ░▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓░                   ░░ ▒▒▓▒░▒▓▓▓░▒▒░░        ░░░▒▒▓▓▒▒▓▓▓▓▓▓▓▓▓▒░      ░▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-▒▒▓▓▓▓▓▓▒▒▒░░                           ░▓▓▒░░▒▓▓░ _   _   _   ░▒▓▒▓▒▒▒▓▓▓▒▒░░                              ░░░▒▒▒
-▓▓▓▒░  AI inspired by natural plasticity ░░   ░░░  a   N   A   ░▓▒▓░░▒▓░ Autonomous Neural Architecture v5.0
-░                                                  ‾   ‾   ‾
+▒▒▓▓▓▓▓▓▒▒▒░░                           ░▓▓▒░░▒▓▓░_    _    _  ░▒▓▒▓▒▒▒▓▓▓▒▒░░                              ░░░▒▒▒
+▓▓▓▒░  AI inspired by natural plasticity ░░   ░░░ a    N    A  ░▓▒▓░░▒▓░ Autonomous Neural Architecture v5.0
+░                                                 ‾    ‾    ‾
 ```
 
 > ## "Nothing is lost, nothing is created, everything is transformed"
@@ -39,7 +39,7 @@ _The **aNA** (Autonomous Neural Architecture) AI project rejects the paradigm of
    **aNA** is an open-research initiative. We believe that diverse perspectives are essential to understanding and refining this architecture. We invite contribution not as mere labor, but as a collective engagement in the accuracy of this cognitive simulation.
 
 7. **Natural Erasure & Transformation:**
-   Based on Lavoisier’s principle, information that loses relevance is naturally _"pruned"_ or transformed, preventing the accumulation of digital noise.
+   Based on _Lavoisier’s principle_, information that loses relevance is naturally _"pruned"_ or transformed, preventing the accumulation of digital noise.
 
 ---
 
