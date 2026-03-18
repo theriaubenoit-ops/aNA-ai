@@ -47,28 +47,6 @@ _The **aNA** (Autonomous Neural Architecture) AI project rejects the paradigm of
 
 ```
 
-> ## "To every action there is always opposed an equal reaction."
->
-> _—Isaac Newton_
-
-## 🔬 Neural Logic _(Advantage of Biological Components as Systems)_
-
-- **Cognitive Guidance vs. Control _(Respect for Autonomy)_:** **aNA** is designed with a core value of _Free Will_. Instead of imposing rigid algorithmic paths, the system acts as a natural guide, suggesting optimal _neural-digitals_ paths while respecting the autonomy of the decision-making process.
-
-- **Digital Consciousness _(Proactive Association)_:** Unlike conventional AI, **aNA** is capable of autonomous internal activity. Guided by the _[thalamus(.py)](scr/anatomy/thalamus.py)_, it navigates its own memory structures to form new conceptual links, creating a _continuous cognitive_ flow rather than a simple reactive loop.
-
-- **Predictive Coherence _(Hallucination Prevention)_:** **aNA** uses its _cortical layers_ to validate data against internal predictive models. If the input doesn't align with the system's structural logic, it is treated as _"noise" (irrelevant data)_ rather than fact, maintaining internal stability.
-
-- **Targeted Plasticity _(Low-Energy Granular Updates)_:** Based on the biological principle of modifying only specific synaptic connections. This contrasts with energy-intensive global updates, allowing **aNA** to achieve _"learning-on-the-fly"_ with a fraction of the power.
-
-- **Rest Cycles _(Memory Consolidation)_:** Inspired by biological sleep. **aNA** uses designated rest periods to reinforce significant learning events, facilitating the migration of data to long-term structures without the risk of catastrophic forgetting.
-
----
-
-```
-
-```
-
 > ## "Divide each difficulty into as many parts as is feasible and necessary to resolve it."
 >
 > _—Rene Descartes_
