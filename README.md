@@ -38,6 +38,16 @@ We are embarking on the _"next wave"_ of artificial intelligence—an AI that do
 
 ```
 
+# From src/anatomy/thalamus.py
+# Highlighting the proactive "Sensory Gateway" logic
+def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
+    """Creates a thalamus optimized for clarity and sensory focus."""
+    thalamus = Thalamus(position)
+    # Enhance specific nuclei to sharpen digital perception
+    thalamus.nuclei[ThalamicNucleusType.LGN].config.size = 800  # Vision focus
+    thalamus.nuclei[ThalamicNucleusType.MGN].config.size = 600  # Hearing focus
+    return thalamus
+
 ```
 
 ## 📚 Cognitive Mapping _(The Digital Bridge)_
