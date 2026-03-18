@@ -47,6 +47,13 @@ We are embarking on the _"next wave"_ of artificial intelligence—an AI that do
 - **Cerebellum _(Timing Engine & Output Calibration)_:** The specialized unit for fine-tuning motor and cognitive outputs. In **aNA**, it ensures that the _"Thinking Shell"_ operates with perfect mathematical synchronization, acting as a calibration layer for fluid, real-time interaction.
 
 - **Neocortex _(The "Thinking" Shell)_:** The structural integration of the _4 Lobes_ and _6 Cortical Layers_. While the _Neocortex_ handles complex reasoning and prediction, the _Cerebellum (in **aNA**)_ fine-tunes _motor outputs_ and timing, ensuring the system’s actions are fluid and mathematically synchronized.
+  - **Frontal Lobe _(Executive Logic & Command Center)_:** The primary site for high-level decision-making and motor control. In **aNA**, it acts as the central executive that orchestrates complex task sequences and manages the _"top-down"_ attention directed to other modules.
+
+  - **Occipital Lobe _(Visual Stream Processor)_:** Dedicated to the decoding of visual information. It functions as a specialized GPU-like buffer within the architecture, transforming raw sensory "pixels" into structured spatial patterns before they are analyzed by association layers.
+
+  - **Parietal Lobe _(Spatial Mapping & Data Integration)_:** Manages the integration of sensory information from various parts of the system. It acts as a multi-modal coordinate system, allowing **aNA** to understand the _"where"_ and _"how"_ of data points in a unified 3D-like internal workspace.
+
+  - **Temporal Lobe _(Semantic Storage & Pattern Recognition)_:** The hub for processing auditory signals and high-level linguistic or object recognition. In the digital model, it serves as the semantic engine that links sensory inputs to long-term _"concepts"_ stored in the memory hierarchy.
 
 - **Hippocampus _(Dynamic Buffer & Indexing System)_:** Functions as a high-speed memory buffer for short-term data. It manages the temporary storage of information and coordinates its eventual _"migration" (consolidation)_ into _long-term cortical databases_, preventing immediate system saturation.
 
