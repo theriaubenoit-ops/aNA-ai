@@ -40,7 +40,7 @@ We are embarking on the _"next wave"_ of artificial intelligence—an AI that do
 
 ```
 
-## 📚 Glossary: key cognitive terms _(Digital Mapping)_
+## 📚 Cognitive Mapping _(The Digital Bridge)_:
 
 - **Amygdala _(Priority Filter & Interrupt Controller)_:** Manages emotional valence and high-priority signals. It acts like an interrupt controller that can override standard processing cycles when "critical events" _(stress or high-reward stimuli)_ are detected, ensuring immediate system response.
 
