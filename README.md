@@ -48,7 +48,7 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
     return thalamus
 ```
 
-_aNA sharpens digital perception by prioritizing meaningful signals, ensuring a clear and focused cognitive flow._
+###### aNA sharpens digital perception by prioritizing meaningful signals, ensuring a clear and focused cognitive flow.
 
 ## 📚 Cognitive Mapping _(The Digital Bridge)_
 
