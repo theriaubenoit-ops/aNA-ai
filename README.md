@@ -48,6 +48,8 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
     return thalamus
 ```
 
+_aNA sharpens digital perception by prioritizing meaningful signals, ensuring a clear and focused cognitive flow._
+
 ## 📚 Cognitive Mapping _(The Digital Bridge)_
 
 - **Amygdala _(Priority Filter & Interrupt Controller)_:** Manages emotional valence and high-priority signals. It acts like an interrupt controller that can override standard processing cycles when "critical events" _(stress or high-reward stimuli)_ are detected, ensuring immediate system response.
