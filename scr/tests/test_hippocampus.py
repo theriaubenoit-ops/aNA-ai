@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Test unitaire pour l'Hippocampe - Version Isolée
+Unit Test for the Hippocampus - Isolated Version
 
-Ce module teste l'hippocampe en isolation totale sans aucune dépendance externe.
-Il simule un flux de données simple pour vérifier que l'hippocampe apprend bien les patterns.
+This module tests the hippocampus in complete isolation without any external dependencies.
+It simulates a simple data stream to verify that the hippocampus learns patterns correctly.
 """
 
 import numpy as np
@@ -24,10 +24,10 @@ class HippocampalRegion(Enum):
 
 class SimpleHippocampus:
     """
-    Version simplifiée de l'hippocampe pour tests unitaires.
-    
-    Cette version utilise une structure de données simple (dictionnaire)
-    pour simuler L1, L2, L3 sans aucune dépendance externe.
+    Simplified version of the hippocampus for unit testing.
+
+    This version uses a simple data structure (dictionary)
+    to simulate L1, L2, and L3 without any external dependencies.
     """
     
     def __init__(self, position: np.ndarray = np.array([10.0, -30.0, 0.0])):
@@ -58,11 +58,11 @@ class SimpleHippocampus:
     
     def encode(self, signal: str, importance: float = 1.0) -> None:
         """
-        Encode un signal dans la mémoire.
-        
-        Args:
-            signal: Le signal à encoder (ex: "A", "B", "HELLO")
-            importance: Facteur d'importance (0.0 à 1.0)
+        Encode a signal in memory.
+
+        Arguments:
+            signal: The signal to encode (e.g., "A", "B", "HELLO")
+            importance: Importance factor (0.0 to 1.0)
         """
         # Stockage immédiat en L1
         if signal not in self.memory_store['L1']:
@@ -92,9 +92,9 @@ class SimpleHippocampus:
     
     def consolidate(self) -> None:
         """
-        Routine de consolidation - déplace les patterns de L1 vers L2/L3.
-        
-        Cette méthode est appelée périodiquement pour simuler le renforcement.
+        Consolidation Routine – moves patterns from L1 to L2/L3.
+
+        This method is called periodically to simulate reinforcement.
         """
         signals_to_move = []
         
@@ -130,13 +130,13 @@ class SimpleHippocampus:
     
     def retrieve(self, context: str) -> str:
         """
-        Récupère une prédiction basée sur le contexte.
-        
+        Retrieves a context-based prediction.
+
         Args:
-            context: Le contexte de requête (ex: "A" pour prédire ce qui suit)
-            
+            context: The query context (e.g., "A" to predict what follows)
+
         Returns:
-            La prédiction la plus probable, ou "?" si rien n'est trouvé
+            The most likely prediction, or "?" if nothing is found.
         """
         # D'abord chercher dans les transitions
         if context in self.transitions:
@@ -188,10 +188,10 @@ class SimpleHippocampus:
     
     def encode_sequence(self, sequence: List[str]) -> None:
         """
-        Encode une séquence de signaux pour apprendre les transitions.
-        
+        Encode a sequence of signals to learn the transitions.
+
         Args:
-            sequence: Liste de signaux dans l'ordre chronologique
+            sequence: List of signals in chronological order
         """
         for i, signal in enumerate(sequence):
             # Encoder le signal actuel
@@ -207,7 +207,7 @@ class SimpleHippocampus:
             self.consolidate()
     
     def get_memory_status(self) -> Dict:
-        """Retourne l'état actuel de la mémoire"""
+        """Returns the current state of memory"""
         return {
             'L1_count': len(self.memory_store['L1']),
             'L2_count': len(self.memory_store['L2']),
@@ -226,10 +226,10 @@ class SimpleHippocampus:
 
 def test_hippocampus_pattern_learning():
     """
-    Test unitaire pour vérifier que l'hippocampe apprend bien les patterns.
-    
-    Scénario: A -> B -> A -> B -> A -> B
-    L'hippocampe doit apprendre que après "A" vient souvent "B"
+    Unit test to verify that the hippocampus learns patterns correctly.
+
+    Scenario: A -> B -> A -> B -> A -> B
+    The hippocampus must learn that "B" often follows "A".
     """
     print("\n🧪 TEST UNITAIRE: Apprentissage de Pattern")
     print("=" * 60)
@@ -311,9 +311,9 @@ def test_hippocampus_pattern_learning():
 
 def test_hippocampus_complex_pattern():
     """
-    Test unitaire pour un pattern plus complexe.
-    
-    Scénario: "HELLO" -> "WORLD" -> "HELLO" -> "WORLD"
+    Unit test for a more complex pattern.
+
+    Scenario: "HELLO" -> "WORLD" -> "HELLO" -> "WORLD"
     """
     print("\n🧪 TEST UNITAIRE: Pattern Complexe")
     print("=" * 50)
@@ -342,7 +342,7 @@ def test_hippocampus_complex_pattern():
 
 
 def run_all_tests():
-    """Exécute tous les tests unitaires"""
+    """Runs all unit tests"""
     print("🚀 LANCEMENT DES TESTS UNITAIRES HIPPOCAMPE")
     print("=" * 60)
     
