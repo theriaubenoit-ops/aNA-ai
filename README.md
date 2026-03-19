@@ -36,7 +36,7 @@ We are embarking on the _"next wave"_ of artificial intelligence—an AI that do
 
 ---
 
-```python
+```python \colorbox{none}
 # From src/anatomy/thalamus.py
 # Highlighting the proactive "Sensory Gateway" logic
 def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
