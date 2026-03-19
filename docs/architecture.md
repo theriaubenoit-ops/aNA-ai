@@ -2,54 +2,15 @@
 
 # ✴️*aNA (Autonomous Neural Architecture)* AI Project v5.0
 
-```
-
-```
-
-### Architecture overview
-
-```
-├── docs/
-│   ├── adr/                        # (To do) Architecture Decision Records
-│   ├── assets/                     # Medias
-│   ├── examples/                   # (To do) Comprehensive example suite
-│   ├── api-reference.md            # (To do)
-│   ├── architecture.md             # The technical plan
-│   ├── genesis.md                  # The story of the project
-│   ├── installation_en.md          # Installation (EN)
-│   ├── installation_fr.md          # Installation (FR)
-│   ├── legend.md                   # (To do)
-│   └── philosophy.md               # The ethical vision
-├── examples/                       # (To do) Comprehensive example suite
-│   ├── basic-demo.html             # (To do)
-│   ├── learning-demo.html          # (To do)
-│   └── memory-demo.html            # (To do)
-├── src/
-│   ├── anatomy/                    # Brain region implementations
-│   │   ├── cortex/
-│   │   │   ├── frontal.py          # (Coming soon)
-│   │   │   ├── lobe_base.py        # (Coming soon)
-│   │   │   ├── occipital.py        # (Coming soon)
-│   │   │   ├── parietal.py         # (Coming soon)
-│   │   │   └── temporal.py         # (Coming soon)
-│   │   ├── amygdala.py             # (Coming soon)
-│   │   ├── cerebellum.py           # (Coming soon)
-│   │   ├── hippocampus.py          # (Coming soon)
-│   │   ├── neuron.py               # Represents a single neuron
-│   │   └── thalamus.py             # Enhanced Thalamus implementation
-│   ├── core/                       # Core neural components
-│   │   ├── input_gateway.py        # (Coming soon)
-│   │   ├── neural_transmission.py  # The standardized data structure
-│   │   ├── neuromodulator.py       # Chemical "gain controls"
-│   │   ├── output_gateway.py       # (Coming soon)
-│   │   └── tempo.py                # Core Pacemaker
-│   ├── gui/                        # (To do) Web-based interface
-│   │   └── dashboard.py            # (Coming soon)
-│   └── tests/                      # (To do) Comprehensive test suite
-├── CONTRIBUTING.md                 # The rules of collaboration
-├── LICENSE                         # The protection license
-├── main.py                         # (Coming soon) The orchestrator
-└── README.md                       # The Manifesto
+```Python
+# Snippet suggestion for Level 9 integration
+def apply_neuromodulation(neuron, matrix):
+    # Acetylcholine sharpens focus by lowering thresholds
+    if matrix.acetylcholine > 0.5:
+        neuron.threshold -= 5.0  # Increased sensitivity
+    # Serotonin stabilizes the global state
+    if matrix.serotonin > 0.8:
+        neuron.stabilize_firing()
 ```
 
 ### 1. 🏗️ High-Level System Architecture
@@ -273,6 +234,52 @@ Processing Hierarchy:
     │   contrast between very active neurons and resting neurons.
     └── Learning: Triggers an instant “Memory Capture”
         (More charge sent to the Hippocampus/CA3).
+```
+
+### Architecture overview (Road map)
+
+```
+├── docs/
+│   ├── adr/                        # (To do) Architecture Decision Records
+│   ├── assets/                     # Medias
+│   ├── examples/                   # (To do) Comprehensive example suite
+│   ├── api-reference.md            # (To do)
+│   ├── architecture.md             # The technical plan
+│   ├── genesis.md                  # The story of the project
+│   ├── installation_en.md          # Installation (EN)
+│   ├── installation_fr.md          # Installation (FR)
+│   ├── legend.md                   # (To do)
+│   └── philosophy.md               # The ethical vision
+├── examples/                       # (To do) Comprehensive example suite
+│   ├── basic-demo.html             # (To do)
+│   ├── learning-demo.html          # (To do)
+│   └── memory-demo.html            # (To do)
+├── src/
+│   ├── anatomy/                    # Brain region implementations
+│   │   ├── cortex/
+│   │   │   ├── frontal.py          # (Coming soon)
+│   │   │   ├── lobe_base.py        # (Coming soon)
+│   │   │   ├── occipital.py        # (Coming soon)
+│   │   │   ├── parietal.py         # (Coming soon)
+│   │   │   └── temporal.py         # (Coming soon)
+│   │   ├── amygdala.py             # (Coming soon)
+│   │   ├── cerebellum.py           # (Coming soon)
+│   │   ├── hippocampus.py          # (Coming soon)
+│   │   ├── neuron.py               # Represents a single neuron
+│   │   └── thalamus.py             # Enhanced Thalamus implementation
+│   ├── core/                       # Core neural components
+│   │   ├── input_gateway.py        # (Coming soon)
+│   │   ├── neural_transmission.py  # The standardized data structure
+│   │   ├── neuromodulator.py       # Chemical "gain controls"
+│   │   ├── output_gateway.py       # (Coming soon)
+│   │   └── tempo.py                # Core Pacemaker
+│   ├── gui/                        # (To do) Web-based interface
+│   │   └── dashboard.py            # (Coming soon)
+│   └── tests/                      # (To do) Comprehensive test suite
+├── CONTRIBUTING.md                 # The rules of collaboration
+├── LICENSE                         # The protection license
+├── main.py                         # (Coming soon) The orchestrator
+└── README.md                       # The Manifesto
 ```
 
 _░▒▓ [BT](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/docs/genesis.md) 2026-03-18_
