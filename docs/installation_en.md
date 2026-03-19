@@ -23,4 +23,4 @@ Instructions française : [installation (fr)](https://github.com/theriaubenoit-o
    - [ ] Pull Requests: "Submit your improvements for neurons or modules."
    - [ ] Discussions: "Use **GitHub** Discussions to exchange ideas on the model's behavioral psychology or simply to share how our code has inspired you."
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/docs/genesis.md) 2026-03-16_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-16_

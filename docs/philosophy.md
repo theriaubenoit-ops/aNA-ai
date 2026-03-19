@@ -93,4 +93,4 @@ Signal Logic: Their mathematical model of the action potential is the source of 
 **[Santiago Ramon y Cajal](https://en.wikipedia.org/wiki/Santiago_Ram%C3%B3n_y_Cajal)**
 **Discrete Architecture:** His _"Neuron Doctrine"_ is the _DNA_ of our modular approach. We treat each processing node as an independent, discrete entity rather than a monolithic block.
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/docs/genesis.md) 2026-03-18_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-18_

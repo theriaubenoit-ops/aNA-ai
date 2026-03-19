@@ -78,4 +78,4 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
 
 _Note: These definitions are adapted to the specific metabolic and cognitive constraints of the **aNA** v5.0 architecture._
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/docs/genesis.md) 2026-03-17_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-17_

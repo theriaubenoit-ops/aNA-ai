@@ -291,4 +291,4 @@ def apply_serotonin_stabilization(neural_network, matrix):
 └── README.md                       # The Manifesto
 ```
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/docs/genesis.md) 2026-03-18_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-18_

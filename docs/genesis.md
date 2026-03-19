@@ -64,4 +64,4 @@ Since the beginning of his career, this constant pursuit of form and structure h
 
 Between behavioral _psychology_, _ethics_, and _neuroinformatics_, his work offers a new interpretation of _artificial intelligence_: that of an architecture which, like the _brain_, is cultivated with precision and intention.
 
-_░▒▓ BT 2026-03-16_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-16_
