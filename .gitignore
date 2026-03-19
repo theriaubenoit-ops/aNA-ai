@@ -1,0 +1,20 @@
+# Ne pas considérer les dossiers/fichiers Python temporaires
+__pycache__/
+.pytest_cache/
+*.py[cod]
+*$py.class
+*.pyc
+
+# Ne pas considérer les dossiers VS Code
+.vscode/
+
+# Ne pas considérer les dossiers/fichiers système 
+.directory
+.DS_Store
+Thumbs.db
+
+# Ne pas considérer les dossiers/fichiers sensibles ou en cours de dev
+data/
+private/
+config_keys.py
+*.log
