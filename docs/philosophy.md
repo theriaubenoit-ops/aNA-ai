@@ -63,34 +63,34 @@ _Thank you for paving the way for future discoveries and innovations in this fas
 
 ## 🏛️ Scientific Lineage & Inherited Principles
 
-**[Alan Hodgkin](https://en.wikipedia.org/wiki/Alan_Hodgkin) & [Andrew Huxley](https://en.wikipedia.org/wiki/Andrew_Huxley)**
-Signal Logic: Their mathematical model of the action potential is the source of our _[neurons(.py)](scr/anatomy/neuron.py)_ communication protocol, ensuring high-fidelity signal propagation.
+**Signal Logic** _[Alan Hodgkin](https://en.wikipedia.org/wiki/Alan_Hodgkin) & [Andrew Huxley](https://en.wikipedia.org/wiki/Andrew_Huxley)_:
+Their mathematical model of the action potential is the source of our _[neurons(.py)](scr/anatomy/neuron.py)_ communication protocol, ensuring high-fidelity signal propagation.
 
-**[Carver Mead](https://en.wikipedia.org/wiki/Carver_Mead)**
-**Neuromorphic Efficiency:** His focus on low-power hardware-software synergy drives our _Targeted Plasticity_. We aim for intelligence that operates within biological energy constraints.
+**Neuromorphic Efficiency** _[Carver Mead](https://en.wikipedia.org/wiki/Carver_Mead)_:
+His focus on low-power hardware-software synergy drives our _Targeted Plasticity_. We aim for intelligence that operates within biological energy constraints.
 
-**[Donald O. Hebb](https://en.wikipedia.org/wiki/Donald_O._Hebb)**
-**Synaptic Learning:** The engine of our learning network. _"Neurons that fire together, wire together"_ is translated into our granular weight update logic.
+**Synaptic Learning** _[Donald O. Hebb](https://en.wikipedia.org/wiki/Donald_O._Hebb)_:
+The engine of our learning network. _"Neurons that fire together, wire together"_ is translated into our granular weight update logic.
 
-**[Gyorgy Buzsaki](https://en.wikipedia.org/wiki/Gy%C3%B6rgy_Buzs%C3%A1ki)**
-**Rest Cycles:** His research on _neural oscillations_ justifies our background consolidation phases, where **aNA** stabilizes learning during _"quiet"_ periods.
+**Rest Cycles** _[Gyorgy Buzsaki](https://en.wikipedia.org/wiki/Gy%C3%B6rgy_Buzs%C3%A1ki)_:
+His research on _neural oscillations_ justifies our background consolidation phases, where **aNA** stabilizes learning during _"quiet"_ periods.
 
-**[Horace Barlow](https://en.wikipedia.org/wiki/Horace_Barlow)**
-**Saliency Filtering:** His work on redundancy reduction is implemented in our _[thalamus(.py)](scr/anatomy/thalamus.py)_, which acts as a gateway, passing only meaningful _"packets"_ to the _cortex_.
+**Saliency Filtering** _[Horace Barlow](https://en.wikipedia.org/wiki/Horace_Barlow)_:
+His work on redundancy reduction is implemented in our _[thalamus(.py)](scr/anatomy/thalamus.py)_, which acts as a gateway, passing only meaningful _"packets"_ to the _cortex_.
 
-**[Jeff Hawkins](https://en.wikipedia.org/wiki/Jeff_Hawkins)**
-**Hierarchical Stratums:** Our _6 Cortical Layers_ structure is an implementation of his _Thousand Brains Theory_, allowing for complex pattern recognition through hierarchy.
+**Hierarchical Stratums** _[Jeff Hawkins](https://en.wikipedia.org/wiki/Jeff_Hawkins)_:
+Our _6 Cortical Layers_ structure is an implementation of his _Thousand Brains Theory_, allowing for complex pattern recognition through hierarchy.
 
-**[John Hopfield](https://en.wikipedia.org/wiki/John_Hopfield)**
-**Associative Robustness:** We use his principles of recurrent networks to ensure that **aNA** can reconstruct complete ideas from partial or _noisy sensory inputs_.
+**Associative Robustness** _[John Hopfield](https://en.wikipedia.org/wiki/John_Hopfield)_:
+We use his principles of recurrent networks to ensure that **aNA** can reconstruct complete ideas from partial or _noisy sensory inputs_.
 
-**[Karl J. Friston](https://en.wikipedia.org/wiki/Karl_J._Friston)**
-**Predictive Coherence:** We implement his _"Free Energy Principle"_ by using cortical layers to validate inputs, ensuring the system minimizes _"noise"_ and internal surprise.
+**Predictive Coherence** _[Karl J. Friston](https://en.wikipedia.org/wiki/Karl_J._Friston)_:
+We implement his _"Free Energy Principle"_ by using cortical layers to validate inputs, ensuring the system minimizes _"noise"_ and internal surprise.
 
-**[Rita Levi-Montalcini](https://en.wikipedia.org/wiki/Rita_Levi-Montalcini)**
-**Link Pruning:** Her discovery of _Nerve Growth Factor_ inspires our _"garbage collection"_ logic, where inefficient or unused _synaptic links_ are pruned to keep the system lean.
+**Link Pruning** _[Rita Levi-Montalcini](https://en.wikipedia.org/wiki/Rita_Levi-Montalcini)_:
+Her discovery of _Nerve Growth Factor_ inspires our _"garbage collection"_ logic, where inefficient or unused _synaptic links_ are pruned to keep the system lean.
 
-**[Santiago Ramon y Cajal](https://en.wikipedia.org/wiki/Santiago_Ram%C3%B3n_y_Cajal)**
-**Discrete Architecture:** His _"Neuron Doctrine"_ is the _DNA_ of our modular approach. We treat each processing node as an independent, discrete entity rather than a monolithic block.
+**Discrete Architecture** _[Santiago Ramon y Cajal](https://en.wikipedia.org/wiki/Santiago_Ram%C3%B3n_y_Cajal)_:
+His _"Neuron Doctrine"_ is the _DNA_ of our modular approach. We treat each processing node as an independent, discrete entity rather than a monolithic block.
 
 _░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-18_
