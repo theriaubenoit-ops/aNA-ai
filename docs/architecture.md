@@ -290,17 +290,18 @@ def apply_serotonin_stabilization(neural_network, matrix):
 │   ├── gui/                        # 📋 To Do:  Web-based interface
 │   │   └── dashboard.py            # 🚧  Work in progress: ...
 │   │
-│   └── tests/                      # NEW - Comprehensive test suite
-│       ├── test_amygdala.py        # 🗓️ Coming Soon: Priority Filter & Interrupt Controller
-│       ├── test_cerebellum.py      # 🗓️ Coming Soon: Timing Engine & Output Calibration
-│       ├── test_hippocampus.py     # NEW - Dynamic Buffer & Indexing System
-│       ├── test_neuron.py          # 🗓️ Coming Soon: Represents a single neuron
-│       ├── test_pulse.py           # NEW - Core Pacemaker (pulse)
-│       └── test_thalamus.py        # 🗓️ Coming Soon: Enhanced Thalamus implementation
+│   ├── tests/                      # NEW - Comprehensive test suite
+│   │   ├── test_amygdala.py        # 🗓️ Coming Soon: Priority Filter & Interrupt Controller
+│   │   ├── test_cerebellum.py      # 🗓️ Coming Soon: Timing Engine & Output Calibration
+│   │   ├── test_hippocampus.py     # NEW - Dynamic Buffer & Indexing System
+│   │   ├── test_neuron.py          # 🗓️ Coming Soon: Represents a single neuron
+│   │   ├── test_pulse.py           # NEW - Core Pacemaker (pulse)
+│   │   └── test_thalamus.py        # 🗓️ Coming Soon: Enhanced Thalamus implementation
+│   │
+│   └── main.py                     # 🚧  Work in progress: The orchestrator
 │
 ├── CONTRIBUTING.md                 # The rules of collaboration
 ├── LICENSE                         # The protection license
-├── main.py                         # 🚧  Work in progress: The orchestrator
 └── README.md                       # The Manifesto
 ```
 
