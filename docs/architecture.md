@@ -2,15 +2,8 @@
 
 # ✴️*aNA (Autonomous Neural Architecture)* AI Project v5.0
 
-```Python
-# Snippet suggestion for Level 9 integration
-def apply_neuromodulation(neuron, matrix):
-    # Acetylcholine sharpens focus by lowering thresholds
-    if matrix.acetylcholine > 0.5:
-        neuron.threshold -= 5.0  # Increased sensitivity
-    # Serotonin stabilizes the global state
-    if matrix.serotonin > 0.8:
-        neuron.stabilize_firing()
+```
+
 ```
 
 ### 1. 🏗️ High-Level System Architecture
@@ -235,6 +228,20 @@ Processing Hierarchy:
     └── Learning: Triggers an instant “Memory Capture”
         (More charge sent to the Hippocampus/CA3).
 ```
+
+```Python
+# Snippet: Serotonin influence on global homeostasis
+def apply_serotonin_stabilization(neural_network, matrix):
+    """
+    The 'Governor': Adjusts the global firing threshold to prevent
+    runaway excitation and maintain system equilibrium.
+    """
+    if matrix.serotonin > 0.8:
+        neural_network.global_threshold += 2.0
+        print("⚖️ Serotonin active: Homeostatic balance maintained.")
+```
+
+###### This module does not carry data, but regulates the network's "gain" and sensitivity. It is the chemical thermostat that allows aNA to remain stable and focused, regardless of the intensity of the information flow.
 
 ### Architecture overview (Road map)
 
