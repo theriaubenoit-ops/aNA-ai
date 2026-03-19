@@ -158,7 +158,7 @@ Cortical Layer Dynamics (Each Lobe contains 6 Cortical Layers)
     └── Hippocampus ↔ Parietal Lobe (Spatial Memory)
 ```
 
-### 7. 🚦 Executive Control & Attention (Frontal, Amygdala)
+### 7. 🎛️ Executive Control & Attention (Frontal, Amygdala)
 
 ```
 Dynamic Processing Flow:
@@ -249,45 +249,45 @@ def apply_serotonin_stabilization(neural_network, matrix):
 
 ```
 ├── docs/
-│   ├── adr/                        # (To do) Architecture Decision Records
+│   ├── adr/                        # 🚧 To Do: Architecture Decision Records
 │   ├── assets/                     # Medias
-│   ├── examples/                   # (To do) Comprehensive example suite
-│   ├── api-reference.md            # (To do)
+│   ├── examples/                   # 🚧 To Do: Comprehensive example suite
+│   ├── api-reference.md            # 🚧 To Do:
 │   ├── architecture.md             # The technical plan
 │   ├── genesis.md                  # The story of the project
 │   ├── installation_en.md          # Installation (EN)
 │   ├── installation_fr.md          # Installation (FR)
-│   ├── legend.md                   # (To do)
+│   ├── legend.md                   # 🚧 To Do:
 │   └── philosophy.md               # The ethical vision
-├── examples/                       # (To do) Comprehensive example suite
-│   ├── basic-demo.html             # (To do)
-│   ├── learning-demo.html          # (To do)
-│   └── memory-demo.html            # (To do)
+├── examples/                       # 🚧 To Do: Comprehensive example suite
+│   ├── basic-demo.html             # 🚧 To Do:
+│   ├── learning-demo.html          # 🚧 To Do:
+│   └── memory-demo.html            # 🚧 To Do:
 ├── src/
 │   ├── anatomy/                    # Brain region implementations
 │   │   ├── cortex/
-│   │   │   ├── frontal.py          # (Coming soon)
-│   │   │   ├── lobe_base.py        # (Coming soon)
-│   │   │   ├── occipital.py        # (Coming soon)
-│   │   │   ├── parietal.py         # (Coming soon)
-│   │   │   └── temporal.py         # (Coming soon)
-│   │   ├── amygdala.py             # (Coming soon)
-│   │   ├── cerebellum.py           # (Coming soon)
-│   │   ├── hippocampus.py          # (Coming soon)
+│   │   │   ├── frontal.py          # 🗓️ Coming Soon:
+│   │   │   ├── lobe_base.py        # 🗓️ Coming Soon:
+│   │   │   ├── occipital.py        # 🗓️ Coming Soon:
+│   │   │   ├── parietal.py         # 🗓️ Coming Soon:
+│   │   │   └── temporal.py         # 🗓️ Coming Soon:
+│   │   ├── amygdala.py             # 🗓️ Coming Soon:
+│   │   ├── cerebellum.py           # 🗓️ Coming Soon:
+│   │   ├── hippocampus.py          # 🗓️ Coming Soon:
 │   │   ├── neuron.py               # Represents a single neuron
 │   │   └── thalamus.py             # Enhanced Thalamus implementation
 │   ├── core/                       # Core neural components
-│   │   ├── input_gateway.py        # (Coming soon)
+│   │   ├── input_gateway.py        # 🗓️ Coming Soon:
 │   │   ├── neural_transmission.py  # The standardized data structure
 │   │   ├── neuromodulator.py       # Chemical "gain controls"
-│   │   ├── output_gateway.py       # (Coming soon)
+│   │   ├── output_gateway.py       # 🗓️ Coming Soon:
 │   │   └── tempo.py                # Core Pacemaker
-│   ├── gui/                        # (To do) Web-based interface
-│   │   └── dashboard.py            # (Coming soon)
-│   └── tests/                      # (To do) Comprehensive test suite
+│   ├── gui/                        # 🚧 To Do: Web-based interface
+│   │   └── dashboard.py            # 🚧 To Do:
+│   └── tests/                      # 🚧 To Do: Comprehensive test suite
 ├── CONTRIBUTING.md                 # The rules of collaboration
 ├── LICENSE                         # The protection license
-├── main.py                         # (Coming soon) The orchestrator
+├── main.py                         # 🚧 To Do: The orchestrator
 └── README.md                       # The Manifesto
 ```
 
