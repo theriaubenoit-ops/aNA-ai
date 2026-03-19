@@ -57,7 +57,7 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
     return thalamus
 ```
 
-###### When working on brain modules, always prioritize signal clarity over raw data volume. Like the biological Thalamus, the code should help the system "decide" what is worth processing.
+###### _When working on brain modules, always prioritize signal clarity over raw data volume. Like the biological Thalamus, the code should help the system "decide" what is worth processing._
 
 > ## "To every action there is always opposed an equal reaction."
 >

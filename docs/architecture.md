@@ -241,7 +241,7 @@ def apply_serotonin_stabilization(neural_network, matrix):
         print("⚖️ Serotonin active: Homeostatic balance maintained.")
 ```
 
-###### This module regulates the network's "gain" and sensitivity. It is the chemical thermostat that allows aNA to remain stable and focused, regardless of the intensity of the information flow.
+###### _This module regulates the network's "gain" and sensitivity. It is the chemical thermostat that allows aNA to remain stable and focused, regardless of the intensity of the information flow._
 
 ---
 
@@ -249,20 +249,20 @@ def apply_serotonin_stabilization(neural_network, matrix):
 
 ```
 ├── docs/
-│   ├── adr/                        # 🚧 To Do: Architecture Decision Records
-│   ├── assets/                     # Medias
-│   ├── examples/                   # 🚧 To Do: Comprehensive example suite
-│   ├── api-reference.md            # 🚧 To Do:
+│   ├── adr/                        # 📋 To Do: Architecture Decision Records
+│   ├── assets/                     # 📋 To Do: Medias
+│   ├── examples/                   # 📋 To Do: Comprehensive example suite
+│   ├── api-reference.md            # 📋 To Do:
 │   ├── architecture.md             # The technical plan
 │   ├── genesis.md                  # The story of the project
 │   ├── installation_en.md          # Installation (EN)
 │   ├── installation_fr.md          # Installation (FR)
-│   ├── legend.md                   # 🚧 To Do:
+│   ├── legend.md                   # 📋 To Do:
 │   └── philosophy.md               # The ethical vision
-├── examples/                       # 🚧 To Do: Comprehensive example suite
-│   ├── basic-demo.html             # 🚧 To Do:
-│   ├── learning-demo.html          # 🚧 To Do:
-│   └── memory-demo.html            # 🚧 To Do:
+├── examples/                       # 📋 To Do: Comprehensive example suite
+│   ├── basic-demo.html             # 📋 To Do:
+│   ├── learning-demo.html          # 📋 To Do:
+│   └── memory-demo.html            # 📋 To Do:
 ├── src/
 │   ├── anatomy/                    # Brain region implementations
 │   │   ├── cortex/
@@ -282,12 +282,12 @@ def apply_serotonin_stabilization(neural_network, matrix):
 │   │   ├── neuromodulator.py       # Chemical "gain controls"
 │   │   ├── output_gateway.py       # 🗓️ Coming Soon:
 │   │   └── tempo.py                # Core Pacemaker
-│   ├── gui/                        # 🚧 To Do: Web-based interface
-│   │   └── dashboard.py            # 🚧 To Do:
-│   └── tests/                      # 🚧 To Do: Comprehensive test suite
+│   ├── gui/                        # 📋 To Do:  Web-based interface
+│   │   └── dashboard.py            # 🚧  Work in progress:
+│   └── tests/                      # 📋 To Do:  Comprehensive test suite
 ├── CONTRIBUTING.md                 # The rules of collaboration
 ├── LICENSE                         # The protection license
-├── main.py                         # 🚧 To Do: The orchestrator
+├── main.py                         # 🚧  Work in progress: The orchestrator
 └── README.md                       # The Manifesto
 ```
 
