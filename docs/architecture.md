@@ -2,6 +2,10 @@
 
 # ✴️*aNA (Autonomous Neural Architecture)* AI Project v5.0
 
+```
+
+```
+
 ### Architecture overview
 
 ```
@@ -48,7 +52,7 @@
 └── README.md                       # The Manifesto
 ```
 
-### Level 1: Core brain simulation
+### 1. 🏗️ High-Level System Architecture
 
 ```
 aNA v5.0 Autonomous Neural Architecture
@@ -64,7 +68,7 @@ aNA v5.0 Autonomous Neural Architecture
     └── Memory Status: Fill and consolidation state (L1/L2/L3)
 ```
 
-### Level 2: Primary brain structures
+### 2. ⚡ Processing Unit (Neurons)
 
 ```
 ├── Cerebral Cortex (The "Thinking" Shell, 4 Lobes + 6 Layers)
@@ -129,7 +133,7 @@ aNA v5.0 Autonomous Neural Architecture
     aNA v5.0 optimizes prediction accuracy by minimizing the error between sensory reality and internal models (stored in the hippocampus/cortex). A high error triggers the release of neuromodulators (adrenaline/dopamine) to force learning or adaptation.
 ```
 
-### Level 3: The cognitive loop _("Cognitive heart")_
+### 3. 🌐 Connection Logic (Synapses)
 
 ```
 Cognitive Loop
@@ -140,7 +144,7 @@ Cognitive Loop
     The discrepancy (prediction error) is sent to the amygdala to adjust the system's alertness
 ```
 
-### Level 4: Cortical layer organization _(in each Lobe)_
+### 4. 📊 Microcircuitry (Cortical Columns)
 
 ```
 Cortical Layer Dynamics (Each Lobe contains 6 Cortical Layers)
@@ -152,7 +156,7 @@ Cortical Layer Dynamics (Each Lobe contains 6 Cortical Layers)
 └── Layer VI: Multiform (Thalamic Regulatory Loop - Gain Control)
 ```
 
-### Level 5: Lobe-specific functional systems
+### 5. 🧩 Macro-scale Structure (Lobes & Nuclei)
 
 ```
 ├── Frontal Lobe System
@@ -180,7 +184,7 @@ Cortical Layer Dynamics (Each Lobe contains 6 Cortical Layers)
     └── Color and Shape Recognition
 ```
 
-### Level 6: Cross-lobe integration
+### 6. 🗄️ Memory Systems (Hippocampus, Cortex)
 
 ```
 ├── Inter-lobar Communication
@@ -200,7 +204,7 @@ Cortical Layer Dynamics (Each Lobe contains 6 Cortical Layers)
     └── Hippocampus ↔ Parietal Lobe (Spatial Memory)
 ```
 
-### Level 7: Dynamic processing flow
+### 7. 🚦 Executive Control & Attention (Frontal, Amygdala)
 
 ```
 Dynamic Processing Flow:
@@ -218,7 +222,7 @@ Processing Hierarchy:
 └── Integration Centers → Motor Planning (Frontal Layer V)
 ```
 
-### Level 8: Functional specialization by lobe _(Role summary)_
+### 8. 🔄 Sensorimotor Loops & Coordination (Parietal, Cerebellum)
 
 ```
 ├── Occipital Lobe (Posterior “What” and “Where”)
@@ -242,7 +246,7 @@ Processing Hierarchy:
     - Tertiary: Decision Making
 ```
 
-### Level 9: Neuromodulator matrix _(The chemical layer):_
+### 9. ⚗️ Neuromodulation (Chemical Gain)
 
 ```
 ├── NO (Nitric Oxide) -> Volumetric Retrograde Signaling
@@ -271,4 +275,4 @@ Processing Hierarchy:
         (More charge sent to the Hippocampus/CA3).
 ```
 
-_░▒▓ BT 2026-03-16_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/docs/genesis.md) 2026-03-18_
