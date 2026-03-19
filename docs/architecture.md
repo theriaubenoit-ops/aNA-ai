@@ -257,7 +257,7 @@ def apply_serotonin_stabilization(neural_network, matrix):
 │   ├── genesis.md                  # The story of the project
 │   ├── installation_en.md          # Installation (EN)
 │   ├── installation_fr.md          # Installation (FR)
-│   ├── legend.md                   # 📋 To Do:
+│   ├── legend.md                   # 📋 To Do: ...
 │   └── philosophy.md               # The ethical vision
 │
 ├── examples/                       # 📋 To Do: Comprehensive example suite
@@ -268,11 +268,11 @@ def apply_serotonin_stabilization(neural_network, matrix):
 ├── src/
 │   ├── anatomy/                    # Brain region implementations
 │   │   ├── cortex/
-│   │   │   ├── frontal.py          # 🗓️ Coming Soon: ...
+│   │   │   ├── frontal.py          # 🗓️ Coming Soon: Executive Logic & Command Center
 │   │   │   ├── lobe_base.py        # 🗓️ Coming Soon: ...
-│   │   │   ├── occipital.py        # 🗓️ Coming Soon: ...
-│   │   │   ├── parietal.py         # 🗓️ Coming Soon: ...
-│   │   │   └── temporal.py         # 🗓️ Coming Soon: ...
+│   │   │   ├── occipital.py        # 🗓️ Coming Soon: Visual Stream Processor
+│   │   │   ├── parietal.py         # 🗓️ Coming Soon: Spatial Mapping & Data Integration
+│   │   │   └── temporal.py         # 🗓️ Coming Soon: Semantic Storage & Pattern Recognition
 │   │   │
 │   │   ├── amygdala.py             # NEW - Priority Filter & Interrupt Controller
 │   │   ├── cerebellum.py           # NEW - Timing Engine & Output Calibration
@@ -291,12 +291,12 @@ def apply_serotonin_stabilization(neural_network, matrix):
 │   │   └── dashboard.py            # 🚧  Work in progress: ...
 │   │
 │   └── tests/                      # NEW - Comprehensive test suite
-│       ├── test_amygdala.py        # 🗓️ Coming Soon: ...
-│       ├── test_cerebellum.py      # 🗓️ Coming Soon: ...
+│       ├── test_amygdala.py        # 🗓️ Coming Soon: Priority Filter & Interrupt Controller
+│       ├── test_cerebellum.py      # 🗓️ Coming Soon: Timing Engine & Output Calibration
 │       ├── test_hippocampus.py     # NEW - Dynamic Buffer & Indexing System
-│       ├── test_neuron.py          # 🗓️ Coming Soon: ...
+│       ├── test_neuron.py          # 🗓️ Coming Soon: Represents a single neuron
 │       ├── test_pulse.py           # NEW - Core Pacemaker (pulse)
-│       └── test_thalamus.py        # 🗓️ Coming Soon: ...
+│       └── test_thalamus.py        # 🗓️ Coming Soon: Enhanced Thalamus implementation
 │
 ├── CONTRIBUTING.md                 # The rules of collaboration
 ├── LICENSE                         # The protection license
