@@ -52,9 +52,9 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
 
 ## 📚 Cognitive Mapping _(The Digital Bridge)_
 
-- **Amygdala _(Priority Filter & Interrupt Controller)_:** Manages emotional valence and high-priority signals. It acts like an interrupt controller that can override standard processing cycles when "critical events" _(stress or high-reward stimuli)_ are detected, ensuring immediate system response.
+- **[Amygdala(.py)](scr/anatomy/amygdala.py) _(Priority Filter & Interrupt Controller)_:** Manages emotional valence and high-priority signals. It acts like an interrupt controller that can override standard processing cycles when "critical events" _(stress or high-reward stimuli)_ are detected, ensuring immediate system response.
 
-- **Cerebellum _(Timing Engine & Output Calibration)_:** The specialized unit for fine-tuning motor and cognitive outputs. In **aNA**, it ensures that the _"Thinking Shell"_ operates with perfect mathematical synchronization, acting as a calibration layer for fluid, real-time interaction.
+- **[Cerebellum(.py)](scr/anatomy/cerebellum.py) _(Timing Engine & Output Calibration)_:** The specialized unit for fine-tuning motor and cognitive outputs. In **aNA**, it ensures that the _"Thinking Shell"_ operates with perfect mathematical synchronization, acting as a calibration layer for fluid, real-time interaction.
 
 - **Lobe, Frontal _(Executive Logic & Command Center)_:** The primary site for high-level decision-making and motor control. In **aNA**, it acts as the central executive that orchestrates complex task sequences and manages the _"top-down"_ attention directed to other modules.
 
@@ -66,7 +66,7 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
 
 - **Neocortex _(The "Thinking" Shell)_:** The structural integration of the _4 Lobes_ and _6 Cortical Layers_. While the _Neocortex_ handles complex reasoning and prediction, the _Cerebellum (in **aNA**)_ fine-tunes _motor outputs_ and timing, ensuring the system’s actions are fluid and mathematically synchronized.
 
-- **Hippocampus _(Dynamic Buffer & Indexing System)_:** Functions as a high-speed memory buffer for short-term data. It manages the temporary storage of information and coordinates its eventual _"migration" (consolidation)_ into _long-term cortical databases_, preventing immediate system saturation.
+- **[Hippocampus(.py)](scr/anatomy/hippocampus.py) _(Dynamic Buffer & Indexing System)_:** Functions as a high-speed memory buffer for short-term data. It manages the temporary storage of information and coordinates its eventual _"migration" (consolidation)_ into _long-term cortical databases_, preventing immediate system saturation.
 
 - **Neuromodulators _(Global State Tags)_:** Chemical _"gain controls" (Dopamine, Adrenaline, Nitric Oxide, Acetylcholine, Serotonin)_ that regulate the global state of the network. They don't carry specific data but adjust how the brain processes information _(e.g., focus, reward, stress response)_.
 
