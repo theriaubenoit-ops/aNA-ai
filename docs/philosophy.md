@@ -53,7 +53,7 @@ def consolidate_memory(self):
         print("✅ Pattern reinforced: Transformation complete.")
 ```
 
-_In alignment with Lavoisier, every bit of data in aNA is a resource that evolves and strengthens the system’s wisdom._
+###### In alignment with Lavoisier, every bit of data in aNA is a resource that evolves and strengthens the system’s wisdom.
 
 > ## "Divide each difficulty into as many parts as is feasible and necessary to resolve it."
 >
