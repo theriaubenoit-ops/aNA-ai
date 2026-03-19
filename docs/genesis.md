@@ -43,8 +43,7 @@ This project is an exploration at the threshold of _cortical_ memory. We are not
 def test_integration():
     """
     Demonstrates the harmony between learning and prediction.
-    A perfect match between reality and internal models signals
-    a successful cognitive integration.
+    A perfect match between reality and internal models signals a successful cognitive integration.
     """
     reality = "B"
     prediction = "B"  # Success! The system anticipated the pattern
