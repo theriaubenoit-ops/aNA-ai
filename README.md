@@ -36,7 +36,8 @@ We are embarking on the _"next wave"_ of artificial intelligence—an AI that do
 
 ---
 
-```python \colorbox{none}
+<div style="background-color: none;">
+```python
 # From src/anatomy/thalamus.py
 # Highlighting the proactive "Sensory Gateway" logic
 def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
@@ -47,6 +48,7 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
     thalamus.nuclei[ThalamicNucleusType.MGN].config.size = 600  # Hearing focus
     return thalamus
 ```
+</div>
 
 ###### _aNA sharpens digital perception by prioritizing meaningful signals, ensuring a clear and focused cognitive flow._
 
