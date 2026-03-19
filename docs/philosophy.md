@@ -63,7 +63,7 @@ _Thank you for paving the way for future discoveries and innovations in this fas
 
 ## 🏛️ Scientific Lineage & Inherited Principles
 
-**Signal Logic** _[Alan Hodgkin](https://en.wikipedia.org/wiki/Alan_Hodgkin) & [Andrew Huxley](https://en.wikipedia.org/wiki/Andrew_Huxley)_:
+**Signal Logic** _—[Alan Hodgkin](https://en.wikipedia.org/wiki/Alan_Hodgkin) & [Andrew Huxley](https://en.wikipedia.org/wiki/Andrew_Huxley)_:
 Their mathematical model of the action potential is the source of our _[neurons(.py)](scr/anatomy/neuron.py)_ communication protocol, ensuring high-fidelity signal propagation.
 
 **Neuromorphic Efficiency** _—[Carver Mead](https://en.wikipedia.org/wiki/Carver_Mead)_:
