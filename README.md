@@ -36,7 +36,7 @@ We are embarking on the _"next wave"_ of artificial intelligence—an AI that do
 
 <pre style="background-image: none !important; background-color: transparent !important;">
 
-<pre>
+</pre>
 
 ```python
 # From src/anatomy/thalamus.py
