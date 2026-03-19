@@ -10,7 +10,7 @@ This module implements a simplified hippocampus for aNA v5.0 with:
 - Integration-ready design for Thalamus connection
 
 Architecture, concept and supervision: Benoit Theriault
-Collaboration, research and code: Gemini, Cline and GPT
+Collaboration, research and code: Gemini, Cline 
 """
 
 import numpy as np

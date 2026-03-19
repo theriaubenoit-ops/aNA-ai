@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Cerebellum implementation for aNA v4
+Cerebellum implementation for aNA v5.0 with:
 
 This module implements the Cerebellum with its major cell types and layers
 for motor coordination, learning, and cognitive functions.
+
+Architecture, concept and supervision: Benoit Theriault
+Collaboration, research and code: Gemini, Cline 
 """
 
 import numpy as np
