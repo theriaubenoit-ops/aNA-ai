@@ -259,10 +259,12 @@ def apply_serotonin_stabilization(neural_network, matrix):
 │   ├── installation_fr.md          # Installation (FR)
 │   ├── legend.md                   # 📋 To Do:
 │   └── philosophy.md               # The ethical vision
+│
 ├── examples/                       # 📋 To Do: Comprehensive example suite
 │   ├── basic-demo.html             # 📋 To Do: ...
 │   ├── learning-demo.html          # 📋 To Do: ...
 │   └── memory-demo.html            # 📋 To Do: ...
+│
 ├── src/
 │   ├── anatomy/                    # Brain region implementations
 │   │   ├── cortex/
@@ -271,19 +273,23 @@ def apply_serotonin_stabilization(neural_network, matrix):
 │   │   │   ├── occipital.py        # 🗓️ Coming Soon: ...
 │   │   │   ├── parietal.py         # 🗓️ Coming Soon: ...
 │   │   │   └── temporal.py         # 🗓️ Coming Soon: ...
+│   │   │
 │   │   ├── amygdala.py             # NEW - Priority Filter & Interrupt Controller
 │   │   ├── cerebellum.py           # NEW - Timing Engine & Output Calibration
 │   │   ├── hippocampus.py          # NEW - Dynamic Buffer & Indexing System
 │   │   ├── neuron.py               # Represents a single neuron
 │   │   └── thalamus.py             # Enhanced Thalamus implementation
+│   │
 │   ├── core/                       # Core neural components
 │   │   ├── input_gateway.py        # 🗓️ Coming Soon: ...
 │   │   ├── neural_transmission.py  # The standardized data structure
 │   │   ├── neuromodulator.py       # 🗓️ Coming Soon: Chemical "gain controls"
 │   │   ├── output_gateway.py       # 🗓️ Coming Soon: ...
 │   │   └── tempo.py                # Core Pacemaker (pulse)
+│   │
 │   ├── gui/                        # 📋 To Do:  Web-based interface
 │   │   └── dashboard.py            # 🚧  Work in progress: ...
+│   │
 │   └── tests/                      # 📋 To Do:  Comprehensive test suite
 │       ├── test_amygdala.py        # 🗓️ Coming Soon: ...
 │       ├── test_cerebellum.py      # 🗓️ Coming Soon: ...
@@ -291,6 +297,7 @@ def apply_serotonin_stabilization(neural_network, matrix):
 │       ├── test_neuron.py          # 🗓️ Coming Soon: ...
 │       ├── test_pulse.py           # NEW - Core Pacemaker (pulse)
 │       └── test_thalamus.py        # 🗓️ Coming Soon: ...
+│
 ├── CONTRIBUTING.md                 # The rules of collaboration
 ├── LICENSE                         # The protection license
 ├── main.py                         # 🚧  Work in progress: The orchestrator
