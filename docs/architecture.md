@@ -243,6 +243,8 @@ def apply_serotonin_stabilization(neural_network, matrix):
 
 ###### This module regulates the network's "gain" and sensitivity. It is the chemical thermostat that allows aNA to remain stable and focused, regardless of the intensity of the information flow.
 
+---
+
 ### 🔭 Architecture overview (Road map)
 
 ```
