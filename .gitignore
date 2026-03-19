@@ -1,17 +1,36 @@
 # Ignore temporary Python folders/files
 __pycache__/
+*.pyc
+*.pyo
+*.pyd
 .pytest_cache/
+.env
+.venv/
+venv/
 *.py[cod]
 *$py.class
-*.pyc
 
 # Ignore VS Code folders
-.vscode/
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
 
 # Ignore system folders/files
 .directory
+# macOS
 .DS_Store
+.AppleDouble
+.LSOverride
+# Windows
 Thumbs.db
+ehthumbs.db
+$RECYCLE.BIN/
+# Linux
+*~
+.fuse_hidden*
+.Trash-*
 
 # Ignore sensitive or developing folders/files
 data/
