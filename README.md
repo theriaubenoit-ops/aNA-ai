@@ -34,7 +34,7 @@ We are at a tipping point. The frantic race toward ever-larger and more energy-i
 
 We are embarking on the _"next wave"_ of artificial intelligence—an AI that does not simply predict the next token, but truly integrates context, attention, and emotional modulation to act with discernment, even amidst _"noise"_. This project is more than a technical achievement; it is a social commitment. By designing transparent, explainable, and resource-efficient systems, we are laying the groundwork for a more harmonious coexistence between humans and the machines of tomorrow.
 
-<code style="background-image: none !important; background-color: transparent !important"> </code>
+<code style="background: none !important;"> </code>
 
 ```python
 # From src/anatomy/thalamus.py
