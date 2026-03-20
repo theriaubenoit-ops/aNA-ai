@@ -38,7 +38,7 @@ We are moving away from the "open-source contribution" model—where the goal is
 
 Join the **aNA** _computational neuroscience_ community: [Download(.zip)](https://github.com/theriaubenoit-ops/aNA-ai/archive/refs/heads/main.zip) or [installation](/docs/installation_en.md)
 
-![ ](/docs/assets/spacer16x16.png)
+![ ](/docs/assets/spacer32x32.png)
 
 ```Python
 # From src/anatomy/thalamus.py
@@ -61,7 +61,7 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
 
 ###### _When working on brain modules, always prioritize signal clarity over raw data volume. Like the biological Thalamus, the code should help the system "decide" what is worth processing._
 
-![ ](/docs/assets/spacer16x16.png)
+![ ](/docs/assets/spacer32x32.png)
 
 > ## "To every action there is always opposed an equal reaction."
 >
