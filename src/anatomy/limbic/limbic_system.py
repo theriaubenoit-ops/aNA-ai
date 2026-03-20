@@ -1,15 +1,22 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+import sys
+import os
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
+
+from anatomy.limbic.amygdala import Amygdala
+from anatomy.limbic.hippocampus import Hippocampus
+
 class LimbicSystem:
     """
-    Coordinates interactions between Amygdala (emotion) and Hippocampus (memory).
-    Acts as a filter to prioritize memory encoding based on emotional impact.
+    Coordinator of the Limbic System (Amygdala & Hippocampus).
+    Manages emotional valence and memory prioritization.
     """
-    def __init__(self, amygdala, hippocampus):
-        self.amygdala = amygdala
-        self.hippocampus = hippocampus
-        self.arousal_threshold = 0.6  # Seuil de choc émotionnel
+    def __init__(self, amygdala: Amygdala = None, hippocampus: Hippocampus = None):
+        self.amygdala = amygdala or Amygdala()
+        self.hippocampus = hippocampus or Hippocampus()
 
     def process_experience(self, stimulus, sensory_data):
         """
