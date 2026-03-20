@@ -79,7 +79,7 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
 
 - **Rest Cycles _(Memory Consolidation)_:** Inspired by biological sleep. **aNA** uses designated rest periods to reinforce significant learning events, facilitating the migration of data to long-term structures without the risk of catastrophic forgetting.
 
-![ ](/docs/assets/spacer16x16.png)
+![ ](/docs/assets/spacer64x64.png)
 
 ```
 
