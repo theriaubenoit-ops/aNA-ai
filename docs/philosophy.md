@@ -59,12 +59,12 @@ def consolidate_memory(self):
 >
 > _—Rene Descartes_
 
-_Thank you for paving the way for future discoveries and innovations in this fascinating field. Your [contributions](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/CONTRIBUTING.md) to neuroscience and artificial intelligence are invaluable. Some of your works have inspired me; they allow me to better understand and design more efficient bio-inspired neural networks._
+_Thank you for paving the way for future discoveries and innovations in this fascinating field. Your [contributions](CONTRIBUTING.md) to neuroscience and artificial intelligence are invaluable. Some of your works have inspired me; they allow me to better understand and design more efficient bio-inspired neural networks._
 
 ## 🏛️ Scientific Lineage & Inherited Principles
 
 **Signal Logic** _—[Alan Hodgkin](https://en.wikipedia.org/wiki/Alan_Hodgkin) & [Andrew Huxley](https://en.wikipedia.org/wiki/Andrew_Huxley)_:
-Their mathematical model of the action potential is the source of our _[neurons(.py)](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/src/anatomy/neuron.py)_ communication protocol, ensuring high-fidelity signal propagation.
+Their mathematical model of the action potential is the source of our _[neurons(.py)](src/anatomy/neuron.py)_ communication protocol, ensuring high-fidelity signal propagation.
 
 **Neuromorphic Efficiency** _—[Carver Mead](https://en.wikipedia.org/wiki/Carver_Mead)_:
 His focus on low-power hardware-software synergy drives our _Targeted Plasticity_. We aim for intelligence that operates within biological energy constraints.
@@ -76,7 +76,7 @@ The engine of our learning network. _"Neurons that fire together, wire together"
 His research on _neural oscillations_ justifies our background consolidation phases, where **aNA** stabilizes learning during _"quiet"_ periods.
 
 **Saliency Filtering** _—[Horace Barlow](https://en.wikipedia.org/wiki/Horace_Barlow)_:
-His work on redundancy reduction is implemented in our _[thalamus(.py)](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/src/anatomy/thalamus.py)_, which acts as a gateway, passing only meaningful _"packets"_ to the _cortex_.
+His work on redundancy reduction is implemented in our _[thalamus(.py)](src/anatomy/thalamus.py)_, which acts as a gateway, passing only meaningful _"packets"_ to the _cortex_.
 
 **Hierarchical Stratums** _—[Jeff Hawkins](https://en.wikipedia.org/wiki/Jeff_Hawkins)_:
 Our _6 Cortical Layers_ structure is an implementation of his _Thousand Brains Theory_, allowing for complex pattern recognition through hierarchy.
