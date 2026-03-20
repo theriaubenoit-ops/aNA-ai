@@ -257,6 +257,8 @@ Processing Hierarchy:
 │   │   │   ├── occipital.py        # 🗓️ Coming Soon: Visual Stream Processor
 │   │   │   ├── parietal.py         # 🗓️ Coming Soon: Spatial Mapping & Data Integration
 │   │   │   └── temporal.py         # 🗓️ Coming Soon: Semantic Storage & Pattern Recognition
+│   │   ├── limbic/
+│   │   │   └── limbic_system.py    # Limbic system
 │   │   │
 │   │   ├── amygdala.py             # NEW - Priority Filter & Interrupt Controller
 │   │   ├── cerebellum.py           # NEW - Timing Engine & Output Calibration
@@ -278,6 +280,7 @@ Processing Hierarchy:
 │   │   ├── test_amygdala.py        # 🗓️ Coming Soon: Priority Filter & Interrupt Controller
 │   │   ├── test_cerebellum.py      # 🗓️ Coming Soon: Timing Engine & Output Calibration
 │   │   ├── test_hippocampus.py     # NEW - Dynamic Buffer & Indexing System
+│   │   ├── test_limbic_system.py   # NEW - Limbic system
 │   │   ├── test_neuron.py          # 🗓️ Coming Soon: Represents a single neuron
 │   │   ├── test_pulse.py           # NEW - Core Pacemaker (pulse)
 │   │   └── test_thalamus.py        # 🗓️ Coming Soon: Enhanced Thalamus implementation
@@ -291,4 +294,4 @@ Processing Hierarchy:
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-19_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-20_
