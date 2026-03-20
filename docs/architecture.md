@@ -227,22 +227,6 @@ Processing Hierarchy:
         (More charge sent to the Hippocampus/CA3).
 ```
 
-![ ](/docs/assets/spacer32x32.png)
-
-```Python
-# Snippet: Serotonin influence on global homeostasis
-def apply_serotonin_stabilization(neural_network, matrix):
-    """
-    The 'Governor': Adjusts the global firing threshold to prevent
-    runaway excitation and maintain system equilibrium.
-    """
-    if matrix.serotonin > 0.8:
-        neural_network.global_threshold += 2.0
-        print("⚖️ Serotonin active: Homeostatic balance maintained.")
-```
-
-###### _This module regulates the network's "gain" and sensitivity. It is the chemical thermostat that allows aNA to remain stable and focused, regardless of the intensity of the information flow._
-
 ![ ](/docs/assets/spacer64x64.png)
 
 # 🔭 Architecture overview (Road map)
@@ -304,6 +288,7 @@ def apply_serotonin_stabilization(neural_network, matrix):
 ├── LICENSE                         # The protection license
 └── README.md                       # The Manifesto
 ```
+
 ![ ](/docs/assets/spacer16x16.png)
 
 _░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-19_
