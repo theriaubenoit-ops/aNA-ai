@@ -18,6 +18,8 @@
 
 `Project status` [Beta] → Alpha → ReleaseCandidate → Stable | `Language` Python 3.x | `License` MIT
 
+![ ](/docs/assets/spacer16x16.png)
+
 ### The quest for AI reflecting life
 
 Current artificial intelligence, while powerful, relies on massive, rigid architectures that remain disconnected from biological reality. Simultaneously, the AI community is increasingly concerned with the rising carbon footprint and unsustainable computing costs of these models. **aNA** _(Autonomous Neural Architecture)_ AI Project breaks with these paradigms. Inspired by the organization of the _six-layered cortical columns_, _synaptic plasticity_, and the precise management of the _[thalamus(.py)](/src/anatomy/thalamus.py)_, _[hippocampus(.py)](/src/anatomy/hippocampus.py)_, _[amygdala(.py)](/src/anatomy/amygdala.py)_, _[cerebellum(.py)](/src/anatomy/cerebellum.py)_, and _five key neuromodulators (dopamine, adrenaline, nitric oxide, acetylcholine, and serotonin)_. This project aims to create not a mere computational simulation, but an organic resonance. Far from being a static data repository, **aNA** AI is a dynamic system that learns, forgets, adjusts, and focuses—much like our own minds.
