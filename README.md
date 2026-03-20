@@ -22,7 +22,7 @@
 
 ### The quest for AI reflecting life
 
-Current artificial intelligence, while powerful, relies on massive, rigid architectures that remain disconnected from biological reality. Simultaneously, the AI community is increasingly concerned with the rising carbon footprint and unsustainable computing costs of these models. **aNA** _(Autonomous Neural Architecture)_ AI Project breaks with these paradigms. Inspired by the organization of the _six-layered cortical columns_, _synaptic plasticity_, and the precise management of the _[thalamus(.py)](/src/anatomy/thalamus.py)_, _[hippocampus(.py)](/src/anatomy/hippocampus.py)_, _[amygdala(.py)](/src/anatomy/amygdala.py)_, _[cerebellum(.py)](/src/anatomy/cerebellum.py)_, _[limbic system(.py)](/src/anatomy/limbic/limbic_system.py)_, and _five key neuromodulators (dopamine, adrenaline, nitric oxide, acetylcholine, and serotonin)_. This project aims to create not a mere computational simulation, but an organic resonance. Far from being a static data repository, **aNA** AI is a dynamic system that learns, forgets, adjusts, and focuses—much like our own minds.
+Current artificial intelligence, while powerful, relies on massive, rigid architectures that remain disconnected from biological reality. Simultaneously, the AI community is increasingly concerned with the rising carbon footprint and unsustainable computing costs of these models. **aNA** _(Autonomous Neural Architecture)_ AI Project breaks with these paradigms. Inspired by the organization of the _six-layered cortical columns_, _synaptic plasticity_, and the precise management of the _[thalamus(.py)](/src/anatomy/thalamus.py)_, _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_, _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_, _[cerebellum(.py)](/src/anatomy/cerebellum.py)_, _[limbic system(.py)](/src/anatomy/limbic/limbic_system.py)_, and _five key neuromodulators (dopamine, adrenaline, nitric oxide, acetylcholine, and serotonin)_. This project aims to create not a mere computational simulation, but an organic resonance. Far from being a static data repository, **aNA** AI is a dynamic system that learns, forgets, adjusts, and focuses—much like our own minds.
 
 ### Dynamic Cognitive Architecture
 
@@ -58,7 +58,7 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
 
 # 📚 Cognitive Mapping _(The Digital Bridge)_
 
-- **[Amygdala(.py)](/src/anatomy/amygdala.py) _(Priority Filter & Interrupt Controller)_:** Manages emotional valence and high-priority signals. It acts like an interrupt controller that can override standard processing cycles when "critical events" _(stress or high-reward stimuli)_ are detected, ensuring immediate system response.
+- **[Amygdala(.py)](/src/anatomy/limbic/amygdala.py) _(Priority Filter & Interrupt Controller)_:** Manages emotional valence and high-priority signals. It acts like an interrupt controller that can override standard processing cycles when "critical events" _(stress or high-reward stimuli)_ are detected, ensuring immediate system response.
 
 - **[Cerebellum(.py)](/src/anatomy/cerebellum.py) _(Timing Engine & Output Calibration)_:** The specialized unit for fine-tuning motor and cognitive outputs. In **aNA**, it ensures that the _"Thinking Shell"_ operates with perfect mathematical synchronization, acting as a calibration layer for fluid, real-time interaction.
 
@@ -74,7 +74,7 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
 
 - **Neocortex _(The "Thinking" Shell)_:** The structural integration of the _4 Lobes_ and _6 Cortical Layers_. While the _Neocortex_ handles complex reasoning and prediction, the _Cerebellum (in **aNA**)_ fine-tunes _motor outputs_ and timing, ensuring the system’s actions are fluid and mathematically synchronized.
 
-- **[Hippocampus(.py)](/src/anatomy/hippocampus.py) _(Dynamic Buffer & Indexing System)_:** Functions as a high-speed memory buffer for short-term data. It manages the temporary storage of information and coordinates its eventual _"migration" (consolidation)_ into _long-term cortical databases_, preventing immediate system saturation.
+- **[Hippocampus(.py)](/src/anatomy/limbic/hippocampus.py) _(Dynamic Buffer & Indexing System)_:** Functions as a high-speed memory buffer for short-term data. It manages the temporary storage of information and coordinates its eventual _"migration" (consolidation)_ into _long-term cortical databases_, preventing immediate system saturation.
 
 - **Neuromodulators _(Global State Tags)_:** Chemical _"gain controls" (Dopamine, Adrenaline, Nitric Oxide, Acetylcholine, Serotonin)_ that regulate the global state of the network. They don't carry specific data but adjust how the brain processes information _(e.g., focus, reward, stress response)_.
 
