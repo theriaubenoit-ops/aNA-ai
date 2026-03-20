@@ -37,7 +37,7 @@ We are at a tipping point. The frantic race toward ever-larger and more energy-i
 We are embarking on the _"next wave"_ of artificial intelligence—an AI that does not simply predict the next token, but truly integrates context, attention, and emotional modulation to act with discernment, even amidst _"noise"_. This project is more than a technical achievement; it is a social commitment. By designing transparent, explainable, and resource-efficient systems, we are laying the groundwork for a more harmonious coexistence between humans and the machines of tomorrow.
 
 
-![ ](/docs/assets/spacer16x16.png)
+![ ](/docs/assets/spacer32x32.png)
 
 ```python
 # From src/anatomy/thalamus.py
@@ -53,7 +53,7 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
 
 ###### _aNA sharpens digital perception by prioritizing meaningful signals, ensuring a clear and focused cognitive flow._
 
-![ ](/docs/assets/spacer16x16.png)
+![ ](/docs/assets/spacer64x64.png)
 
 # 📚 Cognitive Mapping _(The Digital Bridge)_
 
@@ -82,5 +82,7 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
 - **[Thalamus(.py)](/src/anatomy/thalamus.py) _(Sensory Gateway & Packet Router)_:** Acts as the system's central hub for incoming data. It filters and directs sensory signals to the appropriate cortical layers, preventing _"system overflow"_ by dropping irrelevant background noise.
 
 _Note: These definitions are adapted to the specific metabolic and cognitive constraints of the **aNA** v5.0 architecture._
+
+![ ](/docs/assets/spacer16x16.png)
 
 _░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-19_
