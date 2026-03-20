@@ -16,11 +16,13 @@ English instructions: [installation (en)](/docs/installation_en.md)
    - [ ] Création de l'environnement : `python -m venv venv && source venv/bin/activate`
    - [ ] Installation : `pip install -r requirements.txt`
 
-3. **Exécution des scripts _(Phase « Action »)_**
-   - [ ] Exécution des composants : Exemples de commandes pour lancer les scripts _Python associés_ (exemple : `python3 src/tests/test_hippocampus.py`, `python3 src/tests/test_pulse.py`).
-   - [ ] PROCHAINEMENT - Exécution des interfaces : Exemples de commandes pour lancer les scripts _Python associés_ (exemple : `python3 src/gui/dashboard.py`).
-   - [ ] PROCHAINEMENT - Démonstrations : Exemples de commandes pour lancer _l'interface web_ (exemple : "http://localhost:8000/examples/basic-demo.html", "http://localhost:8000/examples/learning-demo.html", "http://localhost:8000/examples/memory-demo.html").
-   - [ ] Remarque concernant le serveur local : Pour exécuter les démonstrations web, utilisez la commande `python3 -m http.server 8000` from the root directory.
+3. - [x] **Exécution des scripts _(Phase « Action »)_:** Launch associated _Python scripts_ to validate neural logic:
+     - `python3 src/tests/test_limbic_system.py` (Validation de la coordination émotionnelle et mnésique))
+     - `python3 src/tests/test_hippocampus.py` (Validation de l'indexation de la mémoire)
+     - `python3 src/tests/test_pulse.py` (Validation du stimulateur cardiaque central)
+     - PROCHAINEMENT - `python3 src/gui/dashboard.py`
+   - [ ] PROCHAINEMENT - Démonstrations : Pour lancer _l'interface web_ (e.g., "http://localhost:8000/examples/basic-demo.html").
+     - Remarque concernant le serveur local : Pour exécuter les démonstrations web, utilisez `python3 -m http.server 8000` depuis le répertoire racine.
 
 4. **Contribuer et Communiquer _(GitHub Workflow)_**
    - [ ] Issues : "Ouvrez une issue pour toute question ou bug."
@@ -29,4 +31,4 @@ English instructions: [installation (en)](/docs/installation_en.md)
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-20_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-16_
