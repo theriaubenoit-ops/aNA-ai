@@ -227,10 +227,10 @@ Processing Hierarchy:
 │   │   │   ├── occipital.py        # 🗓️ Coming Soon: Visual Stream Processor
 │   │   │   ├── parietal.py         # 🗓️ Coming Soon: Spatial Mapping & Data Integration
 │   │   │   └── temporal.py         # 🗓️ Coming Soon: Semantic Storage & Pattern Recognition
-│   │   ├── limbic/
+│   │   ├── limbic/                 # NEW - Limbic System
 │   │   │   ├── amygdala.py         # NEW - Priority Filter & Interrupt Controller
 │   │   │   ├── hippocampus.py      # NEW - Dynamic Buffer & Indexing System
-│   │   │   └── limbic_system.py    # Limbic system
+│   │   │   └── limbic_system.py    # NEW - Limbic system
 │   │   ├── cerebellum.py           # NEW - Timing Engine & Output Calibration
 │   │   ├── neuron.py               # Represents a single neuron
 │   │   └── thalamus.py             # Enhanced Thalamus implementation
