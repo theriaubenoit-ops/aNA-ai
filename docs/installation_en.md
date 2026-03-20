@@ -16,8 +16,8 @@ Instructions française : [installation (fr)](/docs/installation_fr.md)
 
 3. **Running Scripts _(The "Action" Phase)_**
    - [ ] Running Parts: Example commands to launch the associated _Python scripts_ (e.g., `python3 src/tests/test_hippocampus.py`, `python3 src/tests/test_pulse.py`).
-   - [ ] COMING SOON - Running Demonstrations: Example commands to launch _Web-based interface_ (e.g., "http://localhost:8000/examples/basic-demo.html", "http://localhost:8000/examples/learning-demo.html", "http://localhost:8000/examples/memory-demo.html").
    - [ ] COMING SOON - Running Interfaces: Example commands to launch the associated _Python scripts_ (e.g., `python3 src/gui/dashboard.py`).
+   - [ ] COMING SOON - Running Demonstrations: Example commands to launch _Web-based interface_ (e.g., "http://localhost:8000/examples/basic-demo.html", "http://localhost:8000/examples/learning-demo.html", "http://localhost:8000/examples/memory-demo.html").
    - [ ] Note on local server: To run web demos, use `python3 -m http.server 8000` from the root directory.
 
 4. **Contributing and Communicating _(GitHub Workflow)_**
