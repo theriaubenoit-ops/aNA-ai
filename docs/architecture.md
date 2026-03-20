@@ -1,5 +1,7 @@
 🚀 Quick links: [License](/LICENSE), [ReadMe](/README.md), [Contributing](/CONTRIBUTING.md), [Installation](/docs/installation_en.md), [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), Architecture
 
+![ ](/docs/assets/spacer16x16.png)
+
 # ✴️*aNA (Autonomous Neural Architecture)* AI Project v5.0
 
 ```
@@ -229,6 +231,8 @@ Processing Hierarchy:
         (More charge sent to the Hippocampus/CA3).
 ```
 
+![ ](/docs/assets/spacer32x32.png)
+
 ```Python
 # Snippet: Serotonin influence on global homeostasis
 def apply_serotonin_stabilization(neural_network, matrix):
@@ -243,9 +247,9 @@ def apply_serotonin_stabilization(neural_network, matrix):
 
 ###### _This module regulates the network's "gain" and sensitivity. It is the chemical thermostat that allows aNA to remain stable and focused, regardless of the intensity of the information flow._
 
----
+![ ](/docs/assets/spacer64x64.png)
 
-### 🔭 Architecture overview (Road map)
+# 🔭 Architecture overview (Road map)
 
 ```
 ├── docs/
@@ -304,5 +308,6 @@ def apply_serotonin_stabilization(neural_network, matrix):
 ├── LICENSE                         # The protection license
 └── README.md                       # The Manifesto
 ```
+![ ](/docs/assets/spacer16x16.png)
 
 _░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-19_
