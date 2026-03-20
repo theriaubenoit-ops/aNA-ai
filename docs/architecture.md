@@ -65,8 +65,8 @@ aNA v5.0 Autonomous Neural Architecture
 └── NEW - Cerebellum (The "Clock", Timing & Error Correction)
     └── Coordination between Motor Cortex and Sensory Feedback
 
-    Computational Engine: Free Energy Principle (FEP)
-    aNA v5.0 optimizes prediction accuracy by minimizing the error between sensory reality and internal models. High error triggers the Limbic System to release neuromodulators (Adrenaline/Dopamine) via the Amygdala to force learning.
+Computational Engine: Free Energy Principle (FEP)
+aNA v5.0 optimizes prediction accuracy by minimizing the error between sensory reality and internal models. High error triggers the Limbic System to release neuromodulators (Adrenaline/Dopamine) via the Amygdala to force learning.
 ```
 
 ### 3. 🌐 Connection Logic (Synapses)
@@ -228,10 +228,10 @@ Processing Hierarchy:
 │   │   │   ├── parietal.py         # 🗓️ Coming Soon: Spatial Mapping & Data Integration
 │   │   │   └── temporal.py         # 🗓️ Coming Soon: Semantic Storage & Pattern Recognition
 │   │   ├── limbic/
+│   │   │   ├── amygdala.py         # NEW - Priority Filter & Interrupt Controller
+│   │   │   ├── hippocampus.py      # NEW - Dynamic Buffer & Indexing System
 │   │   │   └── limbic_system.py    # Limbic system
-│   │   ├── amygdala.py             # NEW - Priority Filter & Interrupt Controller
 │   │   ├── cerebellum.py           # NEW - Timing Engine & Output Calibration
-│   │   ├── hippocampus.py          # NEW - Dynamic Buffer & Indexing System
 │   │   ├── neuron.py               # Represents a single neuron
 │   │   └── thalamus.py             # Enhanced Thalamus implementation
 │   ├── core/                       # Core neural components
