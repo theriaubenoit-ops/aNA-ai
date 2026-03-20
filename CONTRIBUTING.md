@@ -84,7 +84,7 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
 ![ ](/docs/assets/spacer32x32.png)
 
 ```Python
-# From src/anatomy/hippocampus.py
+# From src/anatomy/limbic/hippocampus.py
 # Highlighting the successful transition from L1 to L3 memory
 
 def test_integration():
