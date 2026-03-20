@@ -16,11 +16,13 @@ Instructions française : [installation (fr)](/docs/installation_fr.md)
    - [ ] Create the environment: `python -m venv venv && source venv/bin/activate`
    - [ ] Install dependencies: `pip install -r requirements.txt`
 
-3. **Running Scripts _(The "Action" Phase)_**
-   - [ ] Running Parts: Example commands to launch the associated _Python scripts_ (e.g., `python3 src/tests/test_hippocampus.py`, `python3 src/tests/test_pulse.py`).
-   - [ ] COMING SOON - Running Interfaces: Example commands to launch the associated _Python scripts_ (e.g., `python3 src/gui/dashboard.py`).
-   - [ ] COMING SOON - Running Demonstrations: Example commands to launch _Web-based interface_ (e.g., "http://localhost:8000/examples/basic-demo.html", "http://localhost:8000/examples/learning-demo.html", "http://localhost:8000/examples/memory-demo.html").
-   - [ ] Note on local server: To run web demos, use `python3 -m http.server 8000` from the root directory.
+3. - [x] **Running Scripts _(The "Action" Phase)_** Launch associated _Python scripts_ to validate neural logic:
+     - `python3 src/tests/test_limbic_system.py` (Validation of emotional/memory coordination)
+     - `python3 src/tests/test_hippocampus.py` (Memory indexing validation)
+     - `python3 src/tests/test_pulse.py` (Core pacemaker validation)
+     - COMING SOON - `python3 src/gui/dashboard.py`
+   - [ ] COMING SOON - Running Demonstrations: Launch _Web-based interfaces_ (e.g., "http://localhost:8000/examples/basic-demo.html").
+     - Note on local server: To run web demos, use `python3 -m http.server 8000` from the root directory.
 
 4. **Contributing and Communicating _(GitHub Workflow)_**
    - [ ] Issues: "Open an issue for any questions or bug reports."
