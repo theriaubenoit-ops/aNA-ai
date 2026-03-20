@@ -58,9 +58,10 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
     print("✅ Thalamic Gateway initialized: System is ready for focused interaction.")
     return thalamus
 ```
-![ ](/docs/assets/spacer16x16.png)
 
 ###### _When working on brain modules, always prioritize signal clarity over raw data volume. Like the biological Thalamus, the code should help the system "decide" what is worth processing._
+
+![ ](/docs/assets/spacer16x16.png)
 
 > ## "To every action there is always opposed an equal reaction."
 >
