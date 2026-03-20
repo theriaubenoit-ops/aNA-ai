@@ -88,4 +88,4 @@ _Note: These definitions are adapted to the specific metabolic and cognitive con
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-19_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-20_
