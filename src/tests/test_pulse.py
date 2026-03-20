@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 Integrated System Test - The Digital Bridge
-Tests the synchronization between Tempo, Thalamus, and Neural Transmission.
+Tests the synchronization between Pulse, Thalamus, and Neural Transmission.
 """
 
 import asyncio
@@ -13,13 +13,13 @@ import os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 # Importations mises à jour selon votre structure
-from core.tempo import Tempo
-from anatomy.thalamus import Thalamus
-from core.neural_transmission import NeuralTransmission, TransmissionBridge
+from core.pulse import Pulse
+from anatomy.subcortical.thalamus import Thalamus
+from anatomy.base.neural_transmission import NeuralTransmission, TransmissionBridge
 
 async def main():
     # Initialisation des unités fonctionnelles
-    rythme = Tempo() #
+    rythme = Pulse() #
     filtre = Thalamus() #[cite: 2]
     
     print("--- ⚡ aNA System Pulse: Integration Test ---")
