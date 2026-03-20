@@ -54,9 +54,10 @@ def consolidate_memory(self):
         self.move_to_long_term_storage()
         print("✅ Pattern reinforced: Transformation complete.")
 ```
-![ ](/docs/assets/spacer32x32.png)
 
 ###### _In alignment with Lavoisier, every bit of data in aNA is a resource that evolves and strengthens the system’s function._
+
+![ ](/docs/assets/spacer32x32.png)
 
 > ## "Divide each difficulty into as many parts as is feasible and necessary to resolve it."
 >
