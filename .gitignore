@@ -13,9 +13,10 @@ venv/
 # Ignore VS Code folders
 .idea/
 .vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
+# Exceptions
+!.vscode/settings.json 
+!.vscode/tasks.json 
+!.vscode/launch.json 
 
 # Ignore system folders/files
 .directory
