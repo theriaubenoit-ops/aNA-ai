@@ -18,7 +18,7 @@
 
 ### The quest for AI reflecting life
 
-Current artificial intelligence, while powerful, relies on massive, rigid architectures that remain disconnected from biological reality. Simultaneously, the AI community is increasingly concerned with the rising carbon footprint and unsustainable computing costs of these models. **aNA** _(Autonomous Neural Architecture)_ AI Project breaks with these paradigms. Inspired by the organization of the _six-layered cortical columns_, _synaptic plasticity_, and the precise management of the _[thalamus(.py)](src/anatomy/thalamus.py)_, _[hippocampus(.py)](src/anatomy/hippocampus.py)_, _[amygdala(.py)](src/anatomy/amygdala.py)_, _[cerebellum(.py)](src/anatomy/cerebellum.py)_, and _five key neuromodulators (dopamine, adrenaline, nitric oxide, acetylcholine, and serotonin)_. This project aims to create not a mere computational simulation, but an organic resonance. Far from being a static data repository, **aNA** AI is a dynamic system that learns, forgets, adjusts, and focuses—much like our own minds.
+Current artificial intelligence, while powerful, relies on massive, rigid architectures that remain disconnected from biological reality. Simultaneously, the AI community is increasingly concerned with the rising carbon footprint and unsustainable computing costs of these models. **aNA** _(Autonomous Neural Architecture)_ AI Project breaks with these paradigms. Inspired by the organization of the _six-layered cortical columns_, _synaptic plasticity_, and the precise management of the _[thalamus(.py)](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/src/anatomy/thalamus.py)_, _[hippocampus(.py)](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/src/anatomy/hippocampus.py)_, _[amygdala(.py)](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/src/anatomy/amygdala.py)_, _[cerebellum(.py)](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/src/anatomy/cerebellum.py)_, and _five key neuromodulators (dopamine, adrenaline, nitric oxide, acetylcholine, and serotonin)_. This project aims to create not a mere computational simulation, but an organic resonance. Far from being a static data repository, **aNA** AI is a dynamic system that learns, forgets, adjusts, and focuses—much like our own minds.
 
 ### Dynamic Cognitive Architecture
 
@@ -28,7 +28,7 @@ Current artificial intelligence, while powerful, relies on massive, rigid archit
 
 ### The imperative of energy sobriety
 
-We are at a tipping point. The frantic race toward ever-larger and more energy-intensive models is placing an unsustainable burden on our environment. The **aNA** AI project proposes a radical alternative: efficiency through targeted plasticity. By mimicking the economical functioning of the human brain—which achieves cognitive feats with a mere _20 watts_—we are developing algorithms that activate only the _[neurons(.py)](src/anatomy/neuron.py)_ necessary to process specific information. Learn less to understand better; filter more to compute less. This is the path forward toward a sustainable, responsible AI.
+We are at a tipping point. The frantic race toward ever-larger and more energy-intensive models is placing an unsustainable burden on our environment. The **aNA** AI project proposes a radical alternative: efficiency through targeted plasticity. By mimicking the economical functioning of the human brain—which achieves cognitive feats with a mere _20 watts_—we are developing algorithms that activate only the _[neurons(.py)](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/src/anatomy/neuron.py)_ necessary to process specific information. Learn less to understand better; filter more to compute less. This is the path forward toward a sustainable, responsible AI.
 
 ### Towards the next generation of intelligence
 
@@ -52,9 +52,9 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
 
 ## 📚 Cognitive Mapping _(The Digital Bridge)_
 
-- **[Amygdala(.py)](src/anatomy/amygdala.py) _(Priority Filter & Interrupt Controller)_:** Manages emotional valence and high-priority signals. It acts like an interrupt controller that can override standard processing cycles when "critical events" _(stress or high-reward stimuli)_ are detected, ensuring immediate system response.
+- **[Amygdala(.py)](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/src/anatomy/amygdala.py) _(Priority Filter & Interrupt Controller)_:** Manages emotional valence and high-priority signals. It acts like an interrupt controller that can override standard processing cycles when "critical events" _(stress or high-reward stimuli)_ are detected, ensuring immediate system response.
 
-- **[Cerebellum(.py)](src/anatomy/cerebellum.py) _(Timing Engine & Output Calibration)_:** The specialized unit for fine-tuning motor and cognitive outputs. In **aNA**, it ensures that the _"Thinking Shell"_ operates with perfect mathematical synchronization, acting as a calibration layer for fluid, real-time interaction.
+- **[Cerebellum(.py)](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/src/anatomy/cerebellum.py) _(Timing Engine & Output Calibration)_:** The specialized unit for fine-tuning motor and cognitive outputs. In **aNA**, it ensures that the _"Thinking Shell"_ operates with perfect mathematical synchronization, acting as a calibration layer for fluid, real-time interaction.
 
 - **Lobe, Frontal _(Executive Logic & Command Center)_:** The primary site for high-level decision-making and motor control. In **aNA**, it acts as the central executive that orchestrates complex task sequences and manages the _"top-down"_ attention directed to other modules.
 
@@ -66,15 +66,15 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
 
 - **Neocortex _(The "Thinking" Shell)_:** The structural integration of the _4 Lobes_ and _6 Cortical Layers_. While the _Neocortex_ handles complex reasoning and prediction, the _Cerebellum (in **aNA**)_ fine-tunes _motor outputs_ and timing, ensuring the system’s actions are fluid and mathematically synchronized.
 
-- **[Hippocampus(.py)](src/anatomy/hippocampus.py) _(Dynamic Buffer & Indexing System)_:** Functions as a high-speed memory buffer for short-term data. It manages the temporary storage of information and coordinates its eventual _"migration" (consolidation)_ into _long-term cortical databases_, preventing immediate system saturation.
+- **[Hippocampus(.py)](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/src/anatomy/hippocampus.py) _(Dynamic Buffer & Indexing System)_:** Functions as a high-speed memory buffer for short-term data. It manages the temporary storage of information and coordinates its eventual _"migration" (consolidation)_ into _long-term cortical databases_, preventing immediate system saturation.
 
 - **Neuromodulators _(Global State Tags)_:** Chemical _"gain controls" (Dopamine, Adrenaline, Nitric Oxide, Acetylcholine, Serotonin)_ that regulate the global state of the network. They don't carry specific data but adjust how the brain processes information _(e.g., focus, reward, stress response)_.
 
-- **[Neurons(.py)](src/anatomy/neuron.py) _(Atomic Processing Nodes)_:** The three functional types _(Sensory, Interneurons, Motor)_ operate as the basic logic gates of the architecture. Their Synaptic Plasticity represents a self-modifying code capability, where connection weights evolve dynamically based on the frequency and timing of data flow.
+- **[Neurons(.py)](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/src/anatomy/neuron.py) _(Atomic Processing Nodes)_:** The three functional types _(Sensory, Interneurons, Motor)_ operate as the basic logic gates of the architecture. Their Synaptic Plasticity represents a self-modifying code capability, where connection weights evolve dynamically based on the frequency and timing of data flow.
 
 - **Columns cortical _(Hierarchical Data Modules)_:** The standard vertical organization of the mammalian _Neocortex_. In **aNA**, these _6 cortical layers_ define the functional hierarchy: _Layer IV (input)_, _Layers II/III (association/prediction)_, and _Layer V/VI (motor output)_.
 
-- **[Thalamus(.py)](src/anatomy/thalamus.py) _(Sensory Gateway & Packet Router)_:** Acts as the system's central hub for incoming data. It filters and directs sensory signals to the appropriate cortical layers, preventing _"system overflow"_ by dropping irrelevant background noise.
+- **[Thalamus(.py)](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/src/anatomy/thalamus.py) _(Sensory Gateway & Packet Router)_:** Acts as the system's central hub for incoming data. It filters and directs sensory signals to the appropriate cortical layers, preventing _"system overflow"_ by dropping irrelevant background noise.
 
 _Note: These definitions are adapted to the specific metabolic and cognitive constraints of the **aNA** v5.0 architecture._
 
