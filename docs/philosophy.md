@@ -1,4 +1,4 @@
-🚀 Quick links: [License](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/LICENSE), [ReadMe](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/README.md), [Contributing](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/CONTRIBUTING.md), [Installation](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/docs/installation_en.md), Philosophy, [Genesis](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/docs/genesis.md), [Architecture](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/docs/architecture.md)
+🚀 Quick links: [License](/LICENSE), [ReadMe](/README.md), [Contributing](/CONTRIBUTING.md), [Installation](/docs/installation_en.md), Philosophy, [Genesis](/docs/genesis.md), [Architecture](/docs/architecture.md)
 
 # Philosophy and guiding principles
 
