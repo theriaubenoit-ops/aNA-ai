@@ -67,6 +67,8 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
 >
 > _—Isaac Newton_
 
+![ ](/docs/assets/spacer32x32.png)
+
 ## 🔬 Neural Logic _(Advantage of Biological Components as Systems)_
 
 - **Cognitive Guidance vs. Control _(Respect for Autonomy)_:** **aNA** is designed with a core value of _Free Will_. Instead of imposing rigid algorithmic paths, the system acts as a natural guide, suggesting optimal _neural-digitals_ paths while respecting the autonomy of the decision-making process.
