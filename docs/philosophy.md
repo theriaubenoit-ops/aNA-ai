@@ -1,5 +1,7 @@
 🚀 Quick links: [License](/LICENSE), [ReadMe](/README.md), [Contributing](/CONTRIBUTING.md), [Installation](/docs/installation_en.md), Philosophy, [Genesis](/docs/genesis.md), [Architecture](/docs/architecture.md)
 
+![ ](/docs/assets/spacer16x16.png)
+
 # Philosophy and guiding principles
 
 ```
@@ -41,7 +43,7 @@ _The **aNA** (Autonomous Neural Architecture) AI project rejects the paradigm of
 7. **Natural Erasure & Transformation:**
    Based on _Lavoisier’s principle_, information that loses relevance is naturally _"pruned"_ or transformed, preventing the accumulation of digital noise.
 
----
+![ ](/docs/assets/spacer32x32.png)
 
 ```Python
 # From src/anatomy/hippocampus.py
@@ -52,6 +54,7 @@ def consolidate_memory(self):
         self.move_to_long_term_storage()
         print("✅ Pattern reinforced: Transformation complete.")
 ```
+![ ](/docs/assets/spacer32x32.png)
 
 ###### _In alignment with Lavoisier, every bit of data in aNA is a resource that evolves and strengthens the system’s function._
 
@@ -60,6 +63,8 @@ def consolidate_memory(self):
 > _—Rene Descartes_
 
 _Thank you for paving the way for future discoveries and innovations in this fascinating field. Your [contributions](/CONTRIBUTING.md) to neuroscience and artificial intelligence are invaluable. Some of your works have inspired me; they allow me to better understand and design more efficient bio-inspired neural networks._
+
+![ ](/docs/assets/spacer64x64.png)
 
 ## 🏛️ Scientific Lineage & Inherited Principles
 
@@ -92,5 +97,7 @@ Her discovery of _Nerve Growth Factor_ inspires our _"garbage collection"_ logic
 
 **Discrete Architecture** _—[Santiago Ramon y Cajal](https://en.wikipedia.org/wiki/Santiago_Ram%C3%B3n_y_Cajal)_:
 His _"Neuron Doctrine"_ is the _DNA_ of our modular approach. We treat each processing node as an independent, discrete entity rather than a monolithic block.
+
+![ ](/docs/assets/spacer16x16.png)
 
 _░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-18_
