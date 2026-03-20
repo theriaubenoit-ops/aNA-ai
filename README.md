@@ -54,7 +54,7 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
 
 ![ ](/docs/assets/spacer64x64.png)
 
-## 📚 Cognitive Mapping _(The Digital Bridge)_
+# 📚 Cognitive Mapping _(The Digital Bridge)_
 
 - **[Amygdala(.py)](/src/anatomy/amygdala.py) _(Priority Filter & Interrupt Controller)_:** Manages emotional valence and high-priority signals. It acts like an interrupt controller that can override standard processing cycles when "critical events" _(stress or high-reward stimuli)_ are detected, ensuring immediate system response.
 
