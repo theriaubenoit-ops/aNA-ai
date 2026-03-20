@@ -22,7 +22,7 @@ We are building an _Autonomous Neural Architecture_ that reflects biological pri
 
 **Peer Review & critique:** The most valuable input is the challenge. If you see a logical flaw in our modeling of a _cortical layer_ or a _neuromodulatory_ pathway, point it out. Precision is our primary goal.
 
-**Architectural alignment:** Before proposing changes, please review the [philosophy](/docs/philosophy.md) and [architecture](/docs/architecture.md). All additions must respect the principles of energy sobriety and targeted plasticity.
+**Architectural alignment:** Before proposing changes, please review the [philosophy](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/docs/philosophy.md) and [architecture](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/docs/architecture.md). All additions must respect the principles of energy sobriety and targeted plasticity.
 
 **Experimental validation:** If you implement a new feature _(a new nucleus, a refined synapse)_, ensure it is backed by biological rationale. We favor "why it works biologically" over _"it makes the model faster"_.
 
@@ -67,7 +67,7 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
 
 - **Cognitive Guidance vs. Control _(Respect for Autonomy)_:** **aNA** is designed with a core value of _Free Will_. Instead of imposing rigid algorithmic paths, the system acts as a natural guide, suggesting optimal _neural-digitals_ paths while respecting the autonomy of the decision-making process.
 
-- **Digital Consciousness _(Proactive Association)_:** Unlike conventional AI, **aNA** is capable of autonomous internal activity. Guided by the _[thalamus(.py)](src/anatomy/thalamus.py)_, it navigates its own memory structures to form new conceptual links, creating a _continuous cognitive_ flow rather than a simple reactive loop.
+- **Digital Consciousness _(Proactive Association)_:** Unlike conventional AI, **aNA** is capable of autonomous internal activity. Guided by the _[thalamus(.py)](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/src/anatomy/thalamus.py)_, it navigates its own memory structures to form new conceptual links, creating a _continuous cognitive_ flow rather than a simple reactive loop.
 
 - **Predictive Coherence _(Hallucination Prevention)_:** **aNA** uses its _cortical layers_ to validate data against internal predictive models. If the input doesn't align with the system's structural logic, it is treated as _"noise" (irrelevant data)_ rather than fact, maintaining internal stability.
 
