@@ -41,7 +41,7 @@ Join the **aNA** _computational neuroscience_ community: _[Download(.zip)](https
 ![ ](/docs/assets/spacer32x32.png)
 
 ```Python
-# From src/anatomy/thalamus.py
+# From src/anatomy/subcortical/thalamus.py
 # Example of proactive sensory gating and focus
 
 def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
@@ -73,7 +73,7 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
 
 - **Cognitive Guidance vs. Control _(Respect for Autonomy)_:** **aNA** is designed with a core value of _Free Will_. Instead of imposing rigid algorithmic paths, the system acts as a natural guide, suggesting optimal _neural-digitals_ paths while respecting the autonomy of the decision-making process.
 
-- **Digital Consciousness _(Proactive Association)_:** Unlike conventional AI, **aNA** is capable of autonomous internal activity. Guided by the _[thalamus(.py)](/src/anatomy/thalamus.py)_, it navigates its own memory structures to form new conceptual links, creating a _continuous cognitive_ flow rather than a simple reactive loop.
+- **Digital Consciousness _(Proactive Association)_:** Unlike conventional AI, **aNA** is capable of autonomous internal activity. Guided by the _[thalamus(.py)](/src/anatomy/subcortical/thalamus.py)_, it navigates its own memory structures to form new conceptual links, creating a _continuous cognitive_ flow rather than a simple reactive loop.
 
 - **Predictive Coherence _(Hallucination Prevention)_:** **aNA** uses its _cortical layers_ to validate data against internal predictive models. If the input doesn't align with the system's structural logic, it is treated as _"noise" (irrelevant data)_ rather than fact, maintaining internal stability.
 
