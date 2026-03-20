@@ -14,13 +14,15 @@ English instructions: [installation (en)](/docs/installation_en.md)
    - [ ] Création de l'environnement : `python -m venv venv && source venv/bin/activate`
    - [ ] Installation : `pip install -r requirements.txt`
 
-3. **À VENIR - Lancer les démonstrations _(The "Running" part)_**
-   - [ ] Exemple de commande pour lancer _"basic-demo.html"_ ou les _scripts Python_ associés (ex: `python dashboard.py --demo`, `python main.py --demo`).
-   - [ ] Note sur le serveur local _(ex: `python -m http.server` pour les démos web)_.
+3. **Exécution des scripts _(Phase « Action »)_**
+   - [ ] Exécution des composants : Exemples de commandes pour lancer les scripts _Python associés_ (exemple : `python3 src/tests/test_hippocampus.py`, `python3 src/tests/test_pulse.py`).
+   - [ ] PROCHAINEMENT - Exécution des interfaces : Exemples de commandes pour lancer les scripts _Python associés_ (exemple : `python3 src/gui/dashboard.py`).
+   - [ ] PROCHAINEMENT - Démonstrations : Exemples de commandes pour lancer _l'interface web_ (exemple : "http://localhost:8000/examples/basic-demo.html", "http://localhost:8000/examples/learning-demo.html", "http://localhost:8000/examples/memory-demo.html").
+   - [ ] Remarque concernant le serveur local : Pour exécuter les démonstrations web, utilisez la commande `python3 -m http.server 8000` from the root directory.
 
 4. **Contribuer et Communiquer _(GitHub Workflow)_**
    - [ ] Issues : "Ouvrez une issue pour toute question ou bug."
    - [ ] Pull Requests : "Pour soumettre vos améliorations de neurones ou de modules."
    - [ ] Discussions : "Utilisez les discussions **GitHub** pour échanger sur la psychologie comportementale du modèle ou simplement pour nous dire que notre code vous a inspiré."
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-16_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-20_
