@@ -11,18 +11,11 @@ Collaboration, research and code: Gemini, Cline
 """
 
 import numpy as np
-import sys
-import os
-
-# Ajustement du chemin pour remonter d'un niveau et trouver 'src'
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-
 from typing import Dict, List, Tuple, Optional
 from dataclasses import dataclass
 from enum import Enum
 
-from neuron import Neuron, NeuronConfig
-
+from anatomy.neuron import Neuron, NeuronConfig
 
 class AmygdalaNucleus(Enum):
     """Amygdala nuclei"""
