@@ -16,7 +16,7 @@ English instructions: [installation (en)](/docs/installation_en.md)
    - [ ] Création de l'environnement : `python -m venv venv && source venv/bin/activate`
    - [ ] Installation : `pip install -r requirements.txt`
 
-3. - [x] **Exécution des scripts _(Phase « Action »)_:** Launch associated _Python scripts_ to validate neural logic:
+3. - [x] **Exécution des scripts _(Phase « Action »)_** Launch associated _Python scripts_ to validate neural logic:
      - `python3 src/tests/test_limbic_system.py` (Validation de la coordination émotionnelle et mnésique))
      - `python3 src/tests/test_hippocampus.py` (Validation de l'indexation de la mémoire)
      - `python3 src/tests/test_pulse.py` (Validation du stimulateur cardiaque central)
