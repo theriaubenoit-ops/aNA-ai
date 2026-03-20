@@ -62,7 +62,7 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
 
 - **[Cerebellum(.py)](/src/anatomy/cerebellum.py) _(Timing Engine & Output Calibration)_:** The specialized unit for fine-tuning motor and cognitive outputs. In **aNA**, it ensures that the _"Thinking Shell"_ operates with perfect mathematical synchronization, acting as a calibration layer for fluid, real-time interaction.
 
-- **[Limbic System(.py)](/src/anatomy/limbic/limbic_system.py) _(Emotional Valence & Memory Orchestrator)_:** The _vital bridge_ between _sensory impact_ and _long-term storage_. In **aNA**, it evaluates incoming signals via the _Amygdala_ to assign an _"emotional weight"_, ensuring that critical experiences are prioritized by the _Hippocampus_ for deep encoding and empathic recall.
+- **[Limbic System(.py)](/src/anatomy/limbic/limbic_system.py) _(Emotional Valence & Memory Orchestrator)_:** The _vital bridge_ between _sensory impact_ and _long-term storage_. In **aNA**, it evaluates incoming signals via the _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ to assign an _"emotional weight"_, ensuring that critical experiences are prioritized by the _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_ for deep encoding and empathic recall.
 
 - **Lobe, Frontal _(Executive Logic & Command Center)_:** The primary site for high-level decision-making and motor control. In **aNA**, it acts as the central executive that orchestrates complex task sequences and manages the _"top-down"_ attention directed to other modules.
 
