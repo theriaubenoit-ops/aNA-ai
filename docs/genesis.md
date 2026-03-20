@@ -1,5 +1,7 @@
 🚀 Quick links: [License](/LICENSE), [ReadMe](/README.md), [Contributing](/CONTRIBUTING.md), [Installation](/docs/installation_en.md), [Philosophy](/docs/philosophy.md), Genisis, [Architecture](/docs/architecture.md)
 
+![ ](/docs/assets/spacer16x16.png)
+
 # Genesis: The heart of the neural adventure
 
 ```
@@ -34,7 +36,7 @@ The code deployed today is the result of a constant dialogue between human inten
 
 This project is an exploration at the threshold of _cortical_ memory. We are not building a product; we are documenting a trajectory. Your participation, through your reading or feedback, contributes to the precision of this research.
 
----
+![ ](/docs/assets/spacer32x32.png)
 
 ```Python
 # From src/anatomy/hippocampus.py
@@ -56,12 +58,16 @@ def test_integration():
 
 ###### _Our trajectory is defined by this capacity for memory consolidation. By mimicking biological sleep and rest cycles, aNA transforms today's data into tomorrow's foundational logic._
 
-## 👤 About the Author
+![ ](/docs/assets/spacer64x64.png)
+
+# 👤 About the Author
 
 **Benoit Theriault** works at the intersection of design, architecture, and software engineering. With a multidisciplinary background—ranging from architectural signage to complex web solutions—he cultivates a rigorous approach, honed by years of close collaboration with architects, engineers, and medical professionals across Quebec, Canada and internationally.
 
 Since the beginning of his career, this constant pursuit of form and structure has been coupled with a profound fascination for neural processes. An expert in programming languages _(HTML, CSS, JS, and Python)_, he now presents the **aNA** AI project not as a mere technical tool, but as an allegory that translates the elegance of living mechanisms into the digital world.
 
 Between behavioral _psychology_, _ethics_, and _neuroinformatics_, his work offers a new interpretation of _artificial intelligence_: that of an architecture which, like the _brain_, is cultivated with precision and intention.
+
+![ ](/docs/assets/spacer16x16.png)
 
 _░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-16_
