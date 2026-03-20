@@ -1,5 +1,7 @@
 🚀 Quick links: [License](/LICENSE), ReadMe, [Contributing](/CONTRIBUTING.md), [Installation](/docs/installation_en.md), [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), [Architecture](/docs/architecture.md)
 
+![](/docs/assets/spacer32x32.png)
+
 # Manifesto: For a more organic and sustainable AI
 
 ```
