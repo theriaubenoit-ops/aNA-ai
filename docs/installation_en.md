@@ -1,5 +1,7 @@
 🚀 Quick links: [License](/LICENSE), [ReadMe](/README.md), [Contributing](/CONTRIBUTING.md), Installation, [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), [Architecture](/docs/architecture.md)
 
+![ ](/docs/assets/spacer16x16.png)
+
 Instructions française : [installation (fr)](/docs/installation_fr.md)
 
 ## Installation and Usage: ✴️*aNA* AI Project v5.0
@@ -24,5 +26,7 @@ Instructions française : [installation (fr)](/docs/installation_fr.md)
    - [ ] Issues: "Open an issue for any questions or bug reports."
    - [ ] Pull Requests: "Submit your improvements for neurons or modules."
    - [ ] Discussions: "Use **GitHub** Discussions to exchange ideas on the model's behavioral psychology or simply to share how our code has inspired you."
+
+![ ](/docs/assets/spacer16x16.png)
 
 _░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-20_
