@@ -22,7 +22,7 @@
 
 ### The quest for AI reflecting life
 
-Current artificial intelligence, while powerful, relies on massive, rigid architectures that remain disconnected from biological reality. Simultaneously, the AI community is increasingly concerned with the rising carbon footprint and unsustainable computing costs of these models. **aNA** _(Autonomous Neural Architecture)_ AI Project breaks with these paradigms. Inspired by the organization of the _six-layered cortical columns_, _synaptic plasticity_, and the precise management of the _[thalamus(.py)](/src/anatomy/thalamus.py)_, _[hippocampus(.py)](/src/anatomy/hippocampus.py)_, _[amygdala(.py)](/src/anatomy/amygdala.py)_, _[cerebellum(.py)](/src/anatomy/cerebellum.py)_, and _five key neuromodulators (dopamine, adrenaline, nitric oxide, acetylcholine, and serotonin)_. This project aims to create not a mere computational simulation, but an organic resonance. Far from being a static data repository, **aNA** AI is a dynamic system that learns, forgets, adjusts, and focuses—much like our own minds.
+Current artificial intelligence, while powerful, relies on massive, rigid architectures that remain disconnected from biological reality. Simultaneously, the AI community is increasingly concerned with the rising carbon footprint and unsustainable computing costs of these models. **aNA** _(Autonomous Neural Architecture)_ AI Project breaks with these paradigms. Inspired by the organization of the _six-layered cortical columns_, _synaptic plasticity_, and the precise management of the _[thalamus(.py)](/src/anatomy/thalamus.py)_, _[hippocampus(.py)](/src/anatomy/hippocampus.py)_, _[amygdala(.py)](/src/anatomy/amygdala.py)_, _[cerebellum(.py)](/src/anatomy/cerebellum.py)_, _[limbic system(.py)](/src/anatomy/limbic_system.py)_, and _five key neuromodulators (dopamine, adrenaline, nitric oxide, acetylcholine, and serotonin)_. This project aims to create not a mere computational simulation, but an organic resonance. Far from being a static data repository, **aNA** AI is a dynamic system that learns, forgets, adjusts, and focuses—much like our own minds.
 
 ### Dynamic Cognitive Architecture
 
@@ -37,7 +37,6 @@ We are at a tipping point. The frantic race toward ever-larger and more energy-i
 ### Towards the next generation of intelligence
 
 We are embarking on the _"next wave"_ of artificial intelligence—an AI that does not simply predict the next token, but truly integrates context, attention, and emotional modulation to act with discernment, even amidst _"noise"_. This project is more than a technical achievement; it is a social commitment. By designing transparent, explainable, and resource-efficient systems, we are laying the groundwork for a more harmonious coexistence between humans and the machines of tomorrow.
-
 
 ![ ](/docs/assets/spacer32x32.png)
 
@@ -62,6 +61,8 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
 - **[Amygdala(.py)](/src/anatomy/amygdala.py) _(Priority Filter & Interrupt Controller)_:** Manages emotional valence and high-priority signals. It acts like an interrupt controller that can override standard processing cycles when "critical events" _(stress or high-reward stimuli)_ are detected, ensuring immediate system response.
 
 - **[Cerebellum(.py)](/src/anatomy/cerebellum.py) _(Timing Engine & Output Calibration)_:** The specialized unit for fine-tuning motor and cognitive outputs. In **aNA**, it ensures that the _"Thinking Shell"_ operates with perfect mathematical synchronization, acting as a calibration layer for fluid, real-time interaction.
+
+- **[Limbic System(.py)](/src/anatomy/limbic_system.py) _(Emotional Valence & Memory Orchestrator)_:** The _vital bridge_ between _sensory impact_ and _long-term storage_. In **aNA**, it evaluates incoming signals via the _Amygdala_ to assign an _"emotional weight"_, ensuring that critical experiences are prioritized by the _Hippocampus_ for deep encoding and empathic recall.
 
 - **Lobe, Frontal _(Executive Logic & Command Center)_:** The primary site for high-level decision-making and motor control. In **aNA**, it acts as the central executive that orchestrates complex task sequences and manages the _"top-down"_ attention directed to other modules.
 
