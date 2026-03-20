@@ -20,6 +20,8 @@
 >
 > _—Antoine Lavoisier_
 
+![ ](/docs/assets/spacer16x16.png)
+
 _The **aNA** (Autonomous Neural Architecture) AI project rejects the paradigm of "raw power" in favor of the elegance and economy observed in biological structures. We are not building a static database; we are fostering a dynamic cognitive process._
 
 1. **Hierarchical information reconstruction:**
