@@ -99,4 +99,6 @@ The **aNA** AI project is more than just a _codebase_; it is a _sandbox_ for exp
 
 **Philosophical & Ethical Inquiry:** By modeling artificial _"intent"_ and _"homeostasis,"_ this project creates a platform for critical discussions regarding _the nature of consciousness_, _machine autonomy_, and the _ethics_ of _AI behavior_.
 
+![ ](/docs/assets/spacer16x16.png)
+
 _░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-16_
