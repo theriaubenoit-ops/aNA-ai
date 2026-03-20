@@ -31,4 +31,4 @@ English instructions: [installation (en)](/docs/installation_en.md)
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-16_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-20_
