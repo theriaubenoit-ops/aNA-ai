@@ -1,6 +1,6 @@
 🚀 Quick links: [License](/LICENSE), [ReadMe](/README.md), Contributing, [Installation](/docs/installation_en.md), [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), [Architecture](/docs/architecture.md)
 
-![ ](/docs/assets/spacer32x32.png)
+![ ](/docs/assets/spacer16x16.png)
 
 # Contributing
 
@@ -38,7 +38,7 @@ We are moving away from the "open-source contribution" model—where the goal is
 
 Join the **aNA** _computational neuroscience_ community: [Download(.zip)](https://github.com/theriaubenoit-ops/aNA-ai/archive/refs/heads/main.zip) or [installation](/docs/installation_en.md)
 
-![ ](/docs/assets/spacer32x32.png)
+![ ](/docs/assets/spacer16x16.png)
 
 ```Python
 # From src/anatomy/thalamus.py
@@ -58,7 +58,7 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
     print("✅ Thalamic Gateway initialized: System is ready for focused interaction.")
     return thalamus
 ```
-![ ](/docs/assets/spacer32x32.png)
+![ ](/docs/assets/spacer16x16.png)
 
 ###### _When working on brain modules, always prioritize signal clarity over raw data volume. Like the biological Thalamus, the code should help the system "decide" what is worth processing._
 
@@ -78,7 +78,7 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
 
 - **Rest Cycles _(Memory Consolidation)_:** Inspired by biological sleep. **aNA** uses designated rest periods to reinforce significant learning events, facilitating the migration of data to long-term structures without the risk of catastrophic forgetting.
 
-![ ](/docs/assets/spacer32x32.png)
+![ ](/docs/assets/spacer16x16.png)
 
 ```
 
