@@ -205,55 +205,57 @@ Processing Hierarchy:
 
 ```
 ├── docs/
-│   ├── adr/                        # 📋 To Do: Architecture Decision Records
-│   ├── assets/                     # 📋 To Do: Medias
-│   ├── examples/                   # 📋 To Do: Comprehensive example suite
-│   ├── api-reference.md            # 📋 To Do: ...
-│   ├── architecture.md             # The technical plan
-│   ├── genesis.md                  # The story of the project
-│   ├── installation_en.md          # Installation (EN)
-│   ├── installation_fr.md          # Installation (FR)
-│   ├── legend.md                   # 📋 To Do: ...
-│   └── philosophy.md               # The ethical vision
-├── examples/                       # 📋 To Do: Comprehensive example suite
-│   ├── basic-demo.html             # 📋 To Do: ...
-│   ├── learning-demo.html          # 📋 To Do: ...
-│   └── memory-demo.html            # 📋 To Do: ...
+│   ├── adr/                            # 📋 To Do: Architecture Decision Records
+│   ├── assets/                         # 📋 To Do: Medias
+│   ├── examples/                       # 📋 To Do: Comprehensive example suite
+│   ├── api-reference.md                # 📋 To Do: ...
+│   ├── architecture.md                 # The technical plan
+│   ├── genesis.md                      # The story of the project
+│   ├── installation_en.md              # Installation (EN)
+│   ├── installation_fr.md              # Installation (FR)
+│   ├── legend.md                       # 📋 To Do: ...
+│   └── philosophy.md                   # The ethical vision
+├── examples/                           # 📋 To Do: Comprehensive example suite
+│   ├── basic-demo.html                 # 📋 To Do: ...
+│   ├── learning-demo.html              # 📋 To Do: ...
+│   └── memory-demo.html                # 📋 To Do: ...
 ├── src/
-│   ├── anatomy/                    # Brain region implementations
+│   ├── anatomy/                        # Brain region implementations
+│   │   ├── base/
+│   │   │   ├── neuron.py               # Represents a single neuron
+│   │   │   ├── neuromodulator.py       # 🗓️ Coming Soon: Chemical "gain controls"
+│   │   │   └── neural_transmission.py  # The standardized data structure
 │   │   ├── cortex/
-│   │   │   ├── frontal.py          # 🗓️ Coming Soon: Executive Logic & Command Center
-│   │   │   ├── lobe_base.py        # 🗓️ Coming Soon: ...
-│   │   │   ├── occipital.py        # 🗓️ Coming Soon: Visual Stream Processor
-│   │   │   ├── parietal.py         # 🗓️ Coming Soon: Spatial Mapping & Data Integration
-│   │   │   └── temporal.py         # 🗓️ Coming Soon: Semantic Storage & Pattern Recognition
-│   │   ├── limbic/                 # NEW - Limbic System
-│   │   │   ├── amygdala.py         # NEW - Priority Filter & Interrupt Controller
-│   │   │   ├── hippocampus.py      # NEW - Dynamic Buffer & Indexing System
-│   │   │   └── limbic_system.py    # NEW - Limbic system
-│   │   ├── cerebellum.py           # NEW - Timing Engine & Output Calibration
-│   │   ├── neuron.py               # Represents a single neuron
-│   │   └── thalamus.py             # Enhanced Thalamus implementation
-│   ├── core/                       # Core neural components
-│   │   ├── input_gateway.py        # 🗓️ Coming Soon: ...
-│   │   ├── neural_transmission.py  # The standardized data structure
-│   │   ├── neuromodulator.py       # 🗓️ Coming Soon: Chemical "gain controls"
-│   │   ├── output_gateway.py       # 🗓️ Coming Soon: ...
-│   │   └── tempo.py                # Core Pacemaker (pulse)
-│   ├── gui/                        # 📋 To Do:  Web-based interface
-│   │   └── dashboard.py            # 🚧  Work in progress: ...
-│   ├── tests/                      # NEW - Comprehensive test suite
-│   │   ├── test_amygdala.py        # 🗓️ Coming Soon: Priority Filter & Interrupt Controller
-│   │   ├── test_cerebellum.py      # 🗓️ Coming Soon: Timing Engine & Output Calibration
-│   │   ├── test_hippocampus.py     # NEW - Dynamic Buffer & Indexing System
-│   │   ├── test_limbic_system.py   # NEW - Limbic system
-│   │   ├── test_neuron.py          # 🗓️ Coming Soon: Represents a single neuron
-│   │   ├── test_pulse.py           # NEW - Core Pacemaker (pulse)
-│   │   └── test_thalamus.py        # 🗓️ Coming Soon: Enhanced Thalamus implementation
-│   └── main.py                     # 🚧  Work in progress: The orchestrator
-├── CONTRIBUTING.md                 # The rules of collaboration
-├── LICENSE                         # The protection license
-└── README.md                       # The Manifesto
+│   │   │   ├── frontal.py              # 🗓️ Coming Soon: Executive Logic & Command Center
+│   │   │   ├── lobe_base.py            # 🗓️ Coming Soon: ...
+│   │   │   ├── occipital.py            # 🗓️ Coming Soon: Visual Stream Processor
+│   │   │   ├── parietal.py             # 🗓️ Coming Soon: Spatial Mapping & Data Integration
+│   │   │   └── temporal.py             # 🗓️ Coming Soon: Semantic Storage & Pattern Recognition
+│   │   ├── limbic/                     # NEW - Limbic System
+│   │   │   ├── amygdala.py             # NEW - Priority Filter & Interrupt Controller
+│   │   │   ├── hippocampus.py          # NEW - Dynamic Buffer & Indexing System
+│   │   │   └── limbic_system.py        # NEW - Limbic system
+│   │   └── subcortical                 # Subcortical
+│   │       ├── cerebellum.py           # Timing Engine & Output Calibration
+│   │       └── thalamus.py             # Enhanced Thalamus implementation
+│   ├── core/                           # Core neural components
+│   │   ├── input_gateway.py            # 🗓️ Coming Soon: ...
+│   │   ├── output_gateway.py           # 🗓️ Coming Soon: ...
+│   │   └── pulse.py                    # Core Pacemaker (pulse )
+│   ├── gui/                            # 📋 To Do:  Web-based interface
+│   │   └── dashboard.py                # 🚧  Work in progress: ...
+│   ├── tests/                          # NEW - Comprehensive test suite
+│   │   ├── test_amygdala.py            # 🗓️ Coming Soon: Priority Filter & Interrupt Controller
+│   │   ├── test_cerebellum.py          # 🗓️ Coming Soon: Timing Engine & Output Calibration
+│   │   ├── test_hippocampus.py         # NEW - Dynamic Buffer & Indexing System
+│   │   ├── test_limbic_system.py       # NEW - Limbic system
+│   │   ├── test_neuron.py              # 🗓️ Coming Soon: Represents a single neuron
+│   │   ├── test_pulse.py               # NEW - Core Pacemaker (pulse)
+│   │   └── test_thalamus.py            # 🗓️ Coming Soon: Enhanced Thalamus implementation
+│   └── main.py                         # 🚧  Work in progress: The orchestrator
+├── CONTRIBUTING.md                     # The rules of collaboration
+├── LICENSE                             # The protection license
+└── README.md                           # The Manifesto
 ```
 
 ![ ](/docs/assets/spacer16x16.png)
