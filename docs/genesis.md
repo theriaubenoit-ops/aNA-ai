@@ -39,24 +39,18 @@ This project is an exploration at the threshold of _cortical_ memory. We are not
 ![ ](/docs/assets/spacer32x32.png)
 
 ```Python
-# From src/anatomy/hippocampus.py
-# Highlighting the successful transition from L1 to L3 memory
-
-def test_integration():
+# Snippet: Serotonin influence on global homeostasis
+def apply_serotonin_stabilization(neural_network, matrix):
     """
-    Demonstrates the harmony between learning and prediction.
-    A perfect match between reality and internal models signals a successful cognitive integration.
+    The 'Governor': Adjusts the global firing threshold to prevent
+    runaway excitation and maintain system equilibrium.
     """
-    reality = "B"
-    prediction = "B"  # Success! The system anticipated the pattern
-
-    if prediction == reality:
-        print("✅ Perfect prediction: aNA is in harmony with reality.")
-        print("✅ Integration successful: Pattern reinforced and ready for long-term storage.")
-        return True
+    if matrix.serotonin > 0.8:
+        neural_network.global_threshold += 2.0
+        print("⚖️ Serotonin active: Homeostatic balance maintained.")
 ```
 
-###### _Our trajectory is defined by this capacity for memory consolidation. By mimicking biological sleep and rest cycles, aNA transforms today's data into tomorrow's foundational logic._
+###### _This module regulates the network's "gain" and sensitivity. It is the chemical thermostat that allows aNA to remain stable and focused, regardless of the intensity of the information flow._
 
 ![ ](/docs/assets/spacer64x64.png)
 
