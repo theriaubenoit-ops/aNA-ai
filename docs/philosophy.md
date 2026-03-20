@@ -48,7 +48,7 @@ _The **aNA** (Autonomous Neural Architecture) AI project rejects the paradigm of
 ![ ](/docs/assets/spacer32x32.png)
 
 ```Python
-# From src/anatomy/hippocampus.py
+# From src/anatomy/limbic/hippocampus.py
 # Highlighting the reinforcement of significant patterns
 def consolidate_memory(self):
     """Transforms temporary experiences into long-term knowledge."""
