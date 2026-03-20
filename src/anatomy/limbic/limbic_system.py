@@ -14,14 +14,20 @@ class LimbicSystem:
     Coordinator of the Limbic System (Amygdala & Hippocampus).
     Manages emotional valence and memory prioritization.
     """
-    def __init__(self, amygdala: Amygdala = None, hippocampus: Hippocampus = None):
+    def __init__(self, amygdala: Amygdala = None, hippocampus: Hippocampus = None, arousal_threshold: float = 0.5):
         self.amygdala = amygdala or Amygdala()
         self.hippocampus = hippocampus or Hippocampus()
-
+        # C'est ici que le "Senseur de Danger" est défini :
+        self.arousal_threshold = arousal_threshold 
+            
     def process_experience(self, stimulus, sensory_data):
         """
         Processes a sensory event and decides how to store it.
         """
+        # Simulation simplifiée de l'analyse (le temps que vous codiez la suite)
+        # On imagine que l'amygdale calcule un score :
+        total_arousal = self.amygdala.analyze(stimulus) 
+
         # 1. Evaluate emotional charge (Amygdala)
         # Returns a dict of neurotransmitter impacts (cortisol, adrenaline, etc.)
         emotional_state = self.amygdala.update_activity(stimulus)
