@@ -65,11 +65,11 @@ def consolidate_memory(self):
 >
 > _—Rene Descartes_
 
-_Thank you for paving the way for future discoveries and innovations in this fascinating field. Your [contributions](/CONTRIBUTING.md) to neuroscience and artificial intelligence are invaluable. Some of your works have inspired me; they allow me to better understand and design more efficient bio-inspired neural networks._
-
 ![ ](/docs/assets/spacer64x64.png)
 
 # 🏛️ Scientific Lineage & Inherited Principles
+
+_Thank you for paving the way for future discoveries and innovations in this fascinating field. Your [contributions](/CONTRIBUTING.md) to neuroscience and artificial intelligence are invaluable. Some of your works have inspired me; they allow me to better understand and design more efficient bio-inspired neural networks._
 
 **Signal Logic** _—[Alan Hodgkin](https://en.wikipedia.org/wiki/Alan_Hodgkin) & [Andrew Huxley](https://en.wikipedia.org/wiki/Andrew_Huxley)_:
 Their mathematical model of the action potential is the source of our _[neurons(.py)](/src/anatomy/neuron.py)_ communication protocol, ensuring high-fidelity signal propagation.
