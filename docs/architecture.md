@@ -4,10 +4,6 @@
 
 # ✴️*aNA (Autonomous Neural Architecture)* AI Project v5.0
 
-```
-
-```
-
 ### 1. 🏗️ High-Level System Architecture
 
 ```
