@@ -5,11 +5,12 @@ import unittest
 import sys
 import os
 
-# Ajustement du chemin pour remonter d'un niveau et trouver 'src'
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from unittest.mock import MagicMock
 from anatomy.limbic.limbic_system import LimbicSystem
+from anatomy.limbic.amygdala import Amygdala
+from anatomy.limbic.hippocampus import Hippocampus
 
 class TestLimbicSystem(unittest.TestCase):
     def setUp(self):
