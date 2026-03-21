@@ -64,13 +64,13 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
 
 - **[Limbic System(.py)](/src/anatomy/limbic/limbic_system.py) _(Emotional Valence & Memory Orchestrator)_:** The _vital bridge_ between _sensory impact_ and _long-term storage_. In **aNA**, it evaluates incoming signals via the _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ to assign an _"emotional weight"_, ensuring that critical experiences are prioritized by the _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_ for deep encoding and empathic recall.
 
-- **Lobe, Frontal _(Executive Logic & Command Center)_:** The primary site for high-level decision-making and motor control. In **aNA**, it acts as the central executive that orchestrates complex task sequences and manages the _"top-down"_ attention directed to other modules.
+- **Lobe, [Frontal(.py)](/src/anatomy/cortical/frontal.py) _(Executive Logic & Command Center)_:** The primary site for high-level decision-making and motor control. In **aNA**, it acts as the central executive that orchestrates complex task sequences and manages the _"top-down"_ attention directed to other modules.
 
-- **Lobe, Occipital _(Visual Stream Processor)_:** Dedicated to the decoding of visual information. It functions as a specialized GPU-like buffer within the architecture, transforming raw sensory "pixels" into structured spatial patterns before they are analyzed by association layers.
+- **Lobe, [Occipital(.py)](/src/anatomy/cortical/occipital.py) _(Visual Stream Processor)_:** Dedicated to the decoding of visual information. It functions as a specialized GPU-like buffer within the architecture, transforming raw sensory "pixels" into structured spatial patterns before they are analyzed by association layers.
 
-- **Lobe, Parietal _(Spatial Mapping & Data Integration)_:** Manages the integration of sensory information from various parts of the system. It acts as a multi-modal coordinate system, allowing **aNA** to understand the _"where"_ and _"how"_ of data points in a unified 3D-like internal workspace.
+- **Lobe, [Parietal(.py)](/src/anatomy/cortical/parietal.py) _(Spatial Mapping & Data Integration)_:** Manages the integration of sensory information from various parts of the system. It acts as a multi-modal coordinate system, allowing **aNA** to understand the _"where"_ and _"how"_ of data points in a unified 3D-like internal workspace.
 
-- **Lobe, Temporal _(Semantic Storage & Pattern Recognition)_:** The hub for processing auditory signals and high-level linguistic or object recognition. In the digital model, it serves as the semantic engine that links sensory inputs to long-term _"concepts"_ stored in the memory hierarchy.
+- **Lobe, [Temporal(.py)](/src/anatomy/cortical/temporal.py) _(Semantic Storage & Pattern Recognition)_:** The hub for processing auditory signals and high-level linguistic or object recognition. In the digital model, it serves as the semantic engine that links sensory inputs to long-term _"concepts"_ stored in the memory hierarchy.
 
 - **Neocortex _(The "Thinking" Shell)_:** The structural integration of the _4 Lobes_ and _6 Cortical Layers_. While the _Neocortex_ handles complex reasoning and prediction, the _Cerebellum (in **aNA**)_ fine-tunes _motor outputs_ and timing, ensuring the system’s actions are fluid and mathematically synchronized.
 
@@ -90,4 +90,4 @@ _Note: These definitions are adapted to the specific metabolic and cognitive con
 
 ![Downloads](https://img.shields.io/github/downloads/theriaubenoit-ops/aNA-ai/total?style=for-the-badge&color=181c1f)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-20_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-21_
