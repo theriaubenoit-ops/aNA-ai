@@ -223,7 +223,7 @@ Processing Hierarchy:
 │   ├── anatomy/                        # Brain region implementations
 │   │   ├── base/
 │   │   │   ├── neuron.py               # Represents a single neuron
-│   │   │   ├── neuromodulator.py       # 🗓️ Coming Soon: Chemical "gain controls"
+│   │   │   ├── neuromodulator.py       # NEW - Chemical "gain controls"
 │   │   │   └── neural_transmission.py  # The standardized data structure
 │   │   ├── cortex/
 │   │   │   ├── frontal.py              # 🗓️ Coming Soon: Executive Logic & Command Center
@@ -241,7 +241,7 @@ Processing Hierarchy:
 │   ├── core/                           # Core neural components
 │   │   ├── input_gateway.py            # 🗓️ Coming Soon: ...
 │   │   ├── output_gateway.py           # 🗓️ Coming Soon: ...
-│   │   └── pulse.py                    # Core Pacemaker (pulse )
+│   │   └── pulse.py                    # Core Pacemaker (Pulse)
 │   ├── gui/                            # 📋 To Do:  Web-based interface
 │   │   └── dashboard.py                # 🚧  Work in progress: ...
 │   ├── tests/                          # NEW - Comprehensive test suite
@@ -250,9 +250,9 @@ Processing Hierarchy:
 │   │   ├── test_hippocampus.py         # NEW - Dynamic Buffer & Indexing System
 │   │   ├── test_limbic_system.py       # NEW - Limbic system
 │   │   ├── test_neuron.py              # 🗓️ Coming Soon: Represents a single neuron
-│   │   ├── test_pulse.py               # NEW - Core Pacemaker (pulse)
+│   │   ├── test_pulse.py               # NEW - Core Pacemaker (Pulse)
 │   │   └── test_thalamus.py            # 🗓️ Coming Soon: Enhanced Thalamus implementation
-│   └── main.py                         # 🚧  Work in progress: The orchestrator
+│   └── main.py                         # NEW - The orchestrator
 ├── CONTRIBUTING.md                     # The rules of collaboration
 ├── LICENSE                             # The protection license
 └── README.md                           # The Manifesto
