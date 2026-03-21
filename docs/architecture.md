@@ -245,7 +245,7 @@ Processing Hierarchy:
 │   ├── gui/                            # 📋 To Do:  Web-based interface
 │   │   └── dashboard.py                # 🚧  Work in progress: ...
 │   ├── tests/                          # NEW: Comprehensive test suite
-│   │   ├── test_amygdala.py            # 🗓️ Coming Soon: Priority Filter & Interrupt Controller
+│   │   ├── test_amygdala.py            # Priority Filter & Interrupt Controller
 │   │   ├── test_cerebellum.py          # 🗓️ Coming Soon: Timing Engine & Output Calibration
 │   │   ├── test_hippocampus.py         # NEW: Dynamic Buffer & Indexing System
 │   │   ├── test_limbic_system.py       # NEW: Limbic system
