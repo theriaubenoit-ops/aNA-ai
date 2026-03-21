@@ -1,0 +1,57 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+import unittest
+import numpy as np
+import sys
+import os
+
+# Insertion du chemin pour l'accès aux modules src
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+from anatomy.base.neuron import Neuron, NeuronConfig
+
+class TestNeuron(unittest.TestCase):
+    def setUp(self):
+        # Configuration standard pour un neurone pyramidal
+        self.config = NeuronConfig(
+            layer_id=1,
+            threshold_potential=-52.0,  # Seuil typique
+            base_energy_consumption=0.01,
+            firing_energy_cost=0.1
+        )
+        self.position = np.array([0.0, 0.0, 0.0])
+        self.neuron = Neuron(self.position, self.config)
+
+    def test_initial_state(self):
+        """Vérifie que le neurone démarre au repos"""
+        print("\n[TEST NEURONE : ÉTAT INITIAL]")
+        self.assertFalse(self.neuron.is_firing)
+        self.assertGreater(self.neuron.energy_level, 0.9)
+        print(" -> Neurone au repos et chargé en énergie.")
+
+    def test_threshold_activation(self):
+        """Vérifie si le neurone déclenche après avoir atteint le seuil"""
+        print("\n[TEST NEURONE : SEUIL D'ACTIVATION]")
+        # On envoie un signal fort
+        self.neuron.receive_input(60.0, {}) 
+        self.neuron.update(time_step=1, neuromodulators={})
+        
+        self.assertTrue(self.neuron.is_firing)
+        print(f" -> Décharge réussie ! Potentiel atteint le seuil de {self.config.threshold_potential} mV.")
+
+    def test_energy_depletion(self):
+        """Vérifie que l'activité consomme de l'énergie"""
+        print("\n[TEST NEURONE : CONSOMMATION ÉNERGÉTIQUE]")
+        initial_energy = self.neuron.energy_level
+        
+        # On fait feu plusieurs fois
+        for _ in range(5):
+            self.neuron.receive_input(100.0, {})
+            self.neuron.update(time_step=1, neuromodulators={})
+            
+        self.assertLess(self.neuron.energy_level, initial_energy)
+        print(f" -> Énergie résiduelle : {self.neuron.energy_level:.2f} (Consommation validée).")
+
+if __name__ == '__main__':
+    unittest.main()
