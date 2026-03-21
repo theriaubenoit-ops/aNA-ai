@@ -88,4 +88,6 @@ _Note: These definitions are adapted to the specific metabolic and cognitive con
 
 ![ ](/docs/assets/spacer16x16.png)
 
+![Downloads](https://img.shields.io/github/downloads/theriaubenoit-ops/core/total?style=for-the-badge&color=181c1f)
+
 _░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-20_
