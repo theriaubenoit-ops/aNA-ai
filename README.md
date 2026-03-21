@@ -94,7 +94,7 @@ To witness **aNA** v5.0's neural processing in real-time, you can run the integr
 
 ### 1. Limbic Resonance Test
 
-This demo simulates how the _[Amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ and _[Hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_ collaborate to filter critical information from routine noise.
+This demo simulates how the _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ and _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_ collaborate to filter critical information from routine noise.
 
 ```Python
 # From the project root
