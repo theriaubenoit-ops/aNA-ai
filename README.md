@@ -42,7 +42,7 @@ We are embarking on the _"next wave"_ of artificial intelligence—an AI that do
 
 ## 🧪 Running the Biological Simulations _(Demos)_
 
-To witness **aNA** v5.0's neural processing in real-time, you can run the integrated [tests(/)](/src/test/) suites. These simulations demonstrate how sensory data is transformed into emotional importance and cortical action.
+To witness **aNA** v5.0's neural processing in real-time, you can run the integrated [tests(/)](/src/tests/) suites. These simulations demonstrate how sensory data is transformed into emotional importance and cortical action.
 
 ### 1. Limbic Resonance Test
 
