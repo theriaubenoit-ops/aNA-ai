@@ -40,19 +40,27 @@ We are embarking on the _"next wave"_ of artificial intelligence—an AI that do
 
 ![ ](/docs/assets/spacer32x32.png)
 
-```python
-# From src/anatomy/thalamus.py
-# Highlighting the proactive "Sensory Gateway" logic
-def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
-    """Creates a thalamus optimized for clarity and sensory focus."""
-    thalamus = Thalamus(position)
-    # Enhance specific nuclei to sharpen digital perception
-    thalamus.nuclei[ThalamicNucleusType.LGN].config.size = 800  # Vision focus
-    thalamus.nuclei[ThalamicNucleusType.MGN].config.size = 600  # Hearing focus
-    return thalamus
+## 🧪 Running the Biological Simulations _(Demos)_
+
+To witness **aNA** v5.0's neural processing in real-time, you can run the integrated test suites. These simulations demonstrate how sensory data is transformed into emotional importance and cortical action.
+
+### 1. Limbic Resonance Test
+
+This demo simulates how the _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ and _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_ collaborate to filter critical information from routine noise.
+
+```Python
+# From the project root
+python3 tests/test_limbic_system.py
 ```
 
-###### _aNA sharpens digital perception by prioritizing meaningful signals, ensuring a clear and focused cognitive flow._
+### What to look for in the output:
+
+- **Routine Scenario:** Low arousal levels _(Cortisol/Adrenaline)_ leading to standard memory encoding.
+- **Shock Scenario:** High arousal triggering a _"System Breach"_ alert and prioritized memory storage.
+
+### 2. Cortical Column Cascade _(Coming Soon)_
+
+Validation of the _6-layer_ signal flow ($L4 \rightarrow L2/3 \rightarrow L5$) with real-time precision monitoring.
 
 ![ ](/docs/assets/spacer64x64.png)
 
@@ -86,29 +94,21 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
 
 _Note: These definitions are adapted to the specific metabolic and cognitive constraints of the **aNA** v5.0 architecture._
 
-![ ](/docs/assets/spacer64x64.png)
+![ ](/docs/assets/spacer32x32.png)
 
-## 🧪 Running the Biological Simulations _(Demos)_
-
-To witness **aNA** v5.0's neural processing in real-time, you can run the integrated test suites. These simulations demonstrate how sensory data is transformed into emotional importance and cortical action.
-
-### 1. Limbic Resonance Test
-
-This demo simulates how the _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ and _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_ collaborate to filter critical information from routine noise.
-
-```Python
-# From the project root
-python3 tests/test_limbic_system.py
+```python
+# From src/anatomy/thalamus.py
+# Highlighting the proactive "Sensory Gateway" logic
+def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
+    """Creates a thalamus optimized for clarity and sensory focus."""
+    thalamus = Thalamus(position)
+    # Enhance specific nuclei to sharpen digital perception
+    thalamus.nuclei[ThalamicNucleusType.LGN].config.size = 800  # Vision focus
+    thalamus.nuclei[ThalamicNucleusType.MGN].config.size = 600  # Hearing focus
+    return thalamus
 ```
 
-### What to look for in the output:
-
-- **Routine Scenario:** Low arousal levels _(Cortisol/Adrenaline)_ leading to standard memory encoding.
-- **Shock Scenario:** High arousal triggering a _"System Breach"_ alert and prioritized memory storage.
-
-### 2. Cortical Column Cascade _(Coming Soon)_
-
-Validation of the _6-layer_ signal flow ($L4 \rightarrow L2/3 \rightarrow L5$) with real-time precision monitoring.
+###### _aNA sharpens digital perception by prioritizing meaningful signals, ensuring a clear and focused cognitive flow._
 
 ![ ](/docs/assets/spacer16x16.png)
 
