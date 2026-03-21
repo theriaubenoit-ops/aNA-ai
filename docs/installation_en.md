@@ -17,10 +17,10 @@ Instructions française : [installation (fr)](/docs/installation_fr.md)
    - [ ] Install dependencies: `pip install -r requirements.txt`
 
 3. - [x] **Running Scripts _(The "Action" Phase)_** Launch associated _Python scripts_ to validate neural logic:
-     - `python3 src/tests/test_limbic_system.py` (Validation of emotional/memory coordination)
-     - `python3 src/tests/test_hippocampus.py` (Memory indexing validation)
-     - `python3 src/tests/test_pulse.py` (Core pacemaker validation)
-     - `python3 src/main.py` (The orchestrator)
+     - `python3 src/tests/test_limbic_system.py` _(Validation of emotional/memory coordination)_
+     - `python3 src/tests/test_hippocampus.py` _(Memory indexing validation)_
+     - `python3 src/tests/test_pulse.py` _(Core pacemaker validation)_
+     - `python3 src/main.py` _(The orchestrator)_
      - COMING SOON - `python3 src/gui/dashboard.py`
    - [ ] COMING SOON - Running Demonstrations: Launch _Web-based interfaces_ (e.g., "http://localhost:8000/examples/basic-demo.html").
      - Note on local server: To run web demos, use `python3 -m http.server 8000` from the root directory.
