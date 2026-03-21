@@ -20,6 +20,7 @@ Instructions française : [installation (fr)](/docs/installation_fr.md)
      - `python3 src/tests/test_amygdala.py` _(Validation of the amygdala)_
      - `python3 src/tests/test_limbic_system.py` _(Validation of emotional/memory coordination)_
      - `python3 src/tests/test_hippocampus.py` _(Memory indexing validation)_
+     - `python3 src/tests/test_neuron.py` _(Validation of neuron)_
      - `python3 src/tests/test_pulse.py` _(Core pacemaker validation)_
      - `python3 src/tests/test_thalamus.py` _(Validation of the thalamus)_
      - `python3 src/main.py` _(The orchestrator)_
