@@ -219,21 +219,33 @@ class ReticularThalamicNucleus:
 class Thalamus:
     """Enhanced Thalamus with all sensory nuclei and RTN"""
     
-    def __init__(self, position: np.ndarray = np.array([0.0, -20.0, 0.0])):
+    def __init__(self, 
+                 position: np.ndarray = np.array([0.0, -20.0, 0.0]),
+                 frontal=None, 
+                 parietal=None, 
+                 limbic=None):
         self.position = position
+        # Connexions vers l'extérieur
+        self.frontal = frontal
+        self.parietal = parietal
+        self.limbic = limbic
+        
         self.nuclei: Dict[ThalamicNucleusType, ThalamicNucleus] = {}
-        self.rtn = None
-        self.sensory_inputs: Dict[str, float] = {}
-        
-        # Alpha Oscillator properties
-        self.alpha_oscillator_active = False
-        self.alpha_start_time = 0.0
-        self.alpha_frequency = 10.0  # Hz (Alpha rhythm: 8-12 Hz)
-        self.alpha_amplitude = 0.4   # Oscillation amplitude
-        self.alpha_baseline = 0.15   # Biological baseline
-        self.alpha_current_phase = 0.0
-        
+        # ... le reste de votre code inchangé ...
         self._initialize_nuclei()
+
+    def relay(self, data: dict):
+        """Méthode de compatibilité pour le routage vers les lobes"""
+        # 1. Informer le système limbique (si présent)
+        if self.limbic:
+            self.limbic.process_experience(data.get('content', ''), data.get('type', ''))
+            
+        # 2. Routage logique
+        data_type = data.get('type')
+        if data_type == "decision" and self.frontal:
+            self.frontal.receive(data)
+        elif data_type == "sensory" and self.parietal:
+            self.parietal.receive(data)
     
     def _initialize_nuclei(self):
         """Initialize all thalamic nuclei"""
