@@ -44,7 +44,7 @@ We are embarking on the _"next wave"_ of artificial intelligence—an AI that do
 
 To witness **aNA** v5.0's neural processing in real-time, you can run the integrated _[tests(/)](/src/tests/)_ suites. These simulations demonstrate how sensory data is transformed into emotional importance and cortical action.
 
-### 1. Limbic Resonance Test
+### 1. Limbic Resonance _(Test)_
 
 This demo simulates how the _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ and _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_ collaborate to filter critical information from routine noise.
 
@@ -58,9 +58,14 @@ python3 src/tests/test_limbic_system.py
 - **Routine Scenario:** Low arousal levels _(Cortisol/Adrenaline)_ leading to standard memory encoding.
 - **Shock Scenario:** High arousal triggering a _"System Breach"_ alert and prioritized memory storage.
 
-### 2. Cortical Column Cascade _(Coming Soon)_
+### 2. Cortical Column Cascade _(Test)_
 
 Validation of the _6-layer_ signal flow ($L4 \rightarrow L2/3 \rightarrow L5$) with real-time precision monitoring.
+
+```Python
+# From the project root
+python3 src/tests/test_cortical_column.py
+```
 
 ![ ](/docs/assets/spacer64x64.png)
 
