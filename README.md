@@ -86,6 +86,31 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
 
 _Note: These definitions are adapted to the specific metabolic and cognitive constraints of the **aNA** v5.0 architecture._
 
+![ ](/docs/assets/spacer64x64.png)
+
+## 🧪 Running the Biological Simulations _(Demos)_
+
+To witness **aNA** v5.0's neural processing in real-time, you can run the integrated test suites. These simulations demonstrate how sensory data is transformed into emotional importance and cortical action.
+
+### 1. Limbic Resonance Test
+
+This demo simulates how the _[Amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ and _[Hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_ collaborate to filter critical information from routine noise.Bash# From the project root `python3 tests/test_limbic_system.py`
+
+```Python
+# From the project root
+python3 tests/test_limbic_system.py
+```
+
+### What to look for in the output:
+
+    - Routine Scenario: Low arousal levels _(Cortisol/Adrenaline)_ leading to standard memory encoding.
+
+    - Shock Scenario: High arousal triggering a _"System Breach"_ alert and prioritized memory storage.
+
+### 2. Cortical Column Cascade _(Coming Soon)_
+
+Validation of the _6-layer_ signal flow _($L4 \rightarrow L2/3 \rightarrow L5$)_ with real-time precision monitoring.
+
 ![ ](/docs/assets/spacer16x16.png)
 
 ![Downloads](https://img.shields.io/github/downloads/theriaubenoit-ops/aNA-ai/total?style=for-the-badge&color=181c1f)
