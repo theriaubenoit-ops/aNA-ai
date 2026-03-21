@@ -227,7 +227,7 @@ Processing Hierarchy:
 │   │   │   └── neural_transmission.py  # The standardized data structure
 │   │   ├── cortical/
 │   │   │   ├── frontal.py              # NEW: Executive Logic & Command Center
-│   │   │   ├── lobe_base.py            # NEW: Lobe base
+│   │   │   ├── cortical_column.py      # NEW: Cortical Column
 │   │   │   ├── occipital.py            # NEW: Visual Stream Processor
 │   │   │   ├── parietal.py             # NEW: Spatial Mapping & Data Integration
 │   │   │   └── temporal.py             # NEW: Semantic Storage & Pattern Recognition
