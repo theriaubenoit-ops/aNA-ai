@@ -17,9 +17,11 @@ English instructions: [installation (en)](/docs/installation_en.md)
    - [ ] Installation : `pip install -r requirements.txt`
 
 3. - [x] **Exécution des scripts _(Phase « Action »)_** Launch associated _Python scripts_ to validate neural logic:
+     - `python3 src/tests/test_amygdala.py` _(Validation de amygdala)_
      - `python3 src/tests/test_limbic_system.py` _(Validation de la coordination émotionnelle et mnésique)_
      - `python3 src/tests/test_hippocampus.py` _(Validation de l'indexation de la mémoire)_
      - `python3 src/tests/test_pulse.py` _(Validation du stimulateur cardiaque central)_
+     - `python3 src/tests/test_thalamus.py` _(Validation de thalamus)_
      - `python3 src/main.py` _(L'orchestrateur)_
      - PROCHAINEMENT - `python3 src/gui/dashboard.py`
    - [ ] PROCHAINEMENT - Démonstrations : Pour lancer _l'interface web_ (e.g., "http://localhost:8000/examples/basic-demo.html").
