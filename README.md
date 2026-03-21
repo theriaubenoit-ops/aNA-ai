@@ -50,7 +50,7 @@ This demo simulates how the _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ a
 
 ```Python
 # From the project root
-python3 tests/test_limbic_system.py
+python3 src/tests/test_limbic_system.py
 ```
 
 ### What to look for in the output:
