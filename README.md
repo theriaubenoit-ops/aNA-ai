@@ -94,7 +94,7 @@ To witness **aNA** v5.0's neural processing in real-time, you can run the integr
 
 ### 1. Limbic Resonance Test
 
-This demo simulates how the _[Amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ and _[Hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_ collaborate to filter critical information from routine noise.Bash# From the project root `python3 tests/test_limbic_system.py`
+This demo simulates how the _[Amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ and _[Hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_ collaborate to filter critical information from routine noise.
 
 ```Python
 # From the project root
@@ -108,7 +108,7 @@ python3 tests/test_limbic_system.py
 
 ### 2. Cortical Column Cascade _(Coming Soon)_
 
-Validation of the _6-layer_ signal flow _($L4 \rightarrow L2/3 \rightarrow L5$)_ with real-time precision monitoring.
+Validation of the _6-layer_ signal flow _(L4 --> L2/3 --> L5)_ with real-time precision monitoring.
 
 ![ ](/docs/assets/spacer16x16.png)
 
