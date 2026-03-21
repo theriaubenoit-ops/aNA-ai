@@ -245,11 +245,11 @@ Processing Hierarchy:
 │   ├── gui/                            # 📋 To Do:  Web-based interface
 │   │   └── dashboard.py                # 🚧  Work in progress: ...
 │   ├── tests/                          # NEW: Comprehensive test suite
-│   │   ├── test_amygdala.py            # Priority Filter & Interrupt Controller
+│   │   ├── test_amygdala.py            # NEW: Priority Filter & Interrupt Controller
 │   │   ├── test_cerebellum.py          # 🗓️ Coming Soon: Timing Engine & Output Calibration
 │   │   ├── test_hippocampus.py         # NEW: Dynamic Buffer & Indexing System
 │   │   ├── test_limbic_system.py       # NEW: Limbic system
-│   │   ├── test_neuron.py              # 🗓️ Coming Soon: Represents a single neuron
+│   │   ├── test_neuron.py              # NEW: Represents a single neuron
 │   │   ├── test_pulse.py               # NEW: Core Pacemaker (Pulse)
 │   │   └── test_thalamus.py            # NEW: Enhanced Thalamus implementation
 │   └── main.py                         # NEW: The orchestrator
