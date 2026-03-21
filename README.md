@@ -103,9 +103,8 @@ python3 tests/test_limbic_system.py
 
 ### What to look for in the output:
 
-    - Routine Scenario: Low arousal levels _(Cortisol/Adrenaline)_ leading to standard memory encoding.
-
-    - Shock Scenario: High arousal triggering a _"System Breach"_ alert and prioritized memory storage.
+- **Routine Scenario:** Low arousal levels _(Cortisol/Adrenaline)_ leading to standard memory encoding.
+- **Shock Scenario:** High arousal triggering a _"System Breach"_ alert and prioritized memory storage.
 
 ### 2. Cortical Column Cascade _(Coming Soon)_
 
