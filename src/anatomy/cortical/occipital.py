@@ -21,7 +21,7 @@ from enum import Enum
 
 from anatomy.base.neuron import Neuron, NeuronConfig, NeuronPopulation
 from anatomy.base.neural_transmission import NeuralTransmission
-from anatomy.cortical.lobe_base import VisualCorticalLobe
+from anatomy.cortical.cortical_column import CorticalColumns
 from anatomy.subcortical.thalamus import ThalamicNucleusType
 
 
@@ -462,7 +462,7 @@ class OccipitalLobe:
         self.feedback_to_thalamus = 0.0
         
         # Initialize 6-layer cortical architecture
-        self.cortical_layers = VisualCorticalLobe(position)
+        self.cortical_layers = CorticalColumns(position)
         
         self._initialize_areas()
     
