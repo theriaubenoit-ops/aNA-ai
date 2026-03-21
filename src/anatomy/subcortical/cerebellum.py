@@ -15,7 +15,7 @@ from typing import Dict, List, Tuple, Optional
 from dataclasses import dataclass
 from enum import Enum
 
-from .neuron import Neuron, NeuronConfig
+from anatomy.base.neuron import Neuron, NeuronConfig
 
 
 class CerebellarLayer(Enum):
