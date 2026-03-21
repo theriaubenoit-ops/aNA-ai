@@ -123,12 +123,13 @@ class GranuleCellLayer:
 class PurkinjeCellLayer:
     """Purkinje cell layer - main cerebellar output and learning"""
     
-    def __init__(self, position: np.ndarray, size: int = 500):
+    def __init__(self, position: np.ndarray, size: int = 1000):
         self.position = position
         self.size = size
         self.purkinje_cells = []
         self.climbing_fiber_input = 0.0
         self.learning_rate = 0.01
+        self.purkinje_activity = 0.1  # Valeur de base (Baseline)
         
         self._initialize_neurons()
     
@@ -151,10 +152,10 @@ class PurkinjeCellLayer:
             neuron = Neuron(position, config)
             self.purkinje_cells.append(neuron)
     
-    def process_inputs(self, parallel_fiber_input: float, climbing_fiber_input: float,
-                      neuromodulators: Dict[str, float]):
+    def process_inputs(self, parallel_fiber_input: float, climbing_fiber_input: float, neuromodulators: Dict):
         """Process parallel fiber and climbing fiber inputs"""
         self.climbing_fiber_input = climbing_fiber_input
+        self.purkinje_activity = min(1.0, (parallel_fiber_input * 0.01) + (climbing_fiber_input * 0.008))
         
         for neuron in self.purkinje_cells:
             # Parallel fiber input (weak, modulatory)
@@ -402,6 +403,45 @@ class Cerebellum:
                 neuron.reset()
             self.deep_nuclei.nuclear_activity = 0.0
 
+    def compute_correction(self, target_pos: np.ndarray, current_pos: np.ndarray) -> np.ndarray:
+        """
+        Calcule la correction motrice basée sur l'erreur spatiale.
+        Simule l'ajustement du cervelet pour atteindre une cible.
+        """
+        error = target_pos - current_pos
+        # On utilise l'activité actuelle du cervelet pour pondérer la correction
+        inhibition = self.get_inhibitory_output() / 100.0
+        
+        # Plus l'inhibition est forte, plus la correction est stable (moins de saccades)
+        correction_factor = 0.5 * (1.0 - inhibition * 0.2)
+        return error * correction_factor
+
+    def process_feedback(self, error_signal: float):
+        """
+        Traite le signal d'erreur via les fibres grimpantes.
+        Une erreur forte augmente l'activité des cellules de Purkinje.
+        """
+        # On simule l'entrée des fibres grimpantes (climbing fibers)
+        # qui est le signal d'erreur par excellence du cervelet
+        neuromodulators = {} # On peut passer des neuromodulateurs si besoin
+        
+        # Le signal d'erreur impacte directement la couche de Purkinje
+        self.purkinje_layer.process_inputs(
+            parallel_fiber_input=10.0, # Activité de base
+            climbing_fiber_input=error_signal * 100.0, # L'erreur est ici
+            neuromodulators=neuromodulators
+        )
+    
+    def get_inhibitory_output(self) -> float:
+        """
+        Récupère la sortie inhibitrice globale de la couche de Purkinje.
+        Cette valeur module l'amplitude de la correction motrice.
+        """
+        if self.purkinje_layer:
+            # On simule l'intégration des décharges des cellules de Purkinje
+            # Plus l'activité de la couche est haute, plus l'inhibition est forte.
+            return self.purkinje_layer.purkinje_activity * 100.0
+        return 0.1
 
 # Convenience functions for specialized cerebella
 def create_motor_cerebellum(position: np.ndarray = None) -> Cerebellum:
