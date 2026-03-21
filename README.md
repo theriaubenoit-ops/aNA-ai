@@ -72,7 +72,7 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
 
 - **Lobe, [Temporal(.py)](/src/anatomy/cortical/temporal.py) _(Semantic Storage & Pattern Recognition)_:** The hub for processing auditory signals and high-level linguistic or object recognition. In the digital model, it serves as the semantic engine that links sensory inputs to long-term _"concepts"_ stored in the memory hierarchy.
 
-- **Neocortex _(The "Thinking" Shell)_:** The structural integration of the _4 Lobes_ and _6 Cortical Layers_. While the _Neocortex_ handles complex reasoning and prediction, the _[Cerebellum(.py)](/src/anatomy/subcortical/cerebellum.py) (in **aNA**)_ fine-tunes _motor outputs_ and timing, ensuring the system’s actions are fluid and mathematically synchronized.
+- **Neocortex _(The "Thinking" Shell)_:** The structural integration of the _4 Lobes_ and _6 Cortical Layers_. While the _Neocortex_ handles complex reasoning and prediction, the _[cerebellum(.py)](/src/anatomy/subcortical/cerebellum.py) (in **aNA**)_ fine-tunes _motor outputs_ and timing, ensuring the system’s actions are fluid and mathematically synchronized.
 
 - **[Hippocampus(.py)](/src/anatomy/limbic/hippocampus.py) _(Dynamic Buffer & Indexing System)_:** Functions as a high-speed memory buffer for short-term data. It manages the temporary storage of information and coordinates its eventual _"migration" (consolidation)_ into _long-term cortical databases_, preventing immediate system saturation.
 
