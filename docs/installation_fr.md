@@ -20,6 +20,7 @@ English instructions: [installation (en)](/docs/installation_en.md)
      - `python3 src/tests/test_amygdala.py` _(Validation de amygdala)_
      - `python3 src/tests/test_limbic_system.py` _(Validation de la coordination émotionnelle et mnésique)_
      - `python3 src/tests/test_hippocampus.py` _(Validation de l'indexation de la mémoire)_
+     - `python3 src/tests/test_neuron.py` _(Validation de neurone)_
      - `python3 src/tests/test_pulse.py` _(Validation du stimulateur cardiaque central)_
      - `python3 src/tests/test_thalamus.py` _(Validation de thalamus)_
      - `python3 src/main.py` _(L'orchestrateur)_
