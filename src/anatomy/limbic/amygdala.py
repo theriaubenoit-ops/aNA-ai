@@ -15,7 +15,7 @@ from typing import Dict, List, Tuple, Optional
 from dataclasses import dataclass
 from enum import Enum
 
-from anatomy.neuron import Neuron, NeuronConfig
+from anatomy.base.neuron import Neuron, NeuronConfig
 
 class AmygdalaNucleus(Enum):
     """Amygdala nuclei"""
@@ -356,48 +356,35 @@ class Amygdala:
         # Return the internal activity that was updated by update_activity()
         return self._internal_activity
     
-    def update_activity(self, stress_level: float):
+    def update_activity(self, stimulus_intensity: float = 0.0):
         """
-        Update amygdala activity based on stress level.
-        
-        BIOLOGICAL PRINCIPLE: The amygdala's activity is directly modulated by
-        stress levels. Higher stress leads to increased amygdala activation,
-        which in turn enhances fear responses and autonomic activation.
-        
-        PERSONALITY PARAMETER: This allows tuning the amygdala's reactivity
-        to stress, creating different personality profiles.
+        Met à jour l'activité de l'amygdale avec gestion de l'homéostasie.
         """
-        # Update internal activity based on stress level
-        if stress_level > 0.1:
-            # High stress increases amygdala activity
-            self._internal_activity = min(1.0, self._internal_activity + stress_level * 0.5)
+        # 1. Gestion du "Cortisol" (Activité interne)
+        if stimulus_intensity > 0.1:
+            self._internal_activity = min(1.0, self._internal_activity + stimulus_intensity * 0.5)
         else:
-            # Natural decay when stress is low
-            self._internal_activity = max(0.0, self._internal_activity - 0.01)
+            # Décroissance naturelle vers 0.1
+            self._internal_activity = max(0.1, self._internal_activity - 0.05)
         
-        # Directly update the internal activity state
-        # This simulates the biological reality where stress hormones
-        # directly modulate amygdala neuron excitability
-        
-        if self.bla:
-            # Modulate BLA activity based on stress
-            # Higher stress = more pyramidal neuron activation
-            for neuron in self.bla.pyramidal_neurons:
-                # Simulate stress-induced depolarization
-                if stress_level > 0.1:  # Only if there's actual stress
-                    # Add stress-induced input to make neurons more likely to fire
-                    stress_input = stress_level * 20.0  # Scale stress to neural input
-                    neuron.receive_input(stress_input, {})
-        
+        # 2. Modulation du CEA - ADRENALINE & HOMÉOSTASIE
         if self.c_e_a:
-            # Modulate central amygdala fear threshold based on stress
-            # Higher stress = lower threshold = easier to trigger fear response
-            base_threshold = 0.6
-            stress_modulation = stress_level * 0.3  # Stress lowers threshold
-            self.c_e_a.fear_threshold = max(0.1, base_threshold - stress_modulation)
+            if stimulus_intensity > 0.1:
+                # Montée rapide pour la réaction d'alerte
+                self.c_e_a.autonomic_activation = min(1.0, self.c_e_a.autonomic_activation + stimulus_intensity * 0.8)
+            else:
+                # CRUCIAL : Décroissance rapide pour le retour au calme
+                # On simule la recapture des neurotransmetteurs
+                self.c_e_a.autonomic_activation = max(0.1, self.c_e_a.autonomic_activation - 0.4)
             
-            # Enhance autonomic activation with stress
-            self.c_e_a.autonomic_activation = min(1.0, self.c_e_a.autonomic_activation + stress_level * 0.2)
+            # Ajustement du seuil de peur
+            base_threshold = 0.6
+            self.c_e_a.fear_threshold = max(0.1, base_threshold - (stimulus_intensity * 0.4))
+
+        return {
+            "cortisol": self._internal_activity,
+            "adrenaline": self.c_e_a.autonomic_activation if self.c_e_a else 0.1
+        }
     
     def get_adrenaline_level(self):
         """Get current adrenaline level"""
