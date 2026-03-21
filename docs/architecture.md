@@ -12,7 +12,7 @@ aNA v5.0 Autonomous Neural Architecture
 │   ├── Rhythm Orchestration: Synchronizes the processing cycle (Input -> Prediction -> Output)
 │   └── Neural State Management: Ensures overall stability and module integration
 ├── Configuration (Preference)
-└── NEW - Dashboard (Metabolic & Cognitive):
+└── NEW: Dashboard (Metabolic & Cognitive):
     ├── Real-time Neural Stats: Monitors neurotransmitter levels
     ├── Predictive Accuracy (Free Energy): Real-time visualization of prediction error
     └── Memory Status: Fill and consolidation state (L1/L2/L3)
@@ -42,15 +42,15 @@ aNA v5.0 Autonomous Neural Architecture
 │   └── Long-range Wiring (The "Bridges"):
 │       ├── Arcuate Fasciculus (Temporal <-> Frontal)
 │       ├── Superior Longitudinal Fasciculus (Parietal <-> Frontal)
-│       └── NEW - Corpus Callosum (Future: Left <-> Right Hemisphere)
+│       └── NEW: Corpus Callosum (Future: Left <-> Right Hemisphere)
 ├── Thalamus (The "Router", Sensory Gateway)
 │   ├── Sensory Filtering, Relay Nuclei:
 │   │   ├── LGN (Visual → Occipital)
 │   │   ├── MGN (Auditory → Temporal)
 │   │   └── VPL/VPM (Somatosensory → Parietal)
-│   ├── NEW - RTN (Firewall): Gain control and global inhibition
+│   ├── NEW: RTN (Firewall): Gain control and global inhibition
 │   └── Thalamocortical Loops: Maintains the "Awake" state frequency
-├── NEW - Limbic System (The "Heart", Emotional & Memory Hub)
+├── NEW: Limbic System (The "Heart", Emotional & Memory Hub)
 │   ├── Amygdala (The "Priority Filter"):
 │   │   └── Role: Labels incoming charges as "Important" or "Neutral"
 │   ├── Hippocampus (The "Temporal Indexer"):
@@ -62,7 +62,7 @@ aNA v5.0 Autonomous Neural Architecture
 │   └── Coordination Logic (limbic_system.py):
 │       └── Mechanism: Links emotional arousal (Cortisol/Adrenaline) to
 │           memory encoding weight (L1 Buffer -> L2/L3 Store)
-└── NEW - Cerebellum (The "Clock", Timing & Error Correction)
+└── NEW: Cerebellum (The "Clock", Timing & Error Correction)
     └── Coordination between Motor Cortex and Sensory Feedback
 
 Computational Engine: Free Energy Principle (FEP)
@@ -181,16 +181,16 @@ Processing Hierarchy:
 │   └── Role: "Zone Strengthening". Diffuses from active neurons to nearby
 │       synapses to signal "We just fired together, strengthen everything here."
 │       (Crucial for local clusters and blood flow simulation).
-├── NEW - Acetylcholine -> Sensory Sensitivity (Layer IV)
+├── NEW: Acetylcholine -> Sensory Sensitivity (Layer IV)
 │   └── Role: "Focus & Alertness". Lowers the firing threshold of Layer IV
 │       to make external inputs (Thalamus) more prominent.
 ├── Dopamine -> Reward & Plasticity (Layers II/III)
 │   └── Role: "Learning Signal". Acts as a multiplier for LTP (Long-Term
 │       Potentiation) in the association layers. No Dopamine = No Memory growth.
-├── NEW - Serotonin -> Homeostatic Balance (Global)
+├── NEW: Serotonin -> Homeostatic Balance (Global)
 │   └── Role: "The Governor". Prevents runaway excitation (Epilepsy simulation)
 │       by stabilizing the global neural threshold.
-└── NEW - Adrenaline -> Hyper-Alertness & Flashbulb Memory
+└── NEW: Adrenaline -> Hyper-Alertness & Flashbulb Memory
     ├── Sensitivity: Acts as an overall win multiplier.
     │   All layers (I to VI) become extremely responsive.
     ├── Concentration: Reduces background “noise” by increasing the
@@ -223,36 +223,36 @@ Processing Hierarchy:
 │   ├── anatomy/                        # Brain region implementations
 │   │   ├── base/
 │   │   │   ├── neuron.py               # Represents a single neuron
-│   │   │   ├── neuromodulator.py       # NEW - Chemical "gain controls"
+│   │   │   ├── neuromodulator.py       # NEW: Chemical "gain controls"
 │   │   │   └── neural_transmission.py  # The standardized data structure
-│   │   ├── cortex/
-│   │   │   ├── frontal.py              # 🗓️ Coming Soon: Executive Logic & Command Center
-│   │   │   ├── lobe_base.py            # 🗓️ Coming Soon: ...
-│   │   │   ├── occipital.py            # 🗓️ Coming Soon: Visual Stream Processor
-│   │   │   ├── parietal.py             # 🗓️ Coming Soon: Spatial Mapping & Data Integration
-│   │   │   └── temporal.py             # 🗓️ Coming Soon: Semantic Storage & Pattern Recognition
-│   │   ├── limbic/                     # NEW - Limbic System
-│   │   │   ├── amygdala.py             # NEW - Priority Filter & Interrupt Controller
-│   │   │   ├── hippocampus.py          # NEW - Dynamic Buffer & Indexing System
-│   │   │   └── limbic_system.py        # NEW - Limbic system
+│   │   ├── cortical/
+│   │   │   ├── frontal.py              # NEW: Executive Logic & Command Center
+│   │   │   ├── lobe_base.py            # NEW: Lobe base
+│   │   │   ├── occipital.py            # NEW: Visual Stream Processor
+│   │   │   ├── parietal.py             # NEW: Spatial Mapping & Data Integration
+│   │   │   └── temporal.py             # NEW: Semantic Storage & Pattern Recognition
+│   │   ├── limbic/                     # NEW: Limbic System
+│   │   │   ├── amygdala.py             # NEW: Priority Filter & Interrupt Controller
+│   │   │   ├── hippocampus.py          # NEW: Dynamic Buffer & Indexing System
+│   │   │   └── limbic_system.py        # NEW: Limbic system
 │   │   └── subcortical                 # Subcortical
 │   │       ├── cerebellum.py           # Timing Engine & Output Calibration
 │   │       └── thalamus.py             # Enhanced Thalamus implementation
 │   ├── core/                           # Core neural components
-│   │   ├── input_gateway.py            # 🗓️ Coming Soon: ...
-│   │   ├── output_gateway.py           # 🗓️ Coming Soon: ...
+│   │   ├── input_gateway.py            # NEW: Input gateway
+│   │   ├── output_gateway.py           # NEW: Output gateway
 │   │   └── pulse.py                    # Core Pacemaker (Pulse)
 │   ├── gui/                            # 📋 To Do:  Web-based interface
 │   │   └── dashboard.py                # 🚧  Work in progress: ...
-│   ├── tests/                          # NEW - Comprehensive test suite
+│   ├── tests/                          # NEW: Comprehensive test suite
 │   │   ├── test_amygdala.py            # 🗓️ Coming Soon: Priority Filter & Interrupt Controller
 │   │   ├── test_cerebellum.py          # 🗓️ Coming Soon: Timing Engine & Output Calibration
-│   │   ├── test_hippocampus.py         # NEW - Dynamic Buffer & Indexing System
-│   │   ├── test_limbic_system.py       # NEW - Limbic system
+│   │   ├── test_hippocampus.py         # NEW: Dynamic Buffer & Indexing System
+│   │   ├── test_limbic_system.py       # NEW: Limbic system
 │   │   ├── test_neuron.py              # 🗓️ Coming Soon: Represents a single neuron
-│   │   ├── test_pulse.py               # NEW - Core Pacemaker (Pulse)
+│   │   ├── test_pulse.py               # NEW: Core Pacemaker (Pulse)
 │   │   └── test_thalamus.py            # 🗓️ Coming Soon: Enhanced Thalamus implementation
-│   └── main.py                         # NEW - The orchestrator
+│   └── main.py                         # NEW: The orchestrator
 ├── CONTRIBUTING.md                     # The rules of collaboration
 ├── LICENSE                             # The protection license
 └── README.md                           # The Manifesto
@@ -260,4 +260,4 @@ Processing Hierarchy:
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-20_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-21_
