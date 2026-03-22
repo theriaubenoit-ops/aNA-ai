@@ -64,4 +64,6 @@ Between behavioral _psychology_, _ethics_, and _neuroinformatics_, his work offe
 
 ![ ](/docs/assets/spacer16x16.png)
 
+###### \* "The Creation" —Michelangelo
+
 _░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-16_
