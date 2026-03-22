@@ -215,7 +215,7 @@ Processing Hierarchy:
 │   ├── installation_fr.md              # Installation (FR)
 │   ├── legend.md                       # 📋 To Do: ...
 │   └── philosophy.md                   # The ethical vision
-├── examples/                           # 📋 To Do: Comprehensive example suite
+├── examples/                           # Comprehensive example suite
 │   ├── basic-demo.html                 # 📋 To Do: ...
 │   ├── learning-demo.html              # 📋 To Do: ...
 │   └── memory-demo.html                # 📋 To Do: ...
@@ -223,7 +223,7 @@ Processing Hierarchy:
 │   ├── anatomy/                        # Brain region implementations
 │   │   ├── base/
 │   │   │   ├── neuron.py               # Represents a single neuron
-│   │   │   ├── neuromodulator.py       # NEW: Chemical "gain controls"
+│   │   │   ├── neuromodulator.py       # Chemical "gain controls"
 │   │   │   └── neural_transmission.py  # The standardized data structure
 │   │   ├── cortical/
 │   │   │   ├── frontal.py              # NEW: Executive Logic & Command Center
@@ -232,8 +232,8 @@ Processing Hierarchy:
 │   │   │   ├── parietal.py             # NEW: Spatial Mapping & Data Integration
 │   │   │   └── temporal.py             # NEW: Semantic Storage & Pattern Recognition
 │   │   ├── limbic/
-│   │   │   ├── amygdala.py             # NEW: Priority Filter & Interrupt Controller
-│   │   │   ├── hippocampus.py          # NEW: Dynamic Buffer & Indexing System
+│   │   │   ├── amygdala.py             # Priority Filter & Interrupt Controller
+│   │   │   ├── hippocampus.py          # Dynamic Buffer & Indexing System
 │   │   │   └── limbic_system.py        # NEW: Limbic system
 │   │   └── subcortical
 │   │       ├── cerebellum.py           # Timing Engine & Output Calibration
@@ -242,9 +242,9 @@ Processing Hierarchy:
 │   │   ├── input_gateway.py            # NEW: Input gateway
 │   │   ├── output_gateway.py           # NEW: Output gateway
 │   │   └── pulse.py                    # Core Pacemaker (Pulse)
-│   ├── gui/                            # 📋 To Do:  Web-based interface
+│   ├── gui/                            # Web-based interface
 │   │   └── dashboard.py                # 🚧  Work in progress: ...
-│   ├── tests/                          # NEW: Comprehensive test suite
+│   ├── tests/                          # Comprehensive test suite
 │   │   ├── test_amygdala.py            # NEW: Priority Filter & Interrupt Controller
 │   │   ├── test_cerebellum.py          # NEW: Timing Engine & Output Calibration
 │   │   ├── test_cortical_column.py     # NEW: Six-layer cortical signal flow
@@ -255,10 +255,10 @@ Processing Hierarchy:
 │   │   └── test_thalamus.py            # NEW: Enhanced Thalamus implementation
 │   └── main.py                         # NEW: The orchestrator
 ├── CONTRIBUTING.md                     # The rules of collaboration
-├── LICENSE                             # The protection license
-└── README.md                           # The Manifesto
+├── LICENSE                             # Protection license
+└── README.md                           # Manifesto
 ```
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-21_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-22_
