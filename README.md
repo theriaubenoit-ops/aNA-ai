@@ -28,7 +28,7 @@ Current artificial intelligence, while powerful, relies on massive, rigid archit
 
 - **Asynchronous Orchestration:** The _Tempo module_ acts as the system's pacemaker, ensuring efficient, non-blocking cycles.
 - **Thalamic Filtering:** _Sensory inputs_ are gated and processed through specific _nuclei_ to isolate relevant signals from stochastic background _"noise"_.
-- **Adaptive Fidelity:** _LAST UPDATE_ **aNA** dynamically simulates information fidelity based on _dopamine levels_, modulating the quality of internal representations in real-time.
+- **Adaptive Fidelity:** **aNA** dynamically simulates information fidelity based on _dopamine levels_, modulating the quality of internal representations in real-time.
 
 ### The imperative of energy sobriety
 
