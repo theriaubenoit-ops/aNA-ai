@@ -6,6 +6,7 @@ Tests the synchronization between Pulse, Thalamus, and Neural Transmission.
 """
 
 import asyncio
+import numpy as np
 import sys
 import os
 
