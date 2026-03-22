@@ -258,9 +258,9 @@ Processing Hierarchy:
 ├── LICENSE                             # Protection license
 └── README.md                           # Manifesto
 
-✅ Newly added
 📋 To Do
-🚧 Work in progress
+🚧 In progress
+✅ Newly added
 
 ```
 
