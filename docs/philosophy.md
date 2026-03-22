@@ -81,7 +81,7 @@ His _"Neuron Doctrine"_ is the _DNA_ of our modular approach. We treat each proc
 Her discovery of _Nerve Growth Factor_ inspires our _"garbage collection"_ logic, where inefficient or unused _synaptic links_ are pruned to keep the system lean.
 
 **Hierarchical Stratums** _—[Jeff Hawkins](https://en.wikipedia.org/wiki/Jeff_Hawkins)_:
-Our _6 Cortical Layers_ structure is an implementation of his _Thousand Brains Theory_, allowing for complex pattern recognition through hierarchy.
+Our _6 Cortical Layers ([cortical_column(.py)](/src/anatomy/cortical/cortical_column.py))_ structure is an implementation of his \_Thousand Brains Theory\_, allowing for complex pattern recognition through hierarchy.
 
 **Neuromorphic Efficiency** _—[Carver Mead](https://en.wikipedia.org/wiki/Carver_Mead)_:
 His focus on low-power hardware-software synergy drives our _Targeted Plasticity_. We aim for intelligence that operates within biological energy constraints.
@@ -103,4 +103,4 @@ The engine of our learning network. _"Neurons that fire together, wire together"
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-18_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-22_
