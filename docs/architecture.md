@@ -228,6 +228,7 @@ Processing Hierarchy:
 │   │   ├── cortical/
 │   │   │   ├── frontal.py              # ✅ Executive Logic & Command Center
 │   │   │   ├── cortical_column.py      # ✅ Cortical Column
+│   │   │   ├── neocortex.py            # 🚧 ...
 │   │   │   ├── occipital.py            # ✅ Visual Stream Processor
 │   │   │   ├── parietal.py             # ✅ Spatial Mapping & Data Integration
 │   │   │   └── temporal.py             # ✅ Semantic Storage & Pattern Recognition
@@ -246,6 +247,7 @@ Processing Hierarchy:
 │   │   └── dashboard.py                # 🚧 ...
 │   ├── tests/                          # Comprehensive test suite
 │   │   ├── test_amygdala.py            # ✅ Priority Filter & Interrupt Controller
+│   │   ├── test_autonomy.py            # 🚧 ...
 │   │   ├── test_cerebellum.py          # ✅ Timing Engine & Output Calibration
 │   │   ├── test_cortical_column.py     # ✅ Six-layer cortical signal flow
 │   │   ├── test_hippocampus.py         # ✅ Dynamic Buffer & Indexing System
@@ -253,7 +255,9 @@ Processing Hierarchy:
 │   │   ├── test_neuron.py              # ✅ Represents a single neuron
 │   │   ├── test_pulse.py               # ✅ Core Pacemaker (Pulse)
 │   │   └── test_thalamus.py            # ✅ Enhanced Thalamus implementation
-│   └── main.py                         # ✅ The orchestrator
+│   ├── config.py                       # 🚧 ...
+│   ├── main.py                         # ✅ The orchestrator
+│   └── registry.py                     # 🚧 ...
 ├── CONTRIBUTING.md                     # The rules of collaboration
 ├── LICENSE                             # Protection license
 └── README.md                           # Manifesto
@@ -266,4 +270,4 @@ Processing Hierarchy:
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-22_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-28_
