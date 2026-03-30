@@ -254,6 +254,7 @@ Processing Hierarchy:
 │   │   ├── test_limbic_system.py       # ✅ Limbic system
 │   │   ├── test_neuron.py              # ✅ Represents a single neuron
 │   │   ├── test_pulse.py               # ✅ Core Pacemaker (Pulse)
+│   │   ├── test_trauma_logic.py        # 🚧 ...
 │   │   └── test_thalamus.py            # ✅ Enhanced Thalamus implementation
 │   ├── config.py                       # 🚧 ...
 │   ├── main.py                         # ✅ The orchestrator
@@ -270,4 +271,4 @@ Processing Hierarchy:
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-28_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-30_
