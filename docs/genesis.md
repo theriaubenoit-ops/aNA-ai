@@ -12,7 +12,7 @@
 ▒░░░░░▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▒░         ░░▒▒▒░▒▒▒▒▓▓▓▓▓▓▓▒▒░░  ░▒▒▒▒▒▒▒▓▒▒░▒▓▒░░░░░░▒▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░░░░░░░▒▒
 ░▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓░                   ░░ ▒▒▓▒░▒▓▓▓░▒▒░░          ░▒▒░░▒▒▓▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▓▓
 ▒▒▓▓▓▓▓▓▒▒▒░░                           ░▓▓▒░░▒▓▓░_    _    _ ░░░▒▒▓▓▒▒▓▓▓▓▓▓▓▓▓▒░      ░▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-▓▓▓▒░  AI inspired by natural plasticity ░░   ░░░ a    N    A  ░▒▓▒▓▒▒▒▓ Autonomous Neural Architecture v5.0 ░░▒▒▒
+▓▓▓▒░  AI inspired by natural plasticity ░░   ░░░ a    N    A  ░▒▓▒▓▒▒▒▓ Autonomous Neural Architecture v5.1 ░░▒▒▒
 ░                                                 ‾    ‾    ‾  ░▓▒▓░░▒▓░
 ```
 
@@ -66,4 +66,4 @@ Between behavioral _psychology_, _ethics_, and _neuroinformatics_, his work offe
 
 ###### \* "The Creation" —Michelangelo
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-16_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-31_
