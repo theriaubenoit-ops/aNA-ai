@@ -12,11 +12,11 @@
 ▒░░░░░▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▒░         ░░▒▒▒░▒▒▒▒▓▓▓▓▓▓▓▒▒░░  ░▒▒▒▒▒▒▒▓▒▒░▒▓▒░░░░░░▒▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░░░░░░░▒▒
 ░▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓░                   ░░ ▒▒▓▒░▒▓▓▓░▒▒░░          ░▒▒░░▒▒▓▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▓▓
 ▒▒▓▓▓▓▓▓▒▒▒░░                           ░▓▓▒░░▒▓▓░_    _    _ ░░░▒▒▓▓▒▒▓▓▓▓▓▓▓▓▓▒░      ░▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-▓▓▓▒░  AI inspired by natural plasticity ░░   ░░░ a    N    A  ░▒▓▒▓▒▒▒▓ Autonomous Neural Architecture v5.0 ░░▒▒▒
+▓▓▓▒░  AI inspired by natural plasticity ░░   ░░░ a    N    A  ░▒▓▒▓▒▒▒▓ Autonomous Neural Architecture v5.1 ░░▒▒▒
 ░                                                 ‾    ‾    ‾  ░▓▒▓░░▒▓░
 ```
 
-`Project status` [Beta] → Alpha → ReleaseCandidate → Stable | `Language` Python 3.x | `License` MIT
+`Project status` Beta → [Alpha] → ReleaseCandidate → Stable | `Language` Python 3.x | `License` MIT
 
 ![ ](/docs/assets/spacer16x16.png)
 
@@ -119,4 +119,4 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
 
 ![Downloads](https://img.shields.io/github/downloads/theriaubenoit-ops/aNA-ai/total?style=for-the-badge&color=181c1f)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-21_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-31_
