@@ -1,302 +1,135 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Hippocampus v5.0 - Integrable Version
 
-This module implements a simplified hippocampus for aNA v5.0 with:
-- Pattern learning and memory consolidation
-- Transition-based prediction (A -> B)
-- Simple dictionary-based memory storage (L1/L2/L3)
-- Integration-ready design for Thalamus connection
+# src/anatomy/limbic/hippocampus.py
+from typing import Dict
+import sys
+import os
 
-Architecture, concept and supervision: Benoit Theriault
-Collaboration, research and code: Gemini, Cline 
-"""
-
-import numpy as np
-from typing import Dict, List, Tuple, Optional, Any
-from enum import Enum
-
-
-class HippocampalRegion(Enum):
-    """Hippocampal subregions"""
-    DENTATE_GYRUS = "DG"      # Pattern separation
-    CA4 = "CA4"               # Hilus, mossy cells
-    CA3 = "CA3"               # Autoassociative memory
-    CA2 = "CA2"               # Social memory
-    CA1 = "CA1"               # Output to cortex
-    SUBICULUM = "SUB"         # Final output stage
-
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../..')))
+from src.registry import ORGANS
 
 class Hippocampus:
-    """
-    Simplified Hippocampus for aNA v5.0 integration.
-    
-    This version uses a simple dictionary-based structure for memory storage
-    and focuses on pattern learning and transition-based prediction.
-    """
-    
-    # Memory thresholds for consolidation
-    L1_TO_L2_THRESHOLD = 1    # Number of appearances to move to L2
-    L2_TO_L3_THRESHOLD = 3    # Number of appearances to move to L3
-    L3_REINFORCEMENT_THRESHOLD = 5  # Number of appearances for L3 reinforcement
-    
-    def __init__(self, position: np.ndarray = np.array([10.0, -30.0, 0.0])):
-        self.position = position
+    def __init__(self, config=None, neuromodulator_core=None):
+        # On s'assure d'avoir la config du registre si config est None
+        #from src.registry import ORGANS
+        self.config = config if config and "SUBFIELDS" in config else ORGANS["HIPPOCAMPUS"]
+        self.neuromod_core = neuromodulator_core
         
-        # Simple data structure for memory storage
-        self.memory_store = {
-            'L1': {},  # Short-term (volatile)
-            'L2': {},  # Short-term (reinforced)
-            'L3': {}   # Long-term (consolidated)
+        # Initialisation explicite de TOUS les sous-champs v5.1
+        # Cela garantit que CA4 existe même si la config est partielle
+        self.subfields = {
+            "DG": {}, 
+            "CA1": {}, 
+            "CA2": {}, 
+            "CA3": {}, 
+            "CA4": {}
         }
         
-        # Counters for reinforcement
-        self.pattern_counts = {}
-        
-        # Structure for transitions (A -> B)
-        self.transitions = {}
-        self.last_item = None
-        
-        print("🧠 Hippocampus v5.0 initialized")
-        print(f"📍 Position: {position}")
-        print(f"📊 Memory thresholds: L1→L2 after {self.L1_TO_L2_THRESHOLD} reps, L2→L3 after {self.L2_TO_L3_THRESHOLD} reps")
-    
-    def encode(self, signal: str, importance: float = 1.0) -> None:
-        """
-        Encode a signal into memory.
-        
-        Args:
-            signal: The signal to encode (ex: "A", "B", "HELLO")
-            importance: Importance factor (0.0 to 1.0)
-        """
-        # Immediate storage in L1
-        if signal not in self.memory_store['L1']:
-            self.memory_store['L1'][signal] = 0
-        
-        self.memory_store['L1'][signal] += importance
-        
-        # Count appearances for reinforcement
-        if signal not in self.pattern_counts:
-            self.pattern_counts[signal] = 0
-        self.pattern_counts[signal] += 1
-        
-        # Record transition if we have a previous item
-        if self.last_item is not None:
-            if self.last_item not in self.transitions:
-                self.transitions[self.last_item] = {}
-            
-            if signal not in self.transitions[self.last_item]:
-                self.transitions[self.last_item][signal] = 0
-            
-            self.transitions[self.last_item][signal] += 1
-        
-        # Update last item
-        self.last_item = signal
-    
-    def consolidate(self) -> None:
-        """
-        Consolidation routine - moves patterns from L1 to L2/L3.
-        
-        This method is called periodically to simulate reinforcement.
-        """
-        signals_to_move = []
-        
-        # Check L1 signals for transition to L2
-        for signal, count in self.pattern_counts.items():
-            if signal in self.memory_store['L1']:
-                if count >= self.L1_TO_L2_THRESHOLD and count < self.L2_TO_L3_THRESHOLD:
-                    # Move to L2
-                    signals_to_move.append((signal, 'L2'))
-        
-        # Check L2 signals for transition to L3
-        for signal, count in self.pattern_counts.items():
-            if signal in self.memory_store['L2']:
-                if count >= self.L2_TO_L3_THRESHOLD and count < self.L3_REINFORCEMENT_THRESHOLD:
-                    # Move to L3
-                    signals_to_move.append((signal, 'L3'))
-                elif count >= self.L3_REINFORCEMENT_THRESHOLD:
-                    # Reinforce in L3
-                    pass  # Already in L3, just reinforce
-        
-        # Perform moves
-        for signal, target_level in signals_to_move:
-            if signal in self.memory_store['L1']:
-                # Move from L1 to L2
-                value = self.memory_store['L1'].pop(signal)
-                self.memory_store['L2'][signal] = value
-            elif signal in self.memory_store['L2']:
-                # Move from L2 to L3
-                value = self.memory_store['L2'].pop(signal)
-                self.memory_store['L3'][signal] = value
-    
-    def retrieve(self, context: str) -> str:
-        """
-        Retrieve a prediction based on context.
-        
-        Args:
-            context: The context query (ex: "A" to predict what follows)
-            
-        Returns:
-            The most probable prediction, or "?" if nothing found
-        """
-        # First check in transitions
-        if context in self.transitions:
-            # Find the most frequent transition
-            best_next = "?"
-            best_count = 0
-            
-            for next_signal, count in self.transitions[context].items():
-                if count > best_count:
-                    best_count = count
-                    best_next = next_signal
-            
-            if best_next != "?":
-                return best_next
-        
-        # If no transition found, search in traditional memory
-        best_prediction = "?"
-        best_score = 0
-        
-        # Search in L3 (Long-term memory)
-        for signal in self.memory_store['L3']:
-            if signal.startswith(context):
-                score = self.memory_store['L3'][signal]
-                if score > best_score:
-                    best_score = score
-                    best_prediction = signal
-        
-        # If nothing in L3, search in L2
-        if best_prediction == "?":
-            for signal in self.memory_store['L2']:
-                if signal.startswith(context):
-                    score = self.memory_store['L2'][signal]
-                    if score > best_score:
-                        best_score = score
-                        best_prediction = signal
-        
-        # If nothing in L2/L3, search in L1
-        if best_prediction == "?":
-            for signal in self.memory_store['L1']:
-                if signal.startswith(context):
-                    score = self.memory_store['L1'][signal]
-                    if score > best_score:
-                        best_score = score
-                        best_prediction = signal
-        
-        return best_prediction
-    
-    def get_outputs(self) -> Dict[str, Any]:
-        """Get outputs from all regions"""
-        return {
-            'memory_status': {
-                'L1_count': len(self.memory_store['L1']),
-                'L2_count': len(self.memory_store['L2']),
-                'L3_count': len(self.memory_store['L3']),
-                'total_patterns': len(self.pattern_counts),
-                'transitions_count': len(self.transitions)
-            },
-            'current_prediction': self.last_item,
-            'transitions': self.transitions.copy(),
-            'pattern_counts': self.pattern_counts.copy()
-        }
-    
-    def reset(self):
-        """Reset the hippocampus"""
-        self.memory_store = {'L1': {}, 'L2': {}, 'L3': {}}
-        self.pattern_counts = {}
-        self.transitions = {}
-        self.last_item = None
-        print("🔄 Hippocampus reset")
+        # On peut ensuite fusionner avec la config si nécessaire
+        if "SUBFIELDS" in self.config:
+            for sf in self.config["SUBFIELDS"]:
+                if sf not in self.subfields:
+                    self.subfields[sf] = {}
 
+        self.short_term_memory = {}
+        print("  [Hippocampus] v5.1 : Zones DG, CA1-CA4 initialisées.")
 
-def test_integration():
-    """
-    Test function to verify integration with Thalamus.
+    async def evaluate_prediction(self, signal_label: str) -> float:
+        """
+        Simule la boucle trisynaptique avec dynamique AMPA/NMDA.
+        """
+        # 1. DG : Séparation de motifs
+        is_known_dg = signal_label in self.subfields["DG"]
+
+        # 2. CA3 : Accès à la trace (Potentiel Synaptique)
+        # On récupère la valeur actuelle ou le "bruit" résiduel (Seuil NMDA)
+        trace_ca3 = self.subfields["CA3"].get(signal_label, self.config.get("MIN_LATENT_THRESHOLD", 0.001))
+
+        # 3. CA1 : Comparateur et Modulation de la Plasticité
+        if is_known_dg and trace_ca3 > self.config.get("MIN_LATENT_THRESHOLD", 0.001):
+            # Mécanisme AMPA : Renforcement d'un chemin déjà "ouvert"
+            # La croissance est logarithmique pour éviter la saturation rapide
+            self.subfields["CA3"][signal_label] += self.config.get("LTP_GAIN", 0.05)
+            
+            # Calcul de l'erreur (plus la trace est forte, plus la prédiction est stable)
+            prediction_error = 0.1 / self.subfields["CA3"][signal_label]
+        else:
+            # Mécanisme NMDA : "Réveil" d'une synapse silencieuse ou création
+            # On passe du potentiel latent à une activation réelle
+            prediction_error = 1.0
+            self.subfields["DG"][signal_label] = True
+            self.subfields["CA3"][signal_label] = self.config.get("INITIAL_ENGRAM_STRENGTH", 0.1)
+            self.subfields["CA4"][signal_label] = 1.0 
+
+        return max(0.0, min(1.0, prediction_error))
     
-    This simulates the flow: Thalamus -> Hippocampus -> Thalamus
-    """
-    print("\n🧪 INTEGRATION TEST: Thalamus ↔ Hippocampus")
-    print("=" * 60)
-    
-    # Create hippocampus
-    hippo = Hippocampus()
-    
-    # Simulate sequence from Thalamus
-    sequence = ["A", "B", "A", "B", "A", "B"]
-    
-    print(f"📚 Sequence from Thalamus: {sequence}")
-    print()
-    
-    # Phase 1: Learning
-    print("📝 PHASE 1: Learning from Thalamus")
-    print("-" * 40)
-    
-    for i, signal in enumerate(sequence):
-        print(f"Step {i+1}: Thalamus → Hippocampus: '{signal}'")
-        hippo.encode(signal, importance=1.0)
-        hippo.consolidate()
+    async def update_memories(self, signal_label: str, emotional_data: dict):
+        """
+        Gère la sédimentation mémorielle modulée par l'émotion.
+        """
+        impact = emotional_data.get("impact", 0.0)
+        fear_level = emotional_data.get("fear_level", 0.0)
         
-        # Get hippocampus outputs
-        outputs = hippo.get_outputs()
-        print(f"   Hippocampus → Thalamus: Memory L1={outputs['memory_status']['L1_count']}, L2={outputs['memory_status']['L2_count']}, L3={outputs['memory_status']['L3_count']}")
-        print()
-    
-    # Phase 2: Prediction
-    print("🔍 PHASE 2: Prediction for Thalamus")
-    print("-" * 40)
-    
-    # Test prediction after "A"
-    context = "A"
-    prediction = hippo.retrieve(context)
-    
-    print(f"❓ Thalamus query: 'What follows {context}?'")
-    print(f"🧠 Hippocampus response: '{prediction}'")
-    
-    # Verify success
-    expected = "B"
-    success = prediction == expected
-    
-    print(f"✅ Success: {success}")
-    
-    # Phase 3: Error Calculation (Free Energy)
-    print("\n📊 PHASE 3: Error Calculation (Free Energy)")
-    print("-" * 45)
-    
-    # Simulate reality check
-    reality = "B"  # What actually happens
-    prediction_error = abs(ord(prediction) - ord(reality)) if prediction != "?" else 1.0
-    
-    print(f"Reality: '{reality}'")
-    print(f"Prediction: '{prediction}'")
-    print(f"Prediction Error: {prediction_error}")
-    
-    # This error can be used by Amygdala for stress response
-    if prediction_error > 0:
-        print("⚠️  High prediction error → Amygdala stress response")
-    else:
-        print("✅ Perfect prediction → Amygdala calm")
-    
-    # Final status
-    print(f"\n🏁 INTEGRATION STATUS:")
-    print("=" * 25)
-    if success:
-        print("✅ INTEGRATION SUCCESSFUL")
-        print("   - Hippocampus learns patterns correctly")
-        print("   - Prediction works as expected")
-        print("   - Error calculation ready for Amygdala")
-        print("   - Ready for Thalamus integration")
-    else:
-        print("❌ INTEGRATION FAILED")
-        print("   - Check encoding logic")
-        print("   - Check prediction algorithm")
-        print("   - Check transition storage")
-    
-    return success
+        # 1. INITIALISATION (NMDA Flash)
+        if signal_label not in self.subfields["CA3"]:
+            # Si peur intense (>0.7), on force l'encodage au maximum (1.0)
+            if fear_level > 0.7:
+                self.subfields["CA3"][signal_label] = 1.0
+                # On grave un plancher permanent dans CA4 (la trace acide)
+                self.subfields["CA4"][signal_label] = 0.2 
+                print(f"DEBUG: Trace '{signal_label}' gravée par TRAUMA (Flash NMDA).")
+            else:
+                self.subfields["CA3"][signal_label] = self.config.get("MIN_LATENT_THRESHOLD", 0.001)
+                print(f"DEBUG: Trace '{signal_label}' initialisée NEUTRE.")
 
+        # 2. RENFORCEMENT (LTP)
+        # On ajoute l'impact émotionnel à la force actuelle
+        self.subfields["CA3"][signal_label] += (impact * self.config.get("LTP_GAIN", 0.1))
+        
+        # 3. ÉTANCHÉITÉ (On s'assure que le signal DG est présent)
+        self.subfields["DG"][signal_label] = True
 
-if __name__ == "__main__":
-    # Run integration test
-    success = test_integration()
-    
-    print(f"\n🏁 FINAL STATUS: {'HIPPOCAMPUS READY FOR THALAMUS INTEGRATION' if success else 'HIPPOCAMPUS NEEDS ADJUSTMENTS'}")
+    async def apply_synaptic_decay(self):
+        """
+        Fonction de sédimentation : le CA4 agit comme un comparateur de survie.
+        La trace s'érode (LTD) mais ne peut jamais descendre sous son plancher CA4.
+        """
+        # Seuil minimal par défaut pour les traces neutres
+        default_min = self.config.get("MIN_LATENT_THRESHOLD", 0.001)
+        
+        for label in list(self.subfields["CA3"].keys()):
+            # 1. Calcul de la décroissance standard (Burn Rate)
+            # On simule l'érosion naturelle des liens synaptiques (LTD)
+            self.subfields["CA3"][label] *= (1.0 - self.burn_rate)
+            
+            # 2. RÉCUPÉRATION DU PLANCHER DE SURVIE (Innovation CA4)
+            # On interroge le CA4 : si une Trace Acide a été gravée (ex: 0.2), 
+            # elle devient la limite infranchissable. Sinon, on utilise le seuil neutre.
+            survival_floor = self.subfields["CA4"].get(label, default_min)
+            
+            # 3. ARBITRAGE DU COMPARATEUR
+            # Si la valeur érodée descend sous le plancher de survie, on la verrouille.
+            if self.subfields["CA3"][label] < survival_floor:
+                self.subfields["CA3"][label] = survival_floor
+                # Optionnel : log de maintenance pour le monitoring du dashboard
+                # print(f"DEBUG: Trace '{label}' stabilisée par le plancher CA4 ({survival_floor}).")
+
+    async def update_trace_with_emotion(self, signal_label: str, impact: float, valence: float):
+        """
+        Ajuste la trace CA3 en fonction de l'impact fourni par l'Amygdale.
+        """
+        if signal_label not in self.subfields["CA3"]:
+            self.subfields["CA3"][signal_label] = self.config.get("MIN_LATENT_THRESHOLD", 0.001)
+
+        # La valence positive (plaisir) renforce doucement.
+        # La valence négative (peur/douleur) grave la trace profondément (LTP forcée).
+        if valence < -0.5:
+            # "Trace Acide" : On augmente massivement la valeur pour qu'elle 
+            # mette des années (cycles) à redescendre au seuil minimal.
+            self.subfields["CA3"][signal_label] += (impact * 2.0)
+        else:
+            self.subfields["CA3"][signal_label] += (impact * 0.5)
+
+        # Plafonnement pour éviter l'instabilité numérique
+        self.subfields["CA3"][signal_label] = min(5.0, self.subfields["CA3"][signal_label])

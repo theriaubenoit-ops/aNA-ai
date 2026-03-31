@@ -15,15 +15,55 @@ class LimbicSystem:
     Manages emotional valence and memory prioritization.
     """
     def __init__(self, amygdala: Amygdala = None, hippocampus: Hippocampus = None, arousal_threshold: float = 0.5):
+        # Logique d'initialisation (Guard Clauses)
         self.amygdala = amygdala or Amygdala()
         self.hippocampus = hippocampus or Hippocampus()
         # C'est ici que le "Senseur de Danger" est défini :
         self.arousal_threshold = arousal_threshold 
             
-    def process_experience(self, stimulus, sensory_data):
+    def process_experience(self, sensory_data, emotional_input):
         """
         Processes a sensory event and decides how to store it.
         """
+        # --- SÉCURISATION DE L'INPUT ---
+        # Si emotional_input est une string (ex: "Low light"), on l'encapsule
+        if isinstance(emotional_input, str):
+            emotional_state = {"label": emotional_input, "dopamine": 0.05, "cortisol": 0.1}
+        else:
+            emotional_state = emotional_input
+
+        # 1. Extraction sécurisée (le .get() ne plantera plus)[cite: 9]
+        dopamine = emotional_state.get("dopamine", 0.0) 
+        cortisol = emotional_state.get("cortisol", 0.0)
+        
+        # Le reste de votre logique de consolidation...[cite: 9]
+        consolidation_factor = 1.0 + (dopamine * 1.5) + (cortisol * 2.0)
+        
+        # 3. Envoi à l'Hippocampe (Note: vérifiez si vous utilisez 'weight' ou 'importance')[cite: 9]
+        self.hippocampus.encode(sensory_data, importance=consolidation_factor)
+
+        # 4. Calcul de l'Arousal pour le retour du test[cite: 9]
+        total_arousal = (dopamine + cortisol) / 2
+        return total_arousal > self.arousal_threshold
+
+        def trigger_flashback(self, memory_id):
+            """
+            Simule la ré-excitation physique de l'Amygdale par un souvenir.
+            """
+            # 1. Extraction de la trace depuis l'Hippocampe
+            memory_trace = self.hippocampus.retrieve(memory_id)
+            
+            if memory_trace and "emotional_signature" in memory_trace:
+                # 2. Injection directe dans la "chimie" de l'Amygdale
+                signature = memory_trace["emotional_signature"]
+                for neurotransmitter, intensity in signature.items():
+                    self.amygdala.inject_neuromodulator(neurotransmitter, intensity)
+                
+                # 3. Mise à jour de l'état d'alerte global
+                self.amygdala.update_internal_state()
+                return True
+            return False
+        
         # Simulation simplifiée de l'analyse (le temps que vous codiez la suite)
         # On imagine que l'amygdale calcule un score :
         total_arousal = self.amygdala.analyze(stimulus) 
