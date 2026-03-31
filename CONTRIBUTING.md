@@ -12,7 +12,7 @@
 ▒░░░░░▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▒░         ░░▒▒▒░▒▒▒▒▓▓▓▓▓▓▓▒▒░░  ░▒▒▒▒▒▒▒▓▒▒░▒▓▒░░░░░░▒▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░░░░░░░▒▒
 ░▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓░                   ░░ ▒▒▓▒░▒▓▓▓░▒▒░░          ░▒▒░░▒▒▓▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▓▓
 ▒▒▓▓▓▓▓▓▒▒▒░░                           ░▓▓▒░░▒▓▓░_    _    _ ░░░▒▒▓▓▒▒▓▓▓▓▓▓▓▓▓▒░      ░▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-▓▓▓▒░  AI inspired by natural plasticity ░░   ░░░ a    N    A  ░▒▓▒▓▒▒▒▓ Autonomous Neural Architecture v5.0 ░░▒▒▒
+▓▓▓▒░  AI inspired by natural plasticity ░░   ░░░ a    N    A  ░▒▓▒▓▒▒▒▓ Autonomous Neural Architecture v5.1 ░░▒▒▒
 ░                                                 ‾    ‾    ‾  ░▓▒▓░░▒▓░
 ```
 
@@ -38,7 +38,7 @@ We are moving away from the "open-source contribution" model—where the goal is
 
 **This is a leap forward in time; what you see here is the _future of AI_. If you are exploring this project today, it is because you possess the curiosity required to push this innovative concept further. We are currently architecting the _next major update_, but we invite you to share your _observations_ and _ideas_ with us as we continue to grow this vision together.**
 
-Join the **aNA** _computational neuroscience_ community: _[Download(.zip)](https://github.com/theriaubenoit-ops/aNA-ai/archive/refs/heads/main.zip)_ or/and [installation](/docs/installation_en.md)
+Join the **aNA** _computational neuroscience_ community: _[Download(.zip)](https://github.com/theriaubenoit-ops/aNA-ai/archive/refs/heads/alpha-v5.1.zip)_ or/and [installation](/docs/installation_en.md)
 
 ![ ](/docs/assets/spacer32x32.png)
 
@@ -123,4 +123,4 @@ The **aNA** AI project is more than just a _codebase_; it is a _sandbox_ for exp
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-27_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-31_
