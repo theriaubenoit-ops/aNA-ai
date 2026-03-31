@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Cortical Lobe Base Implementation for aNA v5.0
+Cortical Lobe Base Implementation for aNA v5.1
 
 This module implements the 6-layer cortical architecture for all brain lobes.
 Each lobe processes signals through the biological layers: L4 → L2/3 → L5.
@@ -18,8 +18,14 @@ Collaboration, research and code: Gemini, Cline and GPT
 """
 
 import numpy as np
+import sys
+import os
 from typing import Dict, Any, Optional
 from dataclasses import dataclass
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../..')))
+
+from anatomy.base.neuron import Neuron, NeuronConfig 
 
 
 @dataclass
@@ -32,51 +38,22 @@ class LayerConfig:
 
 class LayerI:
     """
-    Layer I (Molecular Layer)
-    
-    Functions:
-    - Neuromodulator integration (dopamine, acetylcholine, serotonin)
-    - Interneuron modulation
-    - Feedback from higher cortical areas
-    - Attention mechanism via acetylcholine
+    Layer I (Molecular Layer) - v5.1 (Modulation Noradrénergique)
     """
-    
     def __init__(self):
-        self.config = LayerConfig(
-            efficiency=1.0,
-            name="Layer I",
-            description="Molecular Layer - Neuromodulator Integration"
-        )
-        self.neuromodulators = {}
-        self.attention_boost = 1.0
+        self.config = LayerConfig(efficiency=1.0, name="Layer I")
+        self.attention_boost = 0.0
+        self.trauma_impact = 0.0 # Noradrénaline
     
-    def integrate_neuromodulators(self, neuromodulators: Dict[str, float]) -> float:
-        """
-        Integrate neuromodulators to calculate attention boost.
+    def integrate_neuromodulators(self, neuromodulators, recognition_score=0.0):
+        ach = neuromodulators.get('acetylcholine', 0.0) if isinstance(neuromodulators, dict) else neuromodulators
         
-        Args:
-            neuromodulators: Current neuromodulator levels
-            
-        Returns:
-            Attention boost factor (1.0 = no boost, >1.0 = attention enhancement)
-        """
-        self.neuromodulators = neuromodulators
+        base_boost = ach * 1.5
+        novelty_factor = 1.0 - recognition_score
         
-        # Acetylcholine enhances attention and repairs signal loss
-        ach_level = neuromodulators.get('acetylcholine', 0.1)
-        dopamine_level = neuromodulators.get('dopamine', 0.1)
-        
-        # Acetylcholine provides attention boost (up to 30% signal enhancement)
-        ach_boost = 1.0 + (ach_level * 0.3)
-        
-        # Dopamine enhances processing efficiency
-        dopamine_boost = 1.0 + (dopamine_level * 0.1)
-        
-        # Combined attention boost
-        self.attention_boost = ach_boost * dopamine_boost
-        
-        return self.attention_boost
-
+        # On ajoute un +0.01 pour éviter le silence total (le division par zéro)
+        self.attention_gain = (base_boost * (1.0 + novelty_factor)) + 0.01 
+        return self.attention_gain
 
 class LayerIV:
     """
@@ -266,7 +243,7 @@ class CorticalLobe:
         # Overall lobe activity
         self.total_activity = 0.0
     
-    def process_through_layers(self, input_signal: float, neuromodulators: Dict[str, float]) -> float:
+    def process_through_layers(self, input_signal: float, neuromodulators: Dict[str, float], recognition_score: float = 0.5) -> float:
         """
         Process signal through all cortical layers.
         
@@ -278,11 +255,14 @@ class CorticalLobe:
             Final output signal after all layers
         """
         # Step 1: Layer I - Neuromodulator integration and attention boost
-        self.attention_boost = self.layer1.integrate_neuromodulators(neuromodulators)
+        self.attention_boost = self.layer1.integrate_neuromodulators(
+            neuromodulators, 
+            recognition_score=recognition_score
+        )
         
         # Step 2: Layer IV - Input processing
         self.l4_output = self.layer4.process_input(input_signal)
-        
+                
         # Apply attention boost from Layer I to Layer IV output
         self.l4_output *= self.attention_boost
         
@@ -373,7 +353,7 @@ class CorticalLobe:
         self.layer6.feedback_signal = 0.0
 
 
-class CorticalColumns(CorticalLobe):
+class CorticalColumns:
     """
     Specialized cortical lobe for visual processing.
     
@@ -419,6 +399,42 @@ class CorticalColumns(CorticalLobe):
         }
         
         return visual_features
+    
+    async def process_input(self, signal_data: str, hippo_unit, neuromodulators: Dict[str, float] = None) -> Dict[str, float]:
+        """
+        Traitement v5.1 : Cascade L4 -> L2/3 -> L5 avec modulation chimique.
+        """
+        if neuromodulators:
+            self.layer1.integrate_neuromodulators(neuromodulators)
+        
+        # 1. Calcul du gain global via la Layer I
+        current_efficiency = self.layer1.config.efficiency
+        
+        # 2. Simulation de l'activité neuronale avec impact de la Noradrénaline
+        nora = neuromodulators.get("noradrenaline", 0.0) if neuromodulators else 0.0
+        
+        for n in self.neurons:
+            # En cas de trauma (nora > 0.6), on force la myélinisation (Gravure Flash)
+            n.is_firing = True
+            if nora > 0.6:
+                # Accélération de la plasticité synaptique
+                n.myelination_level = min(1.0, n.myelination_level + 0.05)
+            n._update_myelination()
+            n.is_firing = False
+            
+        # 3. Évaluation via l'unité Hippocampique (Pattern Separation/Completion)
+        # La Noradrénaline réduit la tolérance à l'erreur (on veut de la précision brute)
+        prediction_error = await hippo_unit.evaluate_prediction(signal_data)
+        
+        # Plus il y a de trauma, plus le score de reconnaissance est "marqué"
+        recognition_score = (1.0 - prediction_error) * current_efficiency
+        self.layers["L6"] = min(1.0, recognition_score)
+        
+        return {
+            "recognition": self.layers["L6"],
+            "l6_feedback": self.layers["L6"],
+            "is_traumatized": nora > 0.6
+        }
 
 
 class MotorCorticalLobe(CorticalLobe):
@@ -466,6 +482,36 @@ class MotorCorticalLobe(CorticalLobe):
         
         return motor_features
 
+class SimplifiedCorticalColumn:
+    def __init__(self, column_id: str):
+        self.column_id = column_id
+        # Création d'une petite population de neurones représentative pour William
+        self.neurons = [Neuron(position=np.array([0, 0, 0])) for _ in range(10)]
+        self.layers = {"L4": 0.0, "L23": 0.0, "L5": 0.0, "L6": 0.0}
+
+    def get_average_myelination(self) -> float:
+        """Calcule la trace physique (myéline) laissée par l'apprentissage"""
+        if not self.neurons:
+            return 0.0
+        return sum(n.myelination_level for n in self.neurons) / len(self.neurons)
+
+    async def process_input(self, signal_data: str, hippo_unit) -> Dict[str, float]:
+        # Simulation de l'activité neuronale lors du passage du signal
+        for n in self.neurons:
+            # On simule un cycle d'update pour que la myéline progresse si le neurone "tire"
+            n.is_firing = True # William s'active
+            n._update_myelination()
+            n.is_firing = False
+            
+        # ... (le reste de ton code process_input existant) ...
+        prediction_error = await hippo_unit.evaluate_prediction(signal_data)
+        recognition_score = 1.0 - prediction_error
+        self.layers["L6"] = recognition_score
+        
+        return {
+            "recognition": recognition_score,
+            "l6_feedback": self.layers["L6"]
+        }
 
 # Convenience functions for creating specialized lobes
 def create_visual_cortical_lobe(position: np.ndarray) -> CorticalColumns:
