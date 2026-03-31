@@ -4,7 +4,7 @@
 
 English instructions: [installation (en)](/docs/installation_en.md)
 
-## Installation et utilisation projet ✴️*aNA* AI v5.0
+## Installation et utilisation projet ✴️*aNA* AI v5.1
 
 1. **Prérequis _(The Environment)_**
    - [ ] Version _Python_ minimale _(ex: 3.10+)_
@@ -39,4 +39,4 @@ English instructions: [installation (en)](/docs/installation_en.md)
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-20_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-31_
