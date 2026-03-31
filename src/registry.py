@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-# src/registry.py - Le Génome Centralisé d'aNA v5.9
+# src/registry.py - Le Génome Centralisé d'aNA v5.1
 
 # --- MÉTABOLISME (Le Courant) ---
 METABOLISM = {
