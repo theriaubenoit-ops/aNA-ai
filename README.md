@@ -85,7 +85,7 @@ python3 src/tests/test_cortical_column.py
 
 - **Lobe, [Temporal(.py)](/src/anatomy/cortical/temporal.py) _(Semantic Storage & Pattern Recognition)_:** The hub for processing auditory signals and high-level linguistic or object recognition. In the digital model, it serves as the semantic engine that links sensory inputs to long-term _"concepts"_ stored in the memory hierarchy.
 
-- **Neocortex _(The "Thinking" Shell)_:** The structural integration of the _4 Lobes_ and _6 Cortical Layers_. While the _Neocortex_ handles complex reasoning and prediction, the _[cerebellum(.py)](/src/anatomy/subcortical/cerebellum.py) (in **aNA**)_ fine-tunes _motor outputs_ and timing, ensuring the system’s actions are fluid and mathematically synchronized.
+- **[Neocortex(.py)](/src/anatomy/cortical/neocortex.py) _(The "Thinking" Shell)_:** The structural integration of the _4 Lobes_ and _6 Cortical Layers_. While the _[neocortex(.py)](/src/anatomy/cortical/neocortex.py)_ handles complex reasoning and prediction, the _[cerebellum(.py)](/src/anatomy/subcortical/cerebellum.py) (in **aNA**)_ fine-tunes _motor outputs_ and timing, ensuring the system’s actions are fluid and mathematically synchronized.
 
 - **[Hippocampus(.py)](/src/anatomy/limbic/hippocampus.py) _(Dynamic Buffer & Indexing System)_:** Functions as a high-speed memory buffer for short-term data. It manages the temporary storage of information and coordinates its eventual _"migration" (consolidation)_ into _long-term cortical databases_, preventing immediate system saturation.
 
@@ -93,7 +93,7 @@ python3 src/tests/test_cortical_column.py
 
 - **[Neurons(.py)](/src/anatomybase/neuron.py) _(Atomic Processing Nodes)_:** The three functional types _(Sensory, Interneurons, Motor)_ operate as the basic logic gates of the architecture. Their Synaptic Plasticity represents a self-modifying code capability, where connection weights evolve dynamically based on the frequency and timing of data flow.
 
-- **[Cortical Columns(.py)](/src/anatomy/cortical/cortical_column.py) _(Hierarchical Data Modules)_:** The standard vertical organization of the mammalian _Neocortex_. In **aNA**, these _6 cortical layers_ define the functional hierarchy: _Layer IV (input)_, _Layers II/III (association/prediction)_, and _Layer V/VI (motor output)_.
+- **[Cortical Columns(.py)](/src/anatomy/cortical/cortical_column.py) _(Hierarchical Data Modules)_:** The standard vertical organization of the mammalian _[neocortex(.py)](/src/anatomy/cortical/neocortex.py)_. In **aNA**, these _6 cortical layers_ define the functional hierarchy: _Layer IV (input)_, _Layers II/III (association/prediction)_, and _Layer V/VI (motor output)_.
 
 - **[Thalamus(.py)](/src/anatomy/subcortical/thalamus.py) _(Sensory Gateway & Packet Router)_:** Acts as the system's central hub for incoming data. It filters and directs sensory signals to the appropriate cortical layers, preventing _"system overflow"_ by dropping irrelevant background noise.
 
