@@ -16,7 +16,7 @@
 ░                                                 ‾    ‾    ‾  ░▓▒▓░░▒▓░
 ```
 
-## Core Innovations in _aNA v5.0_
+## Core Innovations in _aNA v5.1_
 
 The strength of the **aNA** architecture lies in its departure from traditional static _AI_ models. By implementing bio-inspired mechanisms, we have achieved a system that prioritizes survival and relevance over raw data volume.
 
