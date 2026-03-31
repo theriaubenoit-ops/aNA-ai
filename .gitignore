@@ -36,5 +36,6 @@ $RECYCLE.BIN/
 # Ignore sensitive or developing folders/files
 data/
 private/
+draft_scripts/
 config_keys.py
 *.log
