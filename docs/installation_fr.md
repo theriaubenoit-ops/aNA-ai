@@ -18,7 +18,7 @@ English instructions: [installation (en)](/docs/installation_en.md)
 
 3. - [x] **Exécution des scripts _(Phase « Action »)_** Launch associated _Python scripts_ to validate neural logic:
      - `python3 src/tests/test_amygdala.py` _(Réponse homéostatique au stress et à l'alerte)_
-     - `python3 src/tests/test_autonomy` _(...)_
+     - `python3 src/tests/test_autonomy` _(Pour valider les comportements autonomes)_
      - `python3 src/tests/test_cerebellum.py` _(Précision motrice et correction d'erreurs)_
      - `python3 src/tests/test_cortical_column.py` _(Flux de signal cortical à six couches)_
      - `python3 src/tests/test_limbic_system.py` _(Intégration émotionnelle et cognitive)_
