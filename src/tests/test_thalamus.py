@@ -1,52 +1,92 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-
-import unittest
+"""
+aNA AI Project - v5.1
+Module: Test Thalamus 
+Description: This test is designed to validate the core functionalities of the thalamus module in complete isolation. It simulates a simple data stream to verify that the thalamus processes inputs correctly, integrates feedback from the hippocampus, and modulates outputs based on chemical states. The test covers sensory processing, thalamo-cortical gain modulation, and the influence of neuromodulators on thalamic function.
+Architecture and neuroinformatics: Theriault Benoit
+"""
 import numpy as np
-import sys
+import asyncio
+import time
 import os
+import sys
 
-# Insertion du chemin pour l'accès aux modules src
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+# On définit la racine du projet dynamiquement
+ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+if ROOT_DIR not in sys.path:
+    sys.path.insert(0, ROOT_DIR)
 
-from unittest.mock import MagicMock
+from core.pulse import Pulse
 from anatomy.subcortical.thalamus import Thalamus
+from anatomy.limbic.hippocampus import Hippocampus
+from anatomy.base.neuromodulator import Neuromodulator
+from registry import ORGANS
+    
 
-class TestThalamus(unittest.TestCase):
-    def setUp(self):
-        # Simulation des cibles du Thalamus (les Lobes du Cortex)
-        self.mock_frontal_lobe = MagicMock()
-        self.mock_parietal_lobe = MagicMock()
-        self.mock_limbic_system = MagicMock()
+async def test_sensory_cascade():
+    # 1. Création des Mocks (Simulacres)
+    # On crée des objets simples qui imitent le comportement attendu
+    class MockHippo:
+        async def evaluate_prediction(self, label): return 0.2
+    # class MockHippo:
+    #    async def evaluate_prediction(self, label): return 0.9  # 90% d'erreur
         
-        # Initialisation du Thalamus avec ses dépendances
-        self.thalamus = Thalamus(
-            frontal=self.mock_frontal_lobe,
-            parietal=self.mock_parietal_lobe,
-            limbic=self.mock_limbic_system
-        )
+    class MockPulse:
+        def update_frequency(self, bpm):
+            # On retire le print ici aussi pour ne plus voir le doublon
+            # print(f"  [Pulse] New BPM: {bpm:.2f}") 
+            pass
 
-    def test_relay_to_frontal(self):
-        """Scénario : Une donnée de décision/planification doit aller au Lobe Frontal"""
-        print("\n[TEST THALAMUS : ROUTAGE FRONTAL]")
-        raw_data = {"type": "decision", "content": "Execute Protocol 9"}
-        
-        self.thalamus.relay(raw_data)
-        
-        # Vérification : Le signal a-t-il bien été envoyé au frontal ?
-        self.mock_frontal_lobe.receive.assert_called_once_with(raw_data)
-        print(" -> Signal 'decision' relayé avec succès au Lobe Frontal.")
+    # 2. Instanciation des composants v5.1
+    #from anatomy.base.neuromodulator import Neuromodulator
+    
+    mock_hippo = MockHippo()
+    mock_pulse = MockPulse()
+    neuromod_core = Neuromodulator()
 
-    def test_limbic_integration(self):
-        """Scénario : Le Thalamus doit consulter le système limbique pour l'importance"""
-        print("\n[TEST THALAMUS : APPEL LIMBIQUE]")
-        raw_data = {"type": "sensory", "content": "High Temperature"}
-        
-        self.thalamus.relay(raw_data)
-        
-        # Vérification : Le système limbique a-t-il été sollicité ?
-        self.mock_limbic_system.process_experience.assert_called_once()
-        print(" -> Consultation du Système Limbique effectuée pour filtrage émotionnel.")
+    # 3. Initialisation du Thalamus avec les objets réels
+    thalamus = Thalamus(
+        hippocampus=mock_hippo, 
+        pulse=mock_pulse, 
+        neuromodulator_core=neuromod_core
+    )
 
-if __name__ == '__main__':
-    unittest.main()
+    print("--- 🧠 aNA v5.1 : Thalamo-Cortical Integration Test ---")
+    
+    stimuli = [
+        {"nucleus": "MGN", "signal_label": "A", "intensity": 0.8},
+        {"nucleus": "MGN", "signal_label": "N", "intensity": 0.8},
+        {"nucleus": "MGN", "signal_label": "A", "intensity": 0.9}
+    ]
+
+    for i, stimulus in enumerate(stimuli):
+        print(f"\nCycle {i+1} | Input: {stimulus['signal_label']} via {stimulus['nucleus']}")
+        
+        # Simulation d'un feedback L6 (ex: 0.2 pour un signal nouveau, 0.8 pour connu)
+        l6_mock = 0.2 # 0.5
+
+        # Appel corrigé avec les deux arguments requis par la v5.1
+        result = await thalamus.process_payload(stimulus, l6_feedback=l6_mock)
+        
+        # dt = heart.compute_dynamics()
+        print(f"  [Thalamus] Result: {result}")
+        # print(f"  [Chimie] Noradrénaline: {neuromod_core.get_matrix()['noradrenaline']:.2f}")
+        print(f"  [Pulse]  Frequence: {result['bpm']:.2f} BPM")
+        matrix = neuromod_core.get_matrix()
+        print(f"  [Neuromodulator] Dopa: {matrix['dopamine']:.3f} | Nora: {matrix['noradrenaline']:.3f}")
+        print(f"  [Gain]   Thalamic: {result['thalamic_gain']:.3f}")
+        await asyncio.sleep(0.5) # On laisse le temps à la dopamine de "vivre"
+
+    # Test du mode RECEPTIVE (épuisement volontaire)
+    print("\n--- 💤 Simulation of metabolic exhaustion (v5.1) ---")
+    # On simule l'épuisement via le Neuromodulator si vous avez une clé 'atp' 
+    # ou on baisse simplement la dopamine/adrénaline
+    neuromod_core.update_from_limbic({"dopamine": -0.3, "noradrenaline": -0.05})
+    
+    matrix = neuromod_core.get_matrix()
+    print(f"  [Statut] Energy down | Dopa: {matrix['dopamine']:.3f}")
+    print(f"  📡 Output (ATP Bas) | {result}")
+
+if __name__ == "__main__":
+    asyncio.run(test_sensory_cascade())

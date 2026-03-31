@@ -1,35 +1,66 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Integrated System Test - The Digital Bridge
-Tests the synchronization between Pulse, Thalamus, and Neural Transmission.
+aNA AI Project - v5.1
+Module: Test Pulse 
+Description: This test is designed to validate the core functionalities of the Pulse module in complete isolation. It simulates the heart's response to stimuli, including changes in ATP levels, dopamine release, and frequency modulation. The test covers the dynamics of the pulse, including refractory periods and the impact of chemical signals on heart rate.
+Architecture and neuroinformatics: Theriault Benoit
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
-
-import asyncio
 import numpy as np
-import sys
+import time
 import os
+import sys
+import select
 
-# Ajustement du chemin pour remonter d'un niveau et trouver 'src'
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+# On définit la racine du projet dynamiquement
+ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+if ROOT_DIR not in sys.path:
+    sys.path.insert(0, ROOT_DIR)
 
-# Importations mises à jour selon votre structure
-from core.pulse import Pulse
-from anatomy.subcortical.thalamus import Thalamus
-from anatomy.base.neural_transmission import NeuralTransmission, TransmissionBridge
+from core.pulse import Pulse 
 
-async def main():
-    # Initialisation des unités fonctionnelles
-    rythme = Pulse() #
-    filtre = Thalamus() #[cite: 2]
-    
-    print("--- ⚡ aNA System Pulse: Integration Test ---")
+def monitor_ana_heart():
+    heart = Pulse()
+    print("--- 💓 Heart Monitor aNA v5.1 ---")
+    print("Commandes :")
+    print("  - [Enter] : Injecting a stimulus (Dopamine)")
+    print("  - [q] + [Enter] : Clean exit\n")
     
     try:
-        # L'orchestrateur utilise le filtre pour le traitement à haut débit[cite: 2]
-        await rythme.start_orchestrator(input_stream="sensory_payload_v5", filter_unit=filtre) #[cite: 2]
+        while True:
+            # 1. Gestion du Clavier (Non-bloquant pour Linux/Kubuntu)
+            # Vérifie si l'utilisateur a tapé quelque chose sans arrêter la boucle
+            if select.select([sys.stdin], [], [], 0)[0]:
+                line = sys.stdin.readline().strip()
+                if line.lower() == 'q':
+                    print("\n🛑 Monitor shut-off.")
+                    break
+                else:
+                    heart.inject_stimulus(0.5)
+                    # On efface la ligne précédente pour le feedback visuel
+                    sys.stdout.write("\n⚡ [STIMULUS] The heart rate increases!\n")
+
+            # 2. Calcul de la dynamique (dt)
+            dt = heart.compute_dynamics()
+            
+            # 3. Récupération des constantes vitales
+            hz = heart.get_current_hz()
+            atp = heart.atp
+            dopamine = heart.dopamine
+            
+            # 4. Affichage dynamique (Rendu propre sur une seule ligne)
+            status = "💤 REPOS" if heart.is_refractory else "🔥 ACTIF"
+            sys.stdout.write(
+                f"\r[{status}] | ATP: {atp:.3f} | Hz: {hz:4.1f} | Dopa: {dopamine:.3f} | dt: {dt:.4f}s"
+            )
+            sys.stdout.flush()
+
+            time.sleep(0.1) 
+
     except KeyboardInterrupt:
-        print("\n🛑 Safe system shutdown.")
+        print("\n🛑 Interrupt detected.")
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    monitor_ana_heart()

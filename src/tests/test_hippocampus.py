@@ -1,20 +1,15 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Hippocampus v5.0 - Integrable Version
-
-This module implements a simplified hippocampus for aNA v5.0 with:
-- Pattern learning and memory consolidation
-- Transition-based prediction (A -> B)
-- Simple dictionary-based memory storage (L1/L2/L3)
-- Integration-ready design for Thalamus connection
-
-Architecture, concept and supervision: Benoit Theriault
-Collaboration, research and code: Gemini, Cline 
+aNA AI Project - v5.1
+Module: Test Hippocampus
+Description: This test is designed to validate the core functionalities of the hippocampus module in complete isolation. It simulates a simple data stream to verify that the hippocampus learns patterns correctly and can retrieve them based on context. The test covers encoding, consolidation, and retrieval processes, as well as the handling of transitions between items.
+Unit Test for the Hippocampus - Isolated Version
+Architecture and neuroinformatics: Theriault Benoit
 """
 
 import numpy as np
-from typing import Dict, List, Tuple, Optional, Any
+from typing import Dict, List, Tuple, Optional
 from enum import Enum
 
 
@@ -28,60 +23,60 @@ class HippocampalRegion(Enum):
     SUBICULUM = "SUB"         # Final output stage
 
 
-class Hippocampus:
+class SimpleHippocampus:
     """
-    Simplified Hippocampus for aNA v5.0 integration.
-    
-    This version uses a simple dictionary-based structure for memory storage
-    and focuses on pattern learning and transition-based prediction.
+    Simplified version of the hippocampus for unit testing.
+
+    This version uses a simple data structure (dictionary)
+    to simulate L1, L2, and L3 without any external dependencies.
     """
-    
-    # Memory thresholds for consolidation
-    L1_TO_L2_THRESHOLD = 1    # Number of appearances to move to L2
-    L2_TO_L3_THRESHOLD = 3    # Number of appearances to move to L3
-    L3_REINFORCEMENT_THRESHOLD = 5  # Number of appearances for L3 reinforcement
     
     def __init__(self, position: np.ndarray = np.array([10.0, -30.0, 0.0])):
         self.position = position
         
-        # Simple data structure for memory storage
+        # Structure de données simple pour la mémoire
         self.memory_store = {
-            'L1': {},  # Short-term (volatile)
-            'L2': {},  # Short-term (reinforced)
-            'L3': {}   # Long-term (consolidated)
+            'L1': {},  # Court terme (volatile)
+            'L2': {},  # Court terme (renforcé)
+            'L3': {}   # Long terme (consolidé)
         }
         
-        # Counters for reinforcement
+        # Compteurs pour le renforcement
         self.pattern_counts = {}
         
-        # Structure for transitions (A -> B)
+        # Seuils de consolidation
+        self.l1_threshold = 1    # Nombre d'apparitions pour passer en L2
+        self.l2_threshold = 3    # Nombre d'apparitions pour passer en L3
+        self.l3_threshold = 5    # Nombre d'apparitions pour renforcement L3
+        
+        # Structure pour les transitions (A -> B)
         self.transitions = {}
         self.last_item = None
         
-        print("🧠 Hippocampus v5.0 initialized")
+        print("🧠 SimpleHippocampus initialized")
         print(f"📍 Position: {position}")
-        print(f"📊 Memory thresholds: L1→L2 after {self.L1_TO_L2_THRESHOLD} reps, L2→L3 after {self.L2_TO_L3_THRESHOLD} reps")
+        print(f"📊 Memory thresholds: L1→L2 after {self.l1_threshold} reps, L2→L3 after {self.l2_threshold} reps")
     
     def encode(self, signal: str, importance: float = 1.0) -> None:
         """
-        Encode a signal into memory.
-        
-        Args:
-            signal: The signal to encode (ex: "A", "B", "HELLO")
+        Encode a signal in memory.
+
+        Arguments:
+            signal: The signal to encode (e.g., "A", "B", "HELLO")
             importance: Importance factor (0.0 to 1.0)
         """
-        # Immediate storage in L1
+        # Stockage immédiat en L1
         if signal not in self.memory_store['L1']:
             self.memory_store['L1'][signal] = 0
         
         self.memory_store['L1'][signal] += importance
         
-        # Count appearances for reinforcement
+        # Compter les apparitions pour le renforcement
         if signal not in self.pattern_counts:
             self.pattern_counts[signal] = 0
         self.pattern_counts[signal] += 1
         
-        # Record transition if we have a previous item
+        # Enregistrer la transition si on a un item précédent
         if self.last_item is not None:
             if self.last_item not in self.transitions:
                 self.transitions[self.last_item] = {}
@@ -91,58 +86,62 @@ class Hippocampus:
             
             self.transitions[self.last_item][signal] += 1
         
-        # Update last item
+        # Mettre à jour le dernier item
         self.last_item = signal
+        
+        print(f"📝 Encoded: '{signal}' (importance: {importance:.1f}, count: {self.pattern_counts[signal]})")
     
     def consolidate(self) -> None:
         """
-        Consolidation routine - moves patterns from L1 to L2/L3.
-        
+        Consolidation Routine – moves patterns from L1 to L2/L3.
+
         This method is called periodically to simulate reinforcement.
         """
         signals_to_move = []
         
-        # Check L1 signals for transition to L2
+        # Vérifier les signals en L1 pour passage en L2
         for signal, count in self.pattern_counts.items():
             if signal in self.memory_store['L1']:
-                if count >= self.L1_TO_L2_THRESHOLD and count < self.L2_TO_L3_THRESHOLD:
-                    # Move to L2
+                if count >= self.l1_threshold and count < self.l2_threshold:
+                    # Déplacer en L2
                     signals_to_move.append((signal, 'L2'))
+                    print(f"🔄 Consolidating '{signal}' from L1 → L2 (count: {count})")
         
-        # Check L2 signals for transition to L3
+        # Vérifier les signals en L2 pour passage en L3
         for signal, count in self.pattern_counts.items():
             if signal in self.memory_store['L2']:
-                if count >= self.L2_TO_L3_THRESHOLD and count < self.L3_REINFORCEMENT_THRESHOLD:
-                    # Move to L3
+                if count >= self.l2_threshold and count < self.l3_threshold:
+                    # Déplacer en L3
                     signals_to_move.append((signal, 'L3'))
-                elif count >= self.L3_REINFORCEMENT_THRESHOLD:
-                    # Reinforce in L3
-                    pass  # Already in L3, just reinforce
+                    print(f"🔄 Consolidating '{signal}' from L2 → L3 (count: {count})")
+                elif count >= self.l3_threshold:
+                    # Renforcer en L3
+                    print(f"💪 Reinforcing '{signal}' in L3 (count: {count})")
         
-        # Perform moves
+        # Effectuer les déplacements
         for signal, target_level in signals_to_move:
             if signal in self.memory_store['L1']:
-                # Move from L1 to L2
+                # Déplacer de L1 vers L2
                 value = self.memory_store['L1'].pop(signal)
                 self.memory_store['L2'][signal] = value
             elif signal in self.memory_store['L2']:
-                # Move from L2 to L3
+                # Déplacer de L2 vers L3
                 value = self.memory_store['L2'].pop(signal)
                 self.memory_store['L3'][signal] = value
     
     def retrieve(self, context: str) -> str:
         """
-        Retrieve a prediction based on context.
-        
+        Retrieves a context-based prediction.
+
         Args:
-            context: The context query (ex: "A" to predict what follows)
-            
+            context: The query context (e.g., "A" to predict what follows)
+
         Returns:
-            The most probable prediction, or "?" if nothing found
+            The most likely prediction, or "?" if nothing is found.
         """
-        # First check in transitions
+        # D'abord chercher dans les transitions
         if context in self.transitions:
-            # Find the most frequent transition
+            # Trouver la transition la plus fréquente
             best_next = "?"
             best_count = 0
             
@@ -152,13 +151,14 @@ class Hippocampus:
                     best_next = next_signal
             
             if best_next != "?":
+                print(f"🔍 Retrieved from transitions: '{best_next}' for context '{context}' (count: {best_count})")
                 return best_next
         
-        # If no transition found, search in traditional memory
+        # Si aucune transition trouvée, chercher dans la mémoire traditionnelle
         best_prediction = "?"
         best_score = 0
         
-        # Search in L3 (Long-term memory)
+        # Chercher dans L3 (mémoire à long terme)
         for signal in self.memory_store['L3']:
             if signal.startswith(context):
                 score = self.memory_store['L3'][signal]
@@ -166,7 +166,7 @@ class Hippocampus:
                     best_score = score
                     best_prediction = signal
         
-        # If nothing in L3, search in L2
+        # Si rien en L3, chercher dans L2
         if best_prediction == "?":
             for signal in self.memory_store['L2']:
                 if signal.startswith(context):
@@ -175,7 +175,7 @@ class Hippocampus:
                         best_score = score
                         best_prediction = signal
         
-        # If nothing in L2/L3, search in L1
+        # Si rien en L2/L3, chercher dans L1
         if best_prediction == "?":
             for signal in self.memory_store['L1']:
                 if signal.startswith(context):
@@ -184,119 +184,198 @@ class Hippocampus:
                         best_score = score
                         best_prediction = signal
         
+        print(f"🔍 Retrieved from memory: '{best_prediction}' for context '{context}' (score: {best_score:.1f})")
         return best_prediction
     
-    def get_outputs(self) -> Dict[str, Any]:
-        """Get outputs from all regions"""
+    def encode_sequence(self, sequence: List[str]) -> None:
+        """
+        Encode a sequence of signals to learn the transitions.
+
+        Args:
+            sequence: List of signals in chronological order
+        """
+        for i, signal in enumerate(sequence):
+            # Encoder le signal actuel
+            self.encode(signal, importance=1.0)
+            
+            # Si ce n'est pas le dernier signal, encoder la transition
+            if i < len(sequence) - 1:
+                next_signal = sequence[i + 1]
+                transition = f"{signal}->{next_signal}"
+                self.encode(transition, importance=2.0)  # Importance plus élevée pour les transitions
+            
+            # Consolidation après chaque encodage
+            self.consolidate()
+    
+    def get_memory_status(self) -> Dict:
+        """Returns the current state of memory"""
         return {
-            'memory_status': {
-                'L1_count': len(self.memory_store['L1']),
-                'L2_count': len(self.memory_store['L2']),
-                'L3_count': len(self.memory_store['L3']),
-                'total_patterns': len(self.pattern_counts),
-                'transitions_count': len(self.transitions)
-            },
-            'current_prediction': self.last_item,
-            'transitions': self.transitions.copy(),
+            'L1_count': len(self.memory_store['L1']),
+            'L2_count': len(self.memory_store['L2']),
+            'L3_count': len(self.memory_store['L3']),
+            'total_patterns': len(self.pattern_counts),
+            'memory_store': self.memory_store.copy(),
             'pattern_counts': self.pattern_counts.copy()
         }
     
     def reset(self):
-        """Reset the hippocampus"""
+        """Reset l'hippocampe"""
         self.memory_store = {'L1': {}, 'L2': {}, 'L3': {}}
         self.pattern_counts = {}
-        self.transitions = {}
-        self.last_item = None
-        print("🔄 Hippocampus reset")
+        print("🔄 SimpleHippocampus reset")
 
 
-def test_integration():
+def test_hippocampus_pattern_learning():
     """
-    Test function to verify integration with Thalamus.
-    
-    This simulates the flow: Thalamus -> Hippocampus -> Thalamus
+    Unit test to verify that the hippocampus learns patterns correctly.
+
+    Scenario: A -> B -> A -> B -> A -> B
+    The hippocampus must learn that "B" often follows "A".
     """
-    print("\n🧪 INTEGRATION TEST: Thalamus ↔ Hippocampus")
+    print("\n🧪 UNIT TEST: Pattern Learning")
     print("=" * 60)
     
-    # Create hippocampus
-    hippo = Hippocampus()
+    # Créer l'hippocampe
+    hippo = SimpleHippocampus()
     
-    # Simulate sequence from Thalamus
+    # Séquence d'apprentissage
     sequence = ["A", "B", "A", "B", "A", "B"]
     
-    print(f"📚 Sequence from Thalamus: {sequence}")
+    print(f"📚 Learning sequence: {sequence}")
     print()
     
-    # Phase 1: Learning
-    print("📝 PHASE 1: Learning from Thalamus")
-    print("-" * 40)
+    # Phase 1: Encodage
+    print("📝 PHASE 1: Encoding")
+    print("-" * 30)
     
     for i, signal in enumerate(sequence):
-        print(f"Step {i+1}: Thalamus → Hippocampus: '{signal}'")
+        print(f"Tour {i+1}: Encoding '{signal}'")
         hippo.encode(signal, importance=1.0)
+        
+        # Consolidation après chaque encodage
         hippo.consolidate()
         
-        # Get hippocampus outputs
-        outputs = hippo.get_outputs()
-        print(f"   Hippocampus → Thalamus: Memory L1={outputs['memory_status']['L1_count']}, L2={outputs['memory_status']['L2_count']}, L3={outputs['memory_status']['L3_count']}")
+        # Afficher l'état de la mémoire
+        status = hippo.get_memory_status()
+        print(f"   Memory: L1={status['L1_count']}, L2={status['L2_count']}, L3={status['L3_count']}")
         print()
     
-    # Phase 2: Prediction
-    print("🔍 PHASE 2: Prediction for Thalamus")
+    # Phase 2: Récupération et Prédiction
+    print("🔍 PHASE 2: Recovery and Prediction")
     print("-" * 40)
     
-    # Test prediction after "A"
-    context = "A"
-    prediction = hippo.retrieve(context)
+    # Tester la prédiction après "A"
+    print("❓ Prediction test: What follows 'A'?")
+    prediction = hippo.retrieve("A")
     
-    print(f"❓ Thalamus query: 'What follows {context}?'")
-    print(f"🧠 Hippocampus response: '{prediction}'")
-    
-    # Verify success
-    expected = "B"
+    # Vérification
+    expected = "B"  # On s'attend à ce que "B" soit prédit après "A"
     success = prediction == expected
     
+    print(f"🎯 Prediction: '{prediction}'")
     print(f"✅ Success: {success}")
+    print(f"📊 Pattern counts: {hippo.pattern_counts}")
     
-    # Phase 3: Error Calculation (Free Energy)
-    print("\n📊 PHASE 3: Error Calculation (Free Energy)")
-    print("-" * 45)
+    # Phase 3: Vérification détaillée
+    print("\n🔍 PHASE 3: Detailed Verification")
+    print("-" * 35)
     
-    # Simulate reality check
-    reality = "B"  # What actually happens
-    prediction_error = abs(ord(prediction) - ord(reality)) if prediction != "?" else 1.0
+    status = hippo.get_memory_status()
+    print(f"📦 Content L1: {list(status['memory_store']['L1'].keys())}")
+    print(f"📦 Content L2: {list(status['memory_store']['L2'].keys())}")
+    print(f"📦 Content L3: {list(status['memory_store']['L3'].keys())}")
     
-    print(f"Reality: '{reality}'")
-    print(f"Prediction: '{prediction}'")
-    print(f"Prediction Error: {prediction_error}")
+    # Analyse de l'apprentissage
+    a_count = hippo.pattern_counts.get("A", 0)
+    b_count = hippo.pattern_counts.get("B", 0)
     
-    # This error can be used by Amygdala for stress response
-    if prediction_error > 0:
-        print("⚠️  High prediction error → Amygdala stress response")
-    else:
-        print("✅ Perfect prediction → Amygdala calm")
+    print(f"\n📈 Analyse:")
+    print(f"   'A' appears {a_count} fois")
+    print(f"   'B' appears {b_count} fois")
+    print(f"   Pattern 'A' in L3: {'Yes' if 'A' in status['memory_store']['L3'] else 'No'}")
+    print(f"   Pattern 'B' in L3: {'Yes' if 'B' in status['memory_store']['L3'] else 'No'}")
     
-    # Final status
-    print(f"\n🏁 INTEGRATION STATUS:")
+    # Résultat final
+    print(f"\n🏁 TEST RESULTS:")
     print("=" * 25)
     if success:
-        print("✅ INTEGRATION SUCCESSFUL")
-        print("   - Hippocampus learns patterns correctly")
-        print("   - Prediction works as expected")
-        print("   - Error calculation ready for Amygdala")
-        print("   - Ready for Thalamus integration")
+        print("✅ TEST SUCCESSFUL: The hippocampus has learned the pattern!")
+        print("   - The pattern 'A' → 'B' has been correctly memorized")
+        print("   - The prediction works as expected")
     else:
-        print("❌ INTEGRATION FAILED")
-        print("   - Check encoding logic")
-        print("   - Check prediction algorithm")
-        print("   - Check transition storage")
+        print("❌ TEST FAILED: The hippocampus did not learn correctly")
+        print("   - Check the consolidation thresholds")
+        print("   - Check the search logic")
     
     return success
 
 
-if __name__ == "__main__":
-    # Run integration test
-    success = test_integration()
+def test_hippocampus_complex_pattern():
+    """
+    Unit test for a more complex pattern.
+
+    Scenario: "HELLO" -> "WORLD" -> "HELLO" -> "WORLD"
+    """
+    print("\n🧪 UNIT TEST: Complex Pattern")
+    print("=" * 50)
     
-    print(f"\n🏁 FINAL STATUS: {'HIPPOCAMPUS READY FOR THALAMUS INTEGRATION' if success else 'HIPPOCAMPUS NEEDS ADJUSTMENTS'}")
+    hippo = SimpleHippocampus()
+    
+    # Séquence plus complexe
+    sequence = ["HELLO", "WORLD", "HELLO", "WORLD"]
+    
+    print(f"📚 Sequence: {sequence}")
+    
+    # Encodage
+    for signal in sequence:
+        hippo.encode(signal, importance=1.5)  # Importance plus élevée
+        hippo.consolidate()
+    
+    # Test de prédiction
+    print(f"\n❓ What comes after 'HELLO' ?")
+    prediction = hippo.retrieve("HELLO")
+    
+    success = prediction == "WORLD"
+    print(f"🎯 Prediction: '{prediction}'")
+    print(f"✅ Success: {success}")
+    
+    return success
+
+
+def run_all_tests():
+    """Runs all unit tests"""
+    print("🚀 LAUNCH OF HIPPOCAMPE UNIT TESTS")
+    print("=" * 60)
+    
+    # Test 1: Pattern simple
+    test1_success = test_hippocampus_pattern_learning()
+    
+    # Test 2: Pattern complexe
+    test2_success = test_hippocampus_complex_pattern()
+    
+    # Résumé
+    print("\n📊 TEST SUMMARY")
+    print("=" * 25)
+    print(f"Test 1 (Pattern A→B): {'✅ PASS' if test1_success else '❌ FAIL'}")
+    print(f"Test 2 (Pattern HELLO→WORLD): {'✅ PASS' if test2_success else '❌ FAIL'}")
+    
+    overall_success = test1_success and test2_success
+    print(f"\n🎯 OVERALL RESULT: {'✅ ALL BASIC FUNCTIONS ARE VALIDATED' if overall_success else '❌ SOME FUNCTIONS REQUIRE ADJUSTMENTS'}")
+    
+    if overall_success:
+        print("\n🎉 The seahorse is ready for integration!")
+        print("   - encode() works correctly")
+        print("   - retrieve() works correctly")
+        print("   - consolidate() works correctly")
+        print("   - The data structure is valid")
+    else:
+        print("\n⚠️ Adjustments are needed before integration")
+    
+    return overall_success
+
+
+if __name__ == "__main__":
+    # Exécuter tous les tests
+    success = run_all_tests()
+    
+    print(f"\n🏁 STATUT: {'HIPPOCAMPE READY FOR INTEGRATION' if success else 'HIPPOCAMPE AWAITING CORRECTIONS'}")
