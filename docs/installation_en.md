@@ -24,7 +24,7 @@ Instructions française : [installation (fr)](/docs/installation_fr.md)
      - `python3 src/tests/test_limbic_system.py` _(Emotional-Cognitive Integration)_
      - `python3 src/tests/test_hippocampus.py` _(Synaptic Consolidation & Pattern Encoding)_
      - `python3 src/tests/test_neuron.py` _(Metabolic & Electrophysiological Dynamics)_
-     - `python3 src/tests/test_pulse.py` _(CNeural Oscillations & Temporal Sync)_
+     - `python3 src/tests/test_pulse.py` _(Neural Oscillations & Temporal Sync)_
      - `python3 src/tests/test_thalamus.py` _(Sensory Gating & Signal Routing)_
      - `python3 src/tests/test_trauma_logic.py` _(Emotional Saliency & Acid Traces)_
      - `python3 src/main.py` _(Cortical Core & Global Workspace)_
