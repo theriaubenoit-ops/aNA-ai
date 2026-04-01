@@ -15,6 +15,7 @@
 ▓▓▓▒░  AI inspired by natural plasticity ░░   ░░░ a    N    A  ░▒▓▒▓▒▒▒▓ Autonomous Neural Architecture v5.1 ░░▒▒▒
 ░                                                 ‾    ‾    ‾  ░▓▒▓░░▒▓░
 ```
+###### "The Creation" —Michelangelo
 
 ### Traces of thought
 
@@ -63,7 +64,5 @@ Since the beginning of his career, this constant pursuit of form and structure h
 Between behavioral _psychology_, _ethics_, and _neuroinformatics_, his work offers a new interpretation of _artificial intelligence_: that of an architecture which, like the _brain_, is cultivated with precision and intention.
 
 ![ ](/docs/assets/spacer16x16.png)
-
-###### \* "The Creation" —Michelangelo
 
 _░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-31_
