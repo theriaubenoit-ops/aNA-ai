@@ -16,7 +16,9 @@
 ░                                                 ‾    ‾    ‾  ░▓▒▓░░▒▓░
 ```
 
-![Version](https://img.shields.io/badge/version-alpha--5.1-orange?style=for-the-badge) `Project status` Beta → [Alpha] → ReleaseCandidate → Stable | `Language` Python 3.x | `License` MIT
+![Version](https://img.shields.io/badge/version-alpha--5.1-orange?style=for-the-badge)
+![Language](https://img.shields.io/badge/language-python--3.x-blue?style=for-the-badge)
+![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)
 
 ![ ](/docs/assets/spacer16x16.png)
 
