@@ -7,7 +7,7 @@
 ### 1. 🏗️ High-Level System Architecture
 
 ```
-aNA v5.0 Autonomous Neural Architecture
+aNA v5.1 Autonomous Neural Architecture
 ├── Main (Controller, the Pacemaker TEMPO):
 │   ├── Rhythm Orchestration: Synchronizes the processing cycle (Input -> Prediction -> Output)
 │   └── Neural State Management: Ensures overall stability and module integration
@@ -66,7 +66,7 @@ aNA v5.0 Autonomous Neural Architecture
     └── Coordination between Motor Cortex and Sensory Feedback
 
 Computational Engine: Free Energy Principle (FEP)
-aNA v5.0 optimizes prediction accuracy by minimizing the error between sensory reality and internal models. High error triggers the Limbic System to release neuromodulators (Adrenaline/Dopamine) via the Amygdala to force learning.
+aNA v5.1 optimizes prediction accuracy by minimizing the error between sensory reality and internal models. High error triggers the Limbic System to release neuromodulators (Adrenaline/Dopamine) via the Amygdala to force learning.
 ```
 
 ### 3. 🌐 Connection Logic (Synapses)
