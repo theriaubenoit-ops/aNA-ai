@@ -15,7 +15,7 @@
 ▓▓▓▒░  AI inspired by natural plasticity ░░   ░░░ a    N    A  ░▒▓▒▓▒▒▒▓ Autonomous Neural Architecture v5.1 ░░▒▒▒
 ░                                                 ‾    ‾    ‾  ░▓▒▓░░▒▓░
 ```
-###### "The Creation" —Michelangelo
+###### _"The Creation" —Michelangelo_
 
 ### Traces of thought
 
