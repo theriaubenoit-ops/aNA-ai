@@ -223,8 +223,7 @@ Processing Hierarchy:
 │   ├── anatomy/                        # Brain region implementations
 │   │   ├── base/
 │   │   │   ├── neuron.py               # Represents a single neuron
-│   │   │   ├── neuromodulator.py       # Chemical "gain controls"
-│   │   │   └── neural_transmission.py  # The standardized data structure
+│   │   │   └── neuromodulator.py       # Chemical "gain controls"
 │   │   ├── cortical/
 │   │   │   ├── frontal.py              # ✅ Executive Logic & Command Center
 │   │   │   ├── cortical_column.py      # ✅ Cortical Column
@@ -241,7 +240,7 @@ Processing Hierarchy:
 │   │       └── thalamus.py             # Enhanced Thalamus implementation
 │   ├── core/                           # Core neural components
 │   │   ├── input_gateway.py            # ✅ Input gateway
-│   │   ├── output_gateway.py           # ✅ Output gateway
+│   │   ├── output_gateway.py           # 🚧 Output gateway
 │   │   └── pulse.py                    # Core Pacemaker (Pulse)
 │   ├── gui/                            # Web-based interface
 │   │   └── dashboard.py                # 🚧 ...
