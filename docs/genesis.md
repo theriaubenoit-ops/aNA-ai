@@ -1,4 +1,4 @@
-🚀 Quick links: [License](/LICENSE), [ReadMe](/README.md), [Contributing](/CONTRIBUTING.md), [Installation](/docs/installation_en.md), [Philosophy](/docs/philosophy.md), Genisis, [Architecture](/docs/architecture.md)
+🚀 Quick links: [License](/LICENSE), [ReadMe](/README.md), [Contributing](/CONTRIBUTING.md), [Installation](/docs/installation.md), [Philosophy](/docs/philosophy.md), Genisis, [Architecture](/docs/architecture.md)
 
 ![ ](/docs/assets/spacer16x16.png)
 
