@@ -16,7 +16,7 @@
 ░                                                 ‾    ‾    ‾  ░▓▒▓░░▒▓░
 ```
 
-![Version](https://img.shields.io/badge/version-beta-5.0-orange?style=for-the-badge)
+![Version](https://img.shields.io/badge/version-beta--5.0-orange?style=for-the-badge)
 ![Language](https://img.shields.io/badge/language-python--3.x-blue?style=for-the-badge)
 ![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)
 
