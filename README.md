@@ -21,7 +21,7 @@
 ![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)
 
 > [!IMPORTANT]
-> **This project has evolved.** > The architecture has been significantly optimized in our latest milestone.
+> **This project has evolved.** > The architecture has been significantly optimized. 
 > **Access the update here 👉🏻 [alpha-v5.1](https://github.com/theriaubenoit-ops/aNA-ai/tree/alpha-v5.1)**
 
 ![ ](/docs/assets/spacer16x16.png)
