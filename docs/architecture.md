@@ -211,7 +211,7 @@ Processing Hierarchy:
 │   ├── api-reference.md                # 📋 ...
 │   ├── architecture.md                 # The technical plan
 │   ├── genesis.md                      # The story of the project
-│   ├── installation_en.md              # Installation (EN)
+│   ├── installation.md                 # Installation (EN)
 │   ├── installation_fr.md              # Installation (FR)
 │   ├── legend.md                       # 📋 ...
 │   └── philosophy.md                   # The ethical vision
@@ -255,6 +255,7 @@ Processing Hierarchy:
 │   │   ├── test_pulse.py               # ✅ Core Pacemaker (Pulse)
 │   │   ├── test_trauma_logic.py        # ✅ Hippocampus Trauma Logic
 │   │   └── test_thalamus.py            # ✅ Enhanced Thalamus implementation
+│   ├── tests_fr/                       # 🚧 Comprehensive test suite (FR)
 │   ├── config.py                       # ✅ Configuration Module
 │   ├── main.py                         # ✅ The orchestrator
 │   └── registry.py                     # ✅ The Centralized Genome
