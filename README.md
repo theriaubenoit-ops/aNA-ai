@@ -20,11 +20,11 @@
 ![Language](https://img.shields.io/badge/language-python--3.x-blue?style=for-the-badge)
 ![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)
 
-![ ](/docs/assets/spacer16x16.png)
-
 > [!IMPORTANT]
 > **This project has evolved.** > The architecture has been significantly optimized in our latest milestone.
 > **Access the update here 👉🏻 [alpha-v5.1](https://github.com/theriaubenoit-ops/aNA-ai/tree/alpha-v5.1)**
+
+![ ](/docs/assets/spacer16x16.png)
 
 ### The quest for AI reflecting life
 
