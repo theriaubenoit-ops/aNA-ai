@@ -2,7 +2,7 @@
 
 ![ ](/docs/assets/spacer16x16.png)
 
-English instructions: [installation (en)](/docs/installation_en.md)
+English instructions: [installation (en)](/docs/installation.md)
 
 ## Installation et utilisation projet ✴️*aNA* AI v5.1
 
