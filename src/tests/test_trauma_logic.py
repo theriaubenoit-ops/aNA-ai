@@ -12,8 +12,10 @@ import sys
 import os
 import numpy as np
 
-# Configuration du chemin pour les imports
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+# On définit la racine du projet dynamiquement
+ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+if ROOT_DIR not in sys.path:
+    sys.path.insert(0, ROOT_DIR)
 
 from anatomy.limbic.amygdala import Amygdala
 from anatomy.limbic.hippocampus import Hippocampus
