@@ -1,6 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-
+"""
+aNA Project - v5.1
+Module: Main Integration
+Description : This core process orchestrates the full bio-digital loop. It synchronizes the Thalamic flow, Cortical L4->L2/3->L6 cascades, and Dynamic Myelination. The goal is to simulate a stabilized metabolism where recognition modulates the Pulse (BPM) and neurotransmitter resistance in real-time.
+Features: Thalamo-Cortical Feedback, Homeostasis, Myelin growth.
+Architecture and neuroinformatics: Theriault Benoit
+"""
 import asyncio
 import os
 import sys
