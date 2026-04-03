@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-aNA v5.0 - Configuration Module
+aNA v5.1 - Configuration Module
 Conservez les valeurs par défaut pour garantir la stabilité de l'architecture.
 Les paramètres de tempérament peuvent être ajustés pour des expérimentations.
 """
