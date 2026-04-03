@@ -5,9 +5,8 @@ aNA AI Project - v5.1
 Module: Test Pulse 
 Description: This test is designed to validate the core functionalities of the Pulse module in complete isolation. It simulates the heart's response to stimuli, including changes in ATP levels, dopamine release, and frequency modulation. The test covers the dynamics of the pulse, including refractory periods and the impact of chemical signals on heart rate.
 Architecture and neuroinformatics: Theriault Benoit
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
+import unittest
 import numpy as np
 import time
 import os
