@@ -4,9 +4,7 @@
 Projet aNA - v5.1
 Module : Intégration principale
 Description : Ce processus central orchestre la boucle bio-numérique complète. Il synchronise le flux thalamique, les cascades corticales L4→L2/3→L6 et la myélinisation dynamique. L’objectif est de simuler un métabolisme stabilisé où la reconnaissance module le pouls (BPM) et la résistance aux neurotransmetteurs en temps réel.
-
 Fonctionnalités : Rétroaction thalamo-corticale, homéostasie, croissance de la myéline.
-
 Architecture et neuroinformatique : Theriault Benoit
 """
 import asyncio
