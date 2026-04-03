@@ -8,10 +8,10 @@ Unit Test for the Hippocampus - Isolated Version
 Architecture and neuroinformatics: Theriault Benoit
 """
 
+import unittest
 import numpy as np
 from typing import Dict, List, Tuple, Optional
 from enum import Enum
-
 
 class HippocampalRegion(Enum):
     """Hippocampal subregions"""
