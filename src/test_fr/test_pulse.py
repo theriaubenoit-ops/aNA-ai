@@ -11,8 +11,11 @@ import time
 import sys
 import os
 
-# Ajustement du chemin pour remonter d'un niveau et trouver 'src'
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+# On définit la racine du projet dynamiquement
+ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+if ROOT_DIR not in sys.path:
+    sys.path.insert(0, ROOT_DIR)
+    
 from core.pulse import Pulse 
 
 def monitor_ana_heart():
