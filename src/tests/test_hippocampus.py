@@ -7,11 +7,17 @@ Description: This test is designed to validate the core functionalities of the h
 Unit Test for the Hippocampus - Isolated Version
 Architecture and neuroinformatics: Theriault Benoit
 """
-
 import unittest
 import numpy as np
+import os
+import sys
 from typing import Dict, List, Tuple, Optional
 from enum import Enum
+
+# On définit la racine du projet dynamiquement
+ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+if ROOT_DIR not in sys.path:
+    sys.path.insert(0, ROOT_DIR)
 
 class HippocampalRegion(Enum):
     """Hippocampal subregions"""
