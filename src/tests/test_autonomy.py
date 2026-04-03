@@ -7,6 +7,7 @@ Description: This test is designed to validate the autonomous behaviors of the a
 Architecture and neuroinformatics: Theriault Benoit
 """
 
+import unittest
 import numpy as np
 import asyncio
 import termios
