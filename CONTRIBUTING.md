@@ -16,6 +16,8 @@
 ░                                                 ‾    ‾    ‾  ░▓▒▓░░▒▓░
 ```
 
+###### _"The Creation" —Michelangelo_
+
 **aNA** AI Project is a collaborative research initiative, not a software product.
 
 We are building an _Autonomous Neural Architecture_ that reflects biological principles rather than statistical shortcuts. If you wish to engage with this project, we view you not as a _"contributor"_ but as a research partner/observer.
