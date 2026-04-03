@@ -3,12 +3,10 @@
 
 """
 aNA v5.1 - Configuration Module
-Keep the default values ​​to ensure architecture stability.
-Temperature parameters can be adjusted for experimentation.
+Description : Keep the default values ​​to ensure architecture stability. Temperature parameters can be adjusted for experimentation.
 
 aNA v5.1 - Configuration Module (FR)
-Conservez les valeurs par défaut pour garantir la stabilité de l'architecture.
-Les paramètres de tempérament peuvent être ajustés pour des expérimentations.
+Description : Conservez les valeurs par défaut pour garantir la stabilité de l'architecture. Les paramètres de tempérament peuvent être ajustés pour des expérimentations.
 """
 
 # --- Valeurs par défaut (Ne pas modifier) ---
