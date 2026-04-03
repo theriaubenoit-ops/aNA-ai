@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Amygdala implementation for aNA v5.0 with:
+Amygdala implementation for aNA v5.1 with:
 
 This module implements the Amygdala with its major nuclei for emotional
 processing, fear conditioning, and emotional memory formation.
