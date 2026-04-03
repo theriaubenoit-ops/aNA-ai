@@ -15,6 +15,7 @@
 ▓▓▓▒░  AI inspired by natural plasticity ░░   ░░░ a    N    A  ░▒▓▒▓▒▒▒▓ Autonomous Neural Architecture v5.1 ░░▒▒▒
 ░                                                 ‾    ‾    ‾  ░▓▒▓░░▒▓░
 ```
+###### _"The Creation" —Michelangelo_
 
 ![Version](https://img.shields.io/badge/version-alpha--5.1-orange?style=for-the-badge)
 ![Language](https://img.shields.io/badge/language-python--3.x-blue?style=for-the-badge)
