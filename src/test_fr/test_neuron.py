@@ -11,8 +11,11 @@ import numpy as np
 import sys
 import os
 
-# Insertion du chemin pour l'accès aux modules src
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+# On définit la racine du projet dynamiquement
+ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+if ROOT_DIR not in sys.path:
+    sys.path.insert(0, ROOT_DIR)
+    
 from anatomy.base.neuron import Neuron, NeuronConfig
 
 class TestNeuron(unittest.TestCase):
