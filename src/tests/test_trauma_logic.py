@@ -6,6 +6,7 @@ Module: Test Hippocampus Trauma Logic
 Description: This test simulates the trauma logic of the hippocampus by creating a scenario where a neutral experience is followed by a traumatic event, and then simulating the forgetting process over time. The test checks whether the traumatic memory trace persists longer than the neutral one, demonstrating the concept of emotional memory consolidation and persistence.
 Architecture and neuroinformatics: Theriault Benoit
 """
+import unittest
 import asyncio
 import sys
 import os
