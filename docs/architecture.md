@@ -243,7 +243,8 @@ Processing Hierarchy:
 │   │   ├── output_gateway.py           # 🚧 Output gateway
 │   │   └── pulse.py                    # Core Pacemaker (Pulse)
 │   ├── gui/                            # Web-based interface
-│   │   └── dashboard.py                # 🚧 ...
+│   │   ├── dashboard.py                # 🚧 ...
+│   │   └── dashboard_fr.py             # 🚧 ... (FR)
 │   ├── tests/                          # Comprehensive test suite
 │   │   ├── test_amygdala.py            # ✅ Priority Filter & Interrupt Controller
 │   │   ├── test_autonomy.py            # ✅ To validate the autonomous behaviors
