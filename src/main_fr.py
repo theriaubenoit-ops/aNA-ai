@@ -8,7 +8,6 @@ import numpy as np
 
 # Gestion du path pour les imports locaux
 sys.path.append(os.path.abspath(os.path.dirname(__file__)))
-
 from config import get_config  # Ajoute l'import en haut du fichier
 from core.pulse import Pulse
 from core.input_gateway import InputGateway
@@ -20,15 +19,13 @@ from anatomy.base.neuromodulator import Neuromodulator
 from registry import ORGANS 
 
 async def main():
-    print("--- ⚡ aNA Organism v5.1 (Organization Meeting) ---")
+    print("--- ⚡ Organisme aNA v5.1 (Réunion des Organes) ---")
     
-    # 1. Initialisation des moteurs v5.1
     config = get_config()
     neurom_core = Neuromodulator() 
     hippo = Hippocampus(config=config, neuromodulator_core=neurom_core)
     heart = Pulse()
     gateway = InputGateway()
-    
     
     # 2. Initialisation du Néocortex (Colonne de traitement)
     # Chaque colonne représente une unité de calcul 6-layers
@@ -56,7 +53,7 @@ async def main():
         l6_signal = cortical_results['l6_feedback']
 
         # --- PHASE D : TRAITEMENT THALAMIQUE (Régulation du BPM) ---
-        # William utilise maintenant le feedback L6 pour calculer le rythme
+        # aNA utilise maintenant le feedback L6 pour calculer le rythme
         log_thalamus = await thalamus.process_payload(payload, l6_feedback=l6_signal)
         
         # Mise à jour du monitoring
@@ -71,15 +68,15 @@ async def main():
         avg_myeline = visual_column.get_average_myelination()
         
         # --- MONITORING ---
-        print(f"\nCycle {cycle:02d} | Input: '{char}'")
-        print(f" └─ Thalamus : {log_thalamus}")
-        print(f" └─ Cortex   : Recognition {cortical_results['recognition']:.2%}")
-        print(f" └─ Feedback : L6 Signal {cortical_results['l6_feedback']:.2f}")
-        print(f" └─ Myelin  : {avg_myeline:.5f} (Increased conductivity)") # Nouveau !
-        print(f" └─ Pulse    : {status['bpm']:.1f} BPM | Vitality: {status['energy']:.2%}")        
+        print(f"\nCycle {cycle:02d} | Entrée: '{char}'")
+        print(f" └─ Thalamus  : {log_thalamus}")
+        print(f" └─ Cortex    : Reconnaissance {cortical_results['recognition']:.2%}")
+        print(f" └─ Retour    : L6 Signal {cortical_results['l6_feedback']:.2f}")
+        print(f" └─ Myéline   : {avg_myeline:.5f} (Conductivité accrue)") # Nouveau !
+        print(f" └─ Impulsion : {status['bpm']:.1f} BPM | Vitalité: {status['energy']:.2%}")        
         await asyncio.sleep(0.1)
 
-    print("\n--- ✅ Stabilized and functional organism ---")
+    print("\n--- ✅ Organisme stabilisé et fonctionnel ---")
 
 if __name__ == "__main__":
     asyncio.run(main())

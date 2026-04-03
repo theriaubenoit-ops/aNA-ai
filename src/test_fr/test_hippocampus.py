@@ -1,23 +1,21 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-aNA AI Project - v5.1
-Module: Test Hippocampus
-Description: This test is designed to validate the core functionalities of the hippocampus module in complete isolation. It simulates a simple data stream to verify that the hippocampus learns patterns correctly and can retrieve them based on context. The test covers encoding, consolidation, and retrieval processes, as well as the handling of transitions between items.
-Unit Test for the Hippocampus - Isolated Version
-Architecture and neuroinformatics: Theriault Benoit
+Projet aNA AI - v5.1
+Module : Test de l'hippocampe
+La description : Ce test est conçu pour valider les fonctionnalités de base du module hippocampe en isolement complet. Il simule un flux de données simple pour vérifier que l'hippocampe apprend correctement les modèles et peut les récupérer en fonction du contexte. Le test couvre les processus d'encodage, de consolidation et de récupération, ainsi que la gestion des transitions entre les éléments.
+Test unitaire pour l'hippocampe - Version isolée
+Architecture et neuroinformatique : Thériault Benoit
 """
 import unittest
 import numpy as np
-import os
 import sys
+import os  
 from typing import Dict, List, Tuple, Optional
 from enum import Enum
 
-# On définit la racine du projet dynamiquement
-ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-if ROOT_DIR not in sys.path:
-    sys.path.insert(0, ROOT_DIR)
+# Insertion du chemin pour l'accès aux modules src
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 class HippocampalRegion(Enum):
     """Hippocampal subregions"""
@@ -238,7 +236,7 @@ def test_hippocampus_pattern_learning():
     Scenario: A -> B -> A -> B -> A -> B
     The hippocampus must learn that "B" often follows "A".
     """
-    print("\n🧪 UNIT TEST: Pattern Learning")
+    print("\n🧪 TEST UNITAIRE : Apprentissage de modèle")
     print("=" * 60)
     
     # Créer l'hippocampe
@@ -247,15 +245,15 @@ def test_hippocampus_pattern_learning():
     # Séquence d'apprentissage
     sequence = ["A", "B", "A", "B", "A", "B"]
     
-    print(f"📚 Learning sequence: {sequence}")
+    print(f"📚 Séquence d'apprentissage : {sequence}")
     print()
     
     # Phase 1: Encodage
-    print("📝 PHASE 1: Encoding")
+    print("📝 PHASE 1 : Encodage")
     print("-" * 30)
     
     for i, signal in enumerate(sequence):
-        print(f"Tour {i+1}: Encoding '{signal}'")
+        print(f"Tour {i+1} : Encodage de '{signal}'")
         hippo.encode(signal, importance=1.0)
         
         # Consolidation après chaque encodage
@@ -263,55 +261,55 @@ def test_hippocampus_pattern_learning():
         
         # Afficher l'état de la mémoire
         status = hippo.get_memory_status()
-        print(f"   Memory: L1={status['L1_count']}, L2={status['L2_count']}, L3={status['L3_count']}")
+        print(f"   Mémoire : L1={status['L1_count']}, L2={status['L2_count']}, L3={status['L3_count']}")
         print()
     
     # Phase 2: Récupération et Prédiction
-    print("🔍 PHASE 2: Recovery and Prediction")
+    print("🔍 PHASE 2 : Récupération et Prédiction")
     print("-" * 40)
     
     # Tester la prédiction après "A"
-    print("❓ Prediction test: What follows 'A'?")
+    print("❓ Test de prédiction: Qu'est-ce qui suit 'A' ?")
     prediction = hippo.retrieve("A")
     
     # Vérification
     expected = "B"  # On s'attend à ce que "B" soit prédit après "A"
     success = prediction == expected
     
-    print(f"🎯 Prediction: '{prediction}'")
-    print(f"✅ Success: {success}")
-    print(f"📊 Pattern counts: {hippo.pattern_counts}")
+    print(f"🎯 Prédiction : '{prediction}'")
+    print(f"✅ Succès : {success}")
+    print(f"📊 Nombre de modèles : {hippo.pattern_counts}")
     
     # Phase 3: Vérification détaillée
-    print("\n🔍 PHASE 3: Detailed Verification")
+    print("\n🔍 PHASE 3 : Vérification détaillée")
     print("-" * 35)
     
     status = hippo.get_memory_status()
-    print(f"📦 Content L1: {list(status['memory_store']['L1'].keys())}")
-    print(f"📦 Content L2: {list(status['memory_store']['L2'].keys())}")
-    print(f"📦 Content L3: {list(status['memory_store']['L3'].keys())}")
+    print(f"📦 Contenu L1: {list(status['memory_store']['L1'].keys())}")
+    print(f"📦 Contenu L2: {list(status['memory_store']['L2'].keys())}")
+    print(f"📦 Contenu L3: {list(status['memory_store']['L3'].keys())}")
     
     # Analyse de l'apprentissage
     a_count = hippo.pattern_counts.get("A", 0)
     b_count = hippo.pattern_counts.get("B", 0)
     
     print(f"\n📈 Analyse:")
-    print(f"   'A' appears {a_count} fois")
-    print(f"   'B' appears {b_count} fois")
-    print(f"   Pattern 'A' in L3: {'Yes' if 'A' in status['memory_store']['L3'] else 'No'}")
-    print(f"   Pattern 'B' in L3: {'Yes' if 'B' in status['memory_store']['L3'] else 'No'}")
+    print(f"   'A' apparaît {a_count} fois")
+    print(f"   'B' apparaît {b_count} fois")
+    print(f"   Modèle 'A' en L3: {'Oui' if 'A' in status['memory_store']['L3'] else 'Non'}")
+    print(f"   Modèle 'B' en L3: {'Oui' if 'B' in status['memory_store']['L3'] else 'Non'}")
     
     # Résultat final
-    print(f"\n🏁 TEST RESULTS:")
+    print(f"\n🏁 RÉSULTAT DU TEST :")
     print("=" * 25)
     if success:
-        print("✅ TEST SUCCESSFUL: The hippocampus has learned the pattern!")
-        print("   - The pattern 'A' → 'B' has been correctly memorized")
-        print("   - The prediction works as expected")
+        print("✅ TEST RÉUSSI: L'hippocampe a appris le pattern!")
+        print("   - Le pattern 'A' → 'B' a été correctement mémorisé")
+        print("   - La prédiction fonctionne comme attendu")
     else:
-        print("❌ TEST FAILED: The hippocampus did not learn correctly")
-        print("   - Check the consolidation thresholds")
-        print("   - Check the search logic")
+        print("❌ TEST ÉCHOUÉ: L'hippocampe n'a pas appris correctement")
+        print("   - Vérifiez les seuils de consolidation")
+        print("   - Vérifiez la logique de recherche")
     
     return success
 
@@ -322,7 +320,7 @@ def test_hippocampus_complex_pattern():
 
     Scenario: "HELLO" -> "WORLD" -> "HELLO" -> "WORLD"
     """
-    print("\n🧪 UNIT TEST: Complex Pattern")
+    print("\n🧪 TEST UNITAIRE: Modèle complexe")
     print("=" * 50)
     
     hippo = SimpleHippocampus()
@@ -330,7 +328,7 @@ def test_hippocampus_complex_pattern():
     # Séquence plus complexe
     sequence = ["HELLO", "WORLD", "HELLO", "WORLD"]
     
-    print(f"📚 Sequence: {sequence}")
+    print(f"📚 Séquence: {sequence}")
     
     # Encodage
     for signal in sequence:
@@ -338,19 +336,19 @@ def test_hippocampus_complex_pattern():
         hippo.consolidate()
     
     # Test de prédiction
-    print(f"\n❓ What comes after 'HELLO' ?")
+    print(f"\n❓ Qu'est-ce qui suit 'HELLO' ?")
     prediction = hippo.retrieve("HELLO")
     
     success = prediction == "WORLD"
-    print(f"🎯 Prediction: '{prediction}'")
-    print(f"✅ Success: {success}")
+    print(f"🎯 Prédiction : '{prediction}'")
+    print(f"✅ Succès : {success}")
     
     return success
 
 
 def run_all_tests():
     """Runs all unit tests"""
-    print("🚀 LAUNCH OF HIPPOCAMPE UNIT TESTS")
+    print("🚀 LANCEMENT DES TESTS UNITAIRES HIPPOCAMPE")
     print("=" * 60)
     
     # Test 1: Pattern simple
@@ -360,22 +358,22 @@ def run_all_tests():
     test2_success = test_hippocampus_complex_pattern()
     
     # Résumé
-    print("\n📊 TEST SUMMARY")
+    print("\n📊 RÉSUMÉ DES TESTS")
     print("=" * 25)
-    print(f"Test 1 (Pattern A→B): {'✅ PASS' if test1_success else '❌ FAIL'}")
-    print(f"Test 2 (Pattern HELLO→WORLD): {'✅ PASS' if test2_success else '❌ FAIL'}")
+    print(f"Test 1 (Modèle A→B): {'✅ PASS' if test1_success else '❌ FAIL'}")
+    print(f"Test 2 (Modèle HELLO→WORLD): {'✅ PASS' if test2_success else '❌ FAIL'}")
     
     overall_success = test1_success and test2_success
-    print(f"\n🎯 OVERALL RESULT: {'✅ ALL BASIC FUNCTIONS ARE VALIDATED' if overall_success else '❌ SOME FUNCTIONS REQUIRE ADJUSTMENTS'}")
+    print(f"\n🎯 RÉSULTAT GLOBAL: {'✅ TOUTES LES FONCTIONS DE BASE SONT VALIDÉES' if overall_success else '❌ CERTAINES FONCTIONS NÉCESSITENT DES AJUSTEMENTS'}")
     
     if overall_success:
-        print("\n🎉 The seahorse is ready for integration!")
-        print("   - encode() works correctly")
-        print("   - retrieve() works correctly")
-        print("   - consolidate() works correctly")
-        print("   - The data structure is valid")
+        print("\n🎉 L'hippocampe est prêt pour l'intégration!")
+        print("   - encode() fonctionne correctement")
+        print("   - retrieve() fonctionne correctement") 
+        print("   - consolidate() fonctionne correctement")
+        print("   - La structure de données est valide")
     else:
-        print("\n⚠️ Adjustments are needed before integration")
+        print("\n⚠️  Des ajustements sont nécessaires avant l'intégration")
     
     return overall_success
 
@@ -384,4 +382,4 @@ if __name__ == "__main__":
     # Exécuter tous les tests
     success = run_all_tests()
     
-    print(f"\n🏁 STATUT: {'HIPPOCAMPE READY FOR INTEGRATION' if success else 'HIPPOCAMPE AWAITING CORRECTIONS'}")
+    print(f"\n🏁 STATUT: {'HIPPOCAMPE PRÊT POUR INTÉGRATION' if success else 'HIPPOCAMPE EN ATTENTE DE CORRECTIONS'}")

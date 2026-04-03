@@ -1,22 +1,18 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-aNA AI Project - v5.1
-Module: Test Cortical Column 
-Description: This test is designed to validate the core functionalities of the cortical column module in complete isolation. It simulates a simple data stream to verify that the cortical column processes inputs correctly, learns patterns, and can retrieve them based on context. The test covers feedforward processing, lateral inhibition, and feedback mechanisms.
-Architecture and neuroinformatics: Theriault Benoit
+Projet aNA AI - v5.1
+Module : Test de la colonne corticale
+La description: Ce test est conçu pour valider les fonctionnalités de base du module de colonne corticale en isolation complète. Il simule un flux de données simple pour vérifier que la colonne corticale traite correctement les entrées, apprend les modèles et peut les récupérer en fonction du contexte. Le test couvre le traitement anticipé, l’inhibition latérale et les mécanismes de rétroaction.
+Architecture et neuroinformatique : Thériault Benoit
 """
-
 import unittest
 import numpy as np
-import os
 import sys
+import os
 
-# On définit la racine du projet dynamiquement
-ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-if ROOT_DIR not in sys.path:
-    sys.path.insert(0, ROOT_DIR)
-
+# Insertion du chemin pour l'accès aux modules src
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from anatomy.cortical.cortical_column import CorticalLobe
 
 class TestCorticalColumn(unittest.TestCase):
@@ -32,16 +28,16 @@ class TestCorticalColumn(unittest.TestCase):
 
     def test_signal_cascade(self):
         """Vérifie la cascade de signal à travers les 6 couches"""
-        print("\n[CORTICAL TEST: SIGNAL CASCADE]")
+        print("\n[TEST CORTICAL : CASCADE DE SIGNAL]")
         input_signal = 100.0
         output = self.lobe.process_through_layers(input_signal, self.neuromodulators)
         
         monitoring = self.lobe.get_precision_monitoring()
         efficiency = monitoring['precision_metrics']['overall_efficiency']
         
-        print(f" -> Input Signal: {input_signal}")
-        print(f" -> Output Signal (L5): {output:.2f}")
-        print(f" -> Overall Effectiveness: {efficiency:.2%}")
+        print(f" -> Signal Entrée : {input_signal}")
+        print(f" -> Signal Sortie (L5) : {output:.2f}")
+        print(f" -> Efficacité Globale : {efficiency:.2%}")
         
         # L'efficacité doit être proche de la cascade attendue (0.65) * attention boost
         self.assertGreater(output, 0)
@@ -49,7 +45,7 @@ class TestCorticalColumn(unittest.TestCase):
 
     def test_attention_mechanism(self):
         """Vérifie que l'acétylcholine booste bien le signal en Layer I"""
-        print("\n[CORTICAL TEST: ATTENTION MECHANISM]")
+        print("\n[TEST CORTICAL : MÉCANISME D'ATTENTION]")
         
         # Test sans attention et sans reconnaissance (Nouveauté pure)
         low_ach = {'acetylcholine': 0.0, 'dopamine': 0.0}
@@ -63,13 +59,13 @@ class TestCorticalColumn(unittest.TestCase):
         output_boosted = self.lobe.process_through_layers(100.0, high_ach, recognition_score=0.0)
         
         boost_factor = output_boosted / output_base
-        print(f" -> Attention Gainer (New): {boost_factor:.2f}x")
+        print(f" -> Gain d'attention (Nouveauté) : {boost_factor:.2f}x")
         
         self.assertGreater(output_boosted, output_base)
 
     def test_signal_cascade(self):
         """Vérifie la cascade de signal à travers les 6 couches"""
-        print("\n[CORTICAL TEST: SIGNAL CASCADE]")
+        print("\n[TEST CORTICAL : CASCADE DE SIGNAL]")
         input_signal = 100.0
         # On ajoute le score de reconnaissance par défaut
         output = self.lobe.process_through_layers(input_signal, self.neuromodulators, recognition_score=0.5)

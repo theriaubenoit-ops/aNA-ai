@@ -21,7 +21,15 @@ from dataclasses import dataclass
 
 @dataclass
 class NeuronConfig:
-    """Configuration parameters for neuron behavior"""
+    """Configuration avancée pour la simulation AMPA/NMDA et Myéline"""
+    
+    # Plasticité AMPA/NMDA (LTP)
+    learning_rate: float = 0.02       # Pas d'apprentissage de base (AMPA)
+    nmda_threshold: float = 0.4      # Seuil pour activer la mémoire profonde
+    
+    # Structure (Myéline)
+    myelination_rate: float = 0.01    # Vitesse de "câblage" physique
+
     # Electrical properties
     resting_potential: float = -70.0  # mV
     threshold_potential: float = -55.0  # mV
@@ -29,9 +37,9 @@ class NeuronConfig:
     refractory_period: int = 5  # time steps
     
     # Energy properties
-    base_energy_consumption: float = 0.01
-    firing_energy_cost: float = 0.1
-    energy_recovery_rate: float = 0.005
+    base_energy_consumption: float = 0.01 # Métabolisme
+    firing_energy_cost: float = 0.1 # Métabolisme
+    energy_recovery_rate: float = 0.005 # Métabolisme
     min_energy_threshold: float = 0.1
     
     # Structural properties
@@ -41,7 +49,7 @@ class NeuronConfig:
     # Layer-specific properties
     layer_id: int = 0  # 0-5 for cortical layers I-VI
     layer_threshold_modifier: float = 1.0
-    layer_connectivity_modifier: float = 1.0
+    layer_connectivity_modifier: float = 1.0 # Anatomie
 
 
 class Neuron:
@@ -66,7 +74,12 @@ class Neuron:
         """
         self.position = np.array(position, dtype=float)
         self.config = config or NeuronConfig()
-        
+
+        # Synaptic properties
+        self.ampa_receptors = 0.1  # Sensibilité de base
+        self.nmda_threshold = 0.7  # Seuil de dépolarisation pour ouvrir la mémoire
+        self.synaptic_weight = 0.1 # Le poids réel de la connexion
+                
         # Electrical state
         self.membrane_potential = self.config.resting_potential
         self.refractory_timer = 0
@@ -170,29 +183,24 @@ class Neuron:
         self.membrane_potential *= 0.98
     
     def _apply_neuromodulator_effects(self, input_strength: float, neuromodulators: Dict[str, float]) -> float:
-        """Apply neuromodulator effects to input strength"""
-        # Dopamine: enhances plasticity and learning
+        # 1. Calcul des effets individuels (ton code actuel)
         dopamine_effect = 1.0 + (neuromodulators.get('dopamine', 0.0) * 0.5)
-        
-        # Acetylcholine: increases sensitivity to inputs
         ach_effect = 1.0 + (neuromodulators.get('acetylcholine', 0.0) * 0.3)
-        
-        # Serotonin: stabilizes activity
         serotonin_effect = 1.0 - (neuromodulators.get('serotonin', 0.0) * 0.2)
-        
-        # Norepinephrine: increases alertness and response
         norepinephrine_effect = 1.0 + (neuromodulators.get('norepinephrine', 0.0) * 0.4)
-        
-        # NO gas: local volume effect
         no_effect = 1.0 + (neuromodulators.get('no_gas', 0.0) * 0.2)
+
+        # 2. LOGIQUE DE SAUVETAGE : L'atténuation par la certitude
+        # Si l'input est déjà fort (le neurone a reconnu le pattern), 
+        # on réduit drastiquement le multiplicateur.
+        total_modulation = (dopamine_effect * ach_effect * serotonin_effect * norepinephrine_effect * no_effect)
         
-        # Layer-specific modulation should not affect input strength directly
-        # Layer effects are handled in the threshold calculation
-        
-        total_modulation = (dopamine_effect * ach_effect * serotonin_effect * 
-                          norepinephrine_effect * no_effect)
-        
-        return input_strength * total_modulation
+        # Frein métabolique : plus input_strength est proche de 1.0, 
+        # plus on ramène la modulation vers 1.0 (neutre)
+        frein = max(0.0, 1.0 - input_strength) 
+        modulation_calmee = 1.0 + (total_modulation - 1.0) * frein
+
+        return input_strength * modulation_calmee
     
     def update(self, time_step: int, neuromodulators: Dict[str, float]):
         """
@@ -238,53 +246,77 @@ class Neuron:
 
 
     def _update_energy(self):
-        """Update energy consumption and recovery"""
-        # --- METABOLIC REGULATION (Note: Disabled for v5.0 alpha) ---
-        # Purpose: Prevents system runaway (over-firing).
-        # To be re-enabled during the 'Energy Balancing' phase.
-        #
-        # self.energy_level -= self.firing_energy_cost
-        # if self.energy_level < 0:
-        #    self.energy_level = 0
-        # ------------------------------------------------------------
-
-        # Base energy consumption
+        """Update energy consumption and recovery - ACTIVATED v5.9"""
+        
+        # 1. Consommation de base (Entretien des pompes ioniques)
         energy_cost = self.config.base_energy_consumption
         
-        # Additional cost if firing
+        # 2. Coût du Potentiel d'Action (Le "Spike")
+        # C'est ici que l'ATP est massivement consommé
         if self.is_firing:
             energy_cost += self.config.firing_energy_cost
         
-        # Layer-specific energy consumption
+        # 3. Modulation par couche (Ex: La couche V consomme plus)
         energy_cost *= self.config.layer_connectivity_modifier
         
-        # Update energy level
+        # 4. Mise à jour du stock d'ATP
         self.energy_level -= energy_cost
         self.energy_consumed += energy_cost
         
-        # Energy recovery
+        # 5. Récupération (Synthèse d'ATP / Repos)
         if self.energy_level < 1.0:
             self.energy_level += self.config.energy_recovery_rate
         
-        # Clamp energy level
+        # 6. Sécurité (L'énergie ne peut pas être négative)
         self.energy_level = max(0.0, min(1.0, self.energy_level))
     
-    def _update_plasticity(self, neuromodulators: Dict[str, float]):
-        """Update synaptic plasticity based on activity and neuromodulators"""
-        if self.is_firing:
-            # Dopamine enhances plasticity during firing
-            dopamine_level = neuromodulators.get('dopamine', 0.0)
-            plasticity_increase = 0.01 * (1.0 + dopamine_level * 2.0)
-            self.plasticity = min(1.0, self.plasticity + plasticity_increase)
+    def _update_plasticity(self, neuromodulators: dict = None): # Ajout de l'argument
+        """
+        Simulation de la plasticité Hebbienne v5.9.
+        Intègre la synergie entre dépolarisation (AMPA) et consolidation (NMDA)
+        modulée par le contexte émotionnel (Amygdale).
+        """
+        # Initialisation par défaut si aucun dictionnaire n'est passé
+        nm = neuromodulators if neuromodulators else {}
         
-        # Natural decay of plasticity
-        self.plasticity *= 0.999
+        # Récupération des facteurs d'influence (Ex: Noradrénaline pour l'alerte)
+        ne_boost = nm.get('norepinephrine', 0.0) * 0.5 
+        da_boost = nm.get('dopamine', 0.0) * 0.2
+
+        if self.is_firing:
+            # 1. Calcul de l'impact du signal (Potentiel local)
+            # L'influence émotionnelle (NE/DA) facilite le passage du seuil NMDA
+            impact_signal = self.plasticity * (1.0 + self.myelination_level + ne_boost)
+            
+            # 2. Logique de recrutement des récepteurs
+            if impact_signal > self.config.nmda_threshold:
+                # Seuil NMDA franchi : LTP forte
+                # On booste le gain si l'émotion est forte
+                gain = self.config.learning_rate * (2.5 + da_boost)
+                self.plasticity += gain
+            else:
+                # Activation AMPA seule
+                self.plasticity += self.config.learning_rate
+        
+        # 3. HOMÉOSTASIE (Le fameux 0.999)
+        # On pourrait imaginer que l'émotion réduit temporairement l'homéostasie 
+        # pour "fixer" la trace (évite l'érosion immédiate).
+        decay_factor = 0.999 + (min(0.0009, ne_boost * 0.001)) 
+        self.plasticity *= decay_factor
+        
+        # 4. Limites biologiques
+        self.plasticity = max(0.01, min(1.0, self.plasticity))
     
     def _update_myelination(self):
-        """Update myelination based on repeated firing patterns"""
-        if self.is_firing and self.last_spike_time > 0:
-            # Increase myelination for frequently firing neurons
-            self.myelination_level = min(1.0, self.myelination_level + 0.001)
+        """Force la croissance de la gaine dès la dépolarisation"""
+        if self.is_firing: 
+            # On ignore le last_spike_time pour ce test
+            increment = 0.01  # On revient à une valeur plus réaliste
+            self.myelination_level += increment
+            
+            # Cap à 1.0 (Conductivité max +50%)
+            if self.myelination_level > 1.0:
+                self.myelination_level = 1.0
     
     def get_output_strength(self) -> float:
         """
@@ -305,22 +337,30 @@ class Neuron:
         return (base_strength * energy_modifier * plasticity_modifier * 
                 myelination_modifier * self.config.layer_connectivity_modifier)
     
-    def get_state(self) -> Dict[str, Any]:
-        """Get current neuron state for monitoring and visualization"""
-        return {
-            'position': self.position.tolist(),
-            'membrane_potential': self.membrane_potential,
-            'energy_level': self.energy_level,
-            'is_firing': self.is_firing,
-            'refractory_timer': self.refractory_timer,
-            'synaptic_strength': self.synaptic_strength,
-            'myelination_level': self.myelination_level,
-            'plasticity': self.plasticity,
-            'activity_counter': self.activity_counter,
-            'layer_id': self.config.layer_id,
-            'last_spike_time': self.last_spike_time
-        }
-    
+    def get_output_strength(self) -> float:
+        """
+        Calcule la force du signal de sortie (Conductivité) lors du déclenchement.
+        Fusionne la plasticité, la myélinisation et l'état énergétique.
+        """
+        if not self.is_firing:
+            return 0.0
+        
+        # 1. Facteur de Conductivité (Concept Benoit Theriault)
+        # La myélinisation augmente la vitesse et la force de conduction.
+        conductivité_myéline = 1.0 + (self.myelination_level * 0.5)
+        
+        # 2. Facteur Métabolique (Vitalité)
+        # Un niveau d'énergie bas affaiblit physiquement le signal de sortie.
+        modulateur_energie = self.energy_level
+        
+        # 3. Facteur de Plasticité (LTP)
+        # Reflète l'efficacité synaptique apprise au fil des cycles.
+        efficacité_synaptique = self.plasticity
+        
+        # Résultante finale : Justesse scientifique et performance
+        # On inclut le modificateur de couche pour respecter l'anatomie corticale.
+        return (efficacité_synaptique * conductivité_myéline * modulateur_energie * self.config.layer_connectivity_modifier)
+        
     def reset(self):
         """Reset neuron to initial state"""
         self.membrane_potential = self.config.resting_potential

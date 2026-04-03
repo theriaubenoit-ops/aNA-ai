@@ -1,22 +1,18 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-aNA AI Project - v5.1
-Module: Test Neuron
-Description: This test is designed to validate the core functionalities of the neurone module in complete isolation. It simulates a simple data stream to verify that the neurone processes inputs correctly, learns patterns, and can retrieve them based on context. The test covers feedforward processing, lateral inhibition, and feedback mechanisms.
-Architecture and neuroinformatics: Theriault Benoit
+Projet aNA AI - v5.1
+Module : Test du neurone
+La description: Ce test est conçu pour valider les fonctionnalités de base du module neurone en isolement complet. Il simule un flux de données simple pour vérifier que le neurone traite correctement les entrées, apprend les modèles et peut les récupérer en fonction du contexte. Le test couvre le traitement anticipé, l’inhibition latérale et les mécanismes de rétroaction.
+Architecture et neuroinformatique : Thériault Benoit
 """
-
 import unittest
 import numpy as np
-import os
 import sys
+import os
 
-# On définit la racine du projet dynamiquement
-ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-if ROOT_DIR not in sys.path:
-    sys.path.insert(0, ROOT_DIR)
-
+# Insertion du chemin pour l'accès aux modules src
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from anatomy.base.neuron import Neuron, NeuronConfig
 
 class TestNeuron(unittest.TestCase):
@@ -33,24 +29,24 @@ class TestNeuron(unittest.TestCase):
 
     def test_initial_state(self):
         """Vérifie que le neurone démarre au repos"""
-        print("\n[NEURON TEST: INITIAL STATE]")
+        print("\n[TEST NEURONE : ÉTAT INITIAL]")
         self.assertFalse(self.neuron.is_firing)
         self.assertGreater(self.neuron.energy_level, 0.9)
-        print(" -> A resting neuron, charged with energy.")
+        print(" -> Neurone au repos et chargé en énergie.")
 
     def test_threshold_activation(self):
         """Vérifie si le neurone déclenche après avoir atteint le seuil"""
-        print("\n[NEURON TEST: ACTIVATION THRESHOLD]")
+        print("\n[TEST NEURONE : SEUIL D'ACTIVATION]")
         # On envoie un signal fort
         self.neuron.receive_input(60.0, {}) 
         self.neuron.update(time_step=1, neuromodulators={})
         
         self.assertTrue(self.neuron.is_firing)
-        print(f" -> Successful discharge! Potential reaches the threshold of {self.config.threshold_potential} mV.")
+        print(f" -> Décharge réussie ! Potentiel atteint le seuil de {self.config.threshold_potential} mV.")
 
     def test_energy_depletion(self):
         """Vérifie que l'activité consomme de l'énergie"""
-        print("\n[NEURON TEST: ENERGY CONSUMPTION]")
+        print("\n[TEST NEURONE : CONSOMMATION ÉNERGÉTIQUE]")
         initial_energy = self.neuron.energy_level
         
         # On fait feu plusieurs fois
@@ -59,7 +55,7 @@ class TestNeuron(unittest.TestCase):
             self.neuron.update(time_step=1, neuromodulators={})
             
         self.assertLess(self.neuron.energy_level, initial_energy)
-        print(f" -> Residual energy: {self.neuron.energy_level:.2f} (Consommation validée).")
+        print(f" -> Énergie résiduelle : {self.neuron.energy_level:.2f} (Consommation validée).")
 
 if __name__ == '__main__':
     unittest.main()

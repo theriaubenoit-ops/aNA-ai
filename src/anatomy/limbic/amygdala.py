@@ -320,21 +320,31 @@ class Amygdala:
     
     def process_emotional_input(self, sensory_input: float, emotional_valence: float,
                               social_input: float, neuromodulators: Dict[str, float]):
-        """Process all emotional inputs through the amygdala"""
+        """
+        Analyse l'entrée et calcule l'impact sur la persistance mémorielle.
+        """
         # 1. Basolateral processing (fear learning)
         self.bla.process_input(sensory_input, emotional_valence, neuromodulators)
         
-        # 2. Central amygdala processing (fear response)
+        # 2. Calcul du coefficient de persistance (Impact sur l'Hippocampe)
+        # Une valence extrême (très négative ou très positive) doit "verrouiller" la trace
+        emotional_impact = abs(emotional_valence)
+        
+        # 3. Transmission vers le CEA (réponse immédiate)
         bl_a_output = self.bla.get_output()
         self.c_e_a.process_input(bl_a_output, neuromodulators)
         
-        # 3. Medial amygdala processing (social behavior)
-        self.m_e_a.process_input(social_input, neuromodulators)
-    
+        # Retourne l'impact pour que l'Hippocampe ajuste son burn_rate
+        return emotional_impact, emotional_valence
+
     def form_emotional_memory(self, stimulus: str, valence: float, type_: str = "fear"):
-        """Form an emotional memory"""
+        """
+        Forme une mémoire et définit sa 'résistance' à l'oubli.
+        """
         if type_ == "fear":
-            self.bla.form_fear_memory(stimulus, valence)
+            # Si la valence est très négative, on sature la trace (Traumatisme)
+            strength = abs(valence) * 2.0 if valence < -0.8 else abs(valence)
+            self.bla.form_fear_memory(stimulus, strength)
         elif type_ == "social":
             self.m_e_a.store_social_memory(stimulus, valence)
     
@@ -358,32 +368,37 @@ class Amygdala:
     
     def update_activity(self, stimulus_intensity: float = 0.0):
         """
-        Met à jour l'activité de l'amygdale avec gestion de l'homéostasie.
+        Met à jour l'activité avec une distinction nette entre 
+        bruit de fond (neutre) et choc (trauma).
         """
-        # 1. Gestion du "Cortisol" (Activité interne)
-        if stimulus_intensity > 0.1:
-            self._internal_activity = min(1.0, self._internal_activity + stimulus_intensity * 0.5)
+        # 1. Gestion du "Cortisol" - Plus de latence pour le neutre
+        # On monte le seuil de réaction de 0.1 à 0.4
+        if stimulus_intensity > 0.4:
+            # Réaction proportionnelle au dépassement du seuil
+            gain = (stimulus_intensity - 0.4) * 0.5
+            self._internal_activity = min(1.0, self._internal_activity + gain)
         else:
-            # Décroissance naturelle vers 0.1
-            self._internal_activity = max(0.1, self._internal_activity - 0.05)
+            # Décroissance plus agressive pour "nettoyer" le bruit
+            self._internal_activity = max(0.05, self._internal_activity - 0.15)
         
         # 2. Modulation du CEA - ADRENALINE & HOMÉOSTASIE
         if self.c_e_a:
-            if stimulus_intensity > 0.1:
-                # Montée rapide pour la réaction d'alerte
-                self.c_e_a.autonomic_activation = min(1.0, self.c_e_a.autonomic_activation + stimulus_intensity * 0.8)
+            if stimulus_intensity > 0.7: # Seuil d'alerte critique
+                # Seul un choc majeur déclenche l'adrénaline
+                self.c_e_a.autonomic_activation = min(1.0, self.c_e_a.autonomic_activation + 0.8)
             else:
-                # CRUCIAL : Décroissance rapide pour le retour au calme
-                # On simule la recapture des neurotransmetteurs
-                self.c_e_a.autonomic_activation = max(0.1, self.c_e_a.autonomic_activation - 0.4)
+                # Recapture massive des neurotransmetteurs si < 0.7
+                # On évite que le 0.6 neutre ne maintienne l'alerte
+                self.c_e_a.autonomic_activation = max(0.05, self.c_e_a.autonomic_activation - 0.6)
             
-            # Ajustement du seuil de peur
-            base_threshold = 0.6
-            self.c_e_a.fear_threshold = max(0.1, base_threshold - (stimulus_intensity * 0.4))
+            # Ajustement dynamique du seuil de peur
+            # Le seuil de base remonte (0.75) pour être plus "difficile" à effrayer
+            base_threshold = 0.75
+            self.c_e_a.fear_threshold = max(0.2, base_threshold - (stimulus_intensity * 0.3))
 
         return {
             "cortisol": self._internal_activity,
-            "adrenaline": self.c_e_a.autonomic_activation if self.c_e_a else 0.1
+            "adrenaline": self.c_e_a.autonomic_activation if self.c_e_a else 0.05
         }
     
     def get_adrenaline_level(self):
@@ -413,7 +428,31 @@ class Amygdala:
                 neuron.reset()
             self.m_e_a.social_memory = {}
 
-
+    def get_synaptic_modulation(self) -> Dict[str, float]:
+        """
+        Calcule les coefficients de modulation avec un filtre de rupture.
+        """
+        responses = self.get_emotional_responses()
+        
+        # 1. Calcul de l'impact (Intensité de la trace)
+        # On utilise l'autonomic_activation comme moteur principal
+        impact = responses['autonomic_activation'] / 100.0
+        
+        # 2. Détection du "Flash NMDA" (Le seuil de peur)
+        # On ne déclenche le 1.0 que si l'adrénaline dépasse un seuil critique
+        # ET que la valence est négative (info récupérée via l'activité interne)
+        
+        if responses['autonomic_activation'] > 75.0: # Seuil de choc majeur
+            fear_level = 1.0
+        else:
+            # Pour un signal neutre ou modéré, on reste bas
+            fear_level = 0.1
+            
+        return {
+            "impact": min(1.0, impact),
+            "fear_level": fear_level
+        }
+    
 # Convenience functions for specialized amygdalae
 def create_fear_amygdala(position: np.ndarray = None) -> Amygdala:
     """Create an amygdala optimized for fear processing"""

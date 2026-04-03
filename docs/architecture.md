@@ -1,13 +1,13 @@
-🚀 Quick links: [License](/LICENSE), [ReadMe](/README.md), [Contributing](/CONTRIBUTING.md), [Installation](/docs/installation_en.md), [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), Architecture
+🚀 Quick links: [License](/LICENSE), [ReadMe](/README.md), [Contributing](/CONTRIBUTING.md), [Installation](/docs/installation.md), [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), Architecture
 
 ![ ](/docs/assets/spacer16x16.png)
 
-# ✴️*aNA (Autonomous Neural Architecture)* AI Project v5.0
+# ✴️*aNA (Autonomous Neural Architecture)* AI Project v5.1
 
 ### 1. 🏗️ High-Level System Architecture
 
 ```
-aNA v5.0 Autonomous Neural Architecture
+aNA v5.1 Autonomous Neural Architecture
 ├── Main (Controller, the Pacemaker TEMPO):
 │   ├── Rhythm Orchestration: Synchronizes the processing cycle (Input -> Prediction -> Output)
 │   └── Neural State Management: Ensures overall stability and module integration
@@ -66,7 +66,7 @@ aNA v5.0 Autonomous Neural Architecture
     └── Coordination between Motor Cortex and Sensory Feedback
 
 Computational Engine: Free Energy Principle (FEP)
-aNA v5.0 optimizes prediction accuracy by minimizing the error between sensory reality and internal models. High error triggers the Limbic System to release neuromodulators (Adrenaline/Dopamine) via the Amygdala to force learning.
+aNA v5.1 optimizes prediction accuracy by minimizing the error between sensory reality and internal models. High error triggers the Limbic System to release neuromodulators (Adrenaline/Dopamine) via the Amygdala to force learning.
 ```
 
 ### 3. 🌐 Connection Logic (Synapses)
@@ -211,7 +211,7 @@ Processing Hierarchy:
 │   ├── api-reference.md                # 📋 ...
 │   ├── architecture.md                 # The technical plan
 │   ├── genesis.md                      # The story of the project
-│   ├── installation_en.md              # Installation (EN)
+│   ├── installation.md                 # Installation (EN)
 │   ├── installation_fr.md              # Installation (FR)
 │   ├── legend.md                       # 📋 ...
 │   └── philosophy.md                   # The ethical vision
@@ -223,12 +223,11 @@ Processing Hierarchy:
 │   ├── anatomy/                        # Brain region implementations
 │   │   ├── base/
 │   │   │   ├── neuron.py               # Represents a single neuron
-│   │   │   ├── neuromodulator.py       # Chemical "gain controls"
-│   │   │   └── neural_transmission.py  # The standardized data structure
+│   │   │   └── neuromodulator.py       # Chemical "gain controls"
 │   │   ├── cortical/
 │   │   │   ├── frontal.py              # ✅ Executive Logic & Command Center
 │   │   │   ├── cortical_column.py      # ✅ Cortical Column
-│   │   │   ├── neocortex.py            # 🚧 ...
+│   │   │   ├── neocortex.py            # ✅ ...
 │   │   │   ├── occipital.py            # ✅ Visual Stream Processor
 │   │   │   ├── parietal.py             # ✅ Spatial Mapping & Data Integration
 │   │   │   └── temporal.py             # ✅ Semantic Storage & Pattern Recognition
@@ -241,24 +240,37 @@ Processing Hierarchy:
 │   │       └── thalamus.py             # Enhanced Thalamus implementation
 │   ├── core/                           # Core neural components
 │   │   ├── input_gateway.py            # ✅ Input gateway
-│   │   ├── output_gateway.py           # ✅ Output gateway
+│   │   ├── output_gateway.py           # 🚧 Output gateway
 │   │   └── pulse.py                    # Core Pacemaker (Pulse)
 │   ├── gui/                            # Web-based interface
-│   │   └── dashboard.py                # 🚧 ...
+│   │   ├── dashboard.py                # 🚧 ...
+│   │   └── dashboard_fr.py             # 🚧 ... (FR)
 │   ├── tests/                          # Comprehensive test suite
 │   │   ├── test_amygdala.py            # ✅ Priority Filter & Interrupt Controller
-│   │   ├── test_autonomy.py            # 🚧 ...
+│   │   ├── test_autonomy.py            # ✅ To validate the autonomous behaviors
 │   │   ├── test_cerebellum.py          # ✅ Timing Engine & Output Calibration
 │   │   ├── test_cortical_column.py     # ✅ Six-layer cortical signal flow
 │   │   ├── test_hippocampus.py         # ✅ Dynamic Buffer & Indexing System
 │   │   ├── test_limbic_system.py       # ✅ Limbic system
 │   │   ├── test_neuron.py              # ✅ Represents a single neuron
 │   │   ├── test_pulse.py               # ✅ Core Pacemaker (Pulse)
-│   │   ├── test_trauma_logic.py        # 🚧 ...
+│   │   ├── test_trauma_logic.py        # ✅ Hippocampus Trauma Logic
 │   │   └── test_thalamus.py            # ✅ Enhanced Thalamus implementation
-│   ├── config.py                       # 🚧 ...
+│   ├── tests_fr/                       # ✅ Comprehensive test suite (FR)
+│   │   ├── test_amygdala.py            # ✅ Priority Filter & Interrupt Controller (FR)
+│   │   ├── test_autonomy.py            # ✅ To validate the autonomous behaviors (FR)
+│   │   ├── test_cerebellum.py          # ✅ Timing Engine & Output Calibration (FR)
+│   │   ├── test_cortical_column.py     # ✅ Six-layer cortical signal flow (FR)
+│   │   ├── test_hippocampus.py         # ✅ Dynamic Buffer & Indexing System (FR)
+│   │   ├── test_limbic_system.py       # ✅ Limbic system (FR)
+│   │   ├── test_neuron.py              # ✅ Represents a single neuron (FR)
+│   │   ├── test_pulse.py               # ✅ Core Pacemaker (Pulse) (FR)
+│   │   ├── test_trauma_logic.py        # ✅ Hippocampus Trauma Logic (FR)
+│   │   └── test_thalamus.py            # ✅ Enhanced Thalamus implementation (FR)
+│   ├── config.py                       # ✅ Configuration Module
 │   ├── main.py                         # ✅ The orchestrator
-│   └── registry.py                     # 🚧 ...
+│   ├── main_fr.py                      # ✅ The orchestrator (FR)
+│   └── registry.py                     # ✅ The Centralized Genome
 ├── CONTRIBUTING.md                     # The rules of collaboration
 ├── LICENSE                             # Protection license
 └── README.md                           # Manifesto
@@ -271,4 +283,4 @@ Processing Hierarchy:
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-30_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-03_

@@ -1,62 +1,80 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-"""
-aNA v5.0 - Core Pacemaker (Pulse Generator)
-Orchestrator for the cognitive loop: Input -> Prediction -> Output
-"""
+# src/core/pulse.py
+import time
+import sys
+import os
 
-import asyncio
-import logging
-
-from anatomy.subcortical.thalamus import Thalamus
-from anatomy.limbic.limbic_system import LimbicSystem
-from anatomy.base.neural_transmission import TransmissionBridge
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
+from src.registry import METABOLISM
 
 class Pulse:
-    def __init__(self):
-        self.state = "AWAKE"
-        self.cycle_count = 0
-        self.running = False
+    def __init__(self, bpm=120.0):
+        self.bpm = bpm
+        self.hz = self.bpm / 60.0 
+        self.last_time = time.time() 
+        self.atp = 1.0             
+        self.energy = 1.0           
+        self.dopamine = 0.1         
+        self.is_refractory = False
         
-    async def run_cycle(self, sensory_input, filter_unit): # Ajout de filter_unit
-        self.cycle_count += 1
-        
-        # Filtrage Thalamique (Rendement : on ne traite que l'essentiel)
-        filtered_data = filter_unit.process_input(sensory_input)
-        
-        # Création de la transmission (Simulation de la dopamine à 0.7)
-        transmission = TransmissionBridge.thalamus_to_occipital(
-            thalamic_output=0.8, # Valeur simulée après filtrage
-            neuromodulators={'dopamine': 0.7}
-        )
-        
-        # Calcul de l'énergie libre sur le signal propre
-        prediction_error = await self.calculate_free_energy(transmission.get_signal_strength())
-        
-        return (f"Cycle {self.cycle_count} | "
-                f"Quality: {transmission.quality_level} | "
-                f"Error: {prediction_error:.4f}")
+    def update_frequency(self, new_bpm: float):
+        """Met à jour le rythme et recalcule les Hz."""
+        self.bpm = max(40.0, min(220.0, new_bpm))
+        self.hz = self.bpm / 60.0  # Crucial pour la ligne 59 de update()
+        self.period = 1.0 / self.hz if self.hz > 0 else 1.0
+        # self.last_time = time.time() # Optionnel selon ta gestion du dt
 
-    async def calculate_free_energy(self, input_data):
-        """Asynchronous minimization of variational free energy."""
-        # Simulated async delay (e.g., waiting for thalamic input)
-        await asyncio.sleep(0.01) 
-        return 0.0 
-
-    def update_neuromodulators(self, error):
-        """Global regulation of system sensitivity."""
-        pass
-
-    async def start_orchestrator(self, input_stream, filter_unit): # Ajout de filter_unit
-        self.running = True
-        print("🚀 aNA Orchestrator starting...")
+        # --- LIGNE SUPPRIMÉE ---
+        # print(f"  [Pulse] Nouveau BPM: {self.bpm:.2f}")
         
-        while self.running:
-            # On passe le filtre au cycle de calcul
-            result = await self.run_cycle(input_stream, filter_unit) 
-            print(result)
-            await asyncio.sleep(0.5)
+    def update(self):
+        """Méthode appelée dans main.py pour simuler le battement."""
+        # Ton code actuel à la ligne 59 utilise METABOLISM["HEART_BASE_HZ"]
+        # Assure-toi que self.hz est bien à jour ici
+        self.hz = self.bpm / 60.0
+        
+    def compute_dynamics(self) -> float:
+        """
+        Calcule le delta temporel (dt) et met à jour l'état métabolique.
+        Indispensable pour le monitoring aNA 5.1.
+        """
+        now = time.time()
+        dt = now - self.last_time
+        self.last_time = now
 
-# Initializing the pacemaker
-pulse = Pulse()
+        # 1. Consommation passive d'ATP (Homeostasis)
+        # Plus le système est actif, plus il consomme.
+        self.atp = max(0.0, self.atp - (0.01 * dt))
+
+        # 2. Dissipation de la Dopamine (Recapture)
+        # On simule le retour au calme après un stimulus.
+        self.dopamine = max(0.05, self.dopamine - (0.1 * dt))
+
+        # 3. Gestion de l'état réfractaire
+        # Si l'ATP est trop bas, le coeur entre en mode "Repos".
+        self.is_refractory = self.atp < 0.2
+
+        return dt
+
+    def get_current_hz(self) -> float:
+        """Retourne la fréquence cardiaque simulée en Hertz."""
+        base_hz = 1.2 # ~72 BPM
+        # L'excitation (dopamine) augmente le rythme, la fatigue (ATP) le ralentit.
+        return base_hz * (1.0 + self.dopamine) * (0.5 + (self.atp * 0.5))
+
+    def inject_stimulus(self, intensity: float):
+        """Simule une décharge d'adrénaline/dopamine."""
+        if not self.is_refractory:
+            self.dopamine = min(1.0, self.dopamine + intensity)
+            self.atp = max(0.0, self.atp - (intensity * 0.2))
+
+    def get_status(self):
+        # On retire le multiplicateur * 100 si ENERGY_MAX est déjà à 100
+        # Ou on s'assure de renvoyer une fraction de 100.
+        return {
+            "bpm": self.hz * 60,
+            "energy": max(0, self.energy), # On affiche la valeur brute
+            "hz": self.hz
+        }

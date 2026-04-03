@@ -2,9 +2,9 @@
 
 ![ ](/docs/assets/spacer16x16.png)
 
-English instructions: [installation (en)](/docs/installation_en.md)
+English instructions: [installation (en)](/docs/installation.md)
 
-## Installation et utilisation projet ✴️*aNA* AI v5.0
+## Installation et utilisation projet ✴️*aNA* AI v5.1
 
 1. **Prérequis _(The Environment)_**
    - [ ] Version _Python_ minimale _(ex: 3.10+)_
@@ -17,16 +17,18 @@ English instructions: [installation (en)](/docs/installation_en.md)
    - [ ] Installation : `pip install -r requirements.txt`
 
 3. - [x] **Exécution des scripts _(Phase « Action »)_** Launch associated _Python scripts_ to validate neural logic:
-     - `python3 src/tests/test_amygdala.py` _(Réponse homéostatique au stress et à l'alerte)_
-     - `python3 src/tests/test_cerebellum.py` _(Précision motrice et correction d'erreurs)_
-     - `python3 src/tests/test_cortical_column.py` _(Flux de signal cortical à six couches)_
-     - `python3 src/tests/test_limbic_system.py` _(Intégration émotionnelle et cognitive)_
-     - `python3 src/tests/test_hippocampus.py` _(Consolidation synaptique et encodage de motifs)_
-     - `python3 src/tests/test_neuron.py` _(Dynamique métabolique et électrophysiologique)_
-     - `python3 src/tests/test_pulse.py` _(Oscillations neuronales et synchronisation temporelle)_
-     - `python3 src/tests/test_thalamus.py` _(Filtrage sensoriel et signal routage)_
-     - `python3 src/main.py` _(Noyau cortical et espace de travail global)_
-     - PROCHAINEMENT - `python3 src/gui/dashboard.py`
+     - `python3 src/tests_fr/test_amygdala.py` _(Réponse homéostatique au stress et à l'alerte)_
+     - `python3 src/tests_fr/test_autonomy` _(Pour valider les comportements autonomes)_
+     - `python3 src/tests_fr/test_cerebellum.py` _(Précision motrice et correction d'erreurs)_
+     - `python3 src/tests_fr/test_cortical_column.py` _(Flux de signal cortical à six couches)_
+     - `python3 src/tests_fr/test_limbic_system.py` _(Intégration émotionnelle et cognitive)_
+     - `python3 src/tests_fr/test_hippocampus.py` _(Consolidation synaptique et encodage de motifs)_
+     - `python3 src/tests_fr/test_neuron.py` _(Dynamique métabolique et électrophysiologique)_
+     - `python3 src/tests_fr/test_pulse.py` _(Oscillations neuronales et synchronisation temporelle)_
+     - `python3 src/tests_fr/test_thalamus.py` _(Filtrage sensoriel et signal routage)_
+     - `python3 src/tests_fr/test_trauma_logic.py` _(Saillance émotionnelle et traces acides)_
+     - `python3 src/main_fr.py` _(Noyau cortical et espace de travail global)_
+     - PROCHAINEMENT - `python3 src/gui/dashboard_fr.py`
    - [ ] PROCHAINEMENT - Démonstrations : Pour lancer _l'interface web_ (e.g., "http://localhost:8000/examples/basic-demo.html").
      - Remarque concernant le serveur local : Pour exécuter les démonstrations web, utilisez `python3 -m http.server 8000` depuis le répertoire racine.
 
@@ -37,4 +39,4 @@ English instructions: [installation (en)](/docs/installation_en.md)
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-20_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-03_

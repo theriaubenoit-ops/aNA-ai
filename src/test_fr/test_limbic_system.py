@@ -1,22 +1,18 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-aNA AI Project - v5.1
-Module: Test Limbic system 
-Description: This test suite is designed to validate the core functionalities of the limbic system modules (Amygdala and Hippocampus) in complete isolation. It simulates various scenarios to verify that the amygdala responds appropriately to different stimulus intensities, and that the hippocampus can encode, consolidate, and retrieve patterns correctly. The tests also check the interaction between these two structures in terms of emotional memory processing.
-Architecture and neuroinformatics: Theriault Benoit
+Projet aNA AI - v5.1
+Module : Tester le système limbique
+Description : Cette suite de tests est conçue pour valider les fonctionnalités de base des modules du système limbique (Amygdale et Hippocampe) en isolement complet. Il simule divers scénarios pour vérifier que l’amygdale répond de manière appropriée aux différentes intensités de stimulus et que l’hippocampe peut coder, consolider et récupérer correctement les modèles. Les tests vérifient également l’interaction entre ces deux structures en termes de traitement de la mémoire émotionnelle.
+Architecture et neuroinformatique : Thériault Benoit
 """
-
 import unittest
 import numpy as np
-import os
 import sys
+import os
 
-# On définit la racine du projet dynamiquement
-ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-if ROOT_DIR not in sys.path:
-    sys.path.insert(0, ROOT_DIR)
-
+# Insertion du chemin pour l'accès aux modules src
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from unittest.mock import MagicMock
 from anatomy.limbic.limbic_system import LimbicSystem
 
@@ -29,7 +25,7 @@ class TestLimbicSystem(unittest.TestCase):
 
     def test_routine_experience(self):
         """Scénario : Une donnée neutre (Arousal faible)"""
-        print("\n[SCENARIO: ROUTINE EXPERIENCE]")
+        print("\n[SCÉNARIO : EXPÉRIENCE DE ROUTINE]")
         # On simule un état émotionnel calme
         emotional_data = {"dopamine": 0.1, "cortisol": 0.1}
         
@@ -40,12 +36,12 @@ class TestLimbicSystem(unittest.TestCase):
         args, kwargs = self.mock_hippocampus.encode.call_args
         importance = kwargs.get('importance', 0.0)
         
-        print(f" -> Calculated importance: {importance:.2f}")
+        print(f" -> Importance calculée : {importance:.2f}")
         self.assertFalse(is_critical)
 
     def test_shock_experience(self):
         """Scénario : Un événement majeur (Choc)"""
-        print("\n[SCENARIO: MAJOR EVENT (SHOCK)]")
+        print("\n[SCÉNARIO : ÉVÉNEMENT MAJEUR (CHOC)]")
         # On simule un stress élevé[cite: 8]
         shock_data = {"dopamine": 0.2, "cortisol": 0.9}
         
@@ -54,7 +50,7 @@ class TestLimbicSystem(unittest.TestCase):
         args, kwargs = self.mock_hippocampus.encode.call_args
         importance = kwargs.get('importance', 0.0)
         
-        print(f" -> Calculated importance: {importance:.2f}")
+        print(f" -> Importance calculée : {importance:.2f}")
         self.assertTrue(is_critical)
 
 if __name__ == '__main__':
