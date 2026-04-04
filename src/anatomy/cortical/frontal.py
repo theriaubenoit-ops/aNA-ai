@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Frontal Lobe v5.1 - Fonctions Exécutives et Action
-Hérite de CorticalColumns pour la gestion L4 -> L2/3 -> L5.
-Architecture : Benoit Theriault
+Frontal Lobe implementation for aNA v5.1 with:
+
+This module implements the Frontal Lobe with its key regions (M1, PFC) for motor planning and executive functions. It integrates with the ChemicalCore for neuromodulatory influences, particularly dopamine (Motivation) and noradrenaline (Trauma). The Frontal Lobe transforms recognition signals from the Temporal Lobe into motor intentions and provides feedback to the Neocortex for action execution.
+
+Architecture, concept and supervision: Benoit Theriault
+Collaboration, research and code: Gemini, Cline 
 """
 
 import asyncio
