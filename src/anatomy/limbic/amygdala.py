@@ -3,8 +3,7 @@
 """
 Amygdala implementation for aNA v5.1 with:
 
-This module implements the Amygdala with its major nuclei for emotional
-processing, fear conditioning, and emotional memory formation.
+This module implements the Amygdala with its key nuclei (BLA, CEA, MEA) for emotional processing, fear learning, and social behavior. It integrates with the ChemicalCore for neuromodulatory influences, particularly dopamine (Motivation), norepinephrine (Stress), and serotonin (Mood). The Amygdala processes sensory and emotional inputs to modulate memory persistence in the Hippocampus and orchestrate fear responses via the Central Amygdala.
 
 Architecture, concept and supervision: Benoit Theriault
 Collaboration, research and code: Gemini, Cline 
