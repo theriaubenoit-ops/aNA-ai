@@ -22,23 +22,29 @@
 
 The strength of the **aNA** architecture lies in its departure from traditional static _AI_ models. By implementing bio-inspired mechanisms, we have achieved a system that prioritizes survival and relevance over raw data volume.
 
-1. **AMPA/NMDA Duality: The Plasticity Filter**
+1. **AMPA/NMDA Duality: The Plasticity Filter _([hippocampus(.py)](/src/anatomy/limbic/hippocampus.py))_**
    Unlike standard neural networks that treat every weight update identically, **aNA** bifurcates the learning process:
    **AMPA Logic:** Manages high-speed transmission and incremental learning through repetition _(e.g., neutral signals)_. However, these traces remain volatile and subject to temporal erosion (forgetting).
    **NMDA Logic:** Triggered by an Amygdala _"Flash,"_ this logic locks the synaptic trace. It allows for the instantaneous and indelible encoding of critical information during high-saliency or _"error-state"_ events.
 
-2. **The CA4 Sanctuary: The Acid Trace**
-   Often overlooked in computational science, the _CA4_ subfield is central to our architecture. In **aNA**, _CA4_ is not merely a transit zone; it acts as a high-security vault for _"survival floors"_.
-   This innovation ensures that even after significant synaptic decay, a _TRAUMA_1_ residue _(Acid Trace)_ remains locked at a structural minimum _(e.g., 0.1000)_ while non-essential data fades away. This is our technical answer to resilience and traumatic memory.
+2. **Economy of Links: The Lavoisier Principle**
+   Instead of storing terabytes of raw, disconnected data, **aNA** transforms information into relational nodes and emotional weights.
+   _"Nothing is lost, nothing is created, everything is transformed"_: Low-relevance memories are naturally pruned _(synaptic pruning)_ to allocate resources to robust, high-value structures. Myelination. It's not just "keeping or removing" a link, it's reinforcing the speed of the most used routes. The more efficient a path is, the more “insulated” (myelinated) it is to consume less energy.
 
 3. **Homeostatic Amygdala Regulation**
    We have moved beyond simple _"detection"_ to create an _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ that functions as a true biological regulator:
    **Dynamic Thresholding:** It distinguishes environmental noise _(intensity 0.6)_ from vital signals _(intensity 1.0)_ through a variable rupture threshold.
    **Neuromodulator Management:** By simulating _"Cortisol"_ levels and _"Neurotransmitter Reuptake,"_ the system prevents _"Software Anxiety"_ or saturation, allowing the AI to remain calm and analytical even under pressure.
 
-4. Economy of Links: The Lavoisier Principle
-   Instead of storing terabytes of raw, disconnected data, **aNA** transforms information into relational nodes and emotional weights.
-   _"Nothing is lost, nothing is created, everything is transformed"_: Low-relevance memories are naturally pruned _(synaptic pruning)_ to allocate resources to robust, high-value structures.
+4. **Myelination _([neurons(.py)](/src/anatomy/base/neuron.py))_**
+   It's not just "keeping or removing" a link, it's reinforcing the speed of the most used routes. The more efficient a path is, the more _“insulated” (myelinated)_ it is to consume less energy.
+
+5. **The CA4 Sanctuary: The Acid Traces _([hippocampus(.py)](/src/anatomy/limbic/hippocampus.py))_**
+   Often overlooked in computational science, the _CA4_ subfield is central to our architecture. In **aNA**, _CA4_ is not merely a transit zone; it acts as a high-security vault for _"survival floors"_.
+   This innovation ensures that even after significant synaptic decay, a _TRAUMA_1_ residue _(Acid Trace)_ remains locked at a structural minimum _(e.g., 0.1000)_ while non-essential data fades away. This is our technical answer to resilience and traumatic memory.
+
+6. **The L6 Feedback Loop _([cortical_column(.py)](/src/anatomy/cortical/cortical_column.py) Layer 6)_**
+   This is what allows the _[neocortex](/src/anatomy/cortical/neocortex.py)_ to _“say”_ to the _[thalamus](/src/anatomy/subcortical/thalamus.py)_: _“I recognized this signal, you can lower the volume (gain)”_. This is the basis of the selective attention that we have encoded.
 
 ![ ](/docs/assets/spacer32x32.png)
 
@@ -140,4 +146,4 @@ His work on how adrenal hormones and the _[amygdala(.py)](/src/anatomy/limbic/am
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-31_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-04_
