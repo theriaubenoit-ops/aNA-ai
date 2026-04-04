@@ -1,6 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+"""
+Limbic system implementation for aNA v5.1 with:
 
+This module coordinates the Amygdala and Hippocampus to manage emotional valence and memory prioritization. It includes mechanisms for processing experiences, consolidating memories based on emotional intensity, and triggering flashbacks.
+
+Architecture, concept and supervision: Benoit Theriault
+Collaboration, research and code: Gemini
+"""
 import sys
 import os
 
