@@ -13,7 +13,7 @@ aNA v5.1 Autonomous Neural Architecture
 │   ├── Real-time Neural Stats: Monitors neurotransmitter levels
 │   ├── Predictive Accuracy (Free Energy): Real-time visualization of prediction error
 │   └── Memory Status: Fill and consolidation state (L1/L2/L3)
-├── Main (Controller, the Pacemaker, Pulse):
+├── Main (Controller, the Pacemaker Pulse):
 │   ├── Rhythm Orchestration: Synchronizes the processing cycle (Input -> Prediction -> Output)
 │   └── Neural State Management: Ensures overall stability and module integration
 └── Registry (The organ management system)
