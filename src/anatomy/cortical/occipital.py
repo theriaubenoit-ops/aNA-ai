@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Occipital Lobe implementation for aNA v5.1 with:
+Occipital Lobe implementation for aNA v5.1
+
+Communicates with: Input: (<- Thalamus) | Input/Output: (<-> Other Cortical Areas) | Output: (-> Motor / Pre-frontal)
 
 This module implements the Occipital Lobe with its key regions (V1-V3) for visual processing. It integrates with the ChemicalCore for neuromodulatory influences, particularly noradrenaline (Trauma) and acetylcholine (Attention). The Occipital Lobe processes visual inputs, modulates them based on the chemical state, and provides feedback to the Thalamus to regulate sensory gating.
 
