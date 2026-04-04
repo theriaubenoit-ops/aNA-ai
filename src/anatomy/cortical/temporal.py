@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Temporal Lobe v5.1 - Reconnaissance Sémantique et Mémoire
-Hérite de CorticalColumns pour l'accès aux couches L2/3 (Mémoire).
-Architecture : Benoit Theriault
+Temporal Lobe implementation for aNA v5.1 with:
+
+This module implements the Temporal Lobe with its key regions (IT, Wernicke) for semantic processing and memory integration. It integrates with the ChemicalCore for neuromodulatory influences, particularly acetylcholine (Attention) and serotonin (Perception Stabilization). The Temporal Lobe fuses visual and spatial information to recognize objects and provides feedback to the Frontal Lobe for action planning.
+
+Architecture, concept and supervision: Benoit Theriault
+Collaboration, research and code: Gemini, Cline 
 """
 
 import asyncio
