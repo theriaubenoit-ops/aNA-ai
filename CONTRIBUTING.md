@@ -40,7 +40,7 @@ We are moving away from the "open-source contribution" model—where the goal is
 
 **This is a leap forward in time; what you see here is the _future of AI_. If you are exploring this project today, it is because you possess the curiosity required to push this innovative concept further. We are currently architecting the _next major update_, but we invite you to share your _observations_ and _ideas_ with us as we continue to grow this vision together.**
 
-Join the **aNA** _computational neuroscience_ community: _[Download(.zip)](https://github.com/theriaubenoit-ops/aNA-ai/archive/refs/heads/alpha-v5.1.zip)_ or/and [installation](/docs/installation.md)
+Join the **aNA** _computational neuroscience_ community: _[Download(.zip)](https://github.com/theriaubenoit-ops/aNA-ai/archive/refs/heads/main.zip)_ or/and [installation](/docs/installation.md)
 
 ![ ](/docs/assets/spacer32x32.png)
 
