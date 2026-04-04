@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Occipital Lobe v5.1 - Vision Biométrique
-Hérite de CorticalLobe pour une intégration directe avec le ChemicalCore.
+Occipital Lobe implementation for aNA v5.1 with:
+
+This module implements the Occipital Lobe with its key regions (V1-V3) for visual processing. It integrates with the ChemicalCore for neuromodulatory influences, particularly noradrenaline (Trauma) and acetylcholine (Attention). The Occipital Lobe processes visual inputs, modulates them based on the chemical state, and provides feedback to the Thalamus to regulate sensory gating.
+
+Architecture, concept and supervision: Benoit Theriault
+Collaboration, research and code: Gemini, Cline 
 """
 
 import asyncio
