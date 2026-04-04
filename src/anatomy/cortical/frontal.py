@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Frontal Lobe implementation for aNA v5.1 with:
+Frontal Lobe implementation for aNA v5.1
+
+Communicates with: Input: (<- Thalamus) | Input/Output: (<-> Other Cortical Areas) | Output: (-> Motor / Pre-frontal)
 
 This module implements the Frontal Lobe with its key regions (M1, PFC) for motor planning and executive functions. It integrates with the ChemicalCore for neuromodulatory influences, particularly dopamine (Motivation) and noradrenaline (Trauma). The Frontal Lobe transforms recognition signals from the Temporal Lobe into motor intentions and provides feedback to the Neocortex for action execution.
 
