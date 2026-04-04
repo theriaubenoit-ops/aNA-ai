@@ -15,6 +15,7 @@
 ▓▓▓▒░  AI inspired by natural plasticity ░░   ░░░ a    N    A  ░▒▓▒▓▒▒▒▓ Autonomous Neural Architecture v5.1 ░░▒▒▒
 ░                                                 ‾    ‾    ‾  ░▓▒▓░░▒▓░
 ```
+
 ###### _"The Creation" —Michelangelo_
 
 ## Core Innovations in _aNA v5.1_
@@ -68,7 +69,7 @@ _The **aNA** (Autonomous Neural Architecture) AI project rejects the paradigm of
    **aNA** is an open-research initiative. We believe that diverse perspectives are essential to understanding and refining this architecture. We invite contribution not as mere labor, but as a collective engagement in the accuracy of this cognitive simulation.
 
 7. **Natural Erasure & Transformation:**
-   Based on _Lavoisier’s principle_, information that loses relevance is naturally _"pruned"_ or transformed, preventing the accumulation of digital noise.
+   Based on _Lavoisier’s principle_, information that loses relevance is naturally _"pruned"_ or transformed, preventing the accumulation of _digital noise_.
 
 8. **Synaptic Gating: _AMPA_ vs. _NMDA_ Logic**
    Our architecture distinguishes between functional transmission _(AMPA)_ and structural consolidation _(NMDA)_.
