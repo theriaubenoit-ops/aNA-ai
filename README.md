@@ -30,7 +30,7 @@ Current _artificial intelligence_, while powerful, relies on massive, rigid arch
 
 ### Dynamic Cognitive Architecture
 
-- **Asynchronous Orchestration:** The _[pulse(.py)](/src/core/pulse.py)_ module acts as the system's biological pacemaker, regulating non-blocking cycles according to the organism's homeostatic state.
+- **Asynchronous Orchestration:** The _[pulse(.py)](/src/core/pulse.py)_ module acts as the system's _biological pacemaker_, regulating non-blocking cycles according to the organism's homeostatic state.
 - **Thalamic Filtering:** _Sensory inputs_ are gated and processed through specific _nuclei_ to isolate relevant signals from stochastic background _"noise"_.
 - **Adaptive Fidelity:** **aNA** dynamically simulates information fidelity based on _dopamine levels_, modulating the quality of internal representations in real-time.
 
