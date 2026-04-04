@@ -40,7 +40,7 @@ The strength of the **aNA** architecture lies in its departure from traditional 
    **Neuromodulator Management:** By simulating _"Cortisol"_ levels and _"Neurotransmitter Reuptake,"_ the system prevents _"Software Anxiety"_ or saturation, allowing the AI to remain calm and analytical even under pressure.
 
 5. **Myelination _([neurons(.py)](/src/anatomy/base/neuron.py))_**
-   It's not just "keeping or removing" a link, it's reinforcing the speed of the most used routes. The more efficient a path is, the more _“insulated” (myelinated)_ it is to consume less energy.
+   It's not just _"keeping or removing"_ a link, it's reinforcing the speed of the most used routes. The more efficient a path is, the more _“insulated” (myelinated)_ it is to consume less energy.
 
 6. **The CA4 Sanctuary: The Acid Traces _([hippocampus(.py)](/src/anatomy/limbic/hippocampus.py))_**
    Often overlooked in computational science, the _CA4_ subfield is central to our architecture. In **aNA**, _CA4_ is not merely a transit zone; it acts as a high-security vault for _"survival floors"_.
