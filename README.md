@@ -15,6 +15,7 @@
 ▓▓▓▒░  AI inspired by natural plasticity ░░   ░░░ a    N    A  ░▒▓▒▓▒▒▒▓ Autonomous Neural Architecture v5.1 ░░▒▒▒
 ░                                                 ‾    ‾    ‾  ░▓▒▓░░▒▓░
 ```
+
 ###### _"The Creation" —Michelangelo_
 
 ![Version](https://img.shields.io/badge/version-alpha--5.1-orange?style=for-the-badge)
@@ -92,7 +93,7 @@ python3 src/tests/test_cortical_column.py
 
 - **[Hippocampus(.py)](/src/anatomy/limbic/hippocampus.py) _(Dynamic Buffer & Indexing System)_:** Functions as a high-speed memory buffer for short-term data. It manages the temporary storage of information and coordinates its eventual _"migration" (consolidation)_ into _long-term cortical databases_, preventing immediate system saturation.
 
-- **[Neuromodulators(.py)](/src/anatomy/base/neuromodulator.py) _(Global State Tags)_:** Chemical _"gain controls" (Dopamine, Adrenaline, Nitric Oxide, Acetylcholine, Serotonin)_ that regulate the global state of the network. They don't carry specific data but adjust how the brain processes information _(e.g., focus, reward, stress response)_.
+- **[Neuromodulators(.py)](/src/anatomy/base/neuromodulator.py) _(Global State Tags)_:** Chemical core _"gain controls" (Dopamine, Adrenaline, Nitric Oxide, Acetylcholine, Serotonin)_ that regulate the global state of the network. They don't carry specific data but adjust how the brain processes information _(e.g., focus, reward, stress response)_.
 
 - **[Neurons(.py)](/src/anatomy/base/neuron.py) _(Atomic Processing Nodes)_:** The three functional types _(Sensory, Interneurons, Motor)_ operate as the basic logic gates of the architecture. Their Synaptic Plasticity represents a self-modifying code capability, where connection weights evolve dynamically based on the frequency and timing of data flow.
 
