@@ -1,7 +1,16 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+"""
+Pulse implementation for aNA v5.1
 
-# src/core/pulse.py
+Communicates with: Input: (<- Thalamus) (<- Amygdala) | Output: (-> Global Metabolism / BPM)
+
+This module simulates the heart's pulse as a dynamic entity influenced by both internal metabolic states and external stimuli. It calculates the current BPM based on a base rate, modulated by dopamine levels (excitement) and ATP levels (fatigue). The module also manages a refractory state to prevent overstimulation, ensuring a more biologically plausible response to inputs.
+
+Architecture, concept and supervision: Benoit Theriault
+Collaboration, research and code: Gemini
+"""
+
 import time
 import sys
 import os
