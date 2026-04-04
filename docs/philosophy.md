@@ -42,7 +42,7 @@ The strength of the **aNA** architecture lies in its departure from traditional 
 5. **Myelination _([neurons(.py)](/src/anatomy/base/neuron.py))_**
    It's not just _"keeping or removing"_ a link, it's reinforcing the speed of the most used routes. The more efficient a path is, the more _“insulated” (myelinated)_ it is to consume less energy.
 
-6. **The CA4 Sanctuary: The Acid Traces _([hippocampus(.py)](/src/anatomy/limbic/hippocampus.py))_**
+6. **The _CA4_ Sanctuary: The Acid Traces _([hippocampus(.py)](/src/anatomy/limbic/hippocampus.py))_**
    Often overlooked in computational science, the _CA4_ subfield is central to our architecture. In **aNA**, _CA4_ is not merely a transit zone; it acts as a high-security vault for _"survival floors"_.
    This innovation ensures that even after significant synaptic decay, a _TRAUMA_1_ residue _(Acid Trace)_ remains locked at a structural minimum _(e.g., 0.1000)_ while non-essential data fades away. This is our technical answer to resilience and traumatic memory.
 
