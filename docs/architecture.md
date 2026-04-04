@@ -16,7 +16,7 @@ aNA v5.1 Autonomous Neural Architecture
 ├── Main (Controller, the Pacemaker, Pulse):
 │   ├── Rhythm Orchestration: Synchronizes the processing cycle (Input -> Prediction -> Output)
 │   └── Neural State Management: Ensures overall stability and module integration
-└── Registry (the organ management system)
+└── Registry (The organ management system)
 ```
 
 ### 2. ⚡ Processing Unit (Neurons)
