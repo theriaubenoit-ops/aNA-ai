@@ -13,7 +13,7 @@ This class represents a single neuron with:
 - Integration with neuromodulator systems
 
 Architecture, concept and supervision: Benoit Theriault
-Collaboration, research and code: Gemini
+Collaboration, research and code: Gemini, GPT
 """
 
 import numpy as np
