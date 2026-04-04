@@ -37,7 +37,7 @@ The strength of the **aNA** architecture lies in its departure from traditional 
 4. **Homeostatic Amygdala Regulation**
    We have moved beyond simple _"detection"_ to create an _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ that functions as a true biological regulator:
    **Dynamic Thresholding:** It distinguishes environmental noise _(intensity 0.6)_ from vital signals _(intensity 1.0)_ through a variable rupture threshold.
-   **[Neuromodulator(.py)](/src/anatomy/base/neuromodulator.py) Management:** By simulating _"Cortisol"_ levels and _"Neurotransmitter Reuptake,"_ the system prevents _"Software Anxiety"_ or saturation, allowing the AI to remain calm and analytical even under pressure.
+   **_[Neuromodulator(.py)](/src/anatomy/base/neuromodulator.py)_ Management:** By simulating _"Cortisol"_ levels and _"Neurotransmitter Reuptake,"_ the system prevents _"Software Anxiety"_ or saturation, allowing the AI to remain calm and analytical even under pressure.
 
 5. **Myelination _([neurons(.py)](/src/anatomy/base/neuron.py))_**
    It's not just _"keeping or removing"_ a link, it's reinforcing the speed of the most used routes. The more efficient a path is, the more _“insulated” (myelinated)_ it is to consume less energy.
