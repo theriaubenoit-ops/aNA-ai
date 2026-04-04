@@ -211,7 +211,7 @@ Processing Hierarchy:
 │   ├── api-reference.md                # 📋 ...
 │   ├── architecture.md                 # The technical plan
 │   ├── genesis.md                      # The story of the project
-│   ├── installation.md                 # Installation (EN)
+│   ├── installation.md                 # Installation
 │   ├── installation_fr.md              # Installation (FR)
 │   ├── legend.md                       # 📋 ...
 │   └── philosophy.md                   # The ethical vision
