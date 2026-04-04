@@ -44,7 +44,7 @@ The strength of the **aNA** architecture lies in its departure from traditional 
    This innovation ensures that even after significant synaptic decay, a _TRAUMA_1_ residue _(Acid Trace)_ remains locked at a structural minimum _(e.g., 0.1000)_ while non-essential data fades away. This is our technical answer to resilience and traumatic memory.
 
 6. **The L6 Feedback Loop _([cortical_column(.py)](/src/anatomy/cortical/cortical_column.py) Layer 6)_**
-   This is what allows the _[neocortex](/src/anatomy/cortical/neocortex.py)_ to _“say”_ to the _[thalamus](/src/anatomy/subcortical/thalamus.py)_: _“I recognized this signal, you can lower the volume (gain)”_. This is the basis of the selective attention that we have encoded.
+   This is what allows the _[neocortex(.py)](/src/anatomy/cortical/neocortex.py)_ to _“say”_ to the _[thalamus(.py)](/src/anatomy/subcortical/thalamus.py)_: _“I recognized this signal, you can lower the volume (gain)”_. This is the basis of the selective attention that we have encoded.
 
 ![ ](/docs/assets/spacer32x32.png)
 
