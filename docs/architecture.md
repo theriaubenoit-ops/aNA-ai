@@ -8,7 +8,7 @@
 
 ```
 aNA v5.1 Autonomous Neural Architecture
-├── Main (Controller, the Pacemaker TEMPO):
+├── Main (Controller, the Pacemaker Pulse):
 │   ├── Rhythm Orchestration: Synchronizes the processing cycle (Input -> Prediction -> Output)
 │   └── Neural State Management: Ensures overall stability and module integration
 ├── Configuration (Preference)
@@ -43,14 +43,14 @@ aNA v5.1 Autonomous Neural Architecture
 │       ├── Arcuate Fasciculus (Temporal <-> Frontal)
 │       ├── Superior Longitudinal Fasciculus (Parietal <-> Frontal)
 │       └── Corpus Callosum (Future: Left <-> Right Hemisphere)
-├── Thalamus (The "Router", Sensory Gateway)
+├── Thalamus (The "Router," Sensory Gateway)
 │   ├── Sensory Filtering, Relay Nuclei:
 │   │   ├── LGN (Visual → Occipital)
 │   │   ├── MGN (Auditory → Temporal)
 │   │   └── VPL/VPM (Somatosensory → Parietal)
 │   ├── RTN (Firewall): Gain control and global inhibition
 │   └── Thalamocortical Loops: Maintains the "Awake" state frequency
-├── Limbic System (The "Heart", Emotional & Memory Hub)
+├── Limbic System (The "Heart," Emotional & Memory Hub)
 │   ├── Amygdala (The "Priority Filter"):
 │   │   └── Role: Labels incoming charges as "Important" or "Neutral"
 │   ├── Hippocampus (The "Temporal Indexer"):
@@ -62,7 +62,7 @@ aNA v5.1 Autonomous Neural Architecture
 │   └── Coordination Logic (limbic_system.py):
 │       └── Mechanism: Links emotional arousal (Cortisol/Adrenaline) to
 │           memory encoding weight (L1 Buffer -> L2/L3 Store)
-└── Cerebellum (The "Clock", Timing & Error Correction)
+└── Cerebellum (The "Clock," Timing & Error Correction)
     └── Coordination between Motor Cortex and Sensory Feedback
 
 Computational Engine: Free Energy Principle (FEP)
@@ -178,17 +178,17 @@ Processing Hierarchy:
 
 ```
 ├── NO (Nitric Oxide) -> Volumetric Retrograde Signaling
-│   └── Role: "Zone Strengthening". Diffuses from active neurons to nearby
+│   └── Role: "Zone Strengthening." Diffuses from active neurons to nearby
 │       synapses to signal "We just fired together, strengthen everything here."
 │       (Crucial for local clusters and blood flow simulation).
 ├── Acetylcholine -> Sensory Sensitivity (Layer IV)
-│   └── Role: "Focus & Alertness". Lowers the firing threshold of Layer IV
+│   └── Role: "Focus & Alertness." Lowers the firing threshold of Layer IV
 │       to make external inputs (Thalamus) more prominent.
 ├── Dopamine -> Reward & Plasticity (Layers II/III)
-│   └── Role: "Learning Signal". Acts as a multiplier for LTP (Long-Term
+│   └── Role: "Learning Signal." Acts as a multiplier for LTP (Long-Term
 │       Potentiation) in the association layers. No Dopamine = No Memory growth.
 ├── Serotonin -> Homeostatic Balance (Global)
-│   └── Role: "The Governor". Prevents runaway excitation (Epilepsy simulation)
+│   └── Role: "The Governor." Prevents runaway excitation (Epilepsy simulation)
 │       by stabilizing the global neural threshold.
 └── Adrenaline -> Hyper-Alertness & Flashbulb Memory
     ├── Sensitivity: Acts as an overall win multiplier.
