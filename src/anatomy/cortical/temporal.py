@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Temporal Lobe implementation for aNA v5.1 with:
+Temporal Lobe implementation for aNA v5.1
+
+Communicates with: Input: (<- Thalamus) | Input/Output: (<-> Other Cortical Areas) | Output: (-> Motor / Pre-frontal)
 
 This module implements the Temporal Lobe with its key regions (IT, Wernicke) for semantic processing and memory integration. It integrates with the ChemicalCore for neuromodulatory influences, particularly acetylcholine (Attention) and serotonin (Perception Stabilization). The Temporal Lobe fuses visual and spatial information to recognize objects and provides feedback to the Frontal Lobe for action planning.
 
