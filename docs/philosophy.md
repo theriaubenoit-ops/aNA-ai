@@ -37,7 +37,7 @@ The strength of the **aNA** architecture lies in its departure from traditional 
 4. **Homeostatic Amygdala Regulation**
    We have moved beyond simple _"detection"_ to create an _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ that functions as a true biological regulator:
    **Dynamic Thresholding:** It distinguishes environmental noise _(intensity 0.6)_ from vital signals _(intensity 1.0)_ through a variable rupture threshold.
-   **Neuromodulator Management:** By simulating _"Cortisol"_ levels and _"Neurotransmitter Reuptake,"_ the system prevents _"Software Anxiety"_ or saturation, allowing the AI to remain calm and analytical even under pressure.
+   **[Neuromodulator(.py)](/src/anatomy/base/neuromodulator.py) Management:** By simulating _"Cortisol"_ levels and _"Neurotransmitter Reuptake,"_ the system prevents _"Software Anxiety"_ or saturation, allowing the AI to remain calm and analytical even under pressure.
 
 5. **Myelination _([neurons(.py)](/src/anatomy/base/neuron.py))_**
    It's not just _"keeping or removing"_ a link, it's reinforcing the speed of the most used routes. The more efficient a path is, the more _“insulated” (myelinated)_ it is to consume less energy.
@@ -49,7 +49,7 @@ The strength of the **aNA** architecture lies in its departure from traditional 
 7. **The L6 Feedback Loop _([cortical_column(.py)](/src/anatomy/cortical/cortical_column.py) Layer 6)_**
    This is what allows the _[neocortex(.py)](/src/anatomy/cortical/neocortex.py)_ to _“say”_ to the _[thalamus(.py)](/src/anatomy/subcortical/thalamus.py)_: _“I recognized this signal, you can lower the volume (gain)”_. This is the basis of the selective attention.
 
-8. **The [registry(.py)](/src/registry.py) module _(The organ management system)_** This is what ensures that a _neuron_ in the _frontal lobe “knows”_ that it belongs to **aNA** and how it should connect to the others. It is the identity of the organism.
+8. **The [registry(.py)](/src/registry.py) module _(or the organ management system)_** This is what ensures that a _neuron_ in the _frontal lobe “knows”_ that it belongs to **aNA** and how it should connect to the others. It is the identity of the organism.
 
 ![ ](/docs/assets/spacer32x32.png)
 
