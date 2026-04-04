@@ -26,11 +26,11 @@
 
 ### The quest for AI reflecting life
 
-Current artificial intelligence, while powerful, relies on massive, rigid architectures that remain disconnected from biological reality. Simultaneously, the AI community is increasingly concerned with the rising carbon footprint and unsustainable computing costs of these models. **aNA** _(Autonomous Neural Architecture)_ AI Project breaks with these paradigms. Inspired by the organization of the _six-layered [cortical_columns(.py)](/src/anatomy/cortical/cortical_column.py)_, _synaptic plasticity_, and the precise management of the _[thalamus(.py)](/src/anatomy/subcortical/thalamus.py)_, _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_, _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_, _[cerebellum(.py)](/src/anatomy/subcortical/cerebellum.py)_, _[limbic system(.py)](/src/anatomy/limbic/limbic_system.py)_, and _five key [neuromodulators(.py)](/src/anatomy/base/neuromodulator.py) (dopamine, adrenaline, nitric oxide, acetylcholine, and serotonin)_. This project aims to create not a mere computational simulation, but an organic resonance. Far from being a static data repository, **aNA** AI is a dynamic system that learns, forgets, adjusts, and focuses—much like our own minds.
+Current _artificial intelligence_, while powerful, relies on massive, rigid architectures that remain disconnected from _biological reality_. Simultaneously, the _AI community_ is increasingly concerned with the rising _carbon footprint_ and unsustainable computing costs of these models. **aNA** _(Autonomous Neural Architecture)_ AI Project breaks with these paradigms. Inspired by the organization of the _six-layered [cortical_columns(.py)](/src/anatomy/cortical/cortical_column.py)_, _synaptic plasticity_, and the precise management of the _[thalamus(.py)](/src/anatomy/subcortical/thalamus.py)_, _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_, _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_, _[cerebellum(.py)](/src/anatomy/subcortical/cerebellum.py)_, _[limbic system(.py)](/src/anatomy/limbic/limbic_system.py)_, and _five key [neuromodulators(.py)](/src/anatomy/base/neuromodulator.py) (dopamine, adrenaline, nitric oxide, acetylcholine, and serotonin)_. This project aims to create not a mere computational simulation, but an organic resonance. Far from being a static data repository, **aNA** AI is a dynamic system that learns, forgets, adjusts, and focuses—much like our own minds.
 
 ### Dynamic Cognitive Architecture
 
-- **Asynchronous Orchestration:** The _Tempo module_ acts as the system's pacemaker, ensuring efficient, non-blocking cycles.
+- **Asynchronous Orchestration:** The _[pulse(.py)](/src/core/pulse.py)_ module acts as the system's biological pacemaker, regulating non-blocking cycles according to the organism's homeostatic state.
 - **Thalamic Filtering:** _Sensory inputs_ are gated and processed through specific _nuclei_ to isolate relevant signals from stochastic background _"noise"_.
 - **Adaptive Fidelity:** **aNA** dynamically simulates information fidelity based on _dopamine levels_, modulating the quality of internal representations in real-time.
 
@@ -79,6 +79,8 @@ python3 src/tests/test_cortical_column.py
 
 - **[Cerebellum(.py)](/src/anatomy/subcortical/cerebellum.py) _(Timing Engine & Output Calibration)_:** The specialized unit for fine-tuning motor and cognitive outputs. In **aNA**, it ensures that the _"Thinking Shell"_ operates with perfect mathematical synchronization, acting as a calibration layer for fluid, real-time interaction.
 
+- **[Cortical Columns(.py)](/src/anatomy/cortical/cortical_column.py) _(Hierarchical Data Modules)_:** The standard vertical organization of the mammalian _[neocortex(.py)](/src/anatomy/cortical/neocortex.py)_. In **aNA**, these _6 cortical layers_ define the functional hierarchy: _Layer IV (input)_, _Layers II/III (association/prediction)_, and _Layer V/VI (motor output)_.
+
 - **[Limbic System(.py)](/src/anatomy/limbic/limbic_system.py) _(Emotional Valence & Memory Orchestrator)_:** The _vital bridge_ between _sensory impact_ and _long-term storage_. In **aNA**, it evaluates incoming signals via the _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ to assign an _"emotional weight"_, ensuring that critical experiences are prioritized by the _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_ for deep encoding and empathic recall.
 
 - **Lobe, [Frontal(.py)](/src/anatomy/cortical/frontal.py) _(Executive Logic & Command Center)_:** The primary site for high-level decision-making and motor control. In **aNA**, it acts as the central executive that orchestrates complex task sequences and manages the _"top-down"_ attention directed to other modules.
@@ -89,15 +91,13 @@ python3 src/tests/test_cortical_column.py
 
 - **Lobe, [Temporal(.py)](/src/anatomy/cortical/temporal.py) _(Semantic Storage & Pattern Recognition)_:** The hub for processing auditory signals and high-level linguistic or object recognition. In the digital model, it serves as the semantic engine that links sensory inputs to long-term _"concepts"_ stored in the memory hierarchy.
 
-- **[Neocortex(.py)](/src/anatomy/cortical/neocortex.py) _(The "Thinking" Shell)_:** The structural integration of the _4 Lobes_ and _6 Cortical Layers_. While the _[neocortex(.py)](/src/anatomy/cortical/neocortex.py)_ handles complex reasoning and prediction, the _[cerebellum(.py)](/src/anatomy/subcortical/cerebellum.py) (in **aNA**)_ fine-tunes _motor outputs_ and timing, ensuring the system’s actions are fluid and mathematically synchronized.
-
 - **[Hippocampus(.py)](/src/anatomy/limbic/hippocampus.py) _(Dynamic Buffer & Indexing System)_:** Functions as a high-speed memory buffer for short-term data. It manages the temporary storage of information and coordinates its eventual _"migration" (consolidation)_ into _long-term cortical databases_, preventing immediate system saturation.
+
+- **[Neocortex(.py)](/src/anatomy/cortical/neocortex.py) _(The "Thinking" Shell)_:** The structural integration of the _4 Lobes_ and _6 Cortical Layers_. While the _[neocortex(.py)](/src/anatomy/cortical/neocortex.py)_ handles complex reasoning and prediction, the _[cerebellum(.py)](/src/anatomy/subcortical/cerebellum.py) (in **aNA**)_ fine-tunes _motor outputs_ and timing, ensuring the system’s actions are fluid and mathematically synchronized.
 
 - **[Neuromodulators(.py)](/src/anatomy/base/neuromodulator.py) _(Global State Tags)_:** Chemical core _"gain controls" (Dopamine, Adrenaline, Nitric Oxide, Acetylcholine, Serotonin)_ that regulate the global state of the network. They don't carry specific data but adjust how the brain processes information _(e.g., focus, reward, stress response)_.
 
 - **[Neurons(.py)](/src/anatomy/base/neuron.py) _(Atomic Processing Nodes)_:** The three functional types _(Sensory, Interneurons, Motor)_ operate as the basic logic gates of the architecture. Their Synaptic Plasticity represents a self-modifying code capability, where connection weights evolve dynamically based on the frequency and timing of data flow.
-
-- **[Cortical Columns(.py)](/src/anatomy/cortical/cortical_column.py) _(Hierarchical Data Modules)_:** The standard vertical organization of the mammalian _[neocortex(.py)](/src/anatomy/cortical/neocortex.py)_. In **aNA**, these _6 cortical layers_ define the functional hierarchy: _Layer IV (input)_, _Layers II/III (association/prediction)_, and _Layer V/VI (motor output)_.
 
 - **[Thalamus(.py)](/src/anatomy/subcortical/thalamus.py) _(Sensory Gateway & Packet Router)_:** Acts as the system's central hub for incoming data. It filters and directs sensory signals to the appropriate cortical layers, preventing _"system overflow"_ by dropping irrelevant background noise.
 
@@ -123,4 +123,4 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
 
 ![Downloads](https://img.shields.io/github/downloads/theriaubenoit-ops/aNA-ai/total?style=for-the-badge&color=181c1f)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-31_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-04_
