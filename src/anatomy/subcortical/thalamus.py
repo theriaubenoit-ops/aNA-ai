@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Thalamus v5.1 - Le Pacemaker Biométrique
-Régulation du Pulse et du BPM via Feedback L6 et Noradrénaline.
-Architecture : Benoit Theriault
+Thalamus implementation for aNA v5.1 with:
+
+This module implements the Thalamus as the central relay for sensory information and the pacemaker for the system's pulse. It integrates feedback from the cortex (L6) and neuromodulatory signals (Noradrenaline) to regulate arousal and attention dynamically.
+
+Architecture, concept and supervision: Benoit Theriault
+Collaboration, research and code: Gemini, Cline
 """
 
 import asyncio
