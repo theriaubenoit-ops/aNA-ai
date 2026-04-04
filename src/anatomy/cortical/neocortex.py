@@ -1,9 +1,17 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Neocortex v5.1 - Chef d'orchestre asynchrone
-Gère les flux entre les lobes et le ChemicalCore.
-Supervision : Benoit Theriault
+Neocortex implementation for aNA v5.1
+
+Communicates with: 
+Input: (<- Thalamus L4) (<- Hippocampus)
+Input/Output: (<-> Cortical Columns) (<-> Limbic System)
+Output: (-> Thalamus L6 Feedback) (-> Motor Control / Cerebellum)
+
+This module represents the high-level cognitive engine of aNA. It manages the distribution of sensory data across specialized Cortical Columns, facilitating the L4->L2/3->L6 processing cascade. By generating downward feedback from Layer 6 to the Thalamus, the Neocortex actively modulates sensory gain and attentional focus. It integrates long-term structural plasticity and myelination logic to optimize signal conductivity based on recognition patterns.
+
+Architecture, concept and supervision: Benoit Theriault
+Collaboration, research and code: Gemini, Cline 
 """
 
 import asyncio
