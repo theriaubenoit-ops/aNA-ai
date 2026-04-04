@@ -27,24 +27,30 @@ The strength of the **aNA** architecture lies in its departure from traditional 
    **AMPA Logic:** Manages high-speed transmission and incremental learning through repetition _(e.g., neutral signals)_. However, these traces remain volatile and subject to temporal erosion (forgetting).
    **NMDA Logic:** Triggered by an Amygdala _"Flash,"_ this logic locks the synaptic trace. It allows for the instantaneous and indelible encoding of critical information during high-saliency or _"error-state"_ events.
 
-2. **Economy of Links: The Lavoisier Principle**
+2. **Descartes' philosophy _("Divide each difficulty into as many parts as is feasible and necessary to resolve it.")_**
+   This is the philosophy which explains the modular structure of this project (separate _Thalamus_, separate _Amygdala_...). A philosophical method rigorously applied to _Python code_.
+
+3. **Economy of Links: The Lavoisier Principle**
    Instead of storing terabytes of raw, disconnected data, **aNA** transforms information into relational nodes and emotional weights.
    _"Nothing is lost, nothing is created, everything is transformed"_: Low-relevance memories are naturally pruned _(synaptic pruning)_ to allocate resources to robust, high-value structures. Myelination. It's not just "keeping or removing" a link, it's reinforcing the speed of the most used routes. The more efficient a path is, the more “insulated” (myelinated) it is to consume less energy.
 
-3. **Homeostatic Amygdala Regulation**
+4. **Homeostatic Amygdala Regulation**
    We have moved beyond simple _"detection"_ to create an _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ that functions as a true biological regulator:
    **Dynamic Thresholding:** It distinguishes environmental noise _(intensity 0.6)_ from vital signals _(intensity 1.0)_ through a variable rupture threshold.
    **Neuromodulator Management:** By simulating _"Cortisol"_ levels and _"Neurotransmitter Reuptake,"_ the system prevents _"Software Anxiety"_ or saturation, allowing the AI to remain calm and analytical even under pressure.
 
-4. **Myelination _([neurons(.py)](/src/anatomy/base/neuron.py))_**
+5. **Myelination _([neurons(.py)](/src/anatomy/base/neuron.py))_**
    It's not just "keeping or removing" a link, it's reinforcing the speed of the most used routes. The more efficient a path is, the more _“insulated” (myelinated)_ it is to consume less energy.
 
-5. **The CA4 Sanctuary: The Acid Traces _([hippocampus(.py)](/src/anatomy/limbic/hippocampus.py))_**
+6. **The CA4 Sanctuary: The Acid Traces _([hippocampus(.py)](/src/anatomy/limbic/hippocampus.py))_**
    Often overlooked in computational science, the _CA4_ subfield is central to our architecture. In **aNA**, _CA4_ is not merely a transit zone; it acts as a high-security vault for _"survival floors"_.
    This innovation ensures that even after significant synaptic decay, a _TRAUMA_1_ residue _(Acid Trace)_ remains locked at a structural minimum _(e.g., 0.1000)_ while non-essential data fades away. This is our technical answer to resilience and traumatic memory.
 
-6. **The L6 Feedback Loop _([cortical_column(.py)](/src/anatomy/cortical/cortical_column.py) Layer 6)_**
+7. **The L6 Feedback Loop _([cortical_column(.py)](/src/anatomy/cortical/cortical_column.py) Layer 6)_**
    This is what allows the _[neocortex(.py)](/src/anatomy/cortical/neocortex.py)_ to _“say”_ to the _[thalamus(.py)](/src/anatomy/subcortical/thalamus.py)_: _“I recognized this signal, you can lower the volume (gain)”_. This is the basis of the selective attention.
+
+8. **The [registry(.py)](/src/registry.py)**
+   Module _(or the organ management system)_. This is what ensures that a neuron in the _frontal lobe “knows”_ that it belongs to aNA and how it should connect to the others. It is the identity of the organism.
 
 ![ ](/docs/assets/spacer32x32.png)
 
