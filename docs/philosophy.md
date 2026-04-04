@@ -28,7 +28,7 @@ The strength of the **aNA** architecture lies in its departure from traditional 
    **NMDA Logic:** Triggered by an Amygdala _"Flash,"_ this logic locks the synaptic trace. It allows for the instantaneous and indelible encoding of critical information during high-saliency or _"error-state"_ events.
 
 2. **Descartes' philosophy _("Divide each difficulty into as many parts as is feasible and necessary to resolve it.")_**
-   This is the philosophy which explains the modular structure of this project (separate _Thalamus_, separate _Amygdala_...). A philosophical method rigorously applied to _Python code_.
+   This is the philosophy which explains the modular structure of this project (separate _Thalamus_, separate _Hippocampus_, separate _Amygdala_...). A philosophical method rigorously applied to _Python code_.
 
 3. **Economy of Links: The Lavoisier Principle**
    Instead of storing terabytes of raw, disconnected data, **aNA** transforms information into relational nodes and emotional weights.
