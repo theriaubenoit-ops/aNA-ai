@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Neuron Class - The fundamental unit of the aNA v5.1 architecture
+Neuron implementation for aNA v5.1 - The fundamental unit of the aNA architecture
+
+Communicates with: Input: (<- Synapses) | Output: (-> Axon / Post-synaptic targets)
 
 This class represents a single neuron with:
 - 3D spatial positioning and relationships
