@@ -49,8 +49,7 @@ The strength of the **aNA** architecture lies in its departure from traditional 
 7. **The L6 Feedback Loop _([cortical_column(.py)](/src/anatomy/cortical/cortical_column.py) Layer 6)_**
    This is what allows the _[neocortex(.py)](/src/anatomy/cortical/neocortex.py)_ to _“say”_ to the _[thalamus(.py)](/src/anatomy/subcortical/thalamus.py)_: _“I recognized this signal, you can lower the volume (gain)”_. This is the basis of the selective attention.
 
-8. **The [registry(.py)](/src/registry.py)**
-   Module _(or the organ management system)_. This is what ensures that a neuron in the _frontal lobe “knows”_ that it belongs to aNA and how it should connect to the others. It is the identity of the organism.
+8. **The [registry(.py)](/src/registry.py) module _(or the organ management system)_** This is what ensures that a neuron in the _frontal lobe “knows”_ that it belongs to aNA and how it should connect to the others. It is the identity of the organism.
 
 ![ ](/docs/assets/spacer32x32.png)
 
