@@ -1,7 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+"""
+Hippocampus implementation for aNA v5.1 with:
 
-# src/anatomy/limbic/hippocampus.py
+This module implements the Hippocampus with its subfields (DG, CA1-CA4) for memory encoding, consolidation, and retrieval. It includes mechanisms for synaptic plasticity (LTP/LTD), emotional modulation of memory strength, and a novel "CA4" subfield for long-term trace stabilization.
+
+Architecture, concept and supervision: Benoit Theriault
+Collaboration, research and code: Gemini, Cline
+"""
 from typing import Dict
 import sys
 import os
