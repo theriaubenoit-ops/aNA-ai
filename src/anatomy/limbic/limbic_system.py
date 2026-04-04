@@ -1,13 +1,19 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Limbic system implementation for aNA v5.1 with:
+Limbic system implementation for aNA v5.1
 
-This module coordinates the Amygdala and Hippocampus to manage emotional valence and memory prioritization. It includes mechanisms for processing experiences, consolidating memories based on emotional intensity, and triggering flashbacks.
+Communicates with: 
+Input: (<- Thalamus) (<- Cortical L2/3)
+Input/Output: (<-> Amygdala) (<-> Hippocampus)
+Output: (-> Pulse/BPM) (-> Neuromodulator Core)
+
+This module acts as the emotional and mnestic hub of aNA. It orchestrates the bidirectional flow between the Amygdala (Threat/Arousal) and the Hippocampus (Context/Memory). By integrating these signals, the Limbic System provides a value-based filter for the Thalamus and influences the global Pulse (BPM), ensuring that the organism's metabolic state is aligned with its internal emotional landscape and past experiences.
 
 Architecture, concept and supervision: Benoit Theriault
 Collaboration, research and code: Gemini
 """
+
 import sys
 import os
 
