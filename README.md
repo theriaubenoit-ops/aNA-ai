@@ -101,7 +101,7 @@ python3 src/tests/test_cortical_column.py
 
 - **[Thalamus(.py)](/src/anatomy/subcortical/thalamus.py) _(Sensory Gateway & Packet Router)_:** Acts as the system's central hub for incoming data. It filters and directs sensory signals to the appropriate cortical layers, preventing _"system overflow"_ by dropping irrelevant background noise.
 
-_Note: These definitions are adapted to the specific metabolic and cognitive constraints of the **aNA** v5.0 architecture._
+_Note: These definitions are adapted to the specific metabolic and cognitive constraints of the **aNA** v5.0 architecture and above._
 
 ![ ](/docs/assets/spacer32x32.png)
 
