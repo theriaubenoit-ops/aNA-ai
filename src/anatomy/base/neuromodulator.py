@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+""
+Neuromodulator implementation for aNA v5.1 with:
 
-"""
-Neuromodulator Core for aNA v5.1
-Centralized neuromodulation system replacing legacy spatial diffusion.
+This module implements the Neuromodulator as a centralized system for managing neuromodulatory influences across the brain. It replaces the legacy spatial diffusion model with a more biologically plausible chemical matrix that modulates the activity of the Thalamus and Cortex based on inputs from the Limbic System (notably the Amygdala). The Neuromodulator tracks key neurotransmitters (dopamine, acetylcholine, serotonin, noradrenaline) and applies homeostatic decay to simulate natural recapture processes.
+
+Architecture, concept and supervision: Benoit Theriault
+Collaboration, research and code: Gemini
 """
 
 import numpy as np
