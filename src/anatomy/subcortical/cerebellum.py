@@ -3,11 +3,10 @@
 """
 Cerebellum implementation for aNA v5.1 with:
 
-This module implements the Cerebellum with its major cell types and layers
-for motor coordination, learning, and cognitive functions.
+This module implements the Cerebellum with its key layers (Granule, Purkinje, Molecular) and deep nuclei for motor coordination, cognitive processing, and error correction. It integrates with the ChemicalCore for neuromodulatory influences, particularly norepinephrine (Arousal) and serotonin (Mood). The Cerebellum processes mossy fiber and climbing fiber inputs to modulate motor output and cognitive functions through its inhibitory control of the deep nuclei.
 
 Architecture, concept and supervision: Benoit Theriault
-Collaboration, research and code: Gemini, Cline 
+Collaboration, research and code: Gemini
 """
 
 import numpy as np
