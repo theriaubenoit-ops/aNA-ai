@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Cerebellum implementation for aNA v5.1 with:
+Cerebellum implementation for aNA v5.1
+
+Communicates with: Input: (<- Cortex / Thalamus) | Output: (-> Motor Outputs / Feedback Loop)
 
 This module implements the Cerebellum with its key layers (Granule, Purkinje, Molecular) and deep nuclei for motor coordination, cognitive processing, and error correction. It integrates with the ChemicalCore for neuromodulatory influences, particularly norepinephrine (Arousal) and serotonin (Mood). The Cerebellum processes mossy fiber and climbing fiber inputs to modulate motor output and cognitive functions through its inhibitory control of the deep nuclei.
 
