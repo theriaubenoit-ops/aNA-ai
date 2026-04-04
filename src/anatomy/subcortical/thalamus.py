@@ -1,9 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Thalamus implementation for aNA v5.1 with:
+Thalamus implementation for aNA v5.1
 
-This module implements the Thalamus as the central relay for sensory information and the pacemaker for the system's pulse. It integrates feedback from the cortex (L6) and neuromodulatory signals (Noradrenaline) to regulate arousal and attention dynamically.
+Communicates with: 
+Input: (<- InputGateway) (<- Hippocampus) (<- Amygdala)
+Input/Output: (<-> Cortical Columns L4/L6) 
+Output: (-> Pulse/BPM) (-> Neuromodulator Gain)
+
+This module implements the Thalamus as the central sensory relay and rhythmic pacemaker of aNA. It orchestrates the flow between subcortical structures and the Neocortex, specifically managing the L4 excitation and L6 feedback loops. It integrates with the ChemicalCore to modulate signal gain based on arousal and directs the Pulse (BPM) frequency, ensuring the organism maintains homeostatic stability during stimulus processing.
 
 Architecture, concept and supervision: Benoit Theriault
 Collaboration, research and code: Gemini, Cline
