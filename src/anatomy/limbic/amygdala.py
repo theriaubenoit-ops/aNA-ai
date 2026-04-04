@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Amygdala implementation for aNA v5.1 with:
+Amygdala implementation for aNA v5.1
+
+Communicates with: Input: (<- Thalamus / Cortex) | Output: (-> Pulse / Adrenaline) (-> Hippocampus)
 
 This module implements the Amygdala with its key nuclei (BLA, CEA, MEA) for emotional processing, fear learning, and social behavior. It integrates with the ChemicalCore for neuromodulatory influences, particularly dopamine (Motivation), norepinephrine (Stress), and serotonin (Mood). The Amygdala processes sensory and emotional inputs to modulate memory persistence in the Hippocampus and orchestrate fear responses via the Central Amygdala.
 
 Architecture, concept and supervision: Benoit Theriault
-Collaboration, research and code: Gemini, Cline 
+Collaboration, research and code: Gemini
 """
 
 import numpy as np
