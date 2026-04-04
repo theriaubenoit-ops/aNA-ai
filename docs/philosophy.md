@@ -32,7 +32,7 @@ The strength of the **aNA** architecture lies in its departure from traditional 
 
 3. **Economy of Links: The Lavoisier Principle**
    Instead of storing terabytes of raw, disconnected data, **aNA** transforms information into relational nodes and emotional weights.
-   _"Nothing is lost, nothing is created, everything is transformed"_: Low-relevance memories are naturally pruned _(synaptic pruning)_ to allocate resources to robust, high-value structures. Myelination. It's not just "keeping or removing" a link, it's reinforcing the speed of the most used routes. The more efficient a path is, the more “insulated” (myelinated) it is to consume less energy.
+   _"Nothing is lost, nothing is created, everything is transformed"_: Low-relevance memories are naturally pruned _(synaptic pruning)_ to allocate resources to robust, high-value structures.
 
 4. **Homeostatic Amygdala Regulation**
    We have moved beyond simple _"detection"_ to create an _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ that functions as a true biological regulator:
