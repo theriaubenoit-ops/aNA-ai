@@ -3,6 +3,8 @@
 """
 Cortical Lobe Base Implementation for aNA v5.1
 
+Communicates with: Input: (<- Thalamus IV) | Input/Output: (<-> Hippocampus) | Output: (-> Thalamus VI Feedback)
+
 This module implements the 6-layer cortical architecture for all brain lobes.
 Each lobe processes signals through the biological layers: L4 → L2/3 → L5.
 
@@ -14,7 +16,7 @@ Key Features:
 - Real-time precision monitoring for dashboard display
 
 Architecture, concept and supervision: Benoit Theriault
-Collaboration, research and code: Gemini, Cline and GPT
+Collaboration, research and code: Gemini, Cline
 """
 
 import numpy as np
