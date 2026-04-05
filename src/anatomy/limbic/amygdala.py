@@ -293,6 +293,14 @@ class MedialAmygdala:
 
 class Amygdala:
     """Complete Amygdala with all major nuclei"""
+
+    def check_for_forced_recovery(self, strain: float):
+        """
+        Si la fatigue est trop haute, l'amygdale force un signal de 'REPOS'.
+        """
+        if strain > 0.9:
+            return "FORCE_HOMEOS_RECOVERY" # On déclenche le mode lent/moins bruyant
+        return "STABLE"
     
     def __init__(self, position: np.ndarray = np.array([-15.0, -25.0, 0.0])):
         self.position = position
