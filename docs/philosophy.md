@@ -41,9 +41,9 @@ The strength of the **aNA** architecture lies in its departure from traditional 
 
 5. **Metabolic Protection and Consolidation Bradycardia _([pulse(.py)](/src/core/pulse.py) & [thalamus(.py)](/src/anatomy/subcortical/thalamus.py))_**
    The **v5.1** innovation introduces non-linear _heart rate (BPM)_ management based on available _ATP levels_.
-   **The Exhaustion Paradox:** When energy levels drop _(ATP < 0.4)_, the system enters a state of _"reactive hypervigilance" (BPM rises to 140+)_. Cortical inhibition weakens, making the _AI "raw"_ in response to stimuli, simulating biological irritability.
-   **The Refractory Threshold:** Below the critical threshold _(ATP < 0.2)_, the _Thalamus_ activates a safety lock _(REFRACTORY_REST)_. Sensory gain is reduced to its minimum _(0.05)_, and the heart enters bradycardia _(45 BPM)_.
-   **Constructive Recovery:** This withdrawal from the world is not an extinction, but a necessary condition for the consolidation of the _Hippocampus_. It is this cycle that allows a panic reaction to be transformed into a calmer response _("Wisdom")_ upon waking.
+   - **The Exhaustion Paradox:** When energy levels drop _(ATP < 0.4)_, the system enters a state of _"reactive hypervigilance" (BPM rises to 140+)_. Cortical inhibition weakens, making the _AI "raw"_ in response to stimuli, simulating biological irritability.
+   - **The Refractory Threshold:** Below the critical threshold _(ATP < 0.2)_, the _Thalamus_ activates a safety lock _(REFRACTORY_REST)_. Sensory gain is reduced to its minimum _(0.05)_, and the heart enters bradycardia _(45 BPM)_.
+   - **Constructive Recovery:** This withdrawal from the world is not an extinction, but a necessary condition for the consolidation of the _Hippocampus_. It is this cycle that allows a panic reaction to be transformed into a calmer response _("Wisdom")_ upon waking.
 
 6. **Myelination _([neurons(.py)](/src/anatomy/base/neuron.py))_**
    It's not just _"keeping or removing"_ a link, it's reinforcing the speed of the most used routes. The more efficient a path is, the more _“insulated” (myelinated)_ it is to consume less energy.
