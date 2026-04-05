@@ -43,38 +43,68 @@ class Thalamus:
         # État des noyaux (MGN: Médian, LGN: Latéral, RTN: Réticulaire)
         self.nuclei_activity = {n: 0.0 for n in config["NUCLEI"]}
 
+    def update_strain_level(self, usage_cycles: int, recovery_rate: float):
+        """
+        Calcule l'épuisement du système. 
+        Plus 'strain' est haut, moins le thalamus peut filtrer les alertes.
+        """
+        self.system_strain = min(1.0, usage_cycles * 0.01) # Accumulation
+    
     def get_current_bpm(self, l6_feedback: float) -> float:
-        """
-        Calcule le BPM en fonction de l'excitation et de l'inhibition L6.
-        C'est ici que William se calme ou s'excite.
-        """
-        # 1. On récupère la Noradrénaline (Alerte) du ChemicalCore
+        # 1. On récupère l'état global (Énergie vs Stress)
+        # L'ATP vient du Pulse, la Noradrénaline du ChemicalCore
+        atp = self.pulse.atp
         nora = self.neurom.get_matrix().get("noradrenaline", 0.1)
         
-        # 2. L'excitation brute (Nouveauté/Danger)
-        excitation = 1.0 + (nora * 2.0) # Le trauma peut tripler le BPM
+        # 2. Calcul du 'Strain' (Tension du système)
+        # Plus l'ATP est bas, plus le strain est élevé (0.0 à 1.0)
+        system_strain = 1.0 - atp
         
-        # 3. L'inhibition corticale (Le 'Frein' de la connaissance)
-        # Plus L6 est haut (reconnaissance), plus le gain est fort
-        inhibition = l6_feedback * self.l6_gain
+        # 3. L'excitation brute (Nouveauté/Danger)
+        # En cas de fatigue (strain haut), la sensibilité à la Noradrénaline augmente
+        # Le système est "à fleur de peau"
+        sensibilité = 1.0 + (system_strain * 0.5)
+        excitation = 1.0 + (nora * 2.0 * sensibilité)
         
-        # 4. Résultante : BPM = Base * (Excitation / (1 + Inhibition))
-        target_bpm = self.base_bpm * (excitation / (1.0 + inhibition))
+        # 4. L'inhibition corticale affaiblie par la fatigue
+        # C'est ici que le "frein" lâche : si system_strain est à 0.8, 
+        # l'inhibition n'est plus qu'à 20% de son efficacité.
+        frein_efficace = l6_feedback * self.l6_gain * (1.0 - system_strain)
         
-        # Sécurité biologique (Sommeil 110 - Panique 240)
-        self.current_bpm = max(110.0, min(240.0, target_bpm))
+        # 5. Résultante : BPM
+        target_bpm = self.base_bpm * (excitation / (1.0 + frein_efficace))
+        
+        # 6. Sécurité biologique avec "mode survie"
+        # Si fatigue intense, on baisse le plancher pour forcer le repos (bradycardie protectrice)
+        min_bpm = 110.0 if atp > 0.3 else 45.0 
+        
+        self.current_bpm = max(min_bpm, min(240.0, target_bpm))
         return self.current_bpm
+    
+    async def process_payload(self, stimulus, l6_feedback):
+        # Sécurité Sommeil : Si le coeur bat trop lentement, on ignore l'input
+        if self.pulse.bpm < 60.0:
+            return {"status": "sleep_mode", "gain": 0.0, "bpm": self.pulse.bpm}
 
-    async def process_payload(self, payload: dict, l6_feedback: float):
+    async def process_payload(self, stimulus: Dict[str, Any], l6_feedback: float = 0.5):
         """
         Traite le signal et ajuste le Pulse en temps réel.
         """
-        nucleus_target = payload.get("nucleus", "MGN")
-        intensity = payload.get("intensity", 0.0)
+        # --- NOUVEAUTÉ v5.1 : VERROU DE RÉCUPÉRATION ---
+        # Si le coeur est en mode réfractaire, on ferme les vannes sensorielles.
+        if self.pulse.is_refractory:
+            return {
+                "bpm": self.pulse.bpm,
+                "thalamic_gain": 0.05,
+                "status": "REFRACTORY_REST"
+            }
+        signal_label = stimulus.get("signal_label", "unknown")
+        nucleus_target = stimulus.get("nucleus", "MGN")
+        intensity = stimulus.get("intensity", 0.5) # Remplacé 'payload' par 'stimulus'
 
         # 1. Évaluation par l'Hippocampe (Prédiction)
         # On utilise le signal_label pour vérifier si c'est déjà connu
-        prediction_error = await self.hippo.evaluate_prediction(payload.get("signal_label", ""))
+        prediction_error = await self.hippo.evaluate_prediction(stimulus.get("signal_label", ""))        
         
         # 2. Mise à jour du ChemicalCore via l'Amygdale (Simulée ici)
         # Si erreur forte + intensité forte = Noradrénaline boost
