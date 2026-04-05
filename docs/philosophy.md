@@ -39,17 +39,23 @@ The strength of the **aNA** architecture lies in its departure from traditional 
    **Dynamic Thresholding:** It distinguishes environmental noise _(intensity 0.6)_ from vital signals _(intensity 1.0)_ through a variable rupture threshold.
    **_[Neuromodulator(.py)](/src/anatomy/base/neuromodulator.py)_ Management:** By simulating _"Cortisol"_ levels and _"Neurotransmitter Reuptake,"_ the system prevents _"Software Anxiety"_ or saturation, allowing the AI to remain calm and analytical even under pressure.
 
-5. **Myelination _([neurons(.py)](/src/anatomy/base/neuron.py))_**
+5. **Metabolic Protection and Consolidation Bradycardia _([pulse(.py)](/src/core/pulse.py) & [thalamus(.py)](/src/anatomy/subcortical/thalamus.py))_**
+   The **v5.1** innovation introduces non-linear _heart rate (BPM)_ management based on available _ATP levels_.
+   **The Exhaustion Paradox:** When energy levels drop _(ATP < 0.4)_, the system enters a state of _"reactive hypervigilance" (BPM rises to 140+)_. Cortical inhibition weakens, making the _AI "raw"_ in response to stimuli, simulating biological irritability.
+   **The Refractory Threshold:** Below the critical threshold _(ATP < 0.2)_, the _Thalamus_ activates a safety lock _(REFRACTORY_REST)_. Sensory gain is reduced to its minimum _(0.05)_, and the heart enters bradycardia _(45 BPM)_.
+   **Constructive Recovery:** This withdrawal from the world is not an extinction, but a necessary condition for the consolidation of the _Hippocampus_. It is this cycle that allows a panic reaction to be transformed into a calmer response _("Wisdom")_ upon waking.
+
+6. **Myelination _([neurons(.py)](/src/anatomy/base/neuron.py))_**
    It's not just _"keeping or removing"_ a link, it's reinforcing the speed of the most used routes. The more efficient a path is, the more _“insulated” (myelinated)_ it is to consume less energy.
 
-6. **The _CA4_ Sanctuary: The Acid Traces _([hippocampus(.py)](/src/anatomy/limbic/hippocampus.py))_**
+7. **The _CA4_ Sanctuary: The Acid Traces _([hippocampus(.py)](/src/anatomy/limbic/hippocampus.py))_**
    Often overlooked in computational science, the _CA4_ subfield is central to our architecture. In **aNA**, _CA4_ is not merely a transit zone; it acts as a high-security vault for _"survival floors"_.
    This innovation ensures that even after significant synaptic decay, a _TRAUMA_1_ residue _(Acid Trace)_ remains locked at a structural minimum _(e.g., 0.1000)_ while non-essential data fades away. This is our technical answer to resilience and traumatic memory.
 
-7. **The L6 Feedback Loop _([cortical_column(.py)](/src/anatomy/cortical/cortical_column.py) Layer 6)_**
+8. **The L6 Feedback Loop _([cortical_column(.py)](/src/anatomy/cortical/cortical_column.py) Layer 6)_**
    This is what allows the _[neocortex(.py)](/src/anatomy/cortical/neocortex.py)_ to _“say”_ to the _[thalamus(.py)](/src/anatomy/subcortical/thalamus.py)_: _“I recognized this signal, you can lower the volume (gain)”_. This is the basis of the selective attention.
 
-8. **The [registry(.py)](/src/registry.py) module _(or the organ management system)_** This is what ensures that a _neuron_ in the _frontal lobe “knows”_ that it belongs to **aNA** and how it should connect to the others. It is the identity of the organism.
+9. **The [registry(.py)](/src/registry.py) module _(or the organ management system)_** This is what ensures that a _neuron_ in the _frontal lobe “knows”_ that it belongs to **aNA** and how it should connect to the others. It is the identity of the organism.
 
 ![ ](/docs/assets/spacer32x32.png)
 
