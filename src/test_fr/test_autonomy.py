@@ -49,7 +49,7 @@ def get_input_non_blocking():
 
 async def interactive_keyboard_input(thalamus):
     """Boucle qui écoute le clavier en temps réel."""
-    print("⌨️  Mode interactif actif. Tapez vos commandes (LUNE, MARS, etc.)...")
+    print("⌨️ Mode interactif actif. Tapez vos commandes (LUNE, MARS, etc.)...")
     old_settings = termios.tcgetattr(sys.stdin)
     try:
         tty.setcbreak(sys.stdin.fileno())
