@@ -6,7 +6,6 @@ Module: Test Cortical Column
 Description: This test is designed to validate the core functionalities of the cortical column module in complete isolation. It simulates a simple data stream to verify that the cortical column processes inputs correctly, learns patterns, and can retrieve them based on context. The test covers feedforward processing, lateral inhibition, and feedback mechanisms.
 Architecture and neuroinformatics: Theriault Benoit
 """
-
 import unittest
 import numpy as np
 import os
@@ -18,6 +17,18 @@ if ROOT_DIR not in sys.path:
     sys.path.insert(0, ROOT_DIR)
 
 from anatomy.cortical.cortical_column import CorticalLobe
+
+def create_ascii_header():
+    print(f"\033c") 
+    print("░                     ░░░░░░░░░░▒▒▒▒▒▒░░")
+    print("           ░░░░░░░░░▒▒▒▒▒▓▒▒▒▒░░░░░░░░░░▒▒▒▒░                                                          ░░░░░░░░░░░")
+    print("░░░░░░░░░░░░░░░░▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▒░░░░░▒▒▒░░░░▒▓▒░░                      ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░")
+    print("░░░░░░░░░░░░░░▒▒▒▓▓▓▓▓▓▓▓▓▓▓▒░░▒▒▒░░░░▒▓▓▓▓▓▓▒▒▒▒▒░     ░░░░░░░░░░░░░░░░░░░░░▒▒░░▒▒▒▓▓▓▓▓▓▒▒▒░░░░░░░░░░░░░░░░░▒▒▒▒")
+    print("▒░░░░░▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▒░         ░░▒▒▒░▒▒▒▒▓▓▓▓▓▓▓▒▒░░  ░▒▒▒▓▒▒▒▓▒▓▒▓▒░░░░░░░▒▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░░░░░░░▒▓")
+    print("░▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓░                   ░░ ▒▒▓▒░▒▓▓▓░▒▒░░           ░▒░░░▒▓▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▓▓")
+    print("▒▒▓▓▓▓▓▓▒▒▒░░                           ░▓▓▒░░▒▓▓░ _    _    _ ░▒░░▒▓▒▓▓▓▓▓▓▓▓▓▓▒░░░░░░░░░▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓")
+    print("▓▓▓▓▓▒░AI inspired by natural plasticity ░░   ░░░  a    N    A  ▒▓▒▓▒▒▒▓░Autonomous Neural Architecture v5.1 ░░▒▒▓")
+    print("░                                                  ‾    ‾    ‾ ░▓▒▓░░▒▓░\n\n")
 
 class TestCorticalColumn(unittest.TestCase):
     def setUp(self):
@@ -75,4 +86,5 @@ class TestCorticalColumn(unittest.TestCase):
         output = self.lobe.process_through_layers(input_signal, self.neuromodulators, recognition_score=0.5)
 
 if __name__ == '__main__':
+    create_ascii_header()
     unittest.main()

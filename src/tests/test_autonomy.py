@@ -6,7 +6,6 @@ Module: Test Autonomy
 Description: This test is designed to validate the autonomous behaviors of the aNA system in isolation. It simulates an interactive environment where the system can respond to user input without external dependencies. The test checks the system's ability to process sensory input, modulate internal states, and produce outputs based on its internal logic and chemical states. It also verifies that the system can maintain a basic level of consciousness and metabolic regulation while interacting with the environment.
 Architecture and neuroinformatics: Theriault Benoit
 """
-
 import unittest
 import numpy as np
 import asyncio
@@ -26,6 +25,18 @@ from anatomy.limbic.hippocampus import Hippocampus
 from anatomy.base.neuromodulator import Neuromodulator
 from core.pulse import Pulse
 
+def create_ascii_header():
+    print(f"\033c") 
+    print("░                     ░░░░░░░░░░▒▒▒▒▒▒░░")
+    print("           ░░░░░░░░░▒▒▒▒▒▓▒▒▒▒░░░░░░░░░░▒▒▒▒░                                                          ░░░░░░░░░░░")
+    print("░░░░░░░░░░░░░░░░▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▒░░░░░▒▒▒░░░░▒▓▒░░                      ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░")
+    print("░░░░░░░░░░░░░░▒▒▒▓▓▓▓▓▓▓▓▓▓▓▒░░▒▒▒░░░░▒▓▓▓▓▓▓▒▒▒▒▒░     ░░░░░░░░░░░░░░░░░░░░░▒▒░░▒▒▒▓▓▓▓▓▓▒▒▒░░░░░░░░░░░░░░░░░▒▒▒▒")
+    print("▒░░░░░▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▒░         ░░▒▒▒░▒▒▒▒▓▓▓▓▓▓▓▒▒░░  ░▒▒▒▓▒▒▒▓▒▓▒▓▒░░░░░░░▒▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░░░░░░░▒▓")
+    print("░▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓░                   ░░ ▒▒▓▒░▒▓▓▓░▒▒░░           ░▒░░░▒▓▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▓▓")
+    print("▒▒▓▓▓▓▓▓▒▒▒░░                           ░▓▓▒░░▒▓▓░ _    _    _ ░▒░░▒▓▒▓▓▓▓▓▓▓▓▓▓▒░░░░░░░░░▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓")
+    print("▓▓▓▓▓▒░AI inspired by natural plasticity ░░   ░░░  a    N    A  ▒▓▒▓▒▒▒▓░Autonomous Neural Architecture v5.1 ░░▒▒▓")
+    print("░                                                  ‾    ‾    ‾ ░▓▒▓░░▒▓░\n\n")
+
 def is_data():
     """Vérifie si une touche est pressée sans bloquer le script."""
     return select.select([sys.stdin], [], [], 0) == ([sys.stdin], [], [])
@@ -38,7 +49,7 @@ def get_input_non_blocking():
 
 async def interactive_keyboard_input(thalamus):
     """Boucle qui écoute le clavier en temps réel."""
-    print("⌨️  Interactive mode active. Type your commands (e.g., MOON, MARS, etc.)")
+    print("⌨️ Interactive mode active. Type your commands (e.g., MOON, MARS, etc.)")
     old_settings = termios.tcgetattr(sys.stdin)
     try:
         tty.setcbreak(sys.stdin.fileno())
@@ -92,6 +103,7 @@ async def main():
 
 # --- POINT D'ENTRÉE DU SCRIPT ---
 if __name__ == "__main__":
+    create_ascii_header()
     try:
         # Lance la boucle d'événements asyncio pour l'orchestration
         asyncio.run(main())

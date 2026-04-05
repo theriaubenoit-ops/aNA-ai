@@ -6,7 +6,6 @@ Module: Test Cerebellum
 Description: This test validates the error correction capabilities of the cerebellum. It simulates a motor task where the system must reach a target position, starting with an initial error. The test checks that after processing feedback, the cerebellum computes a correction that reduces the error, and that the inhibitory output from Purkinje cells increases appropriately in response to high error signals.
 Architecture and neuroinformatics: Theriault Benoit
 """
-
 import unittest
 import numpy as np
 import os
@@ -18,6 +17,18 @@ if ROOT_DIR not in sys.path:
     sys.path.insert(0, ROOT_DIR)
 
 from anatomy.subcortical.cerebellum import Cerebellum
+
+def create_ascii_header():
+    print(f"\033c") 
+    print("░                     ░░░░░░░░░░▒▒▒▒▒▒░░")
+    print("           ░░░░░░░░░▒▒▒▒▒▓▒▒▒▒░░░░░░░░░░▒▒▒▒░                                                          ░░░░░░░░░░░")
+    print("░░░░░░░░░░░░░░░░▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▒░░░░░▒▒▒░░░░▒▓▒░░                      ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░")
+    print("░░░░░░░░░░░░░░▒▒▒▓▓▓▓▓▓▓▓▓▓▓▒░░▒▒▒░░░░▒▓▓▓▓▓▓▒▒▒▒▒░     ░░░░░░░░░░░░░░░░░░░░░▒▒░░▒▒▒▓▓▓▓▓▓▒▒▒░░░░░░░░░░░░░░░░░▒▒▒▒")
+    print("▒░░░░░▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▒░         ░░▒▒▒░▒▒▒▒▓▓▓▓▓▓▓▒▒░░  ░▒▒▒▓▒▒▒▓▒▓▒▓▒░░░░░░░▒▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░░░░░░░▒▓")
+    print("░▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓░                   ░░ ▒▒▓▒░▒▓▓▓░▒▒░░           ░▒░░░▒▓▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▓▓")
+    print("▒▒▓▓▓▓▓▓▒▒▒░░                           ░▓▓▒░░▒▓▓░ _    _    _ ░▒░░▒▓▒▓▓▓▓▓▓▓▓▓▓▒░░░░░░░░░▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓")
+    print("▓▓▓▓▓▒░AI inspired by natural plasticity ░░   ░░░  a    N    A  ▒▓▒▓▒▒▒▓░Autonomous Neural Architecture v5.1 ░░▒▒▓")
+    print("░                                                  ‾    ‾    ‾ ░▓▒▓░░▒▓░\n\n")
 
 class TestCerebellum(unittest.TestCase):
     def setUp(self):
@@ -56,4 +67,5 @@ class TestCerebellum(unittest.TestCase):
         self.assertGreater(inhibition, 0.5)
 
 if __name__ == '__main__':
+    create_ascii_header()
     unittest.main()

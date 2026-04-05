@@ -6,7 +6,6 @@ Module: Test Limbic system
 Description: This test suite is designed to validate the core functionalities of the limbic system modules (Amygdala and Hippocampus) in complete isolation. It simulates various scenarios to verify that the amygdala responds appropriately to different stimulus intensities, and that the hippocampus can encode, consolidate, and retrieve patterns correctly. The tests also check the interaction between these two structures in terms of emotional memory processing.
 Architecture and neuroinformatics: Theriault Benoit
 """
-
 import unittest
 import numpy as np
 import os
@@ -19,6 +18,18 @@ if ROOT_DIR not in sys.path:
 
 from unittest.mock import MagicMock
 from anatomy.limbic.limbic_system import LimbicSystem
+
+def create_ascii_header():
+    print(f"\033c") 
+    print("░                     ░░░░░░░░░░▒▒▒▒▒▒░░")
+    print("           ░░░░░░░░░▒▒▒▒▒▓▒▒▒▒░░░░░░░░░░▒▒▒▒░                                                          ░░░░░░░░░░░")
+    print("░░░░░░░░░░░░░░░░▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▒░░░░░▒▒▒░░░░▒▓▒░░                      ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░")
+    print("░░░░░░░░░░░░░░▒▒▒▓▓▓▓▓▓▓▓▓▓▓▒░░▒▒▒░░░░▒▓▓▓▓▓▓▒▒▒▒▒░     ░░░░░░░░░░░░░░░░░░░░░▒▒░░▒▒▒▓▓▓▓▓▓▒▒▒░░░░░░░░░░░░░░░░░▒▒▒▒")
+    print("▒░░░░░▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▒░         ░░▒▒▒░▒▒▒▒▓▓▓▓▓▓▓▒▒░░  ░▒▒▒▓▒▒▒▓▒▓▒▓▒░░░░░░░▒▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░░░░░░░▒▓")
+    print("░▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓░                   ░░ ▒▒▓▒░▒▓▓▓░▒▒░░           ░▒░░░▒▓▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▓▓")
+    print("▒▒▓▓▓▓▓▓▒▒▒░░                           ░▓▓▒░░▒▓▓░ _    _    _ ░▒░░▒▓▒▓▓▓▓▓▓▓▓▓▓▒░░░░░░░░░▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓")
+    print("▓▓▓▓▓▒░AI inspired by natural plasticity ░░   ░░░  a    N    A  ▒▓▒▓▒▒▒▓░Autonomous Neural Architecture v5.1 ░░▒▒▓")
+    print("░                                                  ‾    ‾    ‾ ░▓▒▓░░▒▓░\n\n")
 
 class TestLimbicSystem(unittest.TestCase):
     def setUp(self):
@@ -58,4 +69,5 @@ class TestLimbicSystem(unittest.TestCase):
         self.assertTrue(is_critical)
 
 if __name__ == '__main__':
+    create_ascii_header()
     unittest.main()
