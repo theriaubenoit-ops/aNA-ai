@@ -27,7 +27,39 @@ class Pulse:
         self.energy = 1.0           
         self.dopamine = 0.1         
         self.is_refractory = False
-        
+
+    def get_system_strain(self) -> float:
+        """
+        Plus l'ATP est bas, plus le 'Strain' est élevé (0.0 à 1.0).
+        C'est ce signal qui va 'ouvrir' les vannes du Thalamus aux souvenirs négatifs.
+        """
+        return 1.0 - self.atp
+
+    def update_metabolism(self, dt: float):
+        # Consommation existante
+        self.atp = max(0.0, self.atp - (0.01 * dt))
+    
+        # Nouveau : Si on est en mode 'Refractory' (fatigue intense), 
+        # le système doit ralentir drastiquement pour récupérer.
+        if self.is_refractory:
+            # Recharge métabolique (5x plus rapide que la consommation)
+            self.atp = min(1.0, self.atp + (0.05 * dt))
+            
+            # Seuil de réveil : une fois à 80% d'énergie
+            if self.atp > 0.8:
+                self.is_refractory = False
+                self.bpm = 110.0 # Rythme de base calme
+                print("  [Pulse] 🌅 aNA wakes up. Energy restored.")
+            
+    def recover_energy(self, rest_quality: float):
+        """
+        Simule la récupération après le stress.
+        Une fois l'ATP remonté, le Thalamus peut à nouveau filtrer le bruit.
+        """
+        self.atp = min(1.0, self.atp + (0.05 * rest_quality))
+        if self.atp > 0.5:
+            self.is_refractory = False
+
     def update_frequency(self, new_bpm: float):
         """Met à jour le rythme et recalcule les Hz."""
         self.bpm = max(40.0, min(220.0, new_bpm))
@@ -36,7 +68,7 @@ class Pulse:
         # self.last_time = time.time() # Optionnel selon ta gestion du dt
 
         # --- LIGNE SUPPRIMÉE ---
-        # print(f"  [Pulse] Nouveau BPM: {self.bpm:.2f}")
+        # print(f"  [Pulse] New BPM: {self.bpm:.2f}")
         
     def update(self):
         """Méthode appelée dans main.py pour simuler le battement."""
@@ -49,6 +81,18 @@ class Pulse:
         Calcule le delta temporel (dt) et met à jour l'état métabolique.
         Indispensable pour le monitoring aNA 5.1.
         """
+
+        # Si le système entre en mode réfractaire (repos forcé)
+        if self.atp < 0.2:
+            self.is_refractory = True
+            self.bpm = 45.0  # Bradycardie de protection
+            
+            # On déclenche la consolidation si un objet hippocampe est lié
+            if hasattr(self, 'hippo') and self.hippo:
+                # On peut imaginer un appel asynchrone pour ne pas bloquer le coeur
+                import asyncio
+                asyncio.create_task(self.hippo.consolidate_and_prune())
+
         now = time.time()
         dt = now - self.last_time
         self.last_time = now
@@ -66,6 +110,18 @@ class Pulse:
         self.is_refractory = self.atp < 0.2
 
         return dt
+    
+    def update_metabolism(self, dt: float):
+        if self.is_refractory:
+            # Recharge lente pendant le sommeil
+            self.atp = min(1.0, self.atp + (0.05 * dt))
+            if self.atp > 0.8: # Seuil de réveil
+                self.is_refractory = False
+                self.bpm = 110.0 # Retour au rythme de base
+                print("  [Pulse] 🌅 aNA wakes up. System restored.")
+        else:
+            # Consommation normale
+            self.atp = max(0.0, self.atp - (0.01 * dt))
 
     def get_current_hz(self) -> float:
         """Retourne la fréquence cardiaque simulée en Hertz."""
@@ -75,6 +131,11 @@ class Pulse:
 
     def inject_stimulus(self, intensity: float):
         """Simule une décharge d'adrénaline/dopamine."""
+        if self.is_refractory:
+            self.bpm = 45.0  # Rythme calme, on réduit la consommation de 80%
+            # On commence la recharge lente
+            self.atp = min(1.0, self.atp + (0.02 * dt))
+
         if not self.is_refractory:
             self.dopamine = min(1.0, self.dopamine + intensity)
             self.atp = max(0.0, self.atp - (intensity * 0.2))
