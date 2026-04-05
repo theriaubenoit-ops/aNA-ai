@@ -42,7 +42,7 @@ class Hippocampus:
                     self.subfields[sf] = {}
 
         self.short_term_memory = {}
-        print("  [Hippocampus] v5.1 : Zones DG, CA1-CA4 initialisées.")
+        print("  [Hippocampus] v5.1 : Zones DG, CA1-CA4 initialized.")
 
     async def evaluate_prediction(self, signal_label: str) -> float:
         """
@@ -87,10 +87,10 @@ class Hippocampus:
                 self.subfields["CA3"][signal_label] = 1.0
                 # On grave un plancher permanent dans CA4 (la trace acide)
                 self.subfields["CA4"][signal_label] = 0.2 
-                print(f"DEBUG: Trace '{signal_label}' gravée par TRAUMA (Flash NMDA).")
+                print(f"DEBUG: Trace '{signal_label}' engraved by TRAUMA (Flash NMDA).")
             else:
                 self.subfields["CA3"][signal_label] = self.config.get("MIN_LATENT_THRESHOLD", 0.001)
-                print(f"DEBUG: Trace '{signal_label}' initialisée NEUTRE.")
+                print(f"DEBUG: Trace '{signal_label}' initialized NEUTRAL.")
 
         # 2. RENFORCEMENT (LTP)
         # On ajoute l'impact émotionnel à la force actuelle
@@ -99,30 +99,34 @@ class Hippocampus:
         # 3. ÉTANCHÉITÉ (On s'assure que le signal DG est présent)
         self.subfields["DG"][signal_label] = True
 
-    async def apply_synaptic_decay(self):
+    async def apply_synaptic_decay(self, system_strain: float = 0.0):
         """
-        Fonction de sédimentation : le CA4 agit comme un comparateur de survie.
-        La trace s'érode (LTD) mais ne peut jamais descendre sous son plancher CA4.
+        Version 5.1 : Le CA4 devient dynamique. 
+        En cas de fatigue (strain élevé), les traces négatives 'remontent' 
+        pour servir d'avertissement prioritaire.
         """
-        # Seuil minimal par défaut pour les traces neutres
         default_min = self.config.get("MIN_LATENT_THRESHOLD", 0.001)
         
         for label in list(self.subfields["CA3"].keys()):
-            # 1. Calcul de la décroissance standard (Burn Rate)
-            # On simule l'érosion naturelle des liens synaptiques (LTD)
+            # 1. Érosion naturelle (LTD)
             self.subfields["CA3"][label] *= (1.0 - self.burn_rate)
             
-            # 2. RÉCUPÉRATION DU PLANCHER DE SURVIE (Innovation CA4)
-            # On interroge le CA4 : si une Trace Acide a été gravée (ex: 0.2), 
-            # elle devient la limite infranchissable. Sinon, on utilise le seuil neutre.
+            # 2. Récupération du plancher de survie CA4
             survival_floor = self.subfields["CA4"].get(label, default_min)
             
-            # 3. ARBITRAGE DU COMPARATEUR
-            # Si la valeur érodée descend sous le plancher de survie, on la verrouille.
+            # 3. INNOVATION : Effet de Fatigue (Strain)
+            # Si le système est épuisé (ATP bas), on augmente artificiellement 
+            # la visibilité des traces de survie.
+            if system_strain > 0.6 and survival_floor > default_min:
+                # La trace 'remonte' proportionnellement à la fatigue
+                boost_avertissement = survival_floor * (system_strain * 0.5)
+                self.subfields["CA3"][label] += boost_avertissement
+                # On s'assure que ça ne dépasse pas un seuil de panique
+                self.subfields["CA3"][label] = min(1.0, self.subfields["CA3"][label])
+            
+            # 4. Arbitrage final
             if self.subfields["CA3"][label] < survival_floor:
                 self.subfields["CA3"][label] = survival_floor
-                # Optionnel : log de maintenance pour le monitoring du dashboard
-                # print(f"DEBUG: Trace '{label}' stabilisée par le plancher CA4 ({survival_floor}).")
 
     async def update_trace_with_emotion(self, signal_label: str, impact: float, valence: float):
         """
@@ -142,3 +146,71 @@ class Hippocampus:
 
         # Plafonnement pour éviter l'instabilité numérique
         self.subfields["CA3"][signal_label] = min(5.0, self.subfields["CA3"][signal_label])
+
+    async def consolidate_and_prune(self):
+        """
+        Phase de sommeil paradoxal : transforme les alertes en leçons.
+        """
+        print("  [Hippocampus] Deep consolidation cycle starting...")
+        
+        for label in list(self.subfields["CA3"].keys()):
+            # 1. Élagage (Pruning) des bruits faibles
+            if self.subfields["CA3"][label] < 0.05:
+                del self.subfields["CA3"][label]
+                continue
+
+            # 2. Digestion des souvenirs négatifs (Traces Acides)
+            # Si une trace est stabilisée par le CA4, on baisse son intensité émotionnelle
+            # pour qu'elle ne soit plus une 'alerte' mais une 'information'.
+            if label in self.subfields["CA4"]:
+                # On réduit l'amplitude de CA3 vers le plancher CA4
+                # (Le souvenir reste, mais la douleur/panique s'efface)
+                self.subfields["CA3"][label] *= 0.8
+
+    async def consolidate_metabolism(self, atp_level: float):
+        """
+        Mécanique de 'Sommeil Paradoxal' :
+        Nettoie le bruit et stabilise les souvenirs de survie (CA4).
+        """
+        print(f"  [Hippocampe] Active consolidation phase (ATP: {atp_level:.2f})")
+        
+        for label in list(self.subfields["CA3"].keys()):
+            # 1. Élagage (Pruning) : Si la trace est trop faible, on l'efface
+            # On libère de l'espace cognitif
+            if self.subfields["CA3"][label] < 0.05:
+                del self.subfields["CA3"][label]
+                continue
+                
+            # 2. Refroidissement des Traces Acides :
+            # Si c'est un souvenir de danger (présent dans CA4), on baisse son 
+            # intensité dans CA3 pour que William ne soit plus en 'panique' au réveil.
+            if label in self.subfields["CA4"]:
+                # On rapproche la trace de son plancher de survie (Sagesse > Peur)
+                target_floor = self.subfields["CA4"][label]
+                self.subfields["CA3"][label] = (self.subfields["CA3"][label] + target_floor) / 2
+
+    async def consolidate_and_prune(self):
+        """
+        Simule le sommeil paradoxal (REM) : 
+        Élagage des bruits et stabilisation des leçons de survie.
+        """
+        print("  [Hippocampe] 🧠 Synaptic consolidation in progress...")
+        
+        for label in list(self.subfields["CA3"].keys()):
+            # 1. PRUNING (Élagage)
+            # Si une trace est trop faible (< 0.05), elle est considérée comme du bruit.
+            # On libère de la mémoire.
+            if self.subfields["CA3"][label] < 0.05:
+                del self.subfields["CA3"][label]
+                continue
+                
+            # 2. APOIDEMENT DES TRACES ACIDES (CA4)
+            # Si le souvenir est marqué comme "danger" dans le CA4 :
+            if label in self.subfields["CA4"]:
+                # On réduit l'amplitude de la trace dans le CA3.
+                # Le but : garder le souvenir du danger, mais supprimer la panique (le pic de BPM).
+                floor = self.subfields["CA4"][label]
+                # On lisse la valeur vers le plancher de survie
+                self.subfields["CA3"][label] = (self.subfields["CA3"][label] + floor) / 2
+                
+        print("  [Hippocampus] ✅ Cleaning complete. aNA is ready for a new cycle.")
