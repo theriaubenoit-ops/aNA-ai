@@ -267,7 +267,7 @@ def test_hippocampus_pattern_learning():
     print("-" * 30)
     
     for i, signal in enumerate(sequence):
-        print(f"Tour {i+1} : Encodage de '{signal}'")
+        print(f"Round {i+1} : Encodage de '{signal}'")
         hippo.encode(signal, importance=1.0)
         
         # Consolidation après chaque encodage
