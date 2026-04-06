@@ -2,9 +2,12 @@
 # -*- coding: utf-8 -*-
 """
 aNA Project - v5.1
+
 Module: Main Integration
+
 Description : This core process orchestrates the full bio-digital loop. It synchronizes the Thalamic flow, Cortical L4->L2/3->L6 cascades, and Dynamic Myelination. The goal is to simulate a stabilized metabolism where recognition modulates the Pulse (BPM) and neurotransmitter resistance in real-time.
 Features: Thalamo-Cortical Feedback, Homeostasis, Myelin growth.
+
 Architecture and neuroinformatics: Theriault Benoit
 """
 import asyncio
@@ -14,7 +17,6 @@ import numpy as np
 
 # Gestion du path pour les imports locaux
 sys.path.append(os.path.abspath(os.path.dirname(__file__)))
-
 from config import get_config  # Ajoute l'import en haut du fichier
 from core.pulse import Pulse
 from core.input_gateway import InputGateway
@@ -25,6 +27,19 @@ from anatomy.base.neuron import Neuron, NeuronConfig
 from anatomy.base.neuromodulator import Neuromodulator
 from registry import ORGANS 
 
+
+def create_ascii_header():
+    print(f"\033c") 
+    print("░                     ░░░░░░░░░░▒▒▒▒▒▒░░")
+    print("           ░░░░░░░░░▒▒▒▒▒▓▒▒▒▒░░░░░░░░░░▒▒▒▒░                                                          ░░░░░░░░░░░")
+    print("░░░░░░░░░░░░░░░░▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▒░░░░░▒▒▒░░░░▒▓▒░░                      ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░")
+    print("░░░░░░░░░░░░░░▒▒▒▓▓▓▓▓▓▓▓▓▓▓▒░░▒▒▒░░░░▒▓▓▓▓▓▓▒▒▒▒▒░     ░░░░░░░░░░░░░░░░░░░░░▒▒░░▒▒▒▓▓▓▓▓▓▒▒▒░░░░░░░░░░░░░░░░░▒▒▒▒")
+    print("▒░░░░░▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▒░         ░░▒▒▒░▒▒▒▒▓▓▓▓▓▓▓▒▒░░  ░▒▒▒▓▒▒▒▓▒▓▒▓▒░░░░░░░▒▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░░░░░░░▒▓")
+    print("░▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓░                   ░░ ▒▒▓▒░▒▓▓▓░▒▒░░           ░▒░░░▒▓▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▓▓")
+    print("▒▒▓▓▓▓▓▓▒▒▒░░                           ░▓▓▒░░▒▓▓░ _    _    _ ░▒░░▒▓▒▓▓▓▓▓▓▓▓▓▓▒░░░░░░░░░▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓")
+    print("▓▓▓▓▓▒░AI inspired by natural plasticity ░░   ░░░  a    N    A  ▒▓▒▓▒▒▒▓░Autonomous Neural Architecture v5.1 ░░▒▒▓")
+    print("░                                                  ‾    ‾    ‾ ░▓▒▓░░▒▓░\n\n")
+
 async def main():
     print("--- ⚡ aNA Organism v5.1 (Organization Meeting) ---")
     
@@ -34,7 +49,6 @@ async def main():
     hippo = Hippocampus(config=config, neuromodulator_core=neurom_core)
     heart = Pulse()
     gateway = InputGateway()
-    
     
     # 2. Initialisation du Néocortex (Colonne de traitement)
     # Chaque colonne représente une unité de calcul 6-layers
@@ -62,7 +76,7 @@ async def main():
         l6_signal = cortical_results['l6_feedback']
 
         # --- PHASE D : TRAITEMENT THALAMIQUE (Régulation du BPM) ---
-        # William utilise maintenant le feedback L6 pour calculer le rythme
+        # aNA utilise maintenant le feedback L6 pour calculer le rythme
         log_thalamus = await thalamus.process_payload(payload, l6_feedback=l6_signal)
         
         # Mise à jour du monitoring
@@ -81,11 +95,12 @@ async def main():
         print(f" └─ Thalamus : {log_thalamus}")
         print(f" └─ Cortex   : Recognition {cortical_results['recognition']:.2%}")
         print(f" └─ Feedback : L6 Signal {cortical_results['l6_feedback']:.2f}")
-        print(f" └─ Myelin  : {avg_myeline:.5f} (Increased conductivity)") # Nouveau !
+        print(f" └─ Myelin   : {avg_myeline:.5f} (Increased conductivity)") # Nouveau !
         print(f" └─ Pulse    : {status['bpm']:.1f} BPM | Vitality: {status['energy']:.2%}")        
         await asyncio.sleep(0.1)
 
     print("\n--- ✅ Stabilized and functional organism ---")
 
 if __name__ == "__main__":
+    create_ascii_header()
     asyncio.run(main())
