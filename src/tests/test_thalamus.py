@@ -81,7 +81,7 @@ async def test_sensory_cascade():
     ]
 
     for i, stimulus in enumerate(stimuli):
-        print(f"\nCycle {i+1} | Input: {stimulus['signal_label']} via {stimulus['nucleus']}")
+        print(f"\nStep {i+1} | Input: {stimulus['signal_label']} via {stimulus['nucleus']}")
         
         # Simulation d'un feedback L6 (ex: 0.2 pour un signal nouveau, 0.8 pour connu)
         l6_mock = 0.2 # 0.5
