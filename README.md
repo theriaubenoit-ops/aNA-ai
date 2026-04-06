@@ -105,7 +105,7 @@ python3 src/tests/test_cortical_column.py
 
 _Note: These definitions are adapted to the specific metabolic and cognitive constraints of the **aNA** v5.0 architecture and above._
 
-_\*Every measurement reflected here is a digital bridge to biological reality, designed to synthesize the fundamental principles of living systems._
+###### _\*Every measurement reflected here is a digital bridge to biological reality, designed to synthesize the fundamental principles of living systems._
 
 ![ ](/docs/assets/spacer32x32.png)
 
