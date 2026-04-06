@@ -57,7 +57,7 @@ The strength of the **aNA** architecture lies in its departure from traditional 
 
 9. **The [registry(.py)](/src/registry.py) module _(or the organ management system)_** This is what ensures that a _neuron_ in the _frontal lobe “knows”_ that it belongs to **aNA** and how it should connect to the others. It is the identity of the organism.
 
-_\*All quantitative thresholds and metabolic metrics are derived from neurobiological models, transcoded into digital architecture to simulate synthetic life-cycles._
+###### _\*All quantitative thresholds and metabolic metrics are derived from neurobiological models, transcoded into digital architecture to simulate synthetic life-cycles._
 
 ![ ](/docs/assets/spacer32x32.png)
 
