@@ -31,7 +31,7 @@ The strength of the **aNA** architecture lies in its departure from traditional 
    This is the philosophy which explains the modular structure of this project (separate [thalamus(.py)](/src/anatomy/subcortical/thalamus.py)_, separate \_Hippocampus_, separate _Amygdala_...). A philosophical method rigorously applied to _Python code_.
 
 3. **Economy of Links: The Lavoisier Principle**
-   Instead of storing terabytes of raw, disconnected data, **aNA** transforms information into relational nodes and emotional weights.
+   Instead of storing terabytes of raw, disconnected data, **aNA** transforms information into relational nodes and _emotional weights_.
    _"Nothing is lost, nothing is created, everything is transformed"_: Low-relevance memories are naturally pruned _(synaptic pruning)_ to allocate resources to robust, high-value structures.
 
 4. **Homeostatic Amygdala Regulation**
@@ -48,16 +48,16 @@ The strength of the **aNA** architecture lies in its departure from traditional 
 6. **Myelination _([neurons(.py)](/src/anatomy/base/neuron.py))_**
    It's not just _"keeping or removing"_ a link, it's reinforcing the speed of the most used routes. The more efficient a path is, the more _“insulated” (myelinated)_ it is to consume less energy.
 
-7. **The _CA4_ Sanctuary: The Acid Traces _([hippocampus(.py)](/src/anatomy/limbic/hippocampus.py))_**
+7. **The _CA4_ Sanctuary: The _Acid Traces ([hippocampus(.py)](/src/anatomy/limbic/hippocampus.py))_**
    Often overlooked in computational science, the _CA4_ subfield is central to our architecture. In **aNA**, _CA4_ is not merely a transit zone; it acts as a high-security vault for _"survival floors"_.
    This innovation ensures that even after significant synaptic decay, a _TRAUMA_1_ residue _(Acid Trace)_ remains locked at a structural minimum _(e.g., 0.1000)_ while non-essential data fades away. This is our technical answer to resilience and traumatic memory.
 
 8. **The L6 Feedback Loop _([cortical_column(.py)](/src/anatomy/cortical/cortical_column.py) Layer 6)_**
    This is what allows the _[neocortex(.py)](/src/anatomy/cortical/neocortex.py)_ to _“say”_ to the _[thalamus(.py)](/src/anatomy/subcortical/thalamus.py)_: _“I recognized this signal, you can lower the volume (gain)”_. This is the basis of the selective attention.
 
-9. **The [registry(.py)](/src/registry.py) module _(or the organ management system)_** This is what ensures that a _neuron_ in the _frontal lobe “knows”_ that it belongs to **aNA** and how it should connect to the others. It is the identity of the organism.
+9. **The [registry(.py)](/src/registry.py) module _(or the organ management system)_** This is what ensures that a _neuron_ in the _[frontal(.py)](/src/anatomy/cortical/frontal.py) lobe “knows”_ that it belongs to **aNA** and how it should connect to the others. It is the identity of the organism.
 
-###### _\*All quantitative thresholds and metabolic metrics are derived from neurobiological models, transcoded into digital architecture to simulate synthetic life-cycles._
+###### _\*All quantitative thresholds and metabolic metrics are derived from neurobiological models, transcoded into digital architecture to interpret synthetic life-cycles._
 
 ![ ](/docs/assets/spacer32x32.png)
 
@@ -96,7 +96,7 @@ _The **aNA** (Autonomous Neural Architecture) AI project rejects the paradigm of
    **NMDA Logic:** High-saliency events, verified by the _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_, trigger _NMDA-gated plasticity_. This process bypasses standard pruning to create permanent _"Acid Traces"_ in the _CA4_ subfield, ensuring that critical survival data remains retrievable despite systemic _"noise"_.
 
 9. **Emotional Saliency & Acid Traces _(CA4 Protection)_**
-   **aNA** does not treat all information equally. Through a synchronized dialogue between the _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ and the _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_, the system identifies high-impact emotional events. While standard data undergoes natural decay (pruning), trauma-related signals trigger a _"Flash NMDA"_ encoding, creating an Acid Trace. This trace is locked into a structural floor within the _CA4_ subfield, ensuring that survival-critical information survives even after long-term synaptic decay.
+   **aNA** does not treat all information equally. Through a synchronized dialogue between the _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ and the _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_, the system identifies high-impact _emotional events_. While standard data undergoes natural decay (pruning), trauma-related signals trigger a _"Flash NMDA"_ encoding, creating an Acid Trace. This trace is locked into a structural floor within the _CA4_ subfield, ensuring that survival-critical information survives even after long-term synaptic decay.
 
 ![ ](/docs/assets/spacer32x32.png)
 
