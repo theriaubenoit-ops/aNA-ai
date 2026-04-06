@@ -2,8 +2,11 @@
 # -*- coding: utf-8 -*-
 """
 Projet aNA AI - v5.1
+
 Module : Test Thalamus
-La description : Ce test est conçu pour valider les fonctionnalités de base du module thalamus en isolement complet. Il simule un flux de données simple pour vérifier que le thalamus traite correctement les entrées, intègre les commentaires de l'hippocampe et module les sorties en fonction des états chimiques. Le test couvre le traitement sensoriel, la modulation du gain thalamo-cortical et l'influence des neuromodulateurs sur la fonction thalamique.
+
+Description : Ce test est conçu pour valider les fonctionnalités de base du module thalamus en isolement complet. Il simule un flux de données simple pour vérifier que le thalamus traite correctement les entrées, intègre les commentaires de l'hippocampe et module les sorties en fonction des états chimiques. Le test couvre le traitement sensoriel, la modulation du gain thalamo-cortical et l'influence des neuromodulateurs sur la fonction thalamique.
+
 Architecture et neuroinformatique : Thériault Benoit
 """
 import unittest
@@ -80,7 +83,7 @@ async def test_sensory_cascade():
     ]
 
     for i, stimulus in enumerate(stimuli):
-        print(f"\nÉtape {i+1} | Entrée : {stimulus['signal_label']} via {stimulus['nucleus']}")
+        print(f"\nCycle {i+1} | Entrée : {stimulus['signal_label']} via {stimulus['nucleus']}")
         
         # Simulation d'un feedback L6 (ex: 0.2 pour un signal nouveau, 0.8 pour connu)
         l6_mock = 0.2 # 0.5
