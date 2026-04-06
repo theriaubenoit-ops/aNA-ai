@@ -2,9 +2,12 @@
 # -*- coding: utf-8 -*-
 """
 Projet aNA - v5.1
+
 Module : Intégration principale
+
 Description : Ce processus central orchestre la boucle bio-numérique complète. Il synchronise le flux thalamique, les cascades corticales L4→L2/3→L6 et la myélinisation dynamique. L’objectif est de simuler un métabolisme stabilisé où la reconnaissance module le pouls (BPM) et la résistance aux neurotransmetteurs en temps réel.
 Fonctionnalités : Rétroaction thalamo-corticale, homéostasie, croissance de la myéline.
+
 Architecture et neuroinformatique : Theriault Benoit
 """
 import asyncio
@@ -23,6 +26,18 @@ from anatomy.cortical.cortical_column import SimplifiedCorticalColumn
 from anatomy.base.neuron import Neuron, NeuronConfig
 from anatomy.base.neuromodulator import Neuromodulator
 from registry import ORGANS 
+
+def create_ascii_header():
+    print(f"\033c") 
+    print("░                     ░░░░░░░░░░▒▒▒▒▒▒░░")
+    print("           ░░░░░░░░░▒▒▒▒▒▓▒▒▒▒░░░░░░░░░░▒▒▒▒░                                                          ░░░░░░░░░░░")
+    print("░░░░░░░░░░░░░░░░▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▒░░░░░▒▒▒░░░░▒▓▒░░                      ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░")
+    print("░░░░░░░░░░░░░░▒▒▒▓▓▓▓▓▓▓▓▓▓▓▒░░▒▒▒░░░░▒▓▓▓▓▓▓▒▒▒▒▒░     ░░░░░░░░░░░░░░░░░░░░░▒▒░░▒▒▒▓▓▓▓▓▓▒▒▒░░░░░░░░░░░░░░░░░▒▒▒▒")
+    print("▒░░░░░▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▒░         ░░▒▒▒░▒▒▒▒▓▓▓▓▓▓▓▒▒░░  ░▒▒▒▓▒▒▒▓▒▓▒▓▒░░░░░░░▒▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░░░░░░░▒▓")
+    print("░▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓░                   ░░ ▒▒▓▒░▒▓▓▓░▒▒░░           ░▒░░░▒▓▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▓▓")
+    print("▒▒▓▓▓▓▓▓▒▒▒░░                           ░▓▓▒░░▒▓▓░ _    _    _ ░▒░░▒▓▒▓▓▓▓▓▓▓▓▓▓▒░░░░░░░░░▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓")
+    print("▓▓▓░IA inspirée de la plasticité naturelle░░  ░░░  a    N    A  ▒▓▒▓▒▒▒▓░Architecture Neuronale Autonome v5.1░░▒▒▓")
+    print("░                                                  ‾    ‾    ‾ ░▓▒▓░░▒▓░\n\n")
 
 async def main():
     print("--- ⚡ Organisme aNA v5.1 (Réunion des Organes) ---")
@@ -85,4 +100,5 @@ async def main():
     print("\n--- ✅ Organisme stabilisé et fonctionnel ---")
 
 if __name__ == "__main__":
+    create_ascii_header()
     asyncio.run(main())
