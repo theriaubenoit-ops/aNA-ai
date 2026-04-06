@@ -143,8 +143,6 @@ async def test_sensory_cascade():
     
     print(f"  [Result] BPM after consolidation: {result_sagesse['bpm']:.2f} BPM")
 
-    
-
 if __name__ == "__main__":
     create_ascii_header()  
     asyncio.run(test_sensory_cascade())
