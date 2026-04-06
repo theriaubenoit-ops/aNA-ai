@@ -7,13 +7,13 @@
 ```
 ░                     ░░░░░░░░░░▒▒▒▒▒▒░░
            ░░░░░░░░░▒▒▒▒▒▓▒▒▒▒░░░░░░░░░░▒▒▒▒░                                                          ░░░░░░░░░░░
-░░░░░░░░░░░░░░░░▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▒░░░░░▒▒▒░░░░▒▓▒░░                      ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▒▒▒▒
-░░░░░░░░░░░░░░▒▒▒▓▓▓▓▓▓▓▓▓▓▓▒░░▒▒▒░░░░▒▓▓▓▓▓▓▒▒▒▒▒░     ░░░░░░░░░░░░░░░░░░░░░▒▒░░▒▒▒▓▓▓▓▓▓▒▒▒░░░░░░░░░░░░░░░░░░░░▒
-▒░░░░░▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▒░         ░░▒▒▒░▒▒▒▒▓▓▓▓▓▓▓▒▒░░  ░▒▒▒▒▒▒▒▓▒▒░▒▓▒░░░░░░▒▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░░░░░░░▒▒
-░▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓░                   ░░ ▒▒▓▒░▒▓▓▓░▒▒░░          ░▒▒░░▒▒▓▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▓▓
-▒▒▓▓▓▓▓▓▒▒▒░░                           ░▓▓▒░░▒▓▓░_    _    _ ░░░▒▒▓▓▒▒▓▓▓▓▓▓▓▓▓▒░      ░▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-▓▓▓▒░  AI inspired by natural plasticity ░░   ░░░ a    N    A  ░▒▓▒▓▒▒▒▓ Autonomous Neural Architecture v5.1 ░░▒▒▒
-░                                                 ‾    ‾    ‾  ░▓▒▓░░▒▓░
+░░░░░░░░░░░░░░░░▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▒░░░░░▒▒▒░░░░▒▓▒░░                      ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░░░░░░░░░░░▒▒▒▓▓▓▓▓▓▓▓▓▓▓▒░░▒▒▒░░░░▒▓▓▓▓▓▓▒▒▒▒▒░     ░░░░░░░░░░░░░░░░░░░░░▒▒░░▒▒▒▓▓▓▓▓▓▒▒▒░░░░░░░░░░░░░░░░░▒▒▒▒
+▒░░░░░▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▒░         ░░▒▒▒░▒▒▒▒▓▓▓▓▓▓▓▒▒░░  ░▒▒▒▓▒▒▒▓▒▓▒▓▒░░░░░░░▒▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░░░░░░░▒▓
+░▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓░                   ░░ ▒▒▓▒░▒▓▓▓░▒▒░░           ░▒░░░▒▓▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▓▓
+▒▒▓▓▓▓▓▓▒▒▒░░                           ░▓▓▒░░▒▓▓░ _    _    _ ░▒░░▒▓▒▓▓▓▓▓▓▓▓▓▓▒░░░░░░░░░▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+▓▓▓▓▓▒░AI inspired by natural plasticity ░░   ░░░  a    N    A  ▒▓▒▓▒▒▒▓░Autonomous Neural Architecture v5.1 ░░▒▒▓
+░                                                  ‾    ‾    ‾ ░▓▒▓░░▒▓░
 ```
 
 ###### _"The Creation" —Michelangelo_
@@ -25,17 +25,17 @@ The strength of the **aNA** architecture lies in its departure from traditional 
 1. **AMPA/NMDA Duality: The Plasticity Filter _([hippocampus(.py)](/src/anatomy/limbic/hippocampus.py))_**
    Unlike standard neural networks that treat every weight update identically, **aNA** bifurcates the learning process:
    **AMPA Logic:** Manages high-speed transmission and incremental learning through repetition _(e.g., neutral signals)_. However, these traces remain volatile and subject to temporal erosion (forgetting).
-   **NMDA Logic:** Triggered by an Amygdala _"Flash,"_ this logic locks the synaptic trace. It allows for the instantaneous and indelible encoding of critical information during high-saliency or _"error-state"_ events.
+   **NMDA Logic:** Triggered by an _[amygdala(.py)](/src/anatomy/limbic/amygdala.py) "Flash,"_ this logic locks the synaptic trace. It allows for the instantaneous and indelible encoding of critical information during high-saliency or _"error-state"_ events.
 
 2. **Descartes' philosophy _("Divide each difficulty into as many parts as is feasible and necessary to resolve it.")_**
-   This is the philosophy which explains the modular structure of this project (separate _Thalamus_, separate _Hippocampus_, separate _Amygdala_...). A philosophical method rigorously applied to _Python code_.
+   This is the philosophy which explains the modular structure of this project (separate [thalamus(.py)](/src/anatomy/subcortical/thalamus.py)_, separate \_Hippocampus_, separate _Amygdala_...). A philosophical method rigorously applied to _Python code_.
 
 3. **Economy of Links: The Lavoisier Principle**
    Instead of storing terabytes of raw, disconnected data, **aNA** transforms information into relational nodes and emotional weights.
    _"Nothing is lost, nothing is created, everything is transformed"_: Low-relevance memories are naturally pruned _(synaptic pruning)_ to allocate resources to robust, high-value structures.
 
 4. **Homeostatic Amygdala Regulation**
-   We have moved beyond simple _"detection"_ to create an _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ that functions as a true biological regulator:
+   We have moved beyond simple _"detection"_ to create an _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ that functions as a true _biological regulator_:
    **Dynamic Thresholding:** It distinguishes environmental noise _(intensity 0.6)_ from vital signals _(intensity 1.0)_ through a variable rupture threshold.
    **_[Neuromodulator(.py)](/src/anatomy/base/neuromodulator.py)_ Management:** By simulating _"Cortisol"_ levels and _"Neurotransmitter Reuptake,"_ the system prevents _"Software Anxiety"_ or saturation, allowing the AI to remain calm and analytical even under pressure.
 
@@ -56,6 +56,8 @@ The strength of the **aNA** architecture lies in its departure from traditional 
    This is what allows the _[neocortex(.py)](/src/anatomy/cortical/neocortex.py)_ to _“say”_ to the _[thalamus(.py)](/src/anatomy/subcortical/thalamus.py)_: _“I recognized this signal, you can lower the volume (gain)”_. This is the basis of the selective attention.
 
 9. **The [registry(.py)](/src/registry.py) module _(or the organ management system)_** This is what ensures that a _neuron_ in the _frontal lobe “knows”_ that it belongs to **aNA** and how it should connect to the others. It is the identity of the organism.
+
+_\*All quantitative thresholds and metabolic metrics are derived from neurobiological models, transcoded into digital architecture to simulate synthetic life-cycles._
 
 ![ ](/docs/assets/spacer32x32.png)
 
