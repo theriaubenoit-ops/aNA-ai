@@ -155,7 +155,7 @@ Their mathematical model of the action potential is the source of our _[neurons(
 The engine of our learning network. _"Neurons that fire together, wire together"_ is translated into our granular weight update logic.
 
 **Emotional Memory Modulation** _—[James McGaugh](https://en.wikipedia.org/wiki/James_McGaugh)_:
-His work on how adrenal hormones and the _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ modulate memory consolidation is the foundation of our _"Acid Trace"_ logic. We implement this by allowing the Amygdala to bypass standard decay for high-saliency events.
+His work on how adrenal hormones and the _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ modulate memory consolidation is the foundation of our _"Acid Trace"_ logic. We implement this by allowing the _Amygdala_ to bypass standard decay for high-saliency events.
 
 ![ ](/docs/assets/spacer16x16.png)
 
