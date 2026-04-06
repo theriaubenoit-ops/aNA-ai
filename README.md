@@ -64,7 +64,7 @@ python3 src/tests/test_limbic_system.py
 
 ### 2. Cortical Column Cascade _(Test)_
 
-Validation of the _6-layer_ signal flow ($L4 \rightarrow L2/3 \rightarrow L5$) with real-time precision monitoring.
+Validation of the _6-layer_ signal flow (L4 \rightarrow L2/3 \rightarrow L5) with real-time precision monitoring.
 
 - **The L6 Feedback Loop _([cortical_column(.py)](/src/anatomy/cortical/cortical_column.py) Layer 6)_** This is what allows the _[neocortex(.py)](/src/anatomy/cortical/neocortex.py)_ to _“say”_ to the _[thalamus(.py)](/src/anatomy/subcortical/thalamus.py)_: _“I recognized this signal, you can lower the volume (gain)”_. This is the basis of the selective attention.
 
@@ -127,4 +127,4 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
 
 ![Downloads](https://img.shields.io/github/downloads/theriaubenoit-ops/aNA-ai/total?style=for-the-badge&color=181c1f)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-05_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-04_
