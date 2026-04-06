@@ -69,34 +69,34 @@ The strength of the **aNA** architecture lies in its departure from traditional 
 
 _The **aNA** (Autonomous Neural Architecture) AI project rejects the paradigm of "raw power" in favor of the elegance and economy observed in biological structures. We are not building a static database; we are fostering a dynamic cognitive process._
 
-1. **Hierarchical information reconstruction:**
-   Unlike architectures that rely on massive data storage, **aNA** AI favors a hierarchical processing approach. Information is not _"stored"_ in a static sense; it is reconstructed in real-time, ensuring that each processed bit is validated against established internal models.
+- **Hierarchical information reconstruction:**
+  Unlike architectures that rely on massive data storage, **aNA** AI favors a hierarchical processing approach. Information is not _"stored"_ in a static sense; it is reconstructed in real-time, ensuring that each processed bit is validated against established internal models.
 
-2. **Synaptic link economy:**
-   Robustness is derived from the density and quality of relational links, not model size. We transform information into relational nodes, making the system economically viable and avoiding the redundancy inherent in conventional _"large-scale"_ models.
+- **Synaptic link economy:**
+  Robustness is derived from the density and quality of relational links, not model size. We transform information into relational nodes, making the system economically viable and avoiding the redundancy inherent in conventional _"large-scale"_ models.
 
-3. **Latency & plasticity management:**
-   **aNA** maintains a fine-grained latency state. By keeping response paths dynamic rather than hard-coded, we preserve cognitive flexibility, drastically reducing the need for destructive relearning and allowing for continuous, low-compute evolution.
+- **Latency & plasticity management:**
+  **aNA** maintains a fine-grained latency state. By keeping response paths dynamic rather than hard-coded, we preserve cognitive flexibility, drastically reducing the need for destructive relearning and allowing for continuous, low-compute evolution.
 
-4. **Resource efficiency through relational storage:**
-   _Biological brains_ do not store raw volumes; they store relationships. **aNA** mimics this by prioritizing relational structures over volume. This targeted approach allows the system to remain lean, sustainable, and capable of long-term scaling without environmental burden.
+- **Resource efficiency through relational storage:**
+  _Biological brains_ do not store raw volumes; they store relationships. **aNA** mimics this by prioritizing relational structures over volume. This targeted approach allows the system to remain lean, sustainable, and capable of long-term scaling without environmental burden.
 
-5. **Digital homeostasis _(Background activity)_:**
-   **aNA** operates under the principle of constant internal maintenance. It is never truly _"inactive"_; it maintains a state of digital homeostasis, background-consolidating memories and optimizing connections to remain ready for interaction.
+- **Digital homeostasis _(Background activity)_:**
+  **aNA** operates under the principle of constant internal maintenance. It is never truly _"inactive"_; it maintains a state of digital homeostasis, background-consolidating memories and optimizing connections to remain ready for interaction.
 
-6. **Open collaboration:**
-   **aNA** is an open-research initiative. We believe that diverse perspectives are essential to understanding and refining this architecture. We invite contribution not as mere labor, but as a collective engagement in the accuracy of this cognitive simulation.
+- **Open collaboration:**
+  **aNA** is an open-research initiative. We believe that diverse perspectives are essential to understanding and refining this architecture. We invite contribution not as mere labor, but as a collective engagement in the accuracy of this cognitive simulation.
 
-7. **Natural Erasure & Transformation:**
-   Based on _Lavoisier’s principle_, information that loses relevance is naturally _"pruned"_ or transformed, preventing the accumulation of _digital noise_.
+- **Natural Erasure & Transformation:**
+  Based on _Lavoisier’s principle_, information that loses relevance is naturally _"pruned"_ or transformed, preventing the accumulation of _digital noise_.
 
-8. **Synaptic Gating: _AMPA_ vs. _NMDA_ Logic**
-   Our architecture distinguishes between functional transmission _(AMPA)_ and structural consolidation _(NMDA)_.
-   **AMPA Logic:** Standard patterns drive routine synaptic updates, prone to natural decay for resource efficiency.
-   **NMDA Logic:** High-saliency events, verified by the _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_, trigger _NMDA-gated plasticity_. This process bypasses standard pruning to create permanent _"Acid Traces"_ in the _CA4_ subfield, ensuring that critical survival data remains retrievable despite systemic _"noise"_.
+- **Synaptic Gating: _AMPA_ vs. _NMDA_ Logic**
+  Our architecture distinguishes between functional transmission _(AMPA)_ and structural consolidation _(NMDA)_.
+  **AMPA Logic:** Standard patterns drive routine synaptic updates, prone to natural decay for resource efficiency.
+  **NMDA Logic:** High-saliency events, verified by the _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_, trigger _NMDA-gated plasticity_. This process bypasses standard pruning to create permanent _"Acid Traces"_ in the _CA4_ subfield, ensuring that critical survival data remains retrievable despite systemic _"noise"_.
 
-9. **Emotional Saliency & Acid Traces _(CA4 Protection)_**
-   **aNA** does not treat all information equally. Through a synchronized dialogue between the _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ and the _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_, the system identifies high-impact _emotional events_. While standard data undergoes natural decay (pruning), trauma-related signals trigger a _"Flash NMDA"_ encoding, creating an Acid Trace. This trace is locked into a structural floor within the _CA4_ subfield, ensuring that survival-critical information survives even after long-term synaptic decay.
+- **Emotional Saliency & Acid Traces _(CA4 Protection)_**
+  **aNA** does not treat all information equally. Through a synchronized dialogue between the _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ and the _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_, the system identifies high-impact _emotional events_. While standard data undergoes natural decay (pruning), trauma-related signals trigger a _"Flash NMDA"_ encoding, creating an Acid Trace. This trace is locked into a structural floor within the _CA4_ subfield, ensuring that survival-critical information survives even after long-term synaptic decay.
 
 ![ ](/docs/assets/spacer32x32.png)
 
