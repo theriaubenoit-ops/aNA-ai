@@ -38,9 +38,17 @@ We are moving away from the "open-source contribution" model—where the goal is
 
 ### _Shape the future of AI!_
 
-**This is a leap forward in time; what you see here is the _future of AI_. If you are exploring this project today, it is because you possess the curiosity required to push this innovative concept further. We are currently architecting the _next major update_, but we invite you to share your _observations_ and _ideas_ with us as we continue to grow this vision together.**
+**This is a leap forward in time; what you see here is the _future of AI_. If you are exploring this project today, it is because you possess the curiosity required to push this innovative concept further. We are currently _architecting_ the _next major update_, but we invite you to share your _observations_ and _ideas_ with us as we continue to grow this vision together.**
 
 Join the **aNA** _computational neuroscience_ community: _[Download(.zip)](https://github.com/theriaubenoit-ops/aNA-ai/archive/refs/heads/main.zip)_ or/and [installation](/docs/installation.md)
+
+### First Steps for Partners
+
+- [ ] Fork the repository.
+
+- [ ] Run _test_hippocampus.py_ to watch your first test in action: predictive arousal.
+
+- [ ] Propose an _“Outcome”_ if a system reaction seems _biologically incoherent_.
 
 ![ ](/docs/assets/spacer32x32.png)
 
