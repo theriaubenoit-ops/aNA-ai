@@ -20,10 +20,12 @@ from src.config import get_config
 from src.registry import ORGANS
 
 class Hippocampus:
-    def __init__(self, neuromodulator_core=None):
+    def __init__(self, config=None, neuromodulator_core=None):
         # 1. Le Génome (Structure fixe du registre)
         self.structure = ORGANS["HIPPOCAMPUS"]
-        self.neuromod_core = neuromodulator_core
+        # Si config est None, on peut mettre des valeurs par défaut
+        self.config = config if config else {}
+        self.neurom_core = neuromodulator_core
         
         # Initialisation des sous-champs
         self.subfields = {field: {} for field in self.structure["SUBFIELDS"]}
