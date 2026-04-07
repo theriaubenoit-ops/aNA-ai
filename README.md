@@ -23,8 +23,8 @@
 ![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)
 
 > [!IMPORTANT]
-> **This project has evolved.**
-> The architecture has been significantly optimized to transition from test simulations to behavioral emulation.
+> **This project evolved.**
+> The architecture has been optimized to transition from test simulations to behavioral emulation.
 > **Access the latest updates and the _"Creation Lab"_ here 👉🏻 [v5.2-beta (innovation.md)](https://github.com/theriaubenoit-ops/aNA-ai/blob/v5.2-beta/docs/innovation.md)**
 
 ![ ](/docs/assets/spacer16x16.png)
