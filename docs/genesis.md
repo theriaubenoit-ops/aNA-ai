@@ -22,7 +22,7 @@
 
 The **aNA** AI project was born from a simple intuition: _artificial intelligence_ should not be a mere matter of probabilities, but a matter of organization and structure.
 
-### The initial impulse _(Laboratory v1-v2 JS/Python)_
+### The initial impulse _(Laboratory v1-v2 JavaScript/Python)_
 
 Conceived in the crucible of initial exchanges with language models _(GPT)_, _v1_ aimed to translate abstract questions into tangible logic. This was a period of intense maturation, a _"long march"_ where the pursuit of precision gradually took precedence over rapid deployment.
 
