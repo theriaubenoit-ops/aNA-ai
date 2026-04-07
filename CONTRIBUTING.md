@@ -44,11 +44,11 @@ Join the **aNA** _computational neuroscience_ community: _[Download(.zip)](https
 
 ### First Steps for Partners
 
-- [ ] Fork the repository.
+- [ ] Fork the repository: _Copy_ the project to your own _GitHub account_ to start experimenting.
 
-- [ ] Run _[tests(/)](/src/tests/)[test_hippocampus(.py)](/src/tests/test_hippocampus.py)_ to watch your first test in action: predictive arousal.
+- [ ] Run _src/[tests(/)](/src/tests/)[test_hippocampus(.py)](/src/tests/test_hippocampus.py):_ Watch the Predictive Awakening _(A → B)_ in action and verify the synaptic consolidation logic.
 
-- [ ] Propose an _“Outcome”_ if a system reaction seems _biologically incoherent_.
+- [ ] Propose an _"Issue"_ or _"Discussion"_: If a system reaction seems _biologically incoherent_, _share your observations_ to help us refine the _neural accuracy_.
 
 ![ ](/docs/assets/spacer32x32.png)
 
@@ -133,4 +133,4 @@ The **aNA** AI project is more than just a _codebase_; it is a _sandbox_ for exp
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-31_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-07_
