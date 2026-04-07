@@ -46,7 +46,7 @@ Join the **aNA** _computational neuroscience_ community: _[Download(.zip)](https
 
 - [ ] Fork the repository.
 
-- [ ] Run_[tests(/)](/src/tests/)[test_hippocampus(.py)](/src/tests/test_hippocampus.py)_ to watch your first test in action: predictive arousal.
+- [ ] Run _[tests(/)](/src/tests/)[test_hippocampus(.py)](/src/tests/test_hippocampus.py)_ to watch your first test in action: predictive arousal.
 
 - [ ] Propose an _“Outcome”_ if a system reaction seems _biologically incoherent_.
 
