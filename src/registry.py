@@ -1,17 +1,19 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-aNA v5.1 - The Centralized Genome of aNA
+aNA v5.2 - The Centralized Genome of aNA
 Description: This module acts as the organism's genetic fingerprint. It catalogs and initializes all the "Organs" (Thalamus, Hippocampus, Cortex), enabling consistent instantiation and seamless communication between subcortical and cortical systems. Without this registry, the organism loses its unified structure and its ability to maintain global homeostasis.
 
-aNA v5.1 - Le Génome Centralisé d'aNA (FR)
+aNA v5.2 - Le Génome Centralisé d'aNA (FR)
 Description :  Ce module agit comme l'empreinte génétique de l'organisme. Il répertorie et initialise l'ensemble des "Organes" (Thalamus, Hippocampe, Cortex) permettant une instanciation cohérente et une communication fluide entre les systèmes subcorticaux et corticaux. Sans ce registre, l'organisme perd sa structure unifiée et sa capacité à maintenir une homéostasie globale.
 """
 
 # --- CONFIGURATION DU CŒUR ---
 INPUT_CONFIG = {
     "UNICODE_NORM": 1114111.0,  # Plafond Unicode (Mathématique, pas tempérament)
-    "DEFAULT_NUCLEUS": "MGN"
+    "DEFAULT_NUCLEUS": "MGN",
+    "GATEWAY_READY": True, # add
+    "DEFAULT_GAIN": 1.0 # add
 }
 
 ORGANS = {
@@ -24,4 +26,12 @@ ORGANS = {
     "NEOCORTEX": {
         "LOBES": ["OCCIPITAL", "TEMPORAL", "PARIETAL", "FRONTAL"]
     }
+}
+
+SIGNALS = {
+    "SENSORY": "input_raw", # add
+    "PREDICTIVE": "expectation_match", # add
+    "METABOLIC": "atp_flux", # add
+    "EMOTIONAL": "amygdala_pulse", # add
+    "L4_FORMAT": "L4_INPUT_{nucleus}_{data}"  # add   # Résistance synaptique minimale
 }
