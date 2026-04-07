@@ -2,7 +2,7 @@
 
 ![ ](/docs/assets/spacer16x16.png)
 
-# Innovation: Creation lab
+# Innovation: Creation _lab_
 
 ```
 ░                     ░░░░░░░░░░▒▒▒▒▒▒░░
