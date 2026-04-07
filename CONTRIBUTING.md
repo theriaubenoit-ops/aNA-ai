@@ -42,7 +42,7 @@ We are moving away from the "open-source contribution" model—where the goal is
 
 Join the **aNA** _computational neuroscience_ community: _[Download(.zip)](https://github.com/theriaubenoit-ops/aNA-ai/archive/refs/heads/main.zip)_ or/and [installation](/docs/installation.md)
 
-### First Steps for Partners
+### First Steps for Research Collaborators
 
 - [ ] Fork the repository: _Copy_ the project to your own _GitHub account_ to start experimenting.
 
