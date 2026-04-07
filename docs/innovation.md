@@ -44,9 +44,9 @@
 
 ### v5.1: Homeostatic Architecture _(Survival)_
 
-- **Metabolic Protection _(pulse.py)_:** Non-linear _BPM_ management based on _ATP_. The system reacts to exhaustion with _hypervigilance (ATP < 0.4)_ or recovery bradycardia _(ATP < 0.2)_.
+- **Metabolic Protection _([pulse(.py)](/src/core/pulse.py))_:** Non-linear _BPM_ management based on _ATP_. The system reacts to exhaustion with _hypervigilance (ATP < 0.4)_ or recovery bradycardia _(ATP < 0.2)_.
 
-- **_AMPA/NMDA_ Duality _(hippocampus.py)_:** Distinguishing between volatile learning through repetition and immediate synaptic locking during emotional shock.
+- **_AMPA/NMDA_ Duality _([hippocampus(.py)](/src/anatomy/limbic/hippocampus.py))_:** Distinguishing between volatile learning through repetition and immediate synaptic locking during emotional shock.
 
 - **The _CA4_ Sanctuary:** Safeguarding _"survival floors" (Acid Traces)_ to ensure system resilience even after synaptic decline.
 
