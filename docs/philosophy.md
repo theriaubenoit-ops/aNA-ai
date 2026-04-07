@@ -1,4 +1,4 @@
-🚀 Quick links: [License](/LICENSE), [ReadMe](/README.md), [Contributing](/CONTRIBUTING.md), [Installation](/docs/installation.md), Philosophy, [Genesis](/docs/genesis.md), [Architecture](/docs/architecture.md)
+🚀 Quick links: [License](/LICENSE), [ReadMe](/README.md), [Installation](/docs/installation.md), [Contributing](/CONTRIBUTING.md), [Innovation](/docs/innovation.md), Philosophy, [Genesis](/docs/genesis.md), [Architecture](/docs/architecture.md)
 
 ![ ](/docs/assets/spacer16x16.png)
 
@@ -12,54 +12,11 @@
 ▒░░░░░▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▒░         ░░▒▒▒░▒▒▒▒▓▓▓▓▓▓▓▒▒░░  ░▒▒▒▓▒▒▒▓▒▓▒▓▒░░░░░░░▒▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░░░░░░░▒▓
 ░▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓░                   ░░ ▒▒▓▒░▒▓▓▓░▒▒░░           ░▒░░░▒▓▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▓▓
 ▒▒▓▓▓▓▓▓▒▒▒░░                           ░▓▓▒░░▒▓▓░ _    _    _ ░▒░░▒▓▒▓▓▓▓▓▓▓▓▓▓▒░░░░░░░░░▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-▓▓▓▓▓▒░AI inspired by natural plasticity ░░   ░░░  a    N    A  ▒▓▒▓▒▒▒▓░Autonomous Neural Architecture v5.1 ░░▒▒▓
+▓▓▓▓▓▒░AI inspired by natural plasticity ░░   ░░░  a    N    A  ▒▓▒▓▒▒▒▓░Autonomous Neural Architecture v5.2b  ░▒▓
 ░                                                  ‾    ‾    ‾ ░▓▒▓░░▒▓░
 ```
 
 ###### _"The Creation" —Michelangelo_
-
-## Core Innovations in _aNA AI v5.1_
-
-The strength of the **aNA** architecture lies in its departure from traditional static _AI_ models. By implementing bio-inspired mechanisms, we have achieved a system that prioritizes survival and relevance over raw data volume.
-
-1. **AMPA/NMDA Duality: The Plasticity Filter _([hippocampus(.py)](/src/anatomy/limbic/hippocampus.py))_**
-   Unlike standard neural networks that treat every weight update identically, **aNA** bifurcates the learning process:
-   **AMPA Logic:** Manages high-speed transmission and incremental learning through repetition _(e.g., neutral signals)_. However, these traces remain volatile and subject to temporal erosion (forgetting).
-   **NMDA Logic:** Triggered by an _[amygdala(.py)](/src/anatomy/limbic/amygdala.py) "Flash,"_ this logic locks the synaptic trace. It allows for the instantaneous and indelible encoding of critical information during high-saliency or _"error-state"_ events.
-
-2. **Descartes' philosophy _("Divide each difficulty into as many parts as is feasible and necessary to resolve it.")_**
-   This is the philosophy which explains the modular structure of this project (separate [thalamus(.py)](/src/anatomy/subcortical/thalamus.py)_, separate \_Hippocampus_, separate _Amygdala_...). A philosophical method rigorously applied to _Python code_.
-
-3. **Economy of Links: The Lavoisier Principle**
-   Instead of storing terabytes of raw, disconnected data, **aNA** transforms information into relational nodes and _emotional weights_.
-   _"Nothing is lost, nothing is created, everything is transformed"_: Low-relevance memories are naturally pruned _(synaptic pruning)_ to allocate resources to robust, high-value structures.
-
-4. **Homeostatic Amygdala Regulation**
-   We have moved beyond simple _"detection"_ to create an _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ that functions as a true _biological regulator_:
-   **Dynamic Thresholding:** It distinguishes environmental noise _(intensity 0.6)_ from vital signals _(intensity 1.0)_ through a variable rupture threshold.
-   **_[Neuromodulator(.py)](/src/anatomy/base/neuromodulator.py)_ Management:** By simulating _"Cortisol"_ levels and _"Neurotransmitter Reuptake,"_ the system prevents _"Software Anxiety"_ or saturation, allowing the AI to remain calm and analytical even under pressure.
-
-5. **Metabolic Protection and Consolidation Bradycardia _([pulse(.py)](/src/core/pulse.py) & [thalamus(.py)](/src/anatomy/subcortical/thalamus.py))_**
-   The **v5.1** innovation introduces non-linear _heart rate (BPM)_ management based on available _ATP levels_.
-   - **The Exhaustion Paradox:** When energy levels drop _(ATP < 0.4)_, the system enters a state of _"reactive hypervigilance" (BPM rises to 140+)_. Cortical inhibition weakens, making the _AI "raw"_ in response to stimuli, simulating biological irritability.
-   - **The Refractory Threshold:** Below the critical threshold _(ATP < 0.2)_, the _Thalamus_ activates a safety lock _(REFRACTORY_REST)_. Sensory gain is reduced to its minimum _(0.05)_, and the heart enters bradycardia _(45 BPM)_.
-   - **Constructive Recovery:** This withdrawal from the world is not an extinction, but a necessary condition for the consolidation of the _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_. It is this cycle that allows a panic reaction to be transformed into a calmer response _("Wisdom")_ upon waking.
-
-6. **Myelination _([neurons(.py)](/src/anatomy/base/neuron.py))_**
-   It's not just _"keeping or removing"_ a link, it's reinforcing the speed of the most used routes. The more efficient a path is, the more _“insulated” (myelinated)_ it is to consume less energy.
-
-7. **The _CA4_ Sanctuary: The _Acid Traces ([hippocampus(.py)](/src/anatomy/limbic/hippocampus.py))_**
-   Often overlooked in computational science, the _CA4_ subfield is central to our architecture. In **aNA**, _CA4_ is not merely a transit zone; it acts as a high-security vault for _"survival floors"_.
-   This innovation ensures that even after significant synaptic decay, a _TRAUMA_1_ residue _(Acid Trace)_ remains locked at a structural minimum _(e.g., 0.1000)_ while non-essential data fades away. This is our technical answer to resilience and traumatic memory.
-
-8. **The L6 Feedback Loop _([cortical_column(.py)](/src/anatomy/cortical/cortical_column.py) Layer 6)_**
-   This is what allows the _[neocortex(.py)](/src/anatomy/cortical/neocortex.py)_ to _“say”_ to the _[thalamus(.py)](/src/anatomy/subcortical/thalamus.py)_: _“I recognized this signal, you can lower the volume (gain)”_. This is the basis of the selective attention.
-
-9. **The [registry(.py)](/src/registry.py) module _(or the organ management system)_** This is what ensures that a _neuron_ in the _[frontal(.py)](/src/anatomy/cortical/frontal.py) lobe “knows”_ that it belongs to **aNA** and how it should connect to the others. It is the identity of the organism.
-
-###### _\*All quantitative thresholds and metabolic metrics are derived from neurobiological models, transcoded into digital architecture to interpret synthetic life-cycles._
-
-![ ](/docs/assets/spacer32x32.png)
 
 > ## "Nothing is lost, nothing is created, everything is transformed"
 >
@@ -159,4 +116,4 @@ His work on how adrenal hormones and the _[amygdala(.py)](/src/anatomy/limbic/am
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-05_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-06_

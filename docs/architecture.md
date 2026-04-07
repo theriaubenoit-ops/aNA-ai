@@ -1,14 +1,14 @@
-🚀 Quick links: [License](/LICENSE), [ReadMe](/README.md), [Contributing](/CONTRIBUTING.md), [Installation](/docs/installation.md), [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), Architecture
+🚀 Quick links: [License](/LICENSE), ReadMe, [Installation](/docs/installation.md), [Contributing](/CONTRIBUTING.md), [Innovation](/docs/innovation.md), [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), Architecture
 
 ![ ](/docs/assets/spacer16x16.png)
 
-# ✴️*aNA (Autonomous Neural Architecture)* AI Project v5.1
+# ✴️*aNA (Autonomous Neural Architecture)* AI Project v5.2
 
 ### 1. 🏗️ High-Level System Architecture
 
 ```
-aNA v5.1 Autonomous Neural Architecture
-├── Configuration (Preference)
+aNA v5.2 Autonomous Neural Architecture
+├── Configuration (The Temperament)
 ├── Dashboard (Metabolic & Cognitive):
 │   ├── Real-time Neural Stats: Monitors neurotransmitter levels
 │   ├── Predictive Accuracy (Free Energy): Real-time visualization of prediction error
@@ -16,7 +16,7 @@ aNA v5.1 Autonomous Neural Architecture
 ├── Main (Controller, the Pacemaker Pulse):
 │   ├── Rhythm Orchestration: Synchronizes the processing cycle (Input -> Prediction -> Output)
 │   └── Neural State Management: Ensures overall stability and module integration
-└── Registry (The organ management system)
+└── Registry (The Genome)
 ```
 
 ### 2. ⚡ Processing Unit (Neurons)
@@ -227,8 +227,8 @@ Processing Hierarchy:
 │   │   │   └── neuromodulator.py       # Chemical "gain controls"
 │   │   ├── cortical/
 │   │   │   ├── frontal.py              # ✅ Executive Logic & Command Center
-│   │   │   ├── cortical_column.py      # ✅ Cortical Column
-│   │   │   ├── neocortex.py            # ✅ ...
+│   │   │   ├── cortical_column.py      # ✅ Vertical organization of 6 cortical layers
+│   │   │   ├── neocortex.py            # ✅ The structural integration of the 4 Lobes
 │   │   │   ├── occipital.py            # ✅ Visual Stream Processor
 │   │   │   ├── parietal.py             # ✅ Spatial Mapping & Data Integration
 │   │   │   └── temporal.py             # ✅ Semantic Storage & Pattern Recognition
@@ -257,7 +257,7 @@ Processing Hierarchy:
 │   │   ├── test_pulse.py               # ✅ Core Pacemaker (Pulse)
 │   │   ├── test_trauma_logic.py        # ✅ Hippocampus Trauma Logic
 │   │   └── test_thalamus.py            # ✅ Enhanced Thalamus implementation
-│   ├── tests_fr/                       # ✅ Comprehensive test suite (FR)
+│   ├── tests_fr/                       # Comprehensive test suite (FR)
 │   │   ├── test_amygdala.py            # ✅ Priority Filter & Interrupt Controller (FR)
 │   │   ├── test_autonomy.py            # ✅ To validate the autonomous behaviors (FR)
 │   │   ├── test_cerebellum.py          # ✅ Timing Engine & Output Calibration (FR)

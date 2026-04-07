@@ -1,10 +1,10 @@
-🚀 Quick links: [License](/LICENSE), [ReadMe](/README.md), [Contributing](/CONTRIBUTING.md), Installation, [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), [Architecture](/docs/architecture.md)
+🚀 Quick links: [License](/LICENSE), [ReadMe](/README.md), Installation, [Contributing](/CONTRIBUTING.md), [Innovation](/docs/innovation.md), [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), [Architecture](/docs/architecture.md)
 
 ![ ](/docs/assets/spacer16x16.png)
 
 Instructions française : [installation (fr)](/docs/installation_fr.md)
 
-## Installation and Usage: ✴️*aNA* AI Project v5.1
+## Installation and Usage: ✴️*aNA* AI Project v5.2
 
 1. **Prerequisites _(The Environment)_**
    - [ ] Minimum _Python_ version _(e.g., 3.10+)_
