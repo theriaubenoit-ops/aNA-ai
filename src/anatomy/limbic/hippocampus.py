@@ -16,24 +16,17 @@ import sys
 import os
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../..')))
+from src.config import get_config
 from src.registry import ORGANS
 
 class Hippocampus:
-    def __init__(self, config=None, neuromodulator_core=None):
-        # On s'assure d'avoir la config du registre si config est None
-        #from src.registry import ORGANS
-        self.config = config if config and "SUBFIELDS" in config else ORGANS["HIPPOCAMPUS"]
+    def __init__(self, neuromodulator_core=None):
+        # 1. Le Génome (Structure fixe du registre)
+        self.structure = ORGANS["HIPPOCAMPUS"]
         self.neuromod_core = neuromodulator_core
         
-        # Initialisation explicite de TOUS les sous-champs v5.1
-        # Cela garantit que CA4 existe même si la config est partielle
-        self.subfields = {
-            "DG": {}, 
-            "CA1": {}, 
-            "CA2": {}, 
-            "CA3": {}, 
-            "CA4": {}
-        }
+        # Initialisation des sous-champs
+        self.subfields = {field: {} for field in self.structure["SUBFIELDS"]}
         
         # On peut ensuite fusionner avec la config si nécessaire
         if "SUBFIELDS" in self.config:
@@ -149,23 +142,26 @@ class Hippocampus:
 
     async def consolidate_and_prune(self):
         """
-        Phase de sommeil paradoxal : transforme les alertes en leçons.
+        Consolidation v5.1.1 : Utilise le tempérament pour décider 
+        ce qui doit être oublié ou stabilisé.
         """
-        print("  [Hippocampus] Deep consolidation cycle starting...")
+        config = get_config() # On récupère le tempérament actuel
+        
+        print("  [Hippocampe] 🧠 Synaptic consolidation in progress...")
         
         for label in list(self.subfields["CA3"].keys()):
-            # 1. Élagage (Pruning) des bruits faibles
-            if self.subfields["CA3"][label] < 0.05:
+            # 1. PRUNING (Élagage basé sur le bruit de fond de la config)
+            # On utilise NOISE_LEVEL pour définir ce qui est insignifiant
+            if self.subfields["CA3"][label] < config["NOISE_LEVEL"]:
                 del self.subfields["CA3"][label]
                 continue
-
-            # 2. Digestion des souvenirs négatifs (Traces Acides)
-            # Si une trace est stabilisée par le CA4, on baisse son intensité émotionnelle
-            # pour qu'elle ne soit plus une 'alerte' mais une 'information'.
+                
+            # 2. STABILISATION (Utilise le GAIN NMDA pour la force synaptique)
             if label in self.subfields["CA4"]:
-                # On réduit l'amplitude de CA3 vers le plancher CA4
-                # (Le souvenir reste, mais la douleur/panique s'efface)
-                self.subfields["CA3"][label] *= 0.8
+                floor = self.subfields["CA4"][label]
+                # On utilise THRESHOLD_NMDA pour lisser la trace vers la sagesse
+                learning_factor = config["THRESHOLD_NMDA"] 
+                self.subfields["CA3"][label] = (self.subfields["CA3"][label] + floor) * learning_factor
 
     async def consolidate_metabolism(self, atp_level: float):
         """
