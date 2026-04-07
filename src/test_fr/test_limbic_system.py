@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Projet aNA AI - v5.1
+Projet aNA AI - v5.2
 Module : Tester le système limbique
 Description : Cette suite de tests est conçue pour valider les fonctionnalités de base des modules du système limbique (Amygdale et Hippocampe) en isolement complet. Il simule divers scénarios pour vérifier que l’amygdale répond de manière appropriée aux différentes intensités de stimulus et que l’hippocampe peut coder, consolider et récupérer correctement les modèles. Les tests vérifient également l’interaction entre ces deux structures en termes de traitement de la mémoire émotionnelle.
 Architecture et neuroinformatique : Thériault Benoit
@@ -28,8 +28,8 @@ def create_ascii_header():
     print("▒░░░░░▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▒░         ░░▒▒▒░▒▒▒▒▓▓▓▓▓▓▓▒▒░░  ░▒▒▒▓▒▒▒▓▒▓▒▓▒░░░░░░░▒▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░░░░░░░▒▓")
     print("░▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓░                   ░░ ▒▒▓▒░▒▓▓▓░▒▒░░           ░▒░░░▒▓▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▓▓")
     print("▒▒▓▓▓▓▓▓▒▒▒░░                           ░▓▓▒░░▒▓▓░ _    _    _ ░▒░░▒▓▒▓▓▓▓▓▓▓▓▓▓▒░░░░░░░░░▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓")
-    print("▓▓▓░IA inspirée de la plasticité naturelle░░  ░░░  a    N    A  ▒▓▒▓▒▒▒▓░Architecture Neuronale Autonome v5.1░░▒▒▓")
-    print("░                                                  ‾    ‾    ‾ ░▓▒▓░░▒▓░\n")
+    print("▓▓▓░IA inspirée de la plasticité naturelle░░  ░░░  a    N    A  ▒▓▒▓▒▒▒▓░Architecture Neuronale Autonome v5.2  ░▒▓")
+    print("░                                                  ‾    ‾    ‾ ░▓▒▓░░▒▓░\n\n")
 
 class TestLimbicSystem(unittest.TestCase):
     def setUp(self):

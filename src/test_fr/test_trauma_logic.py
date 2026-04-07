@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Projet aNA IA - v5.1
+Projet aNA IA - v5.2
 Module : Tester la logique des traumatismes de l'hippocampe
 La description : Ce test simule la logique traumatique de l'hippocampe en créant un scénario dans lequel une expérience neutre est suivie d'un événement traumatisant, puis en simulant le processus d'oubli au fil du temps. Le test vérifie si la trace mnésique traumatique persiste plus longtemps que la trace neutre, démontrant le concept de consolidation et de persistance de la mémoire émotionnelle.
 Architecture et neuroinformatique : Thériault Benoit
@@ -29,7 +29,7 @@ def create_ascii_header():
     print("▒░░░░░▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▒░         ░░▒▒▒░▒▒▒▒▓▓▓▓▓▓▓▒▒░░  ░▒▒▒▓▒▒▒▓▒▓▒▓▒░░░░░░░▒▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░░░░░░░▒▓")
     print("░▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓░                   ░░ ▒▒▓▒░▒▓▓▓░▒▒░░           ░▒░░░▒▓▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▓▓")
     print("▒▒▓▓▓▓▓▓▒▒▒░░                           ░▓▓▒░░▒▓▓░ _    _    _ ░▒░░▒▓▒▓▓▓▓▓▓▓▓▓▓▒░░░░░░░░░▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓")
-    print("▓▓▓▓▓▒░AI inspired by natural plasticity ░░   ░░░  a    N    A  ▒▓▒▓▒▒▒▓░Autonomous Neural Architecture v5.1 ░░▒▒▓")
+    print("▓▓▓░IA inspirée de la plasticité naturelle░░  ░░░  a    N    A  ▒▓▒▓▒▒▒▓░Architecture Neuronale Autonome v5.2  ░▒▓")
     print("░                                                  ‾    ‾    ‾ ░▓▒▓░░▒▓░\n\n")
 
 async def process_event(amy, hippo, label, intensity, valence):
