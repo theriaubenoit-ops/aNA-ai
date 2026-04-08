@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-aNA Project - v5.1
+aNA Project - v5.2
 
 Module: Main Integration
 
@@ -27,7 +27,6 @@ from anatomy.base.neuron import Neuron, NeuronConfig
 from anatomy.base.neuromodulator import Neuromodulator
 from registry import ORGANS 
 
-
 def create_ascii_header():
     print(f"\033c") 
     print("░                     ░░░░░░░░░░▒▒▒▒▒▒░░")
@@ -41,9 +40,9 @@ def create_ascii_header():
     print("░                                                  ‾    ‾    ‾ ░▓▒▓░░▒▓░\n\n")
 
 async def main():
-    print("--- ⚡ aNA Organism v5.1 (Organization Meeting) ---")
+    print("--- ⚡ aNA Organism v5.2 (Organization Meeting) ---")
     
-    # 1. Initialisation des moteurs v5.1
+    # 1. Initialisation des moteurs v5.2
     config = get_config()
     neurom_core = Neuromodulator() 
     hippo = Hippocampus(config=config, neuromodulator_core=neurom_core)
@@ -62,9 +61,9 @@ async def main():
     )
     
     # Séquence de test pour valider l'habituation et le feedback L6
-    # test_sequence = ["a", "N", "A", " ", "a", "N", "A", " ", "a", "N", "A", " ", "a", "N", "A", " ", "a", "N", "A", " ", "B", "A", "N", "A", "N", "A", "S"]
-    test_sequence = ["B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", "😜"]
+    # test_sequence = ["B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", " ", "Z"]
     # test_sequence = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "a"]
+    test_sequence = ["H", "e", "l", "l", "o", " ", "你", "好", " ", "H", "o", "l", "a", " ", "A", "l", "l", "ô", " ", "П", "р", "и", "в", "е", "т", " ", "H", "e", "l", "l", "o", " ", "你", "好"]
 
     for cycle, char in enumerate(test_sequence, 1):
         # --- PHASE A : TRANSDUCTION ---
@@ -91,7 +90,8 @@ async def main():
         avg_myeline = visual_column.get_average_myelination()
         
         # --- MONITORING ---
-        print(f"\nCycle {cycle:02d} | Input: '{char}'")
+        # print(f"\nCycle {cycle:02d} | Input: '{char}'")
+        print(f"\nCycle {cycle:02d} | Input: '{char}' (Unicode Wide)")
         print(f" └─ Thalamus : {log_thalamus}")
         print(f" └─ Cortex   : Recognition {cortical_results['recognition']:.2%}")
         print(f" └─ Feedback : L6 Signal {cortical_results['l6_feedback']:.2f}")
