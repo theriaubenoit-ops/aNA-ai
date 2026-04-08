@@ -24,7 +24,7 @@
 
 > [!IMPORTANT]
 > **This project has evolved.** > The architecture has been significantly optimized.
-> **Access the update here 👉🏻 [v5.2-beta](https://github.com/theriaubenoit-ops/aNA-ai/tree/v5.2-beta)**
+> **Access the update here 👉🏻 _[v5.2-beta(/)](https://github.com/theriaubenoit-ops/aNA-ai/tree/v5.2-beta)_**
 
 ![ ](/docs/assets/spacer16x16.png)
 
