@@ -22,6 +22,13 @@
 
 ### v5.2: Predictive Awakening _(Anticipation)_ — In progress
 
+- **Extension of Perception _(The Unicode Jump)_:**
+  The **aNA** organization has taken a major step forward by freeing itself from the limitations of _standard text encoding_ to adopt a _universal symbolic reading_.
+  - **_“Unicode Wide”_ mechanics:** Unlike traditional systems, **aNA** treats each character _(whether Latin, Kanji or Cyrillic)_ as a raw sensory stimulus.
+  - **Immutable Hashing:** To resolve the incompatibility between the fluidity of the data and the rigor of the _Hippocampus_, we implemented a system to _"freeze"_ the _NumPy_ vectors into _hashable tuples_.
+  - **Differentiated Physiology:** The _Thalamus_ now modulates the _BPM_ according to the _"cognitive distance"_ of the symbol. An unfamiliar character causes increased alertness _(144 BPM)_, while a recognized symbol stabilizes the body _(120 BPM)_.
+    > _"With this update, aNA doesn't just read data; it perceives the diversity of human expression through a unified neuro-rhythmic signature."_
+
 - **The _A → B_ Algorithm _(Sequential Anticipation)_:**
   - **Concept:** The shift from a _storage memory_ to a _generative memory_. **aNA** no longer simply stores _"A,"_ it _pre-activates_ the trace of _"B."_
   - **Validation:** Successful unit _[tests(/)](/src/tests/)[test_hippocampus(.py)](/src/tests/test_hippocampus.py)_ demonstrating that the _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_ identifies transitions as priority units of meaning.
@@ -115,4 +122,4 @@ _**NMDA:** A receptor acting as a "coincidence detector." It requires high-salie
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-07_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-08_
