@@ -52,6 +52,10 @@
 
 ![ ](/docs/assets/spacer32x32.png)
 
+![img](/docs/assets/occipital_input_test_256x256_00_ALL.gif)
+
+![ ](/docs/assets/spacer32x32.png)
+
 ## 🧬 _aNA AI v5.0_ and beyond
 
 The strength of the **aNA** architecture lies in its departure from traditional static _AI_ models. By implementing bio-inspired mechanisms, we have achieved a system that prioritizes survival and relevance over raw data volume.
