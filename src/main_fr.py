@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Projet aNA - v5.1
+Projet aNA - v5.2
 
 Module : Intégration principale
 
@@ -36,11 +36,11 @@ def create_ascii_header():
     print("▒░░░░░▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▒░         ░░▒▒▒░▒▒▒▒▓▓▓▓▓▓▓▒▒░░  ░▒▒▒▓▒▒▒▓▒▓▒▓▒░░░░░░░▒▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░░░░░░░▒▓")
     print("░▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓░                   ░░ ▒▒▓▒░▒▓▓▓░▒▒░░           ░▒░░░▒▓▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▓▓")
     print("▒▒▓▓▓▓▓▓▒▒▒░░                           ░▓▓▒░░▒▓▓░ _    _    _ ░▒░░▒▓▒▓▓▓▓▓▓▓▓▓▓▒░░░░░░░░░▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓")
-    print("▓▓▓░IA inspirée de la plasticité naturelle░░  ░░░  a    N    A  ▒▓▒▓▒▒▒▓░Architecture Neuronale Autonome v5.1░░▒▒▓")
+    print("▓▓▓░IA inspirée de la plasticité naturelle░░  ░░░  a    N    A  ▒▓▒▓▒▒▒▓░Architecture Neuronale Autonome v5.2b ░▒▓")
     print("░                                                  ‾    ‾    ‾ ░▓▒▓░░▒▓░\n\n")
 
 async def main():
-    print("--- ⚡ Organisme aNA v5.1 (Réunion des Organes) ---")
+    print("--- ⚡ Organisme aNA v5.2 (Réunion des Organes) ---")
     
     config = get_config()
     neurom_core = Neuromodulator() 
@@ -60,9 +60,9 @@ async def main():
     )
     
     # Séquence de test pour valider l'habituation et le feedback L6
-    # test_sequence = ["a", "N", "A", " ", "a", "N", "A", " ", "a", "N", "A", " ", "a", "N", "A", " ", "a", "N", "A", " ", "B", "A", "N", "A", "N", "A", "S"]
-    test_sequence = ["B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", "😜"]
+    # test_sequence = ["B", "A", "N", "A", "N", "E", " ", "B", "A", "N", "A", "N", "E", " ", "B", "A", "N", "A", "N", "E", " ", "B", "A", "N", "A", "N", "E", "Z"]
     # test_sequence = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "a"]
+    test_sequence = ["H", "e", "l", "l", "o", " ", "你", "好", " ", "H", "o", "l", "a", " ", "A", "l", "l", "ô", " ", "П", "р", "и", "в", "е", "т", " ", "H", "e", "l", "l", "o", " ", "你", "好"]
 
     for cycle, char in enumerate(test_sequence, 1):
         # --- PHASE A : TRANSDUCTION ---
