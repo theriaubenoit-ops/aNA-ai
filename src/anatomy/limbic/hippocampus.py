@@ -14,6 +14,7 @@ Collaboration, research and code: Gemini, Cline
 from typing import Dict
 import sys
 import os
+import numpy as np
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../..')))
 from src.config import get_config
@@ -36,13 +37,38 @@ class Hippocampus:
                 if sf not in self.subfields:
                     self.subfields[sf] = {}
 
+        self.last_signal = None
+        self.sequence_map = {}  # Pour prédire : 'H' -> 'e'
         self.short_term_memory = {}
-        print("  [Hippocampus] v5.1 : Zones DG, CA1-CA4 initialized.")
+        # print("  [Hippocampus] v5.1 : Zones DG, CA1-CA4 initialized.")
+        print("  [Hippocampus] v5.2 : Hebbian sequences & Unicode Wide enabled.")
 
-    async def evaluate_prediction(self, signal_label: str) -> float:
+    def _get_hash(self, signal_data):
+        """Utilitaire pour rendre les vecteurs NumPy hachables."""
+        if isinstance(signal_data, np.ndarray):
+            return tuple(signal_data.tolist())
+        return signal_data
+
+    async def evaluate_prediction(self, signal_data, label=None):
         """
         Simule la boucle trisynaptique avec dynamique AMPA/NMDA.
         """
+        current_signal = self._get_hash(signal_data)
+
+        # --- LOGIQUE HEBBIENNE (Consolidation) ---
+        if self.last_signal is not None:
+            pair = (self.last_signal, current_signal)
+            # On renforce le lien (Plasticité)
+            self.sequence_map[pair] = self.sequence_map.get(pair, 0) + 0.1
+            
+        self.last_signal = current_signal
+
+        # On transforme le vecteur NumPy en tuple (immuable) pour qu'il soit hachable
+        if isinstance(signal_data, np.ndarray):
+            signal_label = tuple(signal_data.tolist())
+        else:
+            signal_label = signal_data
+
         # 1. DG : Séparation de motifs
         is_known_dg = signal_label in self.subfields["DG"]
 
