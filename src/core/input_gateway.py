@@ -14,6 +14,7 @@ Collaboration, research and code: Gemini
 import sys
 import os
 import random
+import numpy as np
 
 # Accès au registre
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
@@ -57,6 +58,17 @@ class InputGateway:
 
         self.last_char = char
         return payload
+    
+    def process_symbol(self, char):
+        # Lecture "large" : on transforme l'Unicode en sa valeur ordinale normalisée
+        # ou en une représentation binaire étendue
+        vector = np.array([ord(c) for c in char], dtype=float) 
+        
+        return {
+            "type": "unicode_extended",
+            "vector": vector,
+            "label": char  # Le caractère lui-même sert d'étiquette
+        }
 
     def get_summary(self):
         return f"Dernier Input: {self.last_char} | Signaux traités: {len(self.history)}"
