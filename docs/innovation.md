@@ -22,6 +22,18 @@
 
 ### v5.2: Predictive Awakening _(Anticipation)_ — In progress
 
+- **The _Genome (immutable structural framework: [registry(.py)](/src/registry.py))_:**
+  - **Structural Mapping:** The names and connections of _lobes_, _[cortical columns(.py)](/src/anatomy/cortical/cortical_column.py)_, and _subcortical nuclei_.
+  - **Signal Protocols:** The fixed mathematical formats used for _inter-organ_ communication.
+  - **Hardware Mapping:** The hard-coded architecture that ensures _global homeostasis_.
+    > _“The Genome is the vehicle’s technical manual; it does not change, no matter how fast the car is driving.”_
+
+- **The _Temperament (The Soul in the Machine: [config(.py)](/src/config.py))_:** Adjustable, neurochemical "tuning" of the individual.
+  - **Hormonal Sensitivity:** How strongly the _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ reacts to a threat or how much _Dopamine_ is released.
+  - **Metabolic Thresholds:** _ATP_ critical levels, recovery rates, and _sleep/wake_ cycles.
+  - **Synaptic Gains:** The strength of the _L6 cortical feedback (the "willpower" vs. "impulse" balance)._
+    > _“The Temperament is the driver’s mood and style; it defines how the vehicle interprets and reacts to the road.”_
+
 - **Extension of Perception _(The Unicode Jump)_:**
   The **aNA** organization has taken a major step forward by freeing itself from the limitations of _standard text encoding_ to adopt a _universal symbolic reading_.
   - **_“Unicode Wide”_ mechanics:** Unlike traditional systems, **aNA** treats each character _(whether Latin, Kanji or Cyrillic)_ as a raw sensory stimulus.
@@ -36,18 +48,6 @@
 - **Temperament Synchronization _([config(.py)](/src/config.py))_:** The _L1 → L2 → L3_ transition thresholds are now dynamic. Learning is "sculpted" by the _AI's personality_ _(e.g., THRESHOLD_NMDA)_.
 
 - **Reward Loop _(Dopamine)_:** _(Next step)_ The _[pulse(.py)](/src/core/pulse.py)_ speeds up upon validation of a correct prediction, simulating cognitive satisfaction.
-
-- **The _Genome (immutable structural framework: [registry(.py)](/src/registry.py))_:**
-  - **Structural Mapping:** The names and connections of _lobes_, _[cortical columns(.py)](/src/anatomy/cortical/cortical_column.py)_, and _subcortical nuclei_.
-  - **Signal Protocols:** The fixed mathematical formats used for _inter-organ_ communication.
-  - **Hardware Mapping:** The hard-coded architecture that ensures _global homeostasis_.
-    > _“The Genome is the vehicle’s technical manual; it does not change, no matter how fast the car is driving.”_
-
-- **The _Temperament (The Soul in the Machine: [config(.py)](/src/config.py))_:** Adjustable, neurochemical "tuning" of the individual.
-  - **Hormonal Sensitivity:** How strongly the _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ reacts to a threat or how much _Dopamine_ is released.
-  - **Metabolic Thresholds:** _ATP_ critical levels, recovery rates, and _sleep/wake_ cycles.
-  - **Synaptic Gains:** The strength of the _L6 cortical feedback (the "willpower" vs. "impulse" balance)._
-    > _“The Temperament is the driver’s mood and style; it defines how the vehicle interprets and reacts to the road.”_
 
 ### v5.1: Homeostatic Architecture _(Survival)_
 
