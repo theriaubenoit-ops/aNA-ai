@@ -32,6 +32,13 @@ _Thank you for being part of this journey to bring **aNA** to life!_
 
 ### v5.2: Predictive Awakening _(Anticipation)_ — In progress
 
+ **☄️ Visual Stimuli Integration _([input_visual(.py)](/src/core/input_visual.py))_**
+  - **The Digital Retina:** Unlike _standard image_ processing, _[input_visual(.py)](/src/core/input_visual.py)_ acts as a _biological sensor_ interface. It transforms _visual data_ into a raw _neural stream_, ready to be correlated with other _sensory inputs_ in real-time.
+
+  - **Multi-Stream Synchronization:** The module is designed to align _visual frames_ with their _symbolic_ or _auditory_ counterparts. This ensures that **aNA** doesn't just _"see"_ an object and "read" its name separately, but perceives them as a single, synchronized event.
+
+  - **Dynamic Dimensionality:** By utilizing flexible _NumPy_ structures, the _visual input_ can _scale_ its resolution and _focus_, mimicking the way a _biological eye_ shifts between _peripheral awareness_ and _foveal detail (focus)_.
+
 - **Extension of Perception _(The Unicode Jump)_:**
   The **aNA** organization has taken a major step forward by freeing itself from the limitations of _standard text encoding_ to adopt a _universal symbolic reading_.
   - **_“Unicode Wide”_ mechanics:** Unlike traditional systems, **aNA** treats each character _(whether Latin, Kanji or Cyrillic)_ as a raw sensory stimulus.
