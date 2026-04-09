@@ -18,6 +18,7 @@ import numpy as np
 # Gestion du path pour les imports locaux
 sys.path.append(os.path.abspath(os.path.dirname(__file__)))
 from config import get_config  # Ajoute l'import en haut du fichier
+from core.input_visual import InputVisualGateway, VisualSensoryPayload
 from core.pulse import Pulse
 from core.input_gateway import InputGateway
 from anatomy.subcortical.thalamus import Thalamus
@@ -48,7 +49,12 @@ async def main():
     hippo = Hippocampus(config=config, neuromodulator_core=neurom_core)
     heart = Pulse()
     gateway = InputGateway()
-    
+    # Nouvelle voie visuelle
+    visual_gateway = InputVisualGateway() 
+
+    # Simulation d'une image test (ex: 64x64)
+    test_image = np.random.rand(64, 64)
+
     # 2. Initialisation du Néocortex (Colonne de traitement)
     # Chaque colonne représente une unité de calcul 6-layers
     visual_column = SimplifiedCorticalColumn(column_id="COL_V1")
@@ -69,18 +75,39 @@ async def main():
         # --- PHASE A : TRANSDUCTION ---
         payload = gateway.process_symbol(char)
         
-        # --- PHASE B & C : CASCADE CORTICALE (L4 -> L2/3 -> L6) ---
+        # --- PHASE B : CASCADE CORTICALE (L4 -> L2/3 -> L6) ---
         # On interroge d'abord le cortex pour obtenir le feedback L6
         cortical_results = await visual_column.process_input(char, hippo)
         l6_signal = cortical_results['l6_feedback']
 
+        # --- PHASE C : PRÉPARATION DES SENS ---
+        # 1. Le Visuel (votre nouveau module)
+        # ratio = 2.0 # Test Ratio 2:1 (Vue zoom) - Foveal simulation
+        # ratio = 1.0 # Test Ratio 1:1 (Normal) - Baseline
+        # ratio = 0.50 # Test Ratio 1:2 (Vue large) - Peripheral simulation
+        ratio = 0.25 # Test Ratio 1:4
+        visual_payload = await visual_gateway.capture_image(test_image, ratio=ratio)
+
+        # 2. Le Tactile (on crée un petit dictionnaire ou objet compatible)
+        tactile_payload = {
+            "source": "TACTILE_GATEWAY",
+            "data": char,
+            "signal_label": "UNICODE_WIDE"
+        }
+
+        # --- PHASE D : INTÉGRATION THALAMIQUE (Le Pulse Partagé) ---
+        # Le Thalamus reçoit les deux et influence le BPM
+        log_v = await thalamus.process_payload(visual_payload, l6_feedback=l6_signal)
+        log_t = await thalamus.process_payload(tactile_payload, l6_feedback=l6_signal)
+
+        # --- PHASE E : MISE À JOUR MÉTABOLIQUE ---
+        heart.update() # Le cœur bat maintenant selon la tension combinée
+
         # --- PHASE D : TRAITEMENT THALAMIQUE (Régulation du BPM) ---
         # aNA utilise maintenant le feedback L6 pour calculer le rythme
-        log_thalamus = await thalamus.process_payload(payload, l6_feedback=l6_signal)
         
         # Mise à jour du monitoring
-        # thalamus.apply_l6_feedback(l6_signal)
-        
+
         # --- PHASE E : MISE À JOUR MÉTABOLIQUE ---
         heart.update()
         status = heart.get_status()
@@ -90,9 +117,14 @@ async def main():
         avg_myeline = visual_column.get_average_myelination()
         
         # --- MONITORING ---
-        # print(f"\nCycle {cycle:02d} | Input: '{char}'")
+
+        # --- TEST DE PERCEPTION VISUELLE ---
+        print(f"\n[V1] Attempting visual perception (Ratio {ratio})...")
+        print(f" └─ Visual Thalamus : {log_v}")
+
+        # --- TEST DE PERCEPTION TACTILE ---
         print(f"\nCycle {cycle:02d} | Input: '{char}' (Unicode Wide)")
-        print(f" └─ Thalamus : {log_thalamus}")
+        print(f" └─ Thalamus : {log_t}")
         print(f" └─ Cortex   : Recognition {cortical_results['recognition']:.2%}")
         print(f" └─ Feedback : L6 Signal {cortical_results['l6_feedback']:.2f}")
         print(f" └─ Myelin   : {avg_myeline:.5f} (Increased conductivity)") # Nouveau !
