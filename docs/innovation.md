@@ -29,17 +29,17 @@
   - **Differentiated Physiology:** The _[thalamus(.py)](/src/anatomy/subcortical/thalamus.py)_ now modulates the _BPM_ according to the _"cognitive distance"_ of the symbol. An unfamiliar character causes increased alertness _(144 BPM)_, while a recognized symbol stabilizes the body _(120 BPM)_.
     > _"With this update, aNA doesn't just read data; it perceives the diversity of human expression through a unified neuro-rhythmic signature."_
 
-- **☄️ The _Genome (immutable structural framework: [registry(.py)](/src/registry.py))_:**
-  - **Structural Mapping:** The names and connections of _lobes_, _[cortical columns(.py)](/src/anatomy/cortical/cortical_column.py)_, and _subcortical nuclei_.
-  - **Signal Protocols:** The fixed mathematical formats used for _inter-organ_ communication.
-  - **Hardware Mapping:** The hard-coded architecture that ensures _global homeostasis_.
-    > _“The Genome is the vehicle’s technical manual; it does not change, no matter how fast the car is driving.”_
-
 - **☄️ The _Temperament (The Soul in the Machine: [config(.py)](/src/config.py))_:** Adjustable, neurochemical "tuning" of the individual.
   - **Hormonal Sensitivity:** How strongly the _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ reacts to a threat or how much _Dopamine_ is released.
   - **Metabolic Thresholds:** _ATP_ critical levels, recovery rates, and _sleep/wake_ cycles.
   - **Synaptic Gains:** The strength of the _L6 cortical feedback (the "willpower" vs. "impulse" balance)._
     > _“The Temperament is the driver’s mood and style; it defines how the vehicle interprets and reacts to the road.”_
+
+- **☄️ The _Genome (immutable structural framework: [registry(.py)](/src/registry.py))_:**
+  - **Structural Mapping:** The names and connections of _lobes_, _[cortical columns(.py)](/src/anatomy/cortical/cortical_column.py)_, and _subcortical nuclei_.
+  - **Signal Protocols:** The fixed mathematical formats used for _inter-organ_ communication.
+  - **Hardware Mapping:** The hard-coded architecture that ensures _global homeostasis_.
+    > _“The Genome is the vehicle’s technical manual; it does not change, no matter how fast the car is driving.”_
 
 - **The _A → B_ Algorithm _(Sequential Anticipation)_:**
   - **Concept:** The shift from a _storage memory_ to a _generative memory_. **aNA** no longer simply stores _"A,"_ it _pre-activates_ the trace of _"B."_
