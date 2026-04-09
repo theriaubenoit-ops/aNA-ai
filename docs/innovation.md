@@ -33,7 +33,7 @@ _Thank you for being part of this journey to bring **aNA** to life!_
 ### v5.2: Predictive Awakening _(Anticipation)_ — In progress
 
 - **☄️ Visual Stimuli Integration _([input_visual(.py)](/src/core/input_visual.py))_**
-  - **The Digital Retina:** Unlike _standard image_ processing, It acts as a _biological sensor_ interface _(test [main(.py)](/src/main.py))_. It transforms \_visual data* into a raw \_neural stream*, ready to be correlated with other _sensory inputs_ in real-time.
+  - **The Digital Retina:** Unlike _standard image_ processing, It acts as a _biological sensor_ interface _(test [main(.py)](/src/main.py))_. It transforms _visual data_ into a raw _neural stream_, ready to be correlated with other _sensory inputs_ in real-time.
 
   - **Multi-Stream Synchronization:** The module is designed to align _visual frames_ with their _symbolic_ or _auditory_ counterparts. This ensures that **aNA** doesn't just _"see"_ an object and "read" its name separately, but perceives them as a single, synchronized event.
 
