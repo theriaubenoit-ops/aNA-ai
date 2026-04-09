@@ -63,6 +63,8 @@
 
 ![img](/docs/assets/occipital_input_test_256x256_00_ALL.gif)
 
+###### _Each character “Unicode Wide” as a raw sensory stimulus._
+
 ![ ](/docs/assets/spacer32x32.png)
 
 ## 🧬 _aNA AI v5.0_ and beyond
