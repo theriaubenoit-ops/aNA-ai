@@ -22,6 +22,8 @@
 
 We are building an _Autonomous Neural Architecture_ that reflects biological principles rather than statistical shortcuts. If you wish to engage with this project, we view you not as a _"contributor"_ but as a research partner/observer.
 
+![ ](/docs/assets/spacer16x16.png)
+
 ### How to engage
 
 **Peer Review & critique:** The most valuable input is the challenge. If you see a logical flaw in our modeling of a _cortical layer_ or a _neuromodulatory_ pathway, point it out. Precision is our primary goal.
@@ -36,11 +38,15 @@ We are building an _Autonomous Neural Architecture_ that reflects biological pri
 
 We are moving away from the "open-source contribution" model—where the goal is often quantity—toward a _"research collaboration"_ model, where the goal is accuracy. We are documenting a trajectory toward a more harmonious coexistence between biological and digital systems.
 
+![ ](/docs/assets/spacer16x16.png)
+
 ### _Shape the future of AI!_
 
 **This is a leap forward in time; what you see here is the _future of AI_. If you are exploring this project today, it is because you possess the curiosity required to push this innovative concept further. We are currently _architecting_ the _next major update_, but we invite you to share your _observations_ and _ideas_ with us as we continue to grow this vision together.**
 
 Join the **aNA** _computational neuroscience_ community: _[Download(.zip)](https://github.com/theriaubenoit-ops/aNA-ai/archive/refs/heads/main.zip)_ or/and [installation](/docs/installation.md) or/and [innovation (creation lab)](/docs/innovation.md)
+
+![ ](/docs/assets/spacer16x16.png)
 
 ### First Steps for Research Collaborators
 
