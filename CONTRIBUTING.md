@@ -34,6 +34,8 @@ We are building an _Autonomous Neural Architecture_ that reflects biological pri
 
 **Documentation consistency:** Any change must update the relevant documentation. An undocumented feature is, for our research purposes, a non-existent one.
 
+![ ](/docs/assets/spacer16x16.png)
+
 ### Our shared ethos
 
 We are moving away from the "open-source contribution" model—where the goal is often quantity—toward a _"research collaboration"_ model, where the goal is accuracy. We are documenting a trajectory toward a more harmonious coexistence between biological and digital systems.
