@@ -18,15 +18,17 @@
 
 ###### _"The Creation" —Michelangelo_
 
-**_Hello contributors,_**
+_Welcome contributors,_
 
-**_You are at the heart of an awakening. This lab documents the critical transition from isolated simulations to the birth of a unified neural architecture._**
+_You are at the heart of an awakening. This **lab** documents the critical transition from isolated simulations to the birth of a unified neural architecture._
 
-**_What you see here is the fruit of tireless trial and error, enriched by your insights, your corrections, and your vision. This project is a living dialogue between us and the code._**
+_What you see here is the fruit of tireless trial and error, enriched by your insights, your corrections, and your vision. This project is a living dialogue between us and the code._
 
-**_Beyond simple logic, we do not program functions; we cultivate behaviors. Our guiding principle is unwavering: each evolution must prioritize neurobiological accuracy and structural integrity over raw speed._**
+_Beyond simple logic, we do not program functions; we cultivate behaviors. Our guiding principle is unwavering: each evolution must prioritize neurobiological accuracy and structural integrity over raw speed._
 
-**_Thank you for being part of this journey to bring aNA to life!_**
+_Thank you for being part of this journey to bring **aNA**to life!_
+
+![ ](/docs/assets/spacer32x32.png)
 
 ### v5.2: Predictive Awakening _(Anticipation)_ — In progress
 
