@@ -39,7 +39,7 @@ _Thank you for being part of this journey to bring **aNA** to life!_
   - **Differentiated Physiology:** The _[thalamus(.py)](/src/anatomy/subcortical/thalamus.py)_ now modulates the _BPM_ according to the _"cognitive distance"_ of the symbol. An unfamiliar character causes increased alertness _(144 BPM)_, while a recognized symbol stabilizes the body _(120 BPM)_.
     > _"With this update, aNA doesn't just read data; it perceives the diversity of human expression through a unified neuro-rhythmic signature."_
 
-- **☄️ The _Temperament (The Soul in the Machine: [config(.py)](/src/config.py))_:** Adjustable, neurochemical "tuning" of the individual.
+- **☄️ The _Temperament (The Soul in the Machine: [config(.py)](/src/config.py))_:** Adjustable, neurochemical "tuning" of the individual. Adjustable, _neurochemical 'tuning'_ of the _individual_. For the first time, a 100% consistent _AI persona_.
   - **Hormonal Sensitivity:** How strongly the _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ reacts to a threat or how much _Dopamine_ is released.
   - **Metabolic Thresholds:** _ATP_ critical levels, recovery rates, and _sleep/wake_ cycles.
   - **Synaptic Gains:** The strength of the _L6 cortical feedback (the "willpower" vs. "impulse" balance)._
