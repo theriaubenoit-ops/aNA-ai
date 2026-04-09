@@ -59,6 +59,8 @@ _Thank you for being part of this journey to bring **aNA** to life!_
 
 - **Reward Loop _(Dopamine)_:** _(Next step)_ The _[pulse(.py)](/src/core/pulse.py)_ speeds up upon validation of a correct prediction, simulating cognitive satisfaction.
 
+![ ](/docs/assets/spacer16x16.png)
+
 ### v5.1: Homeostatic Architecture _(Survival)_
 
 - **Metabolic Protection _([pulse(.py)](/src/core/pulse.py))_:** Non-linear _BPM_ management based on _ATP_. The system reacts to exhaustion with _hypervigilance (ATP < 0.4)_ or recovery bradycardia _(ATP < 0.2)_.
