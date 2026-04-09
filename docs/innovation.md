@@ -26,7 +26,7 @@ _What you see here is the fruit of tireless trial and error, enriched by your in
 
 _Beyond simple logic, we do not program functions; we cultivate behaviors. Our guiding principle is unwavering: each evolution must prioritize neurobiological accuracy and structural integrity over raw speed._
 
-_Thank you for being part of this journey to bring **aNA**to life!_
+_Thank you for being part of this journey to bring **aNA** to life!_
 
 ![ ](/docs/assets/spacer32x32.png)
 
