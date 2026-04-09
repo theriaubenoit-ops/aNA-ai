@@ -81,12 +81,29 @@ async def main():
         l6_signal = cortical_results['l6_feedback']
 
         # --- PHASE C : PRÉPARATION DES SENS ---
-        # 1. Le Visuel (votre nouveau module)
-        # ratio = 2.0 # Test Ratio 2:1 (Vue zoom) - Foveal simulation
-        # ratio = 1.0 # Test Ratio 1:1 (Normal) - Baseline
-        # ratio = 0.50 # Test Ratio 1:2 (Vue large) - Peripheral simulation
-        ratio = 0.25 # Test Ratio 1:4
-        visual_payload = await visual_gateway.capture_image(test_image, ratio=ratio)
+        base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        test_dir = os.path.join(base_path, "docs", "assets")
+
+        # Initialisation par défaut (Sécurité)
+        visual_payload = {"type": "visual", "source": "None", "data": None}
+
+        # Vérification si le dossier existe pour éviter un crash
+        if os.path.exists(test_dir):
+            for current_img_name in os.listdir(test_dir):
+                if current_img_name.lower().endswith(('.png', '.jpg', '.jpeg')):
+                    full_path = os.path.join(test_dir, current_img_name)
+                    
+                    # 1. Simulation de la matrice image (64x64)
+                    # Note : Plus tard, on utilisera PIL ou CV2 pour lire full_path
+                    raw_matrix = np.random.rand(64, 64) 
+                    
+                    # 2. APPEL CORRECT : On utilise 'await' et 'capture_image'
+                    # On respecte la signature de votre fichier input_visual.py
+                    visual_payload = await visual_gateway.capture_image(raw_matrix, ratio=0.25)
+                    
+                    # 3. Injection du nom du fichier pour le monitoring
+                    visual_payload.source = current_img_name
+                    break
 
         # 2. Le Tactile (on crée un petit dictionnaire ou objet compatible)
         tactile_payload = {
@@ -119,7 +136,7 @@ async def main():
         # --- MONITORING ---
 
         # --- TEST DE PERCEPTION VISUELLE ---
-        print(f"\n[V1] Attempting visual perception (Ratio {ratio})...")
+        print(f"[V1] Attempting visual perception (Stimulus: {visual_payload.source})...")
         print(f" └─ Visual Thalamus : {log_v}")
 
         # --- TEST DE PERCEPTION TACTILE ---
