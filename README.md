@@ -64,7 +64,7 @@ This demo simulates how the _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ a
 python3 src/tests/test_limbic_system.py
 ```
 
-### What to look for in the output:
+#### What to look for in the output:
 
 - **Routine Scenario:** Low arousal levels _(Cortisol/Adrenaline)_ leading to standard memory encoding.
 - **Shock Scenario:** High arousal triggering a _"System Breach"_ alert and prioritized memory storage.
