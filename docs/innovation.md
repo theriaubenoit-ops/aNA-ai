@@ -35,7 +35,7 @@
   - **Hardware Mapping:** The hard-coded architecture that ensures _global homeostasis_.
     > _“The Genome is the vehicle’s technical manual; it does not change, no matter how fast the car is driving.”_
 
-- **The _Temperament (The Soul in the Machine: [config(.py)](/src/config.py))_:** Adjustable, neurochemical "tuning" of the individual.
+- ** ☄️ The _Temperament (The Soul in the Machine: [config(.py)](/src/config.py))_:** Adjustable, neurochemical "tuning" of the individual.
   - **Hormonal Sensitivity:** How strongly the _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ reacts to a threat or how much _Dopamine_ is released.
   - **Metabolic Thresholds:** _ATP_ critical levels, recovery rates, and _sleep/wake_ cycles.
   - **Synaptic Gains:** The strength of the _L6 cortical feedback (the "willpower" vs. "impulse" balance)._
@@ -45,7 +45,7 @@
   - **Concept:** The shift from a _storage memory_ to a _generative memory_. **aNA** no longer simply stores _"A,"_ it _pre-activates_ the trace of _"B."_
   - **Validation:** Successful unit _[tests(/)](/src/tests/)[test_hippocampus(.py)](/src/tests/test_hippocampus.py)_ demonstrating that the _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_ identifies transitions as priority units of meaning.
 
-- **Temperament Synchronization _([config(.py)](/src/config.py))_:** The _L1 → L2 → L3_ transition thresholds are now dynamic. Learning is "sculpted" by the _AI's personality_ _(e.g., THRESHOLD_NMDA)_.
+- **☄️ Temperament Synchronization _([config(.py)](/src/config.py))_:** The _L1 → L2 → L3_ transition thresholds are now dynamic. Learning is "sculpted" by the _AI's personality_ _(e.g., THRESHOLD_NMDA)_.
 
 - **Reward Loop _(Dopamine)_:** _(Next step)_ The _[pulse(.py)](/src/core/pulse.py)_ speeds up upon validation of a correct prediction, simulating cognitive satisfaction.
 
@@ -56,6 +56,8 @@
 - **_AMPA/NMDA_ Duality _([hippocampus(.py)](/src/anatomy/limbic/hippocampus.py))_:** Distinguishing between volatile learning through repetition and immediate synaptic locking during emotional shock.
 
 - **The _CA4_ Sanctuary:** Safeguarding _"survival floors" (Acid Traces)_ to ensure system resilience even after synaptic decline.
+
+☄️ Spotlight
 
 ![ ](/docs/assets/spacer32x32.png)
 
