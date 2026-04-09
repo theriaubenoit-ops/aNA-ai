@@ -22,8 +22,6 @@
 
 We are building an _Autonomous Neural Architecture_ that reflects biological principles rather than statistical shortcuts. If you wish to engage with this project, we view you not as a _"contributor"_ but as a research partner/observer.
 
-![ ](/docs/assets/spacer16x16.png)
-
 ### How to engage
 
 **Peer Review & critique:** The most valuable input is the challenge. If you see a logical flaw in our modeling of a _cortical layer_ or a _neuromodulatory_ pathway, point it out. Precision is our primary goal.
@@ -33,8 +31,6 @@ We are building an _Autonomous Neural Architecture_ that reflects biological pri
 **Experimental validation:** If you implement a new feature _(a new nucleus, a refined synapse)_, ensure it is backed by biological rationale. We favor "why it works biologically" over _"it makes the model faster"_.
 
 **Documentation consistency:** Any change must update the relevant documentation. An undocumented feature is, for our research purposes, a non-existent one.
-
-![ ](/docs/assets/spacer16x16.png)
 
 ### Our shared ethos
 
