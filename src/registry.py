@@ -11,7 +11,7 @@ Architecture, concept and supervision: Benoit Theriault
 Collaboration, research and code: Gemini
 """
 
-# -  -  -  -  -  -  PHILOSOPHICAL ANCHOR / ANCRAGE PHILOSOPHIQUE -  -  -  -  -  -  - #
+# -  -  -  -  -  PHILOSOPHICAL ANCHOR / ANCRAGE PHILOSOPHIQUE (FR)  -  -  -  -  -  - #
 # "The inclusion of these specific biological modules is not a stylistic choice,     #
 # but a mechanical necessity. Their presence is vital for the systemic function,     #
 # coherent learning, and the emergence of a truly grounded World Model."             #
