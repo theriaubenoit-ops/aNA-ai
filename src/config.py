@@ -4,8 +4,11 @@
 aNA v5.2 - Configuration Module (Temperament)
 Description: Centralization of dynamic thresholds for AI customization. This module defines the adjustable parameters that shape the AI's temperament and responsiveness. By modifying these values, users can create different personality profiles, from calm to anxious, while maintaining the underlying architecture's stability. These parameters influence how the AI reacts to stimuli, manages energy, and processes information, allowing for a personalized experience without compromising the system's integrity.
 
-aNA v5.1.1 - Configuration Module (Le Tempérament) (FR)
+aNA v5.2 - Configuration Module (Le Tempérament) (FR)
 Description : Centralisation des seuils dynamiques pour la personnalisation de l'IA. Ce module définit les paramètres ajustables qui déterminent le tempérament et la réactivité de l'IA. En modifiant ces valeurs, les utilisateurs peuvent créer différents profils de personnalité, du calme à l'anxiété, tout en préservant la stabilité de l'architecture sous-jacente. Ces paramètres influencent la manière dont l'IA réagit aux stimuli, gère son énergie et traite l'information, permettant ainsi une expérience personnalisée sans compromettre l'intégrité du système.
+
+Architecture, concept and supervision: Benoit Theriault
+Collaboration, research and code: Gemini
 """
 
 # --- PERSONALITY HYPERPARAMETERS ---
@@ -48,13 +51,15 @@ NOISE_LEVEL = 0.01              # Biological Realism (Background Noise) Min: 0.0
 
 
 def get_config():
-    """Retourne la configuration complète pour injection dans les organes."""
+    """
+    Returns the complete configuration for injection into the organs. This function centralizes all the parameters, allowing for easy adjustments and ensuring that all components of the architecture are aligned with the same temperament settings.
+    """
     return {
         "AMYGDALA_SENSITIVITY": AMYGDALA_SENSITIVITY,
         "ADRENALINE_RELEASE_FACTOR": ADRENALINE_RELEASE_FACTOR,
         "L6_GAIN": L6_GAIN,
         "BASE_BPM": BASE_BPM,
-        "BRADYCARDIA_BPM": BRADYCARDIA_BPM,      # <--- À AJOUTER AUSSI
+        "BRADYCARDIA_BPM": BRADYCARDIA_BPM,   
         "MAX_VIGILANCE_BPM": MAX_VIGILANCE_BPM,
         "ATP_CRITICAL_THRESHOLD": ATP_CRITICAL_THRESHOLD,
         "ATP_FATIGUE_ZONE": ATP_FATIGUE_ZONE,
@@ -72,3 +77,7 @@ def get_config():
         "BASE_CONDUCTIVITY": BASE_CONDUCTIVITY,
         "NOISE_LEVEL": NOISE_LEVEL
     }
+
+# -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - #
+#    “For every complex problem, there is a solution that is simple, neat, and wrong.” — H.L. Mencken     #
+# -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - #
