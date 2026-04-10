@@ -11,6 +11,12 @@ Architecture, concept and supervision: Benoit Theriault
 Collaboration, research and code: Gemini
 """
 
+# -  -  -  -  -  -  PHILOSOPHICAL ANCHOR / ANCRAGE PHILOSOPHIQUE -  -  -  -  -  -  - #
+# "The inclusion of these specific biological modules is not a stylistic choice,     #
+# but a mechanical necessity. Their presence is vital for the systemic function,     #
+# coherent learning, and the emergence of a truly grounded World Model."             #
+# -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - #
+
 # --- HEART CONFIGURATION / CONFIGURATION DU CŒUR (FR) --- 
 """
 The SensoryPayload is not a string; it is a sample of physical reality captured for integration into the internal World Model.
