@@ -24,8 +24,8 @@
 
 > [!IMPORTANT]
 > **This project is evolving.**
-> The architecture has been optimized to transition from test simulations to behavioral emulation.
-> **Access the latest updates and the _"Creation Lab"_ here 👉🏻 _[innovation(.md)](https://github.com/theriaubenoit-ops/aNA-ai/blob/v5.2-beta/docs/innovation.md)_**
+> The architecture has been optimized to transition from test simulations to behavioral emulation. 
+> **Access information on the latest updates and the _"Creation Lab"_ here 👉🏻 _[innovation(.md)](https://github.com/theriaubenoit-ops/aNA-ai/blob/v5.2-beta/docs/innovation.md)_**
 
 ![ ](/docs/assets/spacer16x16.png)
 
