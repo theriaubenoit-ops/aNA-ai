@@ -11,10 +11,15 @@ Architecture, concept and supervision: Benoit Theriault
 Collaboration, research and code: Gemini
 """
 
-# -  -  -  -  -  PHILOSOPHICAL ANCHOR / ANCRAGE PHILOSOPHIQUE (FR)  -  -  -  -  -  - #
+# -  -  -  -  -  ARCHITECTURAL MANIFESTO / MANIFESTE ARCHITECTURAL  -  -  -  -  -  - #
 # "The inclusion of these specific biological modules is not a stylistic choice,     #
-# but a mechanical necessity. Their presence is vital for the systemic function,     #
+# but a mechanical necessity. Their presence is vital for systemic function,         #
 # coherent learning, and the emergence of a truly grounded World Model."             #
+#                                                                                    #
+# "L'inclusion de ces modules biologiques précis n'est pas un choix esthétique,      #
+# mais une nécessité mécanique. Leur présence est vitale au fonctionnement           #
+# systémique, à l'apprentissage cohérent et à l'émergence d'un Modèle du Monde       #
+# (World Model) réellement ancré."                                                   #
 # -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - #
 
 # --- HEART CONFIGURATION / CONFIGURATION DU CŒUR (FR) --- 
