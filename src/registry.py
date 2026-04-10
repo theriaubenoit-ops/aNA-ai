@@ -47,3 +47,9 @@ SIGNALS = {
     "EMOTIONAL": "amygdala_pulse", # The amygdala influences the BPM and resistance to effort, simulating fear and excitement
     "L4_FORMAT": "L4_INPUT_{nucleus}_{data}" # Minimum synaptic resistance
 }
+
+# -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - #
+#                                                                                                         #
+#    “For every complex problem, there is a solution that is simple, neat, and wrong.” — H.L. Mencken     #
+#                                                                                                         #
+# -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - #
