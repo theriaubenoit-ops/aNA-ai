@@ -31,13 +31,34 @@ ORGANS = {
         "NUCLEI": ["MGN", "LGN", "MD", "RTN"]
     },
     "HIPPOCAMPUS": { # The Hippocampus uses the sequence_map to generate spatio-temporal predictions, reducing metabolic surprise (Vigilance) in the face of a stable environment.
-
         "SUBFIELDS": ["DG", "CA3", "CA1", "CA2", "CA4"]
     },
     "NEOCORTEX": { # The Neocortex, through its layered architecture, refines the sensory input and integrates it with the internal model, allowing for recognition and learning.
-        "LOBES": ["OCCIPITAL", "TEMPORAL", "PARIETAL", "FRONTAL"]
+        "LOBES": ["OCCIPITAL", "TEMPORAL", "PARIETAL", "FRONTAL"], # Each lobe has a specific role in processing different types of information (visual, auditory, somatosensory, executive functions).
+        "LAYERS": ["L1", "L2", "L3", "L4", "L5", "L6"], # The layers of the cortex, each with distinct connectivity and functions, are crucial for the hierarchical processing of information and the generation of predictions.
+        "UNIT": "CORTICAL_COLUMN", # The fundamental processing unit of the Neocortex is the Cortical Column, which contains a microcircuitry of neurons 
+        "NEURONS_PER_COLUMN": 1000 # Each cortical column contains neurons, which is a simplified representation of the complex microcircuitry found in the biological cortex.
+    },
+    "SUBKORTICAL_SYSTEMS": { # 
+        "LIMBIC_SYSTEM": {
+            "AMYGDALA": {"FUNCTION": "Emotional Pulse & Threat Assessment"},
+            "HIPPOCAMPUS": "Initialized via separate registry"
+        },
+        "CEREBELLUM": {
+            "FUNCTION": "Fine-tuning & Motor-cognitive coordination"
+        },
+    },
+    "MICRO_ARCHITECTURE": {
+        "NEUROMODULATORS": ["DOPAMINE", "ADRENALINE", "SEROTONIN", "NORADRENALINE", "CORTISOL"], 
+        "UNIT": "NEURON",
+        "PROPERTIES": ["Resistance", "Conductivity", "Voltage_Threshold"],
+        "TYPES": {
+            "SENSORY": "Transduction of physical reality into neural signals.",
+            "INTERNEURON": "Local processing and inhibitory regulation (GABAergic simulation).",
+            "MOTOR": "Output generation and homeostatic adjustment (BPM/ATP control)." 
+        }
     }
-}
+}    
 
 # --- STANDARDIZED SIGNALS / SIGNALS STANDARDISÉS (FR) ---
 """
