@@ -11,35 +11,31 @@ Architecture, concept and supervision: Benoit Theriault
 Collaboration, research and code: Gemini
 """
 
-# -  -  -  -  -  -  PHILOSOPHICAL ANCHOR / ANCRAGE PHILOSOPHIQUE -  -  -  -  -  -  - #
+# -  -  -  -  -  PHILOSOPHICAL ANCHOR / ANCRAGE PHILOSOPHIQUE (FR)  -  -  -  -  -  - #
 # "The inclusion of these specific biological modules is not a stylistic choice,     #
 # but a mechanical necessity. Their presence is vital for the systemic function,     #
 # coherent learning, and the emergence of a truly grounded World Model."             #
 # -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - #
 
-# --- PERSONALITY HYPERPARAMETERS ---
-# --- HYPER-PARAMÈTRES DE PERSONNALITÉ (FR) ---
+# --- PERSONALITY HYPERPARAMETERS / HYPER-PARAMÈTRES DE PERSONNALITÉ (FR) ---
 AMYGDALA_SENSITIVITY = 1.0      # Amygdala Sensitivity Min: 0.1 (unperturbed) Max: 2.0 (hyper-reactive) / Sensibilité de l'amygdale 
 ADRENALINE_RELEASE_FACTOR = 0.4 # Adrenaline Release Factor Min: 0.1 (calm) Max: 1.0 (explosive) / Facteur de libération d'adrénaline 
 L6_GAIN = 0.5                   # Cortical Brake Strength Min: 0.0 (no brake) Max: 2.0 (total inhibition) / Force du frein cortical 
 
-# --- HEART CONFIGURATION & METABOLISM ---
-# --- CONFIGURATION DU CŒUR & MÉTABOLISME (FR) ---
+# --- HEART CONFIGURATION & METABOLISM / CONFIGURATION DU CŒUR & MÉTABOLISME (FR) ---
 BASE_BPM = 120.0                # Cruising Heart Rate Min: 60.0 (deep sleep) Max: 140.0 (alert) / Rythme de croisière 
 BRADYCARDIA_BPM = 45.0          # Protective Heart Rate Min: 45.0 (bradycardia) Max: 60.0 (resting rate) / Rythme de protection 
 MAX_VIGILANCE_BPM = 240.0       # Safety ceiling Min: 180.0 (intense stress) Max: 240.0 (extreme emergency) / Plafond de sécurité 
 PULSE_FRICTION = 0.98           # Heart rate damping Min: 0.80 (unstable) Max: 0.99 (ultra-stable) / Amortissement du rythme cardiaque 
 DOPA_TO_HZ_GAIN = 20.0          # Dopamine sensitivity Min: 5.0 (low sensitivity) Max: 50.0 (hyper-reactive) / Sensibilité à la dopamine 
 
-# --- ENERGY THRESHOLDS ---
-# --- SEUILS ÉNERGÉTIQUES (FR) ---
+# --- ENERGY THRESHOLDS / SEUILS ÉNERGÉTIQUES (FR) ---
 ATP_CRITICAL_THRESHOLD = 0.20   # Transition to REFRACTORY_REST mode Min: 0.05 (very critical) Max: 0.30 (less critical) / Passage en mode REFRACTORY_REST 
 ATP_FATIGUE_ZONE = 0.40         # Hypervigilance Trigger Min: 0.30 (rapid fatigue) Max: 0.60 (late fatigue) / Déclenchement de l'hyper-vigilance 
 RECOVERY_RATE = 0.05            # ATP Recharge Rate (Sleep) Min: 0.01 (slow recovery) Max: 0.20 (rapid recovery) / Vitesse de recharge ATP (Sommeil)
 WAKE_UP_THRESHOLD = 0.80        # Wake-Up Threshold Min: 0.60 (late wake-up) Max: 0.95 (early wake-up) / Seuil de réveil 
 
-# --- PLASTICITY & LEARNING (Hippocampus/Cortex) ---
-# --- PLASTICITÉ & APPRENTISSAGE (Hippocampe/Cortex) (FR) ---
+# --- PLASTICITY & LEARNING (Hippocampus/Cortex) / PLASTICITÉ & APPRENTISSAGE (Hippocampe/Cortex) (FR) ---
 THRESHOLD_NMDA = 0.4            # Memory Lock Threshold Min: 0.1 (easy to encode) Max: 0.9 (difficult to encode) / Seuil pour le verrouillage des souvenirs 
 ENCODE_THRESHOLD = 0.7          # Energy Required for Encoding Min: 0.1 (encoding) Easy) Max: 1.0 (difficult memorization) / Intensité requise pour la mémorisation 
 HIPPO_RECOVERY = 0.08           # Hippocampal energy recovery Min: 0.01 (slow recovery) Max: 0.20 (fast recovery) / Récupération énergétique de l'Hippocampe 
@@ -48,8 +44,7 @@ MYELIN_RATE = 0.01              # Pathway strengthening rate Min: 0.001 (slow wi
 BASE_CONDUCTIVITY = 0.7         # Neural flow concept Min: 0.1 (low) Max: 1.0 (high) / Concept de flux neuronal 
 MIN_RESISTANCE = 0.1            # Minimum synaptic resistance Min: 0.001 (very low) Max: 0.05 (highest resistance) / Résistance synaptique minimale 
 
-# --- SIGNAL & DOPAMINE SETTINGS ---
-# --- RÉGLAGES DES SIGNAUX & DOPAMINE (FR) ---
+# --- SIGNAL & DOPAMINE SETTINGS / RÉGLAGES DES SIGNAUX & DOPAMINE (FR) ---
 DOPA_INJECTION_NEW = 0.20       # Surprise (High Dopamine) Min: 0.05 (Little Surprise) Max: 0.50 (Extreme Surprise) / Surprise (Dopamine haute) 
 DOPA_INJECTION_KNOWN = 0.05     # Habit (Low Dopamine) Min: 0.01 (Little Dopamine) Max: 0.50 (Moderate Dopamine) / Habitude (Dopamine basse) 
 RTN_BASE_INHIBITION = 0.1       # Default Thalamic Silence Level Min: 0.0 (No Inhibition) Max: 0.5 (Strong Inhibition) / Niveau de silence thalamique par défaut 
