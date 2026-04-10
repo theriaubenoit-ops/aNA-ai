@@ -20,7 +20,7 @@ sys.path.append(os.path.abspath(os.path.dirname(__file__)))
 from config import get_config  # Ajoute l'import en haut du fichier
 from core.input_visual import InputVisualGateway, VisualSensoryPayload
 from core.pulse import Pulse
-from core.input_tactille import InputGateway
+from core.input_tactille import InputTactille
 from anatomy.subcortical.thalamus import Thalamus
 from anatomy.limbic.hippocampus import Hippocampus
 from anatomy.cortical.cortical_column import SimplifiedCorticalColumn
@@ -48,7 +48,7 @@ async def main():
     neurom_core = Neuromodulator() 
     hippo = Hippocampus(config=config, neuromodulator_core=neurom_core)
     heart = Pulse()
-    gateway = InputGateway()
+    gateway = InputTactille()
     # Nouvelle voie visuelle
     visual_gateway = InputVisualGateway() 
 
