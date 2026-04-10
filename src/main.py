@@ -82,7 +82,7 @@ async def main():
 
         # --- PHASE C : PRÉPARATION DES SENS ---
         base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        test_dir = os.path.join(base_path, "docs", "assets")
+        test_dir = os.path.join(base_path, "docs", "assets", "occipital_input_test_64x64")
 
         # 1. Récupérer la liste de toutes les images valides
         all_images = sorted([img for img in os.listdir(test_dir) if img.lower().endswith(('.png', '.jpg', '.jpeg'))])
