@@ -6,6 +6,9 @@ Description: This module acts as the organism's genetic fingerprint. It catalogs
 
 aNA v5.2 - Le Génome Centralisé d'aNA (FR)
 Description :  Ce module agit comme l'empreinte génétique de l'organisme. Il répertorie et initialise l'ensemble des "Organes" (Thalamus, Hippocampe, Cortex) permettant une instanciation cohérente et une communication fluide entre les systèmes subcorticaux et corticaux. Sans ce registre, l'organisme perd sa structure unifiée et sa capacité à maintenir une homéostasie globale.
+
+Architecture, concept and supervision: Benoit Theriault
+Collaboration, research and code: Gemini
 """
 
 # --- HEART CONFIGURATION / CONFIGURATION DU CŒUR (FR) --- 
