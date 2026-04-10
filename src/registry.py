@@ -11,16 +11,16 @@ Architecture, concept and supervision: Benoit Theriault
 Collaboration, research and code: Gemini
 """
 
-# -  -  -  -  -  ARCHITECTURAL MANIFESTO / MANIFESTE ARCHITECTURAL  -  -  -  -  -  - #
-# "The inclusion of these specific biological modules is not a stylistic choice,     #
-# but a mechanical necessity. Their presence is vital for systemic function,         #
-# coherent learning, and the emergence of a truly grounded World Model."             #
-#                                                                                    #
-# "L'inclusion de ces modules biologiques précis n'est pas un choix esthétique,      #
-# mais une nécessité mécanique. Leur présence est vitale au fonctionnement           #
-# systémique, à l'apprentissage cohérent et à l'émergence d'un Modèle du Monde       #
-# (World Model) réellement ancré."                                                   #
-# -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - #
+# -  -  -  -  -  ARCHITECTURAL MANIFESTO / MANIFESTE ARCHITECTURAL  -  -  -  -  -  #
+#  "The inclusion of these specific biological modules is not a stylistic choice,  #
+#  but a mechanical necessity. Their presence is vital for systemic function,      #
+#  coherent learning, and the emergence of a truly grounded World Model."          #
+#                                                                                  #
+# "L'inclusion de ces modules biologiques précis n'est pas un choix esthétique,    #
+#  mais une nécessité mécanique. Leur présence est vitale au fonctionnement        #
+#  systémique, à l'apprentissage cohérent et à l'émergence d'un Modèle du Monde    #
+#  (World Model) réellement ancré."                                                #
+# -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  #
 
 # --- HEART CONFIGURATION / CONFIGURATION DU CŒUR (FR) --- 
 """
@@ -48,7 +48,8 @@ ORGANS = {
         "LOBES": ["OCCIPITAL", "TEMPORAL", "PARIETAL", "FRONTAL"], # Each lobe has a specific role in processing different types of information (visual, auditory, somatosensory, executive functions).
         "LAYERS": ["L1", "L2", "L3", "L4", "L5", "L6"], # The layers of the cortex, each with distinct connectivity and functions, are crucial for the hierarchical processing of information and the generation of predictions.
         "UNIT": "CORTICAL_COLUMN", # The fundamental processing unit of the Neocortex is the Cortical Column, which contains a microcircuitry of neurons 
-        "NEURONS_PER_COLUMN": 1000 # Each cortical column contains neurons, which is a simplified representation of the complex microcircuitry found in the biological cortex.
+        "NEURONS_PER_COLUMN": 1000, # Each cortical column contains neurons, which is a simplified representation of the complex microcircuitry found in the biological cortex.
+        "DESCRIPTION": "Hierarchical structure enabling real-time internal world representation."
     },
     "SUBKORTICAL_SYSTEMS": { # 
         "LIMBIC_SYSTEM": {
@@ -64,7 +65,13 @@ ORGANS = {
         "UNIT": "NEURON",
         "PROPERTIES": ["Resistance", "Conductivity", "Voltage_Threshold"],
         "TYPES": {
-            "SENSORY": "Transduction of physical reality into neural signals.",
+            "SENSORY": { 
+                "DESCRIPTION": "Transduction of physical reality into neural signals",
+                "STREAMS": {
+                    "TACTILE": "Processed via Unicode Wide mapping (input_tactile.py)",
+                    "VISUAL": "Processed via Occipital Lobe mapping (input_visual.py)"
+                }
+            },
             "INTERNEURON": "Local processing and inhibitory regulation (GABAergic simulation).",
             "MOTOR": "Output generation and homeostatic adjustment (BPM/ATP control)." 
         }
