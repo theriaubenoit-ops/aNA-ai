@@ -78,6 +78,8 @@ SIGNALS = {
     "L4_FORMAT": "L4_INPUT_{nucleus}_{data}" # Minimum synaptic resistance
 }
 
-# -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - #
-#    “For every complex problem, there is a solution that is simple, neat, and wrong.” — H.L. Mencken     #
-# -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - #
+# -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - #
+#    “For every complex problem, there is a solution that is simple, neat, and wrong.”     #
+#    « À chaque problème complexe correspond une solution simple, élégante et fausse. »    #           
+#                                                                      — H.L. Mencken      #
+# -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - #
