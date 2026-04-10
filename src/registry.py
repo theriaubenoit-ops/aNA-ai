@@ -52,7 +52,5 @@ SIGNALS = {
 }
 
 # -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - #
-#                                                                                                         #
 #    “For every complex problem, there is a solution that is simple, neat, and wrong.” — H.L. Mencken     #
-#                                                                                                         #
 # -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - #
