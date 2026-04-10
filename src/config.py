@@ -11,6 +11,12 @@ Architecture, concept and supervision: Benoit Theriault
 Collaboration, research and code: Gemini
 """
 
+# -  -  -  -  -  -  PHILOSOPHICAL ANCHOR / ANCRAGE PHILOSOPHIQUE -  -  -  -  -  -  - #
+# "The inclusion of these specific biological modules is not a stylistic choice,     #
+# but a mechanical necessity. Their presence is vital for the systemic function,     #
+# coherent learning, and the emergence of a truly grounded World Model."             #
+# -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - #
+
 # --- PERSONALITY HYPERPARAMETERS ---
 # --- HYPER-PARAMÈTRES DE PERSONNALITÉ (FR) ---
 AMYGDALA_SENSITIVITY = 1.0      # Amygdala Sensitivity Min: 0.1 (unperturbed) Max: 2.0 (hyper-reactive) / Sensibilité de l'amygdale 
