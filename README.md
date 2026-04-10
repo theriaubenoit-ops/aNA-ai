@@ -22,7 +22,7 @@
 ![Language](https://img.shields.io/badge/language-python--3.x-blue?style=for-the-badge)
 ![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)
 
-> [!IMPORTANT]
+> [!NOTE]
 > Follow the real-time evolution of **aNA’s neural architecture** and our journey toward a **100% consistent _AI_ persona**.
 > **Access the latest advancements at the _"Creation Lab"_ 👉🏻 _[innovation(.md)](https://github.com/theriaubenoit-ops/aNA-ai/blob/v5.2-beta/docs/innovation.md)_**
 
