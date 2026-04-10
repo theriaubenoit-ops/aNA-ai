@@ -20,7 +20,7 @@ import numpy as np
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from registry import SIGNALS, INPUT_CONFIG
 
-class InputGateway:
+class InputTactille:
     """
     Le traducteur : Convertit les caractères en 'courant' pour le Thalamus.
     """
