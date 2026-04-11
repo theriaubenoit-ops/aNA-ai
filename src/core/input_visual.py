@@ -24,9 +24,10 @@ from registry import ORGANS # Le secret de la réussite
 
 class VisualSensoryPayload:
     """Conteneur unifié pour le transport de données visuelles vers le lobe occipital."""
-    def __init__(self, raw_matrix, ratio=1, zoom_coords=None):
+    def __init__(self, intensity, raw_matrix, ratio=1, zoom_coords=None):
         self.timestamp = time.time()
         self.source = "OCCIPITAL_LOBE"
+        self.intensity = intensity # Stockage de l'intensité pour le Thalamic Hub
         self.ratio = ratio
         self.zoom_coords = zoom_coords # (x, y, w, h) si applicable
         self.signal_label = self.source # Pour la compatibilité avec le registre et l'hippocampe
@@ -57,8 +58,18 @@ class InputVisualGateway:
         self.specs = ORGANS.get("OCCIPITAL_LOBE", {})
         print(f"  [Input Visual] Gateway initialized using Registry specs.")
 
-    async def capture_image(self, matrix_data, ratio=1):
-        """Point d'entrée principal pour les fichiers images."""
-        # Création du Payload (le nerf optique numérique)
-        payload = VisualSensoryPayload(matrix_data, ratio=ratio)
+    async def capture_image(self, intensity,matrix_data, ratio=1):
+        """Point d'entrée principal pour les fichiers image auto-adaptatif."""
+        # 1. Calcul de l'intensité basé sur le contraste (variance)
+        # Un écran noir ou uniforme = intensité faible (0.1)
+        # Une image riche en détails = intensité forte (jusqu'à 1.0)
+        std_dev = np.std(matrix_data)
+        computed_intensity = min(1.0, max(0.1, std_dev / 128)) 
+
+        # 2. Création du Payload avec l'intensité calculée
+        payload = VisualSensoryPayload(
+            intensity=computed_intensity, 
+            raw_matrix=matrix_data, 
+            ratio=ratio
+        )
         return payload
