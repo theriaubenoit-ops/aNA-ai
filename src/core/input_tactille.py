@@ -49,10 +49,14 @@ class InputTactille:
         )
 
         payload = {
-            "nucleus": INPUT_CONFIG["DEFAULT_NUCLEUS"],
+            "origin": "input_tactile",
+            "nucleus": "VPL",
             "data": char,
-            "signal_label": signal_label, # Le fil conducteur pour l'Hippo
             "intensity": noisy_value,
+            # "nucleus": INPUT_CONFIG["DEFAULT_NUCLEUS"],
+            # "data": char,
+            # "signal_label": signal_label, # Le fil conducteur pour l'Hippo
+            # "intensity": noisy_value,
             "raw_ord": ord(char)
         }
 
