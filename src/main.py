@@ -143,11 +143,11 @@ async def main():
 
         # --- TEST DE PERCEPTION VISUELLE ---
         # print(f"[A1] Auditory perception (Stimulus: ...)...")
-        # print(f" └─ Thalamus ()       : {log_v['bpm']}")
+        # print(f" └─ Thalamus (BPM)       : {log_v['bpm']}")
 
         # --- TEST DE PERCEPTION TACTILE ---
-        print(f"[T1] Tactille perception (Stimulus: {char}', Unicode Wide)...")
-        print(f" └─ Thalamus          : {log_t}")
+        print(f"[T1] Tactille perception (Stimulus: '{char}', Unicode Wide)...")
+        print(f" └─ Thalamus ()       : {log_t}")
         print(f" └─ Cortex            : Recognition {cortical_results['recognition']:.2%}")
         print(f" └─ Feedback          : L6 Signal {cortical_results['l6_feedback']:.2f}")
         print(f" └─ Myelin            : {avg_myeline:.5f} (Increased conductivity)") # Nouveau !
