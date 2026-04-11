@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Input Gateway implementation for aNA v5.2
+Input Tactille Gateway implementation for aNA AI Project v5.2
 
-Communicates with: Input: External (Symbol) | Output: (-> Thalamus) (-> Cortical Columns)
+Communicates with: Input: External (Tactille) | Output: (-> Thalamus (VPL)) (-> Cortical Columns)
 
-This module serves as the interface between external symbolic inputs (like keyboard characters) and the internal processing units of the aNA architecture, specifically the Thalamus and Cortical Columns. It normalizes input data, adds biologically-inspired noise, and formats it according to the specifications in the registry.
+Description: This module serves as the interface between external symbolic inputs (like keyboard characters) and the internal processing units of the aNA architecture, specifically the Thalamus and Cortical Columns. It normalizes input data, adds biologically-inspired noise, and formats it according to the specifications in the registry.
 
 Architecture, concept and supervision: Benoit Theriault
 Collaboration, research and code: Gemini
