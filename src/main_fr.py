@@ -98,7 +98,8 @@ async def main():
             intensity=0.8, 
             matrix_data=raw_matrix, 
             ratio=0.25
-        )
+            )
+            # visual_payload = await visual_gateway.capture_image(test_matrix, ratio=1.0)
             visual_payload.source = current_img_name
         else:
             visual_payload = {"type": "visuel", "source": "aucun", "data": None}
@@ -113,11 +114,15 @@ async def main():
         # --- PHASE D : INTÉGRATION THALAMIQUE (Le Pulse Partagé) ---
         # aNA utilise maintenant le feedback L6 pour calculer le rythme
         # Le Thalamus reçoit les deux et influence le BPM
+        if not hasattr(visual_payload, 'intensity'):
+            visual_payload.intensity = 0.8  # Valeur par défaut si non calculée
         log_v = await thalamus.process_payload(visual_payload, l6_feedback=l6_signal)
         log_t = await thalamus.process_payload(tactile_payload, l6_feedback=l6_signal)
 
         # --- PHASE E : MISE À JOUR MÉTABOLIQUE ---
-        heart.update() # Le cœur bat maintenant selon la tension combinée
+        final_bpm = thalamus.current_bpm 
+        heart.update_frequency(final_bpm) # On synchronise le Pulse réel
+        # heart.update() # Le cœur bat maintenant selon la tension combinée
         
         # Mise à jour du monitoring
 
@@ -130,18 +135,23 @@ async def main():
         avg_myeline = visual_column.get_average_myelination()
         
         # --- MONITORING ---
+        print(f"\nCycle {cycle:02d}")
 
         # --- TEST DE PERCEPTION VISUELLE ---
-        print(f"\n[V1] Tentative de perception visuelle (stimulus): {visual_payload.source})...")
-        print(f" └─ Thalamus visuel : {log_v}")
+        print(f"[V1] Perception visuelle (stimulus: {visual_payload.source})...")
+        print(f" └─ Thalamus visuel : {log_v['bpm']}")
+
+        # --- TEST DE PERCEPTION VISUELLE ---
+        # print(f"[A1] Perception audio (Stimulus: ...)...")
+        # print(f" └─ Thalamus (BPM)       : {log_v['bpm']}")
 
         # --- TEST DE PERCEPTION TACTILE ---
-        print(f"\nCycle {cycle:02d} | Entrée: '{char}' (Unicode étendu)")
-        print(f" └─ Thalamus  : {log_t}")
-        print(f" └─ Cortex    : Reconnaissance {cortical_results['recognition']:.2%}")
-        print(f" └─ Retour    : L6 Signal {cortical_results['l6_feedback']:.2f}")
-        print(f" └─ Myéline   : {avg_myeline:.5f} (Conductivité accrue)") # Nouveau !
-        print(f" └─ Impulsion : {status['bpm']:.1f} BPM | Vitalité: {status['energy']:.2%}")        
+        print(f"[T1] Perception tactille (Stimulus: '{char}', Unicode étendu)...")
+        print(f" └─ Thalamus ()       : {log_t}")
+        print(f" └─ Cortex            : Reconnaissance {cortical_results['recognition']:.2%}")
+        print(f" └─ Retour            : L6 Signal {cortical_results['l6_feedback']:.2f}")
+        print(f" └─ Myéline           : {avg_myeline:.5f} (Conductivité accrue)") # Nouveau !
+        print(f" └─ Impulsion         : {status['bpm']:.1f} BPM | Vitalité: {status['energy']:.2%}")        
         await asyncio.sleep(0.1)
 
     print("\n--- ✅ Organisme stabilisé et fonctionnel ---")
