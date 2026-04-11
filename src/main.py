@@ -35,7 +35,7 @@ def create_ascii_header():
     print("▒░░░░░▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▒░         ░░▒▒▒░▒▒▒▒▓▓▓▓▓▓▓▒▒░░  ░▒▒▒▓▒▒▒▓▒▓▒▓▒░░░░░░░▒▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░░░░░░░▒▓")
     print("░▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓░                   ░░ ▒▒▓▒░▒▓▓▓░▒▒░░           ░▒░░░▒▓▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▓▓")
     print("▒▒▓▓▓▓▓▓▒▒▒░░                           ░▓▓▒░░▒▓▓░ _    _    _ ░▒░░▒▓▒▓▓▓▓▓▓▓▓▓▓▒░░░░░░░░░▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓")
-    print("▓▓▓▓▓▒░AI inspired by natural plasticity ░░   ░░░  a    N    A  ▒▓▒▓▒▒▒▓░Autonomous Neural Architecture v5.1 ░░▒▒▓")
+    print("▓▓▓▓▓▒░AI inspired by natural plasticity ░░   ░░░  a    N    A  ▒▓▒▓▒▒▒▓░Autonomous Neural Architecture v5.2   ░▒▓")
     print("░                                                  ‾    ‾    ‾ ░▓▒▓░░▒▓░\n\n")
 
 async def main():
@@ -135,18 +135,23 @@ async def main():
         avg_myeline = visual_column.get_average_myelination()
         
         # --- MONITORING ---
+        print(f"\nCycle {cycle:02d}")
 
         # --- TEST DE PERCEPTION VISUELLE ---
-        print(f"\n[V1] Attempting visual perception (Stimulus: {visual_payload.source})...")
-        print(f" └─ Visual Thalamus : {log_v['bpm']}")
+        print(f"[V1] Visual perception (Stimulus: {visual_payload.source})...")
+        print(f" └─ Thalamus (BPM)    : {log_v['bpm']}")
+
+        # --- TEST DE PERCEPTION VISUELLE ---
+        # print(f"[A1] Auditory perception (Stimulus: ...)...")
+        # print(f" └─ Thalamus ()       : {log_v['bpm']}")
 
         # --- TEST DE PERCEPTION TACTILE ---
-        print(f"\nCycle {cycle:02d} | Input: '{char}' (Unicode Wide)")
-        print(f" └─ Thalamus : {log_t}")
-        print(f" └─ Cortex   : Recognition {cortical_results['recognition']:.2%}")
-        print(f" └─ Feedback : L6 Signal {cortical_results['l6_feedback']:.2f}")
-        print(f" └─ Myelin   : {avg_myeline:.5f} (Increased conductivity)") # Nouveau !
-        print(f" └─ Pulse    : {status['bpm']:.1f} BPM | Vitality: {status['energy']:.2%}")        
+        print(f"[T1] Tactille perception (Stimulus: {char}', Unicode Wide)...")
+        print(f" └─ Thalamus          : {log_t}")
+        print(f" └─ Cortex            : Recognition {cortical_results['recognition']:.2%}")
+        print(f" └─ Feedback          : L6 Signal {cortical_results['l6_feedback']:.2f}")
+        print(f" └─ Myelin            : {avg_myeline:.5f} (Increased conductivity)") # Nouveau !
+        print(f" └─ Pulse             : {status['bpm']:.1f} BPM | Vitality: {status['energy']:.2%}")        
         await asyncio.sleep(0.1)
 
     print("\n--- ✅ Stabilized and functional organism ---")
