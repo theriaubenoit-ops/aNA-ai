@@ -58,7 +58,7 @@ class InputVisualGateway:
         self.specs = ORGANS.get("OCCIPITAL_LOBE", {})
         print(f"  [Input Visual] Gateway initialized using Registry specs.")
 
-    async def capture_image(self, intensity,matrix_data, ratio=1):
+    async def capture_image(self, intensity, matrix_data, ratio=1):
         """Point d'entrée principal pour les fichiers image auto-adaptatif."""
         # 1. Calcul de l'intensité basé sur le contraste (variance)
         # Un écran noir ou uniforme = intensité faible (0.1)
