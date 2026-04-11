@@ -1,16 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Input Visual Gateway for aNA v5.2 (Beta)
-Specialized in Matrix processing, Ratios and Foveal Zoom.
+Input Visual Gateway implementation (Specialized in Matrix processing, Ratios and Foveal Zoom) for aNA AI Project v5.2
+
+Communicates with: Input: External (Visual) | Output: (-> Thalamus (CGL)) (-> Occipital Lobe (V1))
 
 Description: This module captures visual data (like images), processes it according to specified ratios (1:4 for wide view, 1:1 for normal, 2:1 for zoom), and prepares a unified payload for the Occipital Lobe. It simulates the biological process of visual perception, including foveal zoom and peripheral vision.
 
 Features: Ratio-based processing, Foveal zoom simulation, Unified payload for the Hippocampus, Conformity with the central Registry for organ specifications.
-
-Communicates with: Input: External (Tactile, Visual and Sound) | Output: (-> Occipital Lobe)
-
-Respects: src/registry.py for organ mapping.
 
 Architecture, concept and supervision: Benoit Theriault
 Collaboration, research and code: Gemini
@@ -45,7 +42,7 @@ class VisualSensoryPayload:
         return getattr(self, key, default)
 
     def _apply_sampling(self, matrix, ratio):
-        """Applique la logique de ratio (1:3, 1:1, 2:1) sans casser le système."""
+        """Applique la logique de ratio (1:4, 1:1, 2:1) sans casser le système."""
         if ratio == 1:
             return matrix
         elif ratio > 1: # Upsampling (Zoom) - Simulation bio-élégante
