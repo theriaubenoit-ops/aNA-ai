@@ -238,11 +238,12 @@ Processing Hierarchy:
 │   │   │   └── limbic_system.py        # ✅ Limbic system
 │   │   └── subcortical
 │   │       ├── cerebellum.py           # Timing Engine & Output Calibration
+│   │       ├── thalamic_hub.py         # 🚧 Thalamic Hub
 │   │       └── thalamus.py             # Enhanced Thalamus implementation
 │   ├── core/                           # Core neural components
 │   │   ├── input_tactile.py            # ✅ Input tactile
 │   │   ├── input_visual.py             # ✅ Input visual
-│   │   ├── input_auditory.py           # 🚧 Input audio
+│   │   ├── input_auditory.py           # 🚧 Input auditory
 │   │   ├── output_gateway.py           # 🚧 Input gateway
 │   │   └── pulse.py                    # Core Pacemaker (Pulse)
 │   ├── gui/                            # Web-based interface
@@ -286,4 +287,4 @@ Processing Hierarchy:
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-10_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-11_
