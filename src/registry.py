@@ -51,7 +51,7 @@ ORGANS = {
         "NEURONS_PER_COLUMN": 1000, # Each cortical column contains neurons, which is a simplified representation of the complex microcircuitry found in the biological cortex.
         "DESCRIPTION": "Hierarchical structure enabling real-time internal world representation."
     },
-    "SUBKORTICAL_SYSTEMS": { # 
+    "SUBKORTICAL_SYSTEMS": { 
         "LIMBIC_SYSTEM": {
             "AMYGDALA": {"FUNCTION": "Emotional Pulse & Threat Assessment"},
             "HIPPOCAMPUS": "Initialized via separate registry"
@@ -70,6 +70,7 @@ ORGANS = {
                 "STREAMS": {
                     "TACTILE": "Processed via Unicode Wide mapping (input_tactile.py)",
                     "VISUAL": "Processed via Occipital Lobe mapping (input_visual.py)"
+                    # "AUDITORY": "Processed via Temporal Lobe mapping (input_auditory.py)"
                 }
             },
             "INTERNEURON": "Local processing and inhibitory regulation (GABAergic simulation).",
@@ -93,5 +94,5 @@ SIGNALS = {
 # -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - #
 #    “For every complex problem, there is a solution that is simple, neat, and wrong.”     #
 #    « À chaque problème complexe correspond une solution simple, élégante et fausse. »    #           
-#                                                                      — H.L. Mencken      #
+#                                                                     — H.L. Mencken       #
 # -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - #
