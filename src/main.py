@@ -98,7 +98,8 @@ async def main():
             intensity=0.8, 
             matrix_data=raw_matrix, 
             ratio=0.25
-        )
+            )
+            # visual_payload = await visual_gateway.capture_image(test_matrix, ratio=1.0)
             visual_payload.source = current_img_name
         else:
             visual_payload = {"type": "visual", "source": "None", "data": None}
@@ -113,11 +114,15 @@ async def main():
         # --- PHASE D : INTÉGRATION THALAMIQUE (Le Pulse Partagé) ---
         # aNA utilise maintenant le feedback L6 pour calculer le rythme
         # Le Thalamus reçoit les deux et influence le BPM
+        if not hasattr(visual_payload, 'intensity'):
+            visual_payload.intensity = 0.8  # Valeur par défaut si non calculée
         log_v = await thalamus.process_payload(visual_payload, l6_feedback=l6_signal)
         log_t = await thalamus.process_payload(tactile_payload, l6_feedback=l6_signal)
 
         # --- PHASE E : MISE À JOUR MÉTABOLIQUE ---
-        heart.update() # Le cœur bat maintenant selon la tension combinée
+        final_bpm = thalamus.current_bpm 
+        heart.update_frequency(final_bpm) # On synchronise le Pulse réel
+        # heart.update() # Le cœur bat maintenant selon la tension combinée
         
         # Mise à jour du monitoring
 
@@ -133,7 +138,7 @@ async def main():
 
         # --- TEST DE PERCEPTION VISUELLE ---
         print(f"\n[V1] Attempting visual perception (Stimulus: {visual_payload.source})...")
-        print(f" └─ Visual Thalamus : {log_v}")
+        print(f" └─ Visual Thalamus : {log_v['bpm']}")
 
         # --- TEST DE PERCEPTION TACTILE ---
         print(f"\nCycle {cycle:02d} | Input: '{char}' (Unicode Wide)")
