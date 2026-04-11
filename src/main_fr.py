@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Projet aNA - v5.2
-
-Module : Intégration principale
+Project aNA AI v5.2- Intégration principale
 
 Description : Ce processus central orchestre la boucle bio-numérique complète. Il synchronise le flux thalamique, les cascades corticales L4→L2/3→L6 et la myélinisation dynamique. L’objectif est de simuler un métabolisme stabilisé où la reconnaissance module le pouls (BPM) et la résistance aux neurotransmetteurs en temps réel.
 Fonctionnalités : Rétroaction thalamo-corticale, homéostasie, croissance de la myéline.
@@ -85,6 +83,7 @@ async def main():
         test_dir = os.path.join(base_path, "docs", "assets", "occipital_input_test_64x64")
 
         # 1. Récupérer la liste de toutes les images valides
+        # all_images = ["../docs/assets/occipital_input_test_64x64/occipital_input_test_64x64_01_English.png"] # test 1 seule image
         all_images = sorted([img for img in os.listdir(test_dir) if img.lower().endswith(('.png', '.jpg', '.jpeg'))])
 
         # Initialisation par défaut (Sécurité)
@@ -95,7 +94,11 @@ async def main():
             
             # 3. Capture réelle par la gateway
             raw_matrix = np.random.rand(64, 64) 
-            visual_payload = await visual_gateway.capture_image(raw_matrix, ratio=0.25)
+            visual_payload = await visual_gateway.capture_image(
+            intensity=0.8, 
+            matrix_data=raw_matrix, 
+            ratio=0.25
+        )
             visual_payload.source = current_img_name
         else:
             visual_payload = {"type": "visuel", "source": "aucun", "data": None}
@@ -108,16 +111,13 @@ async def main():
         }
 
         # --- PHASE D : INTÉGRATION THALAMIQUE (Le Pulse Partagé) ---
+        # aNA utilise maintenant le feedback L6 pour calculer le rythme
         # Le Thalamus reçoit les deux et influence le BPM
         log_v = await thalamus.process_payload(visual_payload, l6_feedback=l6_signal)
         log_t = await thalamus.process_payload(tactile_payload, l6_feedback=l6_signal)
 
         # --- PHASE E : MISE À JOUR MÉTABOLIQUE ---
         heart.update() # Le cœur bat maintenant selon la tension combinée
-
-        # --- PHASE D : TRAITEMENT THALAMIQUE (Régulation du BPM) ---
-        # aNA utilise maintenant le feedback L6 pour calculer le rythme
-        log_thalamus = await thalamus.process_payload(payload, l6_feedback=l6_signal)
         
         # Mise à jour du monitoring
 
