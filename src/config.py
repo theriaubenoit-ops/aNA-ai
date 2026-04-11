@@ -4,23 +4,23 @@
 aNA v5.2 - Configuration Module (Temperament)
 Description: Centralization of dynamic thresholds for AI customization. This module defines the adjustable parameters that shape the AI's temperament and responsiveness. By modifying these values, users can create different personality profiles, from calm to anxious, while maintaining the underlying architecture's stability. These parameters influence how the AI reacts to stimuli, manages energy, and processes information, allowing for a personalized experience without compromising the system's integrity.
 
-aNA v5.2 - Configuration Module (Le Tempérament) (FR)
+aNA v5.2 - Configuration Module (Le temperament) (FR)
 Description : Centralisation des seuils dynamiques pour la personnalisation de l'IA. Ce module définit les paramètres ajustables qui déterminent le tempérament et la réactivité de l'IA. En modifiant ces valeurs, les utilisateurs peuvent créer différents profils de personnalité, du calme à l'anxiété, tout en préservant la stabilité de l'architecture sous-jacente. Ces paramètres influencent la manière dont l'IA réagit aux stimuli, gère son énergie et traite l'information, permettant ainsi une expérience personnalisée sans compromettre l'intégrité du système.
 
 Architecture, concept and supervision: Benoit Theriault
 Collaboration, research and code: Gemini
 """
 
-# -  -  -  -  -  ARCHITECTURAL MANIFESTO / MANIFESTE ARCHITECTURAL  -  -  -  -  -  - #
-# "The inclusion of these specific biological modules is not a stylistic choice,     #
-# but a mechanical necessity. Their presence is vital for systemic function,         #
-# coherent learning, and the emergence of a truly grounded World Model."             #
-#                                                                                    #
-# "L'inclusion de ces modules biologiques précis n'est pas un choix esthétique,      #
-# mais une nécessité mécanique. Leur présence est vitale au fonctionnement           #
-# systémique, à l'apprentissage cohérent et à l'émergence d'un Modèle du Monde       #
-# (World Model) réellement ancré."                                                   #
-# -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - #
+# -  -  -  -  -  ARCHITECTURAL MANIFESTO / MANIFESTE ARCHITECTURAL  -  -  -  -  -  #
+#  "The inclusion of these specific biological modules is not a stylistic choice,  #
+#  but a mechanical necessity. Their presence is vital for systemic function,      #
+#  coherent learning, and the emergence of a truly grounded World Model."          #
+#                                                                                  #
+# "L'inclusion de ces modules biologiques précis n'est pas un choix esthétique,    #
+#  mais une nécessité mécanique. Leur présence est vitale au fonctionnement        #
+#  systémique, à l'apprentissage cohérent et à l'émergence d'un Modèle du Monde    #
+#  (World Model) réellement ancré."                                                #
+# -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  #
 
 # --- PERSONALITY HYPERPARAMETERS / HYPER-PARAMÈTRES DE PERSONNALITÉ (FR) ---
 AMYGDALA_SENSITIVITY = 1.0      # Amygdala Sensitivity Min: 0.1 (unperturbed) Max: 2.0 (hyper-reactive) / Sensibilité de l'amygdale 
@@ -87,5 +87,5 @@ def get_config():
 # -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - #
 #    “For every complex problem, there is a solution that is simple, neat, and wrong.”     #
 #    « À chaque problème complexe correspond une solution simple, élégante et fausse. »    #           
-#                                                                      — H.L. Mencken      #
+#                                                                     — H.L. Mencken       #
 # -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - #
