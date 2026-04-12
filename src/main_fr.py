@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Project aNA AI v5.2- Intégration principale
+Project aNA AI v5.2 - Intégration principale
 
 Description : Ce processus central orchestre la boucle bio-numérique complète. Il synchronise le flux thalamique, les cascades corticales L4→L2/3→L6 et la myélinisation dynamique. L’objectif est de simuler un métabolisme stabilisé où la reconnaissance module le pouls (BPM) et la résistance aux neurotransmetteurs en temps réel.
 Fonctionnalités : Rétroaction thalamo-corticale, homéostasie, croissance de la myéline.
@@ -16,9 +16,10 @@ import numpy as np
 # Gestion du path pour les imports locaux
 sys.path.append(os.path.abspath(os.path.dirname(__file__)))
 from config import get_config  # Ajoute l'import en haut du fichier
+from core.input_tactile import InputTactileGateway 
+from core.input_auditory import InputAuditoryGateway
 from core.input_visual import InputVisualGateway, VisualSensoryPayload
 from core.pulse import Pulse
-from core.input_tactille import InputTactille
 from anatomy.subcortical.thalamus import Thalamus
 from anatomy.limbic.hippocampus import Hippocampus
 from anatomy.cortical.cortical_column import SimplifiedCorticalColumn
@@ -46,10 +47,10 @@ async def main():
     neurom_core = Neuromodulator() 
     hippo = Hippocampus(config=config, neuromodulator_core=neurom_core)
     heart = Pulse()
-    gateway = InputTactille()
-    # Nouvelle voie visuelle
+    tactile_gateway = InputTactileGateway()
+    auditory_gateway = InputAuditoryGateway()
     visual_gateway = InputVisualGateway() 
-
+     
     # Simulation d'une image test (ex: 64x64)
     test_image = np.random.rand(64, 64)
 
@@ -71,7 +72,7 @@ async def main():
 
     for cycle, char in enumerate(test_sequence, 1):
         # --- PHASE A : TRANSDUCTION ---
-        payload = gateway.process_symbol(char)
+        payload = tactile_gateway.process_symbol(char)
         
         # --- PHASE B : CASCADE CORTICALE (L4 -> L2/3 -> L6) ---
         # On interroge d'abord le cortex pour obtenir le feedback L6
@@ -94,15 +95,15 @@ async def main():
             
             # 3. Capture réelle par la gateway
             raw_matrix = np.random.rand(64, 64) 
-            visual_payload = await visual_gateway.capture_image(
-            intensity=0.8, 
-            matrix_data=raw_matrix, 
-            ratio=0.25
-            )
-            # visual_payload = await visual_gateway.capture_image(test_matrix, ratio=1.0)
+            visual_payload = await visual_gateway.capture_image(matrix_data=raw_matrix, ratio=0.25)
             visual_payload.source = current_img_name
         else:
-            visual_payload = {"type": "visuel", "source": "aucun", "data": None}
+            visual_payload = {"type": "visual", "source": "None", "data": None}
+
+        # Auditory
+        current_sound_name = f"stimulus_audio_{cycle:02d}.wav"
+        auditory_payload = await auditory_gateway.capture_sound(audio_data=raw_matrix, ratio=0.25)
+        auditory_payload.source = current_sound_name
 
         # 2. Le Tactile (on crée un petit dictionnaire ou objet compatible)
         tactile_payload = {
@@ -110,6 +111,7 @@ async def main():
             "data": char,
             "signal_label": "UNICODE_WIDE"
         }
+        tactile_signal = tactile_gateway.process_symbol(char=char)
 
         # --- PHASE D : INTÉGRATION THALAMIQUE (Le Pulse Partagé) ---
         # aNA utilise maintenant le feedback L6 pour calculer le rythme
@@ -117,6 +119,7 @@ async def main():
         if not hasattr(visual_payload, 'intensity'):
             visual_payload.intensity = 0.8  # Valeur par défaut si non calculée
         log_v = await thalamus.process_payload(visual_payload, l6_feedback=l6_signal)
+        log_a = await thalamus.process_payload(auditory_payload, l6_feedback=l6_signal)
         log_t = await thalamus.process_payload(tactile_payload, l6_feedback=l6_signal)
 
         # --- PHASE E : MISE À JOUR MÉTABOLIQUE ---
@@ -134,25 +137,33 @@ async def main():
         # En fonction de la reconnaissance, on ajuste la myéline pour accélérer les futurs
         avg_myeline = visual_column.get_average_myelination()
         
-        # --- MONITORING ---
+        # --- PHASE G : CALCUL DE LA LATENCE SYNAPTIQUE (Nouveau) ---
+                # Plus l'organisme 'apprend' (myéline), plus l'influx circule vite.
+        # On passe d'un repos de 0.1s à un minimum de 0.01s pour les zones expertes.
+        base_delay = 0.1
+        synaptic_latency = max(0.01, base_delay * (1.0 - avg_myeline))
+
+        # --- MONITORING FINAL v5.2 ---
         print(f"\nCycle {cycle:02d}")
 
-        # --- TEST DE PERCEPTION VISUELLE ---
-        print(f"[V1] Perception visuelle (stimulus: {visual_payload.source})...")
-        print(f" └─ Thalamus visuel : {log_v['bpm']}")
+        # Visuel (CGL : Corps Genouillé Latéral)
+        print(f"[V1] Perception visuelle (Stimulus: {visual_payload.source})...")
+        print(f" └─ Thalamus (CGL)         : BPM {log_v['bpm']:.1f} | Gain {log_v.get('thalamic_gain', 0):.2f}")
 
-        # --- TEST DE PERCEPTION VISUELLE ---
-        # print(f"[A1] Perception audio (Stimulus: ...)...")
-        # print(f" └─ Thalamus (BPM)       : {log_v['bpm']}")
+        # Auditif (CGM : Corps Genouillé Médian)
+        print(f"[A1] Perception auditive (Stimulus: {auditory_payload.source})...")
+        print(f" └─ Thalamus (CGM)         : BPM {log_v['bpm']:.1f} | Gain {log_v.get('thalamic_gain', 0):.2f}")
 
-        # --- TEST DE PERCEPTION TACTILE ---
-        print(f"[T1] Perception tactille (Stimulus: '{char}', Unicode étendu)...")
-        print(f" └─ Thalamus ()       : {log_t}")
-        print(f" └─ Cortex            : Reconnaissance {cortical_results['recognition']:.2%}")
-        print(f" └─ Retour            : L6 Signal {cortical_results['l6_feedback']:.2f}")
-        print(f" └─ Myéline           : {avg_myeline:.5f} (Conductivité accrue)") # Nouveau !
-        print(f" └─ Impulsion         : {status['bpm']:.1f} BPM | Vitalité: {status['energy']:.2%}")        
-        await asyncio.sleep(0.1)
+        # Tactile (VPL : Noyau Ventral Postéro-Latéral)
+        print(f"[T1] Entrée somatosensorielle (Stimulus: '{char}', Unicode étendu)...")
+        print(f" └─ Thalamus (VPL)         : BPM {log_t['bpm']:.1f} | Gain {log_t['thalamic_gain']:.2f}")
+        print(f" └─ Cortex                 : Correspondance de motif {cortical_results['recognition']:.2%}")
+        print(f" └─ Rétroaction            : Signal L6 {cortical_results['l6_feedback']:.2f}")
+        print(f" └─ Myéline                : {avg_myeline:.5f} (Conductivité accrue)")
+        print(f" └─ Vitesse synaptique     : {1.0 + avg_myeline:.2f}x (Latence: {synaptic_latency:.4f}s)")
+        print(f" └─ Homéostasie métabolique: {status['bpm']:.1f} BPM | Vitalité: {status['energy']:.2%}")
+
+        await asyncio.sleep(synaptic_latency)
 
     print("\n--- ✅ Organisme stabilisé et fonctionnel ---")
 
