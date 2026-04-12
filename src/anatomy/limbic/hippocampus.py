@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Hippocampus implementation for aNA v5.1
+Hippocampus implementation for aNA AI Project v5.2
 
 Communicates with: Input: (<- Cortex / Amygdala) | Output: (-> Thalamus) (-> Cortical Storage)
 
@@ -41,7 +41,7 @@ class Hippocampus:
         self.sequence_map = {}  # Pour prédire : 'H' -> 'e'
         self.short_term_memory = {}
         # print("  [Hippocampus] v5.1 : Zones DG, CA1-CA4 initialized.")
-        print("  [Hippocampus] v5.2 : Hebbian sequences & Unicode Wide enabled.")
+        # print("  [Hippocampus] v5.2 : Hebbian sequences & Unicode Wide enabled.")
 
     def _get_hash(self, signal_data):
         """Utilitaire pour rendre les vecteurs NumPy hachables."""
