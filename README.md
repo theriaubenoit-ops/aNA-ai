@@ -1,4 +1,4 @@
-🚀 Quick links: [License](/LICENSE), ReadMe, [Installation](/docs/installation.md), [Contributing](/CONTRIBUTING.md), [Innovation-Lab](/docs/innovation.md), [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), [Architecture](/docs/architecture.md)
+🚀 Quick links: [License](/LICENSE), ReadMe, [Installation](/docs/installation.md), [Contributing](/CONTRIBUTING.md), [Innovation-Lab](/docs/innovation-lab.md), [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), [Architecture](/docs/architecture.md)
 
 ![ ](/docs/assets/spacer16x16.png)
 
@@ -24,7 +24,7 @@
 
 > [!NOTE]
 > Follow the real-time evolution of **aNA’s neural architecture** and our journey toward a **100% consistent _AI_ persona**.
-> **Access the latest advancements at the _"Creation Lab"_ 👉🏻 _[innovation(.md)](https://github.com/theriaubenoit-ops/aNA-ai/blob/v5.2-beta/docs/innovation.md)_**
+> **Access the latest advancements at the _"Creation Lab"_ 👉🏻 _[innovation-lab(.md)](https://github.com/theriaubenoit-ops/aNA-ai/blob/v5.2-beta/docs/innovation-lab.md)_**
 
 ![ ](/docs/assets/spacer16x16.png)
 
@@ -135,4 +135,4 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
 
 ![Downloads](https://img.shields.io/github/downloads/theriaubenoit-ops/aNA-ai/total?style=for-the-badge&color=181c1f)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-09_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-07_
