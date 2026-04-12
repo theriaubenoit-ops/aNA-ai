@@ -22,6 +22,27 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from registry import ORGANS # Le secret de la réussite
 
+class InputVisualGateway:
+    def __init__(self):
+        # On valide la conformité avec le registre central
+        self.specs = ORGANS.get("OCCIPITAL_LOBE", {})
+        # print("  [Input Visual] Gateway initialized")
+        
+    async def capture_image(self, matrix_data, ratio=1):
+        """Point d'entrée principal pour les fichiers image auto-adaptatif."""
+        # L'organe calcule lui-même son intensité (Transduction)
+        # Un écran noir ou uniforme = intensité faible (0.1)
+        # Une image riche en détails = intensité forte (jusqu'à 1.0)
+        std_dev = np.std(matrix_data)
+        computed_intensity = min(1.0, max(0.1, std_dev / 128)) 
+
+        # 2. Création du Payload avec l'intensité calculée
+        return VisualSensoryPayload(
+            intensity=computed_intensity, 
+            raw_matrix=matrix_data, 
+            ratio=ratio
+        )
+
 class VisualSensoryPayload:
     """Conteneur unifié pour le transport de données visuelles vers le lobe occipital."""
     def __init__(self, intensity, raw_matrix, ratio=1, zoom_coords=None):
@@ -52,24 +73,3 @@ class VisualSensoryPayload:
             step = int(1/ratio)
             return matrix[::step, ::step]
 
-class InputVisualGateway:
-    def __init__(self):
-        # On valide la conformité avec le registre central
-        self.specs = ORGANS.get("OCCIPITAL_LOBE", {})
-        print(f"  [Input Visual] Gateway initialized using Registry specs.")
-
-    async def capture_image(self, intensity, matrix_data, ratio=1):
-        """Point d'entrée principal pour les fichiers image auto-adaptatif."""
-        # 1. Calcul de l'intensité basé sur le contraste (variance)
-        # Un écran noir ou uniforme = intensité faible (0.1)
-        # Une image riche en détails = intensité forte (jusqu'à 1.0)
-        std_dev = np.std(matrix_data)
-        computed_intensity = min(1.0, max(0.1, std_dev / 128)) 
-
-        # 2. Création du Payload avec l'intensité calculée
-        payload = VisualSensoryPayload(
-            intensity=computed_intensity, 
-            raw_matrix=matrix_data, 
-            ratio=ratio
-        )
-        return payload
