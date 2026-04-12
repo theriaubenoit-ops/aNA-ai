@@ -69,8 +69,8 @@ ORGANS = {
                 "DESCRIPTION": "Transduction of physical reality into neural signals",
                 "STREAMS": {
                     "TACTILE": "Processed via Unicode Wide mapping (input_tactile.py)",
-                    "VISUAL": "Processed via Occipital Lobe mapping (input_visual.py)"
-                    # "AUDITORY": "Processed via Temporal Lobe mapping (input_auditory.py)"
+                    "VISUAL": "Processed via Occipital Lobe mapping (input_visual.py)",
+                    "AUDITORY": "Processed via Temporal Lobe mapping (input_auditory.py)"
                 }
             },
             "INTERNEURON": "Local processing and inhibitory regulation (GABAergic simulation).",
