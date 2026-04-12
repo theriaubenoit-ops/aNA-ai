@@ -22,6 +22,8 @@
 
 We are building an _Autonomous Neural Architecture_ that reflects biological principles rather than statistical shortcuts. If you wish to engage with this project, we view you not as a _"contributor"_ but as a research partner/observer.
 
+![ ](/docs/assets/spacer16x16.png)
+
 ### How to engage
 
 **Peer Review & critique:** The most valuable input is the challenge. If you see a logical flaw in our modeling of a _cortical layer_ or a _neuromodulatory_ pathway, point it out. Precision is our primary goal.
@@ -31,6 +33,8 @@ We are building an _Autonomous Neural Architecture_ that reflects biological pri
 **Experimental validation:** If you implement a new feature _(a new nucleus, a refined synapse)_, ensure it is backed by biological rationale. We favor "why it works biologically" over _"it makes the model faster"_.
 
 **Documentation consistency:** Any change must update the relevant documentation. An undocumented feature is, for our research purposes, a non-existent one.
+
+![ ](/docs/assets/spacer16x16.png)
 
 ### Our shared ethos
 
@@ -123,11 +127,19 @@ def test_integration():
 
 # 💡 Future horizons: The potential of ✴️*aNA* AI
 
-The **aNA** AI project is more than just a _codebase_; it is a _sandbox_ for exploration at the intersection of _biology_ and _computation_. By contributing to this project, you are helping to unlock several key areas of development:
+The **aNA** AI project is _a leap toward the future of organic computation_. By aligning with _biological evolution_, we _unlock_ several strategic frontiers:
 
-**Educational Toolset:** **aNA** serves as a living laboratory for teaching _neurosciences_ and _AI_. By visualizing how _neural cascades_ respond to stimuli, it makes complex biological concepts tangible and interactive.
+**Bio-Semantic Cryptography _(Unrivaled Security)_: aNA** introduces a paradigm where learning is a unique _"key."_ As each instance develops its own _synaptic paths_ and _myelination_, the _data_ within the _[neocortex(.py)](/src/anatomy/cortical/neocortex.py)_ becomes a stream of variable values. This is intrinsic protection through biological complexity: only the instance that created the trace possesses the neural configuration to interpret it.
 
-**Cognitive Research Platform:** As an open-source framework, **aNA** provides a baseline for researchers to test hypotheses in _cognitive science_, allowing for the simulation of _neural dynamics_ under various behavioral conditions.
+**Cognitive Modeling & Mental Health:** By faithfully simulating components like the [Amygdala(.py)](/src/anatomy/limbic/amygdala.py) for stress regulation or the [Thalamus(.py)](/src/anatomy/subcortical/thalamus.py) for selective attention, **aNA** serves as a platform for clinical neuroscience. It allows researchers to model complex behaviors, such as exhaustion reactions via _ATP_ or the persistence of _"Acid Traces"_ in the _CA4_, offering a digital laboratory for human cognitive resilience.
+
+**The Standard for Next-Gen Organic AI:** Moving from a _"Web of Data"_ to a _"Cortex of Values,"_ this project sets the stage for an AI that doesn't just respond, but feels and adapts. We invite _academic partners_ to explore an _artificial intelligence_ that respects the laws of evolution and _energy efficiency (targeted plasticity)_ rather than _algorithmic brute force_.
+
+The **aNA** AI project is more than just a _codebase_; it is a _sandbox_ for exploration at the intersection of _biology_ and _computation_. By contributing to this project, you are helping to _unlock_ several key areas of development:
+
+**Educational Toolset: aNA** serves as a living laboratory for teaching _neurosciences_ and _AI_. By visualizing how _neural cascades_ respond to _stimuli_, it makes _complex biological concepts tangible_ and _interactive_.
+
+**Cognitive Research Platform:** As an _open-source framework (See [License](/LICENSE))_, **aNA** provides a baseline for researchers to test hypotheses in _cognitive science_, allowing for the simulation of _neural dynamics_ under various behavioral conditions.
 
 **Digital Artistic Expression:** The system's inherent _"life-like"_ data outputs provide a unique aesthetic foundation for _digital art_, where neural states can be translated into stunning, real-time visual experiences.
 
@@ -137,4 +149,4 @@ The **aNA** AI project is more than just a _codebase_; it is a _sandbox_ for exp
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-07_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-12_
