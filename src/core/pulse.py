@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Pulse implementation for aNA v5.1
+Pulse implementation for aNA v5.2
 
 Communicates with: Input: (<- Thalamus) (<- Amygdala) | Output: (-> Global Metabolism / BPM)
 
@@ -16,16 +16,21 @@ import sys
 import os
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
-from src.registry import METABOLISM
+# from src.registry import METABOLISM
+from src.config import get_config
+from src.registry import ORGANS
 
 class Pulse:
-    def __init__(self, bpm=120.0):
-        self.bpm = bpm
+    def __init__(self, bpm=None):
+        config = get_config()
+        self.bpm = bpm if bpm is not None else config["BASE_BPM"]
         self.hz = self.bpm / 60.0 
-        self.last_time = time.time() 
-        self.atp = 1.0             
-        self.energy = 1.0           
-        self.dopamine = 0.1         
+        self.last_time = time.time()             
+        
+        # Variables vitales pour compute_dynamics()
+        self.atp = 1.0           # L'énergie réelle
+        self.energy = 1.0        # Doublon pour compatibilité get_status()
+        self.dopamine = 0.1      
         self.is_refractory = False
 
     def get_system_strain(self) -> float:
@@ -35,21 +40,18 @@ class Pulse:
         """
         return 1.0 - self.atp
 
-    def update_metabolism(self, dt: float):
-        # Consommation existante
-        self.atp = max(0.0, self.atp - (0.01 * dt))
-    
-        # Nouveau : Si on est en mode 'Refractory' (fatigue intense), 
-        # le système doit ralentir drastiquement pour récupérer.
+    def update_metabolism(self, dt):
+        config = get_config()
+        
         if self.is_refractory:
-            # Recharge métabolique (5x plus rapide que la consommation)
-            self.atp = min(1.0, self.atp + (0.05 * dt))
-            
-            # Seuil de réveil : une fois à 80% d'énergie
-            if self.atp > 0.8:
+            # Utilise RECOVERY_RATE (0.05) au lieu de l'ancien METABOLISM
+            self.atp = min(1.0, self.atp + (config["RECOVERY_RATE"] * dt))
+            if self.atp >= config["WAKE_UP_THRESHOLD"]:
                 self.is_refractory = False
-                self.bpm = 110.0 # Rythme de base calme
-                print("  [Pulse] 🌅 aNA wakes up. Energy restored.")
+        else:
+            # Consommation et vérification du seuil critique (0.20)
+            if self.atp < config["ATP_CRITICAL_THRESHOLD"]:
+                self.is_refractory = True
             
     def recover_energy(self, rest_quality: float):
         """
@@ -65,15 +67,9 @@ class Pulse:
         self.bpm = max(40.0, min(220.0, new_bpm))
         self.hz = self.bpm / 60.0  # Crucial pour la ligne 59 de update()
         self.period = 1.0 / self.hz if self.hz > 0 else 1.0
-        # self.last_time = time.time() # Optionnel selon ta gestion du dt
-
-        # --- LIGNE SUPPRIMÉE ---
-        # print(f"  [Pulse] New BPM: {self.bpm:.2f}")
         
     def update(self):
         """Méthode appelée dans main.py pour simuler le battement."""
-        # Ton code actuel à la ligne 59 utilise METABOLISM["HEART_BASE_HZ"]
-        # Assure-toi que self.hz est bien à jour ici
         self.hz = self.bpm / 60.0
         
     def compute_dynamics(self) -> float:

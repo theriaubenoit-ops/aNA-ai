@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Neuromodulator implementation for aNA v5.1
+Neuromodulator implementation for aNA v5.2
 
 Communicates with: Input: (<- Amygdala) | Output: (-> Neuron Receptors) (-> Thalamic Gain)
 
-This module implements the Neuromodulator as a centralized system for managing neuromodulatory influences across the brain. It replaces the legacy spatial diffusion model with a more biologically plausible chemical matrix that modulates the activity of the Thalamus and Cortex based on inputs from the Limbic System (notably the Amygdala). The Neuromodulator tracks key neurotransmitters (dopamine, acetylcholine, serotonin, noradrenaline) and applies homeostatic decay to simulate natural recapture processes.
+This module implements the Neuromodulator as a centralized system for managing neuromodulatory influences across the brain. It replaces the legacy spatial diffusion model with a more biologically plausible chemical matrix that modulates the activity of the Thalamus and Cortex based on inputs from the Limbic System (notably the Amygdala). The Neuromodulator tracks key neurotransmitters (dopamine, acetylcholine, serotonin, noradrenaline, cortisol) and applies homeostatic decay to simulate natural recapture processes.
 
 Architecture, concept and supervision: Benoit Theriault
 Collaboration, research and code: Gemini
@@ -30,6 +30,7 @@ class Neuromodulator:
         self.decay_rates = {
             "dopamine": 0.95,
             "acetylcholine": 0.80, # Décroissance rapide pour l'attention
+            "serotonin": 0.00, # added
             "noradrenaline": 0.70, # Retour au calme après l'alerte
             "cortisol": 0.99       # Le stress persiste plus longtemps
         }
@@ -50,6 +51,7 @@ class Neuromodulator:
         """Simule la recapture des neurotransmetteurs (Cycle du Pulse)"""
         self.state.dopamine *= self.decay_rates["dopamine"]
         self.state.acetylcholine *= self.decay_rates["acetylcholine"]
+        self.state.serotonin *= self.decay_rates["serotonin"] # added
         self.state.noradrenaline *= self.decay_rates["noradrenaline"]
         self.state.cortisol *= self.decay_rates["cortisol"]
 
@@ -59,5 +61,6 @@ class Neuromodulator:
             "dopamine": self.state.dopamine,
             "acetylcholine": self.state.acetylcholine,
             "serotonin": self.state.serotonin,
-            "noradrenaline": self.state.noradrenaline
+            "noradrenaline": self.state.noradrenaline,
+            "cortisol": self.state.cortisol # added
         }

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Hippocampus implementation for aNA v5.1
+Hippocampus implementation for aNA AI Project v5.2
 
 Communicates with: Input: (<- Cortex / Amygdala) | Output: (-> Thalamus) (-> Cortical Storage)
 
@@ -14,26 +14,22 @@ Collaboration, research and code: Gemini, Cline
 from typing import Dict
 import sys
 import os
+import numpy as np
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../..')))
+from src.config import get_config
 from src.registry import ORGANS
 
 class Hippocampus:
     def __init__(self, config=None, neuromodulator_core=None):
-        # On s'assure d'avoir la config du registre si config est None
-        #from src.registry import ORGANS
-        self.config = config if config and "SUBFIELDS" in config else ORGANS["HIPPOCAMPUS"]
-        self.neuromod_core = neuromodulator_core
+        # 1. Le Génome (Structure fixe du registre)
+        self.structure = ORGANS["HIPPOCAMPUS"]
+        # Si config est None, on peut mettre des valeurs par défaut
+        self.config = config if config else {}
+        self.neurom_core = neuromodulator_core
         
-        # Initialisation explicite de TOUS les sous-champs v5.1
-        # Cela garantit que CA4 existe même si la config est partielle
-        self.subfields = {
-            "DG": {}, 
-            "CA1": {}, 
-            "CA2": {}, 
-            "CA3": {}, 
-            "CA4": {}
-        }
+        # Initialisation des sous-champs
+        self.subfields = {field: {} for field in self.structure["SUBFIELDS"]}
         
         # On peut ensuite fusionner avec la config si nécessaire
         if "SUBFIELDS" in self.config:
@@ -41,13 +37,38 @@ class Hippocampus:
                 if sf not in self.subfields:
                     self.subfields[sf] = {}
 
+        self.last_signal = None
+        self.sequence_map = {}  # Pour prédire : 'H' -> 'e'
         self.short_term_memory = {}
-        print("  [Hippocampus] v5.1 : Zones DG, CA1-CA4 initialized.")
+        # print("  [Hippocampus] v5.1 : Zones DG, CA1-CA4 initialized.")
+        # print("  [Hippocampus] v5.2 : Hebbian sequences & Unicode Wide enabled.")
 
-    async def evaluate_prediction(self, signal_label: str) -> float:
+    def _get_hash(self, signal_data):
+        """Utilitaire pour rendre les vecteurs NumPy hachables."""
+        if isinstance(signal_data, np.ndarray):
+            return tuple(signal_data.tolist())
+        return signal_data
+
+    async def evaluate_prediction(self, signal_data, label=None):
         """
         Simule la boucle trisynaptique avec dynamique AMPA/NMDA.
         """
+        current_signal = self._get_hash(signal_data)
+
+        # --- LOGIQUE HEBBIENNE (Consolidation) ---
+        if self.last_signal is not None:
+            pair = (self.last_signal, current_signal)
+            # On renforce le lien (Plasticité)
+            self.sequence_map[pair] = self.sequence_map.get(pair, 0) + 0.1
+            
+        self.last_signal = current_signal
+
+        # On transforme le vecteur NumPy en tuple (immuable) pour qu'il soit hachable
+        if isinstance(signal_data, np.ndarray):
+            signal_label = tuple(signal_data.tolist())
+        else:
+            signal_label = signal_data
+
         # 1. DG : Séparation de motifs
         is_known_dg = signal_label in self.subfields["DG"]
 
@@ -149,23 +170,26 @@ class Hippocampus:
 
     async def consolidate_and_prune(self):
         """
-        Phase de sommeil paradoxal : transforme les alertes en leçons.
+        Consolidation v5.1.1 : Utilise le tempérament pour décider 
+        ce qui doit être oublié ou stabilisé.
         """
-        print("  [Hippocampus] Deep consolidation cycle starting...")
+        config = get_config() # On récupère le tempérament actuel
+        
+        print("  [Hippocampe] 🧠 Synaptic consolidation in progress...")
         
         for label in list(self.subfields["CA3"].keys()):
-            # 1. Élagage (Pruning) des bruits faibles
-            if self.subfields["CA3"][label] < 0.05:
+            # 1. PRUNING (Élagage basé sur le bruit de fond de la config)
+            # On utilise NOISE_LEVEL pour définir ce qui est insignifiant
+            if self.subfields["CA3"][label] < config["NOISE_LEVEL"]:
                 del self.subfields["CA3"][label]
                 continue
-
-            # 2. Digestion des souvenirs négatifs (Traces Acides)
-            # Si une trace est stabilisée par le CA4, on baisse son intensité émotionnelle
-            # pour qu'elle ne soit plus une 'alerte' mais une 'information'.
+                
+            # 2. STABILISATION (Utilise le GAIN NMDA pour la force synaptique)
             if label in self.subfields["CA4"]:
-                # On réduit l'amplitude de CA3 vers le plancher CA4
-                # (Le souvenir reste, mais la douleur/panique s'efface)
-                self.subfields["CA3"][label] *= 0.8
+                floor = self.subfields["CA4"][label]
+                # On utilise THRESHOLD_NMDA pour lisser la trace vers la sagesse
+                learning_factor = config["THRESHOLD_NMDA"] 
+                self.subfields["CA3"][label] = (self.subfields["CA3"][label] + floor) * learning_factor
 
     async def consolidate_metabolism(self, atp_level: float):
         """

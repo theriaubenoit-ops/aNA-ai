@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-aNA AI Project - v5.1
+aNA AI Project - v5.2
 Module: Test Hippocampus
 Description: This test is designed to validate the core functionalities of the hippocampus module in complete isolation. It simulates a simple data stream to verify that the hippocampus learns patterns correctly and can retrieve them based on context. The test covers encoding, consolidation, and retrieval processes, as well as the handling of transitions between items.
 Unit Test for the Hippocampus - Isolated Version
@@ -19,6 +19,8 @@ ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 if ROOT_DIR not in sys.path:
     sys.path.insert(0, ROOT_DIR)
 
+from config import get_config
+
 def create_ascii_header():
     print(f"\033c") 
     print("░                     ░░░░░░░░░░▒▒▒▒▒▒░░")
@@ -28,7 +30,7 @@ def create_ascii_header():
     print("▒░░░░░▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▒░         ░░▒▒▒░▒▒▒▒▓▓▓▓▓▓▓▒▒░░  ░▒▒▒▓▒▒▒▓▒▓▒▓▒░░░░░░░▒▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░░░░░░░▒▓")
     print("░▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓░                   ░░ ▒▒▓▒░▒▓▓▓░▒▒░░           ░▒░░░▒▓▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▓▓")
     print("▒▒▓▓▓▓▓▓▒▒▒░░                           ░▓▓▒░░▒▓▓░ _    _    _ ░▒░░▒▓▒▓▓▓▓▓▓▓▓▓▓▒░░░░░░░░░▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓")
-    print("▓▓▓▓▓▒░AI inspired by natural plasticity ░░   ░░░  a    N    A  ▒▓▒▓▒▒▒▓░Autonomous Neural Architecture v5.1 ░░▒▒▓")
+    print("▓▓▓▓▓▒░AI inspired by natural plasticity ░░   ░░░  a    N    A  ▒▓▒▓▒▒▒▓░Autonomous Neural Architecture v5.2   ░▒▓")
     print("░                                                  ‾    ‾    ‾ ░▓▒▓░░▒▓░\n\n")
 
 class HippocampalRegion(Enum):
@@ -58,22 +60,25 @@ class SimpleHippocampus:
             'L2': {},  # Court terme (renforcé)
             'L3': {}   # Long terme (consolidé)
         }
+
+        config = get_config()
+        # On remplace les entiers fixes par les hyper-paramètres
+        self.min_strength_l1 = config.get("MIN_STRENGTH_L1", 1) 
+        self.threshold_nmda = config.get("THRESHOLD_NMDA", 3)
         
         # Compteurs pour le renforcement
         self.pattern_counts = {}
         
         # Seuils de consolidation
-        self.l1_threshold = 1    # Nombre d'apparitions pour passer en L2
-        self.l2_threshold = 3    # Nombre d'apparitions pour passer en L3
-        self.l3_threshold = 5    # Nombre d'apparitions pour renforcement L3
-        
-        # Structure pour les transitions (A -> B)
+        self.l1 = []
+        self.l2 = {}
+        self.l3 = []
         self.transitions = {}
         self.last_item = None
         
         print("🧠 SimpleHippocampus initialized")
         print(f"📍 Position: {position}")
-        print(f"📊 Memory thresholds: L1→L2 after {self.l1_threshold} reps, L2→L3 after {self.l2_threshold} reps")
+        print(f"📊 Memory thresholds: L1→L2 after {self.min_strength_l1} reps, L2→L3 after {self.threshold_nmda} reps")
     
     def encode(self, signal: str, importance: float = 1.0) -> None:
         """
@@ -109,43 +114,43 @@ class SimpleHippocampus:
         
         print(f"📝 Encoded: '{signal}' (importance: {importance:.1f}, count: {self.pattern_counts[signal]})")
     
-    def consolidate(self) -> None:
+    def consolidate(self, item):
         """
-        Consolidation Routine – moves patterns from L1 to L2/L3.
-
-        This method is called periodically to simulate reinforcement.
+        Consolidation v5.1.1 : Gère le passage entre L1, L2 et L3
+        en utilisant les seuils du Tempérament (config.py).
         """
+        # CRUCIAL : On initialise la liste au début pour éviter la NameError
         signals_to_move = []
         
-        # Vérifier les signals en L1 pour passage en L2
-        for signal, count in self.pattern_counts.items():
-            if signal in self.memory_store['L1']:
-                if count >= self.l1_threshold and count < self.l2_threshold:
-                    # Déplacer en L2
-                    signals_to_move.append((signal, 'L2'))
-                    print(f"🔄 Consolidating '{signal}' from L1 → L2 (count: {count})")
-        
-        # Vérifier les signals en L2 pour passage en L3
-        for signal, count in self.pattern_counts.items():
-            if signal in self.memory_store['L2']:
-                if count >= self.l2_threshold and count < self.l3_threshold:
-                    # Déplacer en L3
-                    signals_to_move.append((signal, 'L3'))
-                    print(f"🔄 Consolidating '{signal}' from L2 → L3 (count: {count})")
-                elif count >= self.l3_threshold:
-                    # Renforcer en L3
-                    print(f"💪 Reinforcing '{signal}' in L3 (count: {count})")
-        
-        # Effectuer les déplacements
+        # On récupère le compte actuel pour cet item dans L2
+        # (Note: dans ce test simple, on simule la progression via pattern_counts)
+        count = self.pattern_counts.get(item, 0)
+
+        # 1. Logique de passage L1 -> L2
+        # Si l'item atteint le seuil L1 et n'est pas encore dans le store L2
+        if count >= self.min_strength_l1 and item not in self.memory_store['L2']:
+            signals_to_move.append((item, "L2"))
+            print(f"  🔄 Consolidating '{item}' from L1 → L2 (stabilité initiale)")
+            
+        # 2. Logique de passage L2 -> L3 (Potentiation NMDA)
+        if count >= self.threshold_nmda and item not in self.memory_store['L3']:
+            signals_to_move.append((item, "L3"))
+            print(f"  🔥 Potentiation NMDA : '{item}' passe en L3 (Modèle Long Terme)")
+
+        # 3. Exécution des déplacements
         for signal, target_level in signals_to_move:
-            if signal in self.memory_store['L1']:
-                # Déplacer de L1 vers L2
-                value = self.memory_store['L1'].pop(signal)
-                self.memory_store['L2'][signal] = value
-            elif signal in self.memory_store['L2']:
-                # Déplacer de L2 vers L3
-                value = self.memory_store['L2'].pop(signal)
-                self.memory_store['L3'][signal] = value
+            # Transfert physique dans le dictionnaire de stockage
+            if target_level == "L2":
+                if signal in self.memory_store['L1']:
+                    val = self.memory_store['L1'].pop(signal)
+                    self.memory_store['L2'][signal] = val
+            
+            elif target_level == "L3":
+                # On peut venir de L1 ou L2 vers L3
+                source = 'L2' if signal in self.memory_store['L2'] else 'L1'
+                if signal in self.memory_store[source]:
+                    val = self.memory_store[source].pop(signal)
+                    self.memory_store['L3'][signal] = val
     
     def retrieve(self, context: str) -> str:
         """
@@ -266,12 +271,12 @@ def test_hippocampus_pattern_learning():
     print("📝 PHASE 1: Encoding")
     print("-" * 30)
     
-    for i, signal in enumerate(sequence):
-        print(f"Tour {i+1}: Encoding '{signal}'")
-        hippo.encode(signal, importance=1.0)
+    for i, item in enumerate(sequence):
+        print(f"Cycle {i+1}: Encoding '{item}'")
+        hippo.encode(item)
         
         # Consolidation après chaque encodage
-        hippo.consolidate()
+        hippo.consolidate(item)
         
         # Afficher l'état de la mémoire
         status = hippo.get_memory_status()
@@ -345,9 +350,11 @@ def test_hippocampus_complex_pattern():
     print(f"📚 Sequence: {sequence}")
     
     # Encodage
-    for signal in sequence:
-        hippo.encode(signal, importance=1.5)  # Importance plus élevée
-        hippo.consolidate()
+    for item in sequence:
+        print(f"Cycle X: Encoding '{item}'") # Ton log montre que ça s'arrête ici
+        hippo.encode(item)
+
+        hippo.consolidate(item)
     
     # Test de prédiction
     print(f"\n❓ What comes after 'HELLO' ?")

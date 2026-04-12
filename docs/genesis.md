@@ -1,4 +1,4 @@
-🚀 Quick links: [License](/LICENSE), [ReadMe](/README.md), [Contributing](/CONTRIBUTING.md), [Installation](/docs/installation.md), [Philosophy](/docs/philosophy.md), Genisis, [Architecture](/docs/architecture.md)
+🚀 Quick links: [License](/LICENSE), [ReadMe](/README.md), [Installation](/docs/installation.md), [Contributing](/CONTRIBUTING.md), [Innovation-Lab](/docs/innovation-lab.md), [Philosophy](/docs/philosophy.md), Genisis, [Architecture](/docs/architecture.md)
 
 ![ ](/docs/assets/spacer16x16.png)
 
@@ -12,16 +12,17 @@
 ▒░░░░░▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▒░         ░░▒▒▒░▒▒▒▒▓▓▓▓▓▓▓▒▒░░  ░▒▒▒▓▒▒▒▓▒▓▒▓▒░░░░░░░▒▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░░░░░░░▒▓
 ░▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓░                   ░░ ▒▒▓▒░▒▓▓▓░▒▒░░           ░▒░░░▒▓▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▓▓
 ▒▒▓▓▓▓▓▓▒▒▒░░                           ░▓▓▒░░▒▓▓░ _    _    _ ░▒░░▒▓▒▓▓▓▓▓▓▓▓▓▓▒░░░░░░░░░▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-▓▓▓▓▓▒░AI inspired by natural plasticity ░░   ░░░  a    N    A  ▒▓▒▓▒▒▒▓░Autonomous Neural Architecture v5.1 ░░▒▒▓
+▓▓▓▓▓▒░AI inspired by natural plasticity ░░   ░░░  a    N    A  ▒▓▒▓▒▒▒▓░Autonomous Neural Architecture v5.2b  ░▒▓
 ░                                                  ‾    ‾    ‾ ░▓▒▓░░▒▓░
 ```
+
 ###### _"The Creation" —Michelangelo_
 
 ### Traces of thought
 
 The **aNA** AI project was born from a simple intuition: _artificial intelligence_ should not be a mere matter of probabilities, but a matter of organization and structure.
 
-### The initial impulse _(Laboratory v1-v2 JS/Python)_
+### The initial impulse _(Laboratory v1-v2 JavaScript/Python)_
 
 Conceived in the crucible of initial exchanges with language models _(GPT)_, _v1_ aimed to translate abstract questions into tangible logic. This was a period of intense maturation, a _"long march"_ where the pursuit of precision gradually took precedence over rapid deployment.
 
@@ -57,9 +58,9 @@ def apply_serotonin_stabilization(neural_network, matrix):
 
 # 👤 About the Author
 
-**Benoit Theriault** works at the intersection of design, architecture, and software engineering. With a multidisciplinary background—ranging from architectural signage to complex web solutions—he cultivates a rigorous approach, honed by years of close collaboration with architects, engineers, and medical professionals across Quebec, Canada and internationally.
+**Benoit Theriault** works at the intersection of _design_, _architecture_, and _software engineering_. With a multidisciplinary background—ranging from _architectural signage_ to complex _web solutions_—he cultivates a rigorous approach, honed by years of close collaboration with architects, engineers, and medical professionals across Quebec, Canada and internationally.
 
-Since the beginning of his career, this constant pursuit of form and structure has been coupled with a profound fascination for neural processes. An expert in programming languages _(HTML, CSS, JavaScript, and Python)_, he now presents the **aNA** AI project not as a mere technical tool, but as an allegory that translates the elegance of living mechanisms into the digital world.
+Since the beginning of his career, this constant pursuit of form and structure has been coupled with a profound fascination for _neural processes_. An expert in programming languages _(HTML, CSS, JavaScript, and Python)_, he now presents the **aNA** AI project not as a mere technical tool, but as an allegory that translates the elegance of _living mechanisms_ into the _digital world_.
 
 Between behavioral _psychology_, _ethics_, and _neuroinformatics_, his work offers a new interpretation of _artificial intelligence_: that of an architecture which, like the _brain_, is cultivated with precision and intention.
 

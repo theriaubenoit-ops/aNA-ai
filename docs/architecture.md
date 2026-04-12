@@ -1,14 +1,14 @@
-🚀 Quick links: [License](/LICENSE), [ReadMe](/README.md), [Contributing](/CONTRIBUTING.md), [Installation](/docs/installation.md), [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), Architecture
+🚀 Quick links: [License](/LICENSE), [ReadMe](/README.md), [Installation](/docs/installation.md), [Contributing](/CONTRIBUTING.md), [Innovation-Lab](/docs/innovation-lab.md), [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), Architecture
 
 ![ ](/docs/assets/spacer16x16.png)
 
-# ✴️*aNA (Autonomous Neural Architecture)* AI Project v5.1
+# ✴️*aNA (Autonomous Neural Architecture)* AI Project v5.2
 
 ### 1. 🏗️ High-Level System Architecture
 
 ```
-aNA v5.1 Autonomous Neural Architecture
-├── Configuration (Preference)
+aNA v5.2 Autonomous Neural Architecture
+├── Configuration (The Temperament)
 ├── Dashboard (Metabolic & Cognitive):
 │   ├── Real-time Neural Stats: Monitors neurotransmitter levels
 │   ├── Predictive Accuracy (Free Energy): Real-time visualization of prediction error
@@ -16,7 +16,7 @@ aNA v5.1 Autonomous Neural Architecture
 ├── Main (Controller, the Pacemaker Pulse):
 │   ├── Rhythm Orchestration: Synchronizes the processing cycle (Input -> Prediction -> Output)
 │   └── Neural State Management: Ensures overall stability and module integration
-└── Registry (The organ management system)
+└── Registry (The Genome)
 ```
 
 ### 2. ⚡ Processing Unit (Neurons)
@@ -67,7 +67,7 @@ aNA v5.1 Autonomous Neural Architecture
     └── Coordination between Motor Cortex and Sensory Feedback
 
 Computational Engine: Free Energy Principle (FEP)
-aNA v5.1 optimizes prediction accuracy by minimizing the error between sensory reality and internal models. High error triggers the Limbic System to release neuromodulators (Adrenaline/Dopamine) via the Amygdala to force learning.
+aNA v5.2 optimizes prediction accuracy by minimizing the error between sensory reality and internal models. High error triggers the Limbic System to release neuromodulators (Adrenaline/Dopamine) via the Amygdala to force learning.
 ```
 
 ### 3. 🌐 Connection Logic (Synapses)
@@ -212,6 +212,7 @@ Processing Hierarchy:
 │   ├── api-reference.md                # 📋 ...
 │   ├── architecture.md                 # The technical plan
 │   ├── genesis.md                      # The story of the project
+│   ├── innovation-lab.md               # Innovation (Creation Lab)
 │   ├── installation.md                 # Installation
 │   ├── installation_fr.md              # Installation (FR)
 │   ├── legend.md                       # 📋 ...
@@ -227,8 +228,8 @@ Processing Hierarchy:
 │   │   │   └── neuromodulator.py       # Chemical "gain controls"
 │   │   ├── cortical/
 │   │   │   ├── frontal.py              # ✅ Executive Logic & Command Center
-│   │   │   ├── cortical_column.py      # ✅ Cortical Column
-│   │   │   ├── neocortex.py            # ✅ ...
+│   │   │   ├── cortical_column.py      # ✅ Vertical organization of 6 cortical layers
+│   │   │   ├── neocortex.py            # ✅ The structural integration of the 4 Lobes
 │   │   │   ├── occipital.py            # ✅ Visual Stream Processor
 │   │   │   ├── parietal.py             # ✅ Spatial Mapping & Data Integration
 │   │   │   └── temporal.py             # ✅ Semantic Storage & Pattern Recognition
@@ -238,10 +239,13 @@ Processing Hierarchy:
 │   │   │   └── limbic_system.py        # ✅ Limbic system
 │   │   └── subcortical
 │   │       ├── cerebellum.py           # Timing Engine & Output Calibration
+│   │       ├── thalamic_hub.py         # 🚧 Thalamic Hub
 │   │       └── thalamus.py             # Enhanced Thalamus implementation
 │   ├── core/                           # Core neural components
-│   │   ├── input_gateway.py            # ✅ Input gateway
-│   │   ├── output_gateway.py           # 🚧 Output gateway
+│   │   ├── input_tactile.py            # ✅ Input tactile
+│   │   ├── input_visual.py             # ✅ Input visual
+│   │   ├── input_auditory.py           # ✅ Input auditory (Sounds to add)
+│   │   ├── output_gateway.py           # 🚧 Input gateway
 │   │   └── pulse.py                    # Core Pacemaker (Pulse)
 │   ├── gui/                            # Web-based interface
 │   │   ├── dashboard.py                # 🚧 ...
@@ -257,7 +261,7 @@ Processing Hierarchy:
 │   │   ├── test_pulse.py               # ✅ Core Pacemaker (Pulse)
 │   │   ├── test_trauma_logic.py        # ✅ Hippocampus Trauma Logic
 │   │   └── test_thalamus.py            # ✅ Enhanced Thalamus implementation
-│   ├── tests_fr/                       # ✅ Comprehensive test suite (FR)
+│   ├── tests_fr/                       # Comprehensive test suite (FR)
 │   │   ├── test_amygdala.py            # ✅ Priority Filter & Interrupt Controller (FR)
 │   │   ├── test_autonomy.py            # ✅ To validate the autonomous behaviors (FR)
 │   │   ├── test_cerebellum.py          # ✅ Timing Engine & Output Calibration (FR)
@@ -284,4 +288,4 @@ Processing Hierarchy:
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-03_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-11_

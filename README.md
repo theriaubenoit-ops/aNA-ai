@@ -1,4 +1,4 @@
-🚀 Quick links: [License](/LICENSE), ReadMe, [Contributing](/CONTRIBUTING.md), [Installation](/docs/installation.md), [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), [Architecture](/docs/architecture.md)
+🚀 Quick links: [License](/LICENSE), ReadMe, [Installation](/docs/installation.md), [Contributing](/CONTRIBUTING.md), [Innovation-Lab](/docs/innovation-lab.md), [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), [Architecture](/docs/architecture.md)
 
 ![ ](/docs/assets/spacer16x16.png)
 
@@ -12,19 +12,19 @@
 ▒░░░░░▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▒░         ░░▒▒▒░▒▒▒▒▓▓▓▓▓▓▓▒▒░░  ░▒▒▒▓▒▒▒▓▒▓▒▓▒░░░░░░░▒▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░░░░░░░▒▓
 ░▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓░                   ░░ ▒▒▓▒░▒▓▓▓░▒▒░░           ░▒░░░▒▓▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▓▓
 ▒▒▓▓▓▓▓▓▒▒▒░░                           ░▓▓▒░░▒▓▓░ _    _    _ ░▒░░▒▓▒▓▓▓▓▓▓▓▓▓▓▒░░░░░░░░░▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-▓▓▓▓▓▒░AI inspired by natural plasticity ░░   ░░░  a    N    A  ▒▓▒▓▒▒▒▓░Autonomous Neural Architecture v5.1 ░░▒▒▓
+▓▓▓▓▓▒░AI inspired by natural plasticity ░░   ░░░  a    N    A  ▒▓▒▓▒▒▒▓░Autonomous Neural Architecture v5.2b  ░▒▓
 ░                                                  ‾    ‾    ‾ ░▓▒▓░░▒▓░
 ```
 
 ###### _"The Creation" —Michelangelo_
 
-![Version](https://img.shields.io/badge/version-alpha--5.1-orange?style=for-the-badge)
+![Version](https://img.shields.io/badge/version-beta--5.2-orange?style=for-the-badge)
 ![Language](https://img.shields.io/badge/language-python--3.x-blue?style=for-the-badge)
 ![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)
 
-> [!IMPORTANT]
-> **This project has evolved.** The architecture has been significantly optimized.
-> **Access the update here 👉🏻 _[v5.2-beta(/)](https://github.com/theriaubenoit-ops/aNA-ai/tree/v5.2-beta)_**
+> [!NOTE]
+> Follow the real-time evolution of **aNA’s neural architecture** and our journey toward a **100% consistent _AI_ persona**.
+> **Access the latest advancements at the _"Creation Lab"_ 👉🏻 _[innovation-lab(.md)](https://github.com/theriaubenoit-ops/aNA-ai/blob/v5.2-beta/docs/innovation-lab.md)_**
 
 ![ ](/docs/assets/spacer16x16.png)
 
@@ -52,6 +52,8 @@ We are embarking on the _"next wave"_ of artificial intelligence—an AI that do
 
 To witness **aNA** v5.1's neural processing in real-time, you can run the integrated _[tests(/)](/src/tests/)_ suites. These simulations demonstrate how sensory data is transformed into emotional importance and cortical action.
 
+![ ](/docs/assets/spacer16x16.png)
+
 ### 1. Limbic Resonance _(Test)_
 
 This demo simulates how the _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ and _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_ collaborate to filter critical information from routine noise.
@@ -61,10 +63,12 @@ This demo simulates how the _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ a
 python3 src/tests/test_limbic_system.py
 ```
 
-### What to look for in the output:
+#### What to look for in the output:
 
 - **Routine Scenario:** Low arousal levels _(Cortisol/Adrenaline)_ leading to standard memory encoding.
 - **Shock Scenario:** High arousal triggering a _"System Breach"_ alert and prioritized memory storage.
+
+![ ](/docs/assets/spacer16x16.png)
 
 ### 2. Cortical Column Cascade _(Test)_
 
@@ -131,4 +135,4 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
 
 ![Downloads](https://img.shields.io/github/downloads/theriaubenoit-ops/aNA-ai/total?style=for-the-badge&color=181c1f)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-04_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-07_
