@@ -157,7 +157,7 @@ The **aNA** AI project is _a leap toward the future of organic computation_. Ali
 
 ☄️ _Spotlight_
 
-[ ](/docs/assets/spacer32x32.png)
+![ ](/docs/assets/spacer32x32.png)
 
 ### _Technical Glossary_
 
