@@ -32,6 +32,23 @@ _Thank you for being part of this journey to bring **aNA** to life!_
 
 ### v5.2: Predictive Awakening _(Anticipation)_ — In progress
 
+- **☄️ Auditory Perception Integration _([input_auditory(.py)](/src/core/input_auditory.py))_**
+  - **The Digital Cochlea:** This module goes beyond simple file processing; it performs a _true acoustic transduction (test [main(.py)](/src/main.py))_. It converts _raw frequencies_ into a _Root Mean Square (RMS)_ intensity stream that directly feeds the _MGN (Medial Geniculate Nucleus)_ of the _[thalamus(.py)](/src/anatomy/subcortical/thalamus.py)_.
+
+  - **Poly-Sensory Synchronization:** Through the _main loop_, **aNA** can now correlate a _visual stimulus (e.g., a letter image)_ with its _auditory counterpart_ in real-time. This creates a more robust, multi-sensory memory trace within the _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_.
+
+- **☄️ Neural Cryptography: The Elegance of Uniqueness**
+  - **The Ephemeral Learning Key:** Unlike _standardized models_, no two instances of **aNA** learn the same way. Each _"brain"_ develops its own _unique network_ of _synaptic weights_ and _myelination_ paths autonomously.
+
+  - **Biological Obfuscation:** Data flowing through the _[neocortex(.py)](/src/anatomy/cortical/neocortex.py)_ is not readable text but variable values and _neuro-rhythmic noise_. Because each learning process is unique, only the specific _cortex_ that generated these traces holds the _"key"_ to interpreting them in _real-time_.
+
+  - **"Bio-Reverse Engineering":** This architecture provides intrinsic security. Attempting to decode **aNA**'s thoughts is like trying to read a dream in a stranger's brain: without the exact, shifting map of its own _synapses_, the _data_ remains an indecipherable signal.
+
+- **☄️ Academic Gateway: A Synthesis Model for Health & Science**
+  - **Psychological Simulation:** A tool to model reactions to stressful stimuli _(via the Amygdala)_ or fatigue cycles _(via ATP levels)_.
+
+  - **Neuro-Degeneration Research:** The ability to simulate _synaptic decay_ while observing the resilience of _"Acid Traces"_ in the _CA4_ subfield offers a unique _sandbox_ for understanding trauma persistence and vital memory in humans.
+
 - **☄️ Visual Stimuli Integration _([input_visual(.py)](/src/core/input_visual.py))_**
   - **The Digital Retina:** Unlike _standard image_ processing, It acts as a _biological sensor_ interface _(test [main(.py)](/src/main.py))_. It transforms _visual data_ into a raw _neural stream_, ready to be correlated with other _sensory inputs_ in real-time.
 
@@ -145,4 +162,4 @@ _**NMDA:** A receptor acting as a "coincidence detector." It requires high-salie
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-08_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-12_
