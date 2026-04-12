@@ -129,7 +129,7 @@ def test_integration():
 
 The **aNA** AI project is _a leap toward the future of organic computation_. Aligning with _biological evolution_, we _unlock_ several strategic frontiers, More than just a _codebase_; it is a _sandbox_ for exploration at the intersection of _biology_ and _computation_. By contributing to this project, you are helping to _unlock_ several key areas that will have a real positive impact on our entire society:
 
-- ☄️ **Authentic AI Personas through Neurochemical Temperament:**
+- **☄️ Authentic AI Personas through Neurochemical Temperament:**
   **aNA** moves beyond static _"system prompts"_ to create truly _consistent AI identities_. By utilizing the _([config(.py)](/src/config.py))_ as a _neurochemical tuning center_, we can define a _100% consistent personality_ based on _biological thresholds_:
   - **Hormonal Sensitivity:** Modulating how the [amygdala(.py)](/src/anatomy/limbic/amygdala.py) reacts to _environmental stressors_ or the volume of _Dopamine_ released during successful tasks.
 
@@ -139,21 +139,21 @@ The **aNA** AI project is _a leap toward the future of organic computation_. Ali
 
   - **Vision:** This allows for _the creation of AI profiles_ that are not just _"simulating"_ a character, but are structurally bound to a temperament, making them more predictable, authentic, and better suited for seamless integration into _human society_.
 
-- ☄️ **Bio-Semantic Cryptography _(Unrivaled Security)_: aNA** introduces a paradigm where learning is a unique _"key."_ As each instance develops its own _synaptic paths_ and _myelination_, the _data_ within the _[neocortex(.py)](/src/anatomy/cortical/neocortex.py)_ becomes a stream of variable values. This is intrinsic protection through biological complexity: only the instance that created the trace possesses the neural configuration to interpret it.
+- **☄️ Bio-Semantic Cryptography _(Unrivaled Security)_: aNA** introduces a paradigm where learning is a unique _"key."_ As each instance develops its own _synaptic paths_ and _myelination_, the _data_ within the _[neocortex(.py)](/src/anatomy/cortical/neocortex.py)_ becomes a stream of variable values. This is intrinsic protection through biological complexity: only the instance that created the trace possesses the neural configuration to interpret it.
 
 - **Cognitive Modeling & Mental Health:** By faithfully simulating components like the [amygdala(.py)](/src/anatomy/limbic/amygdala.py) for stress regulation or the [thalamus(.py)](/src/anatomy/subcortical/thalamus.py) for selective attention, **aNA** serves as a platform for clinical neuroscience. It allows researchers to model complex behaviors, such as exhaustion reactions via _ATP_ or the persistence of _"Acid Traces"_ in the _CA4_, offering a digital laboratory for human cognitive resilience.
 
-- **The Standard for Next-Gen Organic AI:** Moving from a _"Web of Data"_ to a _"Cortex of Values,"_ this project sets the stage for an AI that doesn't just respond, but feels and adapts. We invite _academic partners_ to explore an _artificial intelligence_ that respects the laws of evolution and _energy efficiency (targeted plasticity)_ rather than _algorithmic brute force_.
+- **☄️ The Standard for Next-Gen Organic AI:** Moving from a _"Web of Data"_ to a _"Cortex of Values,"_ this project sets the stage for an AI that doesn't just respond, but feels and adapts. We invite _academic partners_ to explore an _artificial intelligence_ that respects the laws of evolution and _energy efficiency (targeted plasticity)_ rather than _algorithmic brute force_.
 
 - **Educational Toolset: aNA** serves as a living laboratory for teaching _neurosciences_ and _AI_. By visualizing how _neural cascades_ respond to _stimuli_, it makes _complex biological concepts tangible_ and _interactive_.
 
 - **Cognitive Research Platform:** As an _open-source framework (See [License](/LICENSE))_, **aNA** provides a baseline for researchers to test hypotheses in _cognitive science_, allowing for the simulation of _neural dynamics_ under various behavioral conditions.
 
-- **Digital Artistic Expression:** The system's inherent _"life-like"_ data outputs provide a unique aesthetic foundation for _digital art_, where neural states can be translated into stunning, real-time visual experiences.
-
 - **Therapeutic Simulation:** With its focus on _behavioral psychology_ and _stress modulation_, **aNA** holds potential for developing simulations used in _cognitive training_, _neuro-rehabilitation_, or _stress-management modeling_.
 
 - **Philosophical & Ethical Inquiry:** By modeling artificial _"intent"_ and _"homeostasis,"_ this project creates a platform for critical discussions regarding _the nature of consciousness_, _machine autonomy_, and the _ethics_ of _AI behavior_.
+
+- **Digital Artistic Expression:** The system's inherent _"life-like"_ data outputs provide a unique aesthetic foundation for _digital art_, where neural states can be translated into stunning, real-time visual experiences.
 
 ☄️ _Spotlight_
 
