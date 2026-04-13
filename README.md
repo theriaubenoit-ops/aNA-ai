@@ -22,9 +22,9 @@
 ![Language](https://img.shields.io/badge/language-python--3.x-blue?style=for-the-badge)
 ![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)
 
-> [!NOTE]
-> Follow the real-time evolution of **aNA’s neural architecture** and our journey toward a **100% consistent _AI_ persona**.
-> **Access the latest advancements at the _"Creation Lab"_ 👉🏻 _[innovation-lab(.md)](https://github.com/theriaubenoit-ops/aNA-ai/blob/v5.3-beta/docs/innovation-lab.md)_**
+> [!IMPORTANT]
+> **This project has evolved.** The architecture has been significantly optimized.
+> **Access the update here 👉🏻 _[v5.3-beta(/)](https://github.com/theriaubenoit-ops/aNA-ai/tree/v5.3-beta)_**
 
 ![ ](/docs/assets/spacer16x16.png)
 
