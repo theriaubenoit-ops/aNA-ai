@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Neuromodulator implementation for aNA v5.2
+Neuromodulator implementation for aNA AI Project v5.3b
 
 Communicates with: Input: (<- Amygdala) | Output: (-> Neuron Receptors) (-> Thalamic Gain)
 
@@ -11,9 +11,15 @@ Architecture, concept and supervision: Benoit Theriault
 Collaboration, research and code: Gemini
 """
 
+import os
+import sys
 import numpy as np
 from typing import Dict, Any
 from dataclasses import dataclass
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../..')))
+from src.config import get_config
+from src.registry import ORGANS
 
 @dataclass
 class NeuromodulatorState:
@@ -27,13 +33,33 @@ class NeuromodulatorState:
 class Neuromodulator:
     def __init__(self):
         self.state = NeuromodulatorState()
+        # On injecte les coefficients de performance du profil (Performant vs Saturé)
+        config = get_config()
+        self.performance_boost = config.get("MYELIN_EFFICIENCY_COEFF", 1.0)
+        self.resonance_factor = config.get("CORTICAL_RESONANCE_FACTOR", 0.5)
+
         self.decay_rates = {
             "dopamine": 0.95,
-            "acetylcholine": 0.80, # Décroissance rapide pour l'attention
-            "serotonin": 0.00, # added
-            "noradrenaline": 0.70, # Retour au calme après l'alerte
-            "cortisol": 0.99       # Le stress persiste plus longtemps
+            "acetylcholine": 0.80,
+            "serotonin": 0.99, # Ajusté pour la stabilité
+            "noradrenaline": 0.70,
+            "cortisol": 0.99       
         }
+
+    def get_signal_efficiency(self, base_myelin: float) -> float:
+        """
+        Calcule l'efficacité réelle du signal.
+        Utilisé par le Pulse pour définir la latence.
+        """
+        # L'efficacité dépend de la myéline ET du boost de performance du profil
+        return (1.0 + (base_myelin * self.performance_boost))
+
+    def get_prediction_weight(self, l6_signal: float) -> float:
+        """
+        Calcule le poids de la rétroaction corticale (résonance).
+        """
+        # Plus le profil est 'Performant', plus la résonance stabilise le signal
+        return l6_signal * self.resonance_factor
 
     def update_from_limbic(self, amygdala_output: Dict[str, float]):
         """
