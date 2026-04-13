@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Occipital Lobe implementation for aNA v5.1
+Occipital Lobe implementation for aNA AI Project v5.3b
 
 Communicates with: Input: (<- Thalamus) | Input/Output: (<-> Other Cortical Areas) | Output: (-> Motor / Pre-frontal)
 
@@ -14,7 +14,7 @@ Collaboration, research and code: Gemini, Cline
 import asyncio
 import numpy as np
 from typing import Dict, Any
-from anatomy.cortical.cortical_column import CorticalColumns # On utilise ta base 5.0
+from anatomy.cortical.cortical_column import CorticalColumns
 
 class OccipitalLobe(CorticalColumns):
     def __init__(self, position: np.ndarray = None):
