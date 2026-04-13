@@ -2,12 +2,12 @@
 
 ![ ](/docs/assets/spacer16x16.png)
 
-# ✴️*aNA (Autonomous Neural Architecture)* AI Project v5.2
+# ✴️*aNA (Autonomous Neural Architecture)* AI Project v5.3b
 
 ### 1. 🏗️ High-Level System Architecture
 
 ```
-aNA v5.2 Autonomous Neural Architecture
+aNA v5.3b Autonomous Neural Architecture
 ├── Configuration (The Temperament)
 ├── Dashboard (Metabolic & Cognitive):
 │   ├── Real-time Neural Stats: Monitors neurotransmitter levels
@@ -67,7 +67,7 @@ aNA v5.2 Autonomous Neural Architecture
     └── Coordination between Motor Cortex and Sensory Feedback
 
 Computational Engine: Free Energy Principle (FEP)
-aNA v5.2 optimizes prediction accuracy by minimizing the error between sensory reality and internal models. High error triggers the Limbic System to release neuromodulators (Adrenaline/Dopamine) via the Amygdala to force learning.
+aNA v5.3b optimizes prediction accuracy by minimizing the error between sensory reality and internal models. High error triggers the Limbic System to release neuromodulators (Adrenaline/Dopamine) via the Amygdala to force learning.
 ```
 
 ### 3. 🌐 Connection Logic (Synapses)
@@ -207,8 +207,10 @@ Processing Hierarchy:
 ```
 ├── docs/
 │   ├── adr/
-│   │   ├── adr001.md                   # ✅ Architecture Decision Records
-│   │   └── adr002.md                   # ✅ Architecture Decision Records
+│   │   ├── adr001_fr.md                # ✅ Architecture Decision Records (FR)
+│   │   ├── adr002_fr.md                # ✅ Architecture Decision Records (FR)
+│   │   ├── adr003_fr.md                # ✅ Architecture Decision Records (FR)
+│   │   └── adr004_fr.md                # ✅ Architecture Decision Records (FR)
 │   ├── assets/                         # 📋 Medias
 │   ├── examples/                       # 📋 Comprehensive example suite
 │   ├── api-reference.md                # 📋 ...
@@ -239,9 +241,11 @@ Processing Hierarchy:
 │   │   │   ├── amygdala.py             # Priority Filter & Interrupt Controller
 │   │   │   ├── hippocampus.py          # Dynamic Buffer & Indexing System
 │   │   │   └── limbic_system.py        # ✅ Limbic system
+│   │   ├── perceptual/                 # 📋 ...
+│   │   │   └── glyph_renderer.py       # 📋 Visual Word Form Area
 │   │   └── subcortical
 │   │       ├── cerebellum.py           # Timing Engine & Output Calibration
-│   │       ├── thalamic_hub.py         # 🚧 Thalamic Hub
+│   │       ├── thalamic_hub.py         # ✅ Thalamic Hub
 │   │       └── thalamus.py             # Enhanced Thalamus implementation
 │   ├── core/                           # Core neural components
 │   │   ├── input_tactile.py            # ✅ Input tactile
@@ -250,8 +254,8 @@ Processing Hierarchy:
 │   │   ├── output_gateway.py           # 🚧 Input gateway
 │   │   └── pulse.py                    # Core Pacemaker (Pulse)
 │   ├── gui/                            # Web-based interface
-│   │   ├── dashboard.py                # 🚧 ...
-│   │   └── dashboard_fr.py             # 🚧 ... (FR)
+│   │   ├── dashboard.py                # 🚧 Dashboard
+│   │   └── dashboard_fr.py             # 🚧 Dashboard (FR)
 │   ├── tests/                          # Comprehensive test suite
 │   │   ├── test_amygdala.py            # ✅ Priority Filter & Interrupt Controller
 │   │   ├── test_autonomy.py            # ✅ To validate the autonomous behaviors
