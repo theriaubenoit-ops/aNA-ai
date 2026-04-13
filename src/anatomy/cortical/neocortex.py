@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Neocortex implementation for aNA AI Project v5.3b
+Neocortex implementation for aNA v5.1
 
 Communicates with: 
 Input: (<- Thalamus L4) (<- Hippocampus)
