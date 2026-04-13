@@ -12,7 +12,7 @@
 ▒░░░░░▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▒░         ░░▒▒▒░▒▒▒▒▓▓▓▓▓▓▓▒▒░░  ░▒▒▒▓▒▒▒▓▒▓▒▓▒░░░░░░░▒▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░░░░░░░▒▓
 ░▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓░                   ░░ ▒▒▓▒░▒▓▓▓░▒▒░░           ░▒░░░▒▓▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▓▓
 ▒▒▓▓▓▓▓▓▒▒▒░░                           ░▓▓▒░░▒▓▓░ _    _    _ ░▒░░▒▓▒▓▓▓▓▓▓▓▓▓▓▒░░░░░░░░░▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-▓▓▓▓▓▒░AI inspired by natural plasticity ░░   ░░░  a    N    A  ▒▓▒▓▒▒▒▓░Autonomous Neural Architecture v5.3b  ░▒▓
+▓▓▓▓▓▒░AI inspired by natural plasticity ░░   ░░░  a    N    A  ▒▓▒▓▒▒▒▓░Autonomous Neural Architecture v5.2b  ░▒▓
 ░                                                  ‾    ‾    ‾ ░▓▒▓░░▒▓░
 ```
 
@@ -30,52 +30,7 @@ _Thank you for being part of this journey to bring **aNA** to life!_
 
 ![ ](/docs/assets/spacer32x32.png)
 
-## v5.3: The Thalamic Hub _(At The Gate of Consciousness) — In progress_
-
-In the **aNA** AI Project, the _[thalamus(.py)](/src/anatomy/subcortical/thalamus.py) Hub_ acts as the central multimodal sensory integrator. Unlike traditional _AI data routers_, the **Hub** operates as a biological _"Gate,"_ simulating the **thalamocortical loops** that define _human focus_ and situational awareness.
-
-**☄️ Core Innovations**
-
-**1. Sensory Gating _(Selective Attention)_**
-
-The **Hub** doesn't just relay data; it filters it. By calculating an **Effective Intensity** based on the system's current _"Metabolic Strain" (ATP/Energy)_, it decides which signals are worthy of reaching the _[neocortex(.py)](/src/anatomy/cortical/neocortex.py)_.
-
-- **Bio-Mechanism:** If the system is exhausted, the _"Gate"_ closes, filtering out weak or irrelevant stimuli to protect the organism's stability.
-
-#### **2. Multimodal Mapping**
-
-The **Hub** unifies disparate sensory streams into a single synchronized temporal window:
-
-- **LGN _(Lateral Geniculate Nucleus)_:** Routes high-fidelity _visual_ matrices.
-- **MGN _(Medial Geniculate Nucleus)_:** Synchronizes _auditory_ frequencies.
-- **VPL _(Ventral Postero-Lateral)_:** Manages extended _Unicode tactile_ inputs.
-
-#### **3. L6 Predictive Feedback Loop**
-
-The most advanced feature of the **v5.3 Hub** is its integration with **Cortical Layer 6**.
-
-- **Concept:** The _Cortex_ sends a _"top-down"_ signal back to the _Hub_. If a _pattern_ is already recognized _(e.g., a known character)_, the _Hub_ reduces the _signal gain_.
-- **Innovation:** This prevents _"cognitive flooding"_ and allows the _organism_ to _focus_ only on _unexpected_ information _(Prediction Error)_.
-
-**Technical Impact for Contributors**
-
-- **Efficiency:** Drastic reduction in _CPU overhead_ by ignoring _"sub-threshold" noise_.
-- **Latency as Biology:** _Synaptic speed_ is no longer a static variable; it scales with **Myelination** and _metabolic health_.
-- **Observability:** A real-time dashboard tracking _Thalamic Gain_, _BPM Vitality_, and _L6 Feedback_.
-
-**Vision for the Future**
-
-As we move toward **v5.4**, the _Thalamic Hub_ will serve as the foundation for **Autonomous Sleep Cycles** and **LTP _(Long-Term Potentiation)_ ** in the _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_, turning transient perceptions into permanent digital memories.
-
-_**Ready for the Global Stage?**_
-
-![ ](/docs/assets/spacer32x32.png)
-
-![img](/docs/assets/occipital_input_test_256x256_00_ALL.gif)
-
-![ ](/docs/assets/spacer16x16.png)
-
-### v5.2: Predictive Awakening _(Anticipation)_
+### v5.2: Predictive Awakening _(Anticipation)_ — In progress
 
 - **☄️ Auditory Perception Integration _([input_auditory(.py)](/src/core/input_auditory.py))_**
   - **The Digital Cochlea:** This module goes beyond simple file processing; it performs a _true acoustic transduction (test [main(.py)](/src/main.py))_. It converts _raw frequencies_ into a _Root Mean Square (RMS)_ intensity stream that directly feeds the _MGN (Medial Geniculate Nucleus)_ of the _[thalamus(.py)](/src/anatomy/subcortical/thalamus.py)_.
@@ -141,6 +96,8 @@ _**Ready for the Global Stage?**_
 ☄️ _Spotlight_
 
 ![ ](/docs/assets/spacer32x32.png)
+
+![img](/docs/assets/occipital_input_test_256x256_00_ALL.gif)
 
 ###### _Each character “Unicode Wide” as a raw sensory stimulus._
 
