@@ -4,7 +4,7 @@
 
 English instructions: [installation (en)](/docs/installation.md)
 
-## Installation et utilisation projet ✴️*aNA* AI v5.2
+## Installation et utilisation projet ✴️*aNA* AI v5.3
 
 1. **Prérequis _(The Environment)_**
    - [ ] Version _Python_ minimale _(ex: 3.10+)_
@@ -17,6 +17,8 @@ English instructions: [installation (en)](/docs/installation.md)
    - [ ] Installation : `pip install -r requirements.txt`
 
 3. - [x] **Exécution des scripts _(Phase « Action »)_** Launch associated _Python scripts_ to validate neural logic:
+     - PROCHAINEMENT - `python3 src/gui/dashboard_fr.py`
+     - `python3 src/main_fr.py` _(Noyau cortical et espace de travail global)_
      - `python3 src/tests_fr/test_amygdala.py` _(Réponse homéostatique au stress et à l'alerte)_
      - `python3 src/tests_fr/test_autonomy` _(Pour valider les comportements autonomes)_
      - `python3 src/tests_fr/test_cerebellum.py` _(Précision motrice et correction d'erreurs)_
@@ -27,8 +29,6 @@ English instructions: [installation (en)](/docs/installation.md)
      - `python3 src/tests_fr/test_pulse.py` _(Oscillations neuronales et synchronisation temporelle)_
      - `python3 src/tests_fr/test_thalamus.py` _(Filtrage sensoriel et signal routage)_
      - `python3 src/tests_fr/test_trauma_logic.py` _(Saillance émotionnelle et traces acides)_
-     - `python3 src/main_fr.py` _(Noyau cortical et espace de travail global)_
-     - PROCHAINEMENT - `python3 src/gui/dashboard_fr.py`
    - [ ] PROCHAINEMENT - Démonstrations : Pour lancer _l'interface web_ (e.g., "http://localhost:8000/examples/basic-demo.html").
      - Remarque concernant le serveur local : Pour exécuter les démonstrations web, utilisez `python3 -m http.server 8000` depuis le répertoire racine.
 
