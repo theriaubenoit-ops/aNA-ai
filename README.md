@@ -121,7 +121,9 @@ python3 src/tests/test_cortical_column.py
 
 - **[Neurons(.py)](/src/anatomy/base/neuron.py) _(Atomic Processing Nodes)_:** The three functional types _(Sensory, Interneurons, Motor)_ operate as the basic logic gates of the architecture. Their Synaptic Plasticity represents a self-modifying code capability, where connection weights evolve dynamically based on the frequency and timing of data flow.
 
-- **[Thalamus(.py)](/src/anatomy/subcortical/thalamus.py) _(Sensory Gateway & Packet Router)_:** Acts as the system's central hub for incoming data. It filters and directs sensory signals to the appropriate cortical layers, preventing _"system overflow"_ by dropping irrelevant background noise.
+- **[Thalamic Hub(.py)](/src/anatomy/subcortical/thalamic_hub.py) _(Central Integration & Signal Arbitration)_:** The _"Command Center"_ of the subcortical system. It coordinates the dialogue between the _[limbic system(.py)](/src/anatomy/limbic/limbic_system.py)_ and the _[thalamus(.py)](/src/anatomy/subcortical/thalamus.py)_. It doesn't just route packets; it decides the strategy of the routing based on the chemical state _([neuromodulators(.py)](/src/anatomy/base/neuromodulator.py))_ and _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ priorities.
+
+- **[Thalamus(.py)](/src/anatomy/subcortical/thalamus.py) _(Sensory Gateway & Packet Router)_:** The _"Engine"_ of _sensory input_. It acts as the _physical gateway_ for incoming data, filtering and directing sensory signals to _cortical layers_. It executes the _gain modulation_ to prevent _"system overflow"_ by dropping irrelevant background _noise_.
 
 _Note: These definitions are adapted to the specific metabolic and cognitive constraints of the **aNA** v5.0 architecture and above._
 
@@ -147,4 +149,4 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
 
 ![Downloads](https://img.shields.io/github/downloads/theriaubenoit-ops/aNA-ai/total?style=for-the-badge&color=181c1f)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-12_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-13_
