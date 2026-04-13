@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Amygdala implementation for aNA AI Project v5.3b
+Amygdala implementation for aNA v5.1
 
 Communicates with: Input: (<- Thalamus / Cortex) | Output: (-> Pulse / Adrenaline) (-> Hippocampus)
 

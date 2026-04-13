@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Limbic system implementation for aNA AI Project v5.3b
+Limbic system implementation for aNA v5.1
 
 Communicates with: 
 Input: (<- Thalamus) (<- Cortical L2/3)
