@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Neuron implementation for aNA AI Project v5.3b - The fundamental unit of the aNA architecture
+Neuron implementation for aNA v5.1 - The fundamental unit of the aNA architecture
 
 Communicates with: Input: (<- Synapses) | Output: (-> Axon / Post-synaptic targets)
 
@@ -101,7 +101,7 @@ class Neuron:
         self.last_spike_time = -1
         self.activity_counter = 0
         
-        # Neuromodulator sensitivity [Double? See neuromodulator.py]
+        # Neuromodulator sensitivity
         self.neuromodulator_sensitivity = {
             'dopamine': 1.0,
             'acetylcholine': 1.0,
