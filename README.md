@@ -82,7 +82,7 @@ python3 src/tests/test_limbic_system.py
 
 ![ ](/docs/assets/spacer16x16.png)
 
-### 2. Cortical Column Cascade _(Test)_
+### 2. [Cortical Column(.py)](/src/anatomy/cortical/cortical_column.py) Cascade _(Test)_
 
 Validation of the _6-layer_ signal flow (L4 → L2/3 → L5) with real-time precision monitoring.
 
