@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Input Auditory Gateway implementation for aNA AI Project v5.3b
+Input Auditory Gateway implementation for aNA AI Project v5.2
 
 Communicates with: Input: External (Auditory) | Output: (-> Thalamus (CGM)) (-> Temporal Lobe (A1))
 
@@ -19,46 +19,33 @@ import sys
 import numpy as np
 import wave
 import time
-import scipy.io.wavfile as wav
 
 # Accès au registre
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from registry import ORGANS
-from dataclasses import dataclass, field
 
-@dataclass
 class AuditorySensoryPayload:
-    intensity: float = 0.0
-    raw_data: np.ndarray = field(default_factory=lambda: np.array([]))
-    ratio: float = 1.0
-    source: str = "Unknown"
-    timestamp: float = field(default_factory=time.time)
+    """Conteneur unifié pour le transport de données acoustiques."""
+    def __init__(self, intensity, raw_data, ratio=1.0):
+        self.intensity = intensity
+        self.raw_data = raw_data
+        self.ratio = ratio
+        self.source = "TEMPORAL_LOBE"
+        #print("  [Input Auditory] Gateway initialized")
+
+    def get(self, key, default=None):
+        """Assure la compatibilité avec le Thalamus."""
+        return getattr(self, key, default)
     
 class InputAuditoryGateway:
-    async def capture_sound(self, file_path=None, audio_data=None, ratio=1.0):
-        """
-        Capture le son via un fichier ou une matrice.
-        Note: 'Ce n'est pas la charge, mais l'excès de charge qui tue la bête.' - Don Quichotte
-        """
-        if file_path and os.path.exists(file_path):
-            # Lecture du fichier .wav (44.1kHz 16-bit)
-            sample_rate, data = wav.read(file_path)
-            
-            # Normalisation 16-bit (-32768, 32767) vers (-1.0, 1.0)
-            audio_data = data.astype(np.float32) / 32768.0
-            source_name = os.path.basename(file_path)
-        else:
-            source_name = "Synthetic_Signal"
-
-        # Calcul RMS (Cochlée virtuelle)
+    async def capture_sound(self, audio_data, ratio=1.0):
+        # Calcul RMS interne (simule la cochlée)
         intensity_raw = np.sqrt(np.mean(audio_data**2))
         computed_intensity = min(1.0, max(0.1, intensity_raw * 5))
 
-        payload = AuditorySensoryPayload(
+        return AuditorySensoryPayload(
             intensity=computed_intensity,
             raw_data=audio_data,
             ratio=ratio
         )
-        payload.source = source_name
-        return payload
     
