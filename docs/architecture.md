@@ -206,7 +206,9 @@ Processing Hierarchy:
 
 ```
 ├── docs/
-│   ├── adr/                            # 📋 Architecture Decision Records
+│   ├── adr/
+│   │   ├── adr001.md                   # ✅ Architecture Decision Records
+│   │   └── adr002.md                   # ✅ Architecture Decision Records
 │   ├── assets/                         # 📋 Medias
 │   ├── examples/                       # 📋 Comprehensive example suite
 │   ├── api-reference.md                # 📋 ...
