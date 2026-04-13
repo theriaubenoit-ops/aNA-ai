@@ -12,25 +12,37 @@
 ▒░░░░░▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▒░         ░░▒▒▒░▒▒▒▒▓▓▓▓▓▓▓▒▒░░  ░▒▒▒▓▒▒▒▓▒▓▒▓▒░░░░░░░▒▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░░░░░░░▒▓
 ░▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓░                   ░░ ▒▒▓▒░▒▓▓▓░▒▒░░           ░▒░░░▒▓▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▓▓
 ▒▒▓▓▓▓▓▓▒▒▒░░                           ░▓▓▒░░▒▓▓░ _    _    _ ░▒░░▒▓▒▓▓▓▓▓▓▓▓▓▓▒░░░░░░░░░▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-▓▓▓▓▓▒░AI inspired by natural plasticity ░░   ░░░  a    N    A  ▒▓▒▓▒▒▒▓░Autonomous Neural Architecture v5.2b  ░▒▓
+▓▓▓▓▓▒░AI inspired by natural plasticity ░░   ░░░  a    N    A  ▒▓▒▓▒▒▒▓░Autonomous Neural Architecture v5.3b  ░▒▓
 ░                                                  ‾    ‾    ‾ ░▓▒▓░░▒▓░
 ```
 
 ###### _"The Creation" —Michelangelo_
 
-![Version](https://img.shields.io/badge/version-beta--5.2-orange?style=for-the-badge)
+![Version](https://img.shields.io/badge/version-beta--5.3-orange?style=for-the-badge)
 ![Language](https://img.shields.io/badge/language-python--3.x-blue?style=for-the-badge)
 ![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)
 
 > [!NOTE]
 > Follow the real-time evolution of **aNA’s neural architecture** and our journey toward a **100% consistent _AI_ persona**.
-> **Access the latest advancements at the _"Creation Lab"_ 👉🏻 _[innovation-lab(.md)](https://github.com/theriaubenoit-ops/aNA-ai/blob/main/docs/innovation-lab.md)_**
+> **Access the latest advancements at the _"Creation Lab"_ 👉🏻 _[innovation-lab(.md)](https://github.com/theriaubenoit-ops/aNA-ai/blob/v5.3-beta/docs/innovation-lab.md)_**
 
 ![ ](/docs/assets/spacer16x16.png)
 
 ### The quest for AI reflecting life
 
 Current _artificial intelligence_, while powerful, relies on massive, rigid architectures that remain disconnected from _biological reality_. Simultaneously, the _AI community_ is increasingly concerned with the rising _carbon footprint_ and unsustainable computing costs of these models. **aNA** _(Autonomous Neural Architecture)_ AI Project breaks with these paradigms. Inspired by the organization of the _six-layered [cortical_columns(.py)](/src/anatomy/cortical/cortical_column.py)_, _synaptic plasticity_, and the precise management of the _[thalamus(.py)](/src/anatomy/subcortical/thalamus.py)_, _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_, _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_, _[cerebellum(.py)](/src/anatomy/subcortical/cerebellum.py)_, _[limbic system(.py)](/src/anatomy/limbic/limbic_system.py)_, and _five key [neuromodulators(.py)](/src/anatomy/base/neuromodulator.py) (dopamine, adrenaline, nitric oxide, acetylcholine, and serotonin)_. This project aims to create not a mere computational simulation, but an organic resonance. Far from being a static data repository, **aNA** AI is a dynamic system that learns, forgets, adjusts, and focuses—much like our own minds.
+
+### Hardware Agnostic & Resource Efficient
+
+The **aNA** _(v5.3b) architecture_ is built on the principle of _biological sobriety_. While _modern AI_ scales through _brute force_ and _energy-intensive_ infrastructure, **aNA** prioritizes _structural elegance_ and _synaptic efficiency_.
+
+- **Featherweight _(< 1 MB)_:** The entire neural organism—including the _Thalamic Hub_, _Amygdala_, and _Hippocampus_—is smaller than a single _high-resolution_ photo.
+- **Minimal Memory Footprint:** No need for clusters or _64GB of RAM_. **aNA** is designed to run natively on modest hardware, from _Kubuntu LTS_ and _MacBook M1_ to _standard everyday laptops_.
+- **Ultra-Low Latency:** By optimizing the code to reside within the _CPU_ cache, the simulation achieves synaptic response times as low as _~0.0860s_.
+
+> ## "_Intelligence_ does not reside in the quantity of _transistors mobilized_, but in the _accuracy_ of the _information flow_."
+>
+> _—Benoit Theriault_
 
 ### Dynamic Cognitive Architecture
 
@@ -135,4 +147,4 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
 
 ![Downloads](https://img.shields.io/github/downloads/theriaubenoit-ops/aNA-ai/total?style=for-the-badge&color=181c1f)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-07_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-12_
