@@ -68,7 +68,7 @@ ORGANS = {
             "SENSORY": { 
                 "DESCRIPTION": "Transduction of physical reality into neural signals",
                 "STREAMS": {
-                    "HAPTIC": "Processed via Unicode Wide mapping (input_haptic.py)",
+                    "TACTILE": "Processed via Unicode Wide mapping (input_tactile.py)",
                     "VISUAL": "Processed via Occipital Lobe mapping (input_visual.py)",
                     "AUDITORY": "Processed via Temporal Lobe mapping (input_auditory.py)"
                 }

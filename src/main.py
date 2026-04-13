@@ -1,34 +1,32 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-aNA AI Project v5.3b - Thalamic Hub Integration
+aNA AI Project v5.2 - Main Integration
 
-Description : Cette version marque le passage au routage multimodal centralisé.
-Le ThalamicHub agit comme un filtre attentionnel (Gating) avant la projection corticale.
-L'organisme peut désormais ignorer les stimuli faibles ou ralentir son traitement 
-selon son état métabolique (ATP/BPM).
+Description : This core process orchestrates the full bio-digital loop. It synchronizes the Thalamic flow, Cortical L4->L2/3->L6 cascades, and Dynamic Myelination. The goal is to simulate a stabilized metabolism where recognition modulates the Pulse (BPM) and neurotransmitter resistance in real-time.
+Features: Thalamo-Cortical Feedback, Homeostasis, Myelin growth.
 
-Architecture et neuroinformatics: Theriault Benoit
+Architecture and neuroinformatics: Theriault Benoit
 """
 import asyncio
 import os
 import sys
 import numpy as np
-import scipy.io.wavfile as wav
-from PIL import Image
 
 # Gestion du path pour les imports locaux
-sys.path.append(os.path.abspath(os.path.dirname(__file__)))
-from config import get_config
-from core.input_haptic import InputHapticGateway 
+# sys.path.append(os.path.abspath(os.path.dirname(__file__)))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from config import get_config  # Ajoute l'import en haut du fichier
+from core.input_tactile import InputTactileGateway 
 from core.input_auditory import InputAuditoryGateway
-from core.input_visual import InputVisualGateway
+from core.input_visual import InputVisualGateway, VisualSensoryPayload
 from core.pulse import Pulse
 from anatomy.subcortical.thalamus import Thalamus
-from anatomy.subcortical.thalamic_hub import ThalamicHub 
 from anatomy.limbic.hippocampus import Hippocampus
 from anatomy.cortical.cortical_column import SimplifiedCorticalColumn
+from anatomy.base.neuron import Neuron, NeuronConfig
 from anatomy.base.neuromodulator import Neuromodulator
+from registry import ORGANS 
 
 def create_ascii_header():
     print(f"\033c") 
@@ -39,170 +37,137 @@ def create_ascii_header():
     print("▒░░░░░▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▒░         ░░▒▒▒░▒▒▒▒▓▓▓▓▓▓▓▒▒░░  ░▒▒▒▓▒▒▒▓▒▓▒▓▒░░░░░░░▒▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░░░░░░░▒▓")
     print("░▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓░                   ░░ ▒▒▓▒░▒▓▓▓░▒▒░░           ░▒░░░▒▓▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▓▓")
     print("▒▒▓▓▓▓▓▓▒▒▒░░                           ░▓▓▒░░▒▓▓░ _    _    _ ░▒░░▒▓▒▓▓▓▓▓▓▓▓▓▓▒░░░░░░░░░▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓")
-    print("▓▓▓▓▓▒░AI inspired by natural plasticity ░░   ░░░  a    N    A  ▒▓▒▓▒▒▒▓░Autonomous Neural Architecture v5.3b  ░▒▓")
+    print("▓▓▓▓▓▒░AI inspired by natural plasticity ░░   ░░░  a    N    A  ▒▓▒▓▒▒▒▓░Autonomous Neural Architecture v5.2   ░▒▓")
     print("░                                                  ‾    ‾    ‾ ░▓▒▓░░▒▓░\n\n")
 
-def get_visual_files(directory):
-    """Scan dynamique des fichiers images pour le cortex visuel."""
-    if os.path.exists(directory):
-        return sorted([img for img in os.listdir(directory) if img.lower().endswith(('.png', '.jpg', '.jpeg'))])
-    return []
-
-def get_audio_files(directory):
-    """Scan dynamique des bruits colorés pour le hub thalamique."""
-    if os.path.exists(directory):
-        return sorted([f for f in os.listdir(directory) if f.lower().endswith('.wav')])
-    return []
-
 async def main():
-    print("--- ⚡ aNA Organism v5.3b (Thalamic Hub Active) ---")
-
-    # 1. Initialisation des moteurs
+    print("--- ⚡ aNA Organism v5.2 (Organization Meeting) ---")
+    
+    # 1. Initialisation des moteurs v5.2
     config = get_config()
     neurom_core = Neuromodulator() 
     hippo = Hippocampus(config=config, neuromodulator_core=neurom_core)
-    heart = Pulse(bpm=config.get("BASE_BPM", 72.0))
-    
-    # Gateways Sensorielles
-    haptic_gateway = InputHapticGateway()
+    heart = Pulse()
+    tactile_gateway = InputTactileGateway()
     auditory_gateway = InputAuditoryGateway()
     visual_gateway = InputVisualGateway() 
+     
+    # Simulation d'une image test (ex: 64x64)
+    test_image = np.random.rand(64, 64)
 
-    # 2. Initialisation du Néocortex
+    # 2. Initialisation du Néocortex (Colonne de traitement)
+    # Chaque colonne représente une unité de calcul 6-layers
     visual_column = SimplifiedCorticalColumn(column_id="COL_V1")
     
-    # 3. Le Complexe Thalamique (Le Coeur + Le Hub de routage)
+    # 3. Le Thalamus (Pilote du flux et de la dopamine)
     thalamus = Thalamus(
         hippocampus=hippo, 
         pulse=heart, 
         neuromodulator_core=neurom_core 
     )
-    hub = ThalamicHub(thalamus_core=thalamus) # Centralisation multimodal v5.3
     
-    # Séquence de test (Unicode Wide)
-    # test_sequence = ["a", "N", "A", " ", "a", "N", "A", " ", "a", "N", "A", " ", "a", "N", "A", " ", "a", "N", "A", " ", "a", "N", "A", " ", "B", "A", "N", "A", "N", "A", "S"]
-    # test_sequence = ["B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", " ", "你"]
-    # test_sequence = ["H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "o", "l", "a", " ", "O", "l", "á", " ", "你", "好", " ", "H", "i"]
-    test_sequence = ["H", "e", "l", "l", "o", " ", "H", "e", "l", "l", "o", " ", "H", "e", "l", "l", "o", " ", "H", "e", "l", "l", "o", " ", "H", "o", "l", "a", " ", "你", "好", " ", "H", "e", "l", "l", "o"]
-
-    base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    img_dir = os.path.join(base_path, "src", "tests", "media_visual", "64x64")
-    audio_dir = os.path.join(base_path, "src", "tests", "media_audio")
-    
-    all_images = get_visual_files(img_dir)
-    all_sounds = get_audio_files(audio_dir)
-    
-    if not all_images:
-        print(f" [Warning] No visual stimuli were found in: {img_dir}")
-    if not all_sounds:
-        print(f" [Warning] No visual stimuli were found in: {audio_dir}")
+    # Séquence de test pour valider l'habituation et le feedback L6
+    # test_sequence = ["B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", " ", "Z"]
+    # test_sequence = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "a"]
+    test_sequence = ["H", "e", "l", "l", "o", " ", "你", "好", " ", "H", "o", "l", "a", " ", "A", "l", "l", "ô", " ", "П", "р", "и", "в", "е", "т", " ", "H", "e", "l", "l", "o", " ", "你", "好"]
 
     for cycle, char in enumerate(test_sequence, 1):
-        # --- PHASE A : ANALYSE PRÉDICTIVE (Feedback L6) ---
+        # --- PHASE A : TRANSDUCTION ---
+        payload = tactile_gateway.process_symbol(char)
+        
+        # --- PHASE B : CASCADE CORTICALE (L4 -> L2/3 -> L6) ---
+        # On interroge d'abord le cortex pour obtenir le feedback L6
         cortical_results = await visual_column.process_input(char, hippo)
         l6_signal = cortical_results['l6_feedback']
 
-        # --- PHASE B : CAPTURE DES PAYLOADS ---
-        
-        # 1. AUDIO (Capture réelle du fichier .wav)
-        if all_sounds:
-            snd_index = (cycle - 1) % len(all_sounds)
-            current_sound_path = os.path.join(audio_dir, all_sounds[snd_index])
-            # Appel à l'Easter Egg de Don Quichotte
-            auditory_payload = await auditory_gateway.capture_sound(file_path=current_sound_path)
-        else:
-            auditory_payload = await auditory_gateway.capture_sound(audio_data=np.zeros(100))
+        # --- PHASE C : PRÉPARATION DES SENS ---
+        base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        test_dir = os.path.join(base_path, "docs", "assets", "occipital_input_test_64x64")
 
-        # 2. VISUEL (Utilisation de la liste déjà scannée)
+        # 1. Récupérer la liste de toutes les images valides
+        # all_images = ["../docs/assets/occipital_input_test_64x64/occipital_input_test_64x64_01_English.png"] # test 1 seule image
+        all_images = sorted([img for img in os.listdir(test_dir) if img.lower().endswith(('.png', '.jpg', '.jpeg'))])
+
+        # Initialisation par défaut (Sécurité)
         if all_images:
-            img_index = (cycle - 1) % len(all_images)
-            current_img_name = all_images[img_index]
-            full_path = os.path.join(img_dir, current_img_name)
+            # 2. Sélectionner l'image correspondant au cycle (modulo pour boucler si moins d'images que de lettres)
+            current_img_name = all_images[(cycle - 1) % len(all_images)]
+            full_path = os.path.join(test_dir, current_img_name)
             
-            with Image.open(full_path) as img:
-                img = img.convert('L').resize((64, 64))
-                real_matrix = np.array(img) / 255.0
-            
-            visual_payload = await visual_gateway.capture_image(matrix_data=real_matrix, ratio=0.25)
+            # 3. Capture réelle par la gateway
+            raw_matrix = np.random.rand(64, 64) 
+            visual_payload = await visual_gateway.capture_image(matrix_data=raw_matrix, ratio=0.25)
             visual_payload.source = current_img_name
-            visual_payload.intensity = float(np.max(real_matrix))
         else:
-            visual_payload = type('obj', (object,), {'source': "None", 'intensity': 0.1})()
-        
-        # Simulation Auditory (CGM)
-        # auditory_payload = await auditory_gateway.capture_sound(audio_data=real_matrix, ratio=0.25)
-        # auditory_payload.source = f"audio_{cycle}.wav"
-        # auditory_payload.intensity = 0.7
+            visual_payload = {"type": "visual", "source": "None", "data": None}
 
-        # Simulation Haptic (VPL)
-        haptic_data = {
-            "source": "input_haptic",
+        # Auditory
+        current_sound_name = f"stimulus_audio_{cycle:02d}.wav"
+        auditory_payload = await auditory_gateway.capture_sound(audio_data=raw_matrix, ratio=0.25)
+        auditory_payload.source = current_sound_name
+
+        # 2. Le Tactile (on crée un petit dictionnaire ou objet compatible)
+        tactile_payload = {
+            "source": "TACTILE_GATEWAY",
             "data": char,
-            "signal_label": "UNICODE_WIDE",
-            "intensity": 0.9
+            "signal_label": "UNICODE_WIDE"
         }
+        tactile_signal = tactile_gateway.process_symbol(char=char)
 
-        # --- PHASE C : ROUTAGE ET GATING THALAMIQUE (v5.3) ---
-        # Au lieu de traiter tout aveuglément, on passe par le Hub.
-        # Le Hub peut décider de filtrer (FILTERED_OUT) si le système est épuisé.
-        threshold = config.get("THALAMIC_THRESHOLD", 0.15)
-        weights = config.get("SENSORY_WEIGHTS", {"visual": 0.5, "auditory": 0.3, "haptic": 0.2})
-        
-        print(f"\nCycle {cycle:02d} - Multimodal Routing")
-        
-        res_v = await hub.route_sensory_input("input_visual", visual_payload.__dict__)
-        res_a = await hub.route_sensory_input("input_auditory", auditory_payload.__dict__)
-        res_t = await hub.route_sensory_input("input_haptic", haptic_data)
+        # --- PHASE D : INTÉGRATION THALAMIQUE (Le Pulse Partagé) ---
+        # aNA utilise maintenant le feedback L6 pour calculer le rythme
+        # Le Thalamus reçoit les deux et influence le BPM
+        if not hasattr(visual_payload, 'intensity'):
+            visual_payload.intensity = 0.8  # Valeur par défaut si non calculée
+        log_v = await thalamus.process_payload(visual_payload, l6_feedback=l6_signal)
+        log_a = await thalamus.process_payload(auditory_payload, l6_feedback=l6_signal)
+        log_t = await thalamus.process_payload(tactile_payload, l6_feedback=l6_signal)
 
-        # --- PHASE D : MISE À JOUR MÉTABOLIQUE ---
+        # --- PHASE E : MISE À JOUR MÉTABOLIQUE ---
+        final_bpm = thalamus.current_bpm 
+        heart.update_frequency(final_bpm) # On synchronise le Pulse réel
+        # heart.update() # Le cœur bat maintenant selon la tension combinée
+        
+        # Mise à jour du monitoring
+
+        # --- PHASE E : MISE À JOUR MÉTABOLIQUE ---
         heart.update()
-        dt = heart.compute_dynamics()
-        new_bpm = heart.bpm + (visual_payload.intensity * 10.0) - (heart.atp * 5.0)
-        heart.update_frequency(min(new_bpm, config.get("MAX_BPM", 160.0)))
         status = heart.get_status()
 
-        # Calcul de la vitesse synaptique basée sur la myéline
+        # --- PHASE F : MYÉLINISATION DYNAMIQUE (Nouveau !) ---
+        # En fonction de la reconnaissance, on ajuste la myéline pour accélérer les futurs
         avg_myeline = visual_column.get_average_myelination()
-        synaptic_latency = max(0.01, 0.1 * (1.0 - avg_myeline))
+        
+        # --- PHASE G : CALCUL DE LA LATENCE SYNAPTIQUE (Nouveau) ---
+                # Plus l'organisme 'apprend' (myéline), plus l'influx circule vite.
+        # On passe d'un repos de 0.1s à un minimum de 0.01s pour les zones expertes.
+        base_delay = 0.1
+        synaptic_latency = max(0.01, base_delay * (1.0 - avg_myeline))
 
-        # --- MONITORING V5.3b (Contributeur-Friendly) ---
-        print(f"  │")
-        
-        # Détail Visuel
-        print(f" [Thalamic Hub] Signal from input_visual routed to CGL (Gain: {res_v.get('thalamic_gain', 1.0):.2f})")
-        print(f"  ├─ Stimulus: \"{visual_payload.source}\"")
-        
-        # Détail Auditif
-        print(f" [Thalamic Hub] Signal from input_auditory routed to CGM (Gain: {res_a.get('thalamic_gain', 1.0):.2f})")
-        print(f"  ├─ Stimulus: \"{auditory_payload.source}\"")
-        
-        # Détail Haptic
-        print(f" [Thalamic Hub] Signal from input_haptic routed to VPL (Gain: {res_t.get('thalamic_gain', 1.0):.2f})")
-        print(f"  ├─ Stimulus: \"{char}\" unicode")
-        print(f"  │")
+        # --- MONITORING FINAL v5.2 ---
+        print(f"\nCycle {cycle:02d}")
 
-        # Status Global du Hub
-        print(f"  ├─ Hub Status (Visual)      : {res_v.get('status', 'Routed!')}")
-        print(f"  ├─ Hub Status (Auditory)    : {res_a.get('status', 'Routed!')}")
-        print(f"  ├─ Hub Status (Haptic)      : {res_t.get('status', 'Routed!')}")
-        status_label = "Known!" if cortical_results['recognition'] > 0 else "Unknown."
-        print(f"  ├─ Pattern Match (Cortex)   : {cortical_results['recognition']:.2%} {status_label}")
-        print(f"  ├─ Thalamic (bpm)           : {thalamus.current_bpm:.1f} (vitality: {(status['vitality']* 100 ):.2f}%)")
-        
-        # Performances et Biologie
-        print(f"  ├─ Synaptic Speed (ms)      : {1.0 + avg_myeline:.2f}x (latency: {synaptic_latency:.4f}s)")
-        print(f"  ├─ Retroaction (Signal L6)  : {l6_signal:.2f} mV")
-        print(f"  └─ Myeline (σ)              : {avg_myeline:.5f} Increased conductivity")
+        # Visuel (CGL : Corps Genouillé Latéral)
+        print(f"[V1] Visual perception (Stimulus: {visual_payload.source})...")
+        print(f" └─ Thalamus (CGL)       : BPM {log_v['bpm']:.1f} | Gain {log_v.get('thalamic_gain', 0):.2f}")
+
+        # Auditif (CGM : Corps Genouillé Médian)
+        print(f"[A1] Auditory perception (Stimulus: {auditory_payload.source})...")
+        print(f" └─ Thalamus (CGM)       : BPM {log_v['bpm']:.1f} | Gain {log_v.get('thalamic_gain', 0):.2f}")
+
+        # Tactile (VPL : Noyau Ventral Postéro-Latéral)
+        print(f"[T1] Somatosensory Input (Stimulus: '{char}', Unicode Wide)...")
+        print(f" └─ Thalamus (VPL)       : BPM {log_t['bpm']:.1f} | Gain {log_t['thalamic_gain']:.2f}")
+        print(f" └─ Cortex               : Pattern Match {cortical_results['recognition']:.2%}")
+        print(f" └─ Feedback             : L6 Signal {cortical_results['l6_feedback']:.2f}")
+        print(f" └─ Myelin               : {avg_myeline:.5f} (Increased conductivity)")
+        print(f" └─ Synaptic Speed       : {1.0 + avg_myeline:.2f}x (Latency: {synaptic_latency:.4f}s)")
+        print(f" └─ Metabolic Homeostasis: {status['bpm']:.1f} BPM | Vitality: {status['energy']:.2%}")
 
         await asyncio.sleep(synaptic_latency)
 
-    print("\n--- ✅ Organism v5.3b stabilized with Thalamic Hub ---")
+    print("\n--- ✅ Stabilized and functional organism ---")
 
 if __name__ == "__main__":
     create_ascii_header()
     asyncio.run(main())
-
-    """
-    « L'œil ne voit que ce que l'esprit est préparé à comprendre. » 
-                                                — Henri Bergson
-    """
