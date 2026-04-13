@@ -67,8 +67,6 @@ The most advanced feature of the **v5.3 Hub** is its integration with **Cortical
 
 As we move toward **v5.4**, the _Thalamic Hub_ will serve as the foundation for **Autonomous Sleep Cycles** and **LTP _(Long-Term Potentiation)_ ** in the _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_, turning transient perceptions into permanent digital memories.
 
-_**Ready for the Global Stage?**_
-
 ![ ](/docs/assets/spacer32x32.png)
 
 ![img](/docs/assets/occipital_input_test_256x256_00_ALL.gif)
