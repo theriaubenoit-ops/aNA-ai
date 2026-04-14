@@ -1,3 +1,5 @@
+![ ](/docs/assets/spacer16x16.png)
+
 ## 🏛️ ADR 004 : Architecture de Résonance vs Mémorisation Statistique _(aNA AI Project v5.3b)_
 
 **Date :** 13 Avril 2026  
