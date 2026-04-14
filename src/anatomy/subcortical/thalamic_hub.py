@@ -9,9 +9,18 @@ Architecture, concept and supervision: Benoit Theriault
 Collaboration, research and code: Gemini
 """
 
+import os
+import sys
 import asyncio
 from typing import Dict, Any
 import numpy as np
+
+# Alignement du path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../..')))
+
+# from src.registry import SIGNALS, ORGANS
+from src.config import get_config
+from src.registry import ORGANS
 
 class ThalamicHub:
     def __init__(self, thalamus_core):
