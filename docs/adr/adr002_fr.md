@@ -1,3 +1,5 @@
+![ ](/docs/assets/spacer16x16.png)
+
 ## 🏛️ ADR 002 : Implémentation du Cervelet comme Correcteur de Précision _(aNA AI Project v5.2b)_
 
 **Date :** 21 mars 2026  
