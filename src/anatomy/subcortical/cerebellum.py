@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Cerebellum implementation for aNA v5.1
+Cerebellum implementation for aNA AI Project v5.3b
 
 Communicates with: Input: (<- Cortex / Thalamus) | Output: (-> Motor Outputs / Feedback Loop)
 
@@ -11,12 +11,16 @@ Architecture, concept and supervision: Benoit Theriault
 Collaboration, research and code: Gemini
 """
 
+import os
+import sys
 import numpy as np
 from typing import Dict, List, Tuple, Optional
 from dataclasses import dataclass
 from enum import Enum
 
-from anatomy.base.neuron import Neuron, NeuronConfig
+# Alignement du path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../..')))
+from src.anatomy.base.neuron import Neuron, NeuronConfig
 
 
 class CerebellarLayer(Enum):
