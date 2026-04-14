@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Thalamus implementation for aNA v5.2
+Thalamus implementation for aNA AI Project v5.3b
 
 Communicates with: 
 Input: (<- InputGateway) (<- Hippocampus) (<- Amygdala)
@@ -37,6 +37,7 @@ class Thalamus:
         self.base_bpm = config.get("BASE_BPM", 120.0)
         self.atp_critical = config.get("ATP_CRITICAL_THRESHOLD", 0.20)
         self.atp_fatigue_zone = config.get("ATP_FATIGUE_ZONE", 0.40)
+        self.system_strain = 0.0
 
         # 2 nouvelles propriétés pour la gestion de la fatigue
         thalamus_struct = ORGANS.get("THALAMUS", {})
@@ -49,6 +50,13 @@ class Thalamus:
         self.is_autonomous = False
         self.current_bpm = self.base_bpm
         self.nuclei_activity = {n: 0.0 for n in self.nuclei}
+
+    def apply_cortical_feedback(current_signal, previous_l6, config):
+        resonance = config.get("CORTICAL_RESONANCE_FACTOR", 0.5)
+        # Plus la résonance est haute, plus la prédiction L6 stabilise 
+        # le signal entrant, facilitant le "Known!"
+        stabilized_signal = current_signal + (previous_l6 * resonance)
+        return stabilized_signal
 
     def update_strain_level(self, usage_cycles: int, recovery_rate: float):
         """
