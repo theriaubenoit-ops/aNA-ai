@@ -45,7 +45,7 @@ Nous implémentons une boucle de rétroaction active où le succès d'un traitem
 
 ### Philosophie
 
-> _« La mémorisation est une archive fixe, tandis que la compréhension est une architecture toujours en mouvement »"_
+> _« La mémorisation est une archive fix, tandis que la compréhension est une architecture toujours en mouvement »"_
 > — Benoit Thériault
 
 Ce document confirme que l'innovation au sein de **aNA** repose sur la capacité de l'IA à construire ses propres modèles internes de compréhension, reflétant ainsi la méthode d'apprentissage de son créateur.
