@@ -21,6 +21,8 @@ from enum import Enum
 # Alignement du path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../..')))
 from src.anatomy.base.neuron import Neuron, NeuronConfig
+from src.config import get_config
+from src.registry import ORGANS
 
 
 class CerebellarLayer(Enum):
