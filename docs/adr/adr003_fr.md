@@ -1,3 +1,5 @@
+![ ](/docs/assets/spacer16x16.png)
+
 ## 🏛️ ADR 003 : Optimisation de l'Apprentissage par la Richesse Contextuelle _(aNA AI Project v5.3b)_
 
 **Date :** 13 Avril 2026  
