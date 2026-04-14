@@ -1,3 +1,5 @@
+![ ](/docs/assets/spacer16x16.png)
+
 ## 🏛️ ADR 001 : Transition vers l'Architecture Corticale Hiérarchique _(aNA AI Project v5.1b)_
 
 **Date :** 11 février 2026  
