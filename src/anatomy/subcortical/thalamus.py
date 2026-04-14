@@ -14,10 +14,10 @@ Architecture, concept and supervision: Benoit Theriault
 Collaboration, research and code: Gemini, Cline
 """
 
+import os
+import sys
 import asyncio
 from typing import Dict, Any
-import sys
-import os
 
 # Alignement du path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../..')))
