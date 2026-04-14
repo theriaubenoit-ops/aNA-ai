@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Pulse implementation for aNA v5.2
+Pulse implementation for aNA AI Project v5.3b
 
 Communicates with: Input: (<- Thalamus) (<- Amygdala) | Output: (-> Global Metabolism / BPM)
 
@@ -25,11 +25,12 @@ class Pulse:
         config = get_config()
         self.bpm = bpm if bpm is not None else config["BASE_BPM"]
         self.hz = self.bpm / 60.0 
-        self.last_time = time.time()             
+        self.last_time = time.time()
         
         # Variables vitales pour compute_dynamics()
         self.atp = 1.0           # L'énergie réelle
-        self.energy = 1.0        # Doublon pour compatibilité get_status()
+        self.energy = 1.0  
+        self.is_resting = False  
         self.dopamine = 0.1      
         self.is_refractory = False
 
@@ -140,7 +141,7 @@ class Pulse:
         # On retire le multiplicateur * 100 si ENERGY_MAX est déjà à 100
         # Ou on s'assure de renvoyer une fraction de 100.
         return {
-            "bpm": self.hz * 60,
-            "energy": max(0, self.energy), # On affiche la valeur brute
-            "hz": self.hz
+        "bpm": self.bpm,
+        "vitality": getattr(self, 'energy', 100.0), # Utilise energy pour Vitalité
+        "is_resting": getattr(self, 'is_resting', False) # Défaut à False si absent
         }
