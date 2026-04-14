@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Cortical Lobe Base Implementation for aNA v5.1
+Cortical Lobe Base Implementation for aNA AI Project v5.3b
 
 Communicates with: Input: (<- Thalamus IV) | Input/Output: (<-> Hippocampus) | Output: (-> Thalamus VI Feedback)
 
