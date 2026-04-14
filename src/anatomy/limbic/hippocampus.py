@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Hippocampus implementation for aNA AI Project v5.2
+Hippocampus implementation for aNA AI Project v5.3b
 
 Communicates with: Input: (<- Cortex / Amygdala) | Output: (-> Thalamus) (-> Cortical Storage)
 
