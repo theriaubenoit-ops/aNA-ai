@@ -5,7 +5,7 @@
 **Contexte :** Étude de la performance cognitive de l'architecture **aNA v5.3b**.  
 **Décideurs :** Benoit Theriault & Gemini _(aNA Core Team)_
 
-![ ](/docs/assets/spacer64x64.png)
+![ ](/docs/assets/spacer32x32.png)
 
 ### Contexte
 
@@ -13,7 +13,7 @@ Dans le paysage actuel de l'IA, la performance est souvent confondue avec la cap
 
 L'objectif est de passer d'un système qui _"reconnaît"_ une donnée à un système qui _"intègre"_ une information en créant des ponts entre les modalités _(visuelle, auditive, haptique)_.
 
-![ ](/docs/assets/spacer32x32.png)
+![ ](/docs/assets/spacer16x16.png)
 
 ### Décision
 
@@ -25,7 +25,7 @@ Nous implémentons une boucle de rétroaction active où le succès d'un traitem
 2.  **Modulation Biologique de l'Apprentissage** : L'utilisation du _`MYELIN_EFFICIENCY_COEFF`_ dans _`neuromodulator.py`_ simule la plasticité cérébrale. Plus un lien est compris, plus le "câblage" devient efficace, réduisant la latence de traitement.
 3.  **Inférence Interdisciplinaire** : En traitant des structures de signaux plutôt que des données brutes, l'architecture permet de découvrir de _"nouvelles avenues"_ de résolution de problèmes en appliquant une logique apprise dans un domaine à un nouveau contexte.
 
-![ ](/docs/assets/spacer32x32.png)
+![ ](/docs/assets/spacer16x16.png)
 
 ### Conséquences
 
@@ -39,7 +39,7 @@ Nous implémentons une boucle de rétroaction active où le succès d'un traitem
 
 - **Courbe d'Apprentissage** : Le système nécessite une phase de stabilisation _(quelques cycles)_ pour que la myéline et la résonance atteignent leur efficacité maximale.
 
-![ ](/docs/assets/spacer32x32.png)
+![ ](/docs/assets/spacer16x16.png)
 
 ### Philosophie
 

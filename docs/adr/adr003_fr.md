@@ -5,13 +5,13 @@
 **Contexte :** Étude de la performance cognitive de l'architecture **aNA v5.3b**.  
 **Décideurs :** Benoit Theriault & Gemini _(aNA Core Team)_
 
-![ ](/docs/assets/spacer64x64.png)
+![ ](/docs/assets/spacer32x32.png)
 
 ### 1. Problématique
 
 Lors des phases de tests unitaires, nous avons comparé la vitesse d'apprentissage _(Pattern Match %)_ entre des stimuli courts _("Hi")_ et des stimuli plus longs et structurellement plus denses _("Hello")_. L'intuition classique suggérait qu'un stimulus plus simple serait appris plus rapidement. Les résultats ont démontré le contraire.
 
-![ ](/docs/assets/spacer32x32.png)
+![ ](/docs/assets/spacer16x16.png)
 
 ### 2. Observation Phénoménologique
 
@@ -20,7 +20,7 @@ L'organisme **aNA** présente un taux de réussite _(Pattern Match)_ nettement s
 - **Stimulus Court _("Hi")_ :** Résultat instable, forte sensibilité au bruit de fond (`NOISE_LEVEL`).
 - **Stimulus Riche _("Hello")_ :** Résultat robuste, accélération de la conduction saltatoire via la Myéline (σ).
 
-![ ](/docs/assets/spacer32x32.png)
+![ ](/docs/assets/spacer16x16.png)
 
 ### 3. Analyse Bio-Inspirée
 
@@ -30,7 +30,7 @@ Cette observation valide trois piliers mécaniques de notre architecture :
 2. **La Robustesse par la Complexité :** La richesse des traits _(géométrie des glyphes)_ lève les ambiguïtés statistiques. Le système ne _"lit"_ pas, il _"reconnaît"_ une signature.
 3. **L'Homéostasie Attentionnelle :** Le **Thalamic Hub** filtre plus efficacement les bruits parasites lorsqu'il peut s'appuyer sur un pattern structurellement cohérent.
 
-![ ](/docs/assets/spacer32x32.png)
+![ ](/docs/assets/spacer16x16.png)
 
 ### 4. Décision Architecturale
 
@@ -39,7 +39,7 @@ Cette observation valide trois piliers mécaniques de notre architecture :
 - **Priorité au Contexte :** Les séquences de tests par défaut privilégieront les stimuli multilingues et riches _(ex: "Hello", "你好")_ pour favoriser la stabilisation des colonnes corticales.
 - **Focale Attentionnelle :** Mise en place d'un dossier _`/other`_ pour les médias secondaires afin d'éviter la saturation synaptique initiale et permettre une montée en puissance progressive de l'organisme.
 
-![ ](/docs/assets/spacer32x32.png)
+![ ](/docs/assets/spacer16x16.png)
 
 ### 5. Conséquences
 
