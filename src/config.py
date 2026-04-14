@@ -77,45 +77,45 @@ SENSORY_WEIGHTS = {                # AVERAGE HUMAN (visual priority) Total: 1.0 
 
 # --- OPTION A: HUMAIN PERFORMANT (High Plasticity & Focus) ---
 # Neuroplasticité maximale, gestion optimale du stress et focus thalamique.
-AMYGDALA_SENSITIVITY      = 0.5    # Calme et analytique
-L6_GAIN                   = 0.8    # Frein cortical précis
-SYNAPTIC_PLASTICITY       = 0.05   # Apprentissage rapide (Max)
-MYELIN_RATE               = 0.04   # Câblage rapide
-MYELIN_EFFICIENCY_COEFF   = 2.0    # Richesse du câblage 
-CORTICAL_RESONANCE_FACTOR = 0.9    # Persistance de la prédiction 
-THALAMIC_THRESHOLD        = 0.35   # Filtrage stoïque (Stoic)
-ATP_CRITICAL_THRESHOLD    = 0.10   # Bascule lentement en mode repos
-ATP_CONSUMPTION           = 0.001  # Grande endurance
-NOISE_LEVEL               = 0.01   # Bruit de fond bas
+AMYGDALA_SENSITIVITY      = 0.5    
+L6_GAIN                   = 0.8    
+SYNAPTIC_PLASTICITY       = 0.05   
+MYELIN_RATE               = 0.04   
+MYELIN_EFFICIENCY_COEFF   = 2.0    
+CORTICAL_RESONANCE_FACTOR = 0.9     
+THALAMIC_THRESHOLD        = 0.35   
+ATP_CRITICAL_THRESHOLD    = 0.10  
+ATP_CONSUMPTION           = 0.001  
+NOISE_LEVEL               = 0.01   
 
 # --- OPTION B: HUMAIN MOYEN (Standard Baseline) ---
 # Les valeurs par défaut que nous avons testées jusqu'ici.
 """
-AMYGDALA_SENSITIVITY      = 1.0    # Valeur moyenne
-L6_GAIN                   = 0.5    # Valeur moyenne
-SYNAPTIC_PLASTICITY       = 0.01   # Valeur moyenne
-MYELIN_RATE               = 0.03   # Valeur moyenne
-MYELIN_EFFICIENCY_COEFF   = 1.5    # Valeur moyenne
-CORTICAL_RESONANCE_FACTOR = 0.6    # Valeur moyenne
-THALAMIC_THRESHOLD        = 0.15   # Valeur moyenne
-ATP_CRITICAL_THRESHOLD    = 0.20   # Valeur moyenne
-ATP_CONSUMPTION           = 0.003  # Valeur moyenne
-NOISE_LEVEL               = 0.02   # Valeur moyenne
+AMYGDALA_SENSITIVITY      = 1.0   
+L6_GAIN                   = 0.5    
+SYNAPTIC_PLASTICITY       = 0.01  
+MYELIN_RATE               = 0.03  
+MYELIN_EFFICIENCY_COEFF   = 1.5    
+CORTICAL_RESONANCE_FACTOR = 0.6   
+THALAMIC_THRESHOLD        = 0.15  
+ATP_CRITICAL_THRESHOLD    = 0.20  
+ATP_CONSUMPTION           = 0.003  
+NOISE_LEVEL               = 0.02   
 """
 
 # --- OPTION C: HUMAIN FATIGUÉ/SATURÉ (Saturated & Exhausted) ---
 # ATP bas, hyper-réactivité émotionnelle et difficulté d'encodage.
 """
-AMYGDALA_SENSITIVITY      = 1.8    # Hyper-réactif au moindre bruit
-L6_GAIN                   = 0.2    # Presque plus de frein cortical
-SYNAPTIC_PLASTICITY       = 0.002  # Apprentissage laborieux
-MYELIN_RATE               = 0.01   # Câblage lent
-MYELIN_EFFICIENCY_COEFF   = 1.0    # Câblage dégradé ou inefficace
-CORTICAL_RESONANCE_FACTOR = 0.2    # Incapable de maintenir un focus
-THRESHOLD_NMDA            = 0.8    # Verrouillage mémoire très difficile
-ATP_CRITICAL_THRESHOLD    = 0.30   # Bascule très vite en mode repos
-ATP_CONSUMPTION           = 0.005  # Rapide
-NOISE_LEVEL               = 0.08   # Bruit de fond élevé (signal illisible)
+AMYGDALA_SENSITIVITY      = 1.8    
+L6_GAIN                   = 0.2    
+SYNAPTIC_PLASTICITY       = 0.002  
+MYELIN_RATE               = 0.01   
+MYELIN_EFFICIENCY_COEFF   = 1.0    
+CORTICAL_RESONANCE_FACTOR = 0.2    
+THRESHOLD_NMDA            = 0.8    
+ATP_CRITICAL_THRESHOLD    = 0.30   
+ATP_CONSUMPTION           = 0.005 
+NOISE_LEVEL               = 0.08   
 """
 
 
