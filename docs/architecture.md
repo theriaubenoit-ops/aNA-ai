@@ -206,18 +206,8 @@ Processing Hierarchy:
 
 ```
 ├── docs/
-│   ├── adr/
-│   │   ├── adr001.md                # ✅ Architecture Decision Records
-│   │   ├── adr002.md                # ✅ Architecture Decision Records
-│   │   ├── adr003.md                # ✅ Architecture Decision Records
-│   │   ├── adr004.md                # ✅ Architecture Decision Records
-│   │   └── adr005.md                # ✅ Architecture Decision Records
-│   ├── adr_fr/
-│   │   ├── adr001.md                # ✅ Architecture Decision Records (FR)
-│   │   ├── adr002.md                # ✅ Architecture Decision Records (FR)
-│   │   ├── adr003.md                # ✅ Architecture Decision Records (FR)
-│   │   ├── adr004.md                # ✅ Architecture Decision Records (FR)
-│   │   └── adr005.md                # ✅ Architecture Decision Records (FR)
+│   ├── adr/                            # ✅ Architecture Decision Records
+│   ├── adr_fr/                         # ✅ Architecture Decision Records (fr)
 │   ├── assets/                         # 📋 Medias
 │   ├── examples/                       # 📋 Comprehensive example suite
 │   ├── api-reference.md                # 📋 ...
@@ -264,24 +254,27 @@ Processing Hierarchy:
 │   │   ├── dashboard.py                # 🚧 Dashboard
 │   │   └── dashboard_fr.py             # 🚧 Dashboard (FR)
 │   ├── tests/                          # Comprehensive test suite
-│   │   ├── test_amygdala.py            # ✅ Priority Filter & Interrupt Controller
+│   │   ├── test_amygdala.py            # Priority Filter & Interrupt Controller
 │   │   ├── test_autonomy.py            # ✅ To validate the autonomous behaviors
-│   │   ├── test_cerebellum.py          # ✅ Timing Engine & Output Calibration
+│   │   ├── test_cerebellum.py          # Timing Engine & Output Calibration
 │   │   ├── test_cortical_column.py     # ✅ Six-layer cortical signal flow
 │   │   ├── test_hippocampus.py         # ✅ Dynamic Buffer & Indexing System
-│   │   ├── test_limbic_system.py       # ✅ Limbic system
-│   │   ├── test_neuron.py              # ✅ Represents a single neuron
+│   │   ├── test_limbic_system.py       # Limbic system
+│   │   ├── test_neuron.py              # Represents a single neuron
 │   │   ├── test_pulse.py               # ✅ Core Pacemaker (Pulse)
 │   │   ├── test_trauma_logic.py        # ✅ Hippocampus Trauma Logic
 │   │   └── test_thalamus.py            # ✅ Enhanced Thalamus implementation
 │   ├── tests_fr/                       # Comprehensive test suite (FR)
-│   │   ├── test_amygdala.py            # ✅ Priority Filter & Interrupt Controller (FR)
+│   │   ├── media_audio/                # ✅ Media audio
+│   │   ├── media_haptic/               # ✅ Media haptic
+│   │   ├── media_visual/               # ✅ Media visual
+│   │   ├── test_amygdala.py            # Priority Filter & Interrupt Controller (FR)
 │   │   ├── test_autonomy.py            # ✅ To validate the autonomous behaviors (FR)
-│   │   ├── test_cerebellum.py          # ✅ Timing Engine & Output Calibration (FR)
+│   │   ├── test_cerebellum.py          # Timing Engine & Output Calibration (FR)
 │   │   ├── test_cortical_column.py     # ✅ Six-layer cortical signal flow (FR)
 │   │   ├── test_hippocampus.py         # ✅ Dynamic Buffer & Indexing System (FR)
-│   │   ├── test_limbic_system.py       # ✅ Limbic system (FR)
-│   │   ├── test_neuron.py              # ✅ Represents a single neuron (FR)
+│   │   ├── test_limbic_system.py       # Limbic system (FR)
+│   │   ├── test_neuron.py              # Represents a single neuron (FR)
 │   │   ├── test_pulse.py               # ✅ Core Pacemaker (Pulse) (FR)
 │   │   ├── test_trauma_logic.py        # ✅ Hippocampus Trauma Logic (FR)
 │   │   └── test_thalamus.py            # ✅ Enhanced Thalamus implementation (FR)
