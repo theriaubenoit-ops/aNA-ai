@@ -39,4 +39,8 @@ Instructions française : [installation (fr)](/docs/installation_fr.md)
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-31_
+###### _\*Each measurement presented is a digital bridge to biological reality, designed to synthesize the fundamental principles of living systems._
+
+![ ](/docs/assets/spacer16x16.png)
+
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-15_
