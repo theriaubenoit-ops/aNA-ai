@@ -116,4 +116,8 @@ His work on how adrenal hormones and the _[amygdala(.py)](/src/anatomy/limbic/am
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-06_
+###### _\*This project is an interpretation of established science, psychology, and philosophy, while remaining in constant motion toward future discoveries. I do not claim biological exactitude; rather, I hold a profound desire to propose new theories to inspire the next generations of AI. My goal is to foster systems that are better utilized and more responsive to the complex challenges of our time, using digital bridges to synthesize the fundamental principles of living systems._
+
+![ ](/docs/assets/spacer16x16.png)
+
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-15_
