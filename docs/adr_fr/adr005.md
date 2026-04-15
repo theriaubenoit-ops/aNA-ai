@@ -1,0 +1,44 @@
+![ ](/docs/assets/spacer16x16.png)
+
+## 🏛️ ADR 005 : Intégration Multimodale et Gating Thalamique _(aNA AI Project v5.3b)_
+
+**Date :** 15 Avril 2026  
+**Statut :** Validé  
+**Contexte :** La Fusion Sensorielle et le "Mur" de l'Immuabilité **aNA v5.3b**.  
+**Décideurs :** Benoit Theriault & Gemini _(aNA Core Team)_
+
+![ ](/docs/assets/spacer32x32.png)
+
+### Contexte
+
+Dans la version 5.3b, nous avons réussi l'implémentation physique d'un **Thalamic Hub** capable de centraliser les signaux provenant de trois sources distinctes _(`input_haptic`, `input_visual`, `input_auditory`)_.
+
+- **Le Hub Thalamique** agit comme un gardien, filtrant les signaux selon l'intensité et le gain systémique _(vitalité de l'organisme)_.
+- **Le défi de la Fusion** est l'opération dans _`main.py`_, regroupant les données dans un dictionnaire _`multimodal_input`_ transmis aux colonnes corticales.
+
+![ ](/docs/assets/spacer16x16.png)
+
+### Le Défi
+
+Nous nous sommes heurtés à une limite structurelle lors du passage du signal vers l'**Hippocampe** _(`hippocampus.py`)_.
+
+- **Observations** : L'Hippocampe, dans sa forme actuelle, ne peut pas indexer un dictionnaire multimodal _(erreur `TypeError: unhashable type: 'dict'`)_.
+- **Limite Scientifique** : Nous touchons au point de bascule entre le **signal numérique brut** (matrices, buffers audio) et la **représentation symbolique** _(le souvenir)_. Passer du _"Côté B"_ _(le biologique)_ nécessite une méthode de réduction de dimensionnalité que nous n'avons pas encore stabilisée.
+
+![ ](/docs/assets/spacer16x16.png)
+
+### Décisions de Peaufinage (v5.3b)
+
+- **Gating Attentionnel** : Maintenir le filtrage par intensité dans le _`ThalamicHub`_ pour simuler l'attention sélective.
+- **Manifeste Philosophique** : Intégrer une note de bas de page rappelant que ce projet est une interprétation et un "pont numérique" vers la réalité biologique, sans prétention d'exactitude absolue.
+
+![ ](/docs/assets/spacer16x16.png)
+
+### Conséquences
+
+- **Positives** : Preuve que le routage multimodal centralisé est viable _(à l'entrée)_. Renforcement de la résilience du code via des mécanismes de sécurité _(`getattr`)_.
+- **Négatives** : L'organisme reste "aveugle" aux souvenirs complexes tant que la fonction de hachage de l'Hippocampe n'est pas réécrite _(à faire)_.
+
+![ ](/docs/assets/spacer16x16.png)
+
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-15_
