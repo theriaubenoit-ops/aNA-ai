@@ -79,11 +79,12 @@ async def main():
     )
     hub = ThalamicHub(thalamus_core=thalamus) # Centralisation multimodal v5.3
     
-    # Séquence de test (Unicode Wide)
+    # Séquences de test (Unicode Wide)
     # test_sequence = ["a", "N", "A", " ", "a", "N", "A", " ", "a", "N", "A", " ", "a", "N", "A", " ", "a", "N", "A", " ", "a", "N", "A", " ", "B", "A", "N", "A", "N", "A", "S"]
     # test_sequence = ["B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", " ", "你"]
     # test_sequence = ["H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "o", "l", "a", " ", "O", "l", "á", " ", "你", "好", " ", "H", "i"]
-    test_sequence = ["H", "e", "l", "l", "o", " ", "H", "e", "l", "l", "o", " ", "H", "e", "l", "l", "o", " ", "H", "e", "l", "l", "o", " ", "H", "o", "l", "a", " ", "你", "好", " ", "H", "e", "l", "l", "o"]
+    # test_sequence = ["H", "e", "l", "l", "o", " ", "H", "e", "l", "l", "o", " ", "H", "e", "l", "l", "o", " ", "H", "e", "l", "l", "o", " ", "H", "o", "l", "a", " ", "你", "好", " ", "H", "e", "l", "l", "o"]
+    test_sequence = ["1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1"]
 
     base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     img_dir = os.path.join(base_path, "src", "tests", "media_visual", "64x64")
@@ -95,25 +96,15 @@ async def main():
     if not all_images:
         print(f" [Warning] No visual stimuli were found in: {img_dir}")
     if not all_sounds:
-        print(f" [Warning] No visual stimuli were found in: {audio_dir}")
+        print(f" [Warning] No auditory stimuli were found in: {audio_dir}")
 
     for cycle, char in enumerate(test_sequence, 1):
         # --- PHASE A : ANALYSE PRÉDICTIVE (Feedback L6) ---
         cortical_results = await visual_column.process_input(char, hippo)
         l6_signal = cortical_results['l6_feedback']
-
-        # --- PHASE B : CAPTURE DES PAYLOADS ---
         
-        # 1. AUDIO (Capture réelle du fichier .wav)
-        if all_sounds:
-            snd_index = (cycle - 1) % len(all_sounds)
-            current_sound_path = os.path.join(audio_dir, all_sounds[snd_index])
-            # Appel à l'Easter Egg de Don Quichotte
-            auditory_payload = await auditory_gateway.capture_sound(file_path=current_sound_path)
-        else:
-            auditory_payload = await auditory_gateway.capture_sound(audio_data=np.zeros(100))
-
-        # 2. VISUEL (Utilisation de la liste déjà scannée)
+        # --- PHASE B : CAPTURE DES PAYLOADS ---
+        # VISUEL (Utilisation de la liste déjà reçue)
         if all_images:
             img_index = (cycle - 1) % len(all_images)
             current_img_name = all_images[img_index]
@@ -128,11 +119,28 @@ async def main():
             visual_payload.intensity = float(np.max(real_matrix))
         else:
             visual_payload = type('obj', (object,), {'source': "None", 'intensity': 0.1})()
-        
+
+        # AUDIO (Utilisation de la liste déjà reçue)
         # Simulation Auditory (CGM)
         # auditory_payload = await auditory_gateway.capture_sound(audio_data=real_matrix, ratio=0.25)
         # auditory_payload.source = f"audio_{cycle}.wav"
         # auditory_payload.intensity = 0.7
+        if all_sounds:
+            snd_index = (cycle - 1) % len(all_sounds)
+            current_sound_path = os.path.join(audio_dir, all_sounds[snd_index])
+            # Appel à l'Easter Egg de Don Quichotte
+            auditory_payload = await auditory_gateway.capture_sound(file_path=current_sound_path)
+        else:
+            auditory_payload = await auditory_gateway.capture_sound(audio_data=np.zeros(100))
+
+        # Haptic (Utilisation du caractère déjà reçu)
+        # multimodal_input = {
+        #     "haptic": char,
+        #     "visual": visual_payload.matrix_data, # Tes vrais pixels
+        #     "auditory": auditory_payload.data
+        # }
+        # cortical_results = await visual_column.process_input(multimodal_input, hippo)
+        # l6_signal = cortical_results['l6_feedback']
 
         # Simulation Haptic (VPL)
         haptic_data = {
@@ -152,7 +160,7 @@ async def main():
         
         res_v = await hub.route_sensory_input("input_visual", visual_payload.__dict__)
         res_a = await hub.route_sensory_input("input_auditory", auditory_payload.__dict__)
-        res_t = await hub.route_sensory_input("input_haptic", haptic_data)
+        res_h = await hub.route_sensory_input("input_haptic", haptic_data)
 
         # --- PHASE D : MISE À JOUR MÉTABOLIQUE ---
         heart.update()
@@ -177,14 +185,14 @@ async def main():
         print(f"  ├─ Stimulus: \"{auditory_payload.source}\"")
         
         # Détail Haptic
-        print(f" [Thalamic Hub] Signal from input_haptic routed to VPL (Gain: {res_t.get('thalamic_gain', 1.0):.2f})")
+        print(f" [Thalamic Hub] Signal from input_haptic routed to VPL (Gain: {res_h.get('thalamic_gain', 1.0):.2f})")
         print(f"  ├─ Stimulus: \"{char}\" unicode")
         print(f"  │")
 
         # Status Global du Hub
         print(f"  ├─ Hub Status (Visual)      : {res_v.get('status', 'Routed!')}")
         print(f"  ├─ Hub Status (Auditory)    : {res_a.get('status', 'Routed!')}")
-        print(f"  ├─ Hub Status (Haptic)      : {res_t.get('status', 'Routed!')}")
+        print(f"  ├─ Hub Status (Haptic)      : {res_h.get('status', 'Routed!')}")
         status_label = "Known!" if cortical_results['recognition'] > 0 else "Unknown."
         print(f"  ├─ Pattern Match (Cortex)   : {cortical_results['recognition']:.2%} {status_label}")
         print(f"  ├─ Thalamic (bpm)           : {thalamus.current_bpm:.1f} (vitality: {(status['vitality']* 100 ):.2f}%)")
@@ -197,6 +205,8 @@ async def main():
         await asyncio.sleep(synaptic_latency)
 
     print("\n--- ✅ Organism v5.3b stabilized with Thalamic Hub ---")
+    print("\n  *Every measurement reflected here is a digital bridge to biological reality,")
+    print("\n   designed to synthesize the fundamental principles of living systems.")
 
 if __name__ == "__main__":
     create_ascii_header()
