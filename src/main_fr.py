@@ -197,6 +197,8 @@ async def main():
         await asyncio.sleep(synaptic_latency)
 
     print("\n--- ✅ Organisme v5.3b stabilisé avec Thalamic Hub ---")
+    print("\n  *Chaque mesure présentée ici est un pont numérique vers la réalité biologique,")
+    print("\n   conçu pour synthétiser les principes fondamentaux des systèmes vivants.")
 
 if __name__ == "__main__":
     create_ascii_header()
