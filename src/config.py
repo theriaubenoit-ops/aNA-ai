@@ -65,9 +65,9 @@ THALAMIC_REFRACTORY_PERIOD = 0.05  # RECOVERY TIME Min: 0.01 (Fast) Max: 0.20 (S
 
 # --- Relative importance of the senses / Importance relative des sens (FR) ---
 SENSORY_WEIGHTS = {                # AVERAGE HUMAN (visual priority) Total: 1.0 (Sensory weights) / HUMAIN MOYEN (priorité visuel) 
-    "visual": 0.50,                # Min: 0.10 Max: 0.80 (visual dominates)
-    "auditory": 0.30,              # Min: 0.10 Max: 0.60 (attentive to noise)
-    "haptic": 0.20                 # Min: 0.05 Max: 0.50 (responsive)
+    "haptic": 0.30,                # Min: 0.10 Max: 0.50 (responsive)
+    "visual": 0.80,                # Min: 0.05 Max: 0.80 (visual dominates)
+    "auditory": 0.50               # Min: 0.10 Max: 0.60 (attentive to noise)
 }
 
 
@@ -76,7 +76,8 @@ SENSORY_WEIGHTS = {                # AVERAGE HUMAN (visual priority) Total: 1.0 
 # =============================================================
 
 # --- OPTION A: HUMAIN PERFORMANT (High Plasticity & Focus) ---
-# Neuroplasticité maximale, gestion optimale du stress et focus thalamique.
+# Neuroplasticité maximale, gestion optimale du stress et focus thalamique
+# """
 AMYGDALA_SENSITIVITY      = 0.5    
 L6_GAIN                   = 0.8    
 SYNAPTIC_PLASTICITY       = 0.05   
@@ -84,9 +85,11 @@ MYELIN_RATE               = 0.04
 MYELIN_EFFICIENCY_COEFF   = 2.0    
 CORTICAL_RESONANCE_FACTOR = 0.9     
 THALAMIC_THRESHOLD        = 0.35   
+THRESHOLD_NMDA            = 0.1    
 ATP_CRITICAL_THRESHOLD    = 0.10  
 ATP_CONSUMPTION           = 0.001  
 NOISE_LEVEL               = 0.01   
+# """
 
 # --- OPTION B: HUMAIN MOYEN (Standard Baseline) ---
 # Les valeurs par défaut que nous avons testées jusqu'ici.
@@ -98,6 +101,7 @@ MYELIN_RATE               = 0.03
 MYELIN_EFFICIENCY_COEFF   = 1.5    
 CORTICAL_RESONANCE_FACTOR = 0.6   
 THALAMIC_THRESHOLD        = 0.15  
+THRESHOLD_NMDA            = 0.4    
 ATP_CRITICAL_THRESHOLD    = 0.20  
 ATP_CONSUMPTION           = 0.003  
 NOISE_LEVEL               = 0.02   
@@ -112,7 +116,8 @@ SYNAPTIC_PLASTICITY       = 0.002
 MYELIN_RATE               = 0.01   
 MYELIN_EFFICIENCY_COEFF   = 1.0    
 CORTICAL_RESONANCE_FACTOR = 0.2    
-THRESHOLD_NMDA            = 0.8    
+THALAMIC_THRESHOLD        = 0.15  
+THRESHOLD_NMDA            = 0.9    
 ATP_CRITICAL_THRESHOLD    = 0.30   
 ATP_CONSUMPTION           = 0.005 
 NOISE_LEVEL               = 0.08   
