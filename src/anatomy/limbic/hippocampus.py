@@ -44,53 +44,58 @@ class Hippocampus:
         # print("  [Hippocampus] v5.2 : Hebbian sequences & Unicode Wide enabled.")
 
     def _get_hash(self, signal_data):
-        """Utilitaire pour rendre les vecteurs NumPy hachables."""
-        if isinstance(signal_data, np.ndarray):
-            return tuple(signal_data.tolist())
+        """Utilitaire récursif pour rendre TOUT type de signal hachable (immulable)."""
+        if isinstance(signal_data, dict):
+            # Transforme le dict en tuple de tuples (clé, valeur_hachée)
+            return tuple((k, self._get_hash(v)) for k, v in sorted(signal_data.items()))
+        elif isinstance(signal_data, (list, np.ndarray)):
+            # Transforme récursivement chaque élément de la liste/array en tuple
+            return tuple(self._get_hash(i) for i in (signal_data.tolist() if hasattr(signal_data, 'tolist') else signal_data))
         return signal_data
 
-    async def evaluate_prediction(self, signal_data, label=None):
+    async def evaluate_prediction(self, signal_data, label=None, sensory_type: str = "haptic"):
         """
         Simule la boucle trisynaptique avec dynamique AMPA/NMDA.
+        Modulation du seuil d'entrée selon le poids sensoriel du Génome.
         """
+        config = get_config()
+        # 1. TRADUCTION : On rend le signal (même un dict) immuable et hachable
         current_signal = self._get_hash(signal_data)
 
         # --- LOGIQUE HEBBIENNE (Consolidation) ---
         if self.last_signal is not None:
             pair = (self.last_signal, current_signal)
-            # On renforce le lien (Plasticité)
             self.sequence_map[pair] = self.sequence_map.get(pair, 0) + 0.1
             
         self.last_signal = current_signal
+        # CRUCIAL : On utilise la version hachée comme étiquette pour les dictionnaires DG/CA3
+        signal_label = current_signal
 
-        # On transforme le vecteur NumPy en tuple (immuable) pour qu'il soit hachable
-        if isinstance(signal_data, np.ndarray):
-            signal_label = tuple(signal_data.tolist())
-        else:
-            signal_label = signal_data
-
-        # 1. DG : Séparation de motifs
+        # 2. DG : Séparation de motifs
         is_known_dg = signal_label in self.subfields["DG"]
 
-        # 2. CA3 : Accès à la trace (Potentiel Synaptique)
-        # On récupère la valeur actuelle ou le "bruit" résiduel (Seuil NMDA)
-        trace_ca3 = self.subfields["CA3"].get(signal_label, self.config.get("MIN_LATENT_THRESHOLD", 0.001))
+        # 3. CA3 : Accès à la trace
+        trace_ca3 = self.subfields["CA3"].get(signal_label, config.get("MIN_LATENT_THRESHOLD", 0.001))
 
-        # 3. CA1 : Comparateur et Modulation de la Plasticité
-        if is_known_dg and trace_ca3 > self.config.get("MIN_LATENT_THRESHOLD", 0.001):
-            # Mécanisme AMPA : Renforcement d'un chemin déjà "ouvert"
-            # La croissance est logarithmique pour éviter la saturation rapide
-            self.subfields["CA3"][signal_label] += self.config.get("LTP_GAIN", 0.05)
-            
-            # Calcul de l'erreur (plus la trace est forte, plus la prédiction est stable)
+        # 4. MODULATION DU SEUIL NMDA (Haptique par défaut à 0.2)
+        # On vérifie si c'est un dictionnaire (multimodal) pour ajuster le poids
+        if isinstance(signal_data, dict):
+            # Pour un signal multimodal, on peut faire une moyenne des poids ou prendre le max
+            sensory_weight = 0.4 # Valeur "Intégration"
+        else:
+            sensory_weight = config["SENSORY_WEIGHTS"].get(sensory_type, 0.2)
+
+        dynamic_nmda_threshold = config.get("THRESHOLD_NMDA", 0.4) * (1.0 - sensory_weight)
+
+        # 5. CA1 : Comparateur et Plasticité
+        if is_known_dg and trace_ca3 > dynamic_nmda_threshold:
+            self.subfields["CA3"][signal_label] += config.get("LTP_GAIN", 0.05)
             prediction_error = 0.1 / self.subfields["CA3"][signal_label]
         else:
-            # Mécanisme NMDA : "Réveil" d'une synapse silencieuse ou création
-            # On passe du potentiel latent à une activation réelle
             prediction_error = 1.0
             self.subfields["DG"][signal_label] = True
-            self.subfields["CA3"][signal_label] = self.config.get("INITIAL_ENGRAM_STRENGTH", 0.1)
-            self.subfields["CA4"][signal_label] = 1.0 
+            self.subfields["CA3"][signal_label] = config.get("INITIAL_ENGRAM_STRENGTH", 0.1)
+            self.subfields["CA4"][signal_label] = 1.0
 
         return max(0.0, min(1.0, prediction_error))
     
@@ -149,23 +154,37 @@ class Hippocampus:
             if self.subfields["CA3"][label] < survival_floor:
                 self.subfields["CA3"][label] = survival_floor
 
-    async def update_trace_with_emotion(self, signal_label: str, impact: float, valence: float):
+    async def update_trace_with_emotion(self, signal_label: str, impact: float, valence: float, sensory_type: str = "visual"):
         """
-        Ajuste la trace CA3 en fonction de l'impact fourni par l'Amygdale.
+        Ajuste la trace CA3 en fonction de l'impact fourni par l'Amygdale
+        et de la priorité sensorielle définie dans le Génome (config).
         """
+        config = get_config() # Récupération des SENSORY_WEIGHTS
+        
         if signal_label not in self.subfields["CA3"]:
-            self.subfields["CA3"][signal_label] = self.config.get("MIN_LATENT_THRESHOLD", 0.001)
+            self.subfields["CA3"][signal_label] = config.get("MIN_LATENT_THRESHOLD", 0.001)
 
-        # La valence positive (plaisir) renforce doucement.
-        # La valence négative (peur/douleur) grave la trace profondément (LTP forcée).
+        # 1. RÉCUPÉRATION DU POIDS SENSORIEL (Ex: Visual=0.5, Auditory=0.3)
+        # On utilise le poids défini dans config.py pour moduler l'impact
+        weight = config["SENSORY_WEIGHTS"].get(sensory_type, 0.1)
+        
+        # 2. MODULATION DE L'IMPACT (L'image marquera plus que le son)
+        effective_impact = impact * weight
+
+        # 3. LOGIQUE DE VALENCE (LTP forcée pour le danger)
         if valence < -0.5:
-            # "Trace Acide" : On augmente massivement la valeur pour qu'elle 
-            # mette des années (cycles) à redescendre au seuil minimal.
-            self.subfields["CA3"][signal_label] += (impact * 2.0)
+            # "Trace Acide" : On multiplie l'effet pour la survie
+            # Le poids sensoriel détermine la profondeur de la gravure
+            self.subfields["CA3"][signal_label] += (effective_impact * 2.0)
+            
+            # On grave aussi un plancher de survie dans CA4
+            if signal_label not in self.subfields["CA4"]:
+                self.subfields["CA4"][signal_label] = effective_impact * 0.5
         else:
-            self.subfields["CA3"][signal_label] += (impact * 0.5)
+            # Apprentissage calme / plaisir
+            self.subfields["CA3"][signal_label] += (effective_impact * 0.5)
 
-        # Plafonnement pour éviter l'instabilité numérique
+        # Plafonnement pour la stabilité numérique
         self.subfields["CA3"][signal_label] = min(5.0, self.subfields["CA3"][signal_label])
 
     async def consolidate_and_prune(self):
