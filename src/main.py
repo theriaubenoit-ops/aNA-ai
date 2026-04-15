@@ -83,8 +83,10 @@ async def main():
     # test_sequence = ["a", "N", "A", " ", "a", "N", "A", " ", "a", "N", "A", " ", "a", "N", "A", " ", "a", "N", "A", " ", "a", "N", "A", " ", "B", "A", "N", "A", "N", "A", "S"]
     # test_sequence = ["B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", " ", "你"]
     # test_sequence = ["H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "o", "l", "a", " ", "O", "l", "á", " ", "你", "好", " ", "H", "i"]
-    test_sequence = ["H", "e", "l", "l", "o", " ", "H", "e", "l", "l", "o", " ", "H", "e", "l", "l", "o", " ", "H", "e", "l", "l", "o", " ", "H", "o", "l", "a", " ", "你", "好", " ", "H", "e", "l", "l", "o"]
+    # test_sequence = ["H", "e", "l", "l", "o", " ", "H", "e", "l", "l", "o", " ", "H", "e", "l", "l", "o", " ", "H", "e", "l", "l", "o", " ", "H", "o", "l", "a", " ", "你", "好", " ", "H", "e", "l", "l", "o"]
+    test_sequence = ["H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H"]
     # test_sequence = ["1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1"]
+
 
     # Path: src/tests/...
     base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -101,8 +103,8 @@ async def main():
 
     for cycle, char in enumerate(test_sequence, 1):
         # --- PHASE A : ANALYSE PRÉDICTIVE (Feedback L6) ---
-        cortical_results = await visual_column.process_input(char, hippo)
-        l6_signal = cortical_results['l6_feedback']
+        # cortical_results = await visual_column.process_input(char, hippo)
+        # l6_signal = cortical_results['l6_feedback']
         
         # --- PHASE B : CAPTURE DES PAYLOADS ---
         # VISUEL (Utilisation de la liste déjà reçue)
@@ -116,11 +118,13 @@ async def main():
                 real_matrix = np.array(img) / 255.0
             
             visual_payload = await visual_gateway.capture_image(matrix_data=real_matrix, ratio=0.25)
+            current_visual_data = real_matrix
             visual_payload.source = current_img_name
             visual_payload.intensity = float(np.max(real_matrix))
         else:
+            current_visual_data = np.zeros((64, 64))
             visual_payload = type('obj', (object,), {'source': "None", 'intensity': 0.1})()
-
+            
         # AUDIO (Utilisation de la liste déjà reçue)
         # Simulation Auditory (CGM)
         # auditory_payload = await auditory_gateway.capture_sound(audio_data=real_matrix, ratio=0.25)
@@ -129,19 +133,19 @@ async def main():
         if all_sounds:
             snd_index = (cycle - 1) % len(all_sounds)
             current_sound_path = os.path.join(audio_dir, all_sounds[snd_index])
-            # Appel à l'Easter Egg de Don Quichotte
             auditory_payload = await auditory_gateway.capture_sound(file_path=current_sound_path)
+            # TRÉSOR : On récupère la donnée brute via getattr pour être sûr !
+            current_audio_data = getattr(auditory_payload, 'audio_data', getattr(auditory_payload, 'data', np.zeros(100)))
         else:
-            auditory_payload = await auditory_gateway.capture_sound(audio_data=np.zeros(100))
-
+            current_audio_data = np.zeros(100)
         # Haptic (Utilisation du caractère déjà reçu)
-        # multimodal_input = {
-        #     "haptic": char,
-        #     "visual": visual_payload.matrix_data, # Tes vrais pixels
-        #     "auditory": auditory_payload.data
-        # }
-        # cortical_results = await visual_column.process_input(multimodal_input, hippo)
-        # l6_signal = cortical_results['l6_feedback']
+        multimodal_input = {
+            "haptic": char,
+            "visual": current_visual_data,
+            "auditory": current_audio_data
+        }
+        cortical_results = await visual_column.process_input(multimodal_input, hippo)
+        l6_signal = cortical_results['l6_feedback']
 
         # Simulation Haptic (VPL)
         haptic_data = {
