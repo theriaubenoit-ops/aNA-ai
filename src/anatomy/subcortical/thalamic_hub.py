@@ -35,30 +35,32 @@ class ThalamicHub:
         }
         # Seuils d'attention (Gating)
         self.attention_filters = {
-            "VPL": 0.2, 
-            "CGL": 0.3, 
-            "CGM": 0.25
+            "VPL": 0.15, 
+            "CGL": 0.05, 
+            "CGM": 0.2
         }
 
     async def route_sensory_input(self, origin: str, payload: Dict[str, Any]):
-        """
-        Point d'entrée multimodal.
-        Filtre le signal selon l'intensité et l'état chimique du système.
-        """
-        # 1. Identification du noyau cible
+        config = get_config()
         target_nucleus = self._map_origin_to_nucleus(origin)
         
-        # 2. Thalamic Gating (Le filtre de l'attention)
-        # Si l'intensité est trop faible par rapport au bruit ambiant (gain), on ignore.
+        # Récupération du poids sensoriel (ex: visual=0.5)
+        sensory_type = origin.replace("input_", "")
+        weight = config.get("SENSORY_WEIGHTS", {}).get(sensory_type, 0.2)
+
+        # INNOVATION : Plus le poids est fort, plus le filtre est bas (Seuil inverse)
+        # Un poids de 0.5 donne un filtre de base de 0.1
+        base_filter = 0.3 * (1.0 - weight) 
+        
         thalamic_gain = (1.0 - self.core.system_strain) 
         effective_intensity = payload.get("intensity", 0.5) * thalamic_gain
 
-        if effective_intensity < self.attention_filters.get(target_nucleus, 0.0):
+        if effective_intensity < base_filter:
             return {"status": "FILTERED_OUT", "nucleus": target_nucleus}
 
         # 3. Synchronisation avec le Pulse (BPM)
         # On attend le prochain "battement" pour traiter si le système est surchargé
-        if self.core.current_bpm < 60: # Mode économie d'énergie
+        if self.core.current_bpm < 60: # Mode économie d'énergieinput_auditory
              await asyncio.sleep(0.1)
 
         # 4. Envoi au Thalamus Core pour traitement et impact sur le BPM
