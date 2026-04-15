@@ -84,6 +84,7 @@ async def main():
     # test_sequence = ["B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", " ", "你"]
     # test_sequence = ["H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "o", "l", "a", " ", "O", "l", "á", " ", "你", "好", " ", "H", "i"]
     test_sequence = ["H", "e", "l", "l", "o", " ", "H", "e", "l", "l", "o", " ", "H", "e", "l", "l", "o", " ", "H", "e", "l", "l", "o", " ", "H", "o", "l", "a", " ", "你", "好", " ", "H", "e", "l", "l", "o"]
+    # test_sequence = ["1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1"]
 
     base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     img_dir = os.path.join(base_path, "src", "tests", "media_visual", "64x64")
@@ -101,19 +102,9 @@ async def main():
         # --- PHASE A : ANALYSE PRÉDICTIVE (Feedback L6) ---
         cortical_results = await visual_column.process_input(char, hippo)
         l6_signal = cortical_results['l6_feedback']
-
-        # --- PHASE B : CAPTURE DES PAYLOADS ---
         
-        # 1. AUDIO (Capture réelle du fichier .wav)
-        if all_sounds:
-            snd_index = (cycle - 1) % len(all_sounds)
-            current_sound_path = os.path.join(audio_dir, all_sounds[snd_index])
-            # Appel à l'Easter Egg de Don Quichotte
-            auditory_payload = await auditory_gateway.capture_sound(file_path=current_sound_path)
-        else:
-            auditory_payload = await auditory_gateway.capture_sound(audio_data=np.zeros(100))
-
-        # 2. VISUEL (Utilisation de la liste déjà scannée)
+        # --- PHASE B : CAPTURE DES PAYLOADS ---
+        # VISUEL (Utilisation de la liste déjà reçue)
         if all_images:
             img_index = (cycle - 1) % len(all_images)
             current_img_name = all_images[img_index]
@@ -128,11 +119,28 @@ async def main():
             visual_payload.intensity = float(np.max(real_matrix))
         else:
             visual_payload = type('obj', (object,), {'source': "None", 'intensity': 0.1})()
-        
+
+        # AUDIO (Utilisation de la liste déjà reçue)
         # Simulation Auditory (CGM)
         # auditory_payload = await auditory_gateway.capture_sound(audio_data=real_matrix, ratio=0.25)
         # auditory_payload.source = f"audio_{cycle}.wav"
         # auditory_payload.intensity = 0.7
+        if all_sounds:
+            snd_index = (cycle - 1) % len(all_sounds)
+            current_sound_path = os.path.join(audio_dir, all_sounds[snd_index])
+            # Appel à l'Easter Egg de Don Quichotte
+            auditory_payload = await auditory_gateway.capture_sound(file_path=current_sound_path)
+        else:
+            auditory_payload = await auditory_gateway.capture_sound(audio_data=np.zeros(100))
+
+        # Haptic (Utilisation du caractère déjà reçu)
+        # multimodal_input = {
+        #     "haptic": char,
+        #     "visual": visual_payload.matrix_data, # Tes vrais pixels
+        #     "auditory": auditory_payload.data
+        # }
+        # cortical_results = await visual_column.process_input(multimodal_input, hippo)
+        # l6_signal = cortical_results['l6_feedback']
 
         # Simulation Haptic (VPL)
         haptic_data = {
@@ -182,7 +190,7 @@ async def main():
         print(f"  │")
 
         # Status Global du Hub
-        print(f"  ├─ Hub Status (Visuwl)               : {res_v.get('status', 'Routed!')}")
+        print(f"  ├─ Hub Status (Visuel)               : {res_v.get('status', 'Routed!')}")
         print(f"  ├─ Hub Status (Auditif)              : {res_a.get('status', 'Routed!')}")
         print(f"  ├─ Hub Status (Haptique)             : {res_t.get('status', 'Routed!')}")
         status_label = "Connu !" if cortical_results['recognition'] > 0 else "Inconnu."
@@ -198,7 +206,7 @@ async def main():
 
     print("\n--- ✅ Organisme v5.3b stabilisé avec Thalamic Hub ---")
     print("\n  *Chaque mesure présentée ici est un pont numérique vers la réalité biologique,")
-    print("\n   conçu pour synthétiser les principes fondamentaux des systèmes vivants.")
+    print("   conçu pour synthétiser les principes fondamentaux des systèmes vivants.\n")
 
 if __name__ == "__main__":
     create_ascii_header()
