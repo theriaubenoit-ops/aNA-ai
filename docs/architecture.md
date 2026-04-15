@@ -207,10 +207,17 @@ Processing Hierarchy:
 ```
 ├── docs/
 │   ├── adr/
-│   │   ├── adr001_fr.md                # ✅ Architecture Decision Records (FR)
-│   │   ├── adr002_fr.md                # ✅ Architecture Decision Records (FR)
-│   │   ├── adr003_fr.md                # ✅ Architecture Decision Records (FR)
-│   │   └── adr004_fr.md                # ✅ Architecture Decision Records (FR)
+│   │   ├── adr001.md                # ✅ Architecture Decision Records
+│   │   ├── adr002.md                # ✅ Architecture Decision Records
+│   │   ├── adr003.md                # ✅ Architecture Decision Records
+│   │   ├── adr004.md                # ✅ Architecture Decision Records
+│   │   └── adr005.md                # ✅ Architecture Decision Records
+│   ├── adr_fr/
+│   │   ├── adr001.md                # ✅ Architecture Decision Records (FR)
+│   │   ├── adr002.md                # ✅ Architecture Decision Records (FR)
+│   │   ├── adr003.md                # ✅ Architecture Decision Records (FR)
+│   │   ├── adr004.md                # ✅ Architecture Decision Records (FR)
+│   │   └── adr005.md                # ✅ Architecture Decision Records (FR)
 │   ├── assets/                         # 📋 Medias
 │   ├── examples/                       # 📋 Comprehensive example suite
 │   ├── api-reference.md                # 📋 ...
@@ -294,4 +301,4 @@ Processing Hierarchy:
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-11_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-15_
