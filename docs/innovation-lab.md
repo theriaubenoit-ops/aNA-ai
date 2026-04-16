@@ -88,7 +88,7 @@ As we move toward **v5.4**, the _Thalamic Hub_ will serve as the foundation for 
   - **"Bio-Reverse Engineering":** This architecture provides intrinsic security. Attempting to decode **aNA**'s thoughts is like trying to read a dream in a stranger's brain: without the exact, shifting map of its own _synapses_, the _data_ remains an indecipherable signal.
 
 - **☄️ Academic Gateway: A Synthesis Model for Health & Science**
-  - **Psychological Simulation:** A tool to model reactions to stressful stimuli _(via the Amygdala)_ or fatigue cycles _(via ATP levels)_.
+  - **Psychological Simulation:** A tool to model reactions to stressful stimuli _(via the [amygdala(.py)](/src/anatomy/limbic/amygdala.py))_ or fatigue cycles _(via ATP levels)_.
 
   - **Neuro-Degeneration Research:** The ability to simulate _synaptic decay_ while observing the resilience of _"Acid Traces"_ in the _CA4_ subfield offers a unique _sandbox_ for understanding trauma persistence and vital memory in humans.
 
@@ -154,7 +154,7 @@ The strength of the **aNA** architecture lies in its departure from traditional 
    **_NMDA_ Logic:** Triggered by an _[amygdala(.py)](/src/anatomy/limbic/amygdala.py) "Flash,"_ this logic locks the synaptic trace. It allows for the instantaneous and indelible encoding of critical information during high-saliency or _"error-state"_ events.
 
 2. **Descartes' philosophy _("Divide each difficulty into as many parts as is feasible and necessary to resolve it.")_**
-   This is the philosophy which explains the modular structure of this project (separate _[thalamus(.py)](/src/anatomy/subcortical/thalamus.py)_, separate _Hippocampus_, separate _Amygdala_...). A philosophical method rigorously applied to _Python code_.
+   This is the philosophy which explains the modular structure of this project (separate _[thalamus(.py)](/src/anatomy/subcortical/thalamus.py)_, separate _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_, separate _Amygdala_...). A philosophical method rigorously applied to _Python code_.
 
 3. **Economy of Links: The Lavoisier Principle**
    Instead of storing terabytes of raw, disconnected data, **aNA** transforms information into relational nodes and _emotional weights_.
