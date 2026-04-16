@@ -52,7 +52,7 @@ The **aNA** _(v5.3b) architecture_ is built on the principle of _biological sobr
 
 ### The imperative of energy sobriety
 
-We are at a tipping point. The frantic race toward ever-larger and more energy-intensive models is placing an unsustainable burden on our environment. The **aNA** AI project proposes a radical alternative: efficiency through targeted plasticity. By mimicking the economical functioning of the human brain—which achieves cognitive feats with a mere _20 watts_—we are developing algorithms that activate only the _[neurons(.py)](/src/anatomy/base/neuron.py)_ necessary to process specific information. Learn less to understand better; filter more to compute less. This is the path forward toward a sustainable, responsible AI.
+We are at a tipping point. The frantic race toward ever-larger and more energy-intensive models is placing an unsustainable burden on our environment. The **aNA** AI project proposes a radical alternative: efficiency through targeted plasticity. By mimicking the economical functioning of the human brain—which achieves cognitive feats with a mere **_20 watts_** —we are developing algorithms that activate only the _[neurons(.py)](/src/anatomy/base/neuron.py)_ necessary to process specific information. Learn less to understand better; filter more to compute less. This is the path forward toward a sustainable, responsible AI.
 
 ### Towards the next generation of intelligence
 
@@ -97,12 +97,30 @@ python3 src/tests/test_cortical_column.py
 
 # 📚 Cognitive Mapping _(The Digital Bridge)_
 
-- **[Cerebellum(.py)](/src/anatomy/subcortical/cerebellum.py) _(Timing Engine & Output Calibration)_:** The specialized unit for fine-tuning motor and cognitive outputs. In **aNA**, it ensures that the _"Thinking Shell"_ operates with perfect mathematical synchronization, acting as a calibration layer for fluid, real-time interaction.
+### The Core Engine _(Metabolism & Rhythm)_
 
-- **[Limbic System(.py)](/src/anatomy/limbic/limbic_system.py) _(Emotional Valence & Memory Orchestrator)_:** The _vital bridge_ between _sensory impact_ and _long-term storage_. In **aNA**, it evaluates incoming signals via the _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ to assign an _"emotional weight"_, ensuring that critical experiences are prioritized by the _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_ for deep encoding and empathic recall.
-  - **[Hippocampus(.py)](/src/anatomy/limbic/hippocampus.py) _(Dynamic Buffer & Indexing System)_:** Functions as a high-speed memory buffer for short-term data. It manages the temporary storage of information and coordinates its eventual _"migration" (consolidation)_ into _long-term cortical databases_, preventing immediate system saturation.
+- **[Pulse(.py)](/src/core/pulse.py) _(The Biological Clock & Heartbeat)_:**
+  The metabolic engine of **aNA**. It generates the system's _"Heartbeat" (BPM)_, governing the timing of every _synaptic cycle_. More than a simple timer, it manages the _ATP (Energy)_ levels and _System Strain_. It dictates the _"vitality"_ of the organism: a _high BPM_ increases processing speed but consumes _energy_ faster, forcing the system to adapt its behavior to avoid exhaustion.
 
-  - **[Amygdala(.py)](/src/anatomy/limbic/amygdala.py) _(Priority Filter & Interrupt Controller)_:** Manages emotional valence and high-priority signals. It acts like an interrupt controller that can override standard processing cycles when _"critical events" (stress or high-reward stimuli)_ are detected, ensuring immediate system response.
+### Sensory Input Gateways _(Data Acquisition)_
+
+- **Sensory Input Gateways _(Multimodal Perception)_:**
+  These modules act as the digital _"sense organs,"_ translating raw external data into neural payloads for the _[thalamic Hub(.py)](/src/anatomy/subcortical/thalamic_hub.py)_. Each gateway is responsible for a specific modality, reading media files from their dedicated directories:
+  - **[Input_visual(.py)](/src/core/input_visual.py) _(Occipital Gateway)_:** Processes _visual data (e.g., .png, .jpg)_ from _[media_visual(/)](/src/tests/media_visual/)_ . It simulates the retina and optic nerve, extracting intensity and spatial features.
+
+  - **[Input_auditory(.py)](/src/core/input_auditory.py) _(Temporal Gateway)_:** Processes _acoustic signals (e.g., .wav)_ from _[media_auditory(/)](/src/tests/media_auditory/)_ . It simulates the cochlear transformation, focusing on frequency and amplitude.
+
+  - **[Input_haptic(.py)](/src/core/input_haptic.py) _(Somatosensory Gateway)_:** Processes _tactile_ and _pressure data (e.g., Unicode sequences or vibration patterns)_ from _[media_haptic(/)](/src/tests/media_haptic/)_ . It translates physical _"touch"_ into neural resistance and conductivity variables.
+
+### The Command Center _(Routing & Integration)_
+
+- **[Thalamic Hub(.py)](/src/anatomy/subcortical/thalamic_hub.py) _(Central Integration & Signal Arbitration)_:** The _high-level manager_ of _sensory convergence_. It ensures that _visual, auditory, and haptic streams_ are synchronized before being projected to the _cortex_. It doesn't just _route packets_; it decides the routing strategy based on the chemical state _([neuromodulators(.py)](/src/anatomy/base/neuromodulator.py))_ and _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ priorities.
+  - **[Thalamus(.py)](/src/anatomy/subcortical/thalamus.py) _(Sensory Gateway & Packet Router)_:** The primary relay station. It manages the _physical gating of signals_ through _"gain control,"_ directly influenced by the system's current _BPM and L6 feedback_. It executes the _gain modulation_ to prevent _"system overflow"_ by dropping irrelevant background _noise_.
+
+- **[Cerebellum(.py)](/src/anatomy/subcortical/cerebellum.py) _(Timing Engine & Output Calibration)_:** This unit specializes in _fine-tuning motor_ and _cognitive outputs_. In **aNA**, it ensures that the _"Thinking Shell" ([neocortex(.py)](/src/anatomy/cortical/neocortex.py))_ functions with perfect _mathematical synchronization_.
+  - **Key role:** It acts as a _calibration layer_ for fluid, real-time interactions. While the _[pulse(.py)](/src/core/pulse.py)_ provides the _basic rhythm_, the _[cerebellum(.py)](/src/anatomy/subcortical/cerebellum.py)_ corrects _micro-timing errors_ to prevent _jitter_ in _data processing_ and _system response_.
+
+### The Thinking Shell _(Processing & Memory)_
 
 - **[Neocortex(.py)](/src/anatomy/cortical/neocortex.py) _(The "Thinking" Shell)_:** The structural integration of the _4 Lobes_ and _6 Cortical Layers_. While the _[neocortex(.py)](/src/anatomy/cortical/neocortex.py)_ handles complex reasoning and prediction, the _[cerebellum(.py)](/src/anatomy/subcortical/cerebellum.py) (in **aNA**)_ fine-tunes _motor outputs_ and timing, ensuring the system’s actions are fluid and mathematically synchronized.
   - **Lobe, [Frontal(.py)](/src/anatomy/cortical/frontal.py) _(Executive Logic & Command Center)_:** The primary site for high-level decision-making and motor control. In **aNA**, it acts as the central executive that orchestrates complex task sequences and manages the _"top-down"_ attention directed to other modules.
@@ -118,19 +136,10 @@ python3 src/tests/test_cortical_column.py
 
     - **[Neuromodulators(.py)](/src/anatomy/base/neuromodulator.py) _(Global State Tags)_:** Chemical core _"gain controls" (Dopamine, Adrenaline, Nitric Oxide, Acetylcholine, Serotonin)_ that regulate the global state of the network. They don't carry specific data but adjust how the brain processes information _(e.g., focus, reward, stress response)_.
 
-- **[Pulse(.py)](/src/core/pulse.py) _(The Biological Clock & Heartbeat)_:**
-  The metabolic engine of **aNA**. It generates the system's _"Heartbeat" (BPM)_, governing the timing of every _synaptic cycle_. More than a simple timer, it manages the _ATP (Energy)_ levels and _System Strain_. It dictates the _"vitality"_ of the organism: a _high BPM_ increases processing speed but consumes _energy_ faster, forcing the system to adapt its behavior to avoid exhaustion.
+- **[Limbic System(.py)](/src/anatomy/limbic/limbic_system.py) _(Emotional Valence Engine & Memory Orchestrator)_:** The _vital bridge_ between _sensory impact_ and _long-term storage_. In **aNA**, it evaluates incoming signals via the _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ to assign an _"emotional weight"_, ensuring that critical experiences are prioritized by the _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_ for deep encoding and empathic recall.
+  - **[Hippocampus(.py)](/src/anatomy/limbic/hippocampus.py) _(Dynamic Buffer & Indexing System)_:** Functions as a high-speed memory buffer for short-term data. It manages the temporary storage of information and coordinates its eventual _"migration" (consolidation)_ into _long-term cortical databases_, preventing immediate system saturation.
 
-- **Sensory Input Gateways _(Multimodal Perception)_:**
-  These modules act as the digital _"sense organs,"_ translating raw external data into neural payloads for the _[thalamic Hub(.py)](/src/anatomy/subcortical/thalamic_hub.py)_. Each gateway is responsible for a specific modality, reading media files from their dedicated directories:
-  - **[Input_visual(.py)](/src/core/input_visual.py) _(Occipital Gateway)_:** Processes _visual data (e.g., .png, .jpg)_ from _[media_visual(/)](/src/tests/media_visual/)_ . It simulates the retina and optic nerve, extracting intensity and spatial features.
-
-  - **[Input_auditory(.py)](/src/core/input_auditory.py) _(Temporal Gateway)_:** Processes _acoustic signals (e.g., .wav)_ from _[media_auditory(/)](/src/tests/media_auditory/)_ . It simulates the cochlear transformation, focusing on frequency and amplitude.
-
-  - **[Input_haptic(.py)](/src/core/input_haptic.py) _(Somatosensory Gateway)_:** Processes _tactile_ and _pressure data (e.g., Unicode sequences or vibration patterns)_ from _[media_haptic(/)](/src/tests/media_haptic/)_ . It translates physical _"touch"_ into neural resistance and conductivity variables.
-
-- **[Thalamic Hub(.py)](/src/anatomy/subcortical/thalamic_hub.py) _(Central Integration & Signal Arbitration)_:** The _"Command Center"_ of the subcortical system. It coordinates the dialogue between the _[limbic system(.py)](/src/anatomy/limbic/limbic_system.py)_ and the _[thalamus(.py)](/src/anatomy/subcortical/thalamus.py)_. It doesn't just route packets; it decides the strategy of the routing based on the chemical state _([neuromodulators(.py)](/src/anatomy/base/neuromodulator.py))_ and _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ priorities.
-  - **[Thalamus(.py)](/src/anatomy/subcortical/thalamus.py) _(Sensory Gateway & Packet Router)_:** The _"Engine"_ of _sensory input_. It acts as the _physical gateway_ for incoming data, filtering and directing sensory signals to _cortical layers_. It executes the _gain modulation_ to prevent _"system overflow"_ by dropping irrelevant background _noise_.
+  - **[Amygdala(.py)](/src/anatomy/limbic/amygdala.py) _(Priority Filter & Interrupt Controller)_:** Manages emotional valence and high-priority signals. It acts like an interrupt controller that can override standard processing cycles when _"critical events" (stress or high-reward stimuli)_ are detected, ensuring immediate system response.
 
 _Note: These definitions are adapted to the specific metabolic and cognitive constraints of the **aNA** v5.0 architecture and above._
 
