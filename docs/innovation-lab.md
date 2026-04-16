@@ -69,7 +69,7 @@ As we move toward **v5.4**, the _Thalamic Hub_ will serve as the foundation for 
 
 ![ ](/docs/assets/spacer32x32.png)
 
-![img](/docs/assets/occipital_input_test_256x256_00_ALL.gif)
+![img](/docs/assets/00_language_256x256_ALL.gif)
 
 ![ ](/docs/assets/spacer16x16.png)
 
