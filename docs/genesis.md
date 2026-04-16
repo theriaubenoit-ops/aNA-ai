@@ -58,12 +58,14 @@ def apply_serotonin_stabilization(neural_network, matrix):
 
 # 👤 About the Author
 
-**Benoit Theriault** works at the intersection of _design_, _architecture_, and _software engineering_. With a multidisciplinary background—ranging from _architectural signage_ to complex _web solutions_—he cultivates a rigorous approach, honed by years of close collaboration with architects, engineers, and medical professionals across Quebec, Canada and internationally.
+**Benoit Theriault** works at the intersection of _design, architecture, and software engineering._ With a multidisciplinary background—ranging from _large-scale architectural signage_ for major institutions to complex, _high-performance web solutions_—he delivers complete, _innovative ecosystems_ built for _scalability and precision_.
 
-Since the beginning of his career, this constant pursuit of form and structure has been coupled with a profound fascination for _neural processes_. An expert in programming languages _(HTML, CSS, JavaScript, and Python)_, he now presents the **aNA** AI project not as a mere technical tool, but as an allegory that translates the elegance of _living mechanisms_ into the _digital world_.
+Throughout his career, **Benoit** has honed a rigorous approach through close collaboration with _architects, engineers, and medical professionals_ across Quebec, Canada, and internationally. He specializes in bridging the gap between _creative vision and technical execution,_ ensuring that every _solution_ is not only functional but _architecturally sound_.
 
-Between behavioral _psychology_, _ethics_, and _neuroinformatics_, his work offers a new interpretation of _artificial intelligence_: that of an architecture which, like the _brain_, is cultivated with precision and intention.
+This constant pursuit of form and structure is fueled by a profound fascination for _neural processes_ and creative research. An expert in programming and design systems, he presents the **aNA** project as a culmination of this journey: an allegory that translates the elegance of _living mechanisms_ into the _digital world_.
+
+Between behavioral _psychology, ethical engineering_, and _neuroinformatics_, his work offers a new interpretation of _Artificial Intelligence_: an _architecture_ cultivated with the _same intention, depth, and precision_ as the _human brain_.
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-31_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-034-16_
