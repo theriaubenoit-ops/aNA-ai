@@ -3,12 +3,12 @@
 """
 aNA AI Project v5.3b - Thalamic Hub Integration
 
-Description : Cette version marque le passage au routage multimodal centralisé.
-Le ThalamicHub agit comme un filtre attentionnel (Gating) avant la projection corticale.
-L'organisme peut désormais ignorer les stimuli faibles ou ralentir son traitement 
-selon son état métabolique (ATP/BPM).
+Description: This version marks the transition to centralized multimodal routing.
+The ThalamicHub acts as an attentional filter (gating) before cortical projection.
+The organism can now ignore weak stimuli or slow down its processing
+depending on its metabolic state (ATP/BPM).
 
-Architecture et neuroinformatics: Theriault Benoit
+Architecture and neuroinformatics: Benoit Theriault
 """
 import asyncio
 import os
@@ -17,7 +17,7 @@ import numpy as np
 import scipy.io.wavfile as wav
 from PIL import Image
 
-# Gestion du path pour les imports locaux
+# Path management for local imports
 sys.path.append(os.path.abspath(os.path.dirname(__file__)))
 from config import get_config
 from core.input_haptic import InputHapticGateway 
@@ -43,13 +43,13 @@ def create_ascii_header():
     print("▓░                                                 _    _    _  ░▓▒▓  ░▓\n\n")
 
 def get_visual_files(directory):
-    """Scan dynamique des fichiers images pour le cortex visuel."""
+    """SDynamic scanning of image files for the visual cortex."""
     if os.path.exists(directory):
         return sorted([img for img in os.listdir(directory) if img.lower().endswith(('.png', '.jpg', '.jpeg'))])
     return []
 
 def get_audio_files(directory):
-    """Scan dynamique des bruits colorés pour le hub thalamique."""
+    """Dynamic scanning of colored noises for the thalamic hub."""
     if os.path.exists(directory):
         return sorted([f for f in os.listdir(directory) if f.lower().endswith('.wav')])
     return []
@@ -57,21 +57,21 @@ def get_audio_files(directory):
 async def main():
     print("--- ⚡ aNA Organism v5.3b (Thalamic Hub Active) ---")
 
-    # 1. Initialisation des moteurs
+    # 1. Engine initialization
     config = get_config()
     neurom_core = Neuromodulator() 
     hippo = Hippocampus(config=config, neuromodulator_core=neurom_core)
     heart = Pulse(bpm=config.get("BASE_BPM", 72.0))
     
-    # Gateways Sensorielles
+    # Sensory Gateways
     haptic_gateway = InputHapticGateway()
     auditory_gateway = InputAuditoryGateway()
     visual_gateway = InputVisualGateway() 
 
-    # 2. Initialisation du Néocortex
+    # 2. Neocortex initiation
     visual_column = SimplifiedCorticalColumn(column_id="COL_V1")
     
-    # 3. Le Complexe Thalamique (Le Coeur + Le Hub de routage)
+    # 3. The Thalamic Complex (The Core + The Routing Hub)
     thalamus = Thalamus(
         hippocampus=hippo, 
         pulse=heart, 
@@ -81,9 +81,9 @@ async def main():
     
     base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-    # Séquences de tests (Unicode Wide)
+    # --- Test sequences (Unicode Wide) ---
 
-    # Path: src/tests/media_haptic/(More test ideas)...
+    # Path: src/tests/media_haptic/(More tests)...
     # haptic_dict = ["a", "N", "A", " ", "a", "N", "A", " ", "a", "N", "A", " ", "a", "N", "A", " ", "a", "N", "A", " ", "a", "N", "A", " ", "B", "A", "N", "A", "N", "A", "S"]
     # haptic_dict = ["B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", " ", "你"]
     # haptic_dict = ["H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "o", "l", "a", " ", "O", "l", "á", " ", "你", "好", " ", "H", "i"]
@@ -106,12 +106,12 @@ async def main():
         print(f" [Warning] No auditory stimuli were found in: {audio_dir}")
 
     for cycle, char in enumerate(all_haptics, 1):
-        # --- PHASE A : ANALYSE PRÉDICTIVE (Feedback L6) ---
+        # --- PHASE A : PREDICTIVE ANALYSIS (Feedback L6) ---
         # cortical_results = await visual_column.process_input(char, hippo)
         # l6_signal = cortical_results['l6_feedback']
         
-        # --- PHASE B : CAPTURE DES PAYLOADS ---
-        # VISUEL (Utilisation de la liste déjà reçue)
+        # --- PHASE B : CAPTURE OF THE PAYLOADS ---
+        # VISUAL (Using the list already received)
         if all_visuals:
             img_index = (cycle - 1) % len(all_visuals)
             current_img_name = all_visuals[img_index]
@@ -129,7 +129,7 @@ async def main():
             current_visual_data = np.zeros((64, 64))
             visual_payload = type('obj', (object,), {'source': "None", 'intensity': 0.1})()
             
-        # AUDIO (Utilisation de la liste déjà reçue)
+        # AUDIO (Using the list already received)
         # Simulation Auditory (CGM)
         # auditory_payload = await auditory_gateway.capture_sound(audio_data=real_matrix, ratio=0.25)
         # auditory_payload.source = f"audio_{cycle}.wav"
@@ -138,11 +138,11 @@ async def main():
             snd_index = (cycle - 1) % len(all_audios)
             current_sound_path = os.path.join(audio_dir, all_audios[snd_index])
             auditory_payload = await auditory_gateway.capture_sound(file_path=current_sound_path)
-            # TRÉSOR : On récupère la donnée brute via getattr pour être sûr !
+            # TREASURE: We retrieve the raw data via getattr to be sure!
             current_audio_data = getattr(auditory_payload, 'audio_data', getattr(auditory_payload, 'data', np.zeros(100)))
         else:
             current_audio_data = np.zeros(100)
-        # Haptic (Utilisation du caractère déjà reçu)
+        # Haptic (Using the character already received)
         multimodal_input = {
             "haptic": char,
             "visual": current_visual_data,
@@ -159,9 +159,9 @@ async def main():
             "intensity": 0.9
         }
 
-        # --- PHASE C : ROUTAGE ET GATING THALAMIQUE (v5.3) ---
-        # Au lieu de traiter tout aveuglément, on passe par le Hub.
-        # Le Hub peut décider de filtrer (FILTERED_OUT) si le système est épuisé.
+        # --- PHASE C : THALAMIC ROUTING AND GATING ---
+        # Instead of dealing with everything blindly, we go through the Hub.
+        # The Hub may decide to filter (FILTERED_OUT) if the system is exhausted.
         threshold = config.get("THALAMIC_THRESHOLD", 0.15)
         weights = config.get("SENSORY_WEIGHTS", {"visual": 0.5, "auditory": 0.3, "haptic": 0.2})
         
@@ -171,29 +171,29 @@ async def main():
         res_a = await hub.route_sensory_input("input_auditory", auditory_payload.__dict__)
         res_h = await hub.route_sensory_input("input_haptic", haptic_data)
 
-        # --- PHASE D : MISE À JOUR MÉTABOLIQUE ---
+        # --- PHASE D : METABOLIC UPDATE ---
         heart.update()
         dt = heart.compute_dynamics()
         new_bpm = heart.bpm + (visual_payload.intensity * 10.0) - (heart.atp * 5.0)
         heart.update_frequency(min(new_bpm, config.get("MAX_BPM", 160.0)))
         status = heart.get_status()
 
-        # Calcul de la vitesse synaptique basée sur la myéline
+        # Calculation of myelin-based synaptic velocity
         avg_myeline = visual_column.get_average_myelination()
         synaptic_latency = max(0.01, 0.1 * (1.0 - avg_myeline))
 
-        # --- MONITORING V5.3b (Contributeur-Friendly) ---
+        # --- MONITORING (Contributeur-Friendly) ---
         print(f"  │")
         
-        # Détail Visuel
+        # Visual Detail
         print(f" [Thalamic Hub] Signal from input_visual routed to CGL (Gain: {res_v.get('thalamic_gain', 1.0):.2f})")
         print(f"  ├─ Stimulus: \"{visual_payload.source}\"")
         
-        # Détail Auditif
+        # Hearing Detail
         print(f" [Thalamic Hub] Signal from input_auditory routed to CGM (Gain: {res_a.get('thalamic_gain', 1.0):.2f})")
         print(f"  ├─ Stimulus: \"{auditory_payload.source}\"")
         
-        # Détail Haptic
+        # Haptic Detail
         print(f" [Thalamic Hub] Signal from input_haptic routed to VPL (Gain: {res_h.get('thalamic_gain', 1.0):.2f})")
         print(f"  ├─ Stimulus: \"{char}\" unicode")
         print(f"  │")
@@ -206,7 +206,7 @@ async def main():
         print(f"  ├─ Pattern Match (Cortex)   : {cortical_results['recognition']:.2%} {status_label}")
         print(f"  ├─ Thalamic (bpm)           : {thalamus.current_bpm:.1f} (vitality: {(status['vitality']* 100 ):.2f}%)")
         
-        # Performances et Biologie
+        # Performance and Biology
         print(f"  ├─ Synaptic Speed (ms)      : {1.0 + avg_myeline:.2f}x (latency: {synaptic_latency:.4f}s)")
         print(f"  ├─ Retroaction (Signal L6)  : {l6_signal:.2f} mV")
         print(f"  └─ Myeline (σ)              : {avg_myeline:.5f} Increased conductivity")
@@ -222,6 +222,6 @@ if __name__ == "__main__":
     asyncio.run(main())
 
     """
-    « L'œil ne voit que ce que l'esprit est préparé à comprendre. » 
-                                                — Henri Bergson
+    "The eye only sees what the mind is prepared to understand."
+                                               — Henri Bergson
     """
