@@ -83,7 +83,7 @@ async def main():
     
     # Séquence de test (Unicode Wide)
 
-    # Path: src/tests/media_haptic/...
+    # Path: src/tests/media_haptic/(More test ideas)...
     # haptic_dict = ["a", "N", "A", " ", "a", "N", "A", " ", "a", "N", "A", " ", "a", "N", "A", " ", "a", "N", "A", " ", "a", "N", "A", " ", "B", "A", "N", "A", "N", "A", "S"]
     # haptic_dict  = ["B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", " ", "你"]
     # haptic_dict  = ["H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "o", "l", "a", " ", "O", "l", "á", " ", "你", "好", " ", "H", "i"]
@@ -98,11 +98,11 @@ async def main():
     
     all_haptics = haptic_dict
     all_visuals = get_visual_files(visual_dir)
-    all_sounds = get_audio_files(audio_dir)
+    all_audios = get_audio_files(audio_dir)
     
     if not all_visuals:
         print(f" [Attention] Aucun stimulus visuel trouvé dans : {visual_dir}")
-    if not all_sounds:
+    if not all_audios:
         print(f" [Attention] Aucun stimulus auditif trouvé dans : {audio_dir}")
 
     for cycle, char in enumerate(all_haptics, 1):
@@ -134,9 +134,9 @@ async def main():
         # auditory_payload = await auditory_gateway.capture_sound(audio_data=real_matrix, ratio=0.25)
         # auditory_payload.source = f"audio_{cycle}.wav"
         # auditory_payload.intensity = 0.7
-        if all_sounds:
-            snd_index = (cycle - 1) % len(all_sounds)
-            current_sound_path = os.path.join(audio_dir, all_sounds[snd_index])
+        if all_audios:
+            snd_index = (cycle - 1) % len(all_audios)
+            current_sound_path = os.path.join(audio_dir, all_audios[snd_index])
             # Appel à l'Easter Egg de Don Quichotte
             auditory_payload = await auditory_gateway.capture_sound(file_path=current_sound_path)
             # TRÉSOR : On récupère la donnée brute via getattr pour être sûr !
