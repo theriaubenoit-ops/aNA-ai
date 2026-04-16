@@ -123,11 +123,11 @@ python3 src/tests/test_cortical_column.py
 
 - **Sensory Input Gateways _(Multimodal Perception)_:**
   These modules act as the digital _"sense organs,"_ translating raw external data into neural payloads for the _[thalamic Hub(.py)](/src/anatomy/subcortical/thalamic_hub.py)_. Each gateway is responsible for a specific modality, reading media files from their dedicated directories:
-  - **[input_visual(.py)](/src/core/input_visual.py) _(Occipital Gateway)_:** Processes _visual data (e.g., .png, .jpg)_ from _[media_visual(/)](/src/tests/media_visual/)_ . It simulates the retina and optic nerve, extracting intensity and spatial features.
+  - **[Input_visual(.py)](/src/core/input_visual.py) _(Occipital Gateway)_:** Processes _visual data (e.g., .png, .jpg)_ from _[media_visual(/)](/src/tests/media_visual/)_ . It simulates the retina and optic nerve, extracting intensity and spatial features.
 
-  - **[input_auditory(.py)](/src/core/input_auditory.py) _(Temporal Gateway)_:** Processes _acoustic signals (e.g., .wav)_ from _[media_auditory(/)](/src/tests/media_auditory/)_ . It simulates the cochlear transformation, focusing on frequency and amplitude.
+  - **[Input_auditory(.py)](/src/core/input_auditory.py) _(Temporal Gateway)_:** Processes _acoustic signals (e.g., .wav)_ from _[media_auditory(/)](/src/tests/media_auditory/)_ . It simulates the cochlear transformation, focusing on frequency and amplitude.
 
-  - **[input_haptic(.py)](/src/core/input_haptic.py) _(Somatosensory Gateway)_:** Processes _tactile_ and _pressure data (e.g., Unicode sequences or vibration patterns)_ from _[media_haptic(/)](/src/tests/media_haptic/)_ . It translates physical _"touch"_ into neural resistance and conductivity variables.
+  - **[Input_haptic(.py)](/src/core/input_haptic.py) _(Somatosensory Gateway)_:** Processes _tactile_ and _pressure data (e.g., Unicode sequences or vibration patterns)_ from _[media_haptic(/)](/src/tests/media_haptic/)_ . It translates physical _"touch"_ into neural resistance and conductivity variables.
 
 - **[Thalamic Hub(.py)](/src/anatomy/subcortical/thalamic_hub.py) _(Central Integration & Signal Arbitration)_:** The _"Command Center"_ of the subcortical system. It coordinates the dialogue between the _[limbic system(.py)](/src/anatomy/limbic/limbic_system.py)_ and the _[thalamus(.py)](/src/anatomy/subcortical/thalamus.py)_. It doesn't just route packets; it decides the strategy of the routing based on the chemical state _([neuromodulators(.py)](/src/anatomy/base/neuromodulator.py))_ and _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ priorities.
   - **[Thalamus(.py)](/src/anatomy/subcortical/thalamus.py) _(Sensory Gateway & Packet Router)_:** The _"Engine"_ of _sensory input_. It acts as the _physical gateway_ for incoming data, filtering and directing sensory signals to _cortical layers_. It executes the _gain modulation_ to prevent _"system overflow"_ by dropping irrelevant background _noise_.
