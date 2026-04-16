@@ -254,6 +254,9 @@ Processing Hierarchy:
 │   │   ├── dashboard.py                # 🚧 Dashboard
 │   │   └── dashboard_fr.py             # 🚧 Dashboard (FR)
 │   ├── tests/                          # Comprehensive test suite
+│   │   ├── media_audio/                # ✅ Media audio
+│   │   ├── media_haptic/               # ✅ Media haptic
+│   │   ├── media_visual/               # ✅ Media visual
 │   │   ├── test_amygdala.py            # Priority Filter & Interrupt Controller
 │   │   ├── test_autonomy.py            # ✅ To validate the autonomous behaviors
 │   │   ├── test_cerebellum.py          # Timing Engine & Output Calibration
@@ -265,9 +268,6 @@ Processing Hierarchy:
 │   │   ├── test_trauma_logic.py        # ✅ Hippocampus Trauma Logic
 │   │   └── test_thalamus.py            # ✅ Enhanced Thalamus implementation
 │   ├── tests_fr/                       # Comprehensive test suite (FR)
-│   │   ├── media_audio/                # ✅ Media audio
-│   │   ├── media_haptic/               # ✅ Media haptic
-│   │   ├── media_visual/               # ✅ Media visual
 │   │   ├── test_amygdala.py            # Priority Filter & Interrupt Controller (FR)
 │   │   ├── test_autonomy.py            # ✅ To validate the autonomous behaviors (FR)
 │   │   ├── test_cerebellum.py          # Timing Engine & Output Calibration (FR)
