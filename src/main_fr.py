@@ -32,15 +32,15 @@ from anatomy.base.neuromodulator import Neuromodulator
 
 def create_ascii_header():
     print(f"\033c") 
-    print("░                       ░▒▒▒▓▒▓▒░░ ░                                                                          ░ ░░")
-    print("░░ ░     ░  ░░░░ ░░▒▒▓▒▓▒▒▒▒▒▒▒░░▒▒░▒▒▒▓▒▓▓                                                            ░░░░░░░▒▒▒▒")
-    print("▒▒░░░░░░░░░░░░░░▒▒▓▓▓▓▓▓▓██▓▒▒░░░░▒▒▒▒▒░░░░▒▒▓▓▒                                          ░ ░░░░ ░ ░░░░░░░░░▒▒▒▒▒▒")
-    print("░░░░░░░░░░░░░▒▒▒▓▓▓▓▓▓██████▓▓▒▒░░░▒▒▓▓▓▒▒▒░░▒▒▒▒▓▒       ░░▒▒▒▒▒▒▒▒░░░░░░▒░░░░▒▒░░▒░░░░░░░░░░░░░░░░░▒░▒▒▒░▒▒▒▓▓▓▓")
-    print("▓▒▒▒▒▒▒▒▒▓▒▓▓▓▓▓▓██████▓       ▒▓▒▓▒▒▒▒▓▒▓ ██▓▓▓▒▒▒▒▓  ▒▓▓▓▓▓█▓▓▓█▓▒▒▒▓▓▒░░░░░▒▓█▓▓▓▓▓▒▓▒▒▒▒▒▒▒░░░░░░░░░░░░░░▒▒▒▒▒")
-    print("▒▒▒▒▒▒▒▓▓▓▓▓████▓░                  ░░▒▒▒▓█▓░▓▓█▓▓ ░▒▓            ▒▓▒▒░░▒▓▒░░▒▓███▓█▓▓▓▓▓▓▓▓▓▓▓▒▓▒▒▒▒▒▒▒▒▒▒▓▒▓▓▓▓▓")
-    print("▒▒▓▒▓▓▓▓█████▓▒                         ░▒▒▓░ ▓██▓  _    _    _░▒░▒▒▒▓▒▓▒▓▒▓█▓█████▓█▓▓▓▓▓▓▓▓▓▓█▓██▓▓▓▓▓█▓████████")
-    print("▓▓▓█████▓IA inspirée de la plasticité naturelle░▒▒  a    N    A ▒▓█▒▓ ▒▓█▒Architecture Neuronale Autonome v5.3b▒▓▓")
-    print("▓███▓▒                                              _    _    _ ░▓▒▓  ░▓\n\n")
+    print("░ ░           ░ ░░░░▒▒▓▒▓▒▒▒▒▒░░▒▒░▒▒▒▓▒▓▒                                                                    ░ ░░")
+    print("▒▒░░ ░░░░░░░░░░░▒▒▓▓▓▓▓▓▓██▓▒▒▒░░░▒▒▒▒▒░░░▒▒▓▓▒                                                        ░░░░░░░▒▒▒▒")
+    print("░░░░░░░░░░░░░▒▒▒▓▓▓▓▓▓██████▓▓▒▒▒░░▒▒▓▓▓▒▒▒░░▒▒▒▒▓▒                                       ░ ░░░░ ░ ░░░░░░░░░▒▒▒▒▒▒")
+    print("▓▒▒▒▒▒▒▒▒▓▒▓▓▓▓▓▓██████▓       ▒▓▒▓▒▒▒▒▓▒▓ ██▓▓▓▒▒▒▒▓      ░░▒▒▒▒▒▒▒░░░░░░▒░░░░▒▒░░▒░░░░░░░░░░░░░░░░░▒░▒▒▒░▒▒▒▓▓▓▓")
+    print("▒▒▒▒▒▒▒▓▓▓▓▓████▓░                  ░░▒▒▒▓█▓░▓▓█▓▓ ░▒▓  ▒▓▓▓▓▓█▓▓▓█▓▒▒▒▓▓▒░░░░▒▓█▓▓▓▓▓▒▓▒▒▒▒▒▒▒░░░░░░░░░░░░░░▒▒▒▒▒")
+    print("▒▒▓▒▓▓▓▓█████▓▒                         ░▒▒▓░ ▓██▓                ▒▓▒▒░░▒▓▒░░▒▓███▓█▓▓▓▓▓▓▓▓▓▓▓▒▓▒▒▒▒▒▒▒▒▒▒▓▒▓▓▓▓▓")
+    print("▓▓▓█████▓░                                    ░░▒▒ _    _    _ ░▒░▒▒▒▓▒▓▒▓▒▓█▓███▓▒▓▓▓▓▓▓▓▓▓▓▓▓█▓██▓▓▓▓▓█▓████████")
+    print("▓███▓▒  IA inspirée de la plasticité naturelle ✴️  a    N    A  ▒▓█▒▓ ▒▓█▒Architecture Neuronale Autonome v5.3b▒▓▓")
+    print("▓░                                                 _    _    _  ░▓▒▓  ░▓\n\n")
 
 def get_visual_files(directory):
     """Scan dynamique des fichiers images pour le cortex visuel."""
@@ -89,7 +89,7 @@ async def main():
 
     # Path: src/tests/...
     base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    img_dir = os.path.join(base_path, "src", "tests", "media_visual", "64x64")
+    img_dir = os.path.join(base_path, "src", "tests", "media_visual")
     audio_dir = os.path.join(base_path, "src", "tests", "media_audio")
     
     all_images = get_visual_files(img_dir)
