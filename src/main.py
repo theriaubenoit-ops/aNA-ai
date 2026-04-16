@@ -79,38 +79,42 @@ async def main():
     )
     hub = ThalamicHub(thalamus_core=thalamus) # Centralisation multimodal v5.3
     
-    # Séquence de test (Unicode Wide)
-    # test_sequence = ["a", "N", "A", " ", "a", "N", "A", " ", "a", "N", "A", " ", "a", "N", "A", " ", "a", "N", "A", " ", "a", "N", "A", " ", "B", "A", "N", "A", "N", "A", "S"]
-    # test_sequence = ["B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", " ", "你"]
-    # test_sequence = ["H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "o", "l", "a", " ", "O", "l", "á", " ", "你", "好", " ", "H", "i"]
-    # test_sequence = ["H", "e", "l", "l", "o", " ", "H", "e", "l", "l", "o", " ", "H", "e", "l", "l", "o", " ", "H", "e", "l", "l", "o", " ", "H", "o", "l", "a", " ", "你", "好", " ", "H", "e", "l", "l", "o"]
-    test_sequence = ["H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "E", "你", "L", "你", "L", "你", "E", "你", "H"]
-    # test_sequence = ["1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1"]
-
-
-    # Path: src/tests/...
     base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+    # Séquences de tests (Unicode Wide)
+    
+    # Path: src/tests/media_haptic/...
+    # haptic_dict = ["a", "N", "A", " ", "a", "N", "A", " ", "a", "N", "A", " ", "a", "N", "A", " ", "a", "N", "A", " ", "a", "N", "A", " ", "B", "A", "N", "A", "N", "A", "S"]
+    # haptic_dict = ["B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", " ", "你"]
+    # haptic_dict = ["H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "o", "l", "a", " ", "O", "l", "á", " ", "你", "好", " ", "H", "i"]
+    # haptic_dict = ["H", "e", "l", "l", "o", " ", "H", "e", "l", "l", "o", " ", "H", "e", "l", "l", "o", " ", "H", "e", "l", "l", "o", " ", "H", "o", "l", "a", " ", "你", "好", " ", "H", "e", "l", "l", "o"]
+    haptic_dict = ["H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "E", "你", "L", "你", "L", "你", "E", "你", "H"]
+    
+    # Path: src/tests/media_visual/...
     img_dir = os.path.join(base_path, "src", "tests", "media_visual")
+
+    # Path: src/tests/media_audio/...
     audio_dir = os.path.join(base_path, "src", "tests", "media_audio")
     
-    all_images = get_visual_files(img_dir)
-    all_sounds = get_audio_files(audio_dir)
+    all_haptics = haptic_dict
+    all_visuals = get_visual_files(img_dir)
+    all_audios = get_audio_files(audio_dir)
     
-    if not all_images:
+    if not all_visuals:
         print(f" [Warning] No visual stimuli were found in: {img_dir}")
-    if not all_sounds:
+    if not all_audios:
         print(f" [Warning] No auditory stimuli were found in: {audio_dir}")
 
-    for cycle, char in enumerate(test_sequence, 1):
+    for cycle, char in enumerate(all_haptics, 1):
         # --- PHASE A : ANALYSE PRÉDICTIVE (Feedback L6) ---
         # cortical_results = await visual_column.process_input(char, hippo)
         # l6_signal = cortical_results['l6_feedback']
         
         # --- PHASE B : CAPTURE DES PAYLOADS ---
         # VISUEL (Utilisation de la liste déjà reçue)
-        if all_images:
-            img_index = (cycle - 1) % len(all_images)
-            current_img_name = all_images[img_index]
+        if all_visuals:
+            img_index = (cycle - 1) % len(all_visuals)
+            current_img_name = all_visuals[img_index]
             full_path = os.path.join(img_dir, current_img_name)
             
             with Image.open(full_path) as img:
@@ -130,9 +134,9 @@ async def main():
         # auditory_payload = await auditory_gateway.capture_sound(audio_data=real_matrix, ratio=0.25)
         # auditory_payload.source = f"audio_{cycle}.wav"
         # auditory_payload.intensity = 0.7
-        if all_sounds:
-            snd_index = (cycle - 1) % len(all_sounds)
-            current_sound_path = os.path.join(audio_dir, all_sounds[snd_index])
+        if all_audios:
+            snd_index = (cycle - 1) % len(all_audios)
+            current_sound_path = os.path.join(audio_dir, all_audios[snd_index])
             auditory_payload = await auditory_gateway.capture_sound(file_path=current_sound_path)
             # TRÉSOR : On récupère la donnée brute via getattr pour être sûr !
             current_audio_data = getattr(auditory_payload, 'audio_data', getattr(auditory_payload, 'data', np.zeros(100)))
