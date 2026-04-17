@@ -12,7 +12,7 @@
 ▒▒▒▒▒▒▒▓▓▓▓▓████▓▓░                 ░░▒▒▒▓█▓░▓▓█▓▓ ░▒▓  ▒▓▓▓▓▓█▓▓▓█▓▒▒▒▓▓▒░░░░▒▓█▓▓▓▓▓▒▓▒▒▒▒▒▒▒░░░░░░░░░░░░░░▒▒▒▒▒
 ▒▒▓▒▓▓▓▓█████▓▒                         ░▒▒▓░ ▓██▓                ▒▓▒▒░░▒▓▒░░▒▓███▓█▓▓▓▓▓▓▓▓▓▓▓▒▓▒▒▒▒▒▒▒▒▒▒▓▒▓▓▓▓▓
 ▓▓▓█████▓░                                    ░░▒▒ _    _    _ ░▒░▒▒▒▓▒▓▒▓▒▓█▓███▒▓▓▓▓▓▓▓▓▓▓▓▓▓█▓██▓▓▓▓▓█▓████████
-▓███▓▒      AI inspired by natural plasticity  ✴️  a    N    A  ▒▓█▒▓ ▒▓█▒Autonomous Neural Architecture v5.3b ▒▓▓
+▓███▓▒      AI inspired by natural plasticity  ✴️  a    N    A  ▒▓█▒▓ ▒▓█▒Autonomous Neural Architecture v5.3  ▒▓▓
 ▓░                                                 _    _    _  ░▓▒▓  ░▓
 ```
 
@@ -39,6 +39,25 @@ The code deployed today is the result of a constant dialogue between human inten
 This project is an exploration at the threshold of _cortical_ memory. We are not building a product; we are documenting a trajectory. Your participation, through your reading or feedback, contributes to the precision of this research.
 
 ![ ](/docs/assets/spacer32x32.png)
+
+![img](/docs/assets/alphabet_256x256_00_ALL.gif)
+
+###### _Thanks to a wide range of media, it is already possible to test many learning processes._
+
+![ ](/docs/assets/spacer32x32.png)
+
+### Natural Language Acquisition & Pattern Invariance
+
+Beyond multilingual support, aNA implements a biological approach to symbolic recognition. Rather than treating characters as isolated data points, the system processes them as invariant pairs.
+
+**From "Aa" to "Zz":** Neural synchronization of case-invariant structures.
+Biological Paradigm: In the human brain, the Visual Word Form Area (VWFA) learns to recognize letters regardless of their case or font. By presenting "Aa" as a single stimulus, we simulate this perceptual constancy.
+
+**Haptic Association:** Each pair is linked to a unique signature in the haptic_registry.txt. This allows the Cerebellum to calibrate the timing of recognition for both uppercase and lowercase simultaneously.
+
+**Reduced Cognitive Friction:** Grouping 52 symbols into 26 functional units optimizes the Hippocampus storage and speeds up Thalamic routing, mimicking the efficiency of a high-cognitive profile.
+
+![ ](/docs/assets/spacer16x16.png)
 
 ```Python
 # Snippet: Serotonin influence on global homeostasis
@@ -72,4 +91,4 @@ Between behavioral _psychology, ethical engineering_, and _neuroinformatics_, hi
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-16_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-17_
