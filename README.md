@@ -24,7 +24,7 @@
 
 > [!NOTE]
 > **Follow the real-time evolution of aNA _AI_** and its journey towards a _100% consistent persona_.
-> **Access to the _"Creation Lab"_ 👉🏻 _[innovation-lab(.md)](https://github.com/theriaubenoit-ops/aNA-ai/blob/v5.3-beta/docs/innovation-lab.md)_**
+> **Access the _"Creation Lab"_ here 👉🏻 _[innovation-lab(.md)](https://github.com/theriaubenoit-ops/aNA-ai/blob/v5.3-beta/docs/innovation-lab.md)_**
 
 ![ ](/docs/assets/spacer16x16.png)
 
