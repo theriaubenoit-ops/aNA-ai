@@ -163,6 +163,10 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
 
 ![ ](/docs/assets/spacer16x16.png)
 
+<a href="#start-of-content">Back to top 🔼</a>
+
+![ ](/docs/assets/spacer16x16.png)
+
 ![Downloads](https://img.shields.io/github/downloads/theriaubenoit-ops/aNA-ai/total?style=for-the-badge&color=181c1f)
 
 _░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-16_
