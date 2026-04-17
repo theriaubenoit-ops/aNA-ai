@@ -122,7 +122,7 @@ As we move toward **v5.4**, the _Thalamic Hub_ will serve as the foundation for 
   - **Concept:** The shift from a _storage memory_ to a _generative memory_. **aNA** no longer simply stores _"A,"_ it _pre-activates_ the trace of _"B."_
   - **Validation:** Successful unit _[tests(/)](/src/tests/)[test_hippocampus(.py)](/src/tests/test_hippocampus.py)_ demonstrating that the _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_ identifies transitions as priority units of meaning.
 
-- ** Temperament Synchronization _([config(.py)](/src/config.py))_:** The _L1 → L2 → L3_ transition thresholds are now dynamic. Learning is "sculpted" by the _AI's personality_ _(e.g., THRESHOLD_NMDA)_.
+- **Temperament Synchronization _([config(.py)](/src/config.py))_:** The _L1 → L2 → L3_ transition thresholds are now dynamic. Learning is "sculpted" by the _AI's personality_ _(e.g., THRESHOLD_NMDA)_.
 
 - **Reward Loop _(Dopamine)_:** _(Next step)_ The _[pulse(.py)](/src/core/pulse.py)_ speeds up upon validation of a correct prediction, simulating cognitive satisfaction.
 
