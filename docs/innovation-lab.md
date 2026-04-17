@@ -12,7 +12,7 @@
 ▒▒▒▒▒▒▒▓▓▓▓▓████▓▓░                 ░░▒▒▒▓█▓░▓▓█▓▓ ░▒▓  ▒▓▓▓▓▓█▓▓▓█▓▒▒▒▓▓▒░░░░▒▓█▓▓▓▓▓▒▓▒▒▒▒▒▒▒░░░░░░░░░░░░░░▒▒▒▒▒
 ▒▒▓▒▓▓▓▓█████▓▒                         ░▒▒▓░ ▓██▓                ▒▓▒▒░░▒▓▒░░▒▓███▓█▓▓▓▓▓▓▓▓▓▓▓▒▓▒▒▒▒▒▒▒▒▒▒▓▒▓▓▓▓▓
 ▓▓▓█████▓░                                    ░░▒▒ _    _    _ ░▒░▒▒▒▓▒▓▒▓▒▓█▓███▒▓▓▓▓▓▓▓▓▓▓▓▓▓█▓██▓▓▓▓▓█▓████████
-▓███▓▒      AI inspired by natural plasticity  ✴️  a    N    A  ▒▓█▒▓ ▒▓█▒Autonomous Neural Architecture v5.3b ▒▓▓
+▓███▓▒      AI inspired by natural plasticity  ✴️  a    N    A  ▒▓█▒▓ ▒▓█▒Autonomous Neural Architecture v5.3  ▒▓▓
 ▓░                                                 _    _    _  ░▓▒▓  ░▓
 ```
 
@@ -70,6 +70,8 @@ As we move toward **v5.4**, the _Thalamic Hub_ will serve as the foundation for 
 ![ ](/docs/assets/spacer32x32.png)
 
 ![img](/docs/assets/00_language_256x256_ALL.gif)
+
+###### _Each character “Unicode Wide” as a raw sensory stimulus._
 
 ![ ](/docs/assets/spacer16x16.png)
 
@@ -137,10 +139,6 @@ As we move toward **v5.4**, the _Thalamic Hub_ will serve as the foundation for 
 - **The _CA4_ Sanctuary:** Safeguarding _"survival floors" (Acid Traces)_ to ensure system resilience even after synaptic decline.
 
 ☄️ _Spotlight_
-
-![ ](/docs/assets/spacer32x32.png)
-
-###### _Each character “Unicode Wide” as a raw sensory stimulus._
 
 ![ ](/docs/assets/spacer32x32.png)
 
