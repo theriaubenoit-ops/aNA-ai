@@ -68,4 +68,8 @@ Between behavioral _psychology, ethical engineering_, and _neuroinformatics_, hi
 
 ![ ](/docs/assets/spacer16x16.png)
 
+<a href="#start-of-content">Back to top 🔼</a>
+
+![ ](/docs/assets/spacer16x16.png)
+
 _░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-16_
