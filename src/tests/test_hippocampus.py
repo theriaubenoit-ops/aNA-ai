@@ -268,7 +268,7 @@ def test_hippocampus_pattern_learning():
     print(f"📚 Learning sequence: {sequence}")
     print()
     
-    # Phase 1: Encoding
+    # --- Phase 1: Encoding ---
     print("📝 PHASE 1: Encoding")
     print("-" * 30)
     
@@ -284,7 +284,7 @@ def test_hippocampus_pattern_learning():
         print(f"   Memory: L1={status['L1_count']}, L2={status['L2_count']}, L3={status['L3_count']}")
         print()
     
-    # Phase 2: Recovery and Prediction
+    # --- Phase 2: Recovery and Prediction ---
     print("🔍 PHASE 2: Recovery and Prediction")
     print("-" * 40)
     
@@ -300,7 +300,7 @@ def test_hippocampus_pattern_learning():
     print(f"✅ Success: {success}")
     print(f"📊 Pattern counts: {hippo.pattern_counts}")
     
-    # Phase 3: Detailed verification
+    # --- Phase 3: Detailed verification ---
     print("\n🔍 PHASE 3: Detailed Verification")
     print("-" * 35)
     
