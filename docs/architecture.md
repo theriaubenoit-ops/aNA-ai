@@ -294,4 +294,8 @@ Processing Hierarchy:
 
 ![ ](/docs/assets/spacer16x16.png)
 
+<a href="#start-of-content"><a href="#start-of-content">🔼 Back to top</a></a>
+
+![ ](/docs/assets/spacer16x16.png)
+
 _░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-15_
