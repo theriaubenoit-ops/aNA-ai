@@ -84,11 +84,11 @@ async def main():
     # --- Test sequences (Unicode Wide) ---
 
     # Path: src/tests/media_haptic/(More tests)...
-    # haptic_dict = ["a", "N", "A", " ", "a", "N", "A", " ", "a", "N", "A", " ", "a", "N", "A", " ", "a", "N", "A", " ", "a", "N", "A", " ", "B", "A", "N", "A", "N", "A", "S"]
-    # haptic_dict = ["B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", " ", "你"]
-    # haptic_dict = ["H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "o", "l", "a", " ", "O", "l", "á", " ", "你", "好", " ", "H", "i"]
-    # haptic_dict = ["H", "e", "l", "l", "o", " ", "H", "e", "l", "l", "o", " ", "H", "e", "l", "l", "o", " ", "H", "e", "l", "l", "o", " ", "H", "o", "l", "a", " ", "你", "好", " ", "H", "e", "l", "l", "o"]
-    haptic_dict = ["H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "E", "你", "L", "你", "L", "你", "E", "你", "H"]
+    # haptic_dir = ["a", "N", "A", " ", "a", "N", "A", " ", "a", "N", "A", " ", "a", "N", "A", " ", "a", "N", "A", " ", "a", "N", "A", " ", "B", "A", "N", "A", "N", "A", "S"]
+    # haptic_dir = ["B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", " ", "你"]
+    # haptic_dir = ["H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "o", "l", "a", " ", "O", "l", "á", " ", "你", "好", " ", "H", "i"]
+    # haptic_dir = ["H", "e", "l", "l", "o", " ", "H", "e", "l", "l", "o", " ", "H", "e", "l", "l", "o", " ", "H", "e", "l", "l", "o", " ", "H", "o", "l", "a", " ", "你", "好", " ", "H", "e", "l", "l", "o"]
+    haptic_dir = ["H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "E", "你", "L", "你", "L", "你", "E", "你", "H"]
     
     # Path: src/tests/media_visual/...
     visual_dir = os.path.join(base_path, "src", "tests", "media_visual")
@@ -96,7 +96,7 @@ async def main():
     # Path: src/tests/media_audio/...
     audio_dir = os.path.join(base_path, "src", "tests", "media_audio")
     
-    all_haptics = haptic_dict
+    all_haptics = haptic_dir
     all_visuals = get_visual_files(visual_dir)
     all_audios = get_audio_files(audio_dir)
     
@@ -138,7 +138,7 @@ async def main():
             snd_index = (cycle - 1) % len(all_audios)
             current_sound_path = os.path.join(audio_dir, all_audios[snd_index])
             auditory_payload = await auditory_gateway.capture_sound(file_path=current_sound_path)
-            # TREASURE: We retrieve the raw data via getattr to be sure!
+            # TREASURE: We retrieve the rawPHASE  data via getattr to be sure!
             current_audio_data = getattr(auditory_payload, 'audio_data', getattr(auditory_payload, 'data', np.zeros(100)))
         else:
             current_audio_data = np.zeros(100)
