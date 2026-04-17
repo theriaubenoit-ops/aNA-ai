@@ -294,7 +294,7 @@ Processing Hierarchy:
 
 ![ ](/docs/assets/spacer16x16.png)
 
-<a href="#start-of-content"><a href="#start-of-content">🔼 Back to top</a></a>
+<a href="#start-of-content"><a href="#start-of-content" style="text-decoration: none;">Back to top🔼</a></a>
 
 ![ ](/docs/assets/spacer16x16.png)
 
