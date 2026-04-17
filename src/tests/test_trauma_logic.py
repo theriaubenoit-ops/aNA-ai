@@ -65,7 +65,7 @@ async def run_scientific_test():
         "ENCODE_THRESHOLD": 0.5
     })
 
-    # Phase A : Neutral Signal (Repeated)
+    # --- Phase A : Neutral Signal (Repeated) ---
     print("\nPhase A: Learning a neutral signal...")
     for i in range(5):
         await process_event(amy, hippo, "NEUTRE_1", 0.6, 0.0)
@@ -73,7 +73,7 @@ async def run_scientific_test():
     val_n_init = hippo.subfields['CA3'].get('NEUTRE_1', 0)
     print(f"Force trace NEUTRE_1 after 5 cycles : {val_n_init:.4f}")
 
-    # Phase B : The Trauma (Unique and intense)
+    # --- Phase B : The Trauma (Unique and intense) ---
     print("\nPhase B: Encounter with a Critical Error (Trauma)...")
     # We inject a terror valence (-1.0)
     await process_event(amy, hippo, "TRAUMA_1", 1.0, -1.0)
@@ -81,7 +81,7 @@ async def run_scientific_test():
     val_t_init = hippo.subfields['CA3'].get('TRAUMA_1', 0)
     print(f"Force trace TRAUMA_1 (Gravure Flash) : {val_t_init:.4f}")
 
-    # Phase C : Sedimentation (Forgotten over 100 cycles)
+    # --- Phase C : Sedimentation (Forgotten over 100 cycles) ---
     print("\nPhase C: Simulation of 100 forgetting cycles...")
     for _ in range(100):
         # We simulate the passage of time (synaptic decay)
