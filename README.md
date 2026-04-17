@@ -12,7 +12,7 @@
 ▒▒▒▒▒▒▒▓▓▓▓▓████▓▓░                 ░░▒▒▒▓█▓░▓▓█▓▓ ░▒▓  ▒▓▓▓▓▓█▓▓▓█▓▒▒▒▓▓▒░░░░▒▓█▓▓▓▓▓▒▓▒▒▒▒▒▒▒░░░░░░░░░░░░░░▒▒▒▒▒
 ▒▒▓▒▓▓▓▓█████▓▒                         ░▒▒▓░ ▓██▓                ▒▓▒▒░░▒▓▒░░▒▓███▓█▓▓▓▓▓▓▓▓▓▓▓▒▓▒▒▒▒▒▒▒▒▒▒▓▒▓▓▓▓▓
 ▓▓▓█████▓░                                    ░░▒▒ _    _    _ ░▒░▒▒▒▓▒▓▒▓▒▓█▓███▒▓▓▓▓▓▓▓▓▓▓▓▓▓█▓██▓▓▓▓▓█▓████████
-▓███▓▒      AI inspired by natural plasticity  ✴️  a    N    A  ▒▓█▒▓ ▒▓█▒Autonomous Neural Architecture v5.3b ▒▓▓
+▓███▓▒      AI inspired by natural plasticity  ✴️  a    N    A  ▒▓█▒▓ ▒▓█▒Autonomous Neural Architecture v5.3  ▒▓▓
 ▓░                                                 _    _    _  ░▓▒▓  ░▓
 ```
 
@@ -34,7 +34,7 @@ Current _artificial intelligence_, while powerful, relies on massive, rigid arch
 
 ### Hardware Agnostic & Resource Efficient
 
-The **aNA** _(v5.3b) architecture_ is built on the principle of _biological sobriety_. While _modern AI_ scales through _brute force_ and _energy-intensive_ infrastructure, **aNA** prioritizes _structural elegance_ and _synaptic efficiency_.
+The **aNA** _(v5.3) architecture_ is built on the principle of _biological sobriety_. While _modern AI_ scales through _brute force_ and _energy-intensive_ infrastructure, **aNA** prioritizes _structural elegance_ and _synaptic efficiency_.
 
 - **Featherweight _(< 1 MB)_:** The entire neural organism—including the _[thalamic hub(.py)](/src/anatomy/subcortical/thalamic_hub.py)_, _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_, and _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_ is smaller than a single _high-resolution_ photo.
 - **Minimal Memory Footprint:** No need for clusters or _64GB of RAM_. **aNA** is designed to run natively on modest hardware, from _Kubuntu LTS_ and _MacBook M1_ to _standard everyday laptops_.
