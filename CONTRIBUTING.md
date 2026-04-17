@@ -169,4 +169,8 @@ _**L1 to L6 (Cortical Layers):** Refers to the six horizontal layers of the biol
 
 ![ ](/docs/assets/spacer16x16.png)
 
+<a href="#start-of-content">Back to top 🔼</a>
+
+![ ](/docs/assets/spacer16x16.png)
+
 _░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-12_
