@@ -23,8 +23,8 @@
 ![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)
 
 > [!NOTE]
-> Follow the real-time evolution of **aNA’s neural architecture** and our journey toward a **100% consistent _AI_ persona**.
-> **Access the latest advancements at the _"Creation Lab"_ 👉🏻 _[innovation-lab(.md)](https://github.com/theriaubenoit-ops/aNA-ai/blob/v5.3-beta/docs/innovation-lab.md)_**
+> **Follow the real-time evolution of aNA _AI_** and its journey towards a _100% consistent persona_.
+> **Access to the _"Creation Lab"_ 👉🏻 _[innovation-lab(.md)](https://github.com/theriaubenoit-ops/aNA-ai/blob/v5.3-beta/docs/innovation-lab.md)_**
 
 ![ ](/docs/assets/spacer16x16.png)
 
@@ -169,4 +169,4 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
 
 ![Downloads](https://img.shields.io/github/downloads/theriaubenoit-ops/aNA-ai/total?style=for-the-badge&color=181c1f)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-16_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-17_
