@@ -12,7 +12,7 @@
 ▒▒▒▒▒▒▒▓▓▓▓▓████▓▓░                 ░░▒▒▒▓█▓░▓▓█▓▓ ░▒▓  ▒▓▓▓▓▓█▓▓▓█▓▒▒▒▓▓▒░░░░▒▓█▓▓▓▓▓▒▓▒▒▒▒▒▒▒░░░░░░░░░░░░░░▒▒▒▒▒
 ▒▒▓▒▓▓▓▓█████▓▒                         ░▒▒▓░ ▓██▓                ▒▓▒▒░░▒▓▒░░▒▓███▓█▓▓▓▓▓▓▓▓▓▓▓▒▓▒▒▒▒▒▒▒▒▒▒▓▒▓▓▓▓▓
 ▓▓▓█████▓░                                    ░░▒▒ _    _    _ ░▒░▒▒▒▓▒▓▒▓▒▓█▓███▒▓▓▓▓▓▓▓▓▓▓▓▓▓█▓██▓▓▓▓▓█▓████████
-▓███▓▒      AI inspired by natural plasticity  ✴️  a    N    A  ▒▓█▒▓ ▒▓█▒Autonomous Neural Architecture v5.3b ▒▓▓
+▓███▓▒      AI inspired by natural plasticity  ✴️  a    N    A  ▒▓█▒▓ ▒▓█▒Autonomous Neural Architecture v5.3  ▒▓▓
 ▓░                                                 _    _    _  ░▓▒▓  ░▓
 ```
 
@@ -54,6 +54,12 @@ _The **aNA** (Autonomous Neural Architecture) AI project rejects the paradigm of
 
 - **Emotional Saliency & Acid Traces _(CA4 Protection)_**
   **aNA** does not treat all information equally. Through a synchronized dialogue between the _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ and the _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_, the system identifies high-impact _emotional events_. While standard data undergoes natural decay (pruning), trauma-related signals trigger a _"Flash NMDA"_ encoding, creating an Acid Trace. This trace is locked into a structural floor within the _CA4_ subfield, ensuring that survival-critical information survives even after long-term synaptic decay.
+
+![ ](/docs/assets/spacer32x32.png)
+
+![img](/docs/assets/geometry_256x256_00_ALL.gif)
+
+###### _A digital bridge where the image transcends simple form to become a continuous transformation of the senses._
 
 ![ ](/docs/assets/spacer32x32.png)
 
@@ -124,4 +130,4 @@ His work on how adrenal hormones and the _[amygdala(.py)](/src/anatomy/limbic/am
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-15_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-17_
