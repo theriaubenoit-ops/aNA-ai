@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Projet aNA IA - v5.2
-Module : Tester la logique des traumatismes de l'hippocampe
+Project aNA AI v5.2 - Tester la logique des traumatismes de l'hippocampe
+
 La description : Ce test simule la logique traumatique de l'hippocampe en créant un scénario dans lequel une expérience neutre est suivie d'un événement traumatisant, puis en simulant le processus d'oubli au fil du temps. Le test vérifie si la trace mnésique traumatique persiste plus longtemps que la trace neutre, démontrant le concept de consolidation et de persistance de la mémoire émotionnelle.
+
 Architecture et neuroinformatique : Thériault Benoit
 """
 import unittest 
@@ -22,15 +23,15 @@ from anatomy.limbic.hippocampus import Hippocampus
 
 def create_ascii_header():
     print(f"\033c") 
-    print("░                     ░░░░░░░░░░▒▒▒▒▒▒░░")
-    print("           ░░░░░░░░░▒▒▒▒▒▓▒▒▒▒░░░░░░░░░░▒▒▒▒░                                                          ░░░░░░░░░░░")
-    print("░░░░░░░░░░░░░░░░▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▒░░░░░▒▒▒░░░░▒▓▒░░                      ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░")
-    print("░░░░░░░░░░░░░░▒▒▒▓▓▓▓▓▓▓▓▓▓▓▒░░▒▒▒░░░░▒▓▓▓▓▓▓▒▒▒▒▒░     ░░░░░░░░░░░░░░░░░░░░░▒▒░░▒▒▒▓▓▓▓▓▓▒▒▒░░░░░░░░░░░░░░░░░▒▒▒▒")
-    print("▒░░░░░▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▒░         ░░▒▒▒░▒▒▒▒▓▓▓▓▓▓▓▒▒░░  ░▒▒▒▓▒▒▒▓▒▓▒▓▒░░░░░░░▒▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░░░░░░░▒▓")
-    print("░▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓░                   ░░ ▒▒▓▒░▒▓▓▓░▒▒░░           ░▒░░░▒▓▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▓▓")
-    print("▒▒▓▓▓▓▓▓▒▒▒░░                           ░▓▓▒░░▒▓▓░ _    _    _ ░▒░░▒▓▒▓▓▓▓▓▓▓▓▓▓▒░░░░░░░░░▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓")
-    print("▓▓▓░IA inspirée de la plasticité naturelle░░  ░░░  a    N    A  ▒▓▒▓▒▒▒▓░Architecture Neuronale Autonome v5.2  ░▒▓")
-    print("░                                                  ‾    ‾    ‾ ░▓▒▓░░▒▓░\n\n")
+    print("░              ░ ░░░▒▒▓▒▓▒▒▒▒▒░░▒▒░▒▒▒▓▒▓▒                                                                     ░ ░")
+    print("▒░░   ░░░░░░░░░░▒▒▓▓▓▓▓▓▓██▓▒▒▒░░░▒▒▒▒▒░░░▒▒▓▓▒                                                         ░░░░░░▒▒▒▒")
+    print("░░░░░░░░░░░░░▒▒▒▓▓▓▓▓▓██████▓▓▒▒▒░░▒▒▓▓▓▒▒▒░░▒▒▒▒▓▒                                        ░ ░░░ ░ ░░░░░░░░░▒▒▒▒▒▒")
+    print("▓▒▒▒▒▒▒▒▒▓▒▓▓▓▓▓▓██████▓▒▒ ▒   ▒▓▒▓▒▒▒▒▓▒▓ ██▓▓▓▒▒▒▒▓      ░░▒▒▒▒▒▒▒░░░░░░▒░░░░▒▒░░▒░░░░░░░░░░░░░░░░░▒░▒▒▒░▒▒▒▓▓▓▓")
+    print("▒▒▒▒▒▒▒▓▓▓▓▓████▓▓░                 ░░▒▒▒▓█▓░▓▓█▓▓ ░▒▓  ▒▓▓▓▓▓█▓▓▓█▓▒▒▒▓▓▒░░░░▒▓█▓▓▓▓▓▒▓▒▒▒▒▒▒▒░░░░░░░░░░░░░░▒▒▒▒▒")
+    print("▒▒▓▒▓▓▓▓█████▓▓▒                        ░▒▒▓░ ▓██▓                ▒▓▒▒░░▒▓▒░░▒▓███▓█▓▓▓▓▓▓▓▓▓▓▓▒▓▒▒▒▒▒▒▒▒▒▒▓▒▓▓▓▓▓")
+    print("▓▓▓█████▓░                                    ░░▒▒ _    _    _ ░▒░▒▒▒▓▒▓▒▓▒▓█▓███▓▒▓▓▓▓▓▓▓▓▓▓▓▓█▓██▓▓▓▓▓█▓████████")
+    print("▓███▓▒  IA inspirée de la plasticité naturelle ✴️  a    N    A  ▒▓█▒▓ ▒▓█▒Architecture Neuronale Autonome v5.3b▒▓▓")
+    print("▓░                                                 _    _    _  ░▓▒▓  ░▓\n\n")
 
 async def process_event(amy, hippo, label, intensity, valence):
     """
@@ -64,7 +65,7 @@ async def run_scientific_test():
         "ENCODE_THRESHOLD": 0.5
     })
 
-    # Phase A : Signal Neutre (Répété)
+    # --- Phase A : Signal Neutre (Répété) ---
     print("\nPhase A : Apprentissage d'un signal neutre...")
     for i in range(5):
         await process_event(amy, hippo, "NEUTRE_1", 0.6, 0.0)
@@ -72,7 +73,7 @@ async def run_scientific_test():
     val_n_init = hippo.subfields['CA3'].get('NEUTRE_1', 0)
     print(f"Force trace NEUTRE_1 après 5 cycles : {val_n_init:.4f}")
 
-    # Phase B : Le Trauma (Unique et intense)
+    # --- Phase B : Le Trauma (Unique et intense) ---
     print("\nPhase B : Rencontre avec une Erreur Critique (Trauma)...")
     # On injecte une valence de terreur (-1.0)
     await process_event(amy, hippo, "TRAUMA_1", 1.0, -1.0)
@@ -80,7 +81,7 @@ async def run_scientific_test():
     val_t_init = hippo.subfields['CA3'].get('TRAUMA_1', 0)
     print(f"Force trace TRAUMA_1 (Gravure Flash) : {val_t_init:.4f}")
 
-    # Phase C : Sédimentation (Oubli sur 100 cycles)
+    # --- Phase C : Sédimentation (Oubli sur 100 cycles) ---
     print("\nPhase C : Simulation de 100 cycles d'oubli...")
     for _ in range(100):
         # On simule le passage du temps (décroissance synaptique)
