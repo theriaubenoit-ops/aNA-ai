@@ -75,8 +75,8 @@ SENSORY_WEIGHTS = {                # AVERAGE HUMAN (visual priority) Total: 1.0 
 # PROFILE: NEURAL PERFORMANCE CONFIGURATION
 # =============================================================
 
-# --- OPTION A: HUMAIN PERFORMANT (High Plasticity & Focus) ---
-# Neuroplasticité maximale, gestion optimale du stress et focus thalamique
+# --- OPTION A: HIGH-PERFORMING HUMAN (High Plasticity & Focus) ---
+# Maximum neuroplasticity, optimal stress management and thalamic focus.
 # """
 AMYGDALA_SENSITIVITY      = 0.5    
 L6_GAIN                   = 0.8    
@@ -91,8 +91,8 @@ ATP_CONSUMPTION           = 0.001
 NOISE_LEVEL               = 0.01   
 # """
 
-# --- OPTION B: HUMAIN MOYEN (Standard Baseline) ---
-# Les valeurs par défaut que nous avons testées jusqu'ici.
+# --- OPTION B: AVERAGE HUMAN (Standard Baseline) ---
+# The default values tested.
 """
 AMYGDALA_SENSITIVITY      = 1.0   
 L6_GAIN                   = 0.5    
@@ -107,8 +107,8 @@ ATP_CONSUMPTION           = 0.003
 NOISE_LEVEL               = 0.02   
 """
 
-# --- OPTION C: HUMAIN FATIGUÉ/SATURÉ (Saturated & Exhausted) ---
-# ATP bas, hyper-réactivité émotionnelle et difficulté d'encodage.
+# --- OPTION C: TIRED/SATURATED HUMAN (Saturated & Exhausted) ---
+# Low ATP, emotional hyper-reactivity, and encoding difficulty.
 """
 AMYGDALA_SENSITIVITY      = 1.8    
 L6_GAIN                   = 0.2    
