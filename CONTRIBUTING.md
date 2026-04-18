@@ -105,7 +105,7 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
 
 ![img](/docs/assets/color_256x256_ALL.gif)
 
-###### _Sensory entropy filtering: 25 colored noise profiles to test the _[thalamic Hub(.py)](/src/anatomy/subcortical/thalamic_hub.py)_'s gating mechanisms and predictive stability._
+###### _Sensory entropy filtering: Colored noise profiles to test the _[thalamic Hub(.py)](/src/anatomy/subcortical/thalamic_hub.py)_'s gating mechanisms and predictive stability._
 
 ![ ](/docs/assets/spacer32x32.png)
 
