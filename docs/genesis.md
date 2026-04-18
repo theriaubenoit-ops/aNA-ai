@@ -40,7 +40,7 @@ This project is an exploration at the threshold of _cortical_ memory. We are not
 
 ![ ](/docs/assets/spacer32x32.png)
 
-![img](/docs/assets/alphabet_256x256_00_ALL.gif)
+![img](/docs/assets/alphabet_256x256_ALL.gif)
 
 ###### _Thanks to a wide range of media (haptic, visual and auditory), it is already possible to _[test(/)](/src/tests/)_ many learning processes._
 
