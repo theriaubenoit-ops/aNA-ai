@@ -105,7 +105,7 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
 
 ![img](/docs/assets/color_256x256_ALL.gif)
 
-###### _Sensory entropy filtering? Enough colored noise profiles to test the Thalamic Hub's gating mechanisms and predictive stability._
+###### _Sensory entropy filtering: 25 colored noise profiles to test the _[thalamic Hub(.py)](/src/anatomy/subcortical/thalamic_hub.py)_'s gating mechanisms and predictive stability._
 
 ![ ](/docs/assets/spacer32x32.png)
 
@@ -179,4 +179,4 @@ _**L1 to L6 (Cortical Layers):** Refers to the six horizontal layers of the biol
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-17_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-12_
