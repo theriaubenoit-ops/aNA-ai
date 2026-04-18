@@ -1,6 +1,6 @@
 ![ ](/docs/assets/spacer16x16.png)
 
-## "Whatever the approach, we must find a simple way of thinking, within a concept that must remain complex."
+# "Whatever the approach, we must find a simple way of thinking, within a concept that must remain complex."
 
 ![ ](/docs/assets/spacer32x32.png)
 
