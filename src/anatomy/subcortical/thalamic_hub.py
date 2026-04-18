@@ -1,9 +1,17 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Thalamic Hub (Multimodal Sensory Integrator) for aNA AI Project v5.3b
+Thalamic Hub (Multimodal Sensory Integrator) for aNA AI Project v5.3
 
 Description: Centralizes and filters all sensory inputs before cortical projection.
+
+Communicates with:
+Input: (<- InputGateways: Visual, Auditory, Haptic)
+Input: (<- Hippocampus: Pattern Completion/Recall)
+Input: (<- Amygdala: Emotional Saliency/Urgency)
+Input/Output: (<-> Cortical Columns: Feedback L6 / Feedforward L4)
+Output: (-> Thalamus Core: BPM & Metabolic modulation)
+Output: (-> Neuromodulator: Synaptic Gain & Plasticity)
 
 Architecture, concept and supervision: Benoit Theriault
 Collaboration, research and code: Gemini
