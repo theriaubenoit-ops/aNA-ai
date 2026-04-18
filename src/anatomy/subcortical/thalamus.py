@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Thalamus implementation for aNA AI Project v5.3b
+Thalamus implementation for aNA AI Project v5.3
 
-Communicates with: 
-Input: (<- InputGateway) (<- Hippocampus) (<- Amygdala)
-Input/Output: (<-> Cortical Columns L4/L6) 
-Output: (-> Pulse/BPM) (-> Neuromodulator Gain)
+Communicates with:
+Input: (<- Thalamic Hub: Routed sensory payloads & Gating instructions)
+Input: (<- Hippocampus: Contextual memory states)
+Input: (<- Amygdala: Emotional urgency & Saliency)
+Input/Output: (<-> Cortical Columns L4/L6: Direct metabolic feedback)
+Output: (-> Pulse/BPM: Heart rate frequency modulation)
+Output: (-> Neuromodulator: Global chemical gain & ATP management)
 
 This module implements the Thalamus as the central sensory relay and rhythmic pacemaker of aNA. It orchestrates the flow between subcortical structures and the Neocortex, specifically managing the L4 excitation and L6 feedback loops. It integrates with the ChemicalCore to modulate signal gain based on arousal and directs the Pulse (BPM) frequency, ensuring the organism maintains homeostatic stability during stimulus processing.
 
