@@ -12,7 +12,7 @@
 ▒▒▒▒▒▒▒▓▓▓▓▓████▓▓░                 ░░▒▒▒▓█▓░▓▓█▓▓ ░▒▓  ▒▓▓▓▓▓█▓▓▓█▓▒▒▒▓▓▒░░░░▒▓█▓▓▓▓▓▒▓▒▒▒▒▒▒▒░░░░░░░░░░░░░░▒▒▒▒▒
 ▒▒▓▒▓▓▓▓█████▓▒                         ░▒▒▓░ ▓██▓                ▒▓▒▒░░▒▓▒░░▒▓███▓█▓▓▓▓▓▓▓▓▓▓▓▒▓▒▒▒▒▒▒▒▒▒▒▓▒▓▓▓▓▓
 ▓▓▓█████▓░                                    ░░▒▒ _    _    _ ░▒░▒▒▒▓▒▓▒▓▒▓█▓███▒▓▓▓▓▓▓▓▓▓▓▓▓▓█▓██▓▓▓▓▓█▓████████
-▓███▓▒      AI inspired by natural plasticity  ✴️  a    N    A  ▒▓█▒▓ ▒▓█▒Autonomous Neural Architecture v5.3b ▒▓▓
+▓███▓▒      AI inspired by natural plasticity  ✴️  a    N    A  ▒▓█▒▓ ▒▓█▒Autonomous Neural Architecture v5.3  ▒▓▓
 ▓░                                                 _    _    _  ░▓▒▓  ░▓
 ```
 
@@ -103,6 +103,12 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
 
 ![ ](/docs/assets/spacer32x32.png)
 
+![img](/docs/assets/color_256x256_ALL.gif)
+
+###### _Sensory entropy filtering? Enough colored noise profiles to test the Thalamic Hub's gating mechanisms and predictive stability._
+
+![ ](/docs/assets/spacer32x32.png)
+
 ```Python
 # From src/anatomy/limbic/hippocampus.py
 # Highlighting the successful transition from L1 to L3 memory
@@ -173,4 +179,4 @@ _**L1 to L6 (Cortical Layers):** Refers to the six horizontal layers of the biol
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-12_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-17_
