@@ -57,7 +57,7 @@ _The **aNA** (Autonomous Neural Architecture) AI project rejects the paradigm of
 
 ![ ](/docs/assets/spacer32x32.png)
 
-![img](/docs/assets/geometry_256x256_00_ALL.gif)
+![img](/docs/assets/geometry_256x256_ALL.gif)
 
 ###### _A digital bridge where the image transcends simple form to become a continuous transformation of the senses._
 
