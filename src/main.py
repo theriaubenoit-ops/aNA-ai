@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-aNA AI Project v5.3b - Thalamic Hub Integration
+aNA AI Project v5.3 - Thalamic Hub Integration
 
 Description: This version marks the transition to centralized multimodal routing.
 The ThalamicHub acts as an attentional filter (gating) before cortical projection.
@@ -39,7 +39,7 @@ def create_ascii_header():
     print("▒▒▒▒▒▒▒▓▓▓▓▓████▓▓░                 ░░▒▒▒▓█▓░▓▓█▓▓ ░▒▓  ▒▓▓▓▓▓█▓▓▓█▓▒▒▒▓▓▒░░░░▒▓█▓▓▓▓▓▒▓▒▒▒▒▒▒▒░░░░░░░░░░░░░░▒▒▒▒▒")
     print("▒▒▓▒▓▓▓▓█████▓▒                         ░▒▒▓░ ▓██▓                ▒▓▒▒░░▒▓▒░░▒▓███▓█▓▓▓▓▓▓▓▓▓▓▓▒▓▒▒▒▒▒▒▒▒▒▒▓▒▓▓▓▓▓")
     print("▓▓▓█████▓░                                    ░░▒▒ _    _    _ ░▒░▒▒▒▓▒▓▒▓▒▓█▓███▓▒▓▓▓▓▓▓▓▓▓▓▓▓█▓██▓▓▓▓▓█▓████████")
-    print("▓███▓▒      AI inspired by natural plasticity  ✴️  a    N    A  ▒▓█▒▓ ▒▓█▒Autonomous Neural Architecture v5.3b ▒▓▓")
+    print("▓███▓▒      AI inspired by natural plasticity  ✴️  a    N    A  ▒▓█▒▓ ▒▓█▒Autonomous Neural Architecture v5.3  ▒▓▓")
     print("▓░                                                 _    _    _  ░▓▒▓  ░▓\n\n")
 
 def get_visual_files(directory):
@@ -55,12 +55,12 @@ def get_audio_files(directory):
     return []
 
 async def main():
-    print("--- ⚡ aNA Organism v5.3b (Thalamic Hub Active) ---")
+    print("--- ⚡ aNA Organism (Thalamic Hub Active) ---")
 
     # 1. Engine initialization
     config = get_config()
-    neurom_core = Neuromodulator() 
-    hippo = Hippocampus(config=config, neuromodulator_core=neurom_core)
+    neuromod_core = Neuromodulator()
+    hippo = Hippocampus(config=config, neuromodulator_core=neuromod_core)
     heart = Pulse(bpm=config.get("BASE_BPM", 72.0))
     
     # Sensory Gateways
@@ -75,7 +75,7 @@ async def main():
     thalamus = Thalamus(
         hippocampus=hippo, 
         pulse=heart, 
-        neuromodulator_core=neurom_core 
+        neuromodulator_core=neuromod_core 
     )
     hub = ThalamicHub(thalamus_core=thalamus) # Centralisation multimodal v5.3
     
@@ -105,6 +105,12 @@ async def main():
     if not all_audios:
         print(f" [Note] No auditory stimuli were found in: {audio_dir}")
 
+    # On définit un status par défaut pour le premier cycle
+    status = {
+        'bpm': thalamus.current_bpm,
+        'vitality': 1.0
+    }
+    
     for cycle, char in enumerate(all_haptics, 1):
         # --- PHASE A : PREDICTIVE ANALYSIS (Feedback L6) ---
         # cortical_results = await visual_column.process_input(char, hippo)
@@ -167,9 +173,31 @@ async def main():
         
         print(f"\nCycle {cycle:02d} - Multimodal Routing")
         
-        res_v = await hub.route_sensory_input("input_visual", visual_payload.__dict__)
-        res_a = await hub.route_sensory_input("input_auditory", auditory_payload.__dict__)
-        res_h = await hub.route_sensory_input("input_haptic", haptic_data)
+        # --- PHASE 1: ROUTAGE THALAMIQUE & ATTENTION ---
+        res_v = await hub.route_signal("input_visual", "00_language_64x64_English.png", status['bpm'])
+        res_a = await hub.route_signal("input_auditory", "pink_noise.wav", status['bpm'])
+        res_h = await hub.route_signal("input_haptic", char, status['bpm'])
+
+        # --- PHASE 2: ALIGNEMENT HIPPOCAMPE (L'IMPACT) ---
+        # On demande à l'hippocampe d'évaluer la prédiction du stimulus haptique
+        # Cela remplace la simulation 'cortical_results'
+        prediction_error = await hippo.evaluate_prediction(char)
+        
+        # On met à jour la mémoire (Apprentissage Hebbien)
+        # On passe un dictionnaire émotionnel neutre pour le test
+        await hippo.update_memories(char, {"valence": 0.5, "arousal": 0.5})
+
+        # --- PHASE 3: MODULATION DU BPM (L'HOMÉOSTASIE) ---
+        # Si la prédiction est bonne (erreur faible), on calme le jeu.
+        # Si c'est nouveau (erreur 1.0), on maintient la vigilance (Dopamine).
+        if prediction_error < config["THRESHOLD_NMDA"]:
+            thalamus.current_bpm -= 2.0  # Le système se rassure
+        else:
+            thalamus.current_bpm += 1.5  # Vigilance accrue
+            
+        # --- PHASE 4: CONSOLIDATION (DÉFLAGRATION AU REPOS) ---
+        if thalamus.current_bpm <= 75.0:
+            await hippo.consolidate_and_prune()
 
         # --- PHASE D : METABOLIC UPDATE ---
         heart.update()
@@ -202,8 +230,14 @@ async def main():
         print(f"  ├─ Hub Status (Visual)      : {res_v.get('status', 'Routed!')}")
         print(f"  ├─ Hub Status (Auditory)    : {res_a.get('status', 'Routed!')}")
         print(f"  ├─ Hub Status (Haptic)      : {res_h.get('status', 'Routed!')}")
-        status_label = "Known!" if cortical_results['recognition'] > 0 else "Unknown."
-        print(f"  ├─ Pattern Match (Cortex)   : {cortical_results['recognition']:.2%} {status_label}")
+        status_label = "Known!" if await hippo.evaluate_prediction(char) > 0 else "Unknown."
+        # print(f"  ├─ Pattern Match (Cortex)   : {await hippo.evaluate_prediction(char):.2%} {status_label}")
+
+        # Calcul du score de connaissance inverse à l'erreur de prédiction
+        knowledge_score = 1.0 - prediction_error
+        status_label = "Confirmed!" if knowledge_score > 0.8 else "Learning..."
+        
+        print(f"  ├─ Pattern Match (Hippo)    : {knowledge_score:.2%} {status_label}")
         print(f"  ├─ Thalamic (bpm)           : {thalamus.current_bpm:.1f} (vitality: {(status['vitality']* 100 ):.2f}%)")
         
         # Performance and Biology
@@ -213,7 +247,7 @@ async def main():
 
         await asyncio.sleep(synaptic_latency)
 
-    print("\n--- ✅ Organism v5.3b stabilized with Thalamic Hub ---")
+    print("\n--- ✅ Organism stabilized with Thalamic Hub ---")
     print("\n  *Every measurement reflected here is a digital bridge to biological reality,")
     print("   designed to synthesize the fundamental principles of living systems.\n")
 
