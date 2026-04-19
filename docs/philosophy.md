@@ -35,7 +35,7 @@ _The **aNA** (Autonomous Neural Architecture) AI project rejects the paradigm of
 - ☄️ **Latency & plasticity management:**
   **aNA** maintains a fine-grained latency state. By keeping response paths dynamic rather than hard-coded, we preserve cognitive flexibility, drastically reducing the need for destructive relearning and allowing for continuous, low-compute evolution.
 
-- ☄️ **Resource efficiency through relational storage:**
+- **Resource efficiency through relational storage:**
   _Biological brains_ do not store raw volumes; they store relationships. **aNA** mimics this by prioritizing relational structures over volume. This targeted approach allows the system to remain lean, sustainable, and capable of long-term scaling without environmental burden.
 
 - ☄️ **Digital homeostasis _(Background activity)_:**
@@ -47,7 +47,7 @@ _The **aNA** (Autonomous Neural Architecture) AI project rejects the paradigm of
 - ☄️ **Natural Erasure & Transformation:**
   Based on _Lavoisier’s principle_, information that loses relevance is naturally _"pruned"_ or transformed, preventing the accumulation of _digital noise_.
 
-- ☄️ **Synaptic Gating: _AMPA_ vs. _NMDA_ Logic**
+- **Synaptic Gating: _AMPA_ vs. _NMDA_ Logic**
   Our architecture distinguishes between functional transmission _(AMPA)_ and structural consolidation _(NMDA)_.
   **AMPA Logic:** Standard patterns drive routine synaptic updates, prone to natural decay for resource efficiency.
   **NMDA Logic:** High-saliency events, verified by the _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_, trigger _NMDA-gated plasticity_. This process bypasses standard pruning to create permanent _"Acid Traces"_ in the _CA4_ subfield, ensuring that critical survival data remains retrievable despite systemic _"noise"_.
