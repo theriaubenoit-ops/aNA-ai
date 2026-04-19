@@ -31,7 +31,7 @@ def create_ascii_header():
     print("▒▒▒▒▒▒▒▓▓▓▓▓████▓▓░                 ░░▒▒▒▓█▓░▓▓█▓▓ ░▒▓  ▒▓▓▓▓▓█▓▓▓█▓▒▒▒▓▓▒░░░░▒▓█▓▓▓▓▓▒▓▒▒▒▒▒▒▒░░░░░░░░░░░░░░▒▒▒▒▒")
     print("▒▒▓▒▓▓▓▓█████▓▓▒                        ░▒▒▓░ ▓██▓                ▒▓▒▒░░▒▓▒░░▒▓███▓█▓▓▓▓▓▓▓▓▓▓▓▒▓▒▒▒▒▒▒▒▒▒▒▓▒▓▓▓▓▓")
     print("▓▓▓█████▓░                                    ░░▒▒ _    _    _ ░▒░▒▒▒▓▒▓▒▓▒▓█▓███▓▒▓▓▓▓▓▓▓▓▓▓▓▓█▓██▓▓▓▓▓█▓████████")
-    print("▓███▓▒  IA inspirée de la plasticité naturelle ✴️  a    N    A  ▒▓█▒▓ ▒▓█▒Architecture Neuronale Autonome v5.3b▒▓▓")
+    print("▓███▓▒  IA inspirée de la plasticité naturelle ✴️  a    N    A  ▒▓█▒▓ ▒▓█▒Architecture Neuronale Autonome v5.3 ▒▓▓")
     print("▓░                                                 _    _    _  ░▓▒▓  ░▓\n\n")
 
 class HippocampalRegion(Enum):
@@ -406,3 +406,5 @@ if __name__ == "__main__":
     success = run_all_tests()
     
     print(f"\n🏁 STATUT : {'HIPPOCAMPE PRÊT POUR L՚INTÉGRATION' if success else 'HIPPOCAMPE EN ATTENTE DE CORRECTIONS'}")
+    print("\n  *Chaque mesure présentée ici est un pont numérique vers la réalité biologique,")
+    print("   conçu pour synthétiser les principes fondamentaux des systèmes vivants.\n")
