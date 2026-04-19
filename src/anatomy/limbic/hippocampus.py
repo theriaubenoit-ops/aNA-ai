@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Hippocampus implementation for aNA AI Project v5.3b
+Hippocampus implementation for aNA AI Project v5.3
 
 Communicates with: Input: (<- Cortex / Amygdala) | Output: (-> Thalamus) (-> Cortical Storage)
 
@@ -113,10 +113,10 @@ class Hippocampus:
                 self.subfields["CA3"][signal_label] = 1.0
                 # On grave un plancher permanent dans CA4 (la trace acide)
                 self.subfields["CA4"][signal_label] = 0.2 
-                print(f"DEBUG: Trace '{signal_label}' engraved by TRAUMA (Flash NMDA).")
+                print(f"  DEBUG: Trace '{signal_label}' engraved by TRAUMA (Flash NMDA).")
             else:
                 self.subfields["CA3"][signal_label] = self.config.get("MIN_LATENT_THRESHOLD", 0.001)
-                print(f"DEBUG: Trace '{signal_label}' initialized NEUTRAL.")
+                print(f"  DEBUG: Trace '{signal_label}' initialized NEUTRAL.")
 
         # 2. RENFORCEMENT (LTP)
         # On ajoute l'impact émotionnel à la force actuelle
