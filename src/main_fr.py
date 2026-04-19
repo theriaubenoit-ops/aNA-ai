@@ -103,8 +103,14 @@ async def main():
     if not all_visuals:
         print(f" [Note] Aucun stimulus visuel trouvé dans : {visual_dir}")
     if not all_audios:
-        print(f" [Note] Aucun stimulus auditif trouvé dans : {audio_dir}")
+        print(f" [Note] No auditory stimuli were found in: {audio_dir}")
 
+    # On définit un status par défaut pour le premier cycle
+    status = {
+        'bpm': thalamus.current_bpm,
+        'vitality': 1.0
+    }
+    
     for cycle, char in enumerate(all_haptics, 1):
         # --- PHASE A : ANALYSE PRÉDICTIVE (Feedback L6) ---
         # cortical_results = await visual_column.process_input(char, hippo)
@@ -169,9 +175,31 @@ async def main():
         
         print(f"\nCycle {cycle:02d} - Routage multimodal")
         
-        res_v = await hub.route_sensory_input("input_visual", visual_payload.__dict__)
-        res_a = await hub.route_sensory_input("input_auditory", auditory_payload.__dict__)
-        res_h = await hub.route_sensory_input("input_haptic", haptic_data)
+        # --- PHASE 1: ROUTAGE THALAMIQUE & ATTENTION ---
+        res_v = await hub.route_signal("input_visual", "00_language_64x64_English.png", status['bpm'])
+        res_a = await hub.route_signal("input_auditory", "pink_noise.wav", status['bpm'])
+        res_h = await hub.route_signal("input_haptic", char, status['bpm'])
+
+        # --- PHASE 2: ALIGNEMENT HIPPOCAMPE (L'IMPACT) ---
+        # On demande à l'hippocampe d'évaluer la prédiction du stimulus haptique
+        # Cela remplace la simulation 'cortical_results'
+        prediction_error = await hippo.evaluate_prediction(char)
+        
+        # On met à jour la mémoire (Apprentissage Hebbien)
+        # On passe un dictionnaire émotionnel neutre pour le test
+        await hippo.update_memories(char, {"valence": 0.5, "arousal": 0.5})
+
+        # --- PHASE 3: MODULATION DU BPM (L'HOMÉOSTASIE) ---
+        # Si la prédiction est bonne (erreur faible), on calme le jeu.
+        # Si c'est nouveau (erreur 1.0), on maintient la vigilance (Dopamine).
+        if prediction_error < config["THRESHOLD_NMDA"]:
+            thalamus.current_bpm -= 2.0  # Le système se rassure
+        else:
+            thalamus.current_bpm += 1.5  # Vigilance accrue
+            
+        # --- PHASE 4: CONSOLIDATION (DÉFLAGRATION AU REPOS) ---
+        if thalamus.current_bpm <= 75.0:
+            await hippo.consolidate_and_prune()
 
         # --- PHASE D : MISE À JOUR MÉTABOLIQUE ---
         heart.update()
@@ -205,7 +233,12 @@ async def main():
         print(f"  ├─ Hub Status (Auditif)              : {res_a.get('status', 'Routed!')}")
         print(f"  ├─ Hub Status (Haptique)             : {res_h.get('status', 'Routed!')}")
         status_label = "Connu !" if await hippo.evaluate_prediction(char) > 0 else "Inconnu."
-        print(f"  ├─ Reconnaissance de motifs (Cortex) : {await hippo.evaluate_prediction(char):.2%} {status_label}")
+
+        # Calcul du score de connaissance inverse à l'erreur de prédiction
+        knowledge_score = 1.0 - prediction_error
+        status_label = "Confirmed!" if knowledge_score > 0.8 else "Learning..."
+        
+        print(f"  ├─ Reconnaissance de motifs (Hippo)  : {knowledge_score:.2%} {status_label}")
         print(f"  ├─ Thalamic (bpm)                    : {thalamus.current_bpm:.1f} (vitalité: {(status['vitality']* 100 ):.2f}%)")
         
         # Performances et Biologie
