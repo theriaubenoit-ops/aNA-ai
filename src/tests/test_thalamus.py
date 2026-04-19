@@ -36,7 +36,7 @@ def create_ascii_header():
     print("▒▒▒▒▒▒▒▓▓▓▓▓████▓▓░                 ░░▒▒▒▓█▓░▓▓█▓▓ ░▒▓  ▒▓▓▓▓▓█▓▓▓█▓▒▒▒▓▓▒░░░░▒▓█▓▓▓▓▓▒▓▒▒▒▒▒▒▒░░░░░░░░░░░░░░▒▒▒▒▒")
     print("▒▒▓▒▓▓▓▓█████▓▒                         ░▒▒▓░ ▓██▓                ▒▓▒▒░░▒▓▒░░▒▓███▓█▓▓▓▓▓▓▓▓▓▓▓▒▓▒▒▒▒▒▒▒▒▒▒▓▒▓▓▓▓▓")
     print("▓▓▓█████▓░                                    ░░▒▒ _    _    _ ░▒░▒▒▒▓▒▓▒▓▒▓█▓███▓▒▓▓▓▓▓▓▓▓▓▓▓▓█▓██▓▓▓▓▓█▓████████")
-    print("▓███▓▒      AI inspired by natural plasticity  ✴️  a    N    A  ▒▓█▒▓ ▒▓█▒Autonomous Neural Architecture v5.3b ▒▓▓")
+    print("▓███▓▒      AI inspired by natural plasticity  ✴️  a    N    A  ▒▓█▒▓ ▒▓█▒Autonomous Neural Architecture v5.3  ▒▓▓")
     print("▓░                                                 _    _    _  ░▓▒▓  ░▓\n\n")
 
 async def test_sensory_cascade():
@@ -97,7 +97,7 @@ async def test_sensory_cascade():
         # print(f"  [Chemistry] Norepinephrine: {neuromod_core.get_matrix()['noradrenaline']:.2f}")
         print(f"  [Pulse]  Frequence: {result['bpm']:.2f} BPM")
         matrix = neuromod_core.get_matrix()
-        print(f"  [Neuromodulator] Dopa: {matrix['dopamine']:.3f} | Nora: {matrix['noradrenaline']:.3f}")
+        print(f"  [Neuromodulator] Dopamine: {matrix['dopamine']:.3f} | Noradrenaline: {matrix['noradrenaline']:.3f}")
         print(f"  [Gain]   Thalamic: {result['thalamic_gain']:.3f}")
         await asyncio.sleep(0.5) # We allow time for dopamine to "live".
 
@@ -145,6 +145,8 @@ async def test_sensory_cascade():
     result_sagesse = await thalamus.process_payload(stimulus_danger, l6_feedback=0.5)
     
     print(f"  [Result] BPM after consolidation: {result_sagesse['bpm']:.2f} BPM")
+    print("\n  *Every measurement reflected here is a digital bridge to biological reality,")
+    print("   designed to synthesize the fundamental principles of living systems.\n")
 
 if __name__ == "__main__":
     create_ascii_header()  

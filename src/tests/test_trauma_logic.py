@@ -30,7 +30,7 @@ def create_ascii_header():
     print("▒▒▒▒▒▒▒▓▓▓▓▓████▓▓░                 ░░▒▒▒▓█▓░▓▓█▓▓ ░▒▓  ▒▓▓▓▓▓█▓▓▓█▓▒▒▒▓▓▒░░░░▒▓█▓▓▓▓▓▒▓▒▒▒▒▒▒▒░░░░░░░░░░░░░░▒▒▒▒▒")
     print("▒▒▓▒▓▓▓▓█████▓▒                         ░▒▒▓░ ▓██▓                ▒▓▒▒░░▒▓▒░░▒▓███▓█▓▓▓▓▓▓▓▓▓▓▓▒▓▒▒▒▒▒▒▒▒▒▒▓▒▓▓▓▓▓")
     print("▓▓▓█████▓░                                    ░░▒▒ _    _    _ ░▒░▒▒▒▓▒▓▒▓▒▓█▓███▓▒▓▓▓▓▓▓▓▓▓▓▓▓█▓██▓▓▓▓▓█▓████████")
-    print("▓███▓▒      AI inspired by natural plasticity  ✴️  a    N    A  ▒▓█▒▓ ▒▓█▒Autonomous Neural Architecture v5.3b ▒▓▓")
+    print("▓███▓▒      AI inspired by natural plasticity  ✴️  a    N    A  ▒▓█▒▓ ▒▓█▒Autonomous Neural Architecture v5.3  ▒▓▓")
     print("▓░                                                 _    _    _  ░▓▒▓  ░▓\n\n")
 
 async def process_event(amy, hippo, label, intensity, valence):
@@ -66,23 +66,23 @@ async def run_scientific_test():
     })
 
     # --- Phase A : Neutral Signal (Repeated) ---
-    print("\nPhase A: Learning a neutral signal...")
+    print("\n  Phase A: Learning a neutral signal...")
     for i in range(5):
         await process_event(amy, hippo, "NEUTRE_1", 0.6, 0.0)
     
     val_n_init = hippo.subfields['CA3'].get('NEUTRE_1', 0)
-    print(f"Force trace NEUTRE_1 after 5 cycles : {val_n_init:.4f}")
+    print(f"  Force trace NEUTRE_1 after 5 cycles : {val_n_init:.4f}")
 
     # --- Phase B : The Trauma (Unique and intense) ---
-    print("\nPhase B: Encounter with a Critical Error (Trauma)...")
+    print("\n  Phase B: Encounter with a Critical Error (Trauma)...")
     # We inject a terror valence (-1.0)
     await process_event(amy, hippo, "TRAUMA_1", 1.0, -1.0)
     
     val_t_init = hippo.subfields['CA3'].get('TRAUMA_1', 0)
-    print(f"Force trace TRAUMA_1 (Gravure Flash) : {val_t_init:.4f}")
+    print(f"  Force trace TRAUMA_1 (Gravure Flash) : {val_t_init:.4f}")
 
     # --- Phase C : Sedimentation (Forgotten over 100 cycles) ---
-    print("\nPhase C: Simulation of 100 forgetting cycles...")
+    print("\n  Phase C: Simulation of 100 forgetting cycles...")
     for _ in range(100):
         # We simulate the passage of time (synaptic decay)
         for label in hippo.subfields['CA3']:
@@ -92,17 +92,19 @@ async def run_scientific_test():
             hippo.subfields['CA3'][label] = max(plancher, hippo.subfields['CA3'][label])
 
     # Results
-    print("\n--- ANALYSIS OF TRACES AFTER LONG FORGETTING ---")
+    print("\n  --- ANALYSIS OF TRACES AFTER LONG FORGETTING ---")
     val_neutre = hippo.subfields['CA3'].get("NEUTRE_1", 0)
     val_trauma = hippo.subfields['CA3'].get("TRAUMA_1", 0)
     
-    print(f"Residue NEUTRE_1 : {val_neutre:.6f}")
-    print(f"Residue TRAUMA_1 : {val_trauma:.6f}")
+    print(f"  Residue NEUTRE_1 : {val_neutre:.6f}")
+    print(f"  Residue TRAUMA_1 : {val_trauma:.6f}")
     
     if val_trauma > val_neutre:
-        print("\nCONCLUSION: The Acid Trace has survived.")
+        print("\n  CONCLUSION: The Acid Trace has survived.")
     else:
-        print("\nCONCLUSION: Failure of emotional persistence.")
+        print("\n  CONCLUSION: Failure of emotional persistence.")
+    print("\n  *Every measurement reflected here is a digital bridge to biological reality,")
+    print("   designed to synthesize the fundamental principles of living systems.\n")
 
 if __name__ == "__main__":
     create_ascii_header()
