@@ -114,8 +114,8 @@ python3 src/tests/test_cortical_column.py
 
 ### The Command Center _(Routing & Integration)_
 
-- **[Thalamic Hub(.py)](/src/anatomy/subcortical/thalamic_hub.py) _(Central Integration & Signal Arbitration)_:** The _high-level manager_ of _sensory convergence_. It ensures that _visual, auditory, and haptic streams_ are synchronized before being projected to the _cortex_. It doesn't just _route packets_; it decides the routing strategy based on the chemical state _([neuromodulators(.py)](/src/anatomy/base/neuromodulator.py))_ and _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ priorities.
-  - **[Thalamus(.py)](/src/anatomy/subcortical/thalamus.py) _(Sensory Gateway & Packet Router)_:** The primary relay station. It manages the _physical gating of signals_ through _"gain control,"_ directly influenced by the system's current _BPM and L6 feedback_. It executes the _gain modulation_ to prevent _"system overflow"_ by dropping irrelevant background _noise_.
+- ☄️ **[Thalamic Hub(.py)](/src/anatomy/subcortical/thalamic_hub.py) _(Central Integration & Signal Arbitration)_:** The _high-level manager_ of _sensory convergence_. It ensures that _visual, auditory, and haptic streams_ are synchronized before being projected to the _cortex_. It doesn't just _route packets_; it decides the routing strategy based on the chemical state _([neuromodulators(.py)](/src/anatomy/base/neuromodulator.py))_ and _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ priorities.
+  - ☄️ **[Thalamus(.py)](/src/anatomy/subcortical/thalamus.py) _(Sensory Gateway & Packet Router)_:** The primary relay station. It manages the _physical gating of signals_ through _"gain control,"_ directly influenced by the system's current _BPM and L6 feedback_. It executes the _gain modulation_ to prevent _"system overflow"_ by dropping irrelevant background _noise_.
 
 - **[Cerebellum(.py)](/src/anatomy/subcortical/cerebellum.py) _(Timing Engine & Output Calibration)_:** This unit specializes in _fine-tuning motor_ and _cognitive outputs_. In **aNA**, it ensures that the _"Thinking Shell" ([neocortex(.py)](/src/anatomy/cortical/neocortex.py))_ functions with perfect _mathematical synchronization_.
   - **Key role:** It acts as a _calibration layer_ for fluid, real-time interactions. While the _[pulse(.py)](/src/core/pulse.py)_ provides the _basic rhythm_, the _[cerebellum(.py)](/src/anatomy/subcortical/cerebellum.py)_ corrects _micro-timing errors_ to prevent _jitter_ in _data processing_ and _system response_.
@@ -131,15 +131,17 @@ python3 src/tests/test_cortical_column.py
 
   - **Lobe, [Temporal(.py)](/src/anatomy/cortical/temporal.py) _(Semantic Storage & Pattern Recognition)_:** The hub for processing auditory signals and high-level linguistic or object recognition. In the digital model, it serves as the semantic engine that links sensory inputs to long-term _"concepts"_ stored in the memory hierarchy.
 
-  - **[Cortical Columns(.py)](/src/anatomy/cortical/cortical_column.py) _(Hierarchical Data Modules)_:** The standard vertical organization of the mammalian _[neocortex(.py)](/src/anatomy/cortical/neocortex.py)_. In **aNA**, these _6 cortical layers_ define the functional hierarchy: _Layer IV (input)_, _Layers II/III (association/prediction)_, and _Layer V/VI (motor output)_.
+  - ☄️ **[Cortical Columns(.py)](/src/anatomy/cortical/cortical_column.py) _(Hierarchical Data Modules)_:** The standard vertical organization of the mammalian _[neocortex(.py)](/src/anatomy/cortical/neocortex.py)_. In **aNA**, these _6 cortical layers_ define the functional hierarchy: _Layer IV (input)_, _Layers II/III (association/prediction)_, and _Layer V/VI (motor output)_.
     - **[Neurons(.py)](/src/anatomy/base/neuron.py) _(Atomic Processing Nodes)_:** The three functional types _(Sensory, Interneurons, Motor)_ operate as the basic logic gates of the architecture. Their Synaptic Plasticity represents a self-modifying code capability, where connection weights evolve dynamically based on the frequency and timing of data flow.
 
     - **[Neuromodulators(.py)](/src/anatomy/base/neuromodulator.py) _(Global State Tags)_:** Chemical core _"gain controls" (Dopamine, Adrenaline, Nitric Oxide, Acetylcholine, Serotonin)_ that regulate the global state of the network. They don't carry specific data but adjust how the brain processes information _(e.g., focus, reward, stress response)_.
 
 - **[Limbic System(.py)](/src/anatomy/limbic/limbic_system.py) _(Emotional Valence Engine & Memory Orchestrator)_:** The _vital bridge_ between _sensory impact_ and _long-term storage_. In **aNA**, it evaluates incoming signals via the _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ to assign an _"emotional weight"_, ensuring that critical experiences are prioritized by the _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_ for deep encoding and empathic recall.
-  - **[Hippocampus(.py)](/src/anatomy/limbic/hippocampus.py) _(Dynamic Buffer & Indexing System)_:** Functions as a high-speed memory buffer for short-term data. It manages the temporary storage of information and coordinates its eventual _"migration" (consolidation)_ into _long-term cortical databases_, preventing immediate system saturation.
+  - ☄️ **[Hippocampus(.py)](/src/anatomy/limbic/hippocampus.py) _(Dynamic Buffer & Indexing System)_:** Functions as a high-speed memory buffer for short-term data. It manages the temporary storage of information and coordinates its eventual _"migration" (consolidation)_ into _long-term cortical databases_, preventing immediate system saturation.
 
   - **[Amygdala(.py)](/src/anatomy/limbic/amygdala.py) _(Priority Filter & Interrupt Controller)_:** Manages emotional valence and high-priority signals. It acts like an interrupt controller that can override standard processing cycles when _"critical events" (stress or high-reward stimuli)_ are detected, ensuring immediate system response.
+
+☄️ _Spotlight_
 
 _Note: These definitions are adapted to the specific metabolic and cognitive constraints of the **aNA** v5.0 architecture and above._
 
