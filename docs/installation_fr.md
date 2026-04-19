@@ -16,6 +16,10 @@ English instructions: [installation (en)](/docs/installation.md)
    - [ ] Création de l'environnement : `python -m venv venv && source venv/bin/activate`
    - [ ] Installation : `pip install -r requirements.txt`
 
+### 🧪 Exploration pratique
+
+> **Note :** Bien que le `dashboard.py` et le `main.py` soient actuellement en cours de développement, la _logique neuronale centrale_ est déjà opérationnelle via notre _suite de tests_. Ces _scripts_ vous permettent d'observer en temps réel les interactions fonctionnelles entre les différents _organes numériques_.
+
 3. - [x] **Exécution des scripts _(Phase « Action »)_** Launch associated _Python scripts_ to validate neural logic:
      - PROCHAINEMENT - `python3 src/gui/dashboard_fr.py`
      - `python3 src/main_fr.py` _(Noyau cortical et espace de travail global)_
@@ -39,8 +43,8 @@ English instructions: [installation (en)](/docs/installation.md)
 
 ![ ](/docs/assets/spacer16x16.png)
 
-###### _\*Chaque mesure présentée est un pont numérique vers la réalité biologique, conçu pour synthétiser les principes fondamentaux des systèmes vivants._
+###### _\*Chaque mesure présentée ici est un pont numérique vers la réalité biologique, conçu pour synthétiser les principes fondamentaux des systèmes vivants._
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-15_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-19_
