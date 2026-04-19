@@ -79,6 +79,64 @@ class ThalamicHub:
         print(f" [Thalamic Hub] Signal from {origin} routed to {target_nucleus} (Gain: {thalamic_gain:.2f})")
         
         return result
+    
+    async def route_signal(self, origin: str, data: Any, current_bpm: float):
+        """
+        Mappe les entrées vers les noyaux thalamiques appropriés.
+        """
+        mapping = {
+            "input_haptic": "VPL",
+            "input_visual": "CGL",
+            "input_auditory": "CGM"
+        }
+        
+        target_nucleus = mapping.get(origin)
+        if not target_nucleus:
+            return {"status": "ERROR", "message": "Unknown origin"}
+
+        # Création du payload pour le Thalamus Core
+        payload = {
+            "origin": origin,
+            "data": data,
+            "intensity": 0.8  # Valeur par défaut ou calculée
+        }
+
+        # Appelle la logique de filtrage (que tu as déjà dans ton fichier)
+        return await self.filter_and_process(payload, target_nucleus)
+    
+    async def filter_and_process(self, payload: Dict[str, Any], target_nucleus: str):
+        """
+        Applique le filtre attentionnel et transmet au Thalamus Core.
+        """
+        # 1. Calcul de l'intensité effective (Gating)
+        origin = payload.get("origin", "")
+        sensory_type = origin.replace("input_", "")
+        
+        # Récupération des poids depuis la config
+        config = get_config()
+        weight = config.get("SENSORY_WEIGHTS", {}).get(sensory_type, 0.2)
+
+        # Seuil d'attention : plus le poids est haut, plus le filtre est permissif
+        base_filter = 0.3 * (1.0 - weight) 
+        
+        # Modulation par l'état du système (Strain)
+        thalamic_gain = (1.0 - self.core.system_strain) 
+        effective_intensity = payload.get("intensity", 0.5) * thalamic_gain
+
+        # --- GATE ATTENTIONNEL ---
+        if effective_intensity < base_filter:
+            return {"status": "FILTERED_OUT", "nucleus": target_nucleus, "gain": thalamic_gain}
+
+        # 2. Transmission au Thalamus Core pour modulation du BPM
+        # Le Core va traiter le signal et ajuster le rythme cardiaque (Pulse)
+        result = await self.core.process_payload(payload, l6_feedback=0.5)
+        
+        # 3. Mise à jour du buffer pour projection corticale
+        self.sensory_buffers[target_nucleus] = payload
+        
+        print(f" [Thalamic Hub] Signal from {origin} routed to {target_nucleus} (Gain: {thalamic_gain:.2f})")
+        
+        return result
 
     def _map_origin_to_nucleus(self, origin: str) -> str:
         mapping = {
