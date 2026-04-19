@@ -26,17 +26,17 @@ English instructions: [installation (en)](/docs/installation.md)
 
 3. - [x] **Exécution des scripts _(Phase « Action »)_** Launch associated _Python scripts_ to validate neural logic:
      - PROCHAINEMENT - `python3 src/gui/dashboard_fr.py`
-     - `python3 src/main_fr.py` _(Noyau cortical et espace de travail global)_
+     - ☄️ `python3 src/main_fr.py` _(Noyau cortical et espace de travail global)_
      - `python3 src/tests_fr/test_amygdala.py` _(Réponse homéostatique au stress et à l'alerte)_
      - `python3 src/tests_fr/test_autonomy` _(Pour valider les comportements autonomes)_
      - `python3 src/tests_fr/test_cerebellum.py` _(Précision motrice et correction d'erreurs)_
-     - `python3 src/tests_fr/test_cortical_column.py` _(Flux de signal cortical à six couches)_
+     - ☄️ `python3 src/tests_fr/test_cortical_column.py` _(Flux de signal cortical à six couches)_
      - `python3 src/tests_fr/test_limbic_system.py` _(Intégration émotionnelle et cognitive)_
-     - `python3 src/tests_fr/test_hippocampus.py` _(Consolidation synaptique et encodage de motifs)_
+     - ☄️ `python3 src/tests_fr/test_hippocampus.py` _(Consolidation synaptique et encodage de motifs)_
      - `python3 src/tests_fr/test_neuron.py` _(Dynamique métabolique et électrophysiologique)_
      - `python3 src/tests_fr/test_pulse.py` _(Oscillations neuronales et synchronisation temporelle)_
-     - `python3 src/tests_fr/test_thalamus.py` _(Filtrage sensoriel et signal routage)_
-     - `python3 src/tests_fr/test_trauma_logic.py` _(Saillance émotionnelle et traces acides)_
+     - ☄️ `python3 src/tests_fr/test_thalamus.py` _(Filtrage sensoriel et signal routage)_
+     - ☄️ `python3 src/tests_fr/test_trauma_logic.py` _(Saillance émotionnelle et traces acides)_
    - [ ] PROCHAINEMENT - Démonstrations : Pour lancer _l'interface web_ (e.g., "http://localhost:8000/examples/basic-demo.html").
      - Remarque concernant le serveur local : Pour exécuter les démonstrations web, utilisez `python3 -m http.server 8000` depuis le répertoire racine.
 
@@ -44,6 +44,8 @@ English instructions: [installation (en)](/docs/installation.md)
    - [ ] Issues : "Ouvrez une issue pour toute question ou bug."
    - [ ] Pull Requests : "Pour soumettre vos améliorations de neurones ou de modules."
    - [ ] Discussions : "Utilisez les discussions **GitHub** pour échanger sur la psychologie comportementale du modèle ou simplement pour nous dire que notre code vous a inspiré."
+
+☄️ _Spotlight_
 
 ![ ](/docs/assets/spacer16x16.png)
 
