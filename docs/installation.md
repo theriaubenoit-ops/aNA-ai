@@ -28,7 +28,7 @@ Instructions française : [installation (fr)](/docs/installation_fr.md)
      - COMING SOON - `python3 src/gui/dashboard.py`
      - ☄️ `python3 src/main.py` _(Cortical Core & Global Workspace)_
      - `python3 src/tests/test_amygdala.py` _(Homeostatic Stress & Alert Response)_
-     - `python3 src/tests/test_autonomy` _(To validate the autonomous behaviors)_
+     - `python3 src/tests/test_autonomy.py` _(To validate the autonomous behaviors)_
      - `python3 src/tests/test_cerebellum.py` _(Motor Precision & Error Correction)_
      - ☄️ `python3 src/tests/test_cortical_column.py` _(Six-layer cortical signal flow)_
      - `python3 src/tests/test_limbic_system.py` _(Emotional-Cognitive Integration)_
