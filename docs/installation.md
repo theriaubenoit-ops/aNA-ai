@@ -16,9 +16,13 @@ Instructions française : [installation (fr)](/docs/installation_fr.md)
    - [ ] Create the environment: `python -m venv venv && source venv/bin/activate`
    - [ ] Install dependencies: `pip install -r requirements.txt`
 
+![ ](/docs/assets/spacer16x16.png)
+
 ### 🧪 Practical Exploration
 
 > **Note:** While the `dashboard.py` and `main.py` are currently under active development, the _core neural logic_ is already operational through our _extensive test suite_. These _scripts_ allow you to observe the functional interactions between _digital organs_ in real-time.
+
+![ ](/docs/assets/spacer16x16.png)
 
 3. - [x] **Running Scripts _(The "Action" Phase)_** Launch associated _Python scripts_ to validate neural logic:
      - COMING SOON - `python3 src/gui/dashboard.py`
