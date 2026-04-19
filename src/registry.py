@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-aNA v5.3b - The Centralized Genome of aNA
+aNA v5.3 - The Centralized Genome of aNA
 Description: This module acts as the organism's genetic fingerprint. It catalogs and initializes all the "Organs" (Thalamus, Hippocampus, Cortex), enabling consistent instantiation and seamless communication between subcortical and cortical systems. Without this registry, the organism loses its unified structure and its ability to maintain global homeostasis.
 
-aNA v5.3b - Le Génome Centralisé d'aNA (FR)
+aNA v5.3 - Le Génome Centralisé d'aNA (FR)
 Description :  Ce module agit comme l'empreinte génétique de l'organisme. Il répertorie et initialise l'ensemble des "Organes" (Thalamus, Hippocampe, Cortex) permettant une instanciation cohérente et une communication fluide entre les systèmes subcorticaux et corticaux. Sans ce registre, l'organisme perd sa structure unifiée et sa capacité à maintenir une homéostasie globale.
 
 Architecture, concept and supervision: Benoit Theriault
@@ -38,6 +38,12 @@ INPUT_CONFIG = {
 This registry defines the core organs of aNA and their key properties. It serves as the blueprint for the architecture, ensuring that all components are aligned and can communicate effectively. The Thalamus, Hippocampus, and Neocortex are defined with their respective substructures, which will be used to guide the development of each module and their interactions.
 """
 ORGANS = {
+    "THALAMIC_HUB": {
+        "NAME": "Thalamic Hub",
+        "DESCRIPTION": "Multimodal sensory integrator and attentional gate.",
+        "NUCLEI": ["VPL", "CGL", "CGM"],
+        "METHODS": ["route_signal", "process_incoming"] 
+    },
     "THALAMUS": { # The Thalamus adjusts the BPM according to the gap between the internal prediction and the sensory reality, thus simulating the understanding of the consequences.
         "NUCLEI": ["MGN", "LGN", "MD", "RTN"]
     },
