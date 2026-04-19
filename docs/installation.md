@@ -35,7 +35,7 @@ Instructions française : [installation (fr)](/docs/installation_fr.md)
      - ☄️ `python3 src/tests/test_hippocampus.py` _(Synaptic Consolidation & Pattern Encoding)_
      - `python3 src/tests/test_neuron.py` _(Metabolic & Electrophysiological Dynamics)_
      - `python3 src/tests/test_pulse.py` _(Neural Oscillations & Temporal Sync)_
-     - `python3 src/tests/test_thalamus.py` _(Sensory Gating & Signal Routing)_
+     - ☄️ `python3 src/tests/test_thalamus.py` _(Sensory Gating & Signal Routing)_
      - ☄️ `python3 src/tests/test_trauma_logic.py` _(Emotional Saliency & Acid Traces)_
    - [ ] COMING SOON - Running Demonstrations: Launch _Web-based interfaces_ (e.g., "http://localhost:8000/examples/basic-demo.html").
      - Note on local server: To run web demos, use `python3 -m http.server 8000` from the root directory.
