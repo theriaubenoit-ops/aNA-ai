@@ -2,12 +2,12 @@
 
 ![ ](/docs/assets/spacer16x16.png)
 
-# ✴️*aNA (Autonomous Neural Architecture)* AI Project v5.3b
+# ✴️*aNA (Autonomous Neural Architecture)* AI Project v5.3
 
 ### 1. 🏗️ High-Level System Architecture
 
 ```
-aNA v5.3b Autonomous Neural Architecture
+aNA v5.3 Autonomous Neural Architecture
 ├── Configuration (The Temperament)
 ├── Dashboard (Metabolic & Cognitive):
 │   ├── Real-time Neural Stats: Monitors neurotransmitter levels
@@ -67,7 +67,7 @@ aNA v5.3b Autonomous Neural Architecture
     └── Coordination between Motor Cortex and Sensory Feedback
 
 Computational Engine: Free Energy Principle (FEP)
-aNA v5.3b optimizes prediction accuracy by minimizing the error between sensory reality and internal models. High error triggers the Limbic System to release neuromodulators (Adrenaline/Dopamine) via the Amygdala to force learning.
+aNA v5.3 optimizes prediction accuracy by minimizing the error between sensory reality and internal models. High error triggers the Limbic System to release neuromodulators (Adrenaline/Dopamine) via the Amygdala to force learning.
 ```
 
 ### 3. 🌐 Connection Logic (Synapses)
