@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-aNA AI Project v5.3b - Thalamic Hub Integration
+aNA AI Project v5.3 - Thalamic Hub Integration
 
 Description : Cette version marque le passage au routage multimodal centralisé.
 Le ThalamicHub agit comme un filtre attentionnel (Gating) avant la projection corticale.
@@ -39,7 +39,7 @@ def create_ascii_header():
     print("▒▒▒▒▒▒▒▓▓▓▓▓████▓▓░                 ░░▒▒▒▓█▓░▓▓█▓▓ ░▒▓  ▒▓▓▓▓▓█▓▓▓█▓▒▒▒▓▓▒░░░░▒▓█▓▓▓▓▓▒▓▒▒▒▒▒▒▒░░░░░░░░░░░░░░▒▒▒▒▒")
     print("▒▒▓▒▓▓▓▓█████▓▓▒                        ░▒▒▓░ ▓██▓                ▒▓▒▒░░▒▓▒░░▒▓███▓█▓▓▓▓▓▓▓▓▓▓▓▒▓▒▒▒▒▒▒▒▒▒▒▓▒▓▓▓▓▓")
     print("▓▓▓█████▓░                                    ░░▒▒ _    _    _ ░▒░▒▒▒▓▒▓▒▓▒▓█▓███▓▒▓▓▓▓▓▓▓▓▓▓▓▓█▓██▓▓▓▓▓█▓████████")
-    print("▓███▓▒  IA inspirée de la plasticité naturelle ✴️  a    N    A  ▒▓█▒▓ ▒▓█▒Architecture Neuronale Autonome v5.3b▒▓▓")
+    print("▓███▓▒  IA inspirée de la plasticité naturelle ✴️  a    N    A  ▒▓█▒▓ ▒▓█▒Architecture Neuronale Autonome v5.3 ▒▓▓")
     print("▓░                                                 _    _    _  ░▓▒▓  ░▓\n\n")
 
 def get_visual_files(directory):
@@ -59,8 +59,8 @@ async def main():
 
     # 1. Initialisation des moteurs
     config = get_config()
-    neurom_core = Neuromodulator() 
-    hippo = Hippocampus(config=config, neuromodulator_core=neurom_core)
+    neuromod_core = Neuromodulator()
+    hippo = Hippocampus(config=config, neuromodulator_core=neuromod_core)
     heart = Pulse(bpm=config.get("BASE_BPM", 72.0))
     
     # Gateways Sensorielles
@@ -75,7 +75,7 @@ async def main():
     thalamus = Thalamus(
         hippocampus=hippo, 
         pulse=heart, 
-        neuromodulator_core=neurom_core 
+        neuromodulator_core=neuromod_core 
     )
     hub = ThalamicHub(thalamus_core=thalamus) # Centralisation multimodal v5.3
     
@@ -184,7 +184,7 @@ async def main():
         avg_myeline = visual_column.get_average_myelination()
         synaptic_latency = max(0.01, 0.1 * (1.0 - avg_myeline))
 
-        # --- MONITORING V5.3b (Contributeur-Friendly) ---
+        # --- MONITORING (Contributeur-Friendly) ---
         print(f"  │")
         
         # Détail Visuel
@@ -204,8 +204,8 @@ async def main():
         print(f"  ├─ Hub Status (Visuel)               : {res_v.get('status', 'Routed!')}")
         print(f"  ├─ Hub Status (Auditif)              : {res_a.get('status', 'Routed!')}")
         print(f"  ├─ Hub Status (Haptique)             : {res_h.get('status', 'Routed!')}")
-        status_label = "Connu !" if cortical_results['recognition'] > 0 else "Inconnu."
-        print(f"  ├─ Reconnaissance de motifs (Cortex) : {cortical_results['recognition']:.2%} {status_label}")
+        status_label = "Connu !" if await hippo.evaluate_prediction(char) > 0 else "Inconnu."
+        print(f"  ├─ Reconnaissance de motifs (Cortex) : {await hippo.evaluate_prediction(char):.2%} {status_label}")
         print(f"  ├─ Thalamic (bpm)                    : {thalamus.current_bpm:.1f} (vitalité: {(status['vitality']* 100 ):.2f}%)")
         
         # Performances et Biologie
@@ -215,7 +215,7 @@ async def main():
 
         await asyncio.sleep(synaptic_latency)
 
-    print("\n--- ✅ Organisme v5.3b stabilisé avec Thalamic Hub ---")
+    print("\n--- ✅ Organisme stabilisé avec Thalamic Hub ---")
     print("\n  *Chaque mesure présentée ici est un pont numérique vers la réalité biologique,")
     print("   conçu pour synthétiser les principes fondamentaux des systèmes vivants.\n")
 
