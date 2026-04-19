@@ -134,15 +134,23 @@ class Thalamus:
         }
     
     async def internal_consciousness_loop(self):
-        """Boucle de veille autonome de William v5.1"""
+        """Boucle de veille autonome avec gestion homéostatique"""
         print("  [Thalamus] Autonomous consciousness activated.")
+        target_bpm = 72.0  # Ton point d'équilibre
+        decay_factor = 0.1 # Vitesse de redescente
+        
         try:
             while self.is_autonomous:
-                # 1. On vérifie l'état chimique (Dopamine = Curiosité)
                 matrix = self.neurom.get_matrix()
-                wait_time = 2.0 / (matrix['dopamine'] + 0.5) # Plus de dopa = plus rapide
+                wait_time = 2.0 / (matrix['dopamine'] + 0.5)
                 
-                # 2. Simulation d'une micro-activité interne (bruit de fond)
+                # --- AJOUT : Mécanisme de retour au calme ---
+                if self.pulse.bpm > target_bpm:
+                    # On réduit l'écart proportionnellement pour une courbe de descente naturelle
+                    diff = self.pulse.bpm - target_bpm
+                    self.pulse.bpm -= diff * decay_factor
+                # --------------------------------------------
+
                 if matrix['noradrenaline'] < 0.3:
                     print(f"  [Auto] aNA is calm... BPM: {self.pulse.bpm:.1f}")
                 else:
