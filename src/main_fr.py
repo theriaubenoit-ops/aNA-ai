@@ -232,6 +232,13 @@ async def main():
         print(f"  ├─ Hub Status (Visuel)               : {res_v.get('status', 'Routed!')}")
         print(f"  ├─ Hub Status (Auditif)              : {res_a.get('status', 'Routed!')}")
         print(f"  ├─ Hub Status (Haptique)             : {res_h.get('status', 'Routed!')}")
+        # On récupère le gain actuel du Thalamus (ex: 0.67 dans ton log)
+        current_gain = res_v.get('gain', 0.5) 
+
+        # On encode avec l'intensité combinée (Signal de base * Gain Thalamique)
+        # C'est ici que le seuil de 0.65 (NMDA) sera testé !
+        await hippo.encode(char, intensity=current_gain)
+
         status_label = "Connu !" if await hippo.evaluate_prediction(char) > 0 else "Inconnu."
 
         # Calcul du score de connaissance inverse à l'erreur de prédiction
