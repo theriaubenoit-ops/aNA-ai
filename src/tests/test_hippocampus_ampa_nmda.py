@@ -44,7 +44,7 @@ async def test_nmda_logic():
     
     # --- SCÉNARIO 1 : SIGNAL FAIBLE (AMPA Uniquement) ---
     # Intensité 0.3 > AMPA (0.15) mais < NMDA (0.65)
-    label_weak = "Bruit_Passager"
+    label_weak = "Passenger_Noise"
     print(f"\n📡 Injecting weak stimulus: '{label_weak}' (Intensity: 0.3)")
     await hippo.encode(label_weak, intensity=0.3)
     
@@ -62,7 +62,7 @@ async def test_nmda_logic():
 
     # --- SCÉNARIO 2 : DÉTECTION DE COÏNCIDENCE (NMDA Actif) ---
     # Intensité 0.3 + Gain Thalamique 0.5 = 0.8 (> NMDA 0.65)
-    label_strong = "Lecon_Importante"
+    label_strong = "Important_Lesson"
     print(f"\n⚡ Injecting salient stimulus: '{label_strong}' (Effective: 0.8)")
     # On simule le boost de coïncidence ici
     await hippo.encode(label_strong, intensity=0.8)
