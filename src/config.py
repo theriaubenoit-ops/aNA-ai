@@ -22,6 +22,10 @@ Collaboration, research and code: Gemini
 #  (World Model) réellement ancré."                                                #
 # -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  #
 
+# ==============================================================================================
+#  SEE PROFILES NEURAL PERFORMANCE (BELOW) / VOIR PROFILS DE PERFORMANCES NEURALES (CI-DESSOUS)
+# ==============================================================================================
+
 # --- PERSONALITY HYPERPARAMETERS / HYPER-PARAMÈTRES DE PERSONNALITÉ (FR) ---
 # AMYGDALA_SENSITIVITY = 0.5       # Amygdala Sensitivity Min: 0.1 (unperturbed) Max: 2.0 (hyper-reactive) / Sensibilité de l'amygdale 
 ADRENALINE_RELEASE_FACTOR = 0.4    # Adrenaline Release Factor Min: 0.1 (calm) Max: 1.0 (explosive) / Facteur de libération d'adrénaline 
@@ -47,6 +51,7 @@ AMPA_BASE_THRESHOLD = 0.15         # Seuil d'activation AMPA (Transmission de ba
 # THRESHOLD_NMDA = 0.65              # Memory Lock Threshold (NMDA, "Magnesium ion") Min: 0.1 (Easy learning/credulous) Max: 0.9 (Difficult/critical learning) / Seuil pour le verrouillage des souvenirs 
 LTP_GAIN_FACTOR = 0.25             # Facteur de renforcement (LTP) Min: 0.05 (Slow plasticity) Max: 0.50 (Ultra-fast/unstable plasticity) / Seuil d'activation AMPA
 ATP_CRITICAL_MIN = 0.20            # Parameter for the future "NMDA_Lock" Min: 0.05 (Extreme Survival) Max: 0.40 (High Energy Caution) / Paramètre pour le futur "NMDA_Lock"
+CURRENT_ATP = 1.0                  # Current energy level  Min: 0.00 (...) Max: 0.00 (...) / Niveau d'énergie actuel
 ENCODE_THRESHOLD = 0.7             # Energy Required for Encoding Min: 0.1 (Everything is memorized) Max: 1.0 (Nothing is memorized without emotional shock) / Intensité requise pour la mémorisation 
 HIPPO_RECOVERY = 0.08              # Hippocampal energy recovery Min: 0.01 (Slow Recovery, Fatigue Quickly) Max: 0.20 (High Cognitive Endurance) / Récupération énergétique de l'Hippocampe 
 # SYNAPTIC_PLASTICITY = 0.05         # Baseline learning rate Min: 0.001 (slow learning) Max: 0.10 (fast learning) / Vitesse d'apprentissage de base
@@ -72,7 +77,6 @@ SENSORY_WEIGHTS = {                # AVERAGE HUMAN (visual priority) Total: 1.0 
     "visual": 0.80,                # Min: 0.05 Max: 0.80 (visual dominates)
     "auditory": 0.50               # Min: 0.10 Max: 0.60 (attentive to noise)
 }
-
 
 # =============================================================
 # PROFILE: NEURAL PERFORMANCE CONFIGURATION
@@ -152,6 +156,7 @@ def get_config():
         "THRESHOLD_NMDA": THRESHOLD_NMDA,
         "LTP_GAIN_FACTOR": LTP_GAIN_FACTOR,
         "ATP_CRITICAL_MIN": ATP_CRITICAL_MIN,
+        "CURRENT_ATP": CURRENT_ATP,
         "ENCODE_THRESHOLD": ENCODE_THRESHOLD,
         "HIPPO_RECOVERY": HIPPO_RECOVERY,
         "SYNAPTIC_PLASTICITY": SYNAPTIC_PLASTICITY,
