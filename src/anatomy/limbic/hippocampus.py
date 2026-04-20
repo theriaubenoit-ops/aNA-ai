@@ -235,12 +235,20 @@ class Hippocampus:
         Encode une trace mémoire en utilisant la logique AMPA/NMDA.
         intensity: le signal brut + le gain thalamique (vigilance).
         """
+        # 1. Vérification de l'ATP (Homeostatic Lock)
+        atp_level = self.config.get("CURRENT_ATP", 1.0)
+        atp_min = self.config.get("ATP_CRITICAL_MIN", 0.20)
+        
+        if atp_level < atp_min:
+            print(f"  [NMDA_LOCK] ⚠️ ATP Critical: {atp_level:.2f} < {atp_min}. Learning suspended.")
+            return # Le verrou bloque toute modification synaptique
+        
         # Récupération des seuils depuis la config
         ampa_threshold = self.config.get("AMPA_BASE_THRESHOLD", 0.15)
         nmda_threshold = self.config.get("THRESHOLD_NMDA", 0.65)
         ltp_factor = self.config.get("LTP_GAIN_FACTOR", 0.25)
 
-        print(f"  [NMDA Check] Signal: {intensity:.2f} | Threshold: {nmda_threshold}")
+        print(f" [NMDA Check] Signal: {intensity:.2f} | Threshold: {nmda_threshold}")
 
         # 1. TRANSMISSION AMPA (L'information passe-t-elle le bruit de fond ?)
         if intensity < ampa_threshold:
