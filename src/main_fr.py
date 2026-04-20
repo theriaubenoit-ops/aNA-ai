@@ -229,9 +229,9 @@ async def main():
         print(f"  │")
 
         # Status Global du Hub
-        print(f"  ├─ Hub Status (Visuel)               : {res_v.get('status', 'Routed!')}")
-        print(f"  ├─ Hub Status (Auditif)              : {res_a.get('status', 'Routed!')}")
-        print(f"  ├─ Hub Status (Haptique)             : {res_h.get('status', 'Routed!')}")
+        print(f"  ├─ État du hub (Visuel)               : {res_v.get('status', 'Acheminé!')}")
+        print(f"  ├─ État du hub (Auditif)              : {res_a.get('status', 'Acheminé!')}")
+        print(f"  ├─ État du hub (Haptique)             : {res_h.get('status', 'Acheminé!')}")
         # On récupère le gain actuel du Thalamus (ex: 0.67 dans ton log)
         current_gain = res_v.get('gain', 0.5) 
 
@@ -243,7 +243,7 @@ async def main():
 
         # Calcul du score de connaissance inverse à l'erreur de prédiction
         knowledge_score = 1.0 - prediction_error
-        status_label = "Confirmed!" if knowledge_score > 0.8 else "Learning..."
+        status_label = "Confirmé !" if knowledge_score > 0.8 else "Apprentissage..."
         
         print(f"  ├─ Reconnaissance de motifs (Hippo)  : {knowledge_score:.2%} {status_label}")
         print(f"  ├─ Thalamic (bpm)                    : {thalamus.current_bpm:.1f} (vitalité: {(status['vitality']* 100 ):.2f}%)")
