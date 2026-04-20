@@ -110,6 +110,7 @@ async def main():
         'bpm': thalamus.current_bpm,
         'vitality': 1.0
     }
+    l6_signal = 0.0
     
     for cycle, char in enumerate(all_haptics, 1):
         # --- PHASE A : PREDICTIVE ANALYSIS (Feedback L6) ---
@@ -154,8 +155,6 @@ async def main():
             "visual": current_visual_data,
             "auditory": current_audio_data
         }
-        cortical_results = await visual_column.process_input(multimodal_input, hippo)
-        l6_signal = cortical_results['l6_feedback']
 
         # Simulation Haptic (VPL)
         haptic_data = {
@@ -177,6 +176,11 @@ async def main():
         res_v = await hub.route_signal("input_visual", "00_language_64x64_English.png", status['bpm'])
         res_a = await hub.route_signal("input_auditory", "pink_noise.wav", status['bpm'])
         res_h = await hub.route_signal("input_haptic", char, status['bpm'])
+
+        # On récupère le gain actuel
+        current_gain = res_v.get('thalamic_gain', 0.5) 
+
+        l6_signal = thalamus.apply_cortical_feedback(current_gain, l6_signal, config)
 
         # --- PHASE 2: ALIGNEMENT HIPPOCAMPE (L'IMPACT) ---
         # On demande à l'hippocampe d'évaluer la prédiction du stimulus haptique
@@ -232,12 +236,11 @@ async def main():
         print(f"  ├─ Hub Status (Haptic)      : {res_h.get('status', 'Routed!')}")
         status_label = "Known!" if await hippo.evaluate_prediction(char) > 0 else "Unknown."
 
-        # On récupère le gain actuel du Thalamus (ex: 0.67 dans ton log)
-        current_gain = res_v.get('gain', 0.5) 
+        
 
         # On encode avec l'intensité combinée (Signal de base * Gain Thalamique)
         # C'est ici que le seuil de 0.65 (NMDA) sera testé !
-        await hippo.encode(char, intensity=current_gain)
+        await hippo.encode(char, intensity=l6_signal)
 
         # Calcul du score de connaissance inverse à l'erreur de prédiction
         knowledge_score = 1.0 - prediction_error
