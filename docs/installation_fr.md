@@ -33,6 +33,7 @@ English instructions: [installation (en)](/docs/installation.md)
      - ☄️ `python3 src/tests_fr/test_cortical_column.py` _(Flux de signal cortical à six couches)_
      - `python3 src/tests_fr/test_limbic_system.py` _(Intégration émotionnelle et cognitive)_
      - ☄️ `python3 src/tests_fr/test_hippocampus.py` _(Consolidation synaptique et encodage de motifs)_
+     - ☄️ `python3 src/tests/test_hippocampus_ampa_nmda.py` _(Mémoire à court terme et à long terme)_
      - `python3 src/tests_fr/test_neuron.py` _(Dynamique métabolique et électrophysiologique)_
      - `python3 src/tests_fr/test_pulse.py` _(Oscillations neuronales et synchronisation temporelle)_
      - ☄️ `python3 src/tests_fr/test_thalamus.py` _(Filtrage sensoriel et signal routage)_
