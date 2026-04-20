@@ -54,7 +54,7 @@ class Thalamus:
         self.current_bpm = self.base_bpm
         self.nuclei_activity = {n: 0.0 for n in self.nuclei}
 
-    def apply_cortical_feedback(current_signal, previous_l6, config):
+    def apply_cortical_feedback(self, current_signal, previous_l6, config):
         resonance = config.get("CORTICAL_RESONANCE_FACTOR", 0.5)
         # Plus la résonance est haute, plus la prédiction L6 stabilise 
         # le signal entrant, facilitant le "Known!"
