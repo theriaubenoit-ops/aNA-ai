@@ -55,7 +55,7 @@ def get_audio_files(directory):
     return []
 
 async def main():
-    print("--- ⚡ aNA Organism v5.3b (Thalamic Hub actif) ---")
+    print("--- ⚡ aNA Organisme (Thalamic Hub actif) ---")
 
     # 1. Initialisation des moteurs
     config = get_config()
@@ -101,9 +101,9 @@ async def main():
     all_audios = get_audio_files(audio_dir)
     
     if not all_visuals:
-        print(f" [Note] Aucun stimulus visuel trouvé dans : {visual_dir}")
+        print(f" [Note] Aucun stimulus visuel n'a été trouvé dans : {visual_dir}")
     if not all_audios:
-        print(f" [Note] No auditory stimuli were found in: {audio_dir}")
+        print(f" [Note] Aucun stimulus auditif n'a été trouvé dans: {audio_dir}")
 
     # On définit un status par défaut pour le premier cycle
     status = {
@@ -174,7 +174,7 @@ async def main():
         threshold = config.get("THALAMIC_THRESHOLD", 0.15)
         weights = config.get("SENSORY_WEIGHTS", {"visual": 0.5, "auditory": 0.3, "haptic": 0.2})
         
-        print(f"\nCycle {cycle:02d} - Routage multimodal")
+        print(f"\nCycle {cycle:02d} - Itinéraire multimodal")
         
         # --- PHASE 1: ROUTAGE THALAMIQUE & ATTENTION ---
         res_v = await hub.route_signal("input_visual", "00_language_64x64_English.png", status['bpm'])
@@ -239,11 +239,12 @@ async def main():
         print(f"  ├─ État du hub (Auditif)              : {res_a.get('status', 'Acheminé!')}")
         print(f"  ├─ État du hub (Haptique)             : {res_h.get('status', 'Acheminé!')}")
         # On récupère le gain actuel du Thalamus (ex: 0.67 dans ton log)
-        current_gain = res_v.get('gain', 0.5) 
+        # current_gain = res_v.get('gain', 0.5) 
 
         # On encode avec l'intensité combinée (Signal de base * Gain Thalamique)
-        # C'est ici que le seuil de 0.65 (NMDA) sera testé !
-        await hippo.encode(char, intensity=current_gain)
+        # Seuil (NMDA)
+        # await hippo.encode(char, intensity=current_gain)
+        await hippo.encode(char, intensity=l6_signal)
 
         status_label = "Connu !" if await hippo.evaluate_prediction(char) > 0 else "Inconnu."
 
