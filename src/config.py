@@ -41,7 +41,7 @@ DOPA_TO_HZ_GAIN = 20.0             # Dopamine sensitivity Min: 5.0 (low sensitiv
 
 # --- ENERGY THRESHOLDS / SEUILS ÉNERGÉTIQUES (FR) ---
 # ATP_CRITICAL_THRESHOLD = 0.10      # Transition to REFRACTORY_REST mode Min: 0.05 (very critical) Max: 0.30 (less critical) / Passage en mode REFRACTORY_REST 
-ATP_FATIGUE_ZONE = 0.40            # Hypervigilance Trigger Min: 0.30 (rapid fatigue) Max: 0.60 (late fatigue) / Déclenchement de l'hyper-vigilance 
+ATP_FATIGUE_ZONE = 0.40            # Hypervigilance Trigger Min: 0.30 (rapid fatigue) Mid: (0.15 and 0.40) Max: 0.60 (late fatigue) / Déclenchement de l'hyper-vigilance 
 # ATP_CONSUMPTION = 0.001          # Fatigue per cycle Min: 0.001 (endurance) Max: 0.005 (rapid depletion) / Fatigue par cycle
 RECOVERY_RATE = 0.05               # ATP Recharge Rate (Sleep) Min: 0.01 (slow recovery) Max: 0.20 (rapid recovery) / Vitesse de recharge ATP (Sommeil)
 WAKE_UP_THRESHOLD = 0.80           # Wake-Up Threshold Min: 0.60 (late wake-up) Max: 0.95 (early wake-up) / Seuil de réveil 
@@ -51,7 +51,7 @@ AMPA_BASE_THRESHOLD = 0.15         # Seuil d'activation AMPA (Transmission de ba
 # THRESHOLD_NMDA = 0.65              # Memory Lock Threshold (NMDA, "Magnesium ion") Min: 0.1 (Easy learning/credulous) Max: 0.9 (Difficult/critical learning) / Seuil pour le verrouillage des souvenirs 
 LTP_GAIN_FACTOR = 0.25             # Facteur de renforcement (LTP) Min: 0.05 (Slow plasticity) Max: 0.50 (Ultra-fast/unstable plasticity) / Seuil d'activation AMPA
 ATP_CRITICAL_MIN = 0.20            # Parameter for the future "NMDA_Lock" Min: 0.05 (Extreme Survival) Max: 0.40 (High Energy Caution) / Paramètre pour le futur "NMDA_Lock"
-CURRENT_ATP = 1.0                  # Current energy level  Min: 0.00 (...) Max: 0.00 (...) / Niveau d'énergie actuel
+CURRENT_ATP = 1.0                  # Current energy level  Min: 0.15 (Survival Threshold) Max: 1.20 (Hyper-Vigilance) / Niveau d'énergie actuel
 ENCODE_THRESHOLD = 0.7             # Energy Required for Encoding Min: 0.1 (Everything is memorized) Max: 1.0 (Nothing is memorized without emotional shock) / Intensité requise pour la mémorisation 
 HIPPO_RECOVERY = 0.08              # Hippocampal energy recovery Min: 0.01 (Slow Recovery, Fatigue Quickly) Max: 0.20 (High Cognitive Endurance) / Récupération énergétique de l'Hippocampe 
 # SYNAPTIC_PLASTICITY = 0.05         # Baseline learning rate Min: 0.001 (slow learning) Max: 0.10 (fast learning) / Vitesse d'apprentissage de base
