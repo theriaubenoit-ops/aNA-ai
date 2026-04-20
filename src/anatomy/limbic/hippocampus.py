@@ -187,29 +187,6 @@ class Hippocampus:
         # Plafonnement pour la stabilité numérique
         self.subfields["CA3"][signal_label] = min(5.0, self.subfields["CA3"][signal_label])
 
-    async def consolidate_and_prune(self):
-        """
-        Consolidation v5.1.1 : Utilise le tempérament pour décider 
-        ce qui doit être oublié ou stabilisé.
-        """
-        config = get_config() # On récupère le tempérament actuel
-        
-        print("  [Hippocampe] 🧠 Synaptic consolidation in progress...")
-        
-        for label in list(self.subfields["CA3"].keys()):
-            # 1. PRUNING (Élagage basé sur le bruit de fond de la config)
-            # On utilise NOISE_LEVEL pour définir ce qui est insignifiant
-            if self.subfields["CA3"][label] < config["NOISE_LEVEL"]:
-                del self.subfields["CA3"][label]
-                continue
-                
-            # 2. STABILISATION (Utilise le GAIN NMDA pour la force synaptique)
-            if label in self.subfields["CA4"]:
-                floor = self.subfields["CA4"][label]
-                # On utilise THRESHOLD_NMDA pour lisser la trace vers la sagesse
-                learning_factor = config["THRESHOLD_NMDA"] 
-                self.subfields["CA3"][label] = (self.subfields["CA3"][label] + floor) * learning_factor
-
     async def consolidate_metabolism(self, atp_level: float):
         """
         Mécanique de 'Sommeil Paradoxal' :
@@ -234,26 +211,55 @@ class Hippocampus:
 
     async def consolidate_and_prune(self):
         """
-        Simule le sommeil paradoxal (REM) : 
-        Élagage des bruits et stabilisation des leçons de survie.
+        Simule le sommeil paradoxal : 
+        Nettoyage impitoyable de tout ce qui n'a pas été verrouillé par NMDA.
         """
-        print("  [Hippocampe] 🧠 Synaptic consolidation in progress...")
+        nmda_threshold = self.config.get("THRESHOLD_NMDA", 0.65)
         
+        # On travaille sur une copie pour pouvoir supprimer pendant l'itération
         for label in list(self.subfields["CA3"].keys()):
-            # 1. PRUNING (Élagage)
-            # Si une trace est trop faible (< 0.05), elle est considérée comme du bruit.
-            # On libère de la mémoire.
-            if self.subfields["CA3"][label] < 0.05:
+            val = self.subfields["CA3"][label]
+            
+            # --- LOGIQUE DE PRUNING NMDA ---
+            if val < nmda_threshold:
+                # L'information n'était qu'électrique (AMPA), pas structurelle.
+                # Elle s'efface avec le repos.
                 del self.subfields["CA3"][label]
-                continue
-                
-            # 2. APOIDEMENT DES TRACES ACIDES (CA4)
-            # Si le souvenir est marqué comme "danger" dans le CA4 :
-            if label in self.subfields["CA4"]:
-                # On réduit l'amplitude de la trace dans le CA3.
-                # Le but : garder le souvenir du danger, mais supprimer la panique (le pic de BPM).
-                floor = self.subfields["CA4"][label]
-                # On lisse la valeur vers le plancher de survie
-                self.subfields["CA3"][label] = (self.subfields["CA3"][label] + floor) / 2
-                
-        print("  [Hippocampus] ✅ Cleaning complete. aNA is ready for a new cycle.")
+            else:
+                # L'information a passé le verrou NMDA. 
+                # On la stabilise (éventuellement légère décroissance LTD)
+                self.subfields["CA3"][label] *= 0.95
+
+    async def encode(self, label: str, intensity: float = 0.5):
+        """
+        Encode une trace mémoire en utilisant la logique AMPA/NMDA.
+        intensity: le signal brut + le gain thalamique (vigilance).
+        """
+        # Récupération des seuils depuis la config
+        ampa_threshold = self.config.get("AMPA_BASE_THRESHOLD", 0.15)
+        nmda_threshold = self.config.get("THRESHOLD_NMDA", 0.65)
+        ltp_factor = self.config.get("LTP_GAIN_FACTOR", 0.25)
+
+        print(f"  [NMDA Check] Signal: {intensity:.2f} | Threshold: {nmda_threshold}")
+
+        # 1. TRANSMISSION AMPA (L'information passe-t-elle le bruit de fond ?)
+        if intensity < ampa_threshold:
+            print(f"  └─ Signal too weak (< {ampa_threshold}). Ignored.")
+            return
+
+        # 2. TRANSMISSION NMDA (Détection de coïncidence pour la plasticité)
+        # On initialise ou récupère la trace dans le CA3
+        current_trace = self.subfields["CA3"].get(label, 0.0)
+        
+        if intensity >= nmda_threshold:
+            # Le "Magnésium" est expulsé : on applique la LTP (Long-Term Potentiation)
+            new_value = max(intensity, current_trace + ltp_factor)
+            self.subfields["CA3"][label] = min(new_value, 1.0) # Cap à 1.0
+            print(f"  └─ [NMDA OPEN] Coincidence detected! Trace reinforced: {self.subfields['CA3'][label]:.2f}")
+        else:
+            # Seul AMPA est actif : l'info est notée mais pas "gravée" durablement
+            self.subfields["CA3"][label] = max(intensity, current_trace)
+            print(f"  └─ [AMPA ONLY] Magnesium block active. Trace remains volatile.")
+
+        # Mise à jour de l'énergie (consommation ATP pour l'encodage)
+        # On pourra lier cela à ton ATP_CRITICAL_MIN plus tard (Oui!)
