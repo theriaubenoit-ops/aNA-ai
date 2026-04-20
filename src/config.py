@@ -47,7 +47,7 @@ RECOVERY_RATE = 0.05               # ATP Recharge Rate (Sleep) Min: 0.01 (slow r
 WAKE_UP_THRESHOLD = 0.80           # Wake-Up Threshold Min: 0.60 (late wake-up) Max: 0.95 (early wake-up) / Seuil de réveil 
 
 # --- PLASTICITY & LEARNING (Hippocampus/Cortex) / PLASTICITÉ & APPRENTISSAGE (Hippocampe/Cortex) (FR) ---
-AMPA_BASE_THRESHOLD = 0.15         # Seuil d'activation AMPA (Transmission de base) Min: 0.05 (Extreme sensitivity) Max: 0.30 (Must be strong to be heard) / Seuil d'activation AMPA
+AMPA_BASE_THRESHOLD = 0.15         # Activation threshold AMPA (Basic transmission) Min: 0.05 (Extreme sensitivity) Max: 0.30 (Must be strong to be heard) / Seuil d'activation AMPA
 # THRESHOLD_NMDA = 0.65              # Memory Lock Threshold (NMDA, "Magnesium ion") Min: 0.1 (Easy learning/credulous) Max: 0.9 (Difficult/critical learning) / Seuil pour le verrouillage des souvenirs 
 LTP_GAIN_FACTOR = 0.25             # Facteur de renforcement (LTP) Min: 0.05 (Slow plasticity) Max: 0.50 (Ultra-fast/unstable plasticity) / Seuil d'activation AMPA
 ATP_CRITICAL_MIN = 0.20            # Parameter for the future "NMDA_Lock" Min: 0.05 (Extreme Survival) Max: 0.40 (High Energy Caution) / Paramètre pour le futur "NMDA_Lock"
@@ -92,7 +92,7 @@ MYELIN_RATE               = 0.04
 MYELIN_EFFICIENCY_COEFF   = 2.0
 CORTICAL_RESONANCE_FACTOR = 0.9
 THALAMIC_THRESHOLD        = 0.35
-THRESHOLD_NMDA            = 0.65
+THRESHOLD_NMDA            = 0.35
 ATP_CRITICAL_THRESHOLD    = 0.10
 ATP_CONSUMPTION           = 0.001
 NOISE_LEVEL               = 0.01
