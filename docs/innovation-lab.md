@@ -34,6 +34,14 @@ _Thank you for being part of this journey to bring **aNA** to life!_
 
 In the **aNA** AI Project, the _[thalamus(.py)](/src/anatomy/subcortical/thalamus.py) Hub_ acts as the central multimodal sensory integrator. Unlike traditional _AI data routers_, the **Hub** operates as a biological _"Gate,"_ simulating the **thalamocortical loops** that define _human focus_ and situational awareness.
 
+**☄️ _NMDA_ Lock & Homeostasis:** Development of the energy _safety lock (ATP Critical Min)_ to protect _neural integrity_ in case of _fatigue_.
+
+**☄️ Limbic Resonance:** Refinement of the _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ response to force _NMDA_ opening during _critical stimuli_.
+
+**☄️ Validation of the Magnesium Block _(NMDA)_:** Successful implementation of synaptic selectivity. The _AI_ ​​now distinguishes _noise_ _(AMPA)_ from the structured signal _(NMDA)_.
+
+**☄️ Selective Consolidation _(REM Cycle)_:** Integration of a metabolic _"sieve"_ that eliminates volatile traces and stabilizes only information that has crossed the coincidence threshold.
+
 **☄️ Core Innovations**
 
 **1. Sensory Gating _(Selective Attention)_**
@@ -205,4 +213,4 @@ _**NMDA:** A receptor acting as a "coincidence detector." It requires high-salie
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-12_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-19_
