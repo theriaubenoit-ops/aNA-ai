@@ -232,9 +232,9 @@ async def main():
         print(f"  │")
 
         # Status Global du Hub
-        print(f"  ├─ État du hub (Visuel)               : {res_v.get('status', 'Acheminé!')}")
-        print(f"  ├─ État du hub (Auditif)              : {res_a.get('status', 'Acheminé!')}")
-        print(f"  ├─ État du hub (Haptique)             : {res_h.get('status', 'Acheminé!')}")
+        print(f"  ├─ État du hub (Visuel)              : {res_v.get('status', 'Acheminé!')}")
+        print(f"  ├─ État du hub (Auditif)             : {res_a.get('status', 'Acheminé!')}")
+        print(f"  ├─ État du hub (Haptique)            : {res_h.get('status', 'Acheminé!')}")
         status_label = "Known!" if await hippo.evaluate_prediction(char) > 0 else "Unknown."
         
 
