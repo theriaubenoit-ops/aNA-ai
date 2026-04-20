@@ -20,6 +20,7 @@ Collaboration, research and code: Gemini, Cline
 import os
 import sys
 import asyncio
+import numpy as np
 from typing import Dict, Any
 
 # Alignement du path
@@ -56,10 +57,11 @@ class Thalamus:
 
     def apply_cortical_feedback(self, current_signal, previous_l6, config):
         resonance = config.get("CORTICAL_RESONANCE_FACTOR", 0.5)
-        # Plus la résonance est haute, plus la prédiction L6 stabilise 
-        # le signal entrant, facilitant le "Known!"
-        stabilized_signal = current_signal + (previous_l6 * resonance)
-        return stabilized_signal
+        # On calcule la nouvelle intention de signal
+        raw_sum = current_signal + (previous_l6 * resonance)
+        # On applique une décroissance (decay) ou une saturation
+        # pour éviter l'effet "Larsen" numérique
+        return 1.5 * (np.tanh(raw_sum / 1.5))
 
     def update_strain_level(self, usage_cycles: int, recovery_rate: float):
         """
@@ -98,7 +100,7 @@ class Thalamus:
         """
         Traite le signal et ajuste le Pulse en temps réel.
         """
-        # --- NOUVEAUTÉ v5.1 : VERROU DE RÉCUPÉRATION ---
+        # --- NOUVEAUTÉ : VERROU DE RÉCUPÉRATION ---
         # Si le coeur est en mode réfractaire, on ferme les vannes sensorielles.
         if self.pulse.is_refractory:
             return {
