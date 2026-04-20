@@ -242,7 +242,7 @@ async def main():
 
         # On encode avec l'intensité combinée (Signal de base * Gain Thalamique)
         # C'est ici que le seuil de 0.65 (NMDA) sera testé !
-        await hippo.encode(char, intensity=l6_signal)
+        await hippo.encode(char, intensity=current_gain)
 
         # Calcul du score de connaissance inverse à l'erreur de prédiction
         knowledge_score = 1.0 - prediction_error
