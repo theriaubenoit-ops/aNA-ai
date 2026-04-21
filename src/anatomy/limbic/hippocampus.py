@@ -97,6 +97,16 @@ class Hippocampus:
             self.subfields["CA3"][signal_label] = config.get("INITIAL_ENGRAM_STRENGTH", 0.1)
             self.subfields["CA4"][signal_label] = 1.0
 
+        # --- AJOUT DU PONT INVISIBLE VERS LE REGISTRE ---
+        # On convertit l'erreur de prédiction (0.0 à 1.0) en score de match (0% à 100%)
+        # Plus l'erreur est basse, plus le match est haut.
+        pattern_score = (1.0 - prediction_error) * 100.0
+        
+        # On écrit dans le registre pour le Thalamus (Lien invisible mais fonctionnel)
+        if hasattr(self, 'registry'):
+             self.registry.set("last_hippo_match", pattern_score)
+        # ------------------------------------------------
+
         return max(0.0, min(1.0, prediction_error))
     
     async def update_memories(self, signal_label: str, emotional_data: dict):
