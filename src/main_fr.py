@@ -246,8 +246,6 @@ async def main():
         # await hippo.encode(char, intensity=current_gain)
         await hippo.encode(char, intensity=l6_signal)
 
-        status_label = "Connu !" if await hippo.evaluate_prediction(char) > 0 else "Inconnu."
-
         # Calcul du score de connaissance inverse à l'erreur de prédiction
         knowledge_score = 1.0 - prediction_error
         status_label = "Confirmé !" if knowledge_score > 0.8 else "Apprentissage..."
