@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Pulse implementation for aNA AI Project v5.3b
+Pulse implementation for aNA AI Project v5.3
 
 Communicates with: Input: (<- Thalamus) (<- Amygdala) | Output: (-> Global Metabolism / BPM)
 
@@ -128,6 +128,8 @@ class Pulse:
 
     def inject_stimulus(self, intensity: float):
         """Simule une décharge d'adrénaline/dopamine."""
+        now = time.time()
+        dt = now - self.last_time
         if self.is_refractory:
             self.bpm = 45.0  # Rythme calme, on réduit la consommation de 80%
             # On commence la recharge lente
