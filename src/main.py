@@ -69,7 +69,7 @@ async def main():
     visual_gateway = InputVisualGateway() 
 
     # 2. Neocortex initiation
-    visual_column = SimplifiedCorticalColumn(column_id="COL_V1")
+    visual_column = SimplifiedCorticalColumn(column_id="COL_V1") # ! Prochaine étape : À connecter au neocortex.py et aux lobes (occipital.py, frontal.py, parietal.py, temporal.py)
     
     # 3. The Thalamic Complex (The Core + The Routing Hub)
     thalamus = Thalamus(
