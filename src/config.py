@@ -22,9 +22,9 @@ Collaboration, research and code: Gemini
 #  (World Model) réellement ancré."                                                #
 # -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  #
 
-# ==============================================================================================
-#  SEE PROFILES NEURAL PERFORMANCE (BELOW) / VOIR PROFILS DE PERFORMANCES NEURALES (CI-DESSOUS)
-# ==============================================================================================
+# ===================================================================================================
+#  SEE PROFILES NEURAL PERFORMANCE (BELOW) / VOIR PROFILS DE PERFORMANCES NEURALES (CI-DESSOUS) (FR)
+# ===================================================================================================
 
 # --- PERSONALITY HYPERPARAMETERS / HYPER-PARAMÈTRES DE PERSONNALITÉ (FR) ---
 # AMYGDALA_SENSITIVITY = 0.5       # Amygdala Sensitivity Min: 0.1 (unperturbed) Max: 2.0 (hyper-reactive) / Sensibilité de l'amygdale 
@@ -32,12 +32,16 @@ ADRENALINE_RELEASE_FACTOR = 0.4    # Adrenaline Release Factor Min: 0.1 (calm) M
 # L6_GAIN = 0.8                      # Cortical Brake Strength Min: 0.0 (no brake) Max: 2.0 (total inhibition) / Force du frein cortical 
 
 # --- HEART CONFIGURATION & METABOLISM / CONFIGURATION DU CŒUR & MÉTABOLISME (FR) ---
-BASE_BPM = 72.0                    # Cruising Heart Rate Min: 60.0 (deep sleep) Max: 140.0 (alert) / Rythme de croisière 
-MAX_BPM = 160.0                    # Excitation limit Min: 110.0 (little emotional reactivity) Max: 220.0 (alert) / Limite d'excitation
-MAX_VIGILANCE_BPM = 200.0          # Safety ceiling Min: 180.0 (intense stress) Max: 240.0 (extreme emergency) / Plafond de sécurité 
+BASE_BPM = 65.0                    # Cruising Heart Rate Min: 60.0 (deep sleep) Max: 100.0 (alert) / Rythme de croisière 
+MAX_BPM = 136.0                    # Excitation limit Min: 100.0 (little emotional reactivity) Max: 170.0 (alert) / Limite d'excitation
+MAX_VIGILANCE_BPM = 200.0          # Safety ceiling Min: 170.0 (intense stress) Max: 200.0 (extreme emergency) / Plafond de sécurité 
 BRADYCARDIA_BPM = 45.0             # Protective Heart Rate Min: 45.0 (bradycardia) Max: 60.0 (resting rate) / Rythme de protection 
-PULSE_FRICTION = 0.98              # Heart rate damping Min: 0.80 (unstable) Max: 0.99 (ultra-stable) / Amortissement du rythme cardiaque 
+PULSE_FRICTION = 0.93              # Heart rate damping Min: 0.80 (unstable) Max: 0.99 (ultra-stable) / Amortissement du rythme cardiaque 
 DOPA_TO_HZ_GAIN = 20.0             # Dopamine sensitivity Min: 5.0 (low sensitivity) Max: 50.0 (hyper-reactive) / Sensibilité à la dopamine 
+THALAMUS_BASE_BPM = 72.0           # Resting heart rate (target) Min: 60.0 (deep sleep) Max: 100.0 (alert) / Rythme cardiaque de repos (cible)
+THALAMUS_MAX_BPM = 150.0           # Absolute safety ceiling. Min: 120.0 (high stress) Max: 180.0 (critical limit) / Plafond absolu de sécurité (limite critique)
+THALAMUS_DECAY_FACTOR = 0.15       # Speed ​​of return to rest (0.1 = 10% per cycle) Min: 0.1 (slow) Max 0.5 (fast) / Vitesse de retour au calme (0.1 = 10% par cycle)
+RECOGNITION_METABOLIC_DROP = 6.0   # Target BPM reduction upon pattern match (no savings) Max: 10.0 (high efficiency) / Une reconnaissance réduit le BPM cible
 
 # --- ENERGY THRESHOLDS / SEUILS ÉNERGÉTIQUES (FR) ---
 # ATP_CRITICAL_THRESHOLD = 0.10      # Transition to REFRACTORY_REST mode Min: 0.05 (very critical) Max: 0.30 (less critical) / Passage en mode REFRACTORY_REST 
@@ -57,6 +61,7 @@ HIPPO_RECOVERY = 0.08              # Hippocampal energy recovery Min: 0.01 (Slow
 # SYNAPTIC_PLASTICITY = 0.05         # Baseline learning rate Min: 0.001 (slow learning) Max: 0.10 (fast learning) / Vitesse d'apprentissage de base
 # MYELIN_RATE = 0.04               # Pathway strengthening rate Min: 0.001 (slow wiring) Max: 0.05 (fast wiring) / Vitesse de renforcement des chemins 
 # MYELIN_EFFICIENCY_COEFF = 1.5      # Richness of the wiring Min: 1.0 (standard) Max: 2.5  (super-conducteur)/ Richesse du câblage 
+MAX_MYELIN_DENSITY = 1.0           # Maximum synaptic insulation. Min: 0.1 (raw fiber) Max: 1.0 (fully myelinated) / Densité maximale de myéline (isolation synaptique)
 # CORTICAL_RESONANCE_FACTOR = 0.9    # Prediction persistence  Min: 0.10 (unstable) Max: 0.95 (stable) / Persistance de la prédiction 
 BASE_CONDUCTIVITY = 0.7            # Neural flow concept Min: 0.1 (Slow/Viscous Flux) Max: 1.0 (Instantaneous/Fluid Flux) / Concept de flux neuronal 
 MIN_RESISTANCE = 0.1               # Minimum synaptic resistance Min: 0.01 (Superconducting Synapses) Max: 0.2 (Always Resistant Synapses) / Résistance synaptique minimale 
@@ -78,9 +83,9 @@ SENSORY_WEIGHTS = {                # AVERAGE HUMAN (visual priority) Total: 1.0 
     "auditory": 0.50               # Min: 0.10 Max: 0.60 (attentive to noise)
 }
 
-# =============================================================
-# PROFILE: NEURAL PERFORMANCE CONFIGURATION
-# =============================================================
+# ===================================================================================================
+#  PROFILE: NEURAL PERFORMANCE CONFIGURATION / PROFIL : CONFIGURATION DES PERFORMANCES NEURALES (FR)
+# ===================================================================================================
 
 # --- OPTION A: HIGH-PERFORMING HUMAN (High Plasticity & Focus) ---
 # Maximum neuroplasticity, optimal stress management and thalamic focus.
@@ -152,6 +157,10 @@ def get_config():
         "WAKE_UP_THRESHOLD": WAKE_UP_THRESHOLD,
         "PULSE_FRICTION": PULSE_FRICTION,
         "DOPA_TO_HZ_GAIN": DOPA_TO_HZ_GAIN,
+        "RECOGNITION_METABOLIC_DROP": RECOGNITION_METABOLIC_DROP,
+        "THALAMUS_BASE_BPM": THALAMUS_BASE_BPM,
+        "THALAMUS_MAX_BPM": THALAMUS_MAX_BPM,
+        "THALAMUS_DECAY_FACTOR": THALAMUS_DECAY_FACTOR,
         "AMPA_BASE_THRESHOLD": AMPA_BASE_THRESHOLD,
         "THRESHOLD_NMDA": THRESHOLD_NMDA,
         "LTP_GAIN_FACTOR": LTP_GAIN_FACTOR,
@@ -169,6 +178,7 @@ def get_config():
         "MYELIN_EFFICIENCY_COEFF": MYELIN_EFFICIENCY_COEFF,
         "CORTICAL_RESONANCE_FACTOR": CORTICAL_RESONANCE_FACTOR,
         "MYELIN_RATE": MYELIN_RATE,
+        "MAX_MYELIN_DENSITY": MAX_MYELIN_DENSITY,
         "ATP_CONSUMPTION": ATP_CONSUMPTION
     }
 
