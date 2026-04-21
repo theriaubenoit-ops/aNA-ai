@@ -26,6 +26,7 @@ from typing import Dict, Any
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../..')))
 
 # from src.registry import SIGNALS, ORGANS
+from src.anatomy.cortical.cortical_column import SimplifiedCorticalColumn
 from src.config import get_config
 from src.registry import ORGANS
 
@@ -58,7 +59,9 @@ class Thalamus:
         resonance = config.get("CORTICAL_RESONANCE_FACTOR", 0.5)
         # Plus la résonance est haute, plus la prédiction L6 stabilise 
         # le signal entrant, facilitant le "Known!"
-        stabilized_signal = current_signal + (previous_l6 * resonance) * 0.61 # * 0.61 Test correction temporaire (calibration du plafond "Signal L6" à 1.48 mV)
+        visual_column = SimplifiedCorticalColumn(column_id="COL_V1")
+        dynamic_res = 0.61 - (visual_column.get_average_myelination() * 0.2) # * 0.61 Test correction temporaire (calibration du plafond "Signal L6" à 1.48 mV)
+        stabilized_signal = current_signal + (previous_l6 * resonance) * dynamic_res
         return stabilized_signal
 
     def update_strain_level(self, usage_cycles: int, recovery_rate: float):
