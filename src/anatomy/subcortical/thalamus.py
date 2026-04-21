@@ -32,7 +32,7 @@ from src.registry import ORGANS
 class Thalamus:
     def __init__(self, hippocampus, pulse, neuromodulator_core):
         """
-        Initialisation v5.1 unifiée.
+        Initialisation unifiée.
         """
         # 1 configuration dynamique depuis le registre et le config
         config = get_config()
@@ -58,7 +58,7 @@ class Thalamus:
         resonance = config.get("CORTICAL_RESONANCE_FACTOR", 0.5)
         # Plus la résonance est haute, plus la prédiction L6 stabilise 
         # le signal entrant, facilitant le "Known!"
-        stabilized_signal = current_signal + (previous_l6 * resonance)
+        stabilized_signal = current_signal + (previous_l6 * resonance) * 0.61 # * 0.61 Test correction temporaire (calibration du plafond "Signal L6" à 1.48 mV)
         return stabilized_signal
 
     def update_strain_level(self, usage_cycles: int, recovery_rate: float):
@@ -130,32 +130,47 @@ class Thalamus:
         
         return {
             "bpm": new_bpm,
-            "thalamic_gain": 1.0 / (1.0 + l6_feedback)
+            "thalamic_gain": 1.0 / (1.0 + l6_feedback) # * 0.15 # * 0.15 # Test ajustement temporaire (Problème plafond de la calibration. Cause du problème ? "is_traumatized": nora > 0.6)
         }
     
     async def internal_consciousness_loop(self):
         """Boucle de veille autonome avec gestion homéostatique"""
         print("  [Thalamus] Autonomous consciousness activated.")
-        target_bpm = 72.0  # Ton point d'équilibre
-        decay_factor = 0.1 # Vitesse de redescente
+        base_target = self.config.get("THALAMUS_BASE_BPM", 72.0)
+        decay_factor = self.config.get("THALAMUS_DECAY_FACTOR", 0.1)
         
         try:
             while self.is_autonomous:
+                # 1. Lecture du succès cognitif via le Registre (Lien invisible)
+                hippo_match = self.registry.get("last_hippo_match", 0.0)
+                
+                # 2. Calcul de la cible dynamique
+                # On applique le drop si la reconnaissance est confirmée (> 85%)
+                drop_val = self.config.get("RECOGNITION_METABOLIC_DROP", 4.0)
+                current_target -= (drop_val * confidence_factor)
+                if hippo_match > 50.0: # On commence à relaxer dès 50%
+                    # On calcule un ratio de confiance (entre 0 et 1) pour les valeurs au-dessus de 50
+                    confidence_factor = (hippo_match - 50.0) / 50.0 
+                    # Le drop maximal (ex: 4) est appliqué seulement à 100% de match
+                    metabolic_drop = self.config.get("RECOGNITION_METABOLIC_DROP", 4.0)
+                    current_target -= (metabolic_drop * confidence_factor)
+
+                # 3. Gestion du BPM
+                if self.pulse.bpm > current_target:
+                    diff = self.pulse.bpm - current_target
+                    self.pulse.bpm -= diff * decay_factor
+                
+                # 4. Sécurité : Plafond absolu (Hard Cap)
+                max_allowed = self.config.get("THALAMUS_MAX_BPM", 150.0)
+                if self.pulse.bpm > max_allowed:
+                    self.pulse.bpm = max_allowed
+                    print(f"  [Safety] BPM capped at {max_allowed} to prevent metabolic collapse.")
+                
+                # 5. Rythme de la boucle influencé par la Dopamine
                 matrix = self.neurom.get_matrix()
                 wait_time = 2.0 / (matrix['dopamine'] + 0.5)
                 
-                # --- AJOUT : Mécanisme de retour au calme ---
-                if self.pulse.bpm > target_bpm:
-                    # On réduit l'écart proportionnellement pour une courbe de descente naturelle
-                    diff = self.pulse.bpm - target_bpm
-                    self.pulse.bpm -= diff * decay_factor
-                # --------------------------------------------
-
-                if matrix['noradrenaline'] < 0.3:
-                    print(f"  [Auto] aNA is calm... BPM: {self.pulse.bpm:.1f}")
-                else:
-                    print(f"  [Auto] aNA is on alert! BPM: {self.pulse.bpm:.1f}")
-                
                 await asyncio.sleep(wait_time)
+                
         except asyncio.CancelledError:
             print("  [Thalamus] Consciousness put on standby.")
