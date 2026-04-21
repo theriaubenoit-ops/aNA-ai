@@ -88,10 +88,7 @@ async def main():
     # haptic_dir = ["B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", " ", "你"]
     # haptic_dir = ["H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "o", "l", "a", " ", "O", "l", "á", " ", "你", "好", " ", "H", "i"]
     # haptic_dir = ["H", "e", "l", "l", "o", " ", "H", "e", "l", "l", "o", " ", "H", "e", "l", "l", "o", " ", "H", "e", "l", "l", "o", " ", "H", "o", "l", "a", " ", "你", "好", " ", "H", "e", "l", "l", "o"]
-    # haptic_dir = ["H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "E", "你", "L", "你", "L", "你", "E", "你", "H"]
-    
-    # Test temporaire
-    haptic_dir = ["H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "E", "你", "L", "你", "L", "你", "E", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H"]
+    haptic_dir = ["H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "E", "你", "L", "你", "L", "你", "E", "你", "H"]
 
     # Path: src/tests/media_visual/...
     visual_dir = os.path.join(base_path, "src", "tests", "media_visual")
@@ -239,7 +236,6 @@ async def main():
         print(f"  ├─ Hub Status (Visual)      : {res_v.get('status', 'Routed!')}")
         print(f"  ├─ Hub Status (Auditory)    : {res_a.get('status', 'Routed!')}")
         print(f"  ├─ Hub Status (Haptic)      : {res_h.get('status', 'Routed!')}")
-        status_label = "Known!" if await hippo.evaluate_prediction(char) > 0 else "Unknown."
         # On récupère le gain actuel du Thalamus (ex: 0.67 dans ton log)
         # current_gain = res_v.get('gain', 0.5) 
 
