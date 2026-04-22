@@ -55,7 +55,7 @@ def get_audio_files(directory):
     return []
 
 async def main():
-    print("--- ⚡ aNA Organism (Thalamic Hub Active) ---")
+    print(" --- ⚡ aNA Organism (Thalamic Hub Active) ---")
 
     # 1. Engine initialization
     config = get_config()
@@ -156,6 +156,7 @@ async def main():
             "auditory": current_audio_data
         }
         cortical_results = await visual_column.process_input(multimodal_input, hippo)
+        
         # l6_signal = cortical_results['l6_feedback']
 
         # Simulation Haptic (VPL)
@@ -172,7 +173,7 @@ async def main():
         threshold = config.get("THALAMIC_THRESHOLD", 0.15)
         weights = config.get("SENSORY_WEIGHTS", {"visual": 0.5, "auditory": 0.3, "haptic": 0.2})
         
-        print(f"\nCycle {cycle:02d} - Multimodal Routing")
+        print(f"\n Cycle {cycle:02d} - Multimodal Routing")
         
         # --- PHASE 1: ROUTAGE THALAMIQUE & ATTENTION ---
         res_v = await hub.route_signal("input_visual", "00_language_64x64_English.png", status['bpm'])
@@ -258,7 +259,7 @@ async def main():
 
         await asyncio.sleep(synaptic_latency)
 
-    print("\n--- ✅ Organism stabilized with Thalamic Hub ---")
+    print("\n --- ✅ Organism stabilized with Thalamic Hub ---")
     print("\n  *Every measurement reflected here is a digital bridge to biological reality,")
     print("   designed to synthesize the fundamental principles of living systems.\n")
 
