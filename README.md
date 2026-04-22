@@ -62,7 +62,7 @@ We are embarking on the _"next wave"_ of artificial intelligence—an AI that do
 
 ![img](/docs/assets/ana-ai_logo_256x256.gif)
 
-###### _Sensory entropy filtering: Colored noise profiles to test the _[thalamic Hub(.py)](/src/anatomy/subcortical/thalamic_hub.py)_'s gating mechanisms and predictive stability._
+###### _aNA AI Project_
 
 ![ ](/docs/assets/spacer32x32.png)
 
