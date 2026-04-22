@@ -97,6 +97,16 @@ class Hippocampus:
             self.subfields["CA3"][signal_label] = config.get("INITIAL_ENGRAM_STRENGTH", 0.1)
             self.subfields["CA4"][signal_label] = 1.0
 
+        # --- AJOUT DU PONT INVISIBLE VERS LE REGISTRE ---
+        # On convertit l'erreur de prédiction (0.0 à 1.0) en score de match (0% à 100%)
+        # Plus l'erreur est basse, plus le match est haut.
+        pattern_score = (1.0 - prediction_error) * 100.0
+        
+        # On écrit dans le registre pour le Thalamus (Lien invisible mais fonctionnel)
+        if hasattr(self, 'registry'):
+             self.registry.set("last_hippo_match", pattern_score)
+        # ------------------------------------------------
+
         return max(0.0, min(1.0, prediction_error))
     
     async def update_memories(self, signal_label: str, emotional_data: dict):
@@ -235,6 +245,7 @@ class Hippocampus:
         Encode une trace mémoire en utilisant la logique AMPA/NMDA.
         intensity: le signal brut + le gain thalamique (vigilance).
         """
+        config = get_config()
         # 1. Vérification de l'ATP (Homeostatic Lock)
         atp_level = self.config.get("CURRENT_ATP", 1.0)
         atp_min = self.config.get("ATP_CRITICAL_MIN", 0.20)
@@ -252,7 +263,7 @@ class Hippocampus:
 
         # 1. TRANSMISSION AMPA (L'information passe-t-elle le bruit de fond ?)
         if intensity < ampa_threshold:
-            print(f"  └─ Signal too weak (< {ampa_threshold}). Ignored.")
+            print(f"  ├─ Signal too weak (< {ampa_threshold}). Ignored.")
             return
 
         # 2. TRANSMISSION NMDA (Détection de coïncidence pour la plasticité)
@@ -261,13 +272,15 @@ class Hippocampus:
         
         if intensity >= nmda_threshold:
             # Le "Magnésium" est expulsé : on applique la LTP (Long-Term Potentiation)
-            new_value = max(intensity, current_trace + ltp_factor)
-            self.subfields["CA3"][label] = min(new_value, 1.0) # Cap à 1.0
-            print(f"  └─ [NMDA OPEN] Coincidence detected! Trace reinforced: {self.subfields['CA3'][label]:.2f}")
+            # new_value = max(intensity, current_trace + ltp_factor)
+            # new_value = max(intensity, current_trace + intensity * 0.1) # 0.1 est ton "Learning Rate"
+            new_value = current_trace + (intensity * 0.1) # 0.1 est ton "Learning Rate"
+            self.subfields["CA3"][label] = min(new_value, 1.0)
+            print(f"  ├─ [NMDA OPEN] Coincidence detected! Trace reinforced: {self.subfields['CA3'][label]:.2f}")
         else:
             # Seul AMPA est actif : l'info est notée mais pas "gravée" durablement
             self.subfields["CA3"][label] = max(intensity, current_trace)
-            print(f"  └─ [AMPA ONLY] Magnesium block active. Trace remains volatile.")
+            print(f"  ├─ [AMPA ONLY] Magnesium block active. Trace remains volatile.")
 
         # Mise à jour de l'énergie (consommation ATP pour l'encodage)
         # On pourra lier cela à ton ATP_CRITICAL_MIN plus tard (Oui!)
