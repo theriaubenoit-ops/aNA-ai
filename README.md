@@ -62,7 +62,7 @@ We are embarking on the _"next wave"_ of artificial intelligence—an AI that do
 
 ![img](/docs/assets/ana-ai_logo_256x256.gif)
 
-###### _aNA AI Project_
+###### _aNA (Autonomous Neural Architecture) AI Project - Inspired by natural plasticity_
 
 ![ ](/docs/assets/spacer32x32.png)
 
