@@ -272,6 +272,8 @@ class Hippocampus:
         
         if intensity >= nmda_threshold:
             # Le "Magnésium" est expulsé : on applique la LTP (Long-Term Potentiation)
+            # new_value = max(intensity, current_trace + ltp_factor) # old
+            # new_value = current_trace + (intensity * 0.1) # 0.1 est ton "Learning Rate" # new
             if intensity >= nmda_threshold:
                 # On garantit un plancher de survie (LTP) tout en permettant l'accumulation
                 # On utilise l'intensité brute comme base de départ si c'est une première fois
@@ -284,4 +286,4 @@ class Hippocampus:
             print(f"  ├─ [AMPA ONLY] Magnesium block active. Trace remains volatile.")
 
         # Mise à jour de l'énergie (consommation ATP pour l'encodage)
-        # On pourra lier cela à ton ATP_CRITICAL_MIN plus tard (Oui!)
+        # On pourra lier cela à ton ATP_CRITICAL_MIN plus tard (Oui)
