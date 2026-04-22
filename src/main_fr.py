@@ -55,7 +55,7 @@ def get_audio_files(directory):
     return []
 
 async def main():
-    print("--- ⚡ aNA Organisme (Thalamic Hub actif) ---")
+    print(" --- ⚡ aNA Organisme (Thalamic Hub actif) ---")
 
     # 1. Initialisation des moteurs
     config = get_config()
@@ -69,7 +69,7 @@ async def main():
     visual_gateway = InputVisualGateway() 
 
     # 2. Initialisation du Néocortex
-    visual_column = SimplifiedCorticalColumn(column_id="COL_V1") # ! Prochaine étape : À connecter au neocortex.py et aux lobes (occipital.py, frontal.py, parietal.py, temporal.py)
+    visual_column = SimplifiedCorticalColumn(column_id="COL_V1")
     
     # 3. Le Complexe Thalamique (Le Coeur + Le Hub de routage)
     thalamus = Thalamus(
@@ -174,7 +174,7 @@ async def main():
         threshold = config.get("THALAMIC_THRESHOLD", 0.15)
         weights = config.get("SENSORY_WEIGHTS", {"visual": 0.5, "auditory": 0.3, "haptic": 0.2})
         
-        print(f"\nCycle {cycle:02d} - Itinéraire multimodal")
+        print(f"\n Cycle {cycle:02d} - Itinéraire multimodal")
         
         # --- PHASE 1: ROUTAGE THALAMIQUE & ATTENTION ---
         res_v = await hub.route_signal("input_visual", "00_language_64x64_English.png", status['bpm'])
@@ -260,7 +260,7 @@ async def main():
 
         await asyncio.sleep(synaptic_latency)
 
-    print("\n--- ✅ Organisme stabilisé avec Thalamic Hub ---")
+    print("\n --- ✅ Organisme stabilisé avec Thalamic Hub ---")
     print("\n  *Chaque mesure présentée ici est un pont numérique vers la réalité biologique,")
     print("   conçu pour synthétiser les principes fondamentaux des systèmes vivants.\n")
 
