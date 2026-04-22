@@ -272,10 +272,11 @@ class Hippocampus:
         
         if intensity >= nmda_threshold:
             # Le "Magnésium" est expulsé : on applique la LTP (Long-Term Potentiation)
-            # new_value = max(intensity, current_trace + ltp_factor)
-            # new_value = max(intensity, current_trace + intensity * 0.1) # 0.1 est ton "Learning Rate"
-            new_value = current_trace + (intensity * 0.1) # 0.1 est ton "Learning Rate"
-            self.subfields["CA3"][label] = min(new_value, 1.0)
+            if intensity >= nmda_threshold:
+                # On garantit un plancher de survie (LTP) tout en permettant l'accumulation
+                # On utilise l'intensité brute comme base de départ si c'est une première fois
+                new_value = max(intensity * 0.5, current_trace + (intensity * 0.1)) 
+                self.subfields["CA3"][label] = min(new_value, 1.0)
             print(f"  ├─ [NMDA OPEN] Coincidence detected! Trace reinforced: {self.subfields['CA3'][label]:.2f}")
         else:
             # Seul AMPA est actif : l'info est notée mais pas "gravée" durablement
