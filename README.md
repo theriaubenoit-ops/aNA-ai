@@ -60,7 +60,13 @@ We are embarking on the _"next wave"_ of artificial intelligence—an AI that do
 
 ![ ](/docs/assets/spacer32x32.png)
 
-## 🧪 Running the Biological Simulations _(Demos)_
+![img](/docs/assets/ana-ai_logo_256x256.gif)
+
+###### _Sensory entropy filtering: Colored noise profiles to test the _[thalamic Hub(.py)](/src/anatomy/subcortical/thalamic_hub.py)_'s gating mechanisms and predictive stability._
+
+![ ](/docs/assets/spacer32x32.png)
+
+## Running the Biological Simulations _(Demos)_
 
 To witness **aNA** v5.1's neural processing in real-time, you can run the integrated _[tests(/)](/src/tests/)_ suites. These simulations demonstrate how sensory data is transformed into emotional importance and cortical action.
 
