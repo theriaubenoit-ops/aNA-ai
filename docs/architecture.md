@@ -257,13 +257,13 @@ Processing Hierarchy:
 │   │   └── dashboard_fr.py             # 🚧 Dashboard (FR)
 │   ├── tests/
 │   │   ├── media_audio/                # ✅ Media audio
-│   │   ├── other/
+│   │   │   ├── other/
 │   │   │   └── 00_*.wav
 │   │   ├── media_haptic/               # ✅ Media haptic
-│   │   ├── other/
+│   │   │   ├── other/
 │   │   │   └── 00_*.md
 │   │   ├── media_visual/               # ✅ Media visual
-│   │   ├── other/
+│   │   │   ├── other/
 │   │   │   └── 00_*.png
 │   │   └── test_*.py                   # Comprehensive test suite
 │   ├── tests_fr/
