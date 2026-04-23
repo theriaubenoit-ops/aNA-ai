@@ -131,7 +131,7 @@ def test_integration():
 
 ![ ](/docs/assets/spacer64x64.png)
 
-# 💡 Future horizons: The potential of ✴️*aNA* AI
+# Future horizons: The potential of ✴️*aNA* AI
 
 The **aNA** AI project is _a leap toward the future of organic computation_. Aligning with _biological evolution_, we _unlock_ several strategic frontiers, More than just a _codebase_; it is a _sandbox_ for exploration at the intersection of _biology_ and _computation_. By contributing to this project, you are helping to _unlock_ several key areas that will have a real positive impact on our entire society:
 
