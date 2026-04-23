@@ -24,6 +24,12 @@ English instructions: [installation (en)](/docs/installation.md)
 
 ![ ](/docs/assets/spacer16x16.png)
 
+![img](/docs/assets/test_256x256.gif)
+
+###### _Retrouvez de nombreux fichiers test dans `src/tests/`_
+
+![ ](/docs/assets/spacer16x16.png)
+
 3. - [x] **Exécution des scripts _(Phase « Action »)_** Launch associated _Python scripts_ to validate neural logic:
      - PROCHAINEMENT - `python3 src/gui/dashboard_fr.py`
      - ☄️ `python3 src/main_fr.py` _(Noyau cortical et espace de travail global)_
