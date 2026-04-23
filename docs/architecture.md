@@ -206,8 +206,10 @@ Processing Hierarchy:
 
 ```
 ├── docs/
-│   ├── adr/                            # ✅ Architecture Decision Records
-│   ├── adr_fr/                         # ✅ Architecture Decision Records (fr)
+│   ├── adr/
+│   │   └── adr_*.py                    # ✅ Architecture Decision Records
+│   ├── adr_fr/
+│   │   └── adr_*.py                    # ✅ Architecture Decision Records (FR)
 │   ├── assets/                         # 📋 Medias
 │   ├── examples/                       # 📋 Comprehensive example suite
 │   ├── api-reference.md                # 📋 ...
@@ -253,31 +255,19 @@ Processing Hierarchy:
 │   ├── gui/                            # Web-based interface
 │   │   ├── dashboard.py                # 🚧 Dashboard
 │   │   └── dashboard_fr.py             # 🚧 Dashboard (FR)
-│   ├── tests/                          # Comprehensive test suite
+│   ├── tests/
 │   │   ├── media_audio/                # ✅ Media audio
+│   │   ├── other/
+│   │   │   └── 00_*.wav
 │   │   ├── media_haptic/               # ✅ Media haptic
+│   │   ├── other/
+│   │   │   └── 00_*.md
 │   │   ├── media_visual/               # ✅ Media visual
-│   │   ├── test_amygdala.py            # Priority Filter & Interrupt Controller
-│   │   ├── test_autonomy.py            # ✅ To validate the autonomous behaviors
-│   │   ├── test_cerebellum.py          # Timing Engine & Output Calibration
-│   │   ├── test_cortical_column.py     # ✅ Six-layer cortical signal flow
-│   │   ├── test_hippocampus.py         # ✅ Dynamic Buffer & Indexing System
-│   │   ├── test_limbic_system.py       # Limbic system
-│   │   ├── test_neuron.py              # Represents a single neuron
-│   │   ├── test_pulse.py               # ✅ Core Pacemaker (Pulse)
-│   │   ├── test_trauma_logic.py        # ✅ Hippocampus Trauma Logic
-│   │   └── test_thalamus.py            # ✅ Enhanced Thalamus implementation
-│   ├── tests_fr/                       # Comprehensive test suite (FR)
-│   │   ├── test_amygdala.py            # Priority Filter & Interrupt Controller (FR)
-│   │   ├── test_autonomy.py            # ✅ To validate the autonomous behaviors (FR)
-│   │   ├── test_cerebellum.py          # Timing Engine & Output Calibration (FR)
-│   │   ├── test_cortical_column.py     # ✅ Six-layer cortical signal flow (FR)
-│   │   ├── test_hippocampus.py         # ✅ Dynamic Buffer & Indexing System (FR)
-│   │   ├── test_limbic_system.py       # Limbic system (FR)
-│   │   ├── test_neuron.py              # Represents a single neuron (FR)
-│   │   ├── test_pulse.py               # ✅ Core Pacemaker (Pulse) (FR)
-│   │   ├── test_trauma_logic.py        # ✅ Hippocampus Trauma Logic (FR)
-│   │   └── test_thalamus.py            # ✅ Enhanced Thalamus implementation (FR)
+│   │   ├── other/
+│   │   │   └── 00_*.png
+│   │   └── test_*.py                   # Comprehensive test suite
+│   ├── tests_fr/
+│   │   └── test_*.py                   # Comprehensive test suite (FR)
 │   ├── config.py                       # ✅ Configuration Module
 │   ├── main.py                         # ✅ The orchestrator
 │   ├── main_fr.py                      # ✅ The orchestrator (FR)
@@ -298,4 +288,4 @@ Processing Hierarchy:
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-15_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-23_
