@@ -81,7 +81,7 @@ aNA v5 Autonomous Neural Architecture
     └── Coordination between Motor Cortex and Sensory Feedback
 
 Computational Engine: Free Energy Principle (FEP)
-aNA v5.3 optimizes prediction accuracy by minimizing the error between sensory reality and internal models. High error triggers the Limbic System to release neuromodulators (Adrenaline/Dopamine) via the Amygdala to force learning.
+aNA v5 optimizes prediction accuracy by minimizing the error between sensory reality and internal models. High error triggers the Limbic System to release neuromodulators (Adrenaline/Dopamine) via the Amygdala to force learning.
 ```
 
 ### 3. Connection Logic (Synapses)
