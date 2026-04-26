@@ -101,7 +101,7 @@ python3 src/tests/test_cortical_column.py
 
 ![ ](/docs/assets/spacer64x64.png)
 
-# 📚 Cognitive Mapping _(The Digital Bridge)_
+# 📒 Cognitive Mapping _(The Digital Bridge)_
 
 ### The Core Engine _(Metabolism & Rhythm)_
 
