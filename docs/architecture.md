@@ -4,8 +4,6 @@
 
 # ✴️*aNA (Autonomous Neural Architecture)* AI Project v5
 
-### 1. 🏗️ High-Level System Architecture
-
 ```
 ░              ░ ░░░▒▒▓▒▓▒▒▒▒▒░░▒▒░▒▒▒▓▒▓▒                                                                     ░ ░
 ▒░░   ░░░░░░░░░░▒▒▓▓▓▓▓▓▓██▓▒▒▒░░░▒▒▒▒▒░░░▒▒▓▓▒                                                         ░░░░░░▒▒▒▒
@@ -16,7 +14,11 @@
 ▓▓▓█████▓░                                    ░░▒▒ _    _    _ ░▒░▒▒▒▓▒▓▒▓▒▓█▓███▒▓▓▓▓▓▓▓▓▓▓▓▓▓█▓██▓▓▓▓▓█▓████████
 ▓███▓▒      AI inspired by natural plasticity  ✴️  a    N    A  ▒▓█▒▓ ▒▓█▒Autonomous Neural Architecture v5.3  ▒▓▓
 ▓░                                                 _    _    _  ░▓▒▓  ░▓
+```
 
+### 1. High-Level System Architecture
+
+```
 aNA v5 Autonomous Neural Architecture
 ├── Configuration (The Temperament)
 ├── Dashboard (Metabolic & Cognitive):
