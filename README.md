@@ -18,9 +18,9 @@
 
 ###### _"The Creation" —Michelangelo_
 
-![Version](https://img.shields.io/badge/version-beta--5.3-orange?style=for-the-badge)
-![Language](https://img.shields.io/badge/language-python--3.x-blue?style=for-the-badge)
-![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)
+![Version](https://img.shields.io/badge/version-beta--5.3-181c1f?style=for-the-badge)
+![Language](https://img.shields.io/badge/language-python--3.x-181c1f?style=for-the-badge)
+![License](https://img.shields.io/badge/license-MIT-181c1f?style=for-the-badge)
 
 > [!NOTE]
 > **Follow the real-time evolution of aNA _AI_** and its journey towards a _100% consistent persona_.
