@@ -18,7 +18,7 @@ English instructions: [installation (en)](/docs/installation.md)
 
 ![ ](/docs/assets/spacer16x16.png)
 
-### 🧪 Exploration pratique
+### Exploration pratique
 
 > **Note :** Bien que le `dashboard_fr.py` et le `main_fr.py` soient actuellement en cours de développement, la _logique neuronale centrale_ est déjà opérationnelle via notre _suite de tests_. Ces _scripts_ vous permettent d'observer en temps réel les interactions fonctionnelles entre les différents _organes numériques_.
 
