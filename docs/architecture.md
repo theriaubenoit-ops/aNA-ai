@@ -16,6 +16,8 @@
 ▓░                                                 _    _    _  ░▓▒▓  ░▓
 ```
 
+###### _"The Creation" —Michelangelo_
+
 ### 1. High-Level System Architecture
 
 ```
