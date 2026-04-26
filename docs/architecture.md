@@ -223,7 +223,7 @@ Processing Hierarchy:
 │   ├── adr/
 │   │   └── adr_*.py                    # ✅ Architecture Decision Records
 │   ├── adr_fr/
-│   │   └── adr_*.py                    # ✅ Architecture Decision Records (FR)
+│   │   └── adr_*.py                    # ✅ Archives de décisions architecturales (FR)
 │   ├── assets/                         # 📋 Medias
 │   ├── examples/                       # 📋 Comprehensive example suite
 │   ├── api-reference.md                # 📋 ...
@@ -268,7 +268,7 @@ Processing Hierarchy:
 │   │   └── pulse.py                    # Core Pacemaker (Pulse)
 │   ├── gui/                            # Web-based interface
 │   │   ├── dashboard.py                # 🚧 Dashboard
-│   │   └── dashboard_fr.py             # 🚧 Dashboard (FR)
+│   │   └── dashboard_fr.py             # 🚧 Tableau de bord (FR)
 │   ├── tests/
 │   │   ├── media_audio/                # ✅ Media audio
 │   │   │   ├── other/
@@ -281,10 +281,10 @@ Processing Hierarchy:
 │   │   │   └── 00_*.png
 │   │   └── test_*.py                   # Comprehensive test suite
 │   ├── tests_fr/
-│   │   └── test_*.py                   # Comprehensive test suite (FR)
+│   │   └── test_*.py                   # Suite de tests complète (FR)
 │   ├── config.py                       # ✅ Configuration Module
 │   ├── main.py                         # ✅ The orchestrator
-│   ├── main_fr.py                      # ✅ The orchestrator (FR)
+│   ├── main_fr.py                      # ✅ L'orchestrateur (FR)
 │   └── registry.py                     # ✅ The Centralized Genome
 ├── CONTRIBUTING.md                     # The rules of collaboration
 ├── LICENSE                             # Protection license
@@ -302,4 +302,4 @@ Processing Hierarchy:
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-23_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-26_
