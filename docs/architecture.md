@@ -2,12 +2,22 @@
 
 ![ ](/docs/assets/spacer16x16.png)
 
-# ✴️*aNA (Autonomous Neural Architecture)* AI Project v5.3
+# ✴️*aNA (Autonomous Neural Architecture)* AI Project v5
 
 ### 1. 🏗️ High-Level System Architecture
 
 ```
-aNA v5.3 Autonomous Neural Architecture
+░              ░ ░░░▒▒▓▒▓▒▒▒▒▒░░▒▒░▒▒▒▓▒▓▒                                                                     ░ ░
+▒░░   ░░░░░░░░░░▒▒▓▓▓▓▓▓▓██▓▒▒▒░░░▒▒▒▒▒░░░▒▒▓▓▒                                                         ░░░░░░▒▒▒▒
+░░░░░░░░░░░░░▒▒▒▓▓▓▓▓▓██████▓▓▒▒▒░░▒▒▓▓▓▒▒▒░░▒▒▒▒▓▒                                        ░ ░░░ ░ ░░░░░░░░░▒▒▒▒▒▒
+▓▒▒▒▒▒▒▒▒▓▒▓▓▓▓▓▓██████▓▒▒ ▒   ▒▓▒▓▒▒▒▒▓▒▓ ██▓▓▓▒▒▒▒▓      ░░▒▒▒▒▒▒▒░░░░░░▒░░░░▒▒░░▒░░░░░░░░░░░░░░░░░▒░▒▒▒░▒▒▒▓▓▓▓
+▒▒▒▒▒▒▒▓▓▓▓▓████▓▓░                 ░░▒▒▒▓█▓░▓▓█▓▓ ░▒▓  ▒▓▓▓▓▓█▓▓▓█▓▒▒▒▓▓▒░░░░▒▓█▓▓▓▓▓▒▓▒▒▒▒▒▒▒░░░░░░░░░░░░░░▒▒▒▒▒
+▒▒▓▒▓▓▓▓█████▓▒                         ░▒▒▓░ ▓██▓                ▒▓▒▒░░▒▓▒░░▒▓███▓█▓▓▓▓▓▓▓▓▓▓▓▒▓▒▒▒▒▒▒▒▒▒▒▓▒▓▓▓▓▓
+▓▓▓█████▓░                                    ░░▒▒ _    _    _ ░▒░▒▒▒▓▒▓▒▓▒▓█▓███▒▓▓▓▓▓▓▓▓▓▓▓▓▓█▓██▓▓▓▓▓█▓████████
+▓███▓▒      AI inspired by natural plasticity  ✴️  a    N    A  ▒▓█▒▓ ▒▓█▒Autonomous Neural Architecture v5.3  ▒▓▓
+▓░                                                 _    _    _  ░▓▒▓  ░▓
+
+aNA v5 Autonomous Neural Architecture
 ├── Configuration (The Temperament)
 ├── Dashboard (Metabolic & Cognitive):
 │   ├── Real-time Neural Stats: Monitors neurotransmitter levels
@@ -19,7 +29,7 @@ aNA v5.3 Autonomous Neural Architecture
 └── Registry (The Genome)
 ```
 
-### 2. ⚡ Processing Unit (Neurons)
+### 2. Processing Unit (Neurons)
 
 ```
 ├── Cerebral Cortex (The "Thinking" Shell, 4 Lobes + 6 Layers)
@@ -70,7 +80,7 @@ Computational Engine: Free Energy Principle (FEP)
 aNA v5.3 optimizes prediction accuracy by minimizing the error between sensory reality and internal models. High error triggers the Limbic System to release neuromodulators (Adrenaline/Dopamine) via the Amygdala to force learning.
 ```
 
-### 3. 🌐 Connection Logic (Synapses)
+### 3. Connection Logic (Synapses)
 
 ```
 Cognitive Loop
@@ -83,7 +93,7 @@ Cognitive Loop
     importance -> The Hippocampus stores it -> The Cortex adapts its logic.
 ```
 
-### 4. 📊 Microcircuitry (Cortical Columns)
+### 4. Microcircuitry (Cortical Columns)
 
 ```
 Cortical Layer Dynamics (Each Lobe contains 6 Cortical Layers)
@@ -95,7 +105,7 @@ Cortical Layer Dynamics (Each Lobe contains 6 Cortical Layers)
 └── Layer VI: Multiform (Thalamic Regulatory Loop - Gain Control)
 ```
 
-### 5. 🧩 Macro-scale Structure (Lobes & Nuclei)
+### 5. Macro-scale Structure (Lobes & Nuclei)
 
 ```
 ├── Frontal Lobe System
@@ -120,7 +130,7 @@ Cortical Layer Dynamics (Each Lobe contains 6 Cortical Layers)
     └── Color and Shape Recognition
 ```
 
-### 6. 🗄️ Memory Systems (Hippocampus, Cortex)
+### 6. Memory Systems (Hippocampus, Cortex)
 
 ```
 ├── Inter-lobar Communication
@@ -138,7 +148,7 @@ Cortical Layer Dynamics (Each Lobe contains 6 Cortical Layers)
     └── Hippocampus ↔ Parietal Lobe (Spatial Memory)
 ```
 
-### 7. 🎛️ Executive Control & Attention (Frontal, Amygdala)
+### 7. Executive Control & Attention (Frontal, Amygdala)
 
 ```
 Dynamic Processing Flow:
@@ -154,7 +164,7 @@ Processing Hierarchy:
 └── Integration Centers → Motor Planning (Frontal Layer V)
 ```
 
-### 8. 🔄 Sensorimotor Loops & Coordination (Parietal, Cerebellum)
+### 8. Sensorimotor Loops & Coordination (Parietal, Cerebellum)
 
 ```
 ├── Occipital Lobe (Posterior “What” and “Where”)
@@ -175,7 +185,7 @@ Processing Hierarchy:
     - Tertiary: Decision Making
 ```
 
-### 9. ⚗️ Neuromodulation (Chemical Gain)
+### 9. Neuromodulation (Chemical Gain)
 
 ```
 ├── NO (Nitric Oxide) -> Volumetric Retrograde Signaling
