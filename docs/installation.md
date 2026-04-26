@@ -18,7 +18,7 @@ Instructions française : [installation (fr)](/docs/installation_fr.md)
 
 ![ ](/docs/assets/spacer16x16.png)
 
-### 🧪 Practical Exploration
+### Practical Exploration
 
 > **Note:** While the `dashboard.py` and `main.py` are currently under active development, the _core neural logic_ is already operational through our _extensive test suite_. These _scripts_ allow you to observe the functional interactions between _digital organs_ in real-time.
 
