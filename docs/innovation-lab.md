@@ -150,7 +150,7 @@ As we move toward **v5.4**, the _Thalamic Hub_ will serve as the foundation for 
 
 ![ ](/docs/assets/spacer32x32.png)
 
-## ✴️ _aNA AI v5.0_ and beyond
+## _✴️aNA AI v5.0_ and beyond
 
 The strength of the **aNA** architecture lies in its departure from traditional static _AI_ models. By implementing bio-inspired mechanisms, we have achieved a system that prioritizes survival and relevance over raw data volume.
 
