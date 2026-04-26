@@ -16,7 +16,7 @@ English instructions: [installation (en)](/docs/installation.md)
 ▓░                                                 _    _    _  ░▓▒▓  ░▓
 ```
 
-###### _"The Creation" —Michelangelo_
+###### _"La creation" —Michelangelo_
 
 1. **Prérequis _(The Environment)_**
    - [ ] Version _Python_ minimale _(ex: 3.10+)_
