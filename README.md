@@ -1,4 +1,4 @@
-🚀 Quick links: [License](/LICENSE), ReadMe, [Installation](/docs/installation.md), [Contributing](/CONTRIBUTING.md), [Innovation-Lab](/docs/innovation-lab.md), [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), [Architecture](/docs/architecture.md)
+🚀 Quick links: ReadMe, [Installation](/docs/installation.md), [Contributing](/CONTRIBUTING.md), [Innovation-Lab](/docs/innovation-lab.md), [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), [Architecture](/docs/architecture.md)
 
 ![ ](/docs/assets/spacer16x16.png)
 
@@ -18,8 +18,8 @@
 
 ###### _"The Creation" —Michelangelo_
 
-![Version](https://img.shields.io/badge/version-beta--5.3-ffd402?style=for-the-badge)
-![Language](https://img.shields.io/badge/language-python--3.x-ffd402?style=for-the-badge)
+<a href="https://github.com/theriaubenoit-ops/aNA-ai" style="text-decoration: none !important;">![Version](https://img.shields.io/badge/version-beta--5.3-ffd402?style=for-the-badge)</a>
+<a href="/docs/beyond-the-code.md" style="text-decoration: none !important;">![Language](https://img.shields.io/badge/language-python--3.x-ffd402?style=for-the-badge)</a>
 <a href="/LICENSE" style="text-decoration: none !important;">![License](https://img.shields.io/badge/license-MIT-ffd402?style=for-the-badge)</a>
 
 > [!NOTE]
@@ -171,7 +171,7 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
 
 ![ ](/docs/assets/spacer16x16.png)
 
-<a href="#start-of-content">Back to top 🔼</a>
+<a href="#start-of-content" style="text-decoration: none !important;">Back to top 🔼</a>
 
 ![ ](/docs/assets/spacer16x16.png)
 
