@@ -128,13 +128,13 @@ His work on how adrenal hormones and the _[amygdala(.py)](/src/anatomy/limbic/am
 
 ![ ](/docs/assets/spacer32x32.png)
 
-### _Technical Glossary_
-
-_**AMPA:** Synaptic receptor responsible for rapid transmission and short-term plasticity. It serves as the gateway for volatile, daily information (working memory)._
-
-_**CA4** (Cornu Ammonis 4): A hippocampal subregion involved in signal distribution. In this project, it acts as a "sanctuary" for Acid Traces, ensuring that vital survival reflexes are never overwritten or erased._
-
-_**NMDA:** A receptor acting as a "coincidence detector." It requires high-saliency signals to activate, allowing critical data to be locked into long-term memory (Long-Term Potentiation)._
+> _**Technical Glossary**_
+> 
+> _**AMPA:** Synaptic receptor responsible for rapid transmission and short-term plasticity. It serves as the gateway for volatile, daily information (working memory)._
+> 
+> _**CA4** (Cornu Ammonis 4): A hippocampal subregion involved in signal distribution. In this project, it acts as a "sanctuary" for Acid Traces, ensuring that vital survival reflexes are never overwritten or erased._
+> 
+> _**NMDA:** A receptor acting as a "coincidence detector." It requires high-saliency signals to activate, allowing critical data to be locked into long-term memory (Long-Term Potentiation)._
 
 ![ ](/docs/assets/spacer16x16.png)
 
