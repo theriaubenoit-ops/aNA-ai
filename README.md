@@ -169,6 +169,16 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
 
 ###### _aNA sharpens digital perception by prioritizing meaningful signals, ensuring a clear and focused cognitive flow._
 
+![ ](/docs/assets/spacer32x32.png)
+
+> _**Technical Glossary**_
+>
+> _**ATP (Adenosine Triphosphate):** In **aNA**, ATP simulates the cell's energy currency. It dictates the system's processing capacity; low levels trigger survival mechanisms such as hypervigilance or mandatory recovery states._
+>
+> _**BPM (Beats Per Minute):** Represents the oscillation frequency of the system's core (pulse.py). Beyond being a simple indicator, it regulates processing speed and emotional responsiveness._
+>
+> _**L1 to L6 (Cortical Layers):** Refers to the six horizontal layers of the biological neocortex.py. Each layer has a specific role (e.g., L4 for sensory input, L6 for feedback to the thalamus.py to manage selective attention)._
+
 ![ ](/docs/assets/spacer16x16.png)
 
 <a href="#start-of-content" style="text-decoration: none;">![Downloads](https://img.shields.io/github/downloads/theriaubenoit-ops/aNA-ai/total?style=for-the-badge&color=181c1f)</a>
