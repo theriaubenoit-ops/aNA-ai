@@ -1,4 +1,4 @@
-🚀 Quick links: [License](/LICENSE), [ReadMe](/README.md), [Installation](/docs/installation.md), [Contributing](/CONTRIBUTING.md), [Innovation-Lab](/docs/innovation-lab.md), [Philosophy](/docs/philosophy.md), Genisis, [Architecture](/docs/architecture.md)
+🚀 Quick links: [ReadMe](/README.md), [Installation](/docs/installation.md), [Contributing](/CONTRIBUTING.md), [Innovation-Lab](/docs/innovation-lab.md), [Philosophy](/docs/philosophy.md), Genisis, [Architecture](/docs/architecture.md)
 
 ![ ](/docs/assets/spacer16x16.png)
 
@@ -87,7 +87,7 @@ Between behavioral _psychology, ethical engineering_, and _neuroinformatics_, hi
 
 ![ ](/docs/assets/spacer16x16.png)
 
-<a href="#start-of-content">Back to top 🔼</a>
+<a href="#start-of-content" style="text-decoration: none !important;">Back to top 🔼</a>
 
 ![ ](/docs/assets/spacer16x16.png)
 
