@@ -1,4 +1,4 @@
-🚀 Quick links: [License](/LICENSE), [ReadMe](/README.md), Installation, [Contributing](/CONTRIBUTING.md), [Innovation-Lab](/docs/innovation-lab.md), [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), [Architecture](/docs/architecture.md)
+🚀 Quick links: [ReadMe](/README.md), Installation, [Contributing](/CONTRIBUTING.md), [Innovation-Lab](/docs/innovation-lab.md), [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), [Architecture](/docs/architecture.md)
 
 Instructions française : [installation (fr)](/docs/installation_fr.md)
 
@@ -69,6 +69,10 @@ Instructions française : [installation (fr)](/docs/installation_fr.md)
 ![ ](/docs/assets/spacer16x16.png)
 
 ###### _\*Each measurement presented is a digital bridge to biological reality, designed to synthesize the fundamental principles of living systems._
+
+![ ](/docs/assets/spacer16x16.png)
+
+<a href="#start-of-content" style="text-decoration: none !important;">Back to top 🔼</a>
 
 ![ ](/docs/assets/spacer16x16.png)
 
