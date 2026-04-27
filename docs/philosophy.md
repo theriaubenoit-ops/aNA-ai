@@ -122,8 +122,6 @@ The engine of our learning network. _"Neurons that fire together, wire together"
 **Emotional Memory Modulation** _—[James McGaugh](https://en.wikipedia.org/wiki/James_McGaugh)_:
 His work on how adrenal hormones and the _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ modulate memory consolidation is the foundation of our _"Acid Trace"_ logic. We implement this by allowing the _Amygdala_ to bypass standard decay for high-saliency events.
 
-![ ](/docs/assets/spacer16x16.png)
-
 ###### _\*This project is an interpretation of established science, psychology, and philosophy, while remaining in constant motion toward future discoveries. I do not claim biological exactitude; rather, I hold a profound desire to propose new theories to inspire the next generations of AI. My goal is to foster systems that are better utilized and more responsive to the complex challenges of our time, using digital bridges to synthesize the fundamental principles of living systems._
 
 ![ ](/docs/assets/spacer32x32.png)
