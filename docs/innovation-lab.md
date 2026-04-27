@@ -81,7 +81,7 @@ As we move toward **v5.4**, the _Thalamic Hub_ will serve as the foundation for 
 
 ###### _Each character “Unicode Wide” as a raw sensory stimulus._
 
-![ ](/docs/assets/spacer64x64.png)
+![ ](/docs/assets/spacer32x32.png)
 
 ### v5.2: Predictive Awakening _(Anticipation)_
 
@@ -148,7 +148,7 @@ As we move toward **v5.4**, the _Thalamic Hub_ will serve as the foundation for 
 
 ☄️ _Spotlight_
 
-![ ](/docs/assets/spacer32x32.png)
+![ ](/docs/assets/spacer64x64.png)
 
 # _✴️aNA AI v5.0_ and beyond
 
