@@ -72,7 +72,7 @@ English instructions: [installation (en)](/docs/installation.md)
 
 ![ ](/docs/assets/spacer16x16.png)
 
-<a href="#start-of-content" style="text-decoration: none !important;">Retour en haut 🔼</a>
+<a href="#start-of-content" style="text-decoration: none;">Retour en haut 🔼</a>
 
 ![ ](/docs/assets/spacer16x16.png)
 
