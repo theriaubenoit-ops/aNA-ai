@@ -1,4 +1,4 @@
-🚀 Quick links: [License](/LICENSE), [ReadMe](/README.md), [Installation](/docs/installation.md), Contributing, [Innovation-Lab](/docs/innovation-lab.md), [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), [Architecture](/docs/architecture.md)
+🚀 Quick links: [ReadMe](/README.md), [Installation](/docs/installation.md), Contributing, [Innovation-Lab](/docs/innovation-lab.md), [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), [Architecture](/docs/architecture.md)
 
 ![ ](/docs/assets/spacer16x16.png)
 
@@ -175,7 +175,7 @@ _**L1 to L6 (Cortical Layers):** Refers to the six horizontal layers of the biol
 
 ![ ](/docs/assets/spacer16x16.png)
 
-<a href="#start-of-content">Back to top 🔼</a>
+<a href="#start-of-content" style="text-decoration: none !important;">Back to top 🔼</a>
 
 ![ ](/docs/assets/spacer16x16.png)
 
