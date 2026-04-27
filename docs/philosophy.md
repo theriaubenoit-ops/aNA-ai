@@ -138,7 +138,7 @@ His work on how adrenal hormones and the _[amygdala(.py)](/src/anatomy/limbic/am
 
 ![ ](/docs/assets/spacer16x16.png)
 
-<a href="#start-of-content" style="text-decoration: none !important;">Back to top 🔼</a>
+<a href="#start-of-content" style="text-decoration: none;">Back to top 🔼</a>
 
 ![ ](/docs/assets/spacer16x16.png)
 
