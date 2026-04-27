@@ -20,7 +20,7 @@
 
 ![Version](https://img.shields.io/badge/version-beta--5.3-ffd402?style=for-the-badge)
 ![Language](https://img.shields.io/badge/language-python--3.x-ffd402?style=for-the-badge)
-![License](https://img.shields.io/badge/license-MIT-ffd402?style=for-the-badge)
+<a href="/LICENSE" style="text-decoration: none !important;">![License](https://img.shields.io/badge/license-MIT-ffd402?style=for-the-badge)</a>
 
 > [!NOTE]
 > **Follow the real-time evolution of aNA _AI_** and its journey towards a _100% consistent persona_.
@@ -177,4 +177,4 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
 
 ![Downloads](https://img.shields.io/github/downloads/theriaubenoit-ops/aNA-ai/total?style=for-the-badge&color=181c1f)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-17_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-26_
