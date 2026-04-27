@@ -1,4 +1,4 @@
-🚀 Quick links: [License](/LICENSE), [ReadMe](/README.md), [Installation](/docs/installation.md), [Contributing](/CONTRIBUTING.md), [Innovation-Lab](/docs/innovation-lab.md), [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), Architecture
+🚀 Quick links: [ReadMe](/README.md), [Installation](/docs/installation.md), [Contributing](/CONTRIBUTING.md), [Innovation-Lab](/docs/innovation-lab.md), [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), Architecture
 
 ![ ](/docs/assets/spacer16x16.png)
 
@@ -298,7 +298,7 @@ Processing Hierarchy:
 
 ![ ](/docs/assets/spacer16x16.png)
 
-<a href="#start-of-content">Back to top 🔼</a>
+<a href="#start-of-content" style="text-decoration: none !important;">Back to top 🔼</a>
 
 ![ ](/docs/assets/spacer16x16.png)
 
