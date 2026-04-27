@@ -1,4 +1,4 @@
-🚀 Quick links: [License](/LICENSE), [ReadMe](/README.md), Installation, [Contributing](/CONTRIBUTING.md), [Innovation-Lab](/docs/innovation-lab.md), [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), [Architecture](/docs/architecture.md)
+🚀 Quick links: [ReadMe](/README.md), Installation, [Contributing](/CONTRIBUTING.md), [Innovation-Lab](/docs/innovation-lab.md), [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), [Architecture](/docs/architecture.md)
 
 English instructions: [installation (en)](/docs/installation.md)
 
@@ -69,6 +69,10 @@ English instructions: [installation (en)](/docs/installation.md)
 ![ ](/docs/assets/spacer16x16.png)
 
 ###### _\*Chaque mesure présentée ici est un pont numérique vers la réalité biologique, conçu pour synthétiser les principes fondamentaux des systèmes vivants._
+
+![ ](/docs/assets/spacer16x16.png)
+
+<a href="#start-of-content" style="text-decoration: none !important;">Retour en haut 🔼</a>
 
 ![ ](/docs/assets/spacer16x16.png)
 
