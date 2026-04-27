@@ -171,7 +171,7 @@ The **aNA** AI project is _a leap toward the future of organic computation_. Ali
 >
 > _**CA4** (Cornu Ammonis 4): A hippocampal subregion involved in signal distribution. In this project, it acts as a "sanctuary" for Acid Traces, ensuring that vital survival reflexes are never overwritten or erased._
 >
-> > _**L1 to L6 (Cortical Layers):** Refers to the six horizontal layers of the biological neocortex.py. Each layer has a specific role (e.g., L4 for sensory input, L6 for feedback to the thalamus.py to manage selective attention)._
+> _**L1 to L6 (Cortical Layers):** Refers to the six horizontal layers of the biological neocortex.py. Each layer has a specific role (e.g., L4 for sensory input, L6 for feedback to the thalamus.py to manage selective attention)._
 
 ![ ](/docs/assets/spacer16x16.png)
 
