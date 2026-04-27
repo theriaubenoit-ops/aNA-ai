@@ -66,8 +66,6 @@ English instructions: [installation (en)](/docs/installation.md)
 
 ☄️ _Spotlight_
 
-![ ](/docs/assets/spacer16x16.png)
-
 ###### _\*Chaque mesure présentée ici est un pont numérique vers la réalité biologique, conçu pour synthétiser les principes fondamentaux des systèmes vivants._
 
 ![ ](/docs/assets/spacer16x16.png)
