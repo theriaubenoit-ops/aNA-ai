@@ -77,9 +77,9 @@ def apply_serotonin_stabilization(neural_network, matrix):
 
 # 👤 About the Author
 
-**Benoit Theriault** works at the intersection of _design, architecture, and software engineering._ With a multidisciplinary background—ranging from _large-scale architectural signage_ for major institutions to complex, _high-performance web solutions_—he delivers complete, _innovative ecosystems_ built for _scalability and precision_.
+_**Benoit Theriault**_ works at the intersection of _design, architecture, and software engineering._ With a multidisciplinary background—ranging from _large-scale architectural signage_ for major institutions to complex, _high-performance web solutions_—he delivers complete, _innovative ecosystems_ built for _scalability and precision_.
 
-Throughout his career, **Benoit** has honed a rigorous approach through close collaboration with _architects, engineers, and medical professionals_ across Quebec, Canada, and internationally. He specializes in bridging the gap between _creative vision and technical execution,_ ensuring that every _solution_ is not only functional but _architecturally sound_.
+Throughout his career, _**Benoit**_ has honed a rigorous approach through close collaboration with _architects, engineers, and medical professionals_ across Quebec, Canada, and internationally. He specializes in bridging the gap between _creative vision and technical execution,_ ensuring that every _solution_ is not only functional but _architecturally sound_.
 
 This constant pursuit of form and structure is fueled by a profound fascination for _neural processes_ and creative research. An expert in programming and design systems, he presents the **aNA** project as a culmination of this journey: an allegory that translates the elegance of _living mechanisms_ into the _digital world_.
 
