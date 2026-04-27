@@ -20,7 +20,7 @@
 
 <a href="https://github.com/theriaubenoit-ops/aNA-ai/" title="Be sure to download the latest version" style="text-decoration: none;">![Version](https://img.shields.io/badge/version-beta--5.3-ffd402?style=for-the-badge)</a>
 <a href="/docs/beyond-the-code.md" title="Beyond the code" style="text-decoration: none;">![Language](https://img.shields.io/badge/language-python--3.x-ffd402?style=for-the-badge)</a>
-<a href="/LICENSE" title="License" style="text-decoration: none;">![License](https://img.shields.io/badge/license-MIT-ffd402?style=for-the-badge)</a>
+<a href="/LICENSE" title="License information" style="text-decoration: none;">![License](https://img.shields.io/badge/license-MIT-ffd402?style=for-the-badge)</a>
 
 > [!NOTE]
 > **Follow the real-time evolution of aNA _AI_** and its journey towards a _100% consistent persona_.
