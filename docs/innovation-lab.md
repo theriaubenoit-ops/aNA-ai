@@ -193,19 +193,19 @@ The strength of the **aNA** architecture lies in its departure from traditional 
 
 ![ ](/docs/assets/spacer32x32.png)
 
-### _Technical Glossary_
-
-_**AMPA:** Synaptic receptor responsible for rapid transmission and short-term plasticity. It serves as the gateway for volatile, daily information (working memory)._
-
-_**ATP (Adenosine Triphosphate):** In **aNA**, ATP simulates the cell's energy currency. It dictates the system's processing capacity; low levels trigger survival mechanisms such as hypervigilance or mandatory recovery states._
-
-_**BPM (Beats Per Minute):** Represents the oscillation frequency of the system's core (pulse.py). Beyond being a simple indicator, it regulates processing speed and emotional responsiveness._
-
-_**CA4** (Cornu Ammonis 4): A hippocampal subregion involved in signal distribution. In this project, it acts as a "sanctuary" for Acid Traces, ensuring that vital survival reflexes are never overwritten or erased._
-
-_**L1 to L6 (Cortical Layers):** Refers to the six horizontal layers of the biological neocortex.py. Each layer has a specific role (e.g., L4 for sensory input, L6 for feedback to the thalamus.py to manage selective attention)._
-
-_**NMDA:** A receptor acting as a "coincidence detector." It requires high-saliency signals to activate, allowing critical data to be locked into long-term memory (Long-Term Potentiation)._
+> _**Technical Glossary**_
+>
+> _**AMPA:** Synaptic receptor responsible for rapid transmission and short-term plasticity. It serves as the gateway for volatile, daily information (working memory)._
+>
+> _**ATP (Adenosine Triphosphate):** In **aNA**, ATP simulates the cell's energy currency. It dictates the system's processing capacity; low levels trigger survival mechanisms such as hypervigilance or mandatory recovery states._
+>
+> _**BPM (Beats Per Minute):** Represents the oscillation frequency of the system's core (pulse.py). Beyond being a simple indicator, it regulates processing speed and emotional responsiveness._
+>
+> _**CA4** (Cornu Ammonis 4): A hippocampal subregion involved in signal distribution. In this project, it acts as a "sanctuary" for Acid Traces, ensuring that vital survival reflexes are never overwritten or erased._
+>
+> _**L1 to L6 (Cortical Layers):** Refers to the six horizontal layers of the biological neocortex.py. Each layer has a specific role (e.g., L4 for sensory input, L6 for feedback to the thalamus.py to manage selective attention)._
+>
+> _**NMDA:** A receptor acting as a "coincidence detector." It requires high-saliency signals to activate, allowing critical data to be locked into long-term memory (Long-Term Potentiation)._
 
 ![ ](/docs/assets/spacer16x16.png)
 
