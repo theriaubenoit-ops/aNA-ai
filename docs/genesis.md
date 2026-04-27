@@ -87,7 +87,7 @@ Between behavioral _psychology, ethical engineering_, and _neuroinformatics_, hi
 
 ![ ](/docs/assets/spacer16x16.png)
 
-<a href="#start-of-content" style="text-decoration: none !important;">Back to top 🔼</a>
+<a href="#start-of-content" style="text-decoration: none;">Back to top 🔼</a>
 
 ![ ](/docs/assets/spacer16x16.png)
 
