@@ -5,7 +5,7 @@ Hippocampus implementation for aNA AI Project v5.3
 
 Communicates with: Input: (<- Cortex / Amygdala) | Output: (-> Thalamus) (-> Cortical Storage)
 
-This module implements the Hippocampus with its subfields (DG, CA1-CA4) for memory encoding, consolidation, and retrieval. It includes mechanisms for synaptic plasticity (LTP/LTD), emotional modulation of memory strength, and a novel "CA4" subfield for long-term trace stabilization.
+Description: This module implements the Hippocampus with its subfields (DG, CA1-CA4) for memory encoding, consolidation, and retrieval. It includes mechanisms for synaptic plasticity (LTP/LTD), emotional modulation of memory strength, and a novel "CA4" subfield for long-term trace stabilization.
 
 Architecture, concept and supervision: Benoit Theriault
 Collaboration, research and code: Gemini, Cline
@@ -16,9 +16,9 @@ import sys
 import os
 import numpy as np
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../..')))
-from src.config import get_config
-from src.registry import ORGANS
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
+from config import get_config
+from registry import ORGANS
 
 class Hippocampus:
     def __init__(self, config=None, neuromodulator_core=None):
