@@ -245,7 +245,7 @@ Processing Hierarchy:
 │   │   │   └── neuromodulator.py       # Chemical "gain controls"
 │   │   ├── cortical/
 │   │   │   ├── frontal.py              # 🔶 Executive Logic & Command Center
-│   │   │   ├── cortical_column.py      # 🔶 Vertical organization of 6 cortical layers
+│   │   │   ├── cortical_column.py      # Vertical organization of 6 cortical layers
 │   │   │   ├── neocortex.py            # 🔶 The structural integration of the 4 Lobes
 │   │   │   ├── occipital.py            # 🔶 Visual Stream Processor
 │   │   │   ├── parietal.py             # 🔶 Spatial Mapping & Data Integration
@@ -253,7 +253,7 @@ Processing Hierarchy:
 │   │   ├── limbic/
 │   │   │   ├── amygdala.py             # Priority Filter & Interrupt Controller
 │   │   │   ├── hippocampus.py          # Dynamic Buffer & Indexing System
-│   │   │   └── limbic_system.py        # 🔶 Limbic system
+│   │   │   └── limbic_system.py        # 🔶 Emotional and mnestic hub
 │   │   ├── perceptual/                 # 📋 ...
 │   │   │   └── glyph_renderer.py       # 📋 Visual Word Form Area
 │   │   └── subcortical
