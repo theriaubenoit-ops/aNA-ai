@@ -40,9 +40,13 @@ The **aNA** _(v5.3) architecture_ is built on the principle of _biological sobri
 - **Minimal Memory Footprint:** No need for clusters or _64GB of RAM_. **aNA** is designed to run natively on modest hardware, from _Kubuntu LTS_ and _MacBook M1_ to _standard everyday laptops_.
 - **Ultra-Low Latency:** By optimizing the code to reside within the _CPU_ cache, the simulation achieves synaptic response times as low as _~0.0860s_.
 
+![ ](/docs/assets/spacer16x16.png)
+
 > ## "_Intelligence_ does not reside in the quantity of _transistors mobilized_, but in the _accuracy_ of the _information flow_."
 >
 > _—Benoit Theriault_
+
+![ ](/docs/assets/spacer16x16.png)
 
 ### Dynamic Cognitive Architecture
 
@@ -70,8 +74,6 @@ We are embarking on the _"next wave"_ of artificial intelligence—an AI that do
 
 To witness **aNA** v5.0's neural processing in real-time, you can run the integrated _[tests(/)](/src/tests/)_ suites. These simulations demonstrate how sensory data is transformed into emotional importance and cortical action.
 
-![ ](/docs/assets/spacer16x16.png)
-
 ### 1. Limbic Resonance _(Test)_
 
 This demo simulates how the _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ and _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_ collaborate to filter critical information from routine noise.
@@ -85,8 +87,6 @@ python3 src/tests/test_limbic_system.py
 
 - **Routine Scenario:** Low arousal levels _(Cortisol/Adrenaline)_ leading to standard memory encoding.
 - **Shock Scenario:** High arousal triggering a _"System Breach"_ alert and prioritized memory storage.
-
-![ ](/docs/assets/spacer16x16.png)
 
 ### 2. [Cortical Column(.py)](/src/anatomy/cortical/cortical_column.py) Cascade _(Test)_
 
@@ -171,7 +171,7 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
 
 ![ ](/docs/assets/spacer32x32.png)
 
-> _**Technical Glossary**_
+> **_Technical Glossary_**
 >
 > _**ATP (Adenosine Triphosphate):** In **aNA**, ATP simulates the cell's energy currency. It dictates the system's processing capacity; low levels trigger survival mechanisms such as hypervigilance or mandatory recovery states._
 >
@@ -189,4 +189,4 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-26_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-28_
