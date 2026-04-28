@@ -52,6 +52,7 @@ English instructions: [installation (en)](/docs/installation.md)
      - `python3 src/tests_fr/test_limbic_system.py` _(Intégration émotionnelle et cognitive)_
      - ☄️ `python3 src/tests_fr/test_hippocampus.py` _(Consolidation synaptique et encodage de motifs)_
      - ☄️ `python3 src/tests/test_hippocampus_ampa_nmda.py` _(Mémoire à court terme et à long terme)_
+     - ☄️ `python3 src/tests/test_neocortex.py` _(Valide l'intégration (4 lobes) du néocortex)_
      - `python3 src/tests_fr/test_neuron.py` _(Dynamique métabolique et électrophysiologique)_
      - `python3 src/tests_fr/test_pulse.py` _(Oscillations neuronales et synchronisation temporelle)_
      - ☄️ `python3 src/tests_fr/test_thalamus.py` _(Filtrage sensoriel et signal routage)_
@@ -74,4 +75,4 @@ English instructions: [installation (en)](/docs/installation.md)
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-26_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-28_

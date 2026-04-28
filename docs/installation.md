@@ -52,6 +52,7 @@ Instructions française : [installation (fr)](/docs/installation_fr.md)
      - `python3 src/tests/test_limbic_system.py` _(Emotional-Cognitive Integration)_
      - ☄️ `python3 src/tests/test_hippocampus.py` _(Synaptic Consolidation & Pattern Encoding)_
      - ☄️ `python3 src/tests/test_hippocampus_ampa_nmda.py` _(Short-term and Long-term memory)_
+     - ☄️ `python3 src/tests/test_neocortex.py` _(Validates the integration (4 lobes) of the Neocortex)_
      - `python3 src/tests/test_neuron.py` _(Metabolic & Electrophysiological Dynamics)_
      - `python3 src/tests/test_pulse.py` _(Neural Oscillations & Temporal Sync)_
      - ☄️ `python3 src/tests/test_thalamus.py` _(Sensory Gating & Signal Routing)_
@@ -74,4 +75,4 @@ Instructions française : [installation (fr)](/docs/installation_fr.md)
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-26_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-28_
