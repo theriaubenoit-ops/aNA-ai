@@ -29,7 +29,16 @@ Collaboration, research and code: Gemini
 # --- PERSONALITY HYPERPARAMETERS / HYPER-PARAMÈTRES DE PERSONNALITÉ (FR) ---
 # AMYGDALA_SENSITIVITY = 0.5       # Amygdala Sensitivity Min: 0.1 (unperturbed) Max: 2.0 (hyper-reactive) / Sensibilité de l'amygdale 
 ADRENALINE_RELEASE_FACTOR = 0.4    # Adrenaline Release Factor Min: 0.1 (calm) Max: 1.0 (explosive) / Facteur de libération d'adrénaline 
+# ACH_ATTENTION_MULTIPLIER = 1.5     # Acetylcholine Attention Multiplier Min: 0.5 (distracted) Max: 2.0 (hyper-focused) / Multiplicateur d'attention à l'acétylcholine
+# ATTENTION_MIN_GAIN = 0.01          # Minimum attention gain Min: 0.01 (distracted) Max: 0.10 (always attentive) / Gain d'attention minimum
+# L23_EFFICIENCY = 0.85              # Layer II/III Efficiency Min: 0.1 (inefficient) Max: 0.99 (ultra-efficient) / Efficacité des couches II/III (intégration corticale)
+# L4_EFFICIENCY = 0.90               # Layer IV Efficiency Min: 0.1 (inefficient) Max: 0.99 (ultra-efficient) / Efficacité de la couche IV (réception thalamique)
+# L5_EFFICIENCY = 0.85               # Layer V Efficiency Min: 0.1 (inefficient) Max: 0.99 (ultra-efficient) / Efficacité de la couche V (commande motrice)
+# L6_EFFICIENCY = 0.80               # Layer VI Efficiency Min: 0.1 (inefficient) Max: 0.99 (ultra-efficient) / Efficacité de la couche VI (rétroaction corticale)
 # L6_GAIN = 0.8                      # Cortical Brake Strength Min: 0.0 (no brake) Max: 2.0 (total inhibition) / Force du frein cortical 
+TRAUMA_NORA_THRESHOLD = 0.6        # Trauma Threshold for Noradrenaline Min: 0.1 (low trauma) Max: 0.9 (high trauma) / Seuil de traumatisme pour la noradrénaline
+FLASH_MYELIN_BOOST = 0.05          # Myelin boost during flash engraving Min: 0.01 (subtle) Max: 0.10 (dramatic) / Boost de myéline lors de la gravure flash
+BIOLOGICAL_ACCURACY_TARGET = 0.65  # Target for biological realism (0.0 to 1.0) Min: 0.0 (abstract) Max: 1.0 (fully biological) / Cible pour le réalisme biologique (0.0 à 1.0)
 
 # --- HEART CONFIGURATION & METABOLISM / CONFIGURATION DU CŒUR & MÉTABOLISME (FR) ---
 BASE_BPM = 65.0                    # Cruising Heart Rate Min: 60.0 (deep sleep) Max: 100.0 (alert) / Rythme de croisière 
@@ -91,6 +100,12 @@ SENSORY_WEIGHTS = {                # AVERAGE HUMAN (visual priority) Total: 1.0 
 # Maximum neuroplasticity, optimal stress management and thalamic focus.
 # """
 AMYGDALA_SENSITIVITY      = 0.5
+ACH_ATTENTION_MULTIPLIER  = 1.5
+ATTENTION_MIN_GAIN        = 0.01
+L23_EFFICIENCY            = 0.85
+L4_EFFICIENCY             = 0.90
+L5_EFFICIENCY             = 0.85
+L6_EFFICIENCY             = 0.80
 L6_GAIN                   = 0.8
 SYNAPTIC_PLASTICITY       = 0.05
 MYELIN_RATE               = 0.04
@@ -106,33 +121,45 @@ NOISE_LEVEL               = 0.01
 # --- OPTION B: AVERAGE HUMAN (Standard Baseline) ---
 # The default values tested.
 """
-AMYGDALA_SENSITIVITY      = 1.0   
-L6_GAIN                   = 0.5    
-SYNAPTIC_PLASTICITY       = 0.01  
-MYELIN_RATE               = 0.03  
-MYELIN_EFFICIENCY_COEFF   = 1.5    
-CORTICAL_RESONANCE_FACTOR = 0.6   
-THALAMIC_THRESHOLD        = 0.15  
-THRESHOLD_NMDA            = 0.4    
-ATP_CRITICAL_THRESHOLD    = 0.20  
-ATP_CONSUMPTION           = 0.003  
-NOISE_LEVEL               = 0.02   
+AMYGDALA_SENSITIVITY      = 1.0
+ACH_ATTENTION_MULTIPLIER  = 1.0
+ATTENTION_MIN_GAIN        = 0.01
+L23_EFFICIENCY            = 0.85
+L4_EFFICIENCY             = 0.85
+L5_EFFICIENCY             = 0.85
+L6_EFFICIENCY             = 0.80
+L6_GAIN                   = 0.5
+SYNAPTIC_PLASTICITY       = 0.01
+MYELIN_RATE               = 0.03
+MYELIN_EFFICIENCY_COEFF   = 1.5
+CORTICAL_RESONANCE_FACTOR = 0.6
+THALAMIC_THRESHOLD        = 0.15
+THRESHOLD_NMDA            = 0.4
+ATP_CRITICAL_THRESHOLD    = 0.20
+ATP_CONSUMPTION           = 0.003
+NOISE_LEVEL               = 0.02
 """
 
 # --- OPTION C: TIRED/SATURATED HUMAN (Saturated & Exhausted) ---
 # Low ATP, emotional hyper-reactivity, and encoding difficulty.
 """
-AMYGDALA_SENSITIVITY      = 1.8    
-L6_GAIN                   = 0.2    
-SYNAPTIC_PLASTICITY       = 0.002  
-MYELIN_RATE               = 0.01   
-MYELIN_EFFICIENCY_COEFF   = 1.0    
-CORTICAL_RESONANCE_FACTOR = 0.2    
-THALAMIC_THRESHOLD        = 0.15  
-THRESHOLD_NMDA            = 0.9    
-ATP_CRITICAL_THRESHOLD    = 0.30   
-ATP_CONSUMPTION           = 0.005 
-NOISE_LEVEL               = 0.08   
+AMYGDALA_SENSITIVITY      = 1.8
+ACH_ATTENTION_MULTIPLIER  = 0.5
+ATTENTION_MIN_GAIN        = 0.05
+L23_EFFICIENCY            = 0.80
+L4_EFFICIENCY             = 0.80
+L5_EFFICIENCY             = 0.80
+L6_EFFICIENCY             = 0.80
+L6_GAIN                   = 0.2
+SYNAPTIC_PLASTICITY       = 0.002
+MYELIN_RATE               = 0.01
+MYELIN_EFFICIENCY_COEFF   = 1.0
+CORTICAL_RESONANCE_FACTOR = 0.2
+THALAMIC_THRESHOLD        = 0.15
+THRESHOLD_NMDA            = 0.9
+ATP_CRITICAL_THRESHOLD    = 0.30
+ATP_CONSUMPTION           = 0.005
+NOISE_LEVEL               = 0.08
 """
 
 
@@ -143,7 +170,15 @@ def get_config():
     return {
         "AMYGDALA_SENSITIVITY": AMYGDALA_SENSITIVITY,
         "ADRENALINE_RELEASE_FACTOR": ADRENALINE_RELEASE_FACTOR,
+        "ACH_ATTENTION_MULTIPLIER": ACH_ATTENTION_MULTIPLIER,
+        "L23_EFFICIENCY": L23_EFFICIENCY,
+        "L4_EFFICIENCY": L4_EFFICIENCY,
+        "L5_EFFICIENCY": L5_EFFICIENCY,
+        "L6_EFFICIENCY": L6_EFFICIENCY,
         "L6_GAIN": L6_GAIN,
+        "TRAUMA_NORA_THRESHOLD": TRAUMA_NORA_THRESHOLD,
+        "FLASH_MYELIN_BOOST": FLASH_MYELIN_BOOST,
+        "BIOLOGICAL_ACCURACY_TARGET": BIOLOGICAL_ACCURACY_TARGET,
         "BASE_BPM": BASE_BPM,
         "MAX_BPM": MAX_BPM,   
         "BRADYCARDIA_BPM": BRADYCARDIA_BPM,   
