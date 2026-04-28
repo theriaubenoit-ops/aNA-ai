@@ -20,6 +20,7 @@ from PIL import Image
 # Path management for local imports
 sys.path.append(os.path.abspath(os.path.dirname(__file__)))
 from config import get_config
+from registry import ORGANS
 from core.input_haptic import InputHapticGateway 
 from core.input_auditory import InputAuditoryGateway
 from core.input_visual import InputVisualGateway
