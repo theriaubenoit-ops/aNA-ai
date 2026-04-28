@@ -76,28 +76,28 @@ To witness **aNA** v5.0's neural processing in real-time, you can run the integr
 
 ### 1. Limbic Resonance _(Test)_
 
-    This demo simulates how the _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ and _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_ collaborate to filter critical information from routine noise.
+This demo simulates how the _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ and _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_ collaborate to filter critical information from routine noise.
 
-    ```Python
-    # From the project root
-    python3 src/tests/test_limbic_system.py
-    ```
+```Python
+# From the project root
+python3 src/tests/test_limbic_system.py
+```
 
-    #### What to look for in the output:
+#### What to look for in the output:
 
-    - **Routine Scenario:** Low arousal levels _(Cortisol/Adrenaline)_ leading to standard memory encoding.
-    - **Shock Scenario:** High arousal triggering a _"System Breach"_ alert and prioritized memory storage.
+- **Routine Scenario:** Low arousal levels _(Cortisol/Adrenaline)_ leading to standard memory encoding.
+- **Shock Scenario:** High arousal triggering a _"System Breach"_ alert and prioritized memory storage.
 
 ### 2. [Cortical Column(.py)](/src/anatomy/cortical/cortical_column.py) Cascade _(Test)_
 
-    Validation of the _6-layer_ signal flow (L4 → L2/3 → L5) with real-time precision monitoring.
+Validation of the _6-layer_ signal flow (L4 → L2/3 → L5) with real-time precision monitoring.
 
-    - **The L6 Feedback Loop _([cortical_column(.py)](/src/anatomy/cortical/cortical_column.py) Layer 6)_** This is what allows the _[neocortex(.py)](/src/anatomy/cortical/neocortex.py)_ to _“say”_ to the _[thalamus(.py)](/src/anatomy/subcortical/thalamus.py)_: _“I recognized this signal, you can lower the volume (gain)”_. This is the basis of the selective attention.
+- **The L6 Feedback Loop _([cortical_column(.py)](/src/anatomy/cortical/cortical_column.py) Layer 6)_** This is what allows the _[neocortex(.py)](/src/anatomy/cortical/neocortex.py)_ to _“say”_ to the _[thalamus(.py)](/src/anatomy/subcortical/thalamus.py)_: _“I recognized this signal, you can lower the volume (gain)”_. This is the basis of the selective attention.
 
-    ```Python
-    # From the project root
-    python3 src/tests/test_cortical_column.py
-    ```
+```Python
+# From the project root
+python3 src/tests/test_cortical_column.py
+```
 
 ![ ](/docs/assets/spacer64x64.png)
 
