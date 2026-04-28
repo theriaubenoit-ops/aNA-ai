@@ -71,11 +71,11 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
     """
     thalamus = Thalamus(position)
 
-    # ✅ Enhancing sensory focus for a clearer cognitive flow
+    # ☑️ Enhancing sensory focus for a clearer cognitive flow
     thalamus.nuclei[ThalamicNucleusType.LGN].config.size = 800   # Optimized Vision
     thalamus.nuclei[ThalamicNucleusType.MGN].config.size = 600   # Optimized Hearing
 
-    print("✅ Thalamic Gateway initialized: System is ready for focused interaction.")
+    print("☑️ Thalamic Gateway initialized: System is ready for focused interaction.")
     return thalamus
 ```
 
@@ -122,8 +122,8 @@ def test_integration():
     prediction = "B"  # Success! The system anticipated the pattern
 
     if prediction == reality:
-        print("✅ Perfect prediction: aNA is in harmony with reality.")
-        print("✅ Integration successful: Pattern reinforced and ready for long-term storage.")
+        print("☑️ Perfect prediction: aNA is in harmony with reality.")
+        print("☑️ Integration successful: Pattern reinforced and ready for long-term storage.")
         return True
 ```
 
