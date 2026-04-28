@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Neuron implementation for aNA AI Project v5.3b - The fundamental unit of the aNA architecture
+Neuron implementation for aNA AI Project v5.3 - The fundamental unit of the aNA architecture
 
 Communicates with: Input: (<- Synapses) | Output: (-> Axon / Post-synaptic targets)
 
-This class represents a single neuron with:
+Description: This class represents a single neuron with:
 - 3D spatial positioning and relationships
 - Electrical charge dynamics and firing behavior
 - Power consumption and energy management
@@ -19,7 +19,12 @@ Collaboration, research and code: Gemini, GPT
 import numpy as np
 from typing import Tuple, Optional, Dict, Any
 from dataclasses import dataclass
+import os
+import sys
 
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
+from config import get_config
+from registry import ORGANS
 
 @dataclass
 class NeuronConfig:
