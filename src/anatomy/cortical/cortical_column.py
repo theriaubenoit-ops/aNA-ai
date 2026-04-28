@@ -49,8 +49,9 @@ class LayerI:
         self.trauma_impact = 0.0 # Noradrénaline
     
     def integrate_neuromodulators(self, neuromodulators, recognition_score=0.0):
+        config = get_config()
         ach = neuromodulators.get('acetylcholine', 0.0) if isinstance(neuromodulators, dict) else neuromodulators
-        
+
         base_boost = ach * config.get('ACH_ATTENTION_MULTIPLIER', 1.5)
         novelty_factor = 1.0 - recognition_score
         
@@ -70,6 +71,7 @@ class LayerIV:
     """
     
     def __init__(self):
+        config = get_config()
         self.config = LayerConfig(
             efficiency= config.get('L4_EFFICIENCY', 0.90),
             name="Layer IV",
@@ -106,6 +108,7 @@ class LayerII_III:
     """
     
     def __init__(self):
+        config = get_config()
         self.config = LayerConfig(
             efficiency=config.get('L23_EFFICIENCY', 0.85),
             name="Layer II/III",
@@ -153,6 +156,7 @@ class LayerV:
     """
     
     def __init__(self):
+        config = get_config()
         self.config = LayerConfig(
             efficiency=config.get('L5_EFFICIENCY', 0.85),
             name="Layer V",
@@ -188,6 +192,7 @@ class LayerVI:
     """
     
     def __init__(self):
+        config = get_config()
         self.config = LayerConfig(
             efficiency=config.get('L6_EFFICIENCY', 0.80),
             name="Layer VI",
@@ -303,6 +308,7 @@ class CorticalLobe:
     
     def get_precision_monitoring(self) -> Dict[str, Any]:
         """Get precision monitoring data for dashboard"""
+        config = get_config()
         return {
             'signal_flow': {
                 'input': self.layer4.input_activity,
@@ -407,6 +413,7 @@ class CorticalColumns:
         """
         Traitement : Cascade L4 -> L2/3 -> L5 avec modulation chimique.
         """
+        config = get_config()
         if neuromodulators:
             self.layer1.integrate_neuromodulators(neuromodulators)
         
