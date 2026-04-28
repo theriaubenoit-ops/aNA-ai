@@ -8,32 +8,64 @@ Input: (<- Thalamus L4) (<- Hippocampus)
 Input/Output: (<-> Cortical Columns) (<-> Limbic System)
 Output: (-> Thalamus L6 Feedback) (-> Motor Control / Cerebellum)
 
-This module represents the high-level cognitive engine of aNA. It manages the distribution of sensory data across specialized Cortical Columns, facilitating the L4->L2/3->L6 processing cascade. By generating downward feedback from Layer 6 to the Thalamus, the Neocortex actively modulates sensory gain and attentional focus. It integrates long-term structural plasticity and myelination logic to optimize signal conductivity based on recognition patterns.
+Description: This module is responsible for the hierarchical processing of sensory information and the generation of complex internal representations. It consists of multiple lobes (Occipital, Temporal, Parietal, Frontal) each containing specialized cortical columns that process different types of information. The Neocortex receives input from the Thalamus and Hippocampus, integrates it with the internal World Model, and produces outputs that influence both perception and action. It also provides feedback to the Thalamus to regulate sensory processing based on the current state of the organism.
 
 Architecture, concept and supervision: Benoit Theriault
 Collaboration, research and code: Gemini, Cline 
 """
-
+import os
+import sys
 import asyncio
 import numpy as np
 from typing import Dict, Any
 
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
+from registry import ORGANS
 from anatomy.cortical.occipital import OccipitalLobe
 from anatomy.cortical.temporal import TemporalLobe
 from anatomy.cortical.parietal import ParietalLobe
 from anatomy.cortical.frontal import FrontalLobe
+from anatomy.cortical.cortical_column import (
+    create_visual_cortical_lobe, 
+    create_motor_cortical_lobe, 
+    create_associative_cortical_lobe
+)
 
 class Neocortex:
     def __init__(self, chemical_core):
         self.chemical_core = chemical_core
         
-        # Initialisation des lobes (Chacun avec son propre σ et sa spécialité)
-        self.occipital = OccipitalLobe() 
-        self.temporal = TemporalLobe()   
-        self.parietal = ParietalLobe()   
-        self.frontal = FrontalLobe()
+        # --- INITIALISATION BASÉE SUR LE REGISTRE ---
+        # On s'assure que le dictionnaire d'instances existe dans le registre central
+        if "INSTANCES" not in ORGANS["NEOCORTEX"]:
+            ORGANS["NEOCORTEX"]["INSTANCES"] = {}
+
+        # Création et enregistrement
+        self.occipital = create_visual_cortical_lobe(np.array([0,0,0]))
+        ORGANS["NEOCORTEX"]["INSTANCES"]["V1"] = self.occipital
+
+        # 1. Création dynamique des lobes selon le "Génome" (registry.py)
+        for lobe_name in ORGANS["NEOCORTEX"]["LOBES"]:
+            pos = np.array([0, 0, 0]) # Position de base
+            
+            if lobe_name == "OCCIPITAL":
+                self.occipital = create_visual_cortical_lobe(pos)
+                ORGANS["NEOCORTEX"]["INSTANCES"]["V1"] = self.occipital
+                
+            elif lobe_name == "TEMPORAL":
+                self.temporal = TemporalLobe() # Votre classe spécialisée
+                ORGANS["NEOCORTEX"]["INSTANCES"]["TEMPORAL"] = self.temporal
+                
+            elif lobe_name == "PARIETAL":
+                self.parietal = ParietalLobe()
+                ORGANS["NEOCORTEX"]["INSTANCES"]["PARIETAL"] = self.parietal
+                
+            elif lobe_name == "FRONTAL":
+                self.frontal = FrontalLobe()
+                ORGANS["NEOCORTEX"]["INSTANCES"]["FRONTAL"] = self.frontal
         
         self.l6_feedback = 0.5 
+        print(f"🧬 Neocortex configured via registry: {list(ORGANS['NEOCORTEX']['INSTANCES'].keys())}")
 
     async def process_thalamic_input(self, payload: dict) -> dict:
         """

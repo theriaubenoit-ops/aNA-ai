@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Temporal Lobe implementation for aNA AI Project v5.3b
+Temporal Lobe implementation for aNA AI Project v5.3
 
 Communicates with: Input: (<- Thalamus) | Input/Output: (<-> Other Cortical Areas) | Output: (-> Motor / Pre-frontal)
 
-This module implements the Temporal Lobe with its key regions (IT, Wernicke) for semantic processing and memory integration. It integrates with the ChemicalCore for neuromodulatory influences, particularly acetylcholine (Attention) and serotonin (Perception Stabilization). The Temporal Lobe fuses visual and spatial information to recognize objects and provides feedback to the Frontal Lobe for action planning.
+Description: This module implements the Temporal Lobe with its key regions (IT, Wernicke) for semantic processing and memory integration. It integrates with the ChemicalCore for neuromodulatory influences, particularly acetylcholine (Attention) and serotonin (Perception Stabilization). The Temporal Lobe fuses visual and spatial information to recognize objects and provides feedback to the Frontal Lobe for action planning.
 
 Architecture, concept and supervision: Benoit Theriault
 Collaboration, research and code: Gemini, Cline 
@@ -13,6 +13,10 @@ Collaboration, research and code: Gemini, Cline
 
 import asyncio
 import numpy as np
+import os
+import sys
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 from typing import Dict, Any
 from anatomy.cortical.cortical_column import CorticalColumns
 

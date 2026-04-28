@@ -25,11 +25,10 @@ import os
 from typing import Dict, Any, Optional
 from dataclasses import dataclass
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../..')))
-from src.config import get_config
-from src.registry import ORGANS
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
+from config import get_config
+from registry import ORGANS
 from anatomy.base.neuron import Neuron, NeuronConfig 
-
 
 @dataclass
 class LayerConfig:
@@ -216,7 +215,7 @@ class LayerVI:
         return self.feedback_signal
 
 
-class CorticalLobe:
+class CorticalLobe: # La classe de base
     """
     Base class for all cortical lobes with 6-layer architecture.
     
@@ -229,7 +228,7 @@ class CorticalLobe:
     - Memory access port preparation
     - Biological efficiency cascades
     """
-    
+
     def __init__(self, position: np.ndarray):
         self.position = position
         
@@ -262,6 +261,12 @@ class CorticalLobe:
         Returns:
             Final output signal after all layers
         """
+
+        # The signal must be a scalar value processed by the thalamus. If it's not, we return a default value (0.0) to avoid errors in processing.
+        if not isinstance(input_signal, (int, float)):
+            # Logique de repli ou erreur si le format n'est pas respecté
+            return 0.0
+    
         # Step 1: Layer I - Neuromodulator integration and attention boost
         self.attention_boost = self.layer1.integrate_neuromodulators(
             neuromodulators, 
@@ -362,7 +367,7 @@ class CorticalLobe:
         self.layer6.feedback_signal = 0.0
 
 
-class CorticalColumns:
+class CorticalColumns(CorticalLobe):
     """
     Specialized cortical lobe for visual processing.
     
