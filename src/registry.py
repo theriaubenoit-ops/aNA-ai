@@ -52,6 +52,7 @@ ORGANS = {
     },
     "NEOCORTEX": { # The Neocortex, through its layered architecture, refines the sensory input and integrates it with the internal model, allowing for recognition and learning.
         "LOBES": ["OCCIPITAL", "TEMPORAL", "PARIETAL", "FRONTAL"], # Each lobe has a specific role in processing different types of information (visual, auditory, somatosensory, executive functions).
+        "INSTANCES": {}, # This will hold the instantiated cortical columns for each lobe, allowing for modular growth and specialization.
         "LAYERS": ["L1", "L2", "L3", "L4", "L5", "L6"], # The layers of the cortex, each with distinct connectivity and functions, are crucial for the hierarchical processing of information and the generation of predictions.
         "UNIT": "CORTICAL_COLUMN", # The fundamental processing unit of the Neocortex is the Cortical Column, which contains a microcircuitry of neurons 
         "NEURONS_PER_COLUMN": 1000, # Each cortical column contains neurons, which is a simplified representation of the complex microcircuitry found in the biological cortex.
