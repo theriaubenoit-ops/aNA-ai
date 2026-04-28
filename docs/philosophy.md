@@ -72,7 +72,7 @@ def consolidate_memory(self):
     """Transforms temporary experiences into long-term knowledge."""
     if self.count >= self.L2_TO_L3_THRESHOLD:
         self.move_to_long_term_storage()
-        print("✅ Pattern reinforced: Transformation complete.")
+        print("☑️ Pattern reinforced: Transformation complete.")
 ```
 
 ###### _In alignment with Lavoisier, every bit of data in aNA is a resource that evolves and strengthens the system’s function._
@@ -127,11 +127,11 @@ His work on how adrenal hormones and the _[amygdala(.py)](/src/anatomy/limbic/am
 ![ ](/docs/assets/spacer32x32.png)
 
 > _**Technical Glossary**_
-> 
+>
 > _**AMPA:** Synaptic receptor responsible for rapid transmission and short-term plasticity. It serves as the gateway for volatile, daily information (working memory)._
-> 
+>
 > _**CA4** (Cornu Ammonis 4): A hippocampal subregion involved in signal distribution. In this project, it acts as a "sanctuary" for Acid Traces, ensuring that vital survival reflexes are never overwritten or erased._
-> 
+>
 > _**NMDA:** A receptor acting as a "coincidence detector." It requires high-saliency signals to activate, allowing critical data to be locked into long-term memory (Long-Term Potentiation)._
 
 ![ ](/docs/assets/spacer16x16.png)
@@ -140,4 +140,4 @@ His work on how adrenal hormones and the _[amygdala(.py)](/src/anatomy/limbic/am
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-19_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-28_
