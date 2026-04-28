@@ -226,18 +226,18 @@ Processing Hierarchy:
 │   │   └── adr_*.py                    # 🔶 Archives de décisions architecturales (FR)
 │   ├── assets/                         # 📋 Medias
 │   ├── examples/                       # 📋 Comprehensive example suite
-│   ├── api-reference.md                # 📋 ...
+│   ├── api-reference.md                # 📋 API reference
 │   ├── architecture.md                 # The technical plan
 │   ├── genesis.md                      # The story of the project
 │   ├── innovation-lab.md               # Innovation (Creation Lab)
 │   ├── installation.md                 # Installation
 │   ├── installation_fr.md              # Installation (FR)
-│   ├── legend.md                       # 📋 ...
+│   ├── legend.md                       # 📋 Legend
 │   └── philosophy.md                   # The ethical vision
 ├── examples/                           # Comprehensive example suite
-│   ├── basic-demo.html                 # 📋 ...
-│   ├── learning-demo.html              # 📋 ...
-│   └── memory-demo.html                # 📋 ...
+│   ├── basic-demo.html                 # 📋 Basic example
+│   ├── learning-demo.html              # 📋 Learning example
+│   └── memory-demo.html                # 📋 Memory exemple
 ├── src/
 │   ├── anatomy/                        # Brain region implementations
 │   │   ├── base/
@@ -254,7 +254,7 @@ Processing Hierarchy:
 │   │   │   ├── amygdala.py             # Priority Filter & Interrupt Controller
 │   │   │   ├── hippocampus.py          # Dynamic Buffer & Indexing System
 │   │   │   └── limbic_system.py        # 🔶 Emotional and mnestic hub
-│   │   ├── perceptual/                 # 📋 ...
+│   │   ├── perceptual/                 # 📋 Perceptual
 │   │   │   └── glyph_renderer.py       # 📋 Visual Word Form Area
 │   │   └── subcortical
 │   │       ├── cerebellum.py           # Timing Engine & Output Calibration
@@ -302,4 +302,4 @@ Processing Hierarchy:
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-26_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-28_
