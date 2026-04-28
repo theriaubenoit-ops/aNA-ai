@@ -3,8 +3,6 @@
 """
 Thalamic Hub (Multimodal Sensory Integrator) for aNA AI Project v5.3
 
-Description: Centralizes and filters all sensory inputs before cortical projection.
-
 Communicates with:
 Input: (<- InputGateways: Visual, Auditory, Haptic)
 Input: (<- Hippocampus: Pattern Completion/Recall)
@@ -12,6 +10,8 @@ Input: (<- Amygdala: Emotional Saliency/Urgency)
 Input/Output: (<-> Cortical Columns: Feedback L6 / Feedforward L4)
 Output: (-> Thalamus Core: BPM & Metabolic modulation)
 Output: (-> Neuromodulator: Synaptic Gain & Plasticity)
+
+Description: Centralizes and filters all sensory inputs before cortical projection. The Thalamic Hub applies dynamic attention filters based on the current metabolic state and the saliency of incoming signals. It synchronizes sensory processing with the internal Pulse (BPM) to optimize energy efficiency and ensure that critical information is prioritized. By modulating the gain of sensory inputs, it plays a crucial role in shaping the organism's perception and interaction with its environment.
 
 Architecture, concept and supervision: Benoit Theriault
 Collaboration, research and code: Gemini
@@ -23,11 +23,11 @@ import asyncio
 from typing import Dict, Any
 
 # Alignement du path
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../..')))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 
 # from src.registry import SIGNALS, ORGANS
-from src.config import get_config
-from src.registry import ORGANS
+from config import get_config
+from registry import ORGANS
 
 class ThalamicHub:
     def __init__(self, thalamus_core):

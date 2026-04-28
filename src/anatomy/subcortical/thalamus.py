@@ -11,7 +11,7 @@ Input/Output: (<-> Cortical Columns L4/L6: Direct metabolic feedback)
 Output: (-> Pulse/BPM: Heart rate frequency modulation)
 Output: (-> Neuromodulator: Global chemical gain & ATP management)
 
-This module implements the Thalamus as the central sensory relay and rhythmic pacemaker of aNA. It orchestrates the flow between subcortical structures and the Neocortex, specifically managing the L4 excitation and L6 feedback loops. It integrates with the ChemicalCore to modulate signal gain based on arousal and directs the Pulse (BPM) frequency, ensuring the organism maintains homeostatic stability during stimulus processing.
+Description: This module implements the Thalamus as the central sensory relay and rhythmic pacemaker of aNA. It orchestrates the flow between subcortical structures and the Neocortex, specifically managing the L4 excitation and L6 feedback loops. It integrates with the ChemicalCore to modulate signal gain based on arousal and directs the Pulse (BPM) frequency, ensuring the organism maintains homeostatic stability during stimulus processing.
 
 Architecture, concept and supervision: Benoit Theriault
 Collaboration, research and code: Gemini, Cline
@@ -23,12 +23,12 @@ import asyncio
 from typing import Dict, Any
 
 # Alignement du path
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../..')))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 
 # from src.registry import SIGNALS, ORGANS
-from src.anatomy.cortical.cortical_column import SimplifiedCorticalColumn
-from src.config import get_config
-from src.registry import ORGANS
+from anatomy.cortical.cortical_column import SimplifiedCorticalColumn
+from config import get_config
+from registry import ORGANS
 
 class Thalamus:
     def __init__(self, hippocampus, pulse, neuromodulator_core):
