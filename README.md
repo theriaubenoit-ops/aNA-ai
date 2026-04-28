@@ -38,7 +38,7 @@ The **aNA** _(v5.3) architecture_ is built on the principle of _biological sobri
 
 - **Featherweight _(< 1 MB)_:** The entire neural organism—including the _[thalamic hub(.py)](/src/anatomy/subcortical/thalamic_hub.py)_, _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_, and _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_ is smaller than a single _high-resolution_ photo.
 - **Minimal Memory Footprint:** No need for clusters or _64GB of RAM_. **aNA** is designed to run natively on modest hardware, from _Kubuntu LTS_ and _MacBook M1_ to _standard everyday laptops_.
-- **Ultra-Low Latency:** By optimizing the code to reside within the _CPU_ cache, the simulation achieves synaptic response times as low as _~0.0860s_.
+- **Ultra-Low Latency:** By optimizing the code to reside within the _CPU_ cache, the simulation achieves synaptic response times as low as _~0.0790s_.
 
 ![ ](/docs/assets/spacer16x16.png)
 
