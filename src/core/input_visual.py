@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Input Visual Gateway implementation (Specialized in Matrix processing, Ratios and Foveal Zoom) for aNA AI Project v5.3b
+Input Visual Gateway implementation (Specialized in Matrix processing, Ratios and Foveal Zoom) for aNA AI Project v5.3
 
 Communicates with: Input: External (Visual) | Output: (-> Thalamus (CGL)) (-> Occipital Lobe (V1))
 

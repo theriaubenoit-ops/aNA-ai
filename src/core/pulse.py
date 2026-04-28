@@ -5,7 +5,7 @@ Pulse implementation for aNA AI Project v5.3
 
 Communicates with: Input: (<- Thalamus) (<- Amygdala) | Output: (-> Global Metabolism / BPM)
 
-This module simulates the heart's pulse as a dynamic entity influenced by both internal metabolic states and external stimuli. It calculates the current BPM based on a base rate, modulated by dopamine levels (excitement) and ATP levels (fatigue). The module also manages a refractory state to prevent overstimulation, ensuring a more biologically plausible response to inputs.
+Description: This module simulates the heart's pulse as a dynamic entity influenced by both internal metabolic states and external stimuli. It calculates the current BPM based on a base rate, modulated by dopamine levels (excitement) and ATP levels (fatigue). The module also manages a refractory state to prevent overstimulation, ensuring a more biologically plausible response to inputs.
 
 Architecture, concept and supervision: Benoit Theriault
 Collaboration, research and code: Gemini
@@ -15,10 +15,10 @@ import time
 import sys
 import os
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 # from src.registry import METABOLISM
-from src.config import get_config
-from src.registry import ORGANS
+from config import get_config
+from registry import ORGANS
 
 class Pulse:
     def __init__(self, bpm=None):

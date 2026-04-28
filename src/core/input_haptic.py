@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Input Haptic Gateway implementation for aNA AI Project v5.3b
+Input Haptic Gateway implementation for aNA AI Project v5.3
 
 Communicates with: Input: External (Haptic) | Output: (-> Thalamus (VPL)) (-> Cortical Columns)
 
