@@ -129,6 +129,9 @@ class ThalamicHub:
         # 2. Transmission au Thalamus Core pour modulation du BPM
         # Le Core va traiter le signal et ajuster le rythme cardiaque (Pulse)
         result = await self.core.process_payload(payload, l6_feedback=0.5)
+        # On injecte l'intensité calculée (filtrée) dans le résultat pour le Neocortex
+        result['intensity'] = effective_intensity
+        result['gain'] = thalamic_gain
         
         # 3. Mise à jour du buffer pour projection corticale
         self.sensory_buffers[target_nucleus] = payload
