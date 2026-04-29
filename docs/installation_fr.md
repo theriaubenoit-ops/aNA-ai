@@ -46,9 +46,9 @@ English instructions: [installation (en)](/docs/installation.md)
      - PROCHAINEMENT - `python3 src/gui/dashboard_fr.py`
      - ☄️ `python3 src/main_fr.py` _(Noyau cortical et espace de travail global)_
      - `python3 src/tests_fr/test_amygdala.py` _(Réponse homéostatique au stress et à l'alerte)_
-     - ☄️ `python3 src/tests_fr/test_autonomy.py` _(Pour valider les comportements autonomes)_
      - `python3 src/tests_fr/test_cerebellum.py` _(Précision motrice et correction d'erreurs)_
      - ☄️ `python3 src/tests_fr/test_cortical_column.py` _(Flux de signal cortical à six couches)_
+     - ☄️ `python3 src/tests_fr/test_hub_autonomy.py` _(Pour valider les comportements autonomes)_
      - `python3 src/tests_fr/test_limbic_system.py` _(Intégration émotionnelle et cognitive)_
      - ☄️ `python3 src/tests_fr/test_hippocampus.py` _(Consolidation synaptique et encodage de motifs)_
      - ☄️ `python3 src/tests/test_hippocampus_ampa_nmda.py` _(Mémoire à court terme et à long terme)_
