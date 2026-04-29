@@ -60,8 +60,8 @@ async def main():
 
     # 1. Engine initialization
     config = get_config()
-    neuromod_core = Neuromodulator()
-    hippo = Hippocampus(config=config, neuromodulator_core=neuromod_core)
+    chemical_core = Neuromodulator()
+    hippo = Hippocampus(config=config, neuromodulator_core=chemical_core)
     heart = Pulse(bpm=config.get("BASE_BPM", 72.0))
     
     # Sensory Gateways
@@ -76,7 +76,7 @@ async def main():
     thalamus = Thalamus(
         hippocampus=hippo, 
         pulse=heart, 
-        neuromodulator_core=neuromod_core 
+        neuromodulator_core=chemical_core 
     )
     hub = ThalamicHub(thalamus_core=thalamus) # Centralisation multimodal v5.3
     
