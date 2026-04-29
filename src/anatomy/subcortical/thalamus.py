@@ -26,9 +26,9 @@ from typing import Dict, Any
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 
 # from src.registry import SIGNALS, ORGANS
-from anatomy.cortical.cortical_column import SimplifiedCorticalColumn
 from config import get_config
 from registry import ORGANS
+from anatomy.cortical.cortical_column import SimplifiedCorticalColumn
 
 class Thalamus:
     def __init__(self, hippocampus, pulse, neuromodulator_core):
