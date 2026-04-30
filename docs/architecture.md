@@ -242,7 +242,8 @@ Processing Hierarchy:
 │   ├── anatomy/                        # Brain region implementations
 │   │   ├── base/
 │   │   │   ├── neuron.py               # Represents a single neuron
-│   │   │   └── neuromodulator.py       # Chemical "gain controls"
+│   │   │   ├── neuromodulator.py       # Chemical "gain controls"
+│   │   │   └── striatum.py             # 📋 The Action Selector
 │   │   ├── cortical/
 │   │   │   ├── frontal.py              # 🔶 Executive Logic & Command Center
 │   │   │   ├── cortical_column.py      # Vertical organization of 6 cortical layers
@@ -302,4 +303,4 @@ Processing Hierarchy:
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-28_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-30_
