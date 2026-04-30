@@ -224,7 +224,7 @@ Processing Hierarchy:
 │   │   └── adr_*.py                    # 🔶 Architecture Decision Records
 │   ├── adr_fr/
 │   │   └── adr_*.py                    # 🔶 Archives de décisions architecturales (FR)
-│   ├── assets/                         # 📋 Medias
+│   ├── assets/                         # Medias
 │   ├── examples/                       # 📋 Comprehensive example suite
 │   ├── api-reference.md                # 📋 API reference
 │   ├── architecture.md                 # The technical plan
