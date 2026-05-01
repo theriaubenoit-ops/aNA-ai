@@ -232,6 +232,7 @@ Processing Hierarchy:
 │   ├── innovation-lab.md               # Innovation (Creation Lab)
 │   ├── installation.md                 # Installation
 │   ├── installation_fr.md              # Installation (FR)
+│   ├── installation_2.md               # Installation 2
 │   ├── legend.md                       # 📋 Legend
 │   └── philosophy.md                   # The ethical vision
 ├── examples/                           # Comprehensive example suite
@@ -243,7 +244,7 @@ Processing Hierarchy:
 │   │   ├── base/
 │   │   │   ├── neuron.py               # Represents a single neuron
 │   │   │   ├── neuromodulator.py       # Chemical "gain controls"
-│   │   │   └── striatum.py             # 📋 The Action Selector
+│   │   │   └── striatum.py             # 🚧 The Action Selector
 │   │   ├── cortical/
 │   │   │   ├── frontal.py              # 🔶 Executive Logic & Command Center
 │   │   │   ├── cortical_column.py      # Vertical organization of 6 cortical layers
@@ -303,4 +304,4 @@ Processing Hierarchy:
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-30_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-01_
