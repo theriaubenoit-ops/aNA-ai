@@ -30,8 +30,6 @@ Before jumping into OS-specific guides, ensure you have the following ready:
 - **Python 3.10+** : You had the free core engine.
 - **Virtual Environment Knowledge** : Strictly use `venv` to protect your system's integrity.
 
-![ ](/docs/assets/spacer16x16.png)
-
 ### Notions de base _(Terminal)_
 
 Here are the universal commands you will use to navigate:
@@ -40,11 +38,15 @@ Here are the universal commands you will use to navigate:
 - **`cd ..`**: Return to parent's folder.
 - **`ls`** _(Mac/Linux)_ or **`dir`** _(Windows)_: List the files present.
 
+![ ](/docs/assets/spacer32x32.png)
+
 ## Choose your OS
 
 Please select the guide corresponding to your operating system:
 
-### 🪟 Windows _(PC)_
+![ ](/docs/assets/spacer32x32.png)
+
+# 🪟 Windows _(PC)_
 
 Pour une expérience optimale, utilisez **PowerShell** ou **Git Bash**.
 
@@ -67,9 +69,9 @@ Pour une expérience optimale, utilisez **PowerShell** ou **Git Bash**.
 
   [Continued ▶️](/docs/installation_2.md)
 
-![ ](/docs/assets/spacer16x16.png)
+![ ](/docs/assets/spacer32x32.png)
 
-### 🐧 Linux _(Ubuntu/Debian)_
+# 🐧 Linux _(Ubuntu/Debian)_
 
 Installing on Linux often requires updating system packages first.
 
@@ -90,9 +92,9 @@ Installing on Linux often requires updating system packages first.
 
   [Continued ▶️](/docs/installation_2.md)
 
-![ ](/docs/assets/spacer16x16.png)
+![ ](/docs/assets/spacer32x32.png)
 
-### 🍏 macOS _(Apple)_
+# 🍏 macOS _(Apple)_
 
 Sur Mac, l'utilisation du terminal est fluide, mais nécessite parfois des permissions administratives.
 
@@ -119,7 +121,7 @@ Sur Mac, l'utilisation du terminal est fluide, mais nécessite parfois des permi
 
   > **Note :** If you have a permission error, use `sudo pip install...` _(your password will be requested, but it will not be displayed while typing)_.
 
-![ ](/docs/assets/spacer16x16.png)
+![ ](/docs/assets/spacer32x32.png)
 
 ## Quick Verification
 
