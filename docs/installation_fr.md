@@ -40,6 +40,8 @@ Here are the universal commands you will use to navigate:
 - **`cd ..`**: Return to parent's folder.
 - **`ls`** _(Mac/Linux)_ or **`dir`** _(Windows)_: List the files present.
 
+![ ](/docs/assets/spacer16x16.png)
+
 ## Consultez votre système d'exploitation
 
 Veuillez consulter le guide correspondant à votre système d'exploitation :
