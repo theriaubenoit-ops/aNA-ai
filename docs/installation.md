@@ -53,7 +53,7 @@ Pour une expérience optimale, utilisez **PowerShell** ou **Git Bash**.
 - **Installation of Python** : Téléchargez-le via le Microsoft Store ou python.org. **Important :** Cochez la case _"Add Python to PATH"_ lors de l'installation.
 - **Clonage** :
   ```powershell
-  git clone `https://github.com/theriaubenoit-ops/aNA-ai.git`
+  git clone https://github.com/theriaubenoit-ops/aNA-ai.git
   cd aNA-ai
   ```
 - **Virtual Environment** :
@@ -83,7 +83,7 @@ Installing on Linux often requires updating system packages first.
 - **Installation** :
 
   ```bash
-  git clone `https://github.com/theriaubenoit-ops/aNA-ai.git`
+  git clone https://github.com/theriaubenoit-ops/aNA-ai.git
   cd aNA-ai
   python3 -m venv venv
   source venv/bin/activate
@@ -102,7 +102,7 @@ Sur Mac, l'utilisation du terminal est fluide, mais nécessite parfois des permi
 - **Install Python**: Check with `python3 --version`. If it's not there, download it from _python.org_.
 - **Clone & Folder**:
   ```bash
-  git clone `https://github.com/theriaubenoit-ops/aNA-ai.git`
+  git clone https://github.com/theriaubenoit-ops/aNA-ai.git
   cd aNA-ai
   ```
 - **Virtual Environment** :
