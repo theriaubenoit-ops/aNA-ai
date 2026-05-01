@@ -46,7 +46,7 @@ Veuillez consulter le guide correspondant à votre système d'exploitation :
 
 ![ ](/docs/assets/spacer32x32.png)
 
-### 🪟 Windows _(PC)_
+# 🪟 Windows _(PC)_
 
 Pour une expérience optimale, utilisez **PowerShell** ou **Git Bash**.
 
@@ -71,7 +71,7 @@ Pour une expérience optimale, utilisez **PowerShell** ou **Git Bash**.
 
 ![ ](/docs/assets/spacer32x32.png)
 
-### 🐧 Linux _(Ubuntu/Debian)_
+# 🐧 Linux _(Ubuntu/Debian)_
 
 L'installation sur Linux nécessite souvent de mettre à jour les paquets système d'abord.
 
@@ -94,7 +94,7 @@ L'installation sur Linux nécessite souvent de mettre à jour les paquets systè
 
 ![ ](/docs/assets/spacer32x32.png)
 
-### 🍏 macOS _(Apple)_
+# 🍏 macOS _(Apple)_
 
 Sur Mac, l'utilisation du terminal est fluide, mais nécessite parfois des permissions administratives.
 
