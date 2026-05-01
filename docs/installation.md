@@ -2,7 +2,7 @@
 
 Instructions française : [installation (fr)](/docs/installation_fr.md)
 
-# Installation and Usage: ✴️*aNA* AI Project v5
+# Installation and Usage: ✴️*aNA* AI Project
 
 ```
 ░              ░ ░░░▒▒▓▒▓▒▒▒▒▒░░▒▒░▒▒▒▓▒▓▒                                                                     ░ ░
@@ -18,56 +18,121 @@ Instructions française : [installation (fr)](/docs/installation_fr.md)
 
 ###### _"The Creation" —Michelangelo_
 
-1. **Prerequisites _(The Environment)_**
-   - [ ] Minimum _Python_ version _(e.g., 3.10+)_
-   - [ ] Base dependencies _(e.g., `pip install -r requirements.txt`)_
-   - [ ] Recommended tools _(e.g., `venv` or `conda` for environment isolation)_
+## Multi-Platform Installation Guide
 
-2. **Installation _(e.g., Terminal, Zsh, Konsole or Git Bash)_**
-   - [ ] Clone the repository: `git clone https://github.com/theriaubenoit-ops/aNA-ai.git`
-   - [ ] Create the environment: `python -m venv venv && source venv/bin/activate`
-   - [ ] Install dependencies: `pip install -r requirements.txt`
+To ensure optimal configuration of _aNA IA_'s neural architecture, this section helps you to configure its environment according to your system.
 
-![ ](/docs/assets/spacer16x16.png)
+### Common First Steps
 
-### Practical Exploration
+Before jumping into OS-specific guides, ensure you have the following ready:
 
-> **Note:** While the `dashboard.py` and `main.py` are currently under active development, the _core neural logic_ is already operational through our _extensive test suite_. These _scripts_ allow you to observe the functional interactions between _digital organs_ in real-time.
+- **Git** : Be sure to clone _[aNA-ai.git](https://github.com/theriaubenoit-ops/aNA-ai.git)_.
+- **Python 3.10+** : You had the free core engine.
+- **Virtual Environment Knowledge** : Strictly use `venv` to protect your system's integrity.
 
 ![ ](/docs/assets/spacer16x16.png)
 
-![img](/docs/assets/test_256x256.gif)
+### Notions de base _(Terminal)_
 
-###### _Find many test files in `src/tests/`_
+Here are the universal commands you will use to navigate:
+
+- **`cd <folder_name>`**: Enter a folder _(e.g.,`cd aNA-ai`)_.
+- **`cd ..`**: Return to parent's folder.
+- **`ls`** _(Mac/Linux)_ or **`dir`** _(Windows)_: List the files present.
+
+## Choose your OS
+
+Please select the guide corresponding to your operating system:
+
+### 🪟 Windows _(PC)_
+
+Pour une expérience optimale, utilisez **PowerShell** ou **Git Bash**.
+
+- **Installation of Python** : Téléchargez-le via le Microsoft Store ou python.org. **Important :** Cochez la case _"Add Python to PATH"_ lors de l'installation.
+- **Clonage** :
+  ```powershell
+  git clone `https://github.com/theriaubenoit-ops/aNA-ai.git`
+  cd aNA-ai
+  ```
+- **Virtual Environment** :
+  ```powershell
+  python -m venv venv
+  .\venv\Scripts\activate
+  ```
+- **Dependencies** :
+
+  ```powershell
+  pip install -r requirements.txt
+  ```
+
+  [Continued ▶️](/docs/installation_2.md)
 
 ![ ](/docs/assets/spacer16x16.png)
 
-3. - [x] **Running Scripts _(The "Action" Phase)_** Launch associated _Python scripts_ to validate neural logic:
-     - COMING SOON - `python3 src/gui/dashboard.py`
-     - ☄️ `python3 src/main.py` _(Cortical Core & Global Workspace)_
-     - `python3 src/tests/test_amygdala.py` _(Homeostatic Stress & Alert Response)_
-     - `python3 src/tests/test_cerebellum.py` _(Motor Precision & Error Correction)_
-     - ☄️ `python3 src/tests/test_cortical_column.py` _(Six-layer cortical signal flow)_
-     - ☄️ `python3 src/tests/test_hub_autonomy.py` _(To validate the autonomous behaviors)_
-     - `python3 src/tests/test_limbic_system.py` _(Emotional-Cognitive Integration)_
-     - ☄️ `python3 src/tests/test_hippocampus.py` _(Synaptic Consolidation & Pattern Encoding)_
-     - ☄️ `python3 src/tests/test_hippocampus_ampa_nmda.py` _(Short-term and Long-term memory)_
-     - ☄️ `python3 src/tests/test_neocortex.py` _(Validates the integration (4 lobes) of the Neocortex)_
-     - `python3 src/tests/test_neuron.py` _(Metabolic & Electrophysiological Dynamics)_
-     - `python3 src/tests/test_pulse.py` _(Neural Oscillations & Temporal Sync)_
-     - ☄️ `python3 src/tests/test_thalamus.py` _(Sensory Gating & Signal Routing)_
-     - ☄️ `python3 src/tests/test_trauma_logic.py` _(Emotional Saliency & Acid Traces)_
-   - [ ] COMING SOON - Running Demonstrations: Launch _Web-based interfaces_ (e.g., "http://localhost:8000/examples/basic-demo.html").
-     - Note on local server: To run web demos, use `python3 -m http.server 8000` from the root directory.
+### 🐧 Linux _(Ubuntu/Debian)_
 
-4. **Contributing and Communicating _(GitHub Workflow)_**
-   - [ ] Issues: "Open an issue for any questions or bug reports."
-   - [ ] Pull Requests: "Submit your improvements for neurons or modules."
-   - [ ] Discussions: "Use **GitHub** Discussions to exchange ideas on the model's behavioral psychology or simply to share how our code has inspired you."
+Installing on Linux often requires updating system packages first.
 
-☄️ _Spotlight_
+- **Update & Prerequisites** :
+  ```bash
+  sudo apt update
+  sudo apt install python3-venv python3-pip git
+  ```
+- **Installation** :
 
-###### _\*Each measurement presented is a digital bridge to biological reality, designed to synthesize the fundamental principles of living systems._
+  ```bash
+  git clone `https://github.com/theriaubenoit-ops/aNA-ai.git`
+  cd aNA-ai
+  python3 -m venv venv
+  source venv/bin/activate
+  pip install -r requirements.txt
+  ```
+
+  [Continued ▶️](/docs/installation_2.md)
+
+![ ](/docs/assets/spacer16x16.png)
+
+### 🍏 macOS _(Apple)_
+
+Sur Mac, l'utilisation du terminal est fluide, mais nécessite parfois des permissions administratives.
+
+- **Open the Terminal**: Press `Cmd + Space` and type "Terminal".
+- **Install Python**: Check with `python3 --version`. If it's not there, download it from _python.org_.
+- **Clone & Folder**:
+  ```bash
+  git clone `https://github.com/theriaubenoit-ops/aNA-ai.git`
+  cd aNA-ai
+  ```
+- **Virtual Environment** :
+  ```bash
+  python3 -m venv venv
+  source venv/bin/activate
+  ```
+- **Dependencies** :
+
+  ```bash
+  pip install --upgrade pip
+  pip install -r requirements.txt
+  ```
+
+  [Continued ▶️](/docs/installation_2.md)
+
+  > **Note :** If you have a permission error, use `sudo pip install...` _(your password will be requested, but it will not be displayed while typing)_.
+
+![ ](/docs/assets/spacer16x16.png)
+
+## Quick Verification
+
+Once installed, you can verify the "heartbeat" of the project by running a basic neuron test from your terminal:
+`python3 src/tests/test_neuron.py`
+
+![ ](/docs/assets/spacer16x16.png)
+
+### 🛠️ Troubleshooting (FAQ)
+
+- **"Command not found"**: Make sure Python is installed. On Windows, restart your terminal after installation.
+- **"Permission denied"**: On Mac and Linux, add `sudo` before your command if you are not in a virtual environment.
+- **How ​​do I know if I'm in the correct directory?**: Type `pwd` (Mac/Linux) or `echo %cd%` (Windows) to see your current path. It should end with `/aNA-ai`.
 
 ![ ](/docs/assets/spacer16x16.png)
 
@@ -75,4 +140,4 @@ Instructions française : [installation (fr)](/docs/installation_fr.md)
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-28_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-01_
