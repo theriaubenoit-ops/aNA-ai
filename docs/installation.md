@@ -128,8 +128,6 @@ Sur Mac, l'utilisation du terminal est fluide, mais nécessite parfois des permi
 Once installed, you can verify the "heartbeat" of the project by running a basic neuron test from your terminal:
 `python3 src/tests/test_neuron.py`
 
-![ ](/docs/assets/spacer16x16.png)
-
 ### 🛠️ Troubleshooting (FAQ)
 
 - **"Command not found"**: Make sure Python is installed. On Windows, restart your terminal after installation.
