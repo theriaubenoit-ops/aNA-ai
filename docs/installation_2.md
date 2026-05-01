@@ -1,6 +1,6 @@
 🚀 Quick links: [ReadMe](/README.md), Installation, [Contributing](/CONTRIBUTING.md), [Innovation-Lab](/docs/innovation-lab.md), [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), [Architecture](/docs/architecture.md)
 
-◀️ [Back/](/docs/installation.md)[Retour](/docs/installation_fr.md)
+◀️ [Back](/docs/installation.md)/[Retour](/docs/installation_fr.md)
 
 # Installation and Usage: ✴️*aNA* AI Project
 
