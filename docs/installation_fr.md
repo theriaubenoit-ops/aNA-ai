@@ -2,7 +2,7 @@
 
 English instructions: [installation (en)](/docs/installation.md)
 
-# Installation et utilisation projet ✴️*aNA* AI v5
+# Installation et utilisation projet ✴️*aNA* AI
 
 ```
 ░              ░ ░░░▒▒▓▒▓▒▒▒▒▒░░▒▒░▒▒▒▓▒▓▒                                                                     ░ ░
