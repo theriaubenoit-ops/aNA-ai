@@ -44,6 +44,8 @@ Here are the universal commands you will use to navigate:
 
 Veuillez consulter le guide correspondant à votre système d'exploitation :
 
+![ ](/docs/assets/spacer32x32.png)
+
 ### 🪟 Windows _(PC)_
 
 Pour une expérience optimale, utilisez **PowerShell** ou **Git Bash**.
@@ -67,7 +69,7 @@ Pour une expérience optimale, utilisez **PowerShell** ou **Git Bash**.
 
   [Suite ▶️](/docs/installation_2.md)
 
-![ ](/docs/assets/spacer16x16.png)
+![ ](/docs/assets/spacer32x32.png)
 
 ### 🐧 Linux _(Ubuntu/Debian)_
 
@@ -90,7 +92,7 @@ L'installation sur Linux nécessite souvent de mettre à jour les paquets systè
 
   [Suite ▶️](/docs/installation_2.md)
 
-![ ](/docs/assets/spacer16x16.png)
+![ ](/docs/assets/spacer32x32.png)
 
 ### 🍏 macOS _(Apple)_
 
@@ -119,7 +121,7 @@ Sur Mac, l'utilisation du terminal est fluide, mais nécessite parfois des permi
 
   > **Note :** Si vous avez une erreur de permission, utilisez `sudo pip install...` _(votre mot de passe sera demandé, mais il ne s'affichera pas pendant la saisie)_.
 
-![ ](/docs/assets/spacer16x16.png)
+![ ](/docs/assets/spacer32x32.png)
 
 ## Quick Verification
 
