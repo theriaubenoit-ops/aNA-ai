@@ -2,7 +2,7 @@
 
 English instructions: [installation (en)](/docs/installation.md)
 
-# Installation et utilisation projet ✴️*aNA* AI
+# Installation et utilisation projet ✴️*aNA* IA
 
 ```
 ░              ░ ░░░▒▒▓▒▓▒▒▒▒▒░░▒▒░▒▒▒▓▒▓▒                                                                     ░ ░
@@ -53,7 +53,7 @@ Pour une expérience optimale, utilisez **PowerShell** ou **Git Bash**.
 - **Installation de Python** : Téléchargez-le via le Microsoft Store ou python.org. **Important :** Cochez la case _"Add Python to PATH"_ lors de l'installation.
 - **Clonage** :
   ```powershell
-  git clone `https://github.com/theriaubenoit-ops/aNA-ai.git`
+  git clone https://github.com/theriaubenoit-ops/aNA-ai.git
   cd aNA-ai
   ```
 - **Environnement Virtuel** :
@@ -83,7 +83,7 @@ L'installation sur Linux nécessite souvent de mettre à jour les paquets systè
 - **Installation** :
 
   ```bash
-  git clone `https://github.com/theriaubenoit-ops/aNA-ai.git`
+  git clone https://github.com/theriaubenoit-ops/aNA-ai.git
   cd aNA-ai
   python3 -m venv venv
   source venv/bin/activate
@@ -102,7 +102,7 @@ Sur Mac, l'utilisation du terminal est fluide, mais nécessite parfois des permi
 - **Installation de Python** : Vérifiez avec `python3 --version`. Si absent, téléchargez-le sur _python.org_.
 - **Clonage & Dossier** :
   ```bash
-  git clone `https://github.com/theriaubenoit-ops/aNA-ai.git`
+  git clone https://github.com/theriaubenoit-ops/aNA-ai.git
   cd aNA-ai
   ```
 - **Environnement Virtuel** :
