@@ -40,7 +40,7 @@ We are moving away from the "open-source contribution" model—where the goal is
 
 **This is a leap forward in time; what you see here is the _future of AI_. If you are exploring this project today, it is because you possess the curiosity required to push this innovative concept further. We are currently _architecting_ the _next major update_, but we invite you to share your _observations_ and _ideas_ with us as we continue to grow this vision together.**
 
-Join the **aNA** _computational neuroscience_ community: Be sure to _[download the latest version](https://github.com/theriaubenoit-ops/aNA-ai/)_ or/and [installation](/docs/installation.md) or/and [innovation (creation lab)](/docs/innovation-lab.md)
+Join the **aNA** _computational neuroscience_ community: Be sure to clone _[aNA-ai.git](https://github.com/theriaubenoit-ops/aNA-ai.git)_ or/and [installation](/docs/installation.md) or/and [innovation (creation lab)](/docs/innovation-lab.md)
 
 ### First Steps for Research Collaborators
 
@@ -171,4 +171,4 @@ The **aNA** AI project is _a leap toward the future of organic computation_. Ali
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-28_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-01_
