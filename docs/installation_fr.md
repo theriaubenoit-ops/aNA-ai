@@ -30,8 +30,6 @@ Avant de commencer, assurez-vous d'avoir les éléments suivants à portée de m
 - **Python 3.10+** : You had the free core engine.
 - **Virtual Environment Knowledge** : Strictly use `venv` to protect your system's integrity.
 
-![ ](/docs/assets/spacer16x16.png)
-
 ### Notions de base _(Terminal)_
 
 Here are the universal commands you will use to navigate:
