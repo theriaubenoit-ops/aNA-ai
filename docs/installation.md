@@ -128,7 +128,7 @@ Sur Mac, l'utilisation du terminal est fluide, mais nécessite parfois des permi
 Once installed, you can verify the "heartbeat" of the project by running a basic neuron test from your terminal:
 `python3 src/tests/test_neuron.py`
 
-### 🛠️ Troubleshooting (FAQ)
+### ⚒️ Troubleshooting (FAQ)
 
 - **"Command not found"**: Make sure Python is installed. On Windows, restart your terminal after installation.
 - **"Permission denied"**: On Mac and Linux, add `sudo` before your command if you are not in a virtual environment.
