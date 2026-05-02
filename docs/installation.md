@@ -96,6 +96,8 @@ Sur Mac, l'utilisation du terminal est fluide, mais nécessite parfois des permi
 
   [Continued ▶️](/docs/installation_2.md)
 
+  > **Note :** If you have a permission error, use `sudo pip install...` _(your password will be requested, but it will not be displayed while typing)_.
+
   ![ ](/docs/assets/spacer32x32.png)
 
 # 🐧 Linux _(Ubuntu/Debian)_
@@ -118,8 +120,6 @@ Installing on Linux often requires updating system packages first.
   ```
 
   [Continued ▶️](/docs/installation_2.md)
-
-  > **Note :** If you have a permission error, use `sudo pip install...` _(your password will be requested, but it will not be displayed while typing)_.
 
 ![ ](/docs/assets/spacer32x32.png)
 
