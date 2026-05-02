@@ -42,7 +42,7 @@ We are moving away from the "open-source contribution" model—where the goal is
 
 **This is a leap forward in time; what you see here is the _future of AI_. If you are exploring this project today, it is because you possess the curiosity required to push this innovative concept further. We are currently _architecting_ the _next major update_, but we invite you to share your _observations_ and _ideas_ with us as we continue to grow this vision together.**
 
-Join the **aNA** _computational neuroscience_ community: Be sure to clone/download the latest version of the Code _[aNA-ai.git/zip](https://github.com/theriaubenoit-ops/aNA-ai/)_ or/and see [installation](/docs/INSTALLATION.md) or/and read [innovation-lab](/docs/innovation-lab.md)
+Join the **aNA** _computational neuroscience_ community: Be sure to clone/download the latest version of the Code _[aNA-ai/](https://github.com/theriaubenoit-ops/aNA-ai/)_ or/and see [installation](/docs/INSTALLATION.md) or/and read [innovation-lab](/docs/innovation-lab.md)
 
 ### First Steps for Research Collaborators
 
