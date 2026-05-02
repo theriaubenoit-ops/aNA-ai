@@ -18,6 +18,8 @@
 
 ###### _"The Creation" —Michelangelo_
 
+![ ](/docs/assets/spacer16x16.png)
+
 > ## "Nothing is lost, nothing is created, everything is transformed"
 >
 > _—Antoine Lavoisier_

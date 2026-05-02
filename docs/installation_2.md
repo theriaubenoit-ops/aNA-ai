@@ -18,6 +18,8 @@
 
 ###### _"The Creation" —Michelangelo_
 
+![ ](/docs/assets/spacer16x16.png)
+
 - [x] **Running Scripts _(The "Action" Phase)_** Launch associated _Python scripts_ to validate neural logic:
   - COMING SOON - `python3 src/gui/dashboard.py`
   - ☄️ `python3 src/main.py` _(Cortical Core & Global Workspace)_

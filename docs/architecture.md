@@ -18,6 +18,8 @@
 
 ###### _"The Creation" —Michelangelo_
 
+![ ](/docs/assets/spacer16x16.png)
+
 ### 1. High-Level System Architecture
 
 ```

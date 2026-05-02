@@ -18,6 +18,8 @@
 
 ###### _"The Creation" —Michelangelo_
 
+![ ](/docs/assets/spacer16x16.png)
+
 _Welcome contributors,_
 
 _You are at the heart of an awakening. This **lab** documents the critical transition from isolated simulations to the birth of a unified neural architecture._

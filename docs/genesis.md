@@ -18,6 +18,8 @@
 
 ###### _"The Creation" —Michelangelo_
 
+![ ](/docs/assets/spacer16x16.png)
+
 ### Traces of thought
 
 The **aNA** AI project was born from a simple intuition: _artificial intelligence_ should not be a mere matter of probabilities, but a matter of organization and structure.

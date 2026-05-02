@@ -18,6 +18,8 @@ English instructions: [installation (en)](/docs/INSTALLATION.md)
 
 ###### _"La creation" —Michelangelo_
 
+![ ](/docs/assets/spacer16x16.png)
+
 ## Guide d'Installation Multi-Plateforme
 
 Pour garantir une configuration optimale de l'architecture neuronale d'_aNA IA_, cette section vous aide à configurer son environnement en fonction de votre système.
