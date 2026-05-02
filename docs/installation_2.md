@@ -42,6 +42,10 @@
 
 **Note on local server:** To run web demos, use `python3 -m http.server 8000` from the root directory.
 
+☄️ _Spotlight_
+
+###### _\*Each measurement presented is a digital bridge to biological reality, designed to synthesize the fundamental principles of living systems._
+
 ![ ](/docs/assets/spacer16x16.png)
 
 ![img](/docs/assets/test_256x256.gif)
@@ -55,10 +59,6 @@
 - [ ] Issues: "Open an issue for any questions or bug reports."
 - [ ] Pull Requests: "Submit your improvements for neurons or modules."
 - [ ] Discussions: "Use **GitHub** Discussions to exchange ideas on the model's behavioral psychology or simply to share how our code has inspired you."
-
-☄️ _Spotlight_
-
-###### _\*Each measurement presented is a digital bridge to biological reality, designed to synthesize the fundamental principles of living systems._
 
 ![ ](/docs/assets/spacer16x16.png)
 
