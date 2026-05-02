@@ -1,6 +1,6 @@
 🚀 Quick links: [ReadMe](/README.md), Installation, [Contributing](/CONTRIBUTING.md), [Innovation-Lab](/docs/innovation-lab.md), [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), [Architecture](/docs/architecture.md)
 
-English instructions: [installation (en)](/docs/installation.md)
+English instructions: [installation (en)](/docs/INSTALLATION.md)
 
 # Installation et utilisation projet ✴️*aNA* IA
 
@@ -28,13 +28,13 @@ Avant de commencer, assurez-vous d'avoir les éléments suivants à portée de m
 
 - **Git** : Assurez-vous de cloner _[aNA-ai.git](https://github.com/theriaubenoit-ops/aNA-ai.git)_.
 - **Python 3.10+** : Vous disposez du moteur de base (gratuit).
-- **Virtual Environment Knowledge** : Utilisez strictement `venv` pour protéger l'intégrité de votre système.
+- **Connaissance de l'environnement virtuel** : Utilisez strictement `venv` pour protéger l'intégrité de votre système.
 
 ### Notions de base _(Terminal)_
 
 Voici les commandes universelles que vous utiliserez pour naviguer :
 
-- **`cd <folder_name>`**: Saisissez un dossier _(ex.:`cd aNA-ai`)_.
+- **`cd <nom_du_dossier>`**: Saisissez un dossier _(ex.:`cd aNA-ai`)_.
 - **`cd ..`**: Retour au dossier parent.
 - **`ls`** _(Mac/Linux)_ ou **`dir`** _(Windows)_: Liste des fichiers présents.
 
@@ -140,4 +140,4 @@ Une fois installé, vous pouvez vérifier le « pouls » du projet en exécutant
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-02_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-01_

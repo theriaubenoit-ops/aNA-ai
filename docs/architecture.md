@@ -1,4 +1,4 @@
-🚀 Quick links: [ReadMe](/README.md), [Installation](/docs/installation.md), [Contributing](/CONTRIBUTING.md), [Innovation-Lab](/docs/innovation-lab.md), [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), Architecture
+🚀 Quick links: [ReadMe](/README.md), [Installation](/docs/INSTALLATION.md), [Contributing](/CONTRIBUTING.md), [Innovation-Lab](/docs/innovation-lab.md), [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), Architecture
 
 ![ ](/docs/assets/spacer16x16.png)
 
@@ -230,7 +230,7 @@ Processing Hierarchy:
 │   ├── architecture.md                 # The technical plan
 │   ├── genesis.md                      # The story of the project
 │   ├── innovation-lab.md               # Innovation (Creation Lab)
-│   ├── installation.md                 # Installation
+│   ├── INSTALLATION.md                 # Installation
 │   ├── installation_fr.md              # Installation (FR)
 │   ├── installation_2.md               # Installation 2
 │   ├── legend.md                       # 📋 Legend
