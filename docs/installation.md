@@ -71,27 +71,6 @@ Pour une expérience optimale, utilisez **PowerShell** ou **Git Bash**.
 
 ![ ](/docs/assets/spacer32x32.png)
 
-# 🐧 Linux _(Ubuntu/Debian)_
-
-Installing on Linux often requires updating system packages first.
-
-- **Update & Prerequisites** :
-  ```bash
-  sudo apt update
-  sudo apt install python3-venv python3-pip git
-  ```
-- **Installation** :
-
-  ```bash
-  git clone https://github.com/theriaubenoit-ops/aNA-ai.git
-  cd aNA-ai
-  python3 -m venv venv
-  source venv/bin/activate
-  pip install -r requirements.txt
-  ```
-
-  [Continued ▶️](/docs/installation_2.md)
-
 ![ ](/docs/assets/spacer32x32.png)
 
 # 🍏 macOS _(Apple)_
@@ -114,6 +93,27 @@ Sur Mac, l'utilisation du terminal est fluide, mais nécessite parfois des permi
 
   ```bash
   pip install --upgrade pip
+  pip install -r requirements.txt
+  ```
+
+  [Continued ▶️](/docs/installation_2.md)
+
+# 🐧 Linux _(Ubuntu/Debian)_
+
+Installing on Linux often requires updating system packages first.
+
+- **Update & Prerequisites** :
+  ```bash
+  sudo apt update
+  sudo apt install python3-venv python3-pip git
+  ```
+- **Installation** :
+
+  ```bash
+  git clone https://github.com/theriaubenoit-ops/aNA-ai.git
+  cd aNA-ai
+  python3 -m venv venv
+  source venv/bin/activate
   pip install -r requirements.txt
   ```
 
