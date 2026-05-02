@@ -71,8 +71,6 @@ Pour une expérience optimale, utilisez **PowerShell** ou **Git Bash**.
 
 ![ ](/docs/assets/spacer32x32.png)
 
-![ ](/docs/assets/spacer32x32.png)
-
 # 🍏 macOS _(Apple)_
 
 Sur Mac, l'utilisation du terminal est fluide, mais nécessite parfois des permissions administratives.
@@ -97,6 +95,8 @@ Sur Mac, l'utilisation du terminal est fluide, mais nécessite parfois des permi
   ```
 
   [Continued ▶️](/docs/installation_2.md)
+
+  ![ ](/docs/assets/spacer32x32.png)
 
 # 🐧 Linux _(Ubuntu/Debian)_
 
