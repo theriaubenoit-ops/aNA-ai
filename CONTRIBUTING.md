@@ -1,4 +1,4 @@
-🚀 Quick links: [ReadMe](/README.md), [Installation](/docs/installation.md), Contributing, [Innovation-Lab](/docs/innovation-lab.md), [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), [Architecture](/docs/architecture.md)
+🚀 Quick links: [ReadMe](/README.md), [Installation](/docs/INSTALLATION.md), Contributing, [Innovation-Lab](/docs/innovation-lab.md), [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), [Architecture](/docs/architecture.md)
 
 ![ ](/docs/assets/spacer16x16.png)
 
@@ -40,7 +40,7 @@ We are moving away from the "open-source contribution" model—where the goal is
 
 **This is a leap forward in time; what you see here is the _future of AI_. If you are exploring this project today, it is because you possess the curiosity required to push this innovative concept further. We are currently _architecting_ the _next major update_, but we invite you to share your _observations_ and _ideas_ with us as we continue to grow this vision together.**
 
-Join the **aNA** _computational neuroscience_ community: Be sure to clone _[aNA-ai.git](https://github.com/theriaubenoit-ops/aNA-ai.git)_ or/and [installation](/docs/installation.md) or/and [innovation (creation lab)](/docs/innovation-lab.md)
+Join the **aNA** _computational neuroscience_ community: Be sure to clone _[aNA-ai.git](https://github.com/theriaubenoit-ops/aNA-ai.git)_ or/and [installation](/docs/INSTALLATION.md) or/and [innovation (creation lab)](/docs/innovation-lab.md)
 
 ### First Steps for Research Collaborators
 
