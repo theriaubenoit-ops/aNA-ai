@@ -20,22 +20,23 @@
 
 ![ ](/docs/assets/spacer16x16.png)
 
-- [x] **Running Scripts _(The "Action" Phase)_** Launch associated _Python scripts_ to validate neural logic:
-  - COMING SOON - `python3 src/gui/dashboard.py`
-  - ☄️ `python3 src/main.py` _(Cortical Core & Global Workspace)_
-  - `python3 src/tests/test_amygdala.py` _(Homeostatic Stress & Alert Response)_
-  - `python3 src/tests/test_cerebellum.py` _(Motor Precision & Error Correction)_
-  - ☄️ `python3 src/tests/test_cortical_column.py` _(Six-layer cortical signal flow)_
-  - ☄️ `python3 src/tests/test_hub_autonomy.py` _(To validate the autonomous behaviors)_
-  - `python3 src/tests/test_limbic_system.py` _(Emotional-Cognitive Integration)_
-  - ☄️ `python3 src/tests/test_hippocampus.py` _(Synaptic Consolidation & Pattern Encoding)_
-  - ☄️ `python3 src/tests/test_hippocampus_ampa_nmda.py` _(Short-term and Long-term memory)_
-  - ☄️ `python3 src/tests/test_neocortex.py` _(Validates the integration (4 lobes) of the Neocortex)_
-  - `python3 src/tests/test_neuron.py` _(Metabolic & Electrophysiological Dynamics)_
-  - `python3 src/tests/test_pulse.py` _(Neural Oscillations & Temporal Sync)_
-  - ☄️ `python3 src/tests/test_thalamus.py` _(Sensory Gating & Signal Routing)_
-  - ☄️ `python3 src/tests/test_trauma_logic.py` _(Emotional Saliency & Acid Traces)_
-  - [ ] COMING SOON - Running Demonstrations: Launch _Web-based interfaces_ (e.g., "http://localhost:8000/examples/basic-demo.html").
+### Running Scripts _(The "Action" Phase)_ Launch associated _Python scripts_ to validate neural logic:
+
+    - [ ] COMING SOON - `python3 src/gui/dashboard.py`
+    - [ ] ☄️ `python3 src/main.py` _(Cortical Core & Global Workspace)_
+    - [ ] `python3 src/tests/test_amygdala.py` _(Homeostatic Stress & Alert Response)_
+    - [ ] `python3 src/tests/test_cerebellum.py` _(Motor Precision & Error Correction)_
+    - [ ] ☄️ `python3 src/tests/test_cortical_column.py` _(Six-layer cortical signal flow)_
+    - [ ] ☄️ `python3 src/tests/test_hub_autonomy.py` _(To validate the autonomous behaviors)_
+    - [ ] `python3 src/tests/test_limbic_system.py` _(Emotional-Cognitive Integration)_
+    - [ ] ☄️ `python3 src/tests/test_hippocampus.py` _(Synaptic Consolidation & Pattern Encoding)_
+    - [ ] ☄️ `python3 src/tests/test_hippocampus_ampa_nmda.py` _(Short-term and Long-term memory)_
+    - [ ] ☄️ `python3 src/tests/test_neocortex.py` _(Validates the integration (4 lobes) of the Neocortex)_
+    - [ ] `python3 src/tests/test_neuron.py` _(Metabolic & Electrophysiological Dynamics)_
+    - [ ] `python3 src/tests/test_pulse.py` _(Neural Oscillations & Temporal Sync)_
+    - [ ] ☄️ `python3 src/tests/test_thalamus.py` _(Sensory Gating & Signal Routing)_
+    - [ ] ☄️ `python3 src/tests/test_trauma_logic.py` _(Emotional Saliency & Acid Traces)_
+    - [ ] COMING SOON - Running Demonstrations: Launch _Web-based interfaces_ (e.g., "http://localhost:8000/examples/basic-demo.html").
     - Note on local server: To run web demos, use `python3 -m http.server 8000` from the root directory.
 
 ![ ](/docs/assets/spacer16x16.png)
@@ -46,10 +47,11 @@
 
 ![ ](/docs/assets/spacer16x16.png)
 
-- **Contributing and Communicating _(GitHub Workflow)_**
-  - [ ] Issues: "Open an issue for any questions or bug reports."
-  - [ ] Pull Requests: "Submit your improvements for neurons or modules."
-  - [ ] Discussions: "Use **GitHub** Discussions to exchange ideas on the model's behavioral psychology or simply to share how our code has inspired you."
+### Contributing and Communicating _(GitHub Workflow)_
+
+    - [ ] Issues: "Open an issue for any questions or bug reports."
+    - [ ] Pull Requests: "Submit your improvements for neurons or modules."
+    - [ ] Discussions: "Use **GitHub** Discussions to exchange ideas on the model's behavioral psychology or simply to share how our code has inspired you."
 
 ☄️ _Spotlight_
 
