@@ -30,7 +30,7 @@ Before jumping into OS-specific guides, ensure you have the following ready:
 - **Python 3.10+** : You had the free core engine.
 - **Virtual Environment Knowledge** : Strictly use `venv` to protect your system's integrity.
 
-### Notions de base _(Terminal)_
+### Basic concepts _(Terminal)_
 
 Here are the universal commands you will use to navigate:
 
@@ -48,10 +48,10 @@ Please select the guide corresponding to your operating system:
 
 # 🪟 Windows _(PC)_
 
-Pour une expérience optimale, utilisez **PowerShell** ou **Git Bash**.
+For the best experience, use **PowerShell** or **Git Bash**.
 
-- **Installation of Python** : Téléchargez-le via le Microsoft Store ou python.org. **Important :** Cochez la case _"Add Python to PATH"_ lors de l'installation.
-- **Clonage** :
+- **Installing Python:** Download it from the Microsoft Store or python.org. **Important:** Check the "Add Python to PATH" box during installation.
+- **Cloning** :
   ```powershell
   git clone https://github.com/theriaubenoit-ops/aNA-ai.git
   cd aNA-ai
@@ -73,7 +73,7 @@ Pour une expérience optimale, utilisez **PowerShell** ou **Git Bash**.
 
 # 🍏 macOS _(Apple)_
 
-Sur Mac, l'utilisation du terminal est fluide, mais nécessite parfois des permissions administratives.
+On Mac, using the terminal is smooth, but sometimes requires administrative permissions.
 
 - **Open the Terminal**: Press `Cmd + Space` and type "Terminal".
 - **Install Python**: Check with `python3 --version`. If it's not there, download it from _python.org_.
@@ -140,4 +140,4 @@ Once installed, you can verify the "heartbeat" of the project by running a basic
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-01_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-02_
