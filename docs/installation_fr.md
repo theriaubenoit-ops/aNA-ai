@@ -67,7 +67,7 @@ Pour une expérience optimale, utilisez **PowerShell** ou **Git Bash**.
   pip install -r requirements.txt
   ```
 
-  [Suite ▶️](/docs/installation_2.md)
+[Suite ▶️](/docs/installation_2.md)
 
 ![ ](/docs/assets/spacer32x32.png)
 
@@ -94,9 +94,9 @@ Sur Mac, l'utilisation du terminal est fluide, mais nécessite parfois des permi
   pip install -r requirements.txt
   ```
 
-  [Suite ▶️](/docs/installation_2.md)
+[Suite ▶️](/docs/installation_2.md)
 
-  > **Note :** Si vous avez une erreur de permission, utilisez `sudo pip install...` _(votre mot de passe sera demandé, mais il ne s'affichera pas pendant la saisie)_.
+> **Note :** Si vous avez une erreur de permission, utilisez `sudo pip install...` _(votre mot de passe sera demandé, mais il ne s'affichera pas pendant la saisie)_.
 
 ![ ](/docs/assets/spacer32x32.png)
 
@@ -119,7 +119,7 @@ L'installation sur Linux nécessite souvent de mettre à jour les paquets systè
   pip install -r requirements.txt
   ```
 
-  [Suite ▶️](/docs/installation_2.md)
+[Suite ▶️](/docs/installation_2.md)
 
 ![ ](/docs/assets/spacer32x32.png)
 
