@@ -27,7 +27,7 @@ To ensure optimal configuration of _aNA IA_'s neural architecture, this section 
 Before jumping into OS-specific guides, ensure you have the following ready:
 
 - **Git** : Be sure to clone _[aNA-ai.git](https://github.com/theriaubenoit-ops/aNA-ai.git)_.
-- **Python 3.10+** : You had the free core engine.
+- **Python 3.10+** : You had the (free) core engine.
 - **Virtual Environment Knowledge** : Strictly use `venv` to protect your system's integrity.
 
 ### Basic concepts _(Terminal)_
@@ -140,4 +140,4 @@ Once installed, you can verify the "heartbeat" of the project by running a basic
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-02_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-01_
