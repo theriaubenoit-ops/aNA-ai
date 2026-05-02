@@ -26,17 +26,17 @@ Pour garantir une configuration optimale de l'architecture neuronale d'_aNA IA_,
 
 Avant de commencer, assurez-vous d'avoir les éléments suivants à portée de main :
 
-- **Git** : Be sure to clone _[aNA-ai.git](https://github.com/theriaubenoit-ops/aNA-ai.git)_.
-- **Python 3.10+** : You had the free core engine.
-- **Virtual Environment Knowledge** : Strictly use `venv` to protect your system's integrity.
+- **Git** : Assurez-vous de cloner _[aNA-ai.git](https://github.com/theriaubenoit-ops/aNA-ai.git)_.
+- **Python 3.10+** : Vous disposez du moteur de base (gratuit).
+- **Virtual Environment Knowledge** : Utilisez strictement `venv` pour protéger l'intégrité de votre système.
 
 ### Notions de base _(Terminal)_
 
-Here are the universal commands you will use to navigate:
+Voici les commandes universelles que vous utiliserez pour naviguer :
 
-- **`cd <folder_name>`**: Enter a folder _(e.g.,`cd aNA-ai`)_.
-- **`cd ..`**: Return to parent's folder.
-- **`ls`** _(Mac/Linux)_ or **`dir`** _(Windows)_: List the files present.
+- **`cd <folder_name>`**: Saisissez un dossier _(ex.:`cd aNA-ai`)_.
+- **`cd ..`**: Retour au dossier parent.
+- **`ls`** _(Mac/Linux)_ ou **`dir`** _(Windows)_: Liste des fichiers présents.
 
 ![ ](/docs/assets/spacer16x16.png)
 
@@ -123,7 +123,7 @@ L'installation sur Linux nécessite souvent de mettre à jour les paquets systè
 
 ![ ](/docs/assets/spacer32x32.png)
 
-## Quick Verification
+## Vérification rapide
 
 Une fois installé, vous pouvez vérifier le « pouls » du projet en exécutant un test neuronal de base depuis votre terminal :
 `python3 src/tests/test_neuron.py`
@@ -140,4 +140,4 @@ Une fois installé, vous pouvez vérifier le « pouls » du projet en exécutant
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-01_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-02_
