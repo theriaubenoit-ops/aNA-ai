@@ -2,7 +2,7 @@
 
 English instructions: [installation (en)](/docs/INSTALLATION.md)
 
-# Installation et utilisation projet ✴️*aNA* IA
+# Installation et utilisation projet ✴️*aNA* IA _(Installation)_
 
 ```
 ░              ░ ░░░▒▒▓▒▓▒▒▒▒▒░░▒▒░▒▒▒▓▒▓▒                                                                     ░ ░
