@@ -60,7 +60,8 @@ Emotional-Cognitive Integration / _Intégration émotionnelle et cognitive_
 
 - [ ] `python3 src/tests/test_hippocampus_ampa_nmda.py`
 
-- [ ] ☄️ Validates the integration (4 lobes) of the Neocortex / _Validation de l'intégration (4 lobes) du néocortex_
+☄️ Validates the integration (4 lobes) of the Neocortex / _Validation de l'intégration (4 lobes) du néocortex_
+
 - [ ] `python3 src/tests/test_neocortex.py`
 
 Metabolic & Electrophysiological Dynamics / _Dynamique métabolique et électrophysiologique_
@@ -79,8 +80,11 @@ Neural Oscillations & Temporal Sync / _Oscillations neuronales et synchronisatio
 
 - [ ] `python3 src/tests/test_trauma_logic.py`
 
-COMING SOON - Demonstrations: Launch _Web-based interfaces_ (e.g., "http://localhost:8000/examples/basic-demo.html").
-**Note**: To run web demos, on local server, use `python3 -m http.server 8000` from the root directory.
+COMING SOON - Demonstrations: Launch _Web-based interfaces_
+
+- e.g., "http://localhost:8000/examples/basic-demo.html"
+
+  **Note**: To run web demos, on local server, use `python3 -m http.server 8000` from the root directory.
 
 ☄️ _Spotlight_
 
