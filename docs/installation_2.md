@@ -22,7 +22,7 @@
 
 ## Running Scripts _("Action" Phase)_ / _Exécution des scripts (Phase « Action »)_
 
-### Launch associated _Python scripts_ `tests/\*.py` to validate neural logic / _Lancez les scripts Python associés `tests_fr/\*.py` pour valider la logique neuronale_
+### Launch associated _Python scripts_ `tests/*.py` to validate neural logic / _Lancez les scripts Python associés `tests_fr/*.py` pour valider la logique neuronale_
 
 - [ ] COMING SOON - `python3 src/gui/dashboard.py`
 
