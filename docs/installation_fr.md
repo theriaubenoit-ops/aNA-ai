@@ -77,7 +77,7 @@ Pour une expérience optimale, utilisez **PowerShell** ou **Git Bash**.
 
 Sur _Mac_, l'utilisation du terminal est fluide, mais nécessite parfois des permissions administratives.
 
-- **Ouvrir le Terminal** : Appuyez sur `Cmd + Espace` et tapez "Terminal".
+- [ ] **Ouvrir le Terminal** : Appuyez sur `Cmd + Espace` et tapez "Terminal".
 - [ ] **Installation de Python** : Vérifiez avec `python3 --version`. Si absent, téléchargez-le sur _python.org_.
 - [ ] **Clonage & Dossier** :
   ```bash
