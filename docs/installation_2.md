@@ -20,9 +20,9 @@
 
 ![ ](/docs/assets/spacer16x16.png)
 
-## Running Scripts _("Action" Phase)_ / Exécution des scripts _(Phase « Action ») (fr)_
+## Running Scripts _("Action" Phase)_ / _Exécution des scripts (Phase « Action »)_
 
-### Launch associated _Python scripts_ to validate neural logic _(tests/\*.py)_ / Lancez les _scripts Python_ associés pour valider la logique neuronale _(tests_fr/\*.py) (fr)_
+### Launch associated _Python scripts_ to validate neural logic _(tests/\*.py)_ / _Lancez les scripts Python associés pour valider la logique neuronale (tests_fr/\*.py)_
 
 - [ ] COMING SOON - `python3 src/gui/dashboard.py`
 - [ ] ☄️ `python3 src/main.py` _(Cortical Core & Global Workspace)_
@@ -53,7 +53,7 @@
 
 ![ ](/docs/assets/spacer16x16.png)
 
-### Contributing and Communicating _(GitHub Workflow)_ / Contribution et communication _(Flux de travail GitHub) (fr)_
+### Contributing and Communicating _(GitHub Workflow)_ / _Contribution et communication (Flux de travail GitHub)_
 
 - [ ] Issues: "Open an issue for any questions or bug reports."
 - [ ] Pull Requests: "Submit your improvements for neurons or modules."
