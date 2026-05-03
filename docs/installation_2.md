@@ -24,66 +24,49 @@
 
 Congratulations! You can now run the _Python scripts_ you want `tests/*.py`. / _Félicitations ! Vous pouvez maintenant lancer les scripts Python que vous désirez `tests_fr/*.py`._
 
-COMING SOON - Dashboard / _Tableau de bord_
+- COMING SOON - Dashboard / _Tableau de bord_
+  `python3 src/gui/DASHBOARD.py`
 
-- `python3 src/gui/DASHBOARD.py`
+- [ ] ☄️ Cortical Core & Global Workspace / _Noyau cortical et espace de travail global_
+      `python3 src/MAIN.py`
 
-☄️ Cortical Core & Global Workspace / _Noyau cortical et espace de travail global_
+- [ ] Homeostatic Stress & Alert Response / _Réponse homéostatique au stress et à l'alerte_
+      `python3 src/tests/test_amygdala.py`
 
-- [ ] `python3 src/MAIN.py`
+- [ ] Motor Precision & Error Correction / _Précision motrice et correction des erreurs_
+      `python3 src/tests/test_cerebellum.py`
 
-Homeostatic Stress & Alert Response / _Réponse homéostatique au stress et à l'alerte_
+- [ ] ☄️ Six-layer cortical signal flow / _Flux de signaux corticaux à six couches_
+      `python3 src/tests/test_cortical_column.py`
 
-- [ ] `python3 src/tests/test_amygdala.py`
+- [ ] ☄️ To validate the autonomous behaviors / _Validation des comportements autonomes_
+      `python3 src/tests/test_hub_autonomy.py`
 
-Motor Precision & Error Correction / _Précision motrice et correction des erreurs_
+- [ ] Emotional-Cognitive Integration / _Intégration émotionnelle et cognitive_
+      `python3 src/tests/test_limbic_system.py`
 
-- [ ] `python3 src/tests/test_cerebellum.py`
+- [ ] ☄️ Synaptic Consolidation & Pattern Encoding / _Consolidation synaptique et encodage des schémas_
+      `python3 src/tests/test_hippocampus.py`
 
-☄️ Six-layer cortical signal flow / _Flux de signaux corticaux à six couches_
+- [ ] ☄️ Short-term and Long-term memory / _Mémoire à court et à long terme_
+      `python3 src/tests/test_hippocampus_ampa_nmda.py`
 
-- [ ] `python3 src/tests/test_cortical_column.py`
+- [ ] ☄️ Validates the integration (4 lobes) of the Neocortex / _Validation de l'intégration (4 lobes) du néocortex_
+      `python3 src/tests/test_neocortex.py`
 
-☄️ To validate the autonomous behaviors / _Validation des comportements autonomes_
+- [ ] Metabolic & Electrophysiological Dynamics / _Dynamique métabolique et électrophysiologique_
+      `python3 src/tests/test_neuron.py`
 
-- [ ] `python3 src/tests/test_hub_autonomy.py`
+- [ ] Neural Oscillations & Temporal Sync / _Oscillations neuronales et synchronisation temporelle_
+      `python3 src/tests/test_pulse.py`
 
-Emotional-Cognitive Integration / _Intégration émotionnelle et cognitive_
+- [ ] ☄️ Sensory Gating & Signal Routing / _Filtrage sensoriel et routage des signaux_
+      `python3 src/tests/test_thalamus.py`
 
-- [ ] `python3 src/tests/test_limbic_system.py`
+- [ ] ☄️ Emotional Saliency & Acid Traces / _Saillance émotionnelle et acidité Traces_
+      `python3 src/tests/test_trauma_logic.py`
 
-☄️ Synaptic Consolidation & Pattern Encoding / _Consolidation synaptique et encodage des schémas_
-
-- [ ] `python3 src/tests/test_hippocampus.py`
-
-☄️ Short-term and Long-term memory / _Mémoire à court et à long terme_
-
-- [ ] `python3 src/tests/test_hippocampus_ampa_nmda.py`
-
-☄️ Validates the integration (4 lobes) of the Neocortex / _Validation de l'intégration (4 lobes) du néocortex_
-
-- [ ] `python3 src/tests/test_neocortex.py`
-
-Metabolic & Electrophysiological Dynamics / _Dynamique métabolique et électrophysiologique_
-
-- [ ] `python3 src/tests/test_neuron.py`
-
-Neural Oscillations & Temporal Sync / _Oscillations neuronales et synchronisation temporelle_
-
-- [ ] `python3 src/tests/test_pulse.py`
-
-☄️ Sensory Gating & Signal Routing / _Filtrage sensoriel et routage des signaux_
-
-- [ ] `python3 src/tests/test_thalamus.py`
-
-☄️ Emotional Saliency & Acid Traces / _Saillance émotionnelle et acidité Traces_
-
-- [ ] `python3 src/tests/test_trauma_logic.py`
-
-COMING SOON - Demonstrations: Launch _Web-based interfaces_
-
-- e.g., "http://localhost:8000/examples/basic-demo.html"
-
+- COMING SOON - Demonstrations: Launch _Web-based interfaces_ (e.g., "http://localhost:8000/examples/basic-demo.html").
   **Note**: To run web demos, on local server, use `python3 -m http.server 8000` from the root directory.
 
 ☄️ _Spotlight_
