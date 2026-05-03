@@ -22,23 +22,34 @@
 
 ## Running Scripts _("Action" Phase)_ / _Exécution des scripts (Phase « Action »)_
 
-### Launch associated _Python scripts_ to validate neural logic `src/tests/\*.py` / _Lancez les scripts Python associés pour valider la logique neuronale `src/tests_fr/\*.py`_
+### Launch associated _Python scripts_ `tests/\*.py` to validate neural logic / _Lancez les scripts Python associés `tests_fr/\*.py` pour valider la logique neuronale_
 
 - [ ] COMING SOON - `python3 src/gui/dashboard.py`
 
 - [ ] ☄️ `python3 src/main.py` _(Cortical Core & Global Workspace)_
 
 - [ ] `python3 src/tests/test_amygdala.py` _(Homeostatic Stress & Alert Response)_
+
 - [ ] `python3 src/tests/test_cerebellum.py` _(Motor Precision & Error Correction)_
+
 - [ ] ☄️ `python3 src/tests/test_cortical_column.py` _(Six-layer cortical signal flow)_
+
 - [ ] ☄️ `python3 src/tests/test_hub_autonomy.py` _(To validate the autonomous behaviors)_
+
 - [ ] `python3 src/tests/test_limbic_system.py` _(Emotional-Cognitive Integration)_
+
 - [ ] ☄️ `python3 src/tests/test_hippocampus.py` _(Synaptic Consolidation & Pattern Encoding)_
+
 - [ ] ☄️ `python3 src/tests/test_hippocampus_ampa_nmda.py` _(Short-term and Long-term memory)_
+
 - [ ] ☄️ `python3 src/tests/test_neocortex.py` _(Validates the integration (4 lobes) of the Neocortex)_
+
 - [ ] `python3 src/tests/test_neuron.py` _(Metabolic & Electrophysiological Dynamics)_
+
 - [ ] `python3 src/tests/test_pulse.py` _(Neural Oscillations & Temporal Sync)_
+
 - [ ] ☄️ `python3 src/tests/test_thalamus.py` _(Sensory Gating & Signal Routing)_
+
 - [ ] ☄️ `python3 src/tests/test_trauma_logic.py` _(Emotional Saliency & Acid Traces)_
 
 - [ ] COMING SOON - Running Demonstrations: Launch _Web-based interfaces_ (e.g., "http://localhost:8000/examples/basic-demo.html").
