@@ -24,10 +24,10 @@
 
 Congratulations! You can now run the _Python scripts_ you want `tests/*.py`. / _Félicitations ! Vous pouvez maintenant lancer les scripts Python que vous désirez `tests_fr/*.py`._
 
-- ☄️ COMING SOON - Dashboard / _Tableau de bord_
+- ☄️ To Do - Dashboard / _Tableau de bord_
   `python3 src/gui/DASHBOARD.py`
 
-- [ ] ☄️ TO DO - Cortical Core & Global Workspace / _Noyau cortical et espace de travail global_
+- [ ] ☄️ In progress - Cortical Core & Global Workspace / _Noyau cortical et espace de travail global_
       `python3 src/MAIN.py`
 
 - [ ] Homeostatic Stress & Alert Response / _Réponse homéostatique au stress et à l'alerte_
@@ -66,8 +66,8 @@ Congratulations! You can now run the _Python scripts_ you want `tests/*.py`. / _
 - [ ] ☄️ Emotional Saliency & Acid Traces / _Saillance émotionnelle et acidité Traces_
       `python3 src/tests/test_trauma_logic.py`
 
-- COMING SOON - Demonstrations: Launch _Web-based interfaces_ (e.g., "http://localhost:8000/examples/basic-demo.html").
-  **Note**: To run web demos, on local server, use `python3 -m http.server 8000` from the root directory.
+- To Do - Demonstrations: Launch _Web-based interfaces_ (e.g., "http://localhost:8000/examples/basic-demo.html").
+  **Note**: To run web demos on local server, use `python3 -m http.server 8000` from the root directory.
 
 ☄️ _Spotlight_
 
