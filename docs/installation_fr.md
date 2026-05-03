@@ -96,9 +96,9 @@ Sur _Mac_, l'utilisation du terminal est fluide, mais nécessite parfois des per
   pip install -r requirements.txt
   ```
 
-[Suite ▶️](/docs/installation_2.md)
-
 > **Note :** Si vous avez une erreur de permission, utilisez `sudo pip install...` _(votre mot de passe sera demandé, mais il ne s'affichera pas pendant la saisie)_.
+
+[Suite ▶️](/docs/installation_2.md)
 
 ![ ](/docs/assets/spacer32x32.png)
 
