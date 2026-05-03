@@ -29,7 +29,7 @@ Pour garantir une configuration optimale de l'architecture neuronale d'_aNA IA_,
 Avant de commencer, assurez-vous d'avoir les éléments suivants à portée de main :
 
 - **Git** : Assurez-vous de cloner _[aNA-ai.git](https://github.com/theriaubenoit-ops/aNA-ai.git)_.
-- **Python 3.10+** : Vous disposez du moteur de base (gratuit).
+- **Python 3.10+** : Vous disposez du moteur de base _(gratuit)_.
 - **Connaissance de l'environnement virtuel** : Utilisez strictement `venv` pour protéger l'intégrité de votre système.
 
 ### Notions de base _(Terminal)_
@@ -52,7 +52,7 @@ Veuillez consulter le guide correspondant à votre système d'exploitation :
 
 Pour une expérience optimale, utilisez **PowerShell** ou **Git Bash**.
 
-- **Installation de Python** : Téléchargez-le via le Microsoft Store ou python.org. **Important :** Cochez la case _"Add Python to PATH"_ lors de l'installation.
+- **Installation de Python** : Téléchargez-le via le _Microsoft Store_ ou _python.org_. **Important :** Cochez la case _"Add Python to PATH"_ lors de l'installation.
 - **Clonage** :
   ```powershell
   git clone https://github.com/theriaubenoit-ops/aNA-ai.git
@@ -75,7 +75,7 @@ Pour une expérience optimale, utilisez **PowerShell** ou **Git Bash**.
 
 # 🍏 macOS _(Apple)_
 
-Sur Mac, l'utilisation du terminal est fluide, mais nécessite parfois des permissions administratives.
+Sur _Mac_, l'utilisation du terminal est fluide, mais nécessite parfois des permissions administratives.
 
 - **Ouvrir le Terminal** : Appuyez sur `Cmd + Espace` et tapez "Terminal".
 - **Installation de Python** : Vérifiez avec `python3 --version`. Si absent, téléchargez-le sur _python.org_.
@@ -102,9 +102,9 @@ Sur Mac, l'utilisation du terminal est fluide, mais nécessite parfois des permi
 
 ![ ](/docs/assets/spacer32x32.png)
 
-# 🐧 Linux _(Ubuntu/Debian)_
+# 🐧 _Linux (Ubuntu/Debian)_
 
-L'installation sur Linux nécessite souvent de mettre à jour les paquets système d'abord.
+L'installation sur _Linux_ nécessite souvent de mettre à jour les paquets système d'abord.
 
 - **Mise à jour & Prérequis** :
   ```bash
@@ -127,13 +127,13 @@ L'installation sur Linux nécessite souvent de mettre à jour les paquets systè
 
 ## Vérification rapide
 
-Une fois installé, vous pouvez vérifier le « pouls » du projet en exécutant un test neuronal de base depuis votre terminal :
+Une fois installé, vous pouvez vérifier le _« pouls »_ du projet en exécutant un test neuronal de base depuis votre terminal :
 `python3 src/tests/test_neuron.py`
 
 ### ⚒️ Dépannage (FAQ)
 
 - **"Command not found"** : Assurez-vous que Python est bien installé. Sur Windows, redémarrez votre terminal après l'installation.
-- **"Permission denied"** : Sur Mac et Linux, ajoutez `sudo` devant votre commande si vous n'êtes pas dans un environnement virtuel.
+- **"Permission denied"** : Sur _Mac_ et _Linux_, ajoutez `sudo` devant votre commande si vous n'êtes pas dans un environnement virtuel.
 - **Comment savoir si je suis dans le bon dossier ?** : Tapez `pwd` _(Mac/Linux)_ ou `echo %cd%` _(Windows)_ pour voir votre chemin actuel. Il doit se terminer par `/aNA-ai`.
 
 ![ ](/docs/assets/spacer16x16.png)
