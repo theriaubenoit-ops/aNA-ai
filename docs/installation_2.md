@@ -27,8 +27,8 @@ Congratulations! You can now run the _Python scripts_ you want `tests/*.py`. / _
 - ☄️ COMING SOON - Dashboard / _Tableau de bord_
   `python3 src/gui/DASHBOARD.py`
 
-- ☄️ Cortical Core & Global Workspace / _Noyau cortical et espace de travail global_
-  `python3 src/MAIN.py`
+- [ ] ☄️ TO DO - Cortical Core & Global Workspace / _Noyau cortical et espace de travail global_
+      `python3 src/MAIN.py`
 
 - [ ] Homeostatic Stress & Alert Response / _Réponse homéostatique au stress et à l'alerte_
       `python3 src/tests/test_amygdala.py`
