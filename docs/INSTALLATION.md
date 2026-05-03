@@ -29,7 +29,7 @@ To ensure optimal configuration of _aNA IA_'s neural architecture, this section 
 Before jumping into OS-specific guides, ensure you have the following ready:
 
 - **Git** : Be sure to clone _[aNA-ai.git](https://github.com/theriaubenoit-ops/aNA-ai.git)_.
-- **Python 3.10+** : You had the (free) core engine.
+- **Python 3.10+** : You had the _(free)_ core engine.
 - **Virtual Environment Knowledge** : Strictly use `venv` to protect your system's integrity.
 
 ### Basic concepts _(Terminal)_
@@ -52,7 +52,7 @@ Please select the guide corresponding to your operating system:
 
 For the best experience, use **PowerShell** or **Git Bash**.
 
-- **Installing Python:** Download it from the Microsoft Store or python.org. **Important:** Check the "Add Python to PATH" box during installation.
+- **Installing Python:** Download it from the _Microsoft Store_ or _python.org_. **Important:** Check the _"Add Python to PATH"_ box during installation.
 - **Cloning** :
   ```powershell
   git clone https://github.com/theriaubenoit-ops/aNA-ai.git
@@ -75,7 +75,7 @@ For the best experience, use **PowerShell** or **Git Bash**.
 
 # 🍏 macOS _(Apple)_
 
-On Mac, using the terminal is smooth, but sometimes requires administrative permissions.
+On _Mac_, using the terminal is smooth, but sometimes requires administrative permissions.
 
 - **Open the Terminal**: Press `Cmd + Space` and type "Terminal".
 - **Install Python**: Check with `python3 --version`. If it's not there, download it from _python.org_.
@@ -102,9 +102,9 @@ On Mac, using the terminal is smooth, but sometimes requires administrative perm
 
 ![ ](/docs/assets/spacer32x32.png)
 
-# 🐧 Linux _(Ubuntu/Debian)_
+# 🐧 _Linux (Ubuntu/Debian)_
 
-Installing on Linux often requires updating system packages first.
+Installing on _Linux_ often requires updating system packages first.
 
 - **Update & Prerequisites** :
   ```bash
@@ -127,14 +127,14 @@ Installing on Linux often requires updating system packages first.
 
 ## Quick Verification
 
-Once installed, you can verify the "heartbeat" of the project by running a basic neuron test from your terminal:
+Once installed, you can verify the _"heartbeat"_ of the project by running a basic neuron test from your terminal:
 `python3 src/tests/test_neuron.py`
 
 ### ⚒️ Troubleshooting (FAQ)
 
 - **"Command not found"**: Make sure Python is installed. On Windows, restart your terminal after installation.
-- **"Permission denied"**: On Mac and Linux, add `sudo` before your command if you are not in a virtual environment.
-- **How ​​do I know if I'm in the correct directory?**: Type `pwd` (Mac/Linux) or `echo %cd%` (Windows) to see your current path. It should end with `/aNA-ai`.
+- **"Permission denied"**: On _Mac_ and _Linux_, add `sudo` before your command if you are not in a virtual environment.
+- **How ​​do I know if I'm in the correct directory?**: Type `pwd` _(Mac/Linux)_ or `echo %cd%` _(Windows)_ to see your current path. It should end with `/aNA-ai`.
 
 ![ ](/docs/assets/spacer16x16.png)
 
