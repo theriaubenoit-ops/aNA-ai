@@ -2,7 +2,7 @@
 
 ◀️ [Back](/docs/INSTALLATION.md)/[Retour](/docs/installation_fr.md)
 
-# Installation and Usage: ✴️*aNA* AI Project
+# Installation and Usage: ✴️*aNA* AI Project _(Usage)_
 
 ```
 ░              ░ ░░░▒▒▓▒▓▒▒▒▒▒░░▒▒░▒▒▒▓▒▓▒                                                                     ░ ░
