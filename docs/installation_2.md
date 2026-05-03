@@ -22,10 +22,12 @@
 
 ## Running Scripts _("Action" Phase)_ / _Exécution des scripts (Phase « Action »)_
 
-### Launch associated _Python scripts_ to validate neural logic _(tests/\*.py)_ / _Lancez les scripts Python associés pour valider la logique neuronale (tests_fr/\*.py)_
+### Launch associated _Python scripts_ to validate neural logic `src/tests/\*.py` / _Lancez les scripts Python associés pour valider la logique neuronale `src/tests_fr/\*.py`_
 
 - [ ] COMING SOON - `python3 src/gui/dashboard.py`
+
 - [ ] ☄️ `python3 src/main.py` _(Cortical Core & Global Workspace)_
+
 - [ ] `python3 src/tests/test_amygdala.py` _(Homeostatic Stress & Alert Response)_
 - [ ] `python3 src/tests/test_cerebellum.py` _(Motor Precision & Error Correction)_
 - [ ] ☄️ `python3 src/tests/test_cortical_column.py` _(Six-layer cortical signal flow)_
@@ -38,6 +40,7 @@
 - [ ] `python3 src/tests/test_pulse.py` _(Neural Oscillations & Temporal Sync)_
 - [ ] ☄️ `python3 src/tests/test_thalamus.py` _(Sensory Gating & Signal Routing)_
 - [ ] ☄️ `python3 src/tests/test_trauma_logic.py` _(Emotional Saliency & Acid Traces)_
+
 - [ ] COMING SOON - Running Demonstrations: Launch _Web-based interfaces_ (e.g., "http://localhost:8000/examples/basic-demo.html").
       **Note**: To run web demos, on local server, use `python3 -m http.server 8000` from the root directory.
 
