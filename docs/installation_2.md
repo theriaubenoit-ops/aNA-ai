@@ -20,9 +20,9 @@
 
 ![ ](/docs/assets/spacer16x16.png)
 
-## Running Scripts _("Action" Phase)_ / _Exécution des scripts (Phase « Action »)_
+## You are ready for the _"Action"_ phase / _Vous êtes prèt pour la phase « Action »_
 
-### Launch associated _Python scripts_ `tests/*.py` to validate neural logic / _Lancez les scripts Python associés `tests_fr/*.py` pour valider la logique neuronale_
+Congratulations! Launch associated _Python scripts_ `tests/*.py` to validate neural logic / _Félicitations ! Lancez les scripts Python associés `tests_fr/*.py` pour valider la logique neuronale_
 
 - [ ] COMING SOON - `python3 src/gui/dashboard.py`
 
