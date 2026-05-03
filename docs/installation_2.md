@@ -36,7 +36,7 @@ Congratulations! You can now run the _Python scripts_ `tests/*.py`. / _Félicita
 - [ ] Motor Precision & Error Correction / _Précision motrice et correction des erreurs_
       `python3 src/tests/test_cerebellum.py`
 
-- [ ] ☄️ Six-layer cortical signal flow / _Flux de signaux corticaux à six couches_
+- [ ] Six-layer cortical signal flow / _Flux de signaux corticaux à six couches_
       `python3 src/tests/test_cortical_column.py`
 
 - [ ] ☄️ To validate the autonomous behaviors / _Validation des comportements autonomes_
@@ -57,7 +57,7 @@ Congratulations! You can now run the _Python scripts_ `tests/*.py`. / _Félicita
 - [ ] Metabolic & Electrophysiological Dynamics / _Dynamique métabolique et électrophysiologique_
       `python3 src/tests/test_neuron.py`
 
-- [ ] Neural Oscillations & Temporal Sync / _Oscillations neuronales et synchronisation temporelle_
+- [ ] ☄️ Neural Oscillations & Temporal Sync / _Oscillations neuronales et synchronisation temporelle_
       `python3 src/tests/test_pulse.py`
 
 - [ ] ☄️ Sensory Gating & Signal Routing / _Filtrage sensoriel et routage des signaux_
