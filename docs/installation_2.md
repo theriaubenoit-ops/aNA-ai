@@ -24,11 +24,17 @@
 
 Congratulations! You can now run the _Python scripts_ `tests/*.py`. / _Félicitations ! Vous pouvez maintenant lancer les scripts Python `tests_fr/*.py`._
 
+**Dashboard**
+
 - ☄️ To Do - Dashboard / _Tableau de bord_
   `python3 src/gui/DASHBOARD.py` / `python3 src/gui/DASHBOARD_fr.py`
 
+**Main**
+
 - [ ] ☄️ In progress - Global Workspace / _Espace de travail global_
       `python3 src/MAIN.py` / `python3 src/MAIN_fr.py`
+
+**Tests**
 
 - [ ] Homeostatic Stress & Alert Response / _Réponse homéostatique au stress et à l'alerte_
       `python3 src/tests/test_amygdala.py`
@@ -66,7 +72,9 @@ Congratulations! You can now run the _Python scripts_ `tests/*.py`. / _Félicita
 - [ ] ☄️ Emotional Saliency & Acid Traces / _Saillance émotionnelle et acidité Traces_
       `python3 src/tests/test_trauma_logic.py`
 
-- To Do - Demonstrations: Launch _Web-based interfaces_ (e.g., "http://localhost:8000/examples/basic-demo.html").
+**Demonstrations**
+
+- To Do - Launch _Web-based interfaces_ (e.g., "http://localhost:8000/examples/basic-demo.html").
   **Note**: To run web demos on local server, use `python3 -m http.server 8000` from the root directory.
 
 ☄️ _Spotlight_
