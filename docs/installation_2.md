@@ -24,11 +24,11 @@
 
 Congratulations! You can now run the _Python scripts_ you want `tests/*.py`. / _Félicitations ! Vous pouvez maintenant lancer les scripts Python que vous désirez `tests_fr/*.py`._
 
-- COMING SOON - Dashboard / _Tableau de bord_
+- ☄️ COMING SOON - Dashboard / _Tableau de bord_
   `python3 src/gui/DASHBOARD.py`
 
-- [ ] ☄️ Cortical Core & Global Workspace / _Noyau cortical et espace de travail global_
-      `python3 src/MAIN.py`
+- ☄️ Cortical Core & Global Workspace / _Noyau cortical et espace de travail global_
+  `python3 src/MAIN.py`
 
 - [ ] Homeostatic Stress & Alert Response / _Réponse homéostatique au stress et à l'alerte_
       `python3 src/tests/test_amygdala.py`
