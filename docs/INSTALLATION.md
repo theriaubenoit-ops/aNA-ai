@@ -28,8 +28,8 @@ To ensure optimal configuration of _aNA IA_'s neural architecture, this section 
 
 Before jumping into OS-specific guides, ensure you have the following ready:
 
-- **Git** : Be sure to clone _[aNA-ai.git](https://github.com/theriaubenoit-ops/aNA-ai.git)_.
-- **Python 3.10+** : You had the _(free)_ core engine.
+- [ ] **Git** : Be sure to clone _[aNA-ai.git](https://github.com/theriaubenoit-ops/aNA-ai.git)_.
+- **Python 3.10+** : You had the core engine _(See below)_.
 - **Virtual Environment Knowledge** : Strictly use `venv` to protect your system's integrity.
 
 ### Basic concepts _(Terminal)_
@@ -52,18 +52,18 @@ Please select the guide corresponding to your operating system:
 
 For the best experience, use **PowerShell** or **Git Bash**.
 
-- **Installing Python:** Download it from the _Microsoft Store_ or _python.org_. **Important:** Check the _"Add Python to PATH"_ box during installation.
-- **Cloning** :
+- [ ] **Installing Python:** Download it from the _Microsoft Store_ or _python.org_. **Important:** Check the _"Add Python to PATH"_ box during installation.
+- [ ] **Cloning** :
   ```powershell
   git clone https://github.com/theriaubenoit-ops/aNA-ai.git
   cd aNA-ai
   ```
-- **Virtual Environment** :
+- [ ] **Virtual Environment** :
   ```powershell
   python -m venv venv
   .\venv\Scripts\activate
   ```
-- **Dependencies** :
+- [ ] **Dependencies** :
 
   ```powershell
   pip install -r requirements.txt
@@ -77,19 +77,19 @@ For the best experience, use **PowerShell** or **Git Bash**.
 
 On _Mac_, using the terminal is smooth, but sometimes requires administrative permissions.
 
-- **Open the Terminal**: Press `Cmd + Space` and type "Terminal".
-- **Install Python**: Check with `python3 --version`. If it's not there, download it from _python.org_.
-- **Clone & Folder**:
+- [ ] **Open the Terminal**: Press `Cmd + Space` and type "Terminal".
+- [ ] **Install Python**: Check with `python3 --version`. If it's not there, download it from _python.org_.
+- [ ] **Clone & Folder**:
   ```bash
   git clone https://github.com/theriaubenoit-ops/aNA-ai.git
   cd aNA-ai
   ```
-- **Virtual Environment** :
+- [ ] **Virtual Environment** :
   ```bash
   python3 -m venv venv
   source venv/bin/activate
   ```
-- **Dependencies** :
+- [ ] **Dependencies** :
 
   ```bash
   pip install --upgrade pip
@@ -106,12 +106,12 @@ On _Mac_, using the terminal is smooth, but sometimes requires administrative pe
 
 Installing on _Linux_ often requires updating system packages first.
 
-- **Update & Prerequisites** :
+- [ ] **Update & Prerequisites** :
   ```bash
   sudo apt update
   sudo apt install python3-venv python3-pip git
   ```
-- **Installation** :
+- [ ] **Installation** :
 
   ```bash
   git clone https://github.com/theriaubenoit-ops/aNA-ai.git
