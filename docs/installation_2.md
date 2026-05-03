@@ -84,7 +84,9 @@ Congratulations! You can now run the _Python scripts_ `tests/*.py`. / _Félicita
 ### Contributing and Communicating _(GitHub Workflow)_ / _Contribution et communication (Flux de travail GitHub)_
 
 - [ ] Issues: "Open an issue for any questions or bug reports."
+
 - [ ] Pull Requests: "Submit your improvements for neurons or modules."
+
 - [ ] Discussions: "Use **GitHub** Discussions to exchange ideas on the model's behavioral psychology or simply to share how our code has inspired you."
 
 ![ ](/docs/assets/spacer16x16.png)
