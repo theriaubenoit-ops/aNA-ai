@@ -22,7 +22,7 @@
 
 ## You are ready for the _"Action"_ phase / _Vous êtes prèt pour la phase « Action »_
 
-Congratulations! You can now run the _Python scripts_ you want `tests/*.py`. / _Félicitations ! Vous pouvez maintenant lancer les scripts Python que vous désirez `tests_fr/*.py`._
+Congratulations! You can now run the _Python scripts_ `tests/*.py`. / _Félicitations ! Vous pouvez maintenant lancer les scripts Python `tests_fr/*.py`._
 
 - ☄️ To Do - Dashboard / _Tableau de bord_
   `python3 src/gui/DASHBOARD.py` / `python3 src/gui/DASHBOARD_fr.py`
