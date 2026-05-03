@@ -28,8 +28,8 @@ Pour garantir une configuration optimale de l'architecture neuronale d'_aNA IA_,
 
 Avant de commencer, assurez-vous d'avoir les éléments suivants à portée de main :
 
-- **Git** : Assurez-vous de cloner _[aNA-ai.git](https://github.com/theriaubenoit-ops/aNA-ai.git)_.
-- **Python 3.10+** : Vous disposez du moteur de base _(gratuit)_.
+- [ ] **Git** : Assurez-vous de cloner _[aNA-ai.git](https://github.com/theriaubenoit-ops/aNA-ai.git)_.
+- **Python 3.10+** : Vous disposez du moteur de base _(voir plus bas)_.
 - **Connaissance de l'environnement virtuel** : Utilisez strictement `venv` pour protéger l'intégrité de votre système.
 
 ### Notions de base _(Terminal)_
@@ -52,18 +52,18 @@ Veuillez consulter le guide correspondant à votre système d'exploitation :
 
 Pour une expérience optimale, utilisez **PowerShell** ou **Git Bash**.
 
-- **Installation de Python** : Téléchargez-le via le _Microsoft Store_ ou _python.org_. **Important :** Cochez la case _"Add Python to PATH"_ lors de l'installation.
-- **Clonage** :
+- [ ] **Installation de Python** : Téléchargez-le via le _Microsoft Store_ ou _python.org_. **Important :** Cochez la case _"Add Python to PATH"_ lors de l'installation.
+- [ ] **Clonage** :
   ```powershell
   git clone https://github.com/theriaubenoit-ops/aNA-ai.git
   cd aNA-ai
   ```
-- **Environnement Virtuel** :
+- [ ] **Environnement Virtuel** :
   ```powershell
   python -m venv venv
   .\venv\Scripts\activate
   ```
-- **Dépendances** :
+- [ ] **Dépendances** :
 
   ```powershell
   pip install -r requirements.txt
@@ -77,19 +77,19 @@ Pour une expérience optimale, utilisez **PowerShell** ou **Git Bash**.
 
 Sur _Mac_, l'utilisation du terminal est fluide, mais nécessite parfois des permissions administratives.
 
-- **Ouvrir le Terminal** : Appuyez sur `Cmd + Espace` et tapez "Terminal".
-- **Installation de Python** : Vérifiez avec `python3 --version`. Si absent, téléchargez-le sur _python.org_.
-- **Clonage & Dossier** :
+- [ ] **Ouvrir le Terminal** : Appuyez sur `Cmd + Espace` et tapez "Terminal".
+- [ ] **Installation de Python** : Vérifiez avec `python3 --version`. Si absent, téléchargez-le sur _python.org_.
+- [ ] **Clonage & Dossier** :
   ```bash
   git clone https://github.com/theriaubenoit-ops/aNA-ai.git
   cd aNA-ai
   ```
-- **Environnement Virtuel** :
+- [ ] **Environnement Virtuel** :
   ```bash
   python3 -m venv venv
   source venv/bin/activate
   ```
-- **Dépendances** :
+- [ ] **Dépendances** :
 
   ```bash
   pip install --upgrade pip
@@ -106,12 +106,12 @@ Sur _Mac_, l'utilisation du terminal est fluide, mais nécessite parfois des per
 
 L'installation sur _Linux_ nécessite souvent de mettre à jour les paquets système d'abord.
 
-- **Mise à jour & Prérequis** :
+- [ ] **Mise à jour & Prérequis** :
   ```bash
   sudo apt update
   sudo apt install python3-venv python3-pip git
   ```
-- **Installation** :
+- [ ] **Installation** :
 
   ```bash
   git clone https://github.com/theriaubenoit-ops/aNA-ai.git
