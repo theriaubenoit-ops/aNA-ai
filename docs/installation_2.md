@@ -84,7 +84,7 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
 
   `python3 src/tests/test_pulse.py`
 
-- [ ] ☄️ Validates the biological consistency of the neuromodulator and neuron implementation / _Valide la cohérence biologique de l'implémentation du neuromodulateur et du neurone_:
+- [ ] ☄️ Validates the consistency of the neuromodulator and neuron / _Valide la cohérence du neuromodulateur et du neurone_:
 
   `python3 src/tests/test_stress_and_bio-coherence.py`
 
