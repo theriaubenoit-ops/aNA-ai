@@ -36,7 +36,7 @@ _Thank you for being part of this journey to bring **aNA** to life!_
 
 In the **aNA** AI Project, the _[thalamic_hub(.py)](/src/anatomy/subcortical/thalamic_hub.py)_ acts as the central multimodal sensory integrator. Unlike traditional _AI data routers_, the **Hub** operates as a biological _"Gate,"_ simulating the **thalamocortical loops** that define _human focus_ and situational awareness.
 
-**☄️ Striatum:** Executive Gating & Metabolic Arbitration, the Striatum serves as the primary _"Gatekeeper"_ of the **aNA** organism. It manages the flow of information between the _[thalamic_hub(.py)](/src/anatomy/subcortical/thalamic_hub.py)_ and the _[neocortex(.py)](/src/anatomy/cortical/neocortex.py)_.
+**☄️ Striatum:** Executive Gating & Metabolic Arbitration, the _[striatum(.py)](/src/anatomy/subcortical/striatum.py)_ serves as the primary _"Gatekeeper"_ of the **aNA** organism. It manages the flow of information between the _[thalamic_hub(.py)](/src/anatomy/subcortical/thalamic_hub.py)_ and the _[neocortex(.py)](/src/anatomy/cortical/neocortex.py)_.
 
 **☄️ _NMDA_ Lock & Homeostasis:** Development of the energy _safety lock (ATP Critical Min)_ to protect _neural integrity_ in case of _fatigue_.
 
