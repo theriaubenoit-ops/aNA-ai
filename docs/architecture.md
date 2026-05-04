@@ -245,8 +245,7 @@ Processing Hierarchy:
 │   ├── anatomy/                        # Brain region implementations
 │   │   ├── base/
 │   │   │   ├── neuron.py               # Represents a single neuron
-│   │   │   ├── neuromodulator.py       # Chemical "gain controls"
-│   │   │   └── striatum.py             # 🚧 The Action Selector
+│   │   │   └── neuromodulator.py       # Chemical "gain controls"
 │   │   ├── cortical/
 │   │   │   ├── frontal.py              # 🔶 Executive Logic & Command Center
 │   │   │   ├── cortical_column.py      # Vertical organization of 6 cortical layers
@@ -263,7 +262,8 @@ Processing Hierarchy:
 │   │   └── subcortical
 │   │       ├── cerebellum.py           # Timing Engine & Output Calibration
 │   │       ├── thalamic_hub.py         # 🔶 Thalamic Hub
-│   │       └── thalamus.py             # Enhanced Thalamus implementation
+│   │       ├── thalamus.py             # Enhanced Thalamus implementation
+│   │       └── striatum.py             # 🔶 The Action Selector
 │   ├── core/                           # Core neural components
 │   │   ├── input_tactile.py            # 🔶 Input tactile
 │   │   ├── input_visual.py             # 🔶 Input visual
