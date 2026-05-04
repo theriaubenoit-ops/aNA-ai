@@ -32,8 +32,8 @@ from anatomy.cortical.cortical_column import (
 )
 
 class Neocortex:
-    def __init__(self, chemical_core):
-        self.chemical_core = chemical_core
+    def __init__(self, chemical):
+        self.chemical = chemical
         
         # --- INITIALISATION BASÉE SUR LE REGISTRE ---
         # On s'assure que le dictionnaire d'instances existe dans le registre central
@@ -74,17 +74,16 @@ class Neocortex:
         intensity = payload.get("intensity", 0.0)
         
         # 1. Extraction de la matrice neuromodulatrice
-        current_mods = self.chemical_core.get_matrix()
+        current_mods = self.chemical.get_matrix()
         
         # 2. TRAITEMENT PARALLÈLE (Vitesse Biologique)
         # On lance l'Occipital (Quoi/Vision) et le Parietal (Où/Espace) en même temps
         tasks = [
-            self.occipital.process_visual_flow(intensity, current_mods),
+            self.occipital.process_visual_flow(payload.get("char", "unknown"), intensity, current_mods),
             self.parietal.process_spatial_flow(intensity, current_mods)
         ]
-        
         visual_res, spatial_res = await asyncio.gather(*tasks)
-        
+
         # 3. INTÉGRATION SÉMANTIQUE (Temporal)
         # Fusion des flux pour identification
         recognition_score = await self.temporal.integrate(

@@ -229,10 +229,15 @@ class CorticalLobe: # La classe de base
     - Biological efficiency cascades
     """
 
-    def __init__(self, position: np.ndarray):
-        self.position = position
+    def __init__(self, position=None, hippo_unit=None, **kwargs):
+        # 1. Gestion de la position 
+        self.position = position if position is not None else np.array([0,0,0])
+
+        # 2. Capture de l'hippocampe (v5.3)
+        self.hippo_unit = hippo_unit or kwargs.get('hippo_unit', None)
         
         # Initialize all layers
+        self.neurons = []
         self.layer1 = LayerI()
         self.layer4 = LayerIV()
         self.layer23 = LayerII_III()
