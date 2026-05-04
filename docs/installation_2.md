@@ -50,7 +50,7 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
 
 ![ ](/docs/assets/spacer16x16.png)
 
-### 🔴 Cognitive Core & Memory:
+### 🔴 Cognitive Core & Memory
 
 - [ ] ☄️ Synaptic Consolidation & Pattern Encoding / _Consolidation synaptique et encodage des schémas_:
 
@@ -78,7 +78,7 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
 
 ![ ](/docs/assets/spacer16x16.png)
 
-### 🟠 Metabolic & Rhythmic Foundation:
+### 🟠 Metabolic & Rhythmic Foundation
 
 - [ ] ☄️ Neural Oscillations & Temporal Sync / _Oscillations neuronales et synchronisation temporelle_:
 
@@ -106,7 +106,7 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
 
 ![ ](/docs/assets/spacer16x16.png)
 
-### 🟡 Sensory Control & Action Gating:
+### 🟡 Sensory Control & Action Gating
 
 - [ ] ☄️ Sensory Gating & Signal Routing / _Filtrage sensoriel et routage des signaux_:
 
@@ -140,7 +140,7 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
 
 ![ ](/docs/assets/spacer16x16.png)
 
-### 🟢 Emotional & Trauma Logic:
+### 🟢 Emotional & Trauma Logic
 
 - [ ] Amygdala Alert Response / _Réponse d'alerte de l'amygdale_:
 
@@ -162,7 +162,7 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
 
 ![ ](/docs/assets/spacer16x16.png)
 
-### 🔵 Motor Control & Calibration:
+### 🔵 Motor Control & Calibration
 
 - [ ] Motor Precision & Error Correction / _Précision motrice et correction des erreurs_:
 
