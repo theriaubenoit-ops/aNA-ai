@@ -30,11 +30,11 @@ from config import get_config
 from registry import ORGANS
 
 class ThalamicHub:
-    def __init__(self, thalamus_core):
+    def __init__(self, thalamus):
         """
         Initialise le hub en se liant au coeur du Thalamus pour la gestion du rythme.
         """
-        self.core = thalamus_core
+        self.core = thalamus
         self.sensory_buffers = {
             "VPL": None,  # Haptic
             "CGL": None,  # Visual
@@ -71,7 +71,9 @@ class ThalamicHub:
              await asyncio.sleep(0.1)
 
         # 4. Envoi au Thalamus Core pour traitement et impact sur le BPM
-        result = await self.core.process_payload(payload, l6_feedback=0.5)
+        # result = await self.core.process_payload(payload, l6_feedback=0.5)
+        # result = await self.core.process_payload(payload, self.core.neuromod, l6_feedback=0.5)
+        result = await self.core.process_payload(payload, self.core.neurom, l6_feedback=0.5)
         
         # 5. Simulation de la projection corticale
         self.sensory_buffers[target_nucleus] = payload
@@ -128,7 +130,8 @@ class ThalamicHub:
 
         # 2. Transmission au Thalamus Core pour modulation du BPM
         # Le Core va traiter le signal et ajuster le rythme cardiaque (Pulse)
-        result = await self.core.process_payload(payload, l6_feedback=0.5)
+        # result = await self.core.process_payload(payload, l6_feedback=0.5)
+        result = await self.core.process_payload(payload, self.core.neurom, l6_feedback=0.5)
         # On injecte l'intensité calculée (filtrée) dans le résultat pour le Neocortex
         result['intensity'] = effective_intensity
         result['gain'] = thalamic_gain
