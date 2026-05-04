@@ -3,7 +3,7 @@
 """
 Striatum implementation for aNA AI Project v5.3 - The Action Selector
 
-Communicates with: Input: Input: (<- Cortical Inputs) | Output: (-> Output Gateway) (-> Thalamic Gating) # À changer pour quelque chose de plus en lien avec les modules existants.
+Communicates with: Input: Input: (<- Cortical Inputs - L5/L6 intent & motor plans) (<- Limbic System - consolidated emotional valence & urgency) (<- Chemical Matrix (Neuromodulateur)) | Output: (-> Output Gateway) (-> Thalamic Hub - RTN Gating& signal clearance)
 
 Description: This module implements the Striatum as the central action selector of aNA. It integrates cortical inputs related to potential actions and their predicted outcomes, evaluating them based on learned associations and current neuromodulatory states. The Striatum then selects the most appropriate action, sending motor commands to the output system and gating instructions to the Thalamus to facilitate or inhibit sensory processing based on the selected action.
 
