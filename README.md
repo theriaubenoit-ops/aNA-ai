@@ -124,6 +124,7 @@ python3 src/tests/test_cortical_column.py
 
 - ☄️ **[Thalamic Hub(.py)](/src/anatomy/subcortical/thalamic_hub.py) _(Central Integration & Signal Arbitration)_:** The _high-level manager_ of _sensory convergence_. It ensures that _visual, auditory, and haptic streams_ are synchronized before being projected to the _cortex_. It doesn't just _route packets_; it decides the routing strategy based on the chemical state _([neuromodulators(.py)](/src/anatomy/base/neuromodulator.py))_ and _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ priorities.
   - ☄️ **[Thalamus(.py)](/src/anatomy/subcortical/thalamus.py) _(Sensory Gateway & Packet Router)_:** The primary relay station. It manages the _physical gating of signals_ through _"gain control,"_ directly influenced by the system's current _BPM and L6 feedback_. It executes the _gain modulation_ to prevent _"system overflow"_ by dropping irrelevant background _noise_.
+  - ☄️ **[Striatum(.py)](/src/anatomy/subcortical/striatum.py) _(Executive Gating & Metabolic Arbitration)_** The _Striatum_ serves as the primary _"Gatekeeper"_ of the **aNA** organism. Positioned at the crossroads of the _Basal Ganglia_, it manages the flow of information between the _Thalamic Hub_ and the _Neocortex_.
 
 - **[Cerebellum(.py)](/src/anatomy/subcortical/cerebellum.py) _(Timing Engine & Output Calibration)_:** This unit specializes in _fine-tuning motor_ and _cognitive outputs_. In **aNA**, it ensures that the _"Thinking Shell" ([neocortex(.py)](/src/anatomy/cortical/neocortex.py))_ functions with perfect _mathematical synchronization_.
   - **Key role:** It acts as a _calibration layer_ for fluid, real-time interactions. While the _[pulse(.py)](/src/core/pulse.py)_ provides the _basic rhythm_, the _[cerebellum(.py)](/src/anatomy/subcortical/cerebellum.py)_ corrects _micro-timing errors_ to prevent _jitter_ in _data processing_ and _system response_.
@@ -191,4 +192,4 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-28_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-05_
