@@ -11,6 +11,45 @@ Architecture, concept and supervision: Benoit Theriault
 Collaboration, research and code: Gemini
 """
 
+import os
+import sys
+import json
+
+# --- TEMPERAMENT SELECTOR / SÉLECTEUR DE TEMPERAMENT (FR) ---
+# This section allows users to select a predefined temperament profile, which adjusts the AI's parameters to create different behavioral tendencies.
+# Cette section permet aux utilisateurs de sélectionner un profil de tempérament prédéfini, qui ajuste les paramètres de l'IA pour créer différentes tendances comportementales.
+ACTIVE_PROFILE = "HIGH_PERFORMER"
+
+PROFILES = {
+    "HIGH_PERFORMER": {
+        "AMYGDALA_SENSITIVITY": 0.5,
+        "THALAMIC_THRESHOLD": 0.35,
+        "ATP_CONSUMPTION": 0.001,
+        "THRESHOLD_NMDA": 0.1,
+        "MYELIN_EFFICIENCY_COEFF": 2.0
+    },
+    "AVERAGE": {
+        "AMYGDALA_SENSITIVITY": 1.0,
+        "THALAMIC_THRESHOLD": 0.15,
+        "ATP_CONSUMPTION": 0.003,
+        "THRESHOLD_NMDA": 0.25,
+        "MYELIN_EFFICIENCY_COEFF": 1.5
+    },
+    "TIRED": {
+        "AMYGDALA_SENSITIVITY": 1.8,
+        "THALAMIC_THRESHOLD": 0.05, # Très bas, le portier est trop fatigué pour filtrer
+        "ATP_CONSUMPTION": 0.005,
+        "THRESHOLD_NMDA": 0.5, # Besoin de plus de répétitions pour verrouiller les souvenirs
+        "MYELIN_EFFICIENCY_COEFF": 1.0
+    }
+}
+selected = PROFILES[ACTIVE_PROFILE]
+AMYGDALA_SENSITIVITY      = selected["AMYGDALA_SENSITIVITY"]
+THALAMIC_THRESHOLD        = selected["THALAMIC_THRESHOLD"]
+ATP_CONSUMPTION           = selected["ATP_CONSUMPTION"]
+THRESHOLD_NMDA            = selected["THRESHOLD_NMDA"]
+MYELIN_EFFICIENCY_COEFF   = selected["MYELIN_EFFICIENCY_COEFF"]
+
 # -  -  -  -  ARCHITECTURAL MANIFESTO / MANIFESTE ARCHITECTURAL (FR) -  -  -  -  - #
 #  "The inclusion of these specific biological modules is not a stylistic choice,  #
 #  but a mechanical necessity. Their presence is vital for systemic function,      #
@@ -22,20 +61,16 @@ Collaboration, research and code: Gemini
 #  (World Model) réellement ancré."                                                #
 # -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  #
 
-# ===================================================================================================
-#  SEE PROFILES NEURAL PERFORMANCE (BELOW) / VOIR PROFILS DE PERFORMANCES NEURALES (CI-DESSOUS) (FR)
-# ===================================================================================================
-
 # --- PERSONALITY HYPERPARAMETERS / HYPER-PARAMÈTRES DE PERSONNALITÉ (FR) ---
 # AMYGDALA_SENSITIVITY = 0.5       # Amygdala Sensitivity Min: 0.1 (unperturbed) Max: 2.0 (hyper-reactive) / Sensibilité de l'amygdale 
 ADRENALINE_RELEASE_FACTOR = 0.4    # Adrenaline Release Factor Min: 0.1 (calm) Max: 1.0 (explosive) / Facteur de libération d'adrénaline 
-# ACH_ATTENTION_MULTIPLIER = 1.5     # Acetylcholine Attention Multiplier Min: 0.5 (distracted) Max: 2.0 (hyper-focused) / Multiplicateur d'attention à l'acétylcholine
-# ATTENTION_MIN_GAIN = 0.01          # Minimum attention gain Min: 0.01 (distracted) Max: 0.10 (always attentive) / Gain d'attention minimum
-# L23_EFFICIENCY = 0.85              # Layer II/III Efficiency Min: 0.1 (inefficient) Max: 0.99 (ultra-efficient) / Efficacité des couches II/III (intégration corticale)
-# L4_EFFICIENCY = 0.90               # Layer IV Efficiency Min: 0.1 (inefficient) Max: 0.99 (ultra-efficient) / Efficacité de la couche IV (réception thalamique)
-# L5_EFFICIENCY = 0.85               # Layer V Efficiency Min: 0.1 (inefficient) Max: 0.99 (ultra-efficient) / Efficacité de la couche V (commande motrice)
-# L6_EFFICIENCY = 0.80               # Layer VI Efficiency Min: 0.1 (inefficient) Max: 0.99 (ultra-efficient) / Efficacité de la couche VI (rétroaction corticale)
-# L6_GAIN = 0.8                      # Cortical Brake Strength Min: 0.0 (no brake) Max: 2.0 (total inhibition) / Force du frein cortical 
+ACH_ATTENTION_MULTIPLIER = 1.5     # Acetylcholine Attention Multiplier Min: 0.5 (distracted) Max: 2.0 (hyper-focused) / Multiplicateur d'attention à l'acétylcholine
+ATTENTION_MIN_GAIN = 0.01          # Minimum attention gain Min: 0.01 (distracted) Max: 0.10 (always attentive) / Gain d'attention minimum
+L23_EFFICIENCY = 0.85              # Layer II/III Efficiency Min: 0.1 (inefficient) Max: 0.99 (ultra-efficient) / Efficacité des couches II/III (intégration corticale)
+L4_EFFICIENCY = 0.90               # Layer IV Efficiency Min: 0.1 (inefficient) Max: 0.99 (ultra-efficient) / Efficacité de la couche IV (réception thalamique)
+L5_EFFICIENCY = 0.85               # Layer V Efficiency Min: 0.1 (inefficient) Max: 0.99 (ultra-efficient) / Efficacité de la couche V (commande motrice)
+L6_EFFICIENCY = 0.80               # Layer VI Efficiency Min: 0.1 (inefficient) Max: 0.99 (ultra-efficient) / Efficacité de la couche VI (rétroaction corticale)
+L6_GAIN = 0.8                      # Cortical Brake Strength Min: 0.0 (no brake) Max: 2.0 (total inhibition) / Force du frein cortical 
 TRAUMA_NORA_THRESHOLD = 0.6        # Trauma Threshold for Noradrenaline Min: 0.1 (low trauma) Max: 0.9 (high trauma) / Seuil de traumatisme pour la noradrénaline
 FLASH_MYELIN_BOOST = 0.05          # Myelin boost during flash engraving Min: 0.01 (subtle) Max: 0.10 (dramatic) / Boost de myéline lors de la gravure flash
 BIOLOGICAL_ACCURACY_TARGET = 0.65  # Target for biological realism (0.0 to 1.0) Min: 0.0 (abstract) Max: 1.0 (fully biological) / Cible pour le réalisme biologique (0.0 à 1.0)
@@ -53,7 +88,7 @@ THALAMUS_DECAY_FACTOR = 0.15       # Speed ​​of return to rest (0.1 = 10% pe
 RECOGNITION_METABOLIC_DROP = 6.0   # Target BPM reduction upon pattern match (no savings) Max: 10.0 (high efficiency) / Une reconnaissance réduit le BPM cible
 
 # --- ENERGY THRESHOLDS / SEUILS ÉNERGÉTIQUES (FR) ---
-# ATP_CRITICAL_THRESHOLD = 0.10      # Transition to REFRACTORY_REST mode Min: 0.05 (very critical) Max: 0.30 (less critical) / Passage en mode REFRACTORY_REST 
+ATP_CRITICAL_THRESHOLD = 0.10      # Transition to REFRACTORY_REST mode Min: 0.05 (very critical) Max: 0.30 (less critical) / Passage en mode REFRACTORY_REST 
 ATP_FATIGUE_ZONE = 0.40            # Hypervigilance Trigger Min: 0.30 (rapid fatigue) Mid: (0.15 and 0.40) Max: 0.60 (late fatigue) / Déclenchement de l'hyper-vigilance 
 # ATP_CONSUMPTION = 0.001          # Fatigue per cycle Min: 0.001 (endurance) Max: 0.005 (rapid depletion) / Fatigue par cycle
 RECOVERY_RATE = 0.05               # ATP Recharge Rate (Sleep) Min: 0.01 (slow recovery) Max: 0.20 (rapid recovery) / Vitesse de recharge ATP (Sommeil)
@@ -67,19 +102,20 @@ ATP_CRITICAL_MIN = 0.20            # Parameter for the future "NMDA_Lock" Min: 0
 CURRENT_ATP = 1.0                  # Current energy level  Min: 0.15 (Survival Threshold) Max: 1.20 (Hyper-Vigilance) / Niveau d'énergie actuel
 ENCODE_THRESHOLD = 0.7             # Energy Required for Encoding Min: 0.1 (Everything is memorized) Max: 1.0 (Nothing is memorized without emotional shock) / Intensité requise pour la mémorisation 
 HIPPO_RECOVERY = 0.08              # Hippocampal energy recovery Min: 0.01 (Slow Recovery, Fatigue Quickly) Max: 0.20 (High Cognitive Endurance) / Récupération énergétique de l'Hippocampe 
-# SYNAPTIC_PLASTICITY = 0.05         # Baseline learning rate Min: 0.001 (slow learning) Max: 0.10 (fast learning) / Vitesse d'apprentissage de base
-# MYELIN_RATE = 0.04               # Pathway strengthening rate Min: 0.001 (slow wiring) Max: 0.05 (fast wiring) / Vitesse de renforcement des chemins 
+SYNAPTIC_PLASTICITY = 0.05         # Baseline learning rate Min: 0.001 (slow learning) Max: 0.10 (fast learning) / Vitesse d'apprentissage de base
+MYELIN_RATE = 0.04               # Pathway strengthening rate Min: 0.001 (slow wiring) Max: 0.05 (fast wiring) / Vitesse de renforcement des chemins 
 # MYELIN_EFFICIENCY_COEFF = 1.5      # Richness of the wiring Min: 1.0 (standard) Max: 2.5  (super-conducteur)/ Richesse du câblage 
 MAX_MYELIN_DENSITY = 1.0           # Maximum synaptic insulation. Min: 0.1 (raw fiber) Max: 1.0 (fully myelinated) / Densité maximale de myéline (isolation synaptique)
-# CORTICAL_RESONANCE_FACTOR = 0.9    # Prediction persistence  Min: 0.10 (unstable) Max: 0.95 (stable) / Persistance de la prédiction 
+CORTICAL_RESONANCE_FACTOR = 0.9    # Prediction persistence  Min: 0.10 (unstable) Max: 0.95 (stable) / Persistance de la prédiction 
 BASE_CONDUCTIVITY = 0.7            # Neural flow concept Min: 0.1 (Slow/Viscous Flux) Max: 1.0 (Instantaneous/Fluid Flux) / Concept de flux neuronal 
 MIN_RESISTANCE = 0.1               # Minimum synaptic resistance Min: 0.01 (Superconducting Synapses) Max: 0.2 (Always Resistant Synapses) / Résistance synaptique minimale 
+NEURON_PLASTICITY_DECAY = 0.9999   # Plasticity decay per cycle Min: 0.90 (rapid forgetting) Max: 0.9999 (long-term retention) / Décay de la plasticité par cycle
 
 # --- SIGNAL & DOPAMINE SETTINGS / RÉGLAGES DES SIGNAUX & DOPAMINE (FR) ---
 DOPA_INJECTION_NEW = 0.20          # Surprise (High Dopamine) Min: 0.05 (Little Surprise) Max: 0.50 (Extreme Surprise) / Surprise (Dopamine haute) 
 DOPA_INJECTION_KNOWN = 0.05        # Habit (Low Dopamine) Min: 0.01 (Little Dopamine) Max: 0.50 (Moderate Dopamine) / Habitude (Dopamine basse) 
 RTN_BASE_INHIBITION = 0.1          # Default Thalamic Silence Level Min: 0.0 (No Inhibition) Max: 0.5 (Strong Inhibition) / Niveau de silence thalamique par défaut 
-# NOISE_LEVEL = 0.01                 # Biological Realism (Background Noise) Min: 0.0 (No Noise) Max: 0.10 (A lot of noise; beyond this, the signal becomes unreadable) / Réalisme biologique (Bruit de fond)
+NOISE_LEVEL = 0.01                 # Biological Realism (Background Noise) Min: 0.0 (No Noise) Max: 0.10 (A lot of noise; beyond this, the signal becomes unreadable) / Réalisme biologique (Bruit de fond)
 
 # --- THALAMIC & SENSORY PARAMETERS / PARAMÈTRES THALAMIQUES & SENSORIELS (FR) ---
 # THALAMIC_THRESHOLD = 0.35          # THALAMIC THRESHOLD (Average human) Min: 0.05 (Anxious) Max: 0.45 (Stoic) / SEUIL THALAMIQUE
@@ -87,87 +123,19 @@ THALAMIC_REFRACTORY_PERIOD = 0.05  # RECOVERY TIME Min: 0.01 (Fast) Max: 0.20 (S
 
 # --- Relative importance of the senses / Importance relative des sens (FR) ---
 SENSORY_WEIGHTS = {                # AVERAGE HUMAN (visual priority) Total: 1.0 (Sensory weights) / HUMAIN MOYEN (priorité visuel) 
-    "haptic": 0.30,                # Min: 0.10 Max: 0.50 (responsive)
+    "haptic": 0.40,                # Min: 0.10 Max: 0.50 (responsive)
     "visual": 0.80,                # Min: 0.05 Max: 0.80 (visual dominates)
     "auditory": 0.50               # Min: 0.10 Max: 0.60 (attentive to noise)
 }
-
-# ===================================================================================================
-#  PROFILE: NEURAL PERFORMANCE CONFIGURATION / PROFIL : CONFIGURATION DES PERFORMANCES NEURALES (FR)
-# ===================================================================================================
-
-# --- OPTION A: HIGH-PERFORMING HUMAN (High Plasticity & Focus) ---
-# Maximum neuroplasticity, optimal stress management and thalamic focus.
-# """
-AMYGDALA_SENSITIVITY      = 0.5
-ACH_ATTENTION_MULTIPLIER  = 1.5
-ATTENTION_MIN_GAIN        = 0.01
-L23_EFFICIENCY            = 0.85
-L4_EFFICIENCY             = 0.90
-L5_EFFICIENCY             = 0.85
-L6_EFFICIENCY             = 0.80
-L6_GAIN                   = 0.8
-SYNAPTIC_PLASTICITY       = 0.05
-MYELIN_RATE               = 0.04
-MYELIN_EFFICIENCY_COEFF   = 2.0
-CORTICAL_RESONANCE_FACTOR = 0.9
-THALAMIC_THRESHOLD        = 0.35
-THRESHOLD_NMDA            = 0.4 # Best 0.9(main.py) 0.4(test_*.py)  
-ATP_CRITICAL_THRESHOLD    = 0.10
-ATP_CONSUMPTION           = 0.001
-NOISE_LEVEL               = 0.01
-# """
-
-# --- OPTION B: AVERAGE HUMAN (Standard Baseline) ---
-# The default values tested.
-"""
-AMYGDALA_SENSITIVITY      = 1.0
-ACH_ATTENTION_MULTIPLIER  = 1.0
-ATTENTION_MIN_GAIN        = 0.01
-L23_EFFICIENCY            = 0.85
-L4_EFFICIENCY             = 0.85
-L5_EFFICIENCY             = 0.85
-L6_EFFICIENCY             = 0.80
-L6_GAIN                   = 0.5
-SYNAPTIC_PLASTICITY       = 0.01
-MYELIN_RATE               = 0.03
-MYELIN_EFFICIENCY_COEFF   = 1.5
-CORTICAL_RESONANCE_FACTOR = 0.6
-THALAMIC_THRESHOLD        = 0.15
-THRESHOLD_NMDA            = 0.4
-ATP_CRITICAL_THRESHOLD    = 0.20
-ATP_CONSUMPTION           = 0.003
-NOISE_LEVEL               = 0.02
-"""
-
-# --- OPTION C: TIRED/SATURATED HUMAN (Saturated & Exhausted) ---
-# Low ATP, emotional hyper-reactivity, and encoding difficulty.
-"""
-AMYGDALA_SENSITIVITY      = 1.8
-ACH_ATTENTION_MULTIPLIER  = 0.5
-ATTENTION_MIN_GAIN        = 0.05
-L23_EFFICIENCY            = 0.80
-L4_EFFICIENCY             = 0.80
-L5_EFFICIENCY             = 0.80
-L6_EFFICIENCY             = 0.80
-L6_GAIN                   = 0.2
-SYNAPTIC_PLASTICITY       = 0.002
-MYELIN_RATE               = 0.01
-MYELIN_EFFICIENCY_COEFF   = 1.0
-CORTICAL_RESONANCE_FACTOR = 0.2
-THALAMIC_THRESHOLD        = 0.15
-THRESHOLD_NMDA            = 0.9
-ATP_CRITICAL_THRESHOLD    = 0.30
-ATP_CONSUMPTION           = 0.005
-NOISE_LEVEL               = 0.08
-"""
-
 
 def get_config():
     """
     Returns the complete configuration for injection into the organs. This function centralizes all the parameters, allowing for easy adjustments and ensuring that all components of the architecture are aligned with the same temperament settings.
     """
     return {
+        "ACTIVE_PROFILE": ACTIVE_PROFILE,
+        "PROFILES": PROFILES,
+        "ATTENTION_MIN_GAIN": ATTENTION_MIN_GAIN,
         "AMYGDALA_SENSITIVITY": AMYGDALA_SENSITIVITY,
         "ADRENALINE_RELEASE_FACTOR": ADRENALINE_RELEASE_FACTOR,
         "ACH_ATTENTION_MULTIPLIER": ACH_ATTENTION_MULTIPLIER,
@@ -209,6 +177,7 @@ def get_config():
         "RTN_BASE_INHIBITION": RTN_BASE_INHIBITION,
         "BASE_CONDUCTIVITY": BASE_CONDUCTIVITY,
         "MIN_RESISTANCE": MIN_RESISTANCE,
+        "NEURON_PLASTICITY_DECAY": NEURON_PLASTICITY_DECAY,
         "NOISE_LEVEL": NOISE_LEVEL,
         "MYELIN_EFFICIENCY_COEFF": MYELIN_EFFICIENCY_COEFF,
         "CORTICAL_RESONANCE_FACTOR": CORTICAL_RESONANCE_FACTOR,

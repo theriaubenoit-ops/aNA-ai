@@ -20,6 +20,7 @@ from PIL import Image
 # Gestion du path pour les imports locaux
 sys.path.append(os.path.abspath(os.path.dirname(__file__)))
 from config import get_config
+from registry import ORGANS
 from core.input_haptic import InputHapticGateway 
 from core.input_auditory import InputAuditoryGateway
 from core.input_visual import InputVisualGateway
@@ -60,7 +61,7 @@ async def main():
     # 1. Initialisation des moteurs
     config = get_config()
     chemical_core = Neuromodulator()
-    hippo = Hippocampus(config=config, neuromodulator_core=chemical_core)
+    hippo = Hippocampus(config=config, neuromodulator=chemical_core)
     heart = Pulse(bpm=config.get("BASE_BPM", 72.0))
     
     # Gateways Sensorielles
@@ -69,15 +70,15 @@ async def main():
     visual_gateway = InputVisualGateway() 
 
     # 2. Initialisation du Néocortex
-    visual_column = SimplifiedCorticalColumn(column_id="COL_V1")
+    visual_column = SimplifiedCorticalColumn(column_id="COL_V1") # ! Prochaine étape : À connecter au neocortex.py et aux lobes (occipital.py, frontal.py, parietal.py, temporal.py)
     
     # 3. Le Complexe Thalamique (Le Coeur + Le Hub de routage)
     thalamus = Thalamus(
         hippocampus=hippo, 
         pulse=heart, 
-        neuromodulator_core=chemical_core 
+        neuromodulator=chemical_core 
     )
-    hub = ThalamicHub(thalamus_core=thalamus) # Centralisation multimodal v5.3
+    hub = ThalamicHub(thalamus=thalamus) # Centralisation multimodal v5.3
     
     base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     
@@ -85,9 +86,9 @@ async def main():
 
     # Path: src/tests/media_haptic/(More tests)...
     # haptic_dir = ["a", "N", "A", " ", "a", "N", "A", " ", "a", "N", "A", " ", "a", "N", "A", " ", "a", "N", "A", " ", "a", "N", "A", " ", "B", "A", "N", "A", "N", "A", "S"]
-    # haptic_dir  = ["B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", " ", "你"]
-    # haptic_dir  = ["H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "o", "l", "a", " ", "O", "l", "á", " ", "你", "好", " ", "H", "i"]
-    # haptic_dir  = ["H", "e", "l", "l", "o", " ", "H", "e", "l", "l", "o", " ", "H", "e", "l", "l", "o", " ", "H", "e", "l", "l", "o", " ", "H", "o", "l", "a", " ", "你", "好", " ", "H", "e", "l", "l", "o"]
+    # haptic_dir = ["B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", " ", "你"]
+    # haptic_dir = ["H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "o", "l", "a", " ", "O", "l", "á", " ", "你", "好", " ", "H", "i"]
+    # haptic_dir = ["H", "e", "l", "l", "o", " ", "H", "e", "l", "l", "o", " ", "H", "e", "l", "l", "o", " ", "H", "e", "l", "l", "o", " ", "H", "o", "l", "a", " ", "你", "好", " ", "H", "e", "l", "l", "o"]
     haptic_dir = ["H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "e", "你", "l", "你", "l", "你", "o", "你", "H"]
 
     # Path: src/tests/media_visual/...
@@ -114,8 +115,6 @@ async def main():
     
     for cycle, char in enumerate(all_haptics, 1):
         # --- PHASE A : ANALYSE PRÉDICTIVE (Feedback L6) ---
-        # cortical_results = await visual_column.process_input(char, hippo)
-        # l6_signal = cortical_results['l6_feedback']
         
         # --- PHASE B : CAPTURE DES PAYLOADS ---
         # VISUEL (Utilisation de la liste déjà reçue)
@@ -251,7 +250,7 @@ async def main():
         status_label = "Confirmé !" if knowledge_score > 0.8 else "Apprentissage..."
         
         print(f"  ├─ Reconnaissance de motifs (Hippo)  : {knowledge_score:.2%} {status_label}")
-        print(f"  ├─ Thalamic (bpm)                    : {thalamus.current_bpm:.1f} (vitalité: {(status['vitality']* 100 ):.2f}%)")
+        print(f"  ├─ Thalamic (bpm)                    : {thalamus.current_bpm:.1f} (vitalité: {(status['vitality']* 100 ):.2f}% test seulement)")
         
         # Performances et Biologie
         print(f"  ├─ Vitesse synaptique (ms)           : {1.0 + avg_myeline:.2f}x (latence: {synaptic_latency:.4f}s)")

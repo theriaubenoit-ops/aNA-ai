@@ -59,6 +59,13 @@ ORGANS = {
         "DESCRIPTION": "Hierarchical structure enabling real-time internal world representation."
     },
     "SUBKORTICAL_SYSTEMS": { 
+        "STRIATUM": {
+            "NAME": "The Action Selector",
+            "FUNCTION": "Gating and Action Selection",
+            "INPUTS": ["CorticalL5", "LimbicDopamine"],
+            "OUTPUTS": ["Thalamic_RTN_Inhibition", "MotorControl"],
+            "DESCRIPTION": "Arbitrates between cortical intents based on emotional value and ATP cost."
+        },
         "LIMBIC_SYSTEM": {
             "AMYGDALA": {"FUNCTION": "Emotional Pulse & Threat Assessment"},
             "HIPPOCAMPUS": "Initialized via separate registry"

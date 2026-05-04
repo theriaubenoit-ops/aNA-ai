@@ -61,7 +61,7 @@ async def main():
     # 1. Engine initialization
     config = get_config()
     chemical_core = Neuromodulator()
-    hippo = Hippocampus(config=config, neuromodulator_core=chemical_core)
+    hippo = Hippocampus(config=config, neuromodulator=chemical_core)
     heart = Pulse(bpm=config.get("BASE_BPM", 72.0))
     
     # Sensory Gateways
@@ -76,9 +76,9 @@ async def main():
     thalamus = Thalamus(
         hippocampus=hippo, 
         pulse=heart, 
-        neuromodulator_core=chemical_core 
+        neuromodulator=chemical_core 
     )
-    hub = ThalamicHub(thalamus_core=thalamus) # Centralisation multimodal v5.3
+    hub = ThalamicHub(thalamus=thalamus) # Centralisation multimodal v5.3
     
     base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -109,14 +109,12 @@ async def main():
     # On définit un status par défaut pour le premier cycle
     status = {
         'bpm': thalamus.current_bpm,
-        'vitality': 1.0
+        'vitality': 1.0 # Test seulement 
     }
     l6_signal = 0.0
-    
+
     for cycle, char in enumerate(all_haptics, 1):
         # --- PHASE A : PREDICTIVE ANALYSIS (Feedback L6) ---
-        # cortical_results = await visual_column.process_input(char, hippo)
-        # l6_signal = cortical_results['l6_feedback']
         
         # --- PHASE B : CAPTURE OF THE PAYLOADS ---
         # VISUAL (Using the list already received)
@@ -251,7 +249,7 @@ async def main():
         status_label = "Confirmed!" if knowledge_score > 0.8 else "Learning..."
 
         print(f"  ├─ Pattern Match (Hippo)    : {knowledge_score:.2%} {status_label}")
-        print(f"  ├─ Thalamic (bpm)           : {thalamus.current_bpm:.1f} (vitality: {(status['vitality']* 100 ):.2f}%)")
+        print(f"  ├─ Thalamic (bpm)           : {thalamus.current_bpm:.1f} (vitality: {(status['vitality']* 100 ):.2f}% test only)")
         
         # Performance and Biology
         print(f"  ├─ Synaptic Speed (ms)      : {1.0 + avg_myeline:.2f}x (latency: {synaptic_latency:.4f}s)")
