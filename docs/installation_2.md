@@ -168,6 +168,8 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
 
   **Note**: To run web demos on local server, use ```python3 -m http.server 8000` from the root directory.
 
+![ ](/docs/assets/spacer16x16.png)
+
 ☄️ _Spotlight_
 
 ###### _\*Each measurement presented is a digital bridge to biological reality, designed to synthesize the fundamental principles of living systems._
