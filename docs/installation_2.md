@@ -26,7 +26,7 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
 
 ![ ](/docs/assets/spacer16x16.png)
 
-### Main
+## Main
 
 - [ ] ☄️ In progress - Global Workspace / _Espace de travail global_:
 
@@ -34,7 +34,7 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
 
 ![ ](/docs/assets/spacer16x16.png)
 
-### Dashboard
+## Dashboard
 
 - [ ] ☄️ To Do - Dashboard / _Tableau de bord_:
 
@@ -124,7 +124,7 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
 
 ![ ](/docs/assets/spacer16x16.png)
 
-### Demonstrations
+## Demonstrations
 
 - [ ] To Do - Launch _Web-based interfaces_ (e.g., "http://localhost:8000/examples/basic-demo.html").
 
