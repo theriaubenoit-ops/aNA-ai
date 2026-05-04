@@ -26,7 +26,7 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
 
 ![ ](/docs/assets/spacer16x16.png)
 
-**Main**
+### Main
 
 - [ ] ☄️ In progress - Global Workspace / _Espace de travail global_:
 
@@ -34,7 +34,7 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
 
 ![ ](/docs/assets/spacer16x16.png)
 
-**Dashboard**
+### Dashboard
 
 - [ ] ☄️ To Do - Dashboard / _Tableau de bord_:
 
@@ -42,7 +42,7 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
 
 ![ ](/docs/assets/spacer16x16.png)
 
-**Cognitive Core & Memory _(tests)_:** `tests/*.py` / `tests_fr/*.py`
+### Cognitive Core & Memory _(tests)_: `tests/*.py` / `tests_fr/*.py`
 
 - [ ] ☄️ Synaptic Consolidation & Pattern Encoding / _Consolidation synaptique et encodage des schémas_:
 
@@ -60,7 +60,7 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
 
   `python3 src/tests/test_cortical_column.py`
 
-**Metabolic & Rhythmic Foundation _(tests)_:**
+### Metabolic & Rhythmic Foundation _(tests)_:
 
 - [ ] ☄️ Neural Oscillations & Temporal Sync / _Oscillations neuronales et synchronisation temporelle_:
 
@@ -78,7 +78,7 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
 
   `python3 src/tests/test_metabolic_shutdown.py`
 
-**Sensory Control & Action Gating _(tests)_:**
+### Sensory Control & Action Gating _(tests)_:
 
 - [ ] ☄️ Sensory Gating & Signal Routing / _Filtrage sensoriel et routage des signaux_:
 
@@ -100,7 +100,7 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
 
   `python3 src/tests/test_thalamic_l6_feedback.py`
 
-**Emotional & Trauma Logic _(tests)_:**
+### Emotional & Trauma Logic _(tests)_:
 
 - [ ] Homeostatic Stress & Alert Response / _Réponse homéostatique au stress et à l'alerte_:
 
@@ -114,7 +114,7 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
 
   `python3 src/tests/test_trauma_logic.py`
 
-**Motor Control & Calibration _(tests)_:**
+### Motor Control & Calibration _(tests)_:
 
 - [ ] Motor Precision & Error Correction / _Précision motrice et correction des erreurs_:
 
@@ -122,7 +122,7 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
 
 ![ ](/docs/assets/spacer16x16.png)
 
-**Demonstrations**
+### Demonstrations
 
 - [ ] To Do - Launch _Web-based interfaces_ (e.g., "http://localhost:8000/examples/basic-demo.html").
 
@@ -140,7 +140,7 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
 
 ![ ](/docs/assets/spacer16x16.png)
 
-### Contributing and Communicating _(GitHub Workflow)_ / _Contribution et communication (Flux de travail GitHub)_
+## Contributing and Communicating _(GitHub Workflow)_ / _Contribution et communication (Flux de travail GitHub)_
 
 - [ ] Issues: "Open an issue for any questions or bug reports."
 
