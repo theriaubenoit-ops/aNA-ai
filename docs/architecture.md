@@ -271,8 +271,8 @@ Processing Hierarchy:
 │   │   ├── output_gateway.py           # 🚧 Input gateway
 │   │   └── pulse.py                    # Core Pacemaker (Pulse)
 │   ├── gui/                            # Web-based interface
-│   │   ├── dashboard.py                # 🚧 Dashboard
-│   │   └── dashboard_fr.py             # 🚧 Tableau de bord (FR)
+│   │   ├── DASHBOARD.py                # 🚧 Dashboard
+│   │   └── DASHBOARD_fr.py             # 🚧 Tableau de bord (FR)
 │   ├── tests/
 │   │   ├── media_audio/                # 🔶 Media audio
 │   │   │   ├── other/
@@ -287,8 +287,8 @@ Processing Hierarchy:
 │   ├── tests_fr/
 │   │   └── test_*.py                   # Suite de tests complète (FR)
 │   ├── config.py                       # 🔶 Configuration Module
-│   ├── main.py                         # 🔶 The orchestrator
-│   ├── main_fr.py                      # 🔶 L'orchestrateur (FR)
+│   ├── MAIN.py                         # 🔶 The orchestrator
+│   ├── MAIN_fr.py                      # 🔶 L'orchestrateur (FR)
 │   └── registry.py                     # 🔶 The Centralized Genome
 ├── CONTRIBUTING.md                     # The rules of collaboration
 ├── LICENSE                             # Protection license
@@ -306,4 +306,4 @@ Processing Hierarchy:
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-01_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-04_
