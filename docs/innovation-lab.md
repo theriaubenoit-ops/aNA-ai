@@ -150,6 +150,8 @@ As we move toward **v5.4**, the _[thalamic_hub(.py)](/src/anatomy/subcortical/th
 
 - **The _CA4_ Sanctuary:** Safeguarding _"survival floors" (Acid Traces)_ to ensure system resilience even after synaptic decline.
 
+![ ](/docs/assets/spacer16x16.png)
+
 ☄️ _Spotlight_
 
 ![ ](/docs/assets/spacer64x64.png)
