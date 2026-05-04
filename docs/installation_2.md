@@ -26,61 +26,61 @@ Congratulations! You can now run the _Python scripts_ `tests/*.py`. / _Félicita
 
 ![ ](/docs/assets/spacer16x16.png)
 
-**Main**
+- [ ] **Main**
 
-- [ ] ☄️ In progress - Global Workspace / _Espace de travail global_
-      `python3 src/MAIN.py` / `python3 src/MAIN_fr.py`
+- ☄️ In progress - Global Workspace / _Espace de travail global_
+  `python3 src/MAIN.py` / `python3 src/MAIN_fr.py`
 
 ![ ](/docs/assets/spacer16x16.png)
 
-**Dashboard**
+- [ ] **Dashboard**
 
 - ☄️ To Do - Dashboard / _Tableau de bord_
   `python3 src/gui/DASHBOARD.py` / `python3 src/gui/DASHBOARD_fr.py`
 
 ![ ](/docs/assets/spacer16x16.png)
 
-**Tests**
+- [ ] **Tests**
 
-- [ ] Homeostatic Stress & Alert Response / _Réponse homéostatique au stress et à l'alerte_
-      `python3 src/tests/test_amygdala.py`
+- Homeostatic Stress & Alert Response / _Réponse homéostatique au stress et à l'alerte_
+  `python3 src/tests/test_amygdala.py`
 
-- [ ] Motor Precision & Error Correction / _Précision motrice et correction des erreurs_
-      `python3 src/tests/test_cerebellum.py`
+- Motor Precision & Error Correction / _Précision motrice et correction des erreurs_
+  `python3 src/tests/test_cerebellum.py`
 
-- [ ] Six-layer cortical signal flow / _Flux de signaux corticaux à six couches_
-      `python3 src/tests/test_cortical_column.py`
+- Six-layer cortical signal flow / _Flux de signaux corticaux à six couches_
+  `python3 src/tests/test_cortical_column.py`
 
-- [ ] ☄️ To validate the autonomous behaviors / _Validation des comportements autonomes_
-      `python3 src/tests/test_hub_autonomy.py`
+- ☄️ To validate the autonomous behaviors / _Validation des comportements autonomes_
+  `python3 src/tests/test_hub_autonomy.py`
 
-- [ ] Emotional-Cognitive Integration / _Intégration émotionnelle et cognitive_
-      `python3 src/tests/test_limbic_system.py`
+- Emotional-Cognitive Integration / _Intégration émotionnelle et cognitive_
+  `python3 src/tests/test_limbic_system.py`
 
-- [ ] ☄️ Synaptic Consolidation & Pattern Encoding / _Consolidation synaptique et encodage des schémas_
-      `python3 src/tests/test_hippocampus.py`
+- ☄️ Synaptic Consolidation & Pattern Encoding / _Consolidation synaptique et encodage des schémas_
+  `python3 src/tests/test_hippocampus.py`
 
-- [ ] ☄️ Short-term and Long-term memory / _Mémoire à court et à long terme_
-      `python3 src/tests/test_hippocampus_ampa_nmda.py`
+- ☄️ Short-term and Long-term memory / _Mémoire à court et à long terme_
+  `python3 src/tests/test_hippocampus_ampa_nmda.py`
 
-- [ ] ☄️ Validates the integration (4 lobes) of the Neocortex / _Validation de l'intégration (4 lobes) du néocortex_
-      `python3 src/tests/test_neocortex.py`
+- ☄️ Validates the integration (4 lobes) of the Neocortex / _Validation de l'intégration (4 lobes) du néocortex_
+  `python3 src/tests/test_neocortex.py`
 
-- [ ] Metabolic & Electrophysiological Dynamics / _Dynamique métabolique et électrophysiologique_
-      `python3 src/tests/test_neuron.py`
+- Metabolic & Electrophysiological Dynamics / _Dynamique métabolique et électrophysiologique_
+  `python3 src/tests/test_neuron.py`
 
-- [ ] ☄️ Neural Oscillations & Temporal Sync / _Oscillations neuronales et synchronisation temporelle_
-      `python3 src/tests/test_pulse.py`
+- ☄️ Neural Oscillations & Temporal Sync / _Oscillations neuronales et synchronisation temporelle_
+  `python3 src/tests/test_pulse.py`
 
-- [ ] ☄️ Sensory Gating & Signal Routing / _Filtrage sensoriel et routage des signaux_
-      `python3 src/tests/test_thalamus.py`
+- ☄️ Sensory Gating & Signal Routing / _Filtrage sensoriel et routage des signaux_
+  `python3 src/tests/test_thalamus.py`
 
-- [ ] ☄️ Emotional Saliency & Acid Traces / _Saillance émotionnelle et acidité Traces_
-      `python3 src/tests/test_trauma_logic.py`
+- ☄️ Emotional Saliency & Acid Traces / _Saillance émotionnelle et acidité Traces_
+  `python3 src/tests/test_trauma_logic.py`
 
 ![ ](/docs/assets/spacer16x16.png)
 
-**Demonstrations**
+- [ ] **Demonstrations**
 
 - To Do - Launch _Web-based interfaces_ (e.g., "http://localhost:8000/examples/basic-demo.html").
   **Note**: To run web demos on local server, use `python3 -m http.server 8000` from the root directory.
@@ -99,11 +99,11 @@ Congratulations! You can now run the _Python scripts_ `tests/*.py`. / _Félicita
 
 ### Contributing and Communicating _(GitHub Workflow)_ / _Contribution et communication (Flux de travail GitHub)_
 
-- [ ] Issues: "Open an issue for any questions or bug reports."
+- Issues: "Open an issue for any questions or bug reports."
 
-- [ ] Pull Requests: "Submit your improvements for neurons or modules."
+- Pull Requests: "Submit your improvements for neurons or modules."
 
-- [ ] Discussions: "Use **GitHub** Discussions to exchange ideas on the model's behavioral psychology or simply to share how our code has inspired you."
+- Discussions: "Use **GitHub** Discussions to exchange ideas on the model's behavioral psychology or simply to share how our code has inspired you."
 
 ![ ](/docs/assets/spacer16x16.png)
 
@@ -111,4 +111,4 @@ Congratulations! You can now run the _Python scripts_ `tests/*.py`. / _Félicita
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-03_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-04_
