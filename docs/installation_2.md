@@ -44,7 +44,7 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
 
 ## Tests `tests/*.py` / `tests_fr/*.py`
 
-### Cognitive Core & Memory:
+### 🔴 Cognitive Core & Memory:
 
 - [ ] ☄️ Synaptic Consolidation & Pattern Encoding / _Consolidation synaptique et encodage des schémas_:
 
@@ -62,7 +62,7 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
 
   `python3 src/tests/test_cortical_column.py`
 
-### Metabolic & Rhythmic Foundation:
+### 🟠 Metabolic & Rhythmic Foundation:
 
 - [ ] ☄️ Neural Oscillations & Temporal Sync / _Oscillations neuronales et synchronisation temporelle_:
 
@@ -80,7 +80,7 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
 
   `python3 src/tests/test_metabolic_shutdown.py`
 
-### Sensory Control & Action Gating:
+### 🟢 Sensory Control & Action Gating:
 
 - [ ] ☄️ Sensory Gating & Signal Routing / _Filtrage sensoriel et routage des signaux_:
 
@@ -102,7 +102,7 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
 
   `python3 src/tests/test_thalamic_l6_feedback.py`
 
-### Emotional & Trauma Logic:
+### 🔵 Emotional & Trauma Logic:
 
 - [ ] Homeostatic Stress & Alert Response / _Réponse homéostatique au stress et à l'alerte_:
 
@@ -116,7 +116,7 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
 
   `python3 src/tests/test_trauma_logic.py`
 
-### Motor Control & Calibration:
+### ⚫ Motor Control & Calibration:
 
 - [ ] Motor Precision & Error Correction / _Précision motrice et correction des erreurs_:
 
