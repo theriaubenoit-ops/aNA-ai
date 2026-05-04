@@ -11,7 +11,7 @@ Architecture, concept and supervision: Benoit Theriault
 Collaboration, research and code: Gemini, Cline
 """
 
-from typing import Dict
+from typing import Any, Dict
 import sys
 import os
 import numpy as np
@@ -19,14 +19,16 @@ import numpy as np
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 from config import get_config
 from registry import ORGANS
+from anatomy.base.neuromodulator import Neuromodulator
 
 class Hippocampus:
-    def __init__(self, config=None, neuromodulator_core=None):
+    def __init__(self, config: get_config = None, neuromodulator: Neuromodulator = None):
+        # config = get_config()
         # 1. Le Génome (Structure fixe du registre)
         self.structure = ORGANS["HIPPOCAMPUS"]
         # Si config est None, on peut mettre des valeurs par défaut
-        self.config = config if config else {}
-        self.neurom_core = neuromodulator_core
+        self.config = config if config else {} # !!! Attention : config peut être None, on doit gérer ce cas pour éviter les erreurs de type.
+        self.neurom = neuromodulator # neurom_core avant
         
         # Initialisation des sous-champs
         self.subfields = {field: {} for field in self.structure["SUBFIELDS"]}
@@ -240,50 +242,37 @@ class Hippocampus:
                 # On la stabilise (éventuellement légère décroissance LTD)
                 self.subfields["CA3"][label] *= 0.95
 
-    async def encode(self, label: str, intensity: float = 0.5):
+    async def encode(self, label: str, intensity: float = 0.5, importance: float = 0.5, sensory_data: Any = None):
         """
-        Encode une trace mémoire en utilisant la logique AMPA/NMDA.
-        intensity: le signal brut + le gain thalamique (vigilance).
+        Version corrigée 5.3.2 - Gestion des seuils AMPA/NMDA
         """
         config = get_config()
-        # 1. Vérification de l'ATP (Homeostatic Lock)
-        atp_level = self.config.get("CURRENT_ATP", 1.0)
-        atp_min = self.config.get("ATP_CRITICAL_MIN", 0.20)
         
-        if atp_level < atp_min:
-            print(f"  [NMDA_LOCK] ⚠️ ATP Critical: {atp_level:.2f} < {atp_min}. Learning suspended.")
-            return # Le verrou bloque toute modification synaptique
+        # --- RÉCUPÉRATION DES SEUILS (Correction du NameError) ---
+        # On utilise les valeurs du fichier config.py ou des valeurs de secours
+        ampa_threshold = config.get("THRESHOLD_AMPA", 0.1) 
+        nmda_threshold = config.get("THRESHOLD_NMDA", 0.65)
         
-        # Récupération des seuils depuis la config
-        ampa_threshold = self.config.get("AMPA_BASE_THRESHOLD", 0.15)
-        nmda_threshold = self.config.get("THRESHOLD_NMDA", 0.65)
-        ltp_factor = self.config.get("LTP_GAIN_FACTOR", 0.25)
-
-        print(f" [NMDA Check] Signal: {intensity:.2f} | Threshold: {nmda_threshold}")
-
-        # 1. TRANSMISSION AMPA (L'information passe-t-elle le bruit de fond ?)
-        if intensity < ampa_threshold:
-            print(f"  ├─ Signal too weak (< {ampa_threshold}). Ignored.")
+        # --- CALCUL DE L'INTENSITÉ EFFECTIVE ---
+        effective_intensity = min(1.0, intensity * importance) 
+        
+        # 1. TRANSMISSION AMPA (Signal volatil)
+        if effective_intensity < ampa_threshold: 
+            print(f"  ├─ Signal trop faible ou insignifiant. Ignoré.")
             return
 
-        # 2. TRANSMISSION NMDA (Détection de coïncidence pour la plasticité)
-        # On initialise ou récupère la trace dans le CA3
+        # 2. TRANSMISSION NMDA (Gravure Long Terme)
         current_trace = self.subfields["CA3"].get(label, 0.0)
         
-        if intensity >= nmda_threshold:
-            # Le "Magnésium" est expulsé : on applique la LTP (Long-Term Potentiation)
-            # new_value = max(intensity, current_trace + ltp_factor) # old
-            # new_value = current_trace + (intensity * 0.1) # 0.1 est ton "Learning Rate" # new
-            if intensity >= nmda_threshold:
-                # On garantit un plancher de survie (LTP) tout en permettant l'accumulation
-                # On utilise l'intensité brute comme base de départ si c'est une première fois
-                new_value = max(intensity * 0.5, current_trace + (intensity * 0.1)) 
-                self.subfields["CA3"][label] = min(new_value, 1.0)
-            print(f"  ├─ [NMDA OPEN] Coincidence detected! Trace reinforced: {self.subfields['CA3'][label]:.2f}")
+        if effective_intensity >= nmda_threshold: 
+            learning_rate = 0.1 * importance 
+            new_value = current_trace + (effective_intensity * learning_rate)
+            self.subfields["CA3"][label] = min(new_value, 1.0)
+            print(f"  ├─ [NMDA OPEN] Importance: {importance:.2f} | Trace: {self.subfields['CA3'][label]:.4f}")
         else:
-            # Seul AMPA est actif : l'info est notée mais pas "gravée" durablement
-            self.subfields["CA3"][label] = max(intensity, current_trace)
-            print(f"  ├─ [AMPA ONLY] Magnesium block active. Trace remains volatile.")
+            # Simple passage électrique sans changement structurel permanent
+            self.subfields["CA3"][label] = max(effective_intensity, current_trace)
+            print(f"  ├─ [AMPA ONLY] Signal détecté mais non consolidé.")
 
         # Mise à jour de l'énergie (consommation ATP pour l'encodage)
         # On pourra lier cela à ton ATP_CRITICAL_MIN plus tard (Oui)

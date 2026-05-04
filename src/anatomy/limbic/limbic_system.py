@@ -34,7 +34,7 @@ class LimbicSystem:
         # C'est ici que le "Senseur de Danger" est défini :
         self.arousal_threshold = arousal_threshold 
             
-    def process_experience(self, sensory_data, emotional_input):
+    async def process_experience(self, sensory_data, emotional_input): 
         """
         Processes a sensory event and decides how to store it.
         """
@@ -45,17 +45,17 @@ class LimbicSystem:
         else:
             emotional_state = emotional_input
 
-        # 1. Extraction sécurisée (le .get() ne plantera plus)[cite: 9]
+        # 1. Extraction sécurisée (le .get() ne plantera plus)
         dopamine = emotional_state.get("dopamine", 0.0) 
         cortisol = emotional_state.get("cortisol", 0.0)
         
-        # Le reste de votre logique de consolidation...[cite: 9]
+        # Le reste de votre logique de consolidation...
         consolidation_factor = 1.0 + (dopamine * 1.5) + (cortisol * 2.0)
         
-        # 3. Envoi à l'Hippocampe (Note: vérifiez si vous utilisez 'weight' ou 'importance')[cite: 9]
-        self.hippocampus.encode(sensory_data, importance=consolidation_factor)
+        # 3. Envoi à l'Hippocampe (Note: vérifiez si vous utilisez 'weight' ou 'importance')
+        await self.hippocampus.encode(label=sensory_data, importance=consolidation_factor, intensity=0.5)
 
-        # 4. Calcul de l'Arousal pour le retour du test[cite: 9]
+        # 4. Calcul de l'Arousal pour le retour du test
         total_arousal = (dopamine + cortisol) / 2
         return total_arousal > self.arousal_threshold
 
