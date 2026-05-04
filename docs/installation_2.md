@@ -72,6 +72,14 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
 
   `python3 src/tests/test_hippocampus_ampa_nmda.py`
 
+- [ ] To Do - Ultime _(The Stress Test)_ / _Ultime (Le test de résistance)_:
+
+  `python3 src/tests/test_metabolic_shutdown.py`
+
+- [ ] To Do - Multimodal Coherence _(Hub)_ / _Cohérence Multimodale (Hub)_:
+
+  `python3 src/tests/test_multimodal_convergence.py`
+
 - [ ] ☄️ Validates the integration (4 lobes) of the Neocortex / _Validation de l'intégration (4 lobes) du néocortex_:
 
   `python3 src/tests/test_neocortex.py`
@@ -88,6 +96,10 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
 
   `python3 src/tests/test_stress_and_bio-coherence.py`
 
+- [ ] To Do - L6 feedback loop (Thalamus-Cortex) / _Boucle de rétroaction L6 (Thalamus-Cortex)_:
+
+  `python3 src/tests/test_thalamic_l6_feedback.py`
+
 - [ ] ☄️ Sensory Gating & Signal Routing / _Filtrage sensoriel et routage des signaux_:
 
   `python3 src/tests/test_thalamus.py`
@@ -95,6 +107,10 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
 - [ ] ☄️ Emotional Saliency & Acid Traces / _Saillance émotionnelle et acidité Traces_:
 
   `python3 src/tests/test_trauma_logic.py`
+
+- [ ] To Do - Executive selectivity (Striatum) / _Sélectivité exécutive (Striatum)_:
+
+  `python3 src/tests/test_striatum_gating.py`
 
 ![ ](/docs/assets/spacer16x16.png)
 
