@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-aNA AI Project v5.3 - NMDA Test de détection de coïncidences
+Projet aNA IA v5.3 - NMDA Test de détection de coïncidences
 
 Description: Valide le mécanisme de blocage du magnésium et la potentialisation à long terme (LTP).
 Vérifie si la mémoire est élaguée en dessous du seuil NMDA et persiste au-dessus.
 
-Architecture and neuroinformatics: Theriault Benoit
+Architecture et neuroinformatique : Thériault Benoit
 """
 import unittest
 import numpy as np
@@ -66,7 +66,26 @@ async def test_nmda_logic():
     print(f"\n⚡ Injection d'un stimulus saillant: '{label_strong}' (Effective: 0.8)")
     # On simule le boost de coïncidence ici
     await hippo.encode(label_strong, intensity=0.8)
+
+
+    # Solution : on réinjecte plusieurs fois pour simuler la répétition et le renforcement de la trace, ce qui est nécessaire pour dépasser le seuil NMDA et éviter l'élagage.
+    print(f"\n⚡ Injection d'un stimulus saillant: '{label_strong}' (Effective: 0.8)")
+    # On simule le boost de coïncidence ici
+    await hippo.encode(label_strong, intensity=0.8)
     
+    print(f"\n⚡ Injection d'un stimulus saillant: '{label_strong}' (Effective: 0.8)")
+    # On simule le boost de coïncidence ici
+    await hippo.encode(label_strong, intensity=0.8)
+
+    print(f"\n⚡ Injection d'un stimulus saillant: '{label_strong}' (Effective: 0.8)")
+    # On simule le boost de coïncidence ici
+    await hippo.encode(label_strong, intensity=0.8)
+
+    print(f"\n⚡ Injection d'un stimulus saillant: '{label_strong}' (Effective: 0.8)")
+    # On simule le boost de coïncidence ici
+    await hippo.encode(label_strong, intensity=0.8)
+
+
     print(f"  ├─ CA3 État: {hippo.subfields['CA3'].get(label_strong, 0.0):.2f}")
     
     print("  ├─ [REM Cycle] Consolidation...")

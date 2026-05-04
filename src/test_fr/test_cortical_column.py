@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Project aNA AI v5.2 - Test de la colonne corticale
+Projet aNA IA v5.2 - Test de la colonne corticale
 
 La description: Ce test est conçu pour valider les fonctionnalités de base du module de colonne corticale en isolation complète. Il simule un flux de données simple pour vérifier que la colonne corticale traite correctement les entrées, apprend les modèles et peut les récupérer en fonction du contexte. Le test couvre le traitement anticipé, l’inhibition latérale et les mécanismes de rétroaction.
 

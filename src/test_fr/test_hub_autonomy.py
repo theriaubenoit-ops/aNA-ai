@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Project aNA AI v5.2 - Test d'Autonomie du Hub 
+Projet aNA IA v5.3 - Test d'Autonomie du Hub 
 
 Description: Valider le flux complet ThalamicHub -> Neocortex (V1) -> Feedback L6 -> Modulation du Pulse (BPM) dans un scénario autonome. Ce test simule une séquence d'entrée visuelle, observe comment le ThalamicHub traite et filtre cette entrée, comment elle est projetée vers le Neocortex (V1), et comment le feedback de L6 influence le rythme cardiaque via le Pulse. L'objectif est de s'assurer que les interactions entre ces composants fonctionnent de manière cohérente et autonome, sans intervention externe.
 
-Architecture and neuroinformatics: Theriault Benoit
+Architecture et neuroinformatique : Thériault Benoit
 """
 
 import unittest
@@ -45,19 +45,19 @@ async def test_hub_cycle():
     print("="*50)
 
     # 1. Initialisation de l'environnement bio-numérique
-    chemical_core = Neuromodulator()
-    hippo = Hippocampus(config=config, neuromodulator_core=chemical_core)
+    chemical = Neuromodulator()
+    hippo = Hippocampus(config=config, neuromodulator=chemical)
     heart = Pulse(bpm=config.get("BASE_BPM", 72.0))
     
     # 2. Initialisation des organes maîtres
     # Le Neocortex s'enregistre dans le registre lors de sa création
-    nexo = Neocortex(chemical_core)
+    nexo = Neocortex(chemical)
     thalamus = Thalamus(
         hippocampus=hippo, 
         pulse=heart, 
-        neuromodulator_core=chemical_core 
+        neuromodulator=chemical 
     )
-    hub = ThalamicHub(thalamus_core=thalamus)
+    hub = ThalamicHub(thalamus=thalamus)
 
     print(f"🧠 Organes détectés : {list(ORGANS['NEOCORTEX']['INSTANCES'].keys())}")
 
@@ -68,7 +68,7 @@ async def test_hub_cycle():
         print(f"\n📥 Entrée détectée : {sense} | Intensité: {intensity}")
 
         # A. Passage par le filtre du Thalamus (Gating)
-        matrix = chemical_core.get_matrix()
+        matrix = chemical.get_matrix()
         gating_res = await hub.route_signal(f"input_{sense.lower()}", intensity, heart.bpm)
         filtered_val = gating_res.get('intensity', 0.0)
         

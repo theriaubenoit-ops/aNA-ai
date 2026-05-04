@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Project aNA AI v5.2 - Test d'impulsion
+Projet aNA IA v5.2 - Test d'impulsion
 
 Description : Ce test est conçu pour valider les fonctionnalités de base du module Pulse en isolation complète. Il simule la réponse du cœur aux stimuli, notamment les modifications des niveaux d'ATP, la libération de dopamine et la modulation de fréquence. Le test couvre la dynamique du pouls, y compris les périodes réfractaires et l'impact des signaux chimiques sur la fréquence cardiaque.
 

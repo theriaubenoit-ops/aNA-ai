@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Project aNA AI v5.2 - Tester le système limbique
+Projet aNA IA v5.2 - Tester le système limbique
 
 Description : Ce test valide l’intégration du module Neocortex au sein de l’architecture aNA. Il vérifie que Neocortex est correctement instancié à partir du registre central et qu’il peut traiter un signal simulé à travers ses différentes couches. Le test garantit que Neocortex peut communiquer avec le thalamus (via la rétroaction de la couche 6) et qu’il peut gérer les influences neuromodulatrices pendant le traitement.
 
@@ -20,7 +20,7 @@ if ROOT_DIR not in sys.path:
 
 from registry import ORGANS
 from anatomy.cortical.neocortex import Neocortex
-from anatomy.base.neuromodulator import Neuromodulator # Pour le chemical_core
+from anatomy.base.neuromodulator import Neuromodulator # Pour le chemical
 
 
 def create_ascii_header():
@@ -39,11 +39,11 @@ async def test_3b_integration():
     print("[DÉMARRAGE DU TEST D'INTÉGRATION NEOCORTEX]\n")
     
     # 1. Initialisation du cœur chimique (nécessaire pour le Neocortex)
-    chemical_core = Neuromodulator()
+    chemical = Neuromodulator()
     
     # 2. Instanciation du Neocortex (C'est ici que la magie du registre opère)
     # Votre classe Neocortex doit appeler create_visual_cortical_lobe dans son __init__
-    nexo = Neocortex(chemical_core)
+    nexo = Neocortex(chemical)
     
     print(f"📡 Registre détecté : {list(ORGANS['NEOCORTEX'].get('INSTANCES', {}).keys())}")
 
