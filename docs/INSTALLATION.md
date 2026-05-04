@@ -26,10 +26,10 @@ To ensure optimal configuration of _aNA IA_'s neural architecture, this section 
 
 ### Common First Steps
 
-Before jumping into OS-specific guides, ensure you have the following ready:
+Before jumping into OS-specific guides, ensure you have the following ready _(See below instructions)_:
 
-- [ ] **Git** : Be sure to clone _[aNA-ai.git](https://github.com/theriaubenoit-ops/aNA-ai.git)_.
-- **Python 3.10+** : You had the core engine _(See below)_.
+- **Git** : Be sure to clone _aNA-ai.git_.
+- **Python 3.10+** : You had the core engine.
 - **Virtual Environment Knowledge** : Strictly use `venv` to protect your system's integrity.
 
 ### Basic concepts _(Terminal)_
