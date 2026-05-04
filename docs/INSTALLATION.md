@@ -73,7 +73,7 @@ For the best experience, use **PowerShell** or **Git Bash**.
 
 ![ ](/docs/assets/spacer32x32.png)
 
-# 🍏 macOS _(Apple)_
+# 🍎 macOS _(Apple)_
 
 On _Mac_, using the terminal is smooth, but sometimes requires administrative permissions.
 
