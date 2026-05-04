@@ -223,9 +223,9 @@ Processing Hierarchy:
 ```
 ├── docs/
 │   ├── adr/
-│   │   └── adr_*.py                    # 🔶 Architecture Decision Records
+│   │   └── adr_*.md                    # 🔶 Architecture Decision Records
 │   ├── adr_fr/
-│   │   └── adr_*.py                    # 🔶 Archives de décisions architecturales (FR)
+│   │   └── adr_*.md                    # 🔶 Archives de décisions architecturales (FR)
 │   ├── assets/                         # Medias
 │   ├── examples/                       # 📋 Comprehensive example suite
 │   ├── api-reference.md                # 📋 API reference
