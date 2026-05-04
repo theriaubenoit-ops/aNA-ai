@@ -48,6 +48,8 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
 
 ## Tests `tests/*.py` / `tests_fr/*.py`
 
+![ ](/docs/assets/spacer16x16.png)
+
 ### 🔴 Cognitive Core & Memory:
 
 - [ ] ☄️ Synaptic Consolidation & Pattern Encoding / _Consolidation synaptique et encodage des schémas_:
@@ -74,6 +76,8 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
   python3 src/tests/test_cortical_column.py
   ```
 
+![ ](/docs/assets/spacer16x16.png)
+
 ### 🟠 Metabolic & Rhythmic Foundation:
 
 - [ ] ☄️ Neural Oscillations & Temporal Sync / _Oscillations neuronales et synchronisation temporelle_:
@@ -99,6 +103,8 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
   ```
   python3 src/tests/test_metabolic_shutdown.py
   ```
+
+![ ](/docs/assets/spacer16x16.png)
 
 ### 🟡 Sensory Control & Action Gating:
 
@@ -132,6 +138,8 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
   python3 src/tests/test_thalamic_l6_feedback.py
   ```
 
+![ ](/docs/assets/spacer16x16.png)
+
 ### 🟢 Emotional & Trauma Logic:
 
 - [ ] Amygdala Alert Response / _Réponse d'alerte de l'amygdale_:
@@ -151,6 +159,8 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
   ```
   python3 src/tests/test_trauma_logic.py
   ```
+
+![ ](/docs/assets/spacer16x16.png)
 
 ### 🔵 Motor Control & Calibration:
 
