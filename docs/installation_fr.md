@@ -28,7 +28,7 @@ Pour garantir une configuration optimale de l'architecture neuronale d'_aNA IA_,
 
 Avant de commencer, assurez-vous d'avoir les éléments suivants à portée de main _(See below instructions)_:
 
-- **Git** : Assurez-vous de cloner _[aNA-ai.git](https://github.com/theriaubenoit-ops/aNA-ai.git)_.
+- **Git** : Assurez-vous de cloner _aNA-ai.git_.
 - **Python 3.10+** : Vous disposez du moteur de base.
 - **Connaissance de l'environnement virtuel** : Utilisez strictement `venv` pour protéger l'intégrité de votre système.
 
