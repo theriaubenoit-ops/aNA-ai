@@ -42,27 +42,7 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
 
 ![ ](/docs/assets/spacer16x16.png)
 
-**Tests** `tests/*.py` / `tests_fr/*.py`
-
-- [ ] Homeostatic Stress & Alert Response / _Réponse homéostatique au stress et à l'alerte_:
-
-  `python3 src/tests/test_amygdala.py`
-
-- [ ] Motor Precision & Error Correction / _Précision motrice et correction des erreurs_:
-
-  `python3 src/tests/test_cerebellum.py`
-
-- [ ] Six-layer cortical signal flow / _Flux de signaux corticaux à six couches_:
-
-  `python3 src/tests/test_cortical_column.py`
-
-- [ ] ☄️ To validate the autonomous behaviors / _Validation des comportements autonomes_:
-
-  `python3 src/tests/test_hub_autonomy.py`
-
-- [ ] Emotional-Cognitive Integration / _Intégration émotionnelle et cognitive_:
-
-  `python3 src/tests/test_limbic_system.py`
+**Cognitive Core & Memory _(tests)_:** `tests/*.py` / `tests_fr/*.py`
 
 - [ ] ☄️ Synaptic Consolidation & Pattern Encoding / _Consolidation synaptique et encodage des schémas_:
 
@@ -72,21 +52,15 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
 
   `python3 src/tests/test_hippocampus_ampa_nmda.py`
 
-- [ ] To Do - Ultime _(The Stress Test)_ / _Ultime (Le test de résistance)_:
-
-  `python3 src/tests/test_metabolic_shutdown.py`
-
-- [ ] To Do - Multimodal Coherence _(Hub)_ / _Cohérence Multimodale (Hub)_:
-
-  `python3 src/tests/test_multimodal_convergence.py`
-
 - [ ] ☄️ Validates the integration (4 lobes) of the Neocortex / _Validation de l'intégration (4 lobes) du néocortex_:
 
   `python3 src/tests/test_neocortex.py`
 
-- [ ] Metabolic & Electrophysiological Dynamics / _Dynamique métabolique et électrophysiologique_:
+- [ ] Six-layer cortical signal flow / _Flux de signaux corticaux à six couches_:
 
-  `python3 src/tests/test_neuron.py`
+  `python3 src/tests/test_cortical_column.py`
+
+**Metabolic & Rhythmic Foundation _(tests)_:**
 
 - [ ] ☄️ Neural Oscillations & Temporal Sync / _Oscillations neuronales et synchronisation temporelle_:
 
@@ -96,21 +70,55 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
 
   `python3 src/tests/test_stress_and_bio-coherence.py`
 
-- [ ] To Do - L6 feedback loop (Thalamus-Cortex) / _Boucle de rétroaction L6 (Thalamus-Cortex)_:
+- [ ] Metabolic & Electrophysiological Dynamics / _Dynamique métabolique et électrophysiologique_:
 
-  `python3 src/tests/test_thalamic_l6_feedback.py`
+  `python3 src/tests/test_neuron.py`
+
+- [ ] To Do - Ultime _(The Stress Test)_ / _Ultime (Le test de résistance)_:
+
+  `python3 src/tests/test_metabolic_shutdown.py`
+
+**Sensory Control & Action Gating _(tests)_:**
 
 - [ ] ☄️ Sensory Gating & Signal Routing / _Filtrage sensoriel et routage des signaux_:
 
   `python3 src/tests/test_thalamus.py`
 
+- [ ] To Do - Executive selectivity (Striatum) / _Sélectivité exécutive (Striatum)_:
+
+  `python3 src/tests/test_striatum_gating.py`
+
+- [ ] ☄️ To validate the autonomous behaviors / _Validation des comportements autonomes_:
+
+  `python3 src/tests/test_hub_autonomy.py`
+
+- [ ] To Do - Multimodal Coherence _(Hub)_ / _Cohérence Multimodale (Hub)_:
+
+  `python3 src/tests/test_multimodal_convergence.py`
+
+- [ ] To Do - L6 feedback loop (Thalamus-Cortex) / _Boucle de rétroaction L6 (Thalamus-Cortex)_:
+
+  `python3 src/tests/test_thalamic_l6_feedback.py`
+
+**Emotional & Trauma Logic _(tests)_:**
+
+- [ ] Homeostatic Stress & Alert Response / _Réponse homéostatique au stress et à l'alerte_:
+
+  `python3 src/tests/test_amygdala.py`
+
+- [ ] Emotional-Cognitive Integration / _Intégration émotionnelle et cognitive_:
+
+  `python3 src/tests/test_limbic_system.py`
+
 - [ ] ☄️ Emotional Saliency & Acid Traces / _Saillance émotionnelle et acidité Traces_:
 
   `python3 src/tests/test_trauma_logic.py`
 
-- [ ] To Do - Executive selectivity (Striatum) / _Sélectivité exécutive (Striatum)_:
+**Motor Control & Calibration _(tests)_:**
 
-  `python3 src/tests/test_striatum_gating.py`
+- [ ] Motor Precision & Error Correction / _Précision motrice et correction des erreurs_:
+
+  `python3 src/tests/test_cerebellum.py`
 
 ![ ](/docs/assets/spacer16x16.png)
 
