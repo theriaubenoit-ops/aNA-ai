@@ -56,13 +56,13 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
   python3 src/tests/test_hippocampus.py
   ```
 
-- [ ] ☄️ Short-term and Long-term memory / _Mémoire à court et à long terme_:
+- [ ] ☄️ AMPA/NMDA Dynamics (ST/LT Memory) / _Dynamique AMPA/NMDA (mémoire ST/LT)_:
 
   ```
   python3 src/tests/test_hippocampus_ampa_nmda.py
   ```
 
-- [ ] ☄️ Validates the integration (4 lobes) of the Neocortex / _Validation de l'intégration (4 lobes) du néocortex_:
+- [ ] ☄️ Neocortex Integration (4 Lobes) / _Intégration du néocortex (4 lobes)_:
 
   ```
   python3 src/tests/test_neocortex.py
@@ -82,13 +82,13 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
   python3 src/tests/test_pulse.py
   ```
 
-- [ ] ☄️ Validates the consistency of the neuromodulator and neuron / _Valide la cohérence du neuromodulateur et du neurone_:
+- [ ] ☄️ Bio-Coherence & Metabolic Stress / _Biocohérence et stress métabolique_:
 
   ```
   python3 src/tests/test_stress_and_bio-coherence.py
   ```
 
-- [ ] Metabolic & Electrophysiological Dynamics / _Dynamique métabolique et électrophysiologique_:
+- [ ] Single Neuron Electrophysiology / _Électrophysiologie neuronale unique_:
 
   ```
   python3 src/tests/test_neuron.py
@@ -108,13 +108,13 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
   python3 src/tests/test_thalamus.py
   ```
 
-- [ ] To Do - Executive selectivity (Striatum) / _Sélectivité exécutive (Striatum)_:
+- [ ] To Do - Executive Gating & Action Selection / _Sélection des actions et contrôle d'accès exécutif_:
 
   ```
   python3 src/tests/test_striatum_gating.py
   ```
 
-- [ ] ☄️ To validate the autonomous behaviors / _Validation des comportements autonomes_:
+- [ ] ☄️ Autonomous Hub Behaviors / _Comportements autonomes du hub_:
 
   ```
   python3 src/tests/test_hub_autonomy.py
@@ -134,7 +134,7 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
 
 ### 🟢 Emotional & Trauma Logic:
 
-- [ ] Homeostatic Stress & Alert Response / _Réponse homéostatique au stress et à l'alerte_:
+- [ ] Amygdala Alert Response / _Réponse d'alerte de l'amygdale_:
 
   ```
   python3 src/tests/test_amygdala.py
@@ -146,7 +146,7 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
   python3 src/tests/test_limbic_system.py
   ```
 
-- [ ] ☄️ Emotional Saliency & Acid Traces / _Saillance émotionnelle et acidité Traces_:
+- [ ] ☄️ Trauma Persistence & Acid Traces / _Persistance du traumatisme et traces d'acide_:
 
   ```
   python3 src/tests/test_trauma_logic.py
