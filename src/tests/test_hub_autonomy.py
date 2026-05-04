@@ -45,19 +45,19 @@ async def test_hub_cycle():
     print("="*50)
 
     # 1. Initialisation de l'environnement bio-numérique
-    chemical_core = Neuromodulator()
-    hippo = Hippocampus(config=config, neuromodulator_core=chemical_core)
+    chemical = Neuromodulator()
+    hippo = Hippocampus(config=config, neuromodulator=chemical)
     heart = Pulse(bpm=config.get("BASE_BPM", 72.0))
     
     # 2. Initialisation des organes maîtres
     # Le Neocortex s'enregistre dans le registre lors de sa création
-    nexo = Neocortex(chemical_core)
+    nexo = Neocortex(chemical)
     thalamus = Thalamus(
         hippocampus=hippo, 
         pulse=heart, 
-        neuromodulator_core=chemical_core 
+        neuromodulator=chemical 
     )
-    hub = ThalamicHub(thalamus_core=thalamus)
+    hub = ThalamicHub(thalamus=thalamus)
 
     print(f"🧠 Organs detected: {list(ORGANS['NEOCORTEX']['INSTANCES'].keys())}")
 
@@ -68,7 +68,7 @@ async def test_hub_cycle():
         print(f"\n📥 Input detected: {sense} | Intensity: {intensity}")
 
         # A. Passage par le filtre du Thalamus (Gating)
-        matrix = chemical_core.get_matrix()
+        matrix = chemical.get_matrix()
         gating_res = await hub.route_signal(f"input_{sense.lower()}", intensity, heart.bpm)
         filtered_val = gating_res.get('intensity', 0.0)
         

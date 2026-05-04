@@ -20,7 +20,7 @@ if ROOT_DIR not in sys.path:
 
 from registry import ORGANS
 from anatomy.cortical.neocortex import Neocortex
-from anatomy.base.neuromodulator import Neuromodulator # Pour le chemical_core
+from anatomy.base.neuromodulator import Neuromodulator # Pour le chemical
 
 
 def create_ascii_header():
@@ -39,11 +39,11 @@ async def test_3b_integration():
     print("[STARTING NEOCORTEX INTEGRATION TEST]\n")
     
     # 1. Initialisation du cœur chimique (nécessaire pour le Neocortex)
-    chemical_core = Neuromodulator()
+    chemical = Neuromodulator()
     
     # 2. Instanciation du Neocortex (C'est ici que la magie du registre opère)
     # Votre classe Neocortex doit appeler create_visual_cortical_lobe dans son __init__
-    nexo = Neocortex(chemical_core)
+    nexo = Neocortex(chemical)
     
     print(f"📡 Register detected: {list(ORGANS['NEOCORTEX'].get('INSTANCES', {}).keys())}")
 

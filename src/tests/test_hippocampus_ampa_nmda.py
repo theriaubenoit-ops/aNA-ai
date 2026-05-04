@@ -66,6 +66,25 @@ async def test_nmda_logic():
     print(f"\n⚡ Injecting salient stimulus: '{label_strong}' (Effective: 0.8)")
     # On simule le boost de coïncidence ici
     await hippo.encode(label_strong, intensity=0.8)
+
+
+    # Solution : on réinjecte plusieurs fois pour simuler la répétition et le renforcement de la trace, ce qui est nécessaire pour dépasser le seuil NMDA et éviter l'élagage.
+    print(f"\n⚡ Injecting salient stimulus: '{label_strong}' (Effective: 0.8)")
+    # On simule le boost de coïncidence ici
+    await hippo.encode(label_strong, intensity=0.8)
+
+    print(f"\n⚡ Injecting salient stimulus: '{label_strong}' (Effective: 0.8)")
+    # On simule le boost de coïncidence ici
+    await hippo.encode(label_strong, intensity=0.8)
+
+    print(f"\n⚡ Injecting salient stimulus: '{label_strong}' (Effective: 0.8)")
+    # On simule le boost de coïncidence ici
+    await hippo.encode(label_strong, intensity=0.8)
+
+    print(f"\n⚡ Injecting salient stimulus: '{label_strong}' (Effective: 0.8)")
+    # On simule le boost de coïncidence ici
+    await hippo.encode(label_strong, intensity=0.8)
+
     
     print(f"  ├─ CA3 State: {hippo.subfields['CA3'].get(label_strong, 0.0):.2f}")
     

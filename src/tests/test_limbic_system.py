@@ -17,7 +17,9 @@ ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 if ROOT_DIR not in sys.path:
     sys.path.insert(0, ROOT_DIR)
 
-from unittest.mock import MagicMock
+from unittest.mock import AsyncMock, MagicMock
+from unittest import IsolatedAsyncioTestCase
+from anatomy.limbic.limbic_system import LimbicSystem
 from anatomy.limbic.limbic_system import LimbicSystem
 
 def create_ascii_header():
@@ -32,37 +34,37 @@ def create_ascii_header():
     print("▓███▓▒      AI inspired by natural plasticity  ✴️  a    N    A  ▒▓█▒▓ ▒▓█▒Autonomous Neural Architecture v5.3  ▒▓▓")
     print("▓░                                                 _    _    _  ░▓▒▓  ░▓\n")
 
-class TestLimbicSystem(unittest.TestCase):
+class TestLimbicSystem(IsolatedAsyncioTestCase):
     def setUp(self):
-        # We simulate (mock) the organs to isolate the Limbic System
         self.mock_amygdala = MagicMock()
-        self.mock_hippocampus = MagicMock()
+        # Hippocampus.encode est probablement async, on utilise AsyncMock
+        self.mock_hippocampus = AsyncMock() 
         self.limbic = LimbicSystem(self.mock_amygdala, self.mock_hippocampus)
-
-    def test_routine_experience(self):
+        
+    async def test_routine_experience(self):
         """Scenario: Neutral data (low Arousal)"""
         print("\n[SCENARIO: ROUTINE EXPERIENCE]")
-        # We simulate a calm emotional state
         emotional_data = {"dopamine": 0.1, "cortisol": 0.1}
         
-        # We pass the dictionary instead of a string[cite: 8]
-        is_critical = self.limbic.process_experience("Sensor_Data_01", emotional_data)
+        is_critical = await self.limbic.process_experience("Sensor_Data_01", emotional_data)
         
-        # Retrieving the 'importance' argument [cite: 8]
+        # Maintenant que c'est awaité, call_args n'est plus None
+        self.assertTrue(self.mock_hippocampus.encode.called)
         args, kwargs = self.mock_hippocampus.encode.call_args
         importance = kwargs.get('importance', 0.0)
         
         print(f" -> Calculated importance: {importance:.2f}")
         self.assertFalse(is_critical)
 
-    def test_shock_experience(self):
+    async def test_shock_experience(self):
         """Scenario: A major event (Shock)"""
         print("\n[SCENARIO: MAJOR EVENT (SHOCK)]")
-        # We simulate high stress[cite: 8]
         shock_data = {"dopamine": 0.2, "cortisol": 0.9}
         
-        is_critical = self.limbic.process_experience("Security_Alert_99", shock_data)
+        # AJOUT DE 'await' ICI
+        is_critical = await self.limbic.process_experience("Security_Alert_99", shock_data)
         
+        self.assertTrue(self.mock_hippocampus.encode.called)
         args, kwargs = self.mock_hippocampus.encode.call_args
         importance = kwargs.get('importance', 0.0)
         
