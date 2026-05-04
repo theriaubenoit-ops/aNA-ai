@@ -84,6 +84,10 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
 
   `python3 src/tests/test_pulse.py`
 
+- [ ] ☄️ Validates the biological consistency of the neuromodulator and neuron implementation / _Valide la cohérence biologique de l'implémentation du neuromodulateur et du neurone_:
+
+  `python3 src/tests/test_stress_and_bio-coherence.py`
+
 - [ ] ☄️ Sensory Gating & Signal Routing / _Filtrage sensoriel et routage des signaux_:
 
   `python3 src/tests/test_thalamus.py`
@@ -126,4 +130,4 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-03_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-05_
