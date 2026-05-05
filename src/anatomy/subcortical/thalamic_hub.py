@@ -26,8 +26,8 @@ from typing import Dict, Any
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 
 # from src.registry import SIGNALS, ORGANS
-from config import get_config
-from registry import ORGANS
+from src.config import get_config
+from src.registry import ORGANS
 
 class ThalamicHub:
     def __init__(self, thalamus):

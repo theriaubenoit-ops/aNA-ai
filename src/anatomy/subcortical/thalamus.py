@@ -33,13 +33,13 @@ from unittest import result
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 
 # from src.registry import SIGNALS, ORGANS
-from config import get_config
-from registry import ORGANS
-from anatomy.limbic.hippocampus import Hippocampus
-from core.pulse import Pulse
-from anatomy.base.neuromodulator import Neuromodulator
-from anatomy.limbic.limbic_system import LimbicSystem
-from anatomy.subcortical.striatum import Striatum
+from src.config import get_config
+from src.registry import ORGANS
+from src.anatomy.limbic.hippocampus import Hippocampus
+from src.core.pulse import Pulse
+from src.anatomy.base.neuromodulator import Neuromodulator
+from src.anatomy.limbic.limbic_system import LimbicSystem
+from src.anatomy.subcortical.striatum import Striatum
 
 class Thalamus: 
     def __init__(self, striatum: Striatum = None, limbicsystem: LimbicSystem = None, hippocampus: Hippocampus = None, pulse: Pulse = None, neuromodulator: Neuromodulator = None):
