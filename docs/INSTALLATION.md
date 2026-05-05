@@ -128,7 +128,7 @@ Installing on _Linux_ often requires updating system packages first.
 ## Quick Verification
 
 Once installed, you can verify the _"heartbeat"_ of the project by running a basic neuron test from your terminal:
-`python3 src/tests/test_neuron.py`
+`python3 tests/test_neuron.py`
 
 ### ⚒️ Troubleshooting (FAQ)
 
@@ -142,4 +142,4 @@ Once installed, you can verify the _"heartbeat"_ of the project by running a bas
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-01_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-04_

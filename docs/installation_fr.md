@@ -26,7 +26,7 @@ Pour garantir une configuration optimale de l'architecture neuronale d'_aNA IA_,
 
 ### Premières étapes communes
 
-Avant de commencer, assurez-vous d'avoir les éléments suivants à portée de main _(See below instructions)_:
+Avant de commencer, assurez-vous d'avoir les éléments suivants à portée de main *Voir les instructions ci-dessous* :
 
 - **Git** : Assurez-vous de cloner _aNA-ai.git_.
 - **Python 3.10+** : Vous disposez du moteur de base.
@@ -128,7 +128,7 @@ L'installation sur _Linux_ nécessite souvent de mettre à jour les paquets syst
 ## Vérification rapide
 
 Une fois installé, vous pouvez vérifier le _« pouls »_ du projet en exécutant un test neuronal de base depuis votre terminal :
-`python3 src/tests/test_neuron.py`
+`python3 tests/test_neuron.py`
 
 ### ⚒️ Dépannage (FAQ)
 
@@ -142,4 +142,4 @@ Une fois installé, vous pouvez vérifier le _« pouls »_ du projet en exécuta
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-01_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-04_

@@ -134,7 +134,7 @@ As we move toward **v5.4**, the _[thalamic_hub(.py)](/src/anatomy/subcortical/th
 
 - **The _A → B_ Algorithm _(Sequential Anticipation)_:**
   - **Concept:** The shift from a _storage memory_ to a _generative memory_. **aNA** no longer simply stores _"A,"_ it _pre-activates_ the trace of _"B."_
-  - **Validation:** Successful unit _[tests(/)](/src/tests/)[test_hippocampus(.py)](/src/tests/test_hippocampus.py)_ demonstrating that the _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_ identifies transitions as priority units of meaning.
+  - **Validation:** Successful unit _[tests(/)](/tests/)[test_hippocampus(.py)](/tests/test_hippocampus.py)_ demonstrating that the _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_ identifies transitions as priority units of meaning.
 
 - **Temperament Synchronization _([config(.py)](/src/config.py))_:** The _L1 → L2 → L3_ transition thresholds are now dynamic. Learning is "sculpted" by the _AI's personality_ _(e.g., THRESHOLD_NMDA)_.
 

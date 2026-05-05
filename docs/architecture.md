@@ -227,7 +227,6 @@ Processing Hierarchy:
 │   ├── adr_fr/
 │   │   └── adr_*.md                    # 🔶 Archives de décisions architecturales (FR)
 │   ├── assets/                         # Medias
-│   ├── examples/                       # 📋 Comprehensive example suite
 │   ├── api-reference.md                # 📋 API reference
 │   ├── architecture.md                 # The technical plan
 │   ├── genesis.md                      # The story of the project
@@ -273,23 +272,23 @@ Processing Hierarchy:
 │   ├── gui/                            # Web-based interface
 │   │   ├── DASHBOARD.py                # 🚧 Dashboard
 │   │   └── DASHBOARD_fr.py             # 🚧 Tableau de bord (FR)
-│   ├── tests/
-│   │   ├── media_audio/                # 🔶 Media audio
-│   │   │   ├── other/
-│   │   │   └── 00_*.wav
-│   │   ├── media_haptic/               # 🔶 Media haptic
-│   │   │   ├── other/
-│   │   │   └── 00_*.md
-│   │   ├── media_visual/               # 🔶 Media visual
-│   │   │   ├── other/
-│   │   │   └── 00_*.png
-│   │   └── test_*.py                   # Comprehensive test suite
-│   ├── tests_fr/
-│   │   └── test_*.py                   # Suite de tests complète (FR)
 │   ├── config.py                       # 🔶 Configuration Module
 │   ├── MAIN.py                         # 🔶 The orchestrator
 │   ├── MAIN_fr.py                      # 🔶 L'orchestrateur (FR)
 │   └── registry.py                     # 🔶 The Centralized Genome
+├── tests/
+│   ├── media_audio/                    # 🔶 Media audio
+│   │   ├── other/
+│   │   └── 00_*.wav
+│   ├── media_haptic/                   # 🔶 Media haptic
+│   │   ├── other/
+│   │   └── 00_*.md
+│   ├── media_visual/                   # 🔶 Media visual
+│   │   ├── other/
+│   │   └── 00_*.png
+│   └── test_*.py                       # Comprehensive test suite
+├── tests_fr/
+│   └── test_*.py                       # Suite de tests complète (FR)
 ├── CONTRIBUTING.md                     # The rules of collaboration
 ├── LICENSE                             # Protection license
 └── README.md                           # Manifesto
