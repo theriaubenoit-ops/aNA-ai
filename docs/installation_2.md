@@ -32,7 +32,6 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
 
   ```
   python3 src/MAIN.py
-
   python3 src/MAIN_fr.py
   ```
 
@@ -44,13 +43,12 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
 
   ```
   python3 src/gui/DASHBOARD.py
-
   python3 src/gui/DASHBOARD_fr.py
   ```
 
 ![ ](/docs/assets/spacer16x16.png)
 
-## Tests `tests/*.py` / `tests_fr/*.py`
+## Tests
 
 ![ ](/docs/assets/spacer16x16.png)
 
@@ -60,24 +58,28 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
 
   ```
   python3 tests/test_hippocampus.py
+  python3 tests_fr/test_hippocampus.py
   ```
 
 - [ ] ☄️ AMPA/NMDA Dynamics (ST/LT Memory) / _Dynamique AMPA/NMDA (mémoire ST/LT)_:
 
   ```
   python3 tests/test_hippocampus_ampa_nmda.py
+  python3 tests_fr/test_hippocampus_ampa_nmda.py
   ```
 
 - [ ] ☄️ Neocortex Integration (4 Lobes) / _Intégration du néocortex (4 lobes)_:
 
   ```
   python3 tests/test_neocortex.py
+  python3 tests_fr/test_neocortex.py
   ```
 
 - [ ] Six-layer cortical signal flow / _Flux de signaux corticaux à six couches_:
 
   ```
   python3 tests/test_cortical_column.py
+  python3 tests_fr/test_cortical_column.py
   ```
 
 ![ ](/docs/assets/spacer16x16.png)
@@ -88,24 +90,28 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
 
   ```
   python3 tests/test_pulse.py
+  python3 tests_fr//test_pulse.py
   ```
 
 - [ ] ☄️ Bio-Coherence & Metabolic Stress / _Biocohérence et stress métabolique_:
 
   ```
   python3 tests/test_stress_and_bio-coherence.py
+  python3 tests_fr//test_stress_and_bio-coherence.py
   ```
 
 - [ ] Single Neuron Electrophysiology / _Électrophysiologie neuronale unique_:
 
   ```
   python3 tests/test_neuron.py
+  python3 tests_fr//test_neuron.py
   ```
 
 - [ ] To Do - Ultime _(The Stress Test)_ / _Ultime (Le test de résistance)_:
 
   ```
   python3 tests/test_metabolic_shutdown.py
+  python3 tests_fr//test_metabolic_shutdown.py
   ```
 
 ![ ](/docs/assets/spacer16x16.png)
@@ -116,30 +122,35 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
 
   ```
   python3 tests/test_thalamus.py
+  python3 tests_fr//test_thalamus.py
   ```
 
 - [ ] To Do - Executive Gating & Action Selection / _Sélection des actions et contrôle d'accès exécutif_:
 
   ```
   python3 tests/test_striatum_gating.py
+  python3 tests_fr//test_striatum_gating.py
   ```
 
 - [ ] ☄️ Autonomous Hub Behaviors / _Comportements autonomes du hub_:
 
   ```
   python3 tests/test_hub_autonomy.py
+  python3 tests_fr//test_hub_autonomy.py
   ```
 
 - [ ] To Do - Multimodal Coherence _(Hub)_ / _Cohérence Multimodale (Hub)_:
 
   ```
   python3 tests/test_multimodal_convergence.py
+  python3 tests_fr//test_multimodal_convergence.py
   ```
 
 - [ ] To Do - L6 feedback loop (Thalamus-Cortex) / _Boucle de rétroaction L6 (Thalamus-Cortex)_:
 
   ```
   python3 tests/test_thalamic_l6_feedback.py
+  python3 tests_fr//test_thalamic_l6_feedback.py
   ```
 
 ![ ](/docs/assets/spacer16x16.png)
@@ -150,18 +161,21 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
 
   ```
   python3 tests/test_amygdala.py
+  python3 tests_fr//test_amygdala.py
   ```
 
 - [ ] Emotional-Cognitive Integration / _Intégration émotionnelle et cognitive_:
 
   ```
   python3 tests/test_limbic_system.py
+  python3 tests_fr//test_limbic_system.py
   ```
 
 - [ ] ☄️ Trauma Persistence & Acid Traces / _Persistance du traumatisme et traces d'acide_:
 
   ```
   python3 tests/test_trauma_logic.py
+  python3 tests_fr//test_trauma_logic.py
   ```
 
 ![ ](/docs/assets/spacer16x16.png)
@@ -172,6 +186,7 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
 
   ```
   python3 tests/test_cerebellum.py
+  python3 tests_fr/test_cerebellum.py
   ```
 
 ![ ](/docs/assets/spacer16x16.png)
