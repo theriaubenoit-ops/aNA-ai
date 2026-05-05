@@ -18,7 +18,7 @@ import sys
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 from typing import Dict, Any
-from anatomy.cortical.cortical_column import CorticalColumns
+from src.anatomy.cortical.cortical_column import CorticalColumns
 
 class TemporalLobe(CorticalColumns):
     def __init__(self, position: np.ndarray = None):

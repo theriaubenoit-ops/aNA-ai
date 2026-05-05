@@ -20,12 +20,12 @@ import numpy as np
 from typing import Dict, Any
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
-from registry import ORGANS
-from anatomy.cortical.occipital import OccipitalLobe
-from anatomy.cortical.temporal import TemporalLobe
-from anatomy.cortical.parietal import ParietalLobe
-from anatomy.cortical.frontal import FrontalLobe
-from anatomy.cortical.cortical_column import (
+from src.registry import ORGANS
+from src.anatomy.cortical.occipital import OccipitalLobe
+from src.anatomy.cortical.temporal import TemporalLobe
+from src.anatomy.cortical.parietal import ParietalLobe
+from src.anatomy.cortical.frontal import FrontalLobe
+from src.anatomy.cortical.cortical_column import (
     create_visual_cortical_lobe, 
     create_motor_cortical_lobe, 
     create_associative_cortical_lobe

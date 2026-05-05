@@ -26,9 +26,9 @@ from typing import Dict, Any, Optional
 from dataclasses import dataclass
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
-from config import get_config
-from registry import ORGANS
-from anatomy.base.neuron import Neuron, NeuronConfig 
+from src.config import get_config
+from src.registry import ORGANS
+from src.anatomy.base.neuron import Neuron, NeuronConfig 
 
 @dataclass
 class LayerConfig:
