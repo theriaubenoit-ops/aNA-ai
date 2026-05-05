@@ -2,7 +2,7 @@
 
 Instructions française : [installation (fr)](/docs/installation_fr.md)
 
-# Installation and Usage: ✴️*aNA* AI Project _(Installation)_
+# Installation: ✴️*aNA* AI Project
 
 ```
 ░              ░ ░░░▒▒▓▒▓▒▒▒▒▒░░▒▒░▒▒▒▓▒▓▒                                                                     ░ ░
@@ -69,7 +69,7 @@ For the best experience, use **PowerShell** or **Git Bash**.
   pip install -r requirements.txt
   ```
 
-[Continued ▶️](/docs/installation_2.md)
+[Usage and tests ▶️](/docs/usage.md)
 
 ![ ](/docs/assets/spacer32x32.png)
 
@@ -98,7 +98,7 @@ On _Mac_, using the terminal is smooth, but sometimes requires administrative pe
 
 > **Note :** If you have a permission error, use `sudo pip install...` _(your password will be requested, but it will not be displayed while typing)_.
 
-[Continued ▶️](/docs/installation_2.md)
+[Usage and tests ▶️](/docs/usage.md)
 
 ![ ](/docs/assets/spacer32x32.png)
 
@@ -121,7 +121,7 @@ Installing on _Linux_ often requires updating system packages first.
   pip install -r requirements.txt
   ```
 
-[Continued ▶️](/docs/installation_2.md)
+[Usage and tests ▶️](/docs/usage.md)
 
 ![ ](/docs/assets/spacer32x32.png)
 

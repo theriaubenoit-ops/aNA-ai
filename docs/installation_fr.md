@@ -1,8 +1,8 @@
-🚀 Quick links: [ReadMe](/README.md), Installation, [Contributing](/CONTRIBUTING.md), [Innovation-Lab](/docs/innovation-lab.md), [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), [Architecture](/docs/architecture.md)
+Usage and tests🚀 Quick links: [ReadMe](/README.md), Installation, [Contributing](/CONTRIBUTING.md), [Innovation-Lab](/docs/innovation-lab.md), [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), [Architecture](/docs/architecture.md)
 
 English instructions: [installation (en)](/docs/INSTALLATION.md)
 
-# Installation et utilisation projet ✴️*aNA* IA _(Installation)_
+# Installation : Projet ✴️*aNA* IA
 
 ```
 ░              ░ ░░░▒▒▓▒▓▒▒▒▒▒░░▒▒░▒▒▒▓▒▓▒                                                                     ░ ░
@@ -69,7 +69,7 @@ Pour une expérience optimale, utilisez **PowerShell** ou **Git Bash**.
   pip install -r requirements.txt
   ```
 
-[Suite ▶️](/docs/installation_2.md)
+[Usage et tests ▶️](/docs/usage.md)
 
 ![ ](/docs/assets/spacer32x32.png)
 
@@ -98,7 +98,7 @@ Sur _Mac_, l'utilisation du terminal est fluide, mais nécessite parfois des per
 
 > **Note :** Si vous avez une erreur de permission, utilisez `sudo pip install...` _(votre mot de passe sera demandé, mais il ne s'affichera pas pendant la saisie)_.
 
-[Suite ▶️](/docs/installation_2.md)
+[Usage et tests ▶️](/docs/usage.md)
 
 ![ ](/docs/assets/spacer32x32.png)
 
@@ -121,7 +121,7 @@ L'installation sur _Linux_ nécessite souvent de mettre à jour les paquets syst
   pip install -r requirements.txt
   ```
 
-[Suite ▶️](/docs/installation_2.md)
+[Usage et tests ▶️](/docs/usage.md)
 
 ![ ](/docs/assets/spacer32x32.png)
 
