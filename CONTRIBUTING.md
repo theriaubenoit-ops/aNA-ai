@@ -1,28 +1,28 @@
-🚀 Quick links: [License](/LICENSE), [ReadMe](/README.md), [Installation](/docs/installation.md), Contributing, [Innovation-Lab](/docs/innovation-lab.md), [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), [Architecture](/docs/architecture.md)
+🚀 Quick links: [ReadMe](/README.md), [Installation](/docs/INSTALLATION.md), Contributing, [Innovation-Lab](/docs/innovation-lab.md), [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), [Architecture](/docs/architecture.md)
 
 ![ ](/docs/assets/spacer16x16.png)
 
 # Contributing
 
 ```
-░                     ░░░░░░░░░░▒▒▒▒▒▒░░
-           ░░░░░░░░░▒▒▒▒▒▓▒▒▒▒░░░░░░░░░░▒▒▒▒░                                                          ░░░░░░░░░░░
-░░░░░░░░░░░░░░░░▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▒░░░░░▒▒▒░░░░▒▓▒░░                      ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-░░░░░░░░░░░░░░▒▒▒▓▓▓▓▓▓▓▓▓▓▓▒░░▒▒▒░░░░▒▓▓▓▓▓▓▒▒▒▒▒░     ░░░░░░░░░░░░░░░░░░░░░▒▒░░▒▒▒▓▓▓▓▓▓▒▒▒░░░░░░░░░░░░░░░░░▒▒▒▒
-▒░░░░░▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▒░         ░░▒▒▒░▒▒▒▒▓▓▓▓▓▓▓▒▒░░  ░▒▒▒▓▒▒▒▓▒▓▒▓▒░░░░░░░▒▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░░░░░░░▒▓
-░▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓░                   ░░ ▒▒▓▒░▒▓▓▓░▒▒░░           ░▒░░░▒▓▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▓▓
-▒▒▓▓▓▓▓▓▒▒▒░░                           ░▓▓▒░░▒▓▓░ _    _    _ ░▒░░▒▓▒▓▓▓▓▓▓▓▓▓▓▒░░░░░░░░░▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-▓▓▓▓▓▒░AI inspired by natural plasticity ░░   ░░░  a    N    A  ▒▓▒▓▒▒▒▓░Autonomous Neural Architecture v5.2b  ░▒▓
-░                                                  ‾    ‾    ‾ ░▓▒▓░░▒▓░
+░              ░ ░░░▒▒▓▒▓▒▒▒▒▒░░▒▒░▒▒▒▓▒▓▒                                                                     ░ ░
+▒░░   ░░░░░░░░░░▒▒▓▓▓▓▓▓▓██▓▒▒▒░░░▒▒▒▒▒░░░▒▒▓▓▒                                                         ░░░░░░▒▒▒▒
+░░░░░░░░░░░░░▒▒▒▓▓▓▓▓▓██████▓▓▒▒▒░░▒▒▓▓▓▒▒▒░░▒▒▒▒▓▒                                        ░ ░░░ ░ ░░░░░░░░░▒▒▒▒▒▒
+▓▒▒▒▒▒▒▒▒▓▒▓▓▓▓▓▓██████▓▒▒ ▒   ▒▓▒▓▒▒▒▒▓▒▓ ██▓▓▓▒▒▒▒▓      ░░▒▒▒▒▒▒▒░░░░░░▒░░░░▒▒░░▒░░░░░░░░░░░░░░░░░▒░▒▒▒░▒▒▒▓▓▓▓
+▒▒▒▒▒▒▒▓▓▓▓▓████▓▓░                 ░░▒▒▒▓█▓░▓▓█▓▓ ░▒▓  ▒▓▓▓▓▓█▓▓▓█▓▒▒▒▓▓▒░░░░▒▓█▓▓▓▓▓▒▓▒▒▒▒▒▒▒░░░░░░░░░░░░░░▒▒▒▒▒
+▒▒▓▒▓▓▓▓█████▓▒                         ░▒▒▓░ ▓██▓                ▒▓▒▒░░▒▓▒░░▒▓███▓█▓▓▓▓▓▓▓▓▓▓▓▒▓▒▒▒▒▒▒▒▒▒▒▓▒▓▓▓▓▓
+▓▓▓█████▓░                                    ░░▒▒ _    _    _ ░▒░▒▒▒▓▒▓▒▓▒▓█▓███▒▓▓▓▓▓▓▓▓▓▓▓▓▓█▓██▓▓▓▓▓█▓████████
+▓███▓▒      AI inspired by natural plasticity  ✴️  a    N    A  ▒▓█▒▓ ▒▓█▒Autonomous Neural Architecture v5.3  ▒▓▓
+▓░                                                 _    _    _  ░▓▒▓  ░▓
 ```
 
 ###### _"The Creation" —Michelangelo_
 
+![ ](/docs/assets/spacer16x16.png)
+
 **aNA** AI Project is a collaborative research initiative, not a software product.
 
 We are building an _Autonomous Neural Architecture_ that reflects biological principles rather than statistical shortcuts. If you wish to engage with this project, we view you not as a _"contributor"_ but as a research partner/observer.
-
-![ ](/docs/assets/spacer16x16.png)
 
 ### How to engage
 
@@ -34,27 +34,21 @@ We are building an _Autonomous Neural Architecture_ that reflects biological pri
 
 **Documentation consistency:** Any change must update the relevant documentation. An undocumented feature is, for our research purposes, a non-existent one.
 
-![ ](/docs/assets/spacer16x16.png)
-
 ### Our shared ethos
 
 We are moving away from the "open-source contribution" model—where the goal is often quantity—toward a _"research collaboration"_ model, where the goal is accuracy. We are documenting a trajectory toward a more harmonious coexistence between biological and digital systems.
-
-![ ](/docs/assets/spacer16x16.png)
 
 ### _Shape the future of AI!_
 
 **This is a leap forward in time; what you see here is the _future of AI_. If you are exploring this project today, it is because you possess the curiosity required to push this innovative concept further. We are currently _architecting_ the _next major update_, but we invite you to share your _observations_ and _ideas_ with us as we continue to grow this vision together.**
 
-Join the **aNA** _computational neuroscience_ community: _[Download(.zip)](https://github.com/theriaubenoit-ops/aNA-ai/archive/refs/heads/main.zip)_ or/and [installation](/docs/installation.md) or/and [innovation (creation lab)](/docs/innovation-lab.md)
-
-![ ](/docs/assets/spacer16x16.png)
+Join the **aNA** _computational neuroscience_ community: Be sure to clone/download the latest version of the Code _[aNA-ai/](https://github.com/theriaubenoit-ops/aNA-ai/)_ or/and see [installation](/docs/INSTALLATION.md) or/and read [innovation-lab](/docs/innovation-lab.md)
 
 ### First Steps for Research Collaborators
 
 - [ ] _"Fork"_ the repository: _Copy_ the project to your own _GitHub account_ to start experimenting.
 
-- [ ] _Run src/[tests(/)](/src/tests/)[test_hippocampus(.py)](/src/tests/test_hippocampus.py): Watch_ the Predictive Awakening _(A → B)_ in action and _verify_ the synaptic consolidation logic.
+- [ ] _Run src/[tests(/)](/tests/)[test_hippocampus(.py)](/tests/test_hippocampus.py): Watch_ the Predictive Awakening _(A → B)_ in action and _verify_ the synaptic consolidation logic.
 
 - [ ] Propose an _"Issue"_ or _"Discussion"_: If a system reaction seems _biologically incoherent_, _share your observations_ to help us refine the _neural accuracy_.
 
@@ -71,11 +65,11 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
     """
     thalamus = Thalamus(position)
 
-    # ✅ Enhancing sensory focus for a clearer cognitive flow
+    # ☑️ Enhancing sensory focus for a clearer cognitive flow
     thalamus.nuclei[ThalamicNucleusType.LGN].config.size = 800   # Optimized Vision
     thalamus.nuclei[ThalamicNucleusType.MGN].config.size = 600   # Optimized Hearing
 
-    print("✅ Thalamic Gateway initialized: System is ready for focused interaction.")
+    print("☑️ Thalamic Gateway initialized: System is ready for focused interaction.")
     return thalamus
 ```
 
@@ -103,6 +97,12 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
 
 ![ ](/docs/assets/spacer32x32.png)
 
+![img](/docs/assets/color_256x256_ALL.gif)
+
+###### _Sensory entropy filtering: Colored noise profiles to test the _[thalamic hub(.py)](/src/anatomy/subcortical/thalamic_hub.py)_'s gating mechanisms and predictive stability._
+
+![ ](/docs/assets/spacer32x32.png)
+
 ```Python
 # From src/anatomy/limbic/hippocampus.py
 # Highlighting the successful transition from L1 to L3 memory
@@ -116,8 +116,8 @@ def test_integration():
     prediction = "B"  # Success! The system anticipated the pattern
 
     if prediction == reality:
-        print("✅ Perfect prediction: aNA is in harmony with reality.")
-        print("✅ Integration successful: Pattern reinforced and ready for long-term storage.")
+        print("☑️ Perfect prediction: aNA is in harmony with reality.")
+        print("☑️ Integration successful: Pattern reinforced and ready for long-term storage.")
         return True
 ```
 
@@ -125,7 +125,7 @@ def test_integration():
 
 ![ ](/docs/assets/spacer64x64.png)
 
-# 💡 Future horizons: The potential of ✴️*aNA* AI
+# Future horizons: The potential of ✴️*aNA* AI
 
 The **aNA** AI project is _a leap toward the future of organic computation_. Aligning with _biological evolution_, we _unlock_ several strategic frontiers, More than just a _codebase_; it is a _sandbox_ for exploration at the intersection of _biology_ and _computation_. By contributing to this project, you are helping to _unlock_ several key areas that will have a real positive impact on our entire society:
 
@@ -159,14 +159,18 @@ The **aNA** AI project is _a leap toward the future of organic computation_. Ali
 
 ![ ](/docs/assets/spacer32x32.png)
 
-### _Technical Glossary_
-
-_**ATP (Adenosine Triphosphate):** In **aNA**, ATP simulates the cell's energy currency. It dictates the system's processing capacity; low levels trigger survival mechanisms such as hypervigilance or mandatory recovery states._
-
-_**CA4** (Cornu Ammonis 4): A hippocampal subregion involved in signal distribution. In this project, it acts as a "sanctuary" for Acid Traces, ensuring that vital survival reflexes are never overwritten or erased._
-
-_**L1 to L6 (Cortical Layers):** Refers to the six horizontal layers of the biological neocortex.py. Each layer has a specific role (e.g., L4 for sensory input, L6 for feedback to the thalamus.py to manage selective attention)._
+> _**Technical Glossary**_
+>
+> _**ATP (Adenosine Triphosphate):** In **aNA**, ATP simulates the cell's energy currency. It dictates the system's processing capacity; low levels trigger survival mechanisms such as hypervigilance or mandatory recovery states._
+>
+> _**CA4** (Cornu Ammonis 4): A hippocampal subregion involved in signal distribution. In this project, it acts as a "sanctuary" for Acid Traces, ensuring that vital survival reflexes are never overwritten or erased._
+>
+> _**L1 to L6 (Cortical Layers):** Refers to the six horizontal layers of the biological neocortex.py. Each layer has a specific role (e.g., L4 for sensory input, L6 for feedback to the thalamus.py to manage selective attention)._
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-12_
+<a href="#start-of-content" style="text-decoration: none;">Back to top 🔼</a>
+
+![ ](/docs/assets/spacer16x16.png)
+
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-01_

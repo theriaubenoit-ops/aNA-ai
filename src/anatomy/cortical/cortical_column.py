@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Cortical Lobe Base Implementation for aNA v5.1
+Cortical Lobe Base Implementation for aNA AI Project v5.3
 
 Communicates with: Input: (<- Thalamus IV) | Input/Output: (<-> Hippocampus) | Output: (-> Thalamus VI Feedback)
 
@@ -25,10 +25,10 @@ import os
 from typing import Dict, Any, Optional
 from dataclasses import dataclass
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../..')))
-
-from anatomy.base.neuron import Neuron, NeuronConfig 
-
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
+from src.config import get_config
+from src.registry import ORGANS
+from src.anatomy.base.neuron import Neuron, NeuronConfig 
 
 @dataclass
 class LayerConfig:
@@ -40,7 +40,7 @@ class LayerConfig:
 
 class LayerI:
     """
-    Layer I (Molecular Layer) - v5.1 (Modulation Noradrénergique)
+    Layer I (Molecular Layer) (Modulation Noradrénergique)
     """
     def __init__(self):
         self.config = LayerConfig(efficiency=1.0, name="Layer I")
@@ -48,13 +48,14 @@ class LayerI:
         self.trauma_impact = 0.0 # Noradrénaline
     
     def integrate_neuromodulators(self, neuromodulators, recognition_score=0.0):
+        config = get_config()
         ach = neuromodulators.get('acetylcholine', 0.0) if isinstance(neuromodulators, dict) else neuromodulators
-        
-        base_boost = ach * 1.5
+
+        base_boost = ach * config.get('ACH_ATTENTION_MULTIPLIER', 1.5)
         novelty_factor = 1.0 - recognition_score
         
         # On ajoute un +0.01 pour éviter le silence total (le division par zéro)
-        self.attention_gain = (base_boost * (1.0 + novelty_factor)) + 0.01 
+        self.attention_gain = (base_boost * (1.0 + novelty_factor)) + config.get('ATTENTION_MIN_GAIN', 0.01)
         return self.attention_gain
 
 class LayerIV:
@@ -69,8 +70,9 @@ class LayerIV:
     """
     
     def __init__(self):
+        config = get_config()
         self.config = LayerConfig(
-            efficiency=0.90,
+            efficiency= config.get('L4_EFFICIENCY', 0.90),
             name="Layer IV",
             description="Granular Input Layer - Thalamic Reception"
         )
@@ -105,8 +107,9 @@ class LayerII_III:
     """
     
     def __init__(self):
+        config = get_config()
         self.config = LayerConfig(
-            efficiency=0.85,
+            efficiency=config.get('L23_EFFICIENCY', 0.85),
             name="Layer II/III",
             description="Association Layers - Pattern Recognition"
         )
@@ -152,8 +155,9 @@ class LayerV:
     """
     
     def __init__(self):
+        config = get_config()
         self.config = LayerConfig(
-            efficiency=0.85,
+            efficiency=config.get('L5_EFFICIENCY', 0.85),
             name="Layer V",
             description="Pyramidal Output Layer - Motor Planning"
         )
@@ -187,8 +191,9 @@ class LayerVI:
     """
     
     def __init__(self):
+        config = get_config()
         self.config = LayerConfig(
-            efficiency=0.80,
+            efficiency=config.get('L6_EFFICIENCY', 0.80),
             name="Layer VI",
             description="Pyramidal Feedback Layer - Thalamic Modulation"
         )
@@ -210,7 +215,7 @@ class LayerVI:
         return self.feedback_signal
 
 
-class CorticalLobe:
+class CorticalLobe: # La classe de base
     """
     Base class for all cortical lobes with 6-layer architecture.
     
@@ -223,11 +228,16 @@ class CorticalLobe:
     - Memory access port preparation
     - Biological efficiency cascades
     """
-    
-    def __init__(self, position: np.ndarray):
-        self.position = position
+
+    def __init__(self, position=None, hippo_unit=None, **kwargs):
+        # 1. Gestion de la position 
+        self.position = position if position is not None else np.array([0,0,0])
+
+        # 2. Capture de l'hippocampe (v5.3)
+        self.hippo_unit = hippo_unit or kwargs.get('hippo_unit', None)
         
         # Initialize all layers
+        self.neurons = []
         self.layer1 = LayerI()
         self.layer4 = LayerIV()
         self.layer23 = LayerII_III()
@@ -256,6 +266,12 @@ class CorticalLobe:
         Returns:
             Final output signal after all layers
         """
+
+        # The signal must be a scalar value processed by the thalamus. If it's not, we return a default value (0.0) to avoid errors in processing.
+        if not isinstance(input_signal, (int, float)):
+            # Logique de repli ou erreur si le format n'est pas respecté
+            return 0.0
+    
         # Step 1: Layer I - Neuromodulator integration and attention boost
         self.attention_boost = self.layer1.integrate_neuromodulators(
             neuromodulators, 
@@ -302,6 +318,7 @@ class CorticalLobe:
     
     def get_precision_monitoring(self) -> Dict[str, Any]:
         """Get precision monitoring data for dashboard"""
+        config = get_config()
         return {
             'signal_flow': {
                 'input': self.layer4.input_activity,
@@ -313,8 +330,8 @@ class CorticalLobe:
                 'overall_efficiency': self.l5_output / self.layer4.input_activity if self.layer4.input_activity > 0 else 0.0,
                 'precision_loss': self.precision_loss,
                 'attention_boost': self.attention_boost,
-                'expected_cascade': 0.65,  # 0.90 * 0.85 * 0.85
-                'biological_accuracy': abs((self.l5_output / self.layer4.input_activity) - 0.65) if self.layer4.input_activity > 0 else 1.0
+                'expected_cascade': config.get('BIOLOGICAL_ACCURACY_TARGET', 0.65),  # la valeur attendue du produit des efficacités 0.90 * 0.85 * 0.85
+                'biological_accuracy': abs((self.l5_output / self.layer4.input_activity) - config.get('BIOLOGICAL_ACCURACY_TARGET', 0.65)) if self.layer4.input_activity > 0 else 1.0
             },
             'layer_status': {
                 'l1_status': 'ACTIVE' if self.attention_boost > 1.0 else 'BASELINE',
@@ -355,7 +372,7 @@ class CorticalLobe:
         self.layer6.feedback_signal = 0.0
 
 
-class CorticalColumns:
+class CorticalColumns(CorticalLobe):
     """
     Specialized cortical lobe for visual processing.
     
@@ -404,8 +421,9 @@ class CorticalColumns:
     
     async def process_input(self, signal_data: str, hippo_unit, neuromodulators: Dict[str, float] = None) -> Dict[str, float]:
         """
-        Traitement v5.1 : Cascade L4 -> L2/3 -> L5 avec modulation chimique.
+        Traitement : Cascade L4 -> L2/3 -> L5 avec modulation chimique.
         """
+        config = get_config()
         if neuromodulators:
             self.layer1.integrate_neuromodulators(neuromodulators)
         
@@ -418,9 +436,9 @@ class CorticalColumns:
         for n in self.neurons:
             # En cas de trauma (nora > 0.6), on force la myélinisation (Gravure Flash)
             n.is_firing = True
-            if nora > 0.6:
+            if nora > config.get('TRAUMA_NORA_THRESHOL', 0.6):
                 # Accélération de la plasticité synaptique
-                n.myelination_level = min(1.0, n.myelination_level + 0.05)
+                n.myelination_level = min(1.0, n.myelination_level + config.get('FLASH_MYELIN_BOOST', 0.05))
             n._update_myelination()
             n.is_firing = False
             
@@ -487,7 +505,7 @@ class MotorCorticalLobe(CorticalLobe):
 class SimplifiedCorticalColumn:
     def __init__(self, column_id: str):
         self.column_id = column_id
-        # Création d'une petite population de neurones représentative pour William
+        # Création d'une petite population de neurones représentative
         self.neurons = [Neuron(position=np.array([0, 0, 0])) for _ in range(10)]
         self.layers = {"L4": 0.0, "L23": 0.0, "L5": 0.0, "L6": 0.0}
 

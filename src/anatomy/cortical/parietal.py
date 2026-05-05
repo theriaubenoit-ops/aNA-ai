@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Parietal Lobe implementation for aNA v5.1
+Parietal Lobe implementation for aNA AI Project v5.3
 
 Communicates with: Input: (<- Thalamus) | Input/Output: (<-> Other Cortical Areas) | Output: (-> Motor / Pre-frontal)
 
-This module implements the Parietal Lobe with its key regions (S1-S2, IPS) for somatosensory and spatial processing. It integrates with the ChemicalCore for neuromodulatory influences, particularly dopamine (Motivation) and noradrenaline (Trauma). The Parietal Lobe processes spatial information, modulates it based on the chemical state, and provides outputs to the Neocortex for synthesis with visual and semantic data.
+Description: This module implements the Parietal Lobe with its key regions (S1-S2, IPS) for somatosensory and spatial processing. It integrates with the ChemicalCore for neuromodulatory influences, particularly dopamine (Motivation) and noradrenaline (Trauma). The Parietal Lobe processes spatial information, modulates it based on the chemical state, and provides outputs to the Neocortex for synthesis with visual and semantic data.
 
 Architecture, concept and supervision: Benoit Theriault
 Collaboration, research and code: Gemini, Cline 
@@ -13,8 +13,12 @@ Collaboration, research and code: Gemini, Cline
 
 import asyncio
 import numpy as np
+import os
+import sys
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 from typing import Dict, Any
-from anatomy.cortical.cortical_column import CorticalColumns
+from src.anatomy.cortical.cortical_column import CorticalColumns
 
 class ParietalLobe(CorticalColumns):
     def __init__(self, position: np.ndarray = None):

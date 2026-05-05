@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Neuron implementation for aNA v5.1 - The fundamental unit of the aNA architecture
+Neuron implementation for aNA AI Project v5.3 - The fundamental unit of the aNA architecture
 
 Communicates with: Input: (<- Synapses) | Output: (-> Axon / Post-synaptic targets)
 
-This class represents a single neuron with:
+Description: This class represents a single neuron with:
 - 3D spatial positioning and relationships
 - Electrical charge dynamics and firing behavior
 - Power consumption and energy management
@@ -15,11 +15,15 @@ This class represents a single neuron with:
 Architecture, concept and supervision: Benoit Theriault
 Collaboration, research and code: Gemini, GPT
 """
-
 import numpy as np
 from typing import Tuple, Optional, Dict, Any
 from dataclasses import dataclass
+import os
+import sys
 
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
+from config import get_config
+from registry import ORGANS
 
 @dataclass
 class NeuronConfig:
@@ -101,7 +105,7 @@ class Neuron:
         self.last_spike_time = -1
         self.activity_counter = 0
         
-        # Neuromodulator sensitivity
+        # Neuromodulator sensitivity [Double? See neuromodulator.py]
         self.neuromodulator_sensitivity = {
             'dopamine': 1.0,
             'acetylcholine': 1.0,
@@ -185,51 +189,54 @@ class Neuron:
         self.membrane_potential *= 0.98
     
     def _apply_neuromodulator_effects(self, input_strength: float, neuromodulators: Dict[str, float]) -> float:
-        # 1. Calcul des effets individuels (ton code actuel)
-        dopamine_effect = 1.0 + (neuromodulators.get('dopamine', 0.0) * 0.5)
-        ach_effect = 1.0 + (neuromodulators.get('acetylcholine', 0.0) * 0.3)
-        serotonin_effect = 1.0 - (neuromodulators.get('serotonin', 0.0) * 0.2)
-        norepinephrine_effect = 1.0 + (neuromodulators.get('norepinephrine', 0.0) * 0.4)
-        no_effect = 1.0 + (neuromodulators.get('no_gas', 0.0) * 0.2)
-
-        # 2. LOGIQUE DE SAUVETAGE : L'atténuation par la certitude
-        # Si l'input est déjà fort (le neurone a reconnu le pattern), 
-        # on réduit drastiquement le multiplicateur.
-        total_modulation = (dopamine_effect * ach_effect * serotonin_effect * norepinephrine_effect * no_effect)
+        """
+        Régulation de la réponse synaptique par la chimie et la certitude (v5.3.1).
+        """
+        # 1. Calcul de l'excitation chimique nette (Somme pondérée plutôt que produit)
+        excitateurs = (neuromodulators.get('dopamine', 0.0) * 0.5) + \
+                    (neuromodulators.get('norepinephrine', 0.0) * 0.4) + \
+                    (neuromodulators.get('acetylcholine', 0.0) * 0.3)
         
-        # Frein métabolique : plus input_strength est proche de 1.0, 
-        # plus on ramène la modulation vers 1.0 (neutre)
-        frein = max(0.0, 1.0 - input_strength) 
-        modulation_calmee = 1.0 + (total_modulation - 1.0) * frein
+        inhibiteurs = (neuromodulators.get('serotonin', 0.0) * 0.2)
+        
+        net_mod = 1.0 + (excitateurs - inhibiteurs)
 
-        return input_strength * modulation_calmee
+        # 2. Logique du Frein : Atténuation par la Saliance
+        # Si input_strength est faible, on écoute beaucoup la chimie (exploration).
+        # Si input_strength est fort, on protège le pattern (exploitation).
+        # On utilise un clamp pour éviter que le frein ne devienne négatif.
+        saliance = max(0.0, min(1.0, input_strength))
+        atténuation = 1.0 - (saliance * 0.7) # On garde au moins 30% de l'effet chimique
+        
+        modulation_finale = 1.0 + (net_mod - 1.0) * atténuation
+        
+        return input_strength * modulation_finale
     
-    def update(self, time_step: int, neuromodulators: Dict[str, float]):
+    def update(self, time_step: int, neuromodulators: Dict[str, float] = None):
         """
-        Update neuron state for one time step.
-        
-        Args:
-            time_step: Current simulation time step
-            neuromodulators: Current neuromodulator levels
+        Version v5.3.1 - Intégration de la garde métabolique
         """
-        # Handle refractory period
+        # 1. GARDE : Si l'énergie est sous le seuil critique (ex: 0.1),
+        # le neurone entre en état de "Sommeil Métabolique".
+        if self.energy_level < self.config.min_energy_threshold:
+            self.is_firing = False
+            self.membrane_potential = self.config.resting_potential # Reset électrique
+            self._update_energy() # On ne fait que tenter de récupérer l'énergie
+            return 
+
+        # 2. Logique électrique normale si assez d'énergie
         if self.refractory_timer > 0:
             self.refractory_timer -= 1
             if self.refractory_timer == 0:
                 self.membrane_potential = self.config.resting_potential
                 self.is_firing = False
-        
-        # Check for action potential
+                
         elif self.membrane_potential >= self.config.threshold_potential * self.config.layer_threshold_modifier:
-            self._fire_action_potential(time_step)
+            self._fire_action_potential(time_step) # Ici on consommera l'ATP au prochain cycle
         
-        # Update energy levels
+        # 3. Mise à jour des stocks après l'action
         self._update_energy()
-        
-        # Update plasticity based on activity
         self._update_plasticity(neuromodulators)
-        
-        # Update myelination based on repeated firing
         self._update_myelination()
     
     def _fire_action_potential(self, time_step: int):
@@ -248,63 +255,64 @@ class Neuron:
 
 
     def _update_energy(self):
-        """Update energy consumption and recovery - ACTIVATED v5.9"""
+        """Modèle de respiration métabolique aNA v5.3.2"""
         
-        # 1. Consommation de base (Entretien des pompes ioniques)
-        energy_cost = self.config.base_energy_consumption
+        # 1. PERTE : Maintenance basale ("poussière d'énergie") + Métabolisme de base
+        maintenance_cost = 0.001 
+        energy_cost = self.config.base_energy_consumption + maintenance_cost
         
-        # 2. Coût du Potentiel d'Action (Le "Spike")
-        # C'est ici que l'ATP est massivement consommé
+        # 2. PERTE : Surcoût si le neurone décharge
         if self.is_firing:
             energy_cost += self.config.firing_energy_cost
         
-        # 3. Modulation par couche (Ex: La couche V consomme plus)
-        energy_cost *= self.config.layer_connectivity_modifier
+        # 3. APPLICATION : On retire l'énergie consommée
+        self.energy_level -= (energy_cost * self.config.layer_connectivity_modifier)
         
-        # 4. Mise à jour du stock d'ATP
-        self.energy_level -= energy_cost
-        self.energy_consumed += energy_cost
-        
-        # 5. Récupération (Synthèse d'ATP / Repos)
-        if self.energy_level < 1.0:
+        # 4. GAIN : La "Pompe à Glucose" (Récupération lente)
+        if not self.is_firing:
+            # Remontée lente suggérée pour l'inaction
+            self.energy_level += 0.015 # 0.014 minimum, pour éviter les problèmes de récupération
+        else:
+            # Récupération de base (synthèse ATP standard)
             self.energy_level += self.config.energy_recovery_rate
         
-        # 6. Sécurité (L'énergie ne peut pas être négative)
+        # 5. ÉQUILIBRE : Clamp de sécurité entre 0 et 1
         self.energy_level = max(0.0, min(1.0, self.energy_level))
     
-    def _update_plasticity(self, neuromodulators: dict = None): # Ajout de l'argument
+    def _update_plasticity(self, neuromodulators: dict = None):
         """
-        Simulation de la plasticité Hebbienne v5.9.
-        Intègre la synergie entre dépolarisation (AMPA) et consolidation (NMDA)
-        modulée par le contexte émotionnel (Amygdale).
+        Plasticité Hebbienne v5.3.1 : Synergie AMPA/NMDA et fixation émotionnelle.
         """
-        # Initialisation par défaut si aucun dictionnaire n'est passé
-        nm = neuromodulators if neuromodulators else {}
+        # 1. Sécurisation de la chimie (Évite les crashs Thalamus)
+        nm = neuromodulators if neuromodulators is not None else {}
+        config = get_config() # Utilisation des constantes globales
         
-        # Récupération des facteurs d'influence (Ex: Noradrénaline pour l'alerte)
-        ne_boost = nm.get('norepinephrine', 0.0) * 0.5 
-        da_boost = nm.get('dopamine', 0.0) * 0.2
+        # Récupération des modulateurs
+        ne_boost = nm.get('norepinephrine', 0.0)
+        da_boost = nm.get('dopamine', 0.0)
 
         if self.is_firing:
-            # 1. Calcul de l'impact du signal (Potentiel local)
-            # L'influence émotionnelle (NE/DA) facilite le passage du seuil NMDA
-            impact_signal = self.plasticity * (1.0 + self.myelination_level + ne_boost)
+            # 2. Calcul de l'impact (La myéline facilite l'ouverture NMDA)
+            impact_signal = self.plasticity * (1.0 + self.myelination_level + (ne_boost * 0.5))
             
-            # 2. Logique de recrutement des récepteurs
             if impact_signal > self.config.nmda_threshold:
-                # Seuil NMDA franchi : LTP forte
-                # On booste le gain si l'émotion est forte
-                gain = self.config.learning_rate * (2.5 + da_boost)
+                # Consolidation forte (LTP) boostée par la Dopamine
+                gain = self.config.learning_rate * (2.5 + (da_boost * 0.5))
                 self.plasticity += gain
             else:
-                # Activation AMPA seule
+                # Apprentissage de base (AMPA)
                 self.plasticity += self.config.learning_rate
         
-        # 3. HOMÉOSTASIE (Le fameux 0.999)
-        # On pourrait imaginer que l'émotion réduit temporairement l'homéostasie 
-        # pour "fixer" la trace (évite l'érosion immédiate).
-        decay_factor = 0.999 + (min(0.0009, ne_boost * 0.001)) 
-        self.plasticity *= decay_factor
+        # 3. HOMÉOSTASIE ET FIXATION (Decay)
+        # On récupère le decay de base (ex: 0.9999) depuis la config
+        base_decay = config.get("NEURON_PLASTICITY_DECAY", 0.9999)
+        
+        # La Noradrénaline réduit le decay (fixation du souvenir)
+        # Plus ne_boost est haut, plus on s'approche de 1.0 (zéro oubli)
+        fixation_factor = ne_boost * 0.0001 
+        current_decay = min(1.0, base_decay + fixation_factor)
+        
+        self.plasticity *= current_decay
         
         # 4. Limites biologiques
         self.plasticity = max(0.01, min(1.0, self.plasticity))
@@ -319,25 +327,6 @@ class Neuron:
             # Cap à 1.0 (Conductivité max +50%)
             if self.myelination_level > 1.0:
                 self.myelination_level = 1.0
-    
-    def get_output_strength(self) -> float:
-        """
-        Get the output strength when this neuron fires.
-        
-        Returns:
-            Output signal strength
-        """
-        if not self.is_firing:
-            return 0.0
-        
-        # Base output strength modified by various factors
-        base_strength = 1.0
-        energy_modifier = self.energy_level  # Weaker output when low energy
-        plasticity_modifier = self.plasticity  # Stronger output with higher plasticity
-        myelination_modifier = 1.0 + self.myelination_level * 0.5  # Faster conduction
-        
-        return (base_strength * energy_modifier * plasticity_modifier * 
-                myelination_modifier * self.config.layer_connectivity_modifier)
     
     def get_output_strength(self) -> float:
         """
@@ -416,8 +405,8 @@ class NeuronPopulation:
             return 4  # Layer V
         else:
             return 5  # Layer VI
-    
-    def update(self, time_step: int, neuromodulators: Dict[str, float]):
+        
+    def update(self, time_step: int, neuromodulators: Dict[str, float] = None):
         """Update all neurons in the population"""
         for neuron in self.neurons:
             neuron.update(time_step, neuromodulators)

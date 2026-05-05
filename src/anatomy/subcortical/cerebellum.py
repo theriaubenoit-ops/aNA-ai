@@ -1,22 +1,28 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Cerebellum implementation for aNA v5.1
+Cerebellum implementation for aNA AI Project v5.3
 
 Communicates with: Input: (<- Cortex / Thalamus) | Output: (-> Motor Outputs / Feedback Loop)
 
-This module implements the Cerebellum with its key layers (Granule, Purkinje, Molecular) and deep nuclei for motor coordination, cognitive processing, and error correction. It integrates with the ChemicalCore for neuromodulatory influences, particularly norepinephrine (Arousal) and serotonin (Mood). The Cerebellum processes mossy fiber and climbing fiber inputs to modulate motor output and cognitive functions through its inhibitory control of the deep nuclei.
+Description: This module implements the Cerebellum with its key layers (Granule, Purkinje, Molecular) and deep nuclei for motor coordination, cognitive processing, and error correction. It integrates with the ChemicalCore for neuromodulatory influences, particularly norepinephrine (Arousal) and serotonin (Mood). The Cerebellum processes mossy fiber and climbing fiber inputs to modulate motor output and cognitive functions through its inhibitory control of the deep nuclei.
 
 Architecture, concept and supervision: Benoit Theriault
 Collaboration, research and code: Gemini
 """
 
+import os
+import sys
 import numpy as np
 from typing import Dict, List, Tuple, Optional
 from dataclasses import dataclass
 from enum import Enum
 
-from anatomy.base.neuron import Neuron, NeuronConfig
+# Alignement du path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
+from src.anatomy.base.neuron import Neuron, NeuronConfig
+from src.config import get_config
+from src.registry import ORGANS
 
 
 class CerebellarLayer(Enum):

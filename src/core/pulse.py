@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Pulse implementation for aNA v5.2
+Pulse implementation for aNA AI Project v5.3
 
 Communicates with: Input: (<- Thalamus) (<- Amygdala) | Output: (-> Global Metabolism / BPM)
 
-This module simulates the heart's pulse as a dynamic entity influenced by both internal metabolic states and external stimuli. It calculates the current BPM based on a base rate, modulated by dopamine levels (excitement) and ATP levels (fatigue). The module also manages a refractory state to prevent overstimulation, ensuring a more biologically plausible response to inputs.
+Description: This module simulates the heart's pulse as a dynamic entity influenced by both internal metabolic states and external stimuli. It calculates the current BPM based on a base rate, modulated by dopamine levels (excitement) and ATP levels (fatigue). The module also manages a refractory state to prevent overstimulation, ensuring a more biologically plausible response to inputs.
 
 Architecture, concept and supervision: Benoit Theriault
 Collaboration, research and code: Gemini
@@ -15,7 +15,7 @@ import time
 import sys
 import os
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 # from src.registry import METABOLISM
 from src.config import get_config
 from src.registry import ORGANS
@@ -25,11 +25,12 @@ class Pulse:
         config = get_config()
         self.bpm = bpm if bpm is not None else config["BASE_BPM"]
         self.hz = self.bpm / 60.0 
-        self.last_time = time.time()             
+        self.last_time = time.time()
         
         # Variables vitales pour compute_dynamics()
         self.atp = 1.0           # L'énergie réelle
-        self.energy = 1.0        # Doublon pour compatibilité get_status()
+        self.energy = 1.0  
+        self.is_resting = False  
         self.dopamine = 0.1      
         self.is_refractory = False
 
@@ -127,6 +128,8 @@ class Pulse:
 
     def inject_stimulus(self, intensity: float):
         """Simule une décharge d'adrénaline/dopamine."""
+        now = time.time()
+        dt = now - self.last_time
         if self.is_refractory:
             self.bpm = 45.0  # Rythme calme, on réduit la consommation de 80%
             # On commence la recharge lente
@@ -140,7 +143,7 @@ class Pulse:
         # On retire le multiplicateur * 100 si ENERGY_MAX est déjà à 100
         # Ou on s'assure de renvoyer une fraction de 100.
         return {
-            "bpm": self.hz * 60,
-            "energy": max(0, self.energy), # On affiche la valeur brute
-            "hz": self.hz
+        "bpm": self.bpm,
+        "vitality": getattr(self, 'energy', 100.0), # Utilise energy pour Vitalité
+        "is_resting": getattr(self, 'is_resting', False) # Défaut à False si absent
         }

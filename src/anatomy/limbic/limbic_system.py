@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Limbic system implementation for aNA v5.1
+Limbic system implementation for aNA AI Project v5.3
 
 Communicates with: 
 Input: (<- Thalamus) (<- Cortical L2/3)
 Input/Output: (<-> Amygdala) (<-> Hippocampus)
 Output: (-> Pulse/BPM) (-> Neuromodulator Core)
 
-This module acts as the emotional and mnestic hub of aNA. It orchestrates the bidirectional flow between the Amygdala (Threat/Arousal) and the Hippocampus (Context/Memory). By integrating these signals, the Limbic System provides a value-based filter for the Thalamus and influences the global Pulse (BPM), ensuring that the organism's metabolic state is aligned with its internal emotional landscape and past experiences.
+Description: This module acts as the emotional and mnestic hub of aNA. It orchestrates the bidirectional flow between the Amygdala (Threat/Arousal) and the Hippocampus (Context/Memory). By integrating these signals, the Limbic System provides a value-based filter for the Thalamus and influences the global Pulse (BPM), ensuring that the organism's metabolic state is aligned with its internal emotional landscape and past experiences.
 
 Architecture, concept and supervision: Benoit Theriault
 Collaboration, research and code: Gemini
@@ -19,8 +19,8 @@ import os
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 
-from anatomy.limbic.amygdala import Amygdala
-from anatomy.limbic.hippocampus import Hippocampus
+from src.anatomy.limbic.amygdala import Amygdala
+from src.anatomy.limbic.hippocampus import Hippocampus
 
 class LimbicSystem:
     """
@@ -34,7 +34,7 @@ class LimbicSystem:
         # C'est ici que le "Senseur de Danger" est défini :
         self.arousal_threshold = arousal_threshold 
             
-    def process_experience(self, sensory_data, emotional_input):
+    async def process_experience(self, sensory_data, emotional_input): 
         """
         Processes a sensory event and decides how to store it.
         """
@@ -45,17 +45,17 @@ class LimbicSystem:
         else:
             emotional_state = emotional_input
 
-        # 1. Extraction sécurisée (le .get() ne plantera plus)[cite: 9]
+        # 1. Extraction sécurisée (le .get() ne plantera plus)
         dopamine = emotional_state.get("dopamine", 0.0) 
         cortisol = emotional_state.get("cortisol", 0.0)
         
-        # Le reste de votre logique de consolidation...[cite: 9]
+        # Le reste de votre logique de consolidation...
         consolidation_factor = 1.0 + (dopamine * 1.5) + (cortisol * 2.0)
         
-        # 3. Envoi à l'Hippocampe (Note: vérifiez si vous utilisez 'weight' ou 'importance')[cite: 9]
-        self.hippocampus.encode(sensory_data, importance=consolidation_factor)
+        # 3. Envoi à l'Hippocampe (Note: vérifiez si vous utilisez 'weight' ou 'importance')
+        await self.hippocampus.encode(label=sensory_data, importance=consolidation_factor, intensity=0.5)
 
-        # 4. Calcul de l'Arousal pour le retour du test[cite: 9]
+        # 4. Calcul de l'Arousal pour le retour du test
         total_arousal = (dopamine + cortisol) / 2
         return total_arousal > self.arousal_threshold
 

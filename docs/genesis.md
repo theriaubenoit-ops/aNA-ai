@@ -1,22 +1,24 @@
-🚀 Quick links: [License](/LICENSE), [ReadMe](/README.md), [Installation](/docs/installation.md), [Contributing](/CONTRIBUTING.md), [Innovation-Lab](/docs/innovation-lab.md), [Philosophy](/docs/philosophy.md), Genisis, [Architecture](/docs/architecture.md)
+🚀 Quick links: [ReadMe](/README.md), [Installation](/docs/INSTALLATION.md), [Contributing](/CONTRIBUTING.md), [Innovation-Lab](/docs/innovation-lab.md), [Philosophy](/docs/philosophy.md), Genisis, [Architecture](/docs/architecture.md)
 
 ![ ](/docs/assets/spacer16x16.png)
 
 # Genesis: The heart of the neural adventure
 
 ```
-░                     ░░░░░░░░░░▒▒▒▒▒▒░░
-           ░░░░░░░░░▒▒▒▒▒▓▒▒▒▒░░░░░░░░░░▒▒▒▒░                                                          ░░░░░░░░░░░
-░░░░░░░░░░░░░░░░▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▒░░░░░▒▒▒░░░░▒▓▒░░                      ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-░░░░░░░░░░░░░░▒▒▒▓▓▓▓▓▓▓▓▓▓▓▒░░▒▒▒░░░░▒▓▓▓▓▓▓▒▒▒▒▒░     ░░░░░░░░░░░░░░░░░░░░░▒▒░░▒▒▒▓▓▓▓▓▓▒▒▒░░░░░░░░░░░░░░░░░▒▒▒▒
-▒░░░░░▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▒░         ░░▒▒▒░▒▒▒▒▓▓▓▓▓▓▓▒▒░░  ░▒▒▒▓▒▒▒▓▒▓▒▓▒░░░░░░░▒▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░░░░░░░▒▓
-░▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓░                   ░░ ▒▒▓▒░▒▓▓▓░▒▒░░           ░▒░░░▒▓▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▓▓
-▒▒▓▓▓▓▓▓▒▒▒░░                           ░▓▓▒░░▒▓▓░ _    _    _ ░▒░░▒▓▒▓▓▓▓▓▓▓▓▓▓▒░░░░░░░░░▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-▓▓▓▓▓▒░AI inspired by natural plasticity ░░   ░░░  a    N    A  ▒▓▒▓▒▒▒▓░Autonomous Neural Architecture v5.2b  ░▒▓
-░                                                  ‾    ‾    ‾ ░▓▒▓░░▒▓░
+░              ░ ░░░▒▒▓▒▓▒▒▒▒▒░░▒▒░▒▒▒▓▒▓▒                                                                     ░ ░
+▒░░   ░░░░░░░░░░▒▒▓▓▓▓▓▓▓██▓▒▒▒░░░▒▒▒▒▒░░░▒▒▓▓▒                                                         ░░░░░░▒▒▒▒
+░░░░░░░░░░░░░▒▒▒▓▓▓▓▓▓██████▓▓▒▒▒░░▒▒▓▓▓▒▒▒░░▒▒▒▒▓▒                                        ░ ░░░ ░ ░░░░░░░░░▒▒▒▒▒▒
+▓▒▒▒▒▒▒▒▒▓▒▓▓▓▓▓▓██████▓▒▒ ▒   ▒▓▒▓▒▒▒▒▓▒▓ ██▓▓▓▒▒▒▒▓      ░░▒▒▒▒▒▒▒░░░░░░▒░░░░▒▒░░▒░░░░░░░░░░░░░░░░░▒░▒▒▒░▒▒▒▓▓▓▓
+▒▒▒▒▒▒▒▓▓▓▓▓████▓▓░                 ░░▒▒▒▓█▓░▓▓█▓▓ ░▒▓  ▒▓▓▓▓▓█▓▓▓█▓▒▒▒▓▓▒░░░░▒▓█▓▓▓▓▓▒▓▒▒▒▒▒▒▒░░░░░░░░░░░░░░▒▒▒▒▒
+▒▒▓▒▓▓▓▓█████▓▒                         ░▒▒▓░ ▓██▓                ▒▓▒▒░░▒▓▒░░▒▓███▓█▓▓▓▓▓▓▓▓▓▓▓▒▓▒▒▒▒▒▒▒▒▒▒▓▒▓▓▓▓▓
+▓▓▓█████▓░                                    ░░▒▒ _    _    _ ░▒░▒▒▒▓▒▓▒▓▒▓█▓███▒▓▓▓▓▓▓▓▓▓▓▓▓▓█▓██▓▓▓▓▓█▓████████
+▓███▓▒      AI inspired by natural plasticity  ✴️  a    N    A  ▒▓█▒▓ ▒▓█▒Autonomous Neural Architecture v5.3  ▒▓▓
+▓░                                                 _    _    _  ░▓▒▓  ░▓
 ```
 
 ###### _"The Creation" —Michelangelo_
+
+![ ](/docs/assets/spacer16x16.png)
 
 ### Traces of thought
 
@@ -40,6 +42,25 @@ This project is an exploration at the threshold of _cortical_ memory. We are not
 
 ![ ](/docs/assets/spacer32x32.png)
 
+![img](/docs/assets/alphabet_256x256_ALL.gif)
+
+###### _Thanks to a wide range of media (haptic, visual and auditory), it is already possible to _[test(/)](/tests/)_ many learning processes._
+
+![ ](/docs/assets/spacer32x32.png)
+
+### Natural Language Acquisition & Pattern Invariance
+
+Beyond multilingual support, aNA implements a biological approach to symbolic recognition. Rather than treating characters as isolated data points, the system processes them as invariant pairs.
+
+**From "Aa" to "Zz":** Neural synchronization of case-invariant structures.
+Biological Paradigm: In the human brain, the Visual Word Form Area (VWFA) learns to recognize letters regardless of their case or font. By presenting "Aa" as a single stimulus, we simulate this perceptual constancy.
+
+**Haptic Association:** Each pair is linked to a unique signature in the haptic_registry.txt. This allows the Cerebellum to calibrate the timing of recognition for both uppercase and lowercase simultaneously.
+
+**Reduced Cognitive Friction:** Grouping 52 symbols into 26 functional units optimizes the Hippocampus storage and speeds up Thalamic routing, mimicking the efficiency of a high-cognitive profile.
+
+![ ](/docs/assets/spacer16x16.png)
+
 ```Python
 # Snippet: Serotonin influence on global homeostasis
 def apply_serotonin_stabilization(neural_network, matrix):
@@ -58,12 +79,18 @@ def apply_serotonin_stabilization(neural_network, matrix):
 
 # 👤 About the Author
 
-**Benoit Theriault** works at the intersection of _design_, _architecture_, and _software engineering_. With a multidisciplinary background—ranging from _architectural signage_ to complex _web solutions_—he cultivates a rigorous approach, honed by years of close collaboration with architects, engineers, and medical professionals across Quebec, Canada and internationally.
+_**Benoit Theriault**_ works at the intersection of _design, architecture, and software engineering._ With a multidisciplinary background—ranging from _large-scale architectural signage_ for major institutions to complex, _high-performance web solutions_—he delivers complete, _innovative ecosystems_ built for _scalability and precision_.
 
-Since the beginning of his career, this constant pursuit of form and structure has been coupled with a profound fascination for _neural processes_. An expert in programming languages _(HTML, CSS, JavaScript, and Python)_, he now presents the **aNA** AI project not as a mere technical tool, but as an allegory that translates the elegance of _living mechanisms_ into the _digital world_.
+Throughout his career, _**Benoit**_ has honed a rigorous approach through close collaboration with _architects, engineers, and medical professionals_ across Quebec, Canada, and internationally. He specializes in bridging the gap between _creative vision and technical execution,_ ensuring that every _solution_ is not only functional but _architecturally sound_.
 
-Between behavioral _psychology_, _ethics_, and _neuroinformatics_, his work offers a new interpretation of _artificial intelligence_: that of an architecture which, like the _brain_, is cultivated with precision and intention.
+This constant pursuit of form and structure is fueled by a profound fascination for _neural processes_ and creative research. An expert in programming and design systems, he presents the **aNA** project as a culmination of this journey: an allegory that translates the elegance of _living mechanisms_ into the _digital world_.
+
+Between behavioral _psychology, ethical engineering_, and _neuroinformatics_, his work offers a new interpretation of _Artificial Intelligence_: an _architecture_ cultivated with the _same intention, depth, and precision_ as the _human brain_.
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-03-31_
+<a href="#start-of-content" style="text-decoration: none;">Back to top 🔼</a>
+
+![ ](/docs/assets/spacer16x16.png)
+
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-17_

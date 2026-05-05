@@ -1,13 +1,29 @@
-🚀 Quick links: [License](/LICENSE), [ReadMe](/README.md), [Installation](/docs/installation.md), [Contributing](/CONTRIBUTING.md), [Innovation-Lab](/docs/innovation-lab.md), [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), Architecture
+🚀 Quick links: [ReadMe](/README.md), [Installation](/docs/INSTALLATION.md), [Contributing](/CONTRIBUTING.md), [Innovation-Lab](/docs/innovation-lab.md), [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), Architecture
 
 ![ ](/docs/assets/spacer16x16.png)
 
-# ✴️*aNA (Autonomous Neural Architecture)* AI Project v5.2
-
-### 1. 🏗️ High-Level System Architecture
+# ✴️*aNA (Autonomous Neural Architecture)* AI Project v5
 
 ```
-aNA v5.2 Autonomous Neural Architecture
+░              ░ ░░░▒▒▓▒▓▒▒▒▒▒░░▒▒░▒▒▒▓▒▓▒                                                                     ░ ░
+▒░░   ░░░░░░░░░░▒▒▓▓▓▓▓▓▓██▓▒▒▒░░░▒▒▒▒▒░░░▒▒▓▓▒                                                         ░░░░░░▒▒▒▒
+░░░░░░░░░░░░░▒▒▒▓▓▓▓▓▓██████▓▓▒▒▒░░▒▒▓▓▓▒▒▒░░▒▒▒▒▓▒                                        ░ ░░░ ░ ░░░░░░░░░▒▒▒▒▒▒
+▓▒▒▒▒▒▒▒▒▓▒▓▓▓▓▓▓██████▓▒▒ ▒   ▒▓▒▓▒▒▒▒▓▒▓ ██▓▓▓▒▒▒▒▓      ░░▒▒▒▒▒▒▒░░░░░░▒░░░░▒▒░░▒░░░░░░░░░░░░░░░░░▒░▒▒▒░▒▒▒▓▓▓▓
+▒▒▒▒▒▒▒▓▓▓▓▓████▓▓░                 ░░▒▒▒▓█▓░▓▓█▓▓ ░▒▓  ▒▓▓▓▓▓█▓▓▓█▓▒▒▒▓▓▒░░░░▒▓█▓▓▓▓▓▒▓▒▒▒▒▒▒▒░░░░░░░░░░░░░░▒▒▒▒▒
+▒▒▓▒▓▓▓▓█████▓▒                         ░▒▒▓░ ▓██▓                ▒▓▒▒░░▒▓▒░░▒▓███▓█▓▓▓▓▓▓▓▓▓▓▓▒▓▒▒▒▒▒▒▒▒▒▒▓▒▓▓▓▓▓
+▓▓▓█████▓░                                    ░░▒▒ _    _    _ ░▒░▒▒▒▓▒▓▒▓▒▓█▓███▒▓▓▓▓▓▓▓▓▓▓▓▓▓█▓██▓▓▓▓▓█▓████████
+▓███▓▒      AI inspired by natural plasticity  ✴️  a    N    A  ▒▓█▒▓ ▒▓█▒Autonomous Neural Architecture v5.3  ▒▓▓
+▓░                                                 _    _    _  ░▓▒▓  ░▓
+```
+
+###### _"The Creation" —Michelangelo_
+
+![ ](/docs/assets/spacer16x16.png)
+
+### 1. High-Level System Architecture
+
+```
+aNA v5 Autonomous Neural Architecture
 ├── Configuration (The Temperament)
 ├── Dashboard (Metabolic & Cognitive):
 │   ├── Real-time Neural Stats: Monitors neurotransmitter levels
@@ -19,7 +35,7 @@ aNA v5.2 Autonomous Neural Architecture
 └── Registry (The Genome)
 ```
 
-### 2. ⚡ Processing Unit (Neurons)
+### 2. Processing Unit (Neurons)
 
 ```
 ├── Cerebral Cortex (The "Thinking" Shell, 4 Lobes + 6 Layers)
@@ -67,10 +83,10 @@ aNA v5.2 Autonomous Neural Architecture
     └── Coordination between Motor Cortex and Sensory Feedback
 
 Computational Engine: Free Energy Principle (FEP)
-aNA v5.2 optimizes prediction accuracy by minimizing the error between sensory reality and internal models. High error triggers the Limbic System to release neuromodulators (Adrenaline/Dopamine) via the Amygdala to force learning.
+aNA v5 optimizes prediction accuracy by minimizing the error between sensory reality and internal models. High error triggers the Limbic System to release neuromodulators (Adrenaline/Dopamine) via the Amygdala to force learning.
 ```
 
-### 3. 🌐 Connection Logic (Synapses)
+### 3. Connection Logic (Synapses)
 
 ```
 Cognitive Loop
@@ -83,7 +99,7 @@ Cognitive Loop
     importance -> The Hippocampus stores it -> The Cortex adapts its logic.
 ```
 
-### 4. 📊 Microcircuitry (Cortical Columns)
+### 4. Microcircuitry (Cortical Columns)
 
 ```
 Cortical Layer Dynamics (Each Lobe contains 6 Cortical Layers)
@@ -95,7 +111,7 @@ Cortical Layer Dynamics (Each Lobe contains 6 Cortical Layers)
 └── Layer VI: Multiform (Thalamic Regulatory Loop - Gain Control)
 ```
 
-### 5. 🧩 Macro-scale Structure (Lobes & Nuclei)
+### 5. Macro-scale Structure (Lobes & Nuclei)
 
 ```
 ├── Frontal Lobe System
@@ -120,7 +136,7 @@ Cortical Layer Dynamics (Each Lobe contains 6 Cortical Layers)
     └── Color and Shape Recognition
 ```
 
-### 6. 🗄️ Memory Systems (Hippocampus, Cortex)
+### 6. Memory Systems (Hippocampus, Cortex)
 
 ```
 ├── Inter-lobar Communication
@@ -138,7 +154,7 @@ Cortical Layer Dynamics (Each Lobe contains 6 Cortical Layers)
     └── Hippocampus ↔ Parietal Lobe (Spatial Memory)
 ```
 
-### 7. 🎛️ Executive Control & Attention (Frontal, Amygdala)
+### 7. Executive Control & Attention (Frontal, Amygdala)
 
 ```
 Dynamic Processing Flow:
@@ -154,7 +170,7 @@ Processing Hierarchy:
 └── Integration Centers → Motor Planning (Frontal Layer V)
 ```
 
-### 8. 🔄 Sensorimotor Loops & Coordination (Parietal, Cerebellum)
+### 8. Sensorimotor Loops & Coordination (Parietal, Cerebellum)
 
 ```
 ├── Occipital Lobe (Posterior “What” and “Where”)
@@ -175,7 +191,7 @@ Processing Hierarchy:
     - Tertiary: Decision Making
 ```
 
-### 9. ⚗️ Neuromodulation (Chemical Gain)
+### 9. Neuromodulation (Chemical Gain)
 
 ```
 ├── NO (Nitric Oxide) -> Volumetric Retrograde Signaling
@@ -207,87 +223,86 @@ Processing Hierarchy:
 ```
 ├── docs/
 │   ├── adr/
-│   │   ├── adr001.md                   # ✅ Architecture Decision Records
-│   │   └── adr002.md                   # ✅ Architecture Decision Records
-│   ├── assets/                         # 📋 Medias
-│   ├── examples/                       # 📋 Comprehensive example suite
-│   ├── api-reference.md                # 📋 ...
+│   │   └── adr_*.md                    # 🔶 Architecture Decision Records
+│   ├── adr_fr/
+│   │   └── adr_*.md                    # 🔶 Archives de décisions architecturales (FR)
+│   ├── assets/                         # Medias
+│   ├── api-reference.md                # 📋 API reference
 │   ├── architecture.md                 # The technical plan
 │   ├── genesis.md                      # The story of the project
 │   ├── innovation-lab.md               # Innovation (Creation Lab)
-│   ├── installation.md                 # Installation
-│   ├── installation_fr.md              # Installation (FR)
-│   ├── legend.md                       # 📋 ...
-│   └── philosophy.md                   # The ethical vision
+│   ├── INSTALLATION.md                 # Installation
+│   ├── INSTALLATION_fr.md              # Installation (FR)
+│   ├── legend.md                       # 📋 Legend
+│   ├── philosophy.md                   # The ethical vision
+│   └── usage.md                        # Usage and tests (EN/FR)
 ├── examples/                           # Comprehensive example suite
-│   ├── basic-demo.html                 # 📋 ...
-│   ├── learning-demo.html              # 📋 ...
-│   └── memory-demo.html                # 📋 ...
+│   ├── basic-demo.html                 # 📋 Basic example
+│   ├── learning-demo.html              # 📋 Learning example
+│   └── memory-demo.html                # 📋 Memory exemple
 ├── src/
 │   ├── anatomy/                        # Brain region implementations
 │   │   ├── base/
 │   │   │   ├── neuron.py               # Represents a single neuron
 │   │   │   └── neuromodulator.py       # Chemical "gain controls"
 │   │   ├── cortical/
-│   │   │   ├── frontal.py              # ✅ Executive Logic & Command Center
-│   │   │   ├── cortical_column.py      # ✅ Vertical organization of 6 cortical layers
-│   │   │   ├── neocortex.py            # ✅ The structural integration of the 4 Lobes
-│   │   │   ├── occipital.py            # ✅ Visual Stream Processor
-│   │   │   ├── parietal.py             # ✅ Spatial Mapping & Data Integration
-│   │   │   └── temporal.py             # ✅ Semantic Storage & Pattern Recognition
+│   │   │   ├── frontal.py              # 🔶 Executive Logic & Command Center
+│   │   │   ├── cortical_column.py      # Vertical organization of 6 cortical layers
+│   │   │   ├── neocortex.py            # 🔶 The structural integration of the 4 Lobes
+│   │   │   ├── occipital.py            # 🔶 Visual Stream Processor
+│   │   │   ├── parietal.py             # 🔶 Spatial Mapping & Data Integration
+│   │   │   └── temporal.py             # 🔶 Semantic Storage & Pattern Recognition
 │   │   ├── limbic/
 │   │   │   ├── amygdala.py             # Priority Filter & Interrupt Controller
 │   │   │   ├── hippocampus.py          # Dynamic Buffer & Indexing System
-│   │   │   └── limbic_system.py        # ✅ Limbic system
+│   │   │   └── limbic_system.py        # 🔶 Emotional and mnestic hub
+│   │   ├── perceptual/                 # 📋 Perceptual
+│   │   │   └── glyph_renderer.py       # 📋 Visual Word Form Area
 │   │   └── subcortical
 │   │       ├── cerebellum.py           # Timing Engine & Output Calibration
-│   │       ├── thalamic_hub.py         # 🚧 Thalamic Hub
-│   │       └── thalamus.py             # Enhanced Thalamus implementation
+│   │       ├── thalamic_hub.py         # 🔶 Thalamic Hub
+│   │       ├── thalamus.py             # Enhanced Thalamus implementation
+│   │       └── striatum.py             # 🔶 The Action Selector
 │   ├── core/                           # Core neural components
-│   │   ├── input_tactile.py            # ✅ Input tactile
-│   │   ├── input_visual.py             # ✅ Input visual
-│   │   ├── input_auditory.py           # ✅ Input auditory (Sounds to add)
+│   │   ├── input_tactile.py            # 🔶 Input tactile
+│   │   ├── input_visual.py             # 🔶 Input visual
+│   │   ├── input_auditory.py           # 🔶 Input auditory (Sounds to add)
 │   │   ├── output_gateway.py           # 🚧 Input gateway
 │   │   └── pulse.py                    # Core Pacemaker (Pulse)
 │   ├── gui/                            # Web-based interface
-│   │   ├── dashboard.py                # 🚧 ...
-│   │   └── dashboard_fr.py             # 🚧 ... (FR)
-│   ├── tests/                          # Comprehensive test suite
-│   │   ├── test_amygdala.py            # ✅ Priority Filter & Interrupt Controller
-│   │   ├── test_autonomy.py            # ✅ To validate the autonomous behaviors
-│   │   ├── test_cerebellum.py          # ✅ Timing Engine & Output Calibration
-│   │   ├── test_cortical_column.py     # ✅ Six-layer cortical signal flow
-│   │   ├── test_hippocampus.py         # ✅ Dynamic Buffer & Indexing System
-│   │   ├── test_limbic_system.py       # ✅ Limbic system
-│   │   ├── test_neuron.py              # ✅ Represents a single neuron
-│   │   ├── test_pulse.py               # ✅ Core Pacemaker (Pulse)
-│   │   ├── test_trauma_logic.py        # ✅ Hippocampus Trauma Logic
-│   │   └── test_thalamus.py            # ✅ Enhanced Thalamus implementation
-│   ├── tests_fr/                       # Comprehensive test suite (FR)
-│   │   ├── test_amygdala.py            # ✅ Priority Filter & Interrupt Controller (FR)
-│   │   ├── test_autonomy.py            # ✅ To validate the autonomous behaviors (FR)
-│   │   ├── test_cerebellum.py          # ✅ Timing Engine & Output Calibration (FR)
-│   │   ├── test_cortical_column.py     # ✅ Six-layer cortical signal flow (FR)
-│   │   ├── test_hippocampus.py         # ✅ Dynamic Buffer & Indexing System (FR)
-│   │   ├── test_limbic_system.py       # ✅ Limbic system (FR)
-│   │   ├── test_neuron.py              # ✅ Represents a single neuron (FR)
-│   │   ├── test_pulse.py               # ✅ Core Pacemaker (Pulse) (FR)
-│   │   ├── test_trauma_logic.py        # ✅ Hippocampus Trauma Logic (FR)
-│   │   └── test_thalamus.py            # ✅ Enhanced Thalamus implementation (FR)
-│   ├── config.py                       # ✅ Configuration Module
-│   ├── main.py                         # ✅ The orchestrator
-│   ├── main_fr.py                      # ✅ The orchestrator (FR)
-│   └── registry.py                     # ✅ The Centralized Genome
+│   │   ├── DASHBOARD.py                # 🚧 Dashboard
+│   │   └── DASHBOARD_fr.py             # 🚧 Tableau de bord (FR)
+│   ├── config.py                       # 🔶 Configuration Module
+│   ├── MAIN.py                         # 🔶 The orchestrator
+│   ├── MAIN_fr.py                      # 🔶 L'orchestrateur (FR)
+│   └── registry.py                     # 🔶 The Centralized Genome
+├── tests/
+│   ├── media_audio/                    # 🔶 Media audio
+│   │   ├── other/
+│   │   └── 00_*.wav
+│   ├── media_haptic/                   # 🔶 Media haptic
+│   │   ├── other/
+│   │   └── 00_*.md
+│   ├── media_visual/                   # 🔶 Media visual
+│   │   ├── other/
+│   │   └── 00_*.png
+│   └── test_*.py                       # Comprehensive test suite
+├── tests_fr/
+│   └── test_*.py                       # Suite de tests complète (FR)
 ├── CONTRIBUTING.md                     # The rules of collaboration
 ├── LICENSE                             # Protection license
 └── README.md                           # Manifesto
 
 📋 To Do
 🚧 In progress
-✅ Newly added
+🔶 Newly added
 
 ```
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-11_
+<a href="#start-of-content" style="text-decoration: none;">Back to top 🔼</a>
+
+![ ](/docs/assets/spacer16x16.png)
+
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-05_

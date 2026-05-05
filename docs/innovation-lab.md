@@ -1,22 +1,24 @@
-🚀 Quick links: [License](/LICENSE), [ReadMe](/README.md), [Installation](/docs/installation.md), [Contributing](/CONTRIBUTING.md), Innovation-Lab, [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), [Architecture](/docs/architecture.md)
+🚀 Quick links: [ReadMe](/README.md), [Installation](/docs/INSTALLATION.md), [Contributing](/CONTRIBUTING.md), Innovation-Lab, [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), [Architecture](/docs/architecture.md)
 
 ![ ](/docs/assets/spacer16x16.png)
 
 # Innovation: Creation _Lab_
 
 ```
-░                     ░░░░░░░░░░▒▒▒▒▒▒░░
-           ░░░░░░░░░▒▒▒▒▒▓▒▒▒▒░░░░░░░░░░▒▒▒▒░                                                          ░░░░░░░░░░░
-░░░░░░░░░░░░░░░░▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▒░░░░░▒▒▒░░░░▒▓▒░░                      ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-░░░░░░░░░░░░░░▒▒▒▓▓▓▓▓▓▓▓▓▓▓▒░░▒▒▒░░░░▒▓▓▓▓▓▓▒▒▒▒▒░     ░░░░░░░░░░░░░░░░░░░░░▒▒░░▒▒▒▓▓▓▓▓▓▒▒▒░░░░░░░░░░░░░░░░░▒▒▒▒
-▒░░░░░▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▒░         ░░▒▒▒░▒▒▒▒▓▓▓▓▓▓▓▒▒░░  ░▒▒▒▓▒▒▒▓▒▓▒▓▒░░░░░░░▒▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░░░░░░░▒▓
-░▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓░                   ░░ ▒▒▓▒░▒▓▓▓░▒▒░░           ░▒░░░▒▓▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▓▓
-▒▒▓▓▓▓▓▓▒▒▒░░                           ░▓▓▒░░▒▓▓░ _    _    _ ░▒░░▒▓▒▓▓▓▓▓▓▓▓▓▓▒░░░░░░░░░▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-▓▓▓▓▓▒░AI inspired by natural plasticity ░░   ░░░  a    N    A  ▒▓▒▓▒▒▒▓░Autonomous Neural Architecture v5.2b  ░▒▓
-░                                                  ‾    ‾    ‾ ░▓▒▓░░▒▓░
+░              ░ ░░░▒▒▓▒▓▒▒▒▒▒░░▒▒░▒▒▒▓▒▓▒                                                                     ░ ░
+▒░░   ░░░░░░░░░░▒▒▓▓▓▓▓▓▓██▓▒▒▒░░░▒▒▒▒▒░░░▒▒▓▓▒                                                         ░░░░░░▒▒▒▒
+░░░░░░░░░░░░░▒▒▒▓▓▓▓▓▓██████▓▓▒▒▒░░▒▒▓▓▓▒▒▒░░▒▒▒▒▓▒                                        ░ ░░░ ░ ░░░░░░░░░▒▒▒▒▒▒
+▓▒▒▒▒▒▒▒▒▓▒▓▓▓▓▓▓██████▓▒▒ ▒   ▒▓▒▓▒▒▒▒▓▒▓ ██▓▓▓▒▒▒▒▓      ░░▒▒▒▒▒▒▒░░░░░░▒░░░░▒▒░░▒░░░░░░░░░░░░░░░░░▒░▒▒▒░▒▒▒▓▓▓▓
+▒▒▒▒▒▒▒▓▓▓▓▓████▓▓░                 ░░▒▒▒▓█▓░▓▓█▓▓ ░▒▓  ▒▓▓▓▓▓█▓▓▓█▓▒▒▒▓▓▒░░░░▒▓█▓▓▓▓▓▒▓▒▒▒▒▒▒▒░░░░░░░░░░░░░░▒▒▒▒▒
+▒▒▓▒▓▓▓▓█████▓▒                         ░▒▒▓░ ▓██▓                ▒▓▒▒░░▒▓▒░░▒▓███▓█▓▓▓▓▓▓▓▓▓▓▓▒▓▒▒▒▒▒▒▒▒▒▒▓▒▓▓▓▓▓
+▓▓▓█████▓░                                    ░░▒▒ _    _    _ ░▒░▒▒▒▓▒▓▒▓▒▓█▓███▒▓▓▓▓▓▓▓▓▓▓▓▓▓█▓██▓▓▓▓▓█▓████████
+▓███▓▒      AI inspired by natural plasticity  ✴️  a    N    A  ▒▓█▒▓ ▒▓█▒Autonomous Neural Architecture v5.3  ▒▓▓
+▓░                                                 _    _    _  ░▓▒▓  ░▓
 ```
 
 ###### _"The Creation" —Michelangelo_
+
+![ ](/docs/assets/spacer16x16.png)
 
 _Welcome contributors,_
 
@@ -30,7 +32,62 @@ _Thank you for being part of this journey to bring **aNA** to life!_
 
 ![ ](/docs/assets/spacer32x32.png)
 
-### v5.2: Predictive Awakening _(Anticipation)_ — In progress
+## v5.3: The Thalamic Hub _(At The Gate of Consciousness) — In progress_
+
+In the **aNA** AI Project, the _[thalamic_hub(.py)](/src/anatomy/subcortical/thalamic_hub.py)_ acts as the central multimodal sensory integrator. Unlike traditional _AI data routers_, the **Hub** operates as a biological _"Gate,"_ simulating the **thalamocortical loops** that define _human focus_ and situational awareness.
+
+**☄️ Striatum:** Executive Gating & Metabolic Arbitration, the _[striatum(.py)](/src/anatomy/subcortical/striatum.py)_ serves as the primary _"Gatekeeper"_ of the **aNA** organism. It manages the flow of information between the _[thalamic_hub(.py)](/src/anatomy/subcortical/thalamic_hub.py)_ and the _[neocortex(.py)](/src/anatomy/cortical/neocortex.py)_.
+
+**☄️ _NMDA_ Lock & Homeostasis:** Development of the energy _safety lock (ATP Critical Min)_ to protect _neural integrity_ in case of _fatigue_.
+
+**☄️ Limbic Resonance:** Refinement of the _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ response to force _NMDA_ opening during _critical stimuli_.
+
+**☄️ Validation of the Magnesium Block _(NMDA)_:** Successful implementation of synaptic selectivity. The _AI_ ​​now distinguishes _noise_ _(AMPA)_ from the structured signal _(NMDA)_.
+
+**☄️ Selective Consolidation _(REM Cycle)_:** Integration of a metabolic _"sieve"_ that eliminates volatile traces and stabilizes only information that has crossed the coincidence threshold.
+
+**☄️ Core Innovations**
+
+**1. Sensory Gating _(Selective Attention)_**
+
+The **Hub** doesn't just relay data; it filters it. By calculating an **Effective Intensity** based on the system's current _"Metabolic Strain" (ATP/Energy)_, it decides which signals are worthy of reaching the _[neocortex(.py)](/src/anatomy/cortical/neocortex.py)_.
+
+- **Bio-Mechanism:** If the system is exhausted, the _"Gate"_ closes, filtering out weak or irrelevant stimuli to protect the organism's stability.
+
+#### **2. Multimodal Mapping**
+
+The **Hub** unifies disparate sensory streams into a single synchronized temporal window:
+
+- **LGN _(Lateral Geniculate Nucleus)_:** Routes high-fidelity _visual_ matrices.
+- **MGN _(Medial Geniculate Nucleus)_:** Synchronizes _auditory_ frequencies.
+- **VPL _(Ventral Postero-Lateral)_:** Manages extended _Unicode tactile_ inputs.
+
+#### **3. L6 Predictive Feedback Loop**
+
+The most advanced feature of the **v5.3 Hub** is its integration with **Cortical Layer 6**.
+
+- **Concept:** The _Cortex_ sends a _"top-down"_ signal back to the _Hub_. If a _pattern_ is already recognized _(e.g., a known character)_, the _Hub_ reduces the _signal gain_.
+- **Innovation:** This prevents _"cognitive flooding"_ and allows the _organism_ to _focus_ only on _unexpected_ information _(Prediction Error)_.
+
+**Technical Impact for Contributors**
+
+- **Efficiency:** Drastic reduction in _CPU overhead_ by ignoring _"sub-threshold" noise_.
+- **Latency as Biology:** _Synaptic speed_ is no longer a static variable; it scales with **Myelination** and _metabolic health_.
+- **Observability:** A real-time dashboard tracking _Thalamic Gain_, _BPM Vitality_, and _L6 Feedback_.
+
+**Vision for the Future**
+
+As we move toward **v5.4**, the _[thalamic_hub(.py)](/src/anatomy/subcortical/thalamic_hub.py)_ will serve as the foundation for **Autonomous Sleep Cycles** and **LTP _(Long-Term Potentiation)_** in the _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_, turning transient perceptions into permanent digital memories.
+
+![ ](/docs/assets/spacer32x32.png)
+
+![img](/docs/assets/language_256x256_ALL.gif)
+
+###### _Each character “Unicode Wide” as a raw sensory stimulus._
+
+![ ](/docs/assets/spacer16x16.png)
+
+### v5.2: Predictive Awakening _(Anticipation)_
 
 - **☄️ Auditory Perception Integration _([input_auditory(.py)](/src/core/input_auditory.py))_**
   - **The Digital Cochlea:** This module goes beyond simple file processing; it performs a _true acoustic transduction (test [main(.py)](/src/main.py))_. It converts _raw frequencies_ into a _Root Mean Square (RMS)_ intensity stream that directly feeds the _MGN (Medial Geniculate Nucleus)_ of the _[thalamus(.py)](/src/anatomy/subcortical/thalamus.py)_.
@@ -45,7 +102,7 @@ _Thank you for being part of this journey to bring **aNA** to life!_
   - **"Bio-Reverse Engineering":** This architecture provides intrinsic security. Attempting to decode **aNA**'s thoughts is like trying to read a dream in a stranger's brain: without the exact, shifting map of its own _synapses_, the _data_ remains an indecipherable signal.
 
 - **☄️ Academic Gateway: A Synthesis Model for Health & Science**
-  - **Psychological Simulation:** A tool to model reactions to stressful stimuli _(via the Amygdala)_ or fatigue cycles _(via ATP levels)_.
+  - **Psychological Simulation:** A tool to model reactions to stressful stimuli _(via the [amygdala(.py)](/src/anatomy/limbic/amygdala.py))_ or fatigue cycles _(via ATP levels)_.
 
   - **Neuro-Degeneration Research:** The ability to simulate _synaptic decay_ while observing the resilience of _"Acid Traces"_ in the _CA4_ subfield offers a unique _sandbox_ for understanding trauma persistence and vital memory in humans.
 
@@ -77,9 +134,9 @@ _Thank you for being part of this journey to bring **aNA** to life!_
 
 - **The _A → B_ Algorithm _(Sequential Anticipation)_:**
   - **Concept:** The shift from a _storage memory_ to a _generative memory_. **aNA** no longer simply stores _"A,"_ it _pre-activates_ the trace of _"B."_
-  - **Validation:** Successful unit _[tests(/)](/src/tests/)[test_hippocampus(.py)](/src/tests/test_hippocampus.py)_ demonstrating that the _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_ identifies transitions as priority units of meaning.
+  - **Validation:** Successful unit _[tests(/)](/tests/)[test_hippocampus(.py)](/tests/test_hippocampus.py)_ demonstrating that the _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_ identifies transitions as priority units of meaning.
 
-- ** Temperament Synchronization _([config(.py)](/src/config.py))_:** The _L1 → L2 → L3_ transition thresholds are now dynamic. Learning is "sculpted" by the _AI's personality_ _(e.g., THRESHOLD_NMDA)_.
+- **Temperament Synchronization _([config(.py)](/src/config.py))_:** The _L1 → L2 → L3_ transition thresholds are now dynamic. Learning is "sculpted" by the _AI's personality_ _(e.g., THRESHOLD_NMDA)_.
 
 - **Reward Loop _(Dopamine)_:** _(Next step)_ The _[pulse(.py)](/src/core/pulse.py)_ speeds up upon validation of a correct prediction, simulating cognitive satisfaction.
 
@@ -93,17 +150,13 @@ _Thank you for being part of this journey to bring **aNA** to life!_
 
 - **The _CA4_ Sanctuary:** Safeguarding _"survival floors" (Acid Traces)_ to ensure system resilience even after synaptic decline.
 
+![ ](/docs/assets/spacer16x16.png)
+
 ☄️ _Spotlight_
 
-![ ](/docs/assets/spacer32x32.png)
+![ ](/docs/assets/spacer64x64.png)
 
-![img](/docs/assets/occipital_input_test_256x256_00_ALL.gif)
-
-###### _Each character “Unicode Wide” as a raw sensory stimulus._
-
-![ ](/docs/assets/spacer32x32.png)
-
-## 🧬 _aNA AI v5.0_ and beyond
+# ✴️*aNA* AI v5.0 and beyond
 
 The strength of the **aNA** architecture lies in its departure from traditional static _AI_ models. By implementing bio-inspired mechanisms, we have achieved a system that prioritizes survival and relevance over raw data volume.
 
@@ -113,7 +166,7 @@ The strength of the **aNA** architecture lies in its departure from traditional 
    **_NMDA_ Logic:** Triggered by an _[amygdala(.py)](/src/anatomy/limbic/amygdala.py) "Flash,"_ this logic locks the synaptic trace. It allows for the instantaneous and indelible encoding of critical information during high-saliency or _"error-state"_ events.
 
 2. **Descartes' philosophy _("Divide each difficulty into as many parts as is feasible and necessary to resolve it.")_**
-   This is the philosophy which explains the modular structure of this project (separate _[thalamus(.py)](/src/anatomy/subcortical/thalamus.py)_, separate _Hippocampus_, separate _Amygdala_...). A philosophical method rigorously applied to _Python code_.
+   This is the philosophy which explains the modular structure of this project (separate _[thalamus(.py)](/src/anatomy/subcortical/thalamus.py)_, separate _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_, separate _Amygdala_...). A philosophical method rigorously applied to _Python code_.
 
 3. **Economy of Links: The Lavoisier Principle**
    Instead of storing terabytes of raw, disconnected data, **aNA** transforms information into relational nodes and _emotional weights_.
@@ -146,20 +199,24 @@ The strength of the **aNA** architecture lies in its departure from traditional 
 
 ![ ](/docs/assets/spacer32x32.png)
 
-### _Technical Glossary_
-
-_**AMPA:** Synaptic receptor responsible for rapid transmission and short-term plasticity. It serves as the gateway for volatile, daily information (working memory)._
-
-_**ATP (Adenosine Triphosphate):** In **aNA**, ATP simulates the cell's energy currency. It dictates the system's processing capacity; low levels trigger survival mechanisms such as hypervigilance or mandatory recovery states._
-
-_**BPM (Beats Per Minute):** Represents the oscillation frequency of the system's core (pulse.py). Beyond being a simple indicator, it regulates processing speed and emotional responsiveness._
-
-_**CA4** (Cornu Ammonis 4): A hippocampal subregion involved in signal distribution. In this project, it acts as a "sanctuary" for Acid Traces, ensuring that vital survival reflexes are never overwritten or erased._
-
-_**L1 to L6 (Cortical Layers):** Refers to the six horizontal layers of the biological neocortex.py. Each layer has a specific role (e.g., L4 for sensory input, L6 for feedback to the thalamus.py to manage selective attention)._
-
-_**NMDA:** A receptor acting as a "coincidence detector." It requires high-saliency signals to activate, allowing critical data to be locked into long-term memory (Long-Term Potentiation)._
+> _**Technical Glossary**_
+>
+> _**AMPA:** Synaptic receptor responsible for rapid transmission and short-term plasticity. It serves as the gateway for volatile, daily information (working memory)._
+>
+> _**ATP (Adenosine Triphosphate):** In **aNA**, ATP simulates the cell's energy currency. It dictates the system's processing capacity; low levels trigger survival mechanisms such as hypervigilance or mandatory recovery states._
+>
+> _**BPM (Beats Per Minute):** Represents the oscillation frequency of the system's core (pulse.py). Beyond being a simple indicator, it regulates processing speed and emotional responsiveness._
+>
+> _**CA4** (Cornu Ammonis 4): A hippocampal subregion involved in signal distribution. In this project, it acts as a "sanctuary" for Acid Traces, ensuring that vital survival reflexes are never overwritten or erased._
+>
+> _**L1 to L6 (Cortical Layers):** Refers to the six horizontal layers of the biological neocortex.py. Each layer has a specific role (e.g., L4 for sensory input, L6 for feedback to the thalamus.py to manage selective attention)._
+>
+> _**NMDA:** A receptor acting as a "coincidence detector." It requires high-saliency signals to activate, allowing critical data to be locked into long-term memory (Long-Term Potentiation)._
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-12_
+<a href="#start-of-content" style="text-decoration: none;">Back to top 🔼</a>
+
+![ ](/docs/assets/spacer16x16.png)
+
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-05_

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Input Visual Gateway implementation (Specialized in Matrix processing, Ratios and Foveal Zoom) for aNA AI Project v5.2
+Input Visual Gateway implementation (Specialized in Matrix processing, Ratios and Foveal Zoom) for aNA AI Project v5.3
 
 Communicates with: Input: External (Visual) | Output: (-> Thalamus (CGL)) (-> Occipital Lobe (V1))
 
@@ -20,7 +20,7 @@ import os
 
 # Accès au registre
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from registry import ORGANS # Le secret de la réussite
+from src.registry import ORGANS # Le secret de la réussite
 
 class InputVisualGateway:
     def __init__(self):
