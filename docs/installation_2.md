@@ -31,7 +31,9 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
 - [ ] ☄️ In progress - Global Workspace / _Espace de travail global_:
 
   ```
-  python3 src/MAIN.py / python3 src/MAIN_fr.py
+  python3 src/MAIN.py
+
+  python3 src/MAIN_fr.py
   ```
 
 ![ ](/docs/assets/spacer16x16.png)
@@ -41,7 +43,9 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
 - [ ] ☄️ To Do - Dashboard / _Tableau de bord_:
 
   ```
-  python3 src/gui/DASHBOARD.py / python3 src/gui/DASHBOARD_fr.py
+  python3 src/gui/DASHBOARD.py
+
+  python3 src/gui/DASHBOARD_fr.py
   ```
 
 ![ ](/docs/assets/spacer16x16.png)
