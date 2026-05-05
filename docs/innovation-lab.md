@@ -32,13 +32,13 @@ _Thank you for being part of this journey to bring **aNA** to life!_
 
 ![ ](/docs/assets/spacer32x32.png)
 
-### v5.4: To Do _(...) — In progress_
+## v5.4: To Do _(...) — In progress_
 
 ...
 
 ![ ](/docs/assets/spacer16x16.png)
 
-## v5.3: The Thalamic Hub _(At The Gate of Consciousness)_
+### v5.3: The Thalamic Hub _(At The Gate of Consciousness)_
 
 In the **aNA** AI Project, the _[thalamic_hub(.py)](/src/anatomy/subcortical/thalamic_hub.py)_ acts as the central multimodal sensory integrator. Unlike traditional _AI data routers_, the **Hub** operates as a biological _"Gate,"_ simulating the **thalamocortical loops** that define _human focus_ and situational awareness.
 
