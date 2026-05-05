@@ -74,7 +74,7 @@ We are embarking on the _"next wave"_ of artificial intelligence—an AI that do
 
 ## Running the Biological Simulations _(Demos)_
 
-To witness **aNA** v5.0's neural processing in real-time, you can run the integrated _[tests(/)](/src/tests/)_ suites. These simulations demonstrate how sensory data is transformed into emotional importance and cortical action.
+To witness **aNA** v5.0's neural processing in real-time, you can run the integrated _[tests(/)](/tests/)_ suites. These simulations demonstrate how sensory data is transformed into emotional importance and cortical action.
 
 ### 1. Limbic Resonance _(Test)_
 
@@ -82,7 +82,7 @@ This demo simulates how the _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ a
 
 ```Python
 # From the project root
-python3 src/tests/test_limbic_system.py
+python3 tests/test_limbic_system.py
 ```
 
 #### What to look for in the output:
@@ -98,7 +98,7 @@ Validation of the _6-layer_ signal flow (L4 → L2/3 → L5) with real-time prec
 
 ```Python
 # From the project root
-python3 src/tests/test_cortical_column.py
+python3 tests/test_cortical_column.py
 ```
 
 ![ ](/docs/assets/spacer64x64.png)
@@ -114,11 +114,11 @@ python3 src/tests/test_cortical_column.py
 
 - **Sensory Input Gateways _(Multimodal Perception)_:**
   These modules act as the digital _"sense organs,"_ translating raw external data into neural payloads for the _[thalamic Hub(.py)](/src/anatomy/subcortical/thalamic_hub.py)_. Each gateway is responsible for a specific modality, reading media files from their dedicated directories:
-  - **[Input_visual(.py)](/src/core/input_visual.py) _(Occipital Gateway)_:** Processes _visual data (e.g., .png, .jpg)_ from _[media_visual(/)](/src/tests/media_visual/)_ . It simulates the retina and optic nerve, extracting intensity and spatial features.
+  - **[Input_visual(.py)](/src/core/input_visual.py) _(Occipital Gateway)_:** Processes _visual data (e.g., .png, .jpg)_ from _[media_visual(/)](/tests/media_visual/)_ . It simulates the retina and optic nerve, extracting intensity and spatial features.
 
-  - **[Input_auditory(.py)](/src/core/input_auditory.py) _(Temporal Gateway)_:** Processes _acoustic signals (e.g., .wav)_ from _[media_auditory(/)](/src/tests/media_auditory/)_ . It simulates the cochlear transformation, focusing on frequency and amplitude.
+  - **[Input_auditory(.py)](/src/core/input_auditory.py) _(Temporal Gateway)_:** Processes _acoustic signals (e.g., .wav)_ from _[media_auditory(/)](/tests/media_auditory/)_ . It simulates the cochlear transformation, focusing on frequency and amplitude.
 
-  - **[Input_haptic(.py)](/src/core/input_haptic.py) _(Somatosensory Gateway)_:** Processes _tactile_ and _pressure data (e.g., Unicode sequences or vibration patterns)_ from _[media_haptic(/)](/src/tests/media_haptic/)_ . It translates physical _"touch"_ into neural resistance and conductivity variables.
+  - **[Input_haptic(.py)](/src/core/input_haptic.py) _(Somatosensory Gateway)_:** Processes _tactile_ and _pressure data (e.g., Unicode sequences or vibration patterns)_ from _[media_haptic(/)](/tests/media_haptic/)_ . It translates physical _"touch"_ into neural resistance and conductivity variables.
 
 ### The Command Center _(Routing & Integration)_
 

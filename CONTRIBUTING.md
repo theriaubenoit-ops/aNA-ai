@@ -48,7 +48,7 @@ Join the **aNA** _computational neuroscience_ community: Be sure to clone/downlo
 
 - [ ] _"Fork"_ the repository: _Copy_ the project to your own _GitHub account_ to start experimenting.
 
-- [ ] _Run src/[tests(/)](/src/tests/)[test_hippocampus(.py)](/src/tests/test_hippocampus.py): Watch_ the Predictive Awakening _(A → B)_ in action and _verify_ the synaptic consolidation logic.
+- [ ] _Run src/[tests(/)](/tests/)[test_hippocampus(.py)](/tests/test_hippocampus.py): Watch_ the Predictive Awakening _(A → B)_ in action and _verify_ the synaptic consolidation logic.
 
 - [ ] Propose an _"Issue"_ or _"Discussion"_: If a system reaction seems _biologically incoherent_, _share your observations_ to help us refine the _neural accuracy_.
 
