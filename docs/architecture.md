@@ -232,10 +232,10 @@ Processing Hierarchy:
 │   ├── genesis.md                      # The story of the project
 │   ├── innovation-lab.md               # Innovation (Creation Lab)
 │   ├── INSTALLATION.md                 # Installation
-│   ├── installation_fr.md              # Installation (FR)
-│   ├── installation_2.md               # Installation 2
+│   ├── INSTALLATION_fr.md              # Installation (FR)
 │   ├── legend.md                       # 📋 Legend
-│   └── philosophy.md                   # The ethical vision
+│   ├── philosophy.md                   # The ethical vision
+│   └── usage.md                        # Usage and tests (EN/FR)
 ├── examples/                           # Comprehensive example suite
 │   ├── basic-demo.html                 # 📋 Basic example
 │   ├── learning-demo.html              # 📋 Learning example
@@ -305,4 +305,4 @@ Processing Hierarchy:
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-04_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-05_
