@@ -25,7 +25,7 @@
 <a href="/LICENSE" title="License information" style="text-decoration: none;">![License](https://img.shields.io/badge/license-MIT-ffd402?style=for-the-badge)</a>
 
 > [!NOTE]
-> **Follow the evolution of aNA _AI_** and its journey towards a _100% consistent persona_.
+> **Follow the evolution of aNA _AI_** and its journey. 
 > **Access the _"Creation Lab"_ here 👉🏻 _[innovation-lab(.md)](/docs/innovation-lab.md)_**
 
 ![ ](/docs/assets/spacer16x16.png)
