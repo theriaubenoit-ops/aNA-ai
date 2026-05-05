@@ -16,7 +16,7 @@ from typing import Dict, List, Tuple, Optional
 from dataclasses import dataclass
 from enum import Enum
 
-from anatomy.base.neuron import Neuron, NeuronConfig
+from src.anatomy.base.neuron import Neuron, NeuronConfig
 
 class AmygdalaNucleus(Enum):
     """Amygdala nuclei"""

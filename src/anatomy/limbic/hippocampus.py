@@ -17,9 +17,9 @@ import os
 import numpy as np
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
-from config import get_config
-from registry import ORGANS
-from anatomy.base.neuromodulator import Neuromodulator
+from src.config import get_config
+from src.registry import ORGANS
+from src.anatomy.base.neuromodulator import Neuromodulator
 
 class Hippocampus:
     def __init__(self, config: get_config = None, neuromodulator: Neuromodulator = None):

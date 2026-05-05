@@ -19,8 +19,8 @@ import os
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 
-from anatomy.limbic.amygdala import Amygdala
-from anatomy.limbic.hippocampus import Hippocampus
+from src.anatomy.limbic.amygdala import Amygdala
+from src.anatomy.limbic.hippocampus import Hippocampus
 
 class LimbicSystem:
     """
