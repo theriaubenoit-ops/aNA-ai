@@ -18,18 +18,18 @@ import scipy.io.wavfile as wav
 from PIL import Image
 
 # Path management for local imports
-sys.path.append(os.path.abspath(os.path.dirname(__file__)))
-from config import get_config
-from registry import ORGANS
-from core.input_haptic import InputHapticGateway 
-from core.input_auditory import InputAuditoryGateway
-from core.input_visual import InputVisualGateway
-from core.pulse import Pulse
-from anatomy.subcortical.thalamus import Thalamus
-from anatomy.subcortical.thalamic_hub import ThalamicHub 
-from anatomy.limbic.hippocampus import Hippocampus
-from anatomy.cortical.cortical_column import SimplifiedCorticalColumn
-from anatomy.base.neuromodulator import Neuromodulator
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from src.config import get_config
+from src.registry import ORGANS
+from src.core.input_haptic import InputHapticGateway 
+from src.core.input_auditory import InputAuditoryGateway
+from src.core.input_visual import InputVisualGateway
+from src.core.pulse import Pulse
+from src.anatomy.subcortical.thalamus import Thalamus
+from src.anatomy.subcortical.thalamic_hub import ThalamicHub 
+from src.anatomy.limbic.hippocampus import Hippocampus
+from src.anatomy.cortical.cortical_column import SimplifiedCorticalColumn
+from src.anatomy.base.neuromodulator import Neuromodulator
 
 def create_ascii_header():
     print(f"\033c") 
@@ -84,18 +84,18 @@ async def main():
 
     # --- Test sequences (Unicode Wide) ---
 
-    # Path: src/tests/media_haptic/(More tests)...
+    # Path: tests/media_haptic/(More tests)...
     # haptic_dir = ["a", "N", "A", " ", "a", "N", "A", " ", "a", "N", "A", " ", "a", "N", "A", " ", "a", "N", "A", " ", "a", "N", "A", " ", "B", "A", "N", "A", "N", "A", "S"]
     # haptic_dir = ["B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", " ", "B", "A", "N", "A", "N", "A", " ", "你"]
     # haptic_dir = ["H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "i", " ", "H", "o", "l", "a", " ", "O", "l", "á", " ", "你", "好", " ", "H", "i"]
     # haptic_dir = ["H", "e", "l", "l", "o", " ", "H", "e", "l", "l", "o", " ", "H", "e", "l", "l", "o", " ", "H", "e", "l", "l", "o", " ", "H", "o", "l", "a", " ", "你", "好", " ", "H", "e", "l", "l", "o"]
-    haptic_dir = ["H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "e", "你", "l", "你", "l", "你", "o", "你", "H"]
+    haptic_dir = ["H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "H", "你", "e", "你", "l", "你", "l", "你", "o", "你", "H"]
 
-    # Path: src/tests/media_visual/...
-    visual_dir = os.path.join(base_path, "src", "tests", "media_visual")
+    # Path: tests/media_visual/...
+    visual_dir = os.path.join(base_path, "tests", "media_visual")
 
-    # Path: src/tests/media_audio/...
-    audio_dir = os.path.join(base_path, "src", "tests", "media_audio")
+    # Path: tests/media_audio/...
+    audio_dir = os.path.join(base_path, "tests", "media_audio")
     
     all_haptics = haptic_dir
     all_visuals = get_visual_files(visual_dir)
