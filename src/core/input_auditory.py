@@ -23,7 +23,7 @@ import scipy.io.wavfile as wav
 
 # Accès au registre
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from registry import ORGANS
+from src.registry import ORGANS
 from dataclasses import dataclass, field
 
 @dataclass

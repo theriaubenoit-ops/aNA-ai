@@ -20,7 +20,7 @@ import os
 
 # Accès au registre
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from registry import ORGANS # Le secret de la réussite
+from src.registry import ORGANS # Le secret de la réussite
 
 class InputVisualGateway:
     def __init__(self):

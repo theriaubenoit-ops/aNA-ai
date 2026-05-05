@@ -18,7 +18,7 @@ import numpy as np
 
 # Accès au registre
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from registry import SIGNALS, INPUT_CONFIG
+from src.registry import SIGNALS, INPUT_CONFIG
 
 class InputHapticGateway:
     """
