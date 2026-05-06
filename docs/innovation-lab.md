@@ -1,4 +1,4 @@
-🚀 Quick links: [ReadMe](/README.md), [Installation](/docs/INSTALLATION.md), [Usage](/docs/usage.md), [Contributing](/CONTRIBUTING.md), Innovation-Lab, [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), [Architecture](/docs/architecture.md)
+🚀 Quick links: [ReadMe](/README.md), [Installation](/docs/INSTALLATION.md)/[Usage](/docs/usage.md), [Contributing](/CONTRIBUTING.md), Innovation-Lab, [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), [Architecture](/docs/architecture.md)
 
 ![ ](/docs/assets/spacer16x16.png)
 
