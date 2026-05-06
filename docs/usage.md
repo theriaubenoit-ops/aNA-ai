@@ -1,4 +1,4 @@
-🚀 Quick links: [ReadMe](/README.md), Installation, [Contributing](/CONTRIBUTING.md), [Innovation-Lab](/docs/innovation-lab.md), [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), [Architecture](/docs/architecture.md)
+🚀 Quick links: [ReadMe](/README.md), [Installation](/docs/INSTALLATION.md), Usage, [Contributing](/CONTRIBUTING.md), [Innovation-Lab](/docs/innovation-lab.md), [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), [Architecture](/docs/architecture.md)
 
 ◀️ [Back](/docs/INSTALLATION.md)/[Retour](/docs/installation_fr.md)
 
@@ -20,9 +20,9 @@
 
 ![ ](/docs/assets/spacer16x16.png)
 
-## You are ready for the _"Action"_ phase / _Vous êtes prèt pour la phase « Action »_
+## Congratulations! You are ready for the _"Action"_ phase / _Félicitations ! Vous êtes prèt pour la phase « Action »_
 
-Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous pouvez maintenant lancer les scripts Python._
+If the [installation](/docs/INSTALLATION.md) is complete, you can now run the _Python scripts_. / _Si l'[installation](/docs/INSTALLATION_fr.md) est complétée, vous pouvez maintenant lancer les scripts Python._
 
 ![ ](/docs/assets/spacer16x16.png)
 
