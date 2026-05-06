@@ -71,13 +71,6 @@ aNA v5 Autonomous Neural Architecture
 │   │   └── Role: Global inhibition & gain control (Prevents sensory overload)
 │   └── Thalamocortical Loops (The "Oscillator"):
 │       └── Role: Maintains the "Awake" state and synchronizes L1-L6 cortical layers
-├── Thalamus (The "Router," Sensory Gateway)
-│   ├── Sensory Filtering, Relay Nuclei:
-│   │   ├── LGN (Visual → Occipital)
-│   │   ├── MGN (Auditory → Temporal)
-│   │   └── VPL/VPM (Somatosensory → Parietal)
-│   ├── RTN (Firewall): Gain control and global inhibition
-│   └── Thalamocortical Loops: Maintains the "Awake" state frequency
 ├── Striatum (The "Decision Engine" & Action Selection)
 │   ├── Dorsal Striatum (Goal-Directed Actions):
 │   │   ├── Caudate Nucleus (Cognitive/Logical Action Selection)
