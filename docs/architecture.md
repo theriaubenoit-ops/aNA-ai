@@ -62,9 +62,9 @@ aNA v5 Autonomous Neural Architecture
 │       └── Corpus Callosum (Future: Left <-> Right Hemisphere)
 ├── Thalamic Hub (The "Central Router" & Signal Gatekeeper)
 │   ├── Sensory Relay Nuclei (Specific Routing):
-│   │   ├── LGN (Visual → Occipital)
-│   │   ├── MGN (Auditory → Temporal)
-│   │   └── VPL/VPM (Somatosensory → Parietal)
+│   │   ├── LGN (Visual -> Occipital)
+│   │   ├── MGN (Auditory -> Temporal)
+│   │   └── VPL/VPM (Somatosensory -> Parietal)
 │   ├── Pulvinar Nucleus (The "Saliency Master"):
 │   │   └── Role: Directs attention by prioritizing high-importance signals
 │   ├── RTN (The "Firewall" Layer):
@@ -98,7 +98,7 @@ aNA v5 Autonomous Neural Architecture
 
 Computational Engine: Free Energy Principle (FEP)
 aNA v5 optimizes prediction accuracy by minimizing the error between sensory reality and internal models.
-High error triggers the Amygdala, while the Striatum uses the Dopamine signal to reinforce the 'Go' pathways that led to successful error reduction.
+High error triggers the Amygdala, while the Striatum uses the Dopamine signal to reinforce the "Go" pathways that led to successful error reduction.
 ```
 
 ### 3. Connection Logic _(Synapses)_
@@ -165,29 +165,29 @@ Cortical Layer Dynamics (Each Lobe contains 6 Cortical Layers)
 │   ├── Frontal-Temporal Network (Language)
 │   └── Parietal-Occipital Network (Spatial Vision)
 ├── Sensory-Motor Integration
-│   ├── Occipital → Parietal → Frontal (Visual Guidance)
-│   ├── Temporal → Frontal (Auditory Guidance)
-│   └── Parietal → Frontal (Somatosensory Guidance)
+│   ├── Occipital -> Parietal -> Frontal (Visual Guidance)
+│   ├── Temporal -> Frontal (Auditory Guidance)
+│   └── Parietal -> Frontal (Somatosensory Guidance)
 └── Memory Networks
-    ├── Hippocampus ↔ Temporal Lobe (Episodic Memory)
-    ├── Hippocampus ↔ Frontal Lobe (Working Memory)
-    └── Hippocampus ↔ Parietal Lobe (Spatial Memory)
+    ├── Hippocampus <-> Temporal Lobe (Episodic Memory)
+    ├── Hippocampus <-> Frontal Lobe (Working Memory)
+    └── Hippocampus <-> Parietal Lobe (Spatial Memory)
 ```
 
 ### 7. Executive Control & Attention _(Frontal, Amygdala)_
 
 ```
 Dynamic Processing Flow:
-├── Ascending (Bottom-Up): Thalamus → Occipital → Parietal → Frontal. (I see, I locate, I decide)
-├── Descending (Top-Down): Frontal → Thalamus. (I decide to stop listening to this noise; the Thalamus closes the door)
+├── Ascending (Bottom-Up): Thalamus -> Occipital -> Parietal -> Frontal. (I see, I locate, I decide)
+├── Descending (Top-Down): Frontal -> Thalamus. (I decide to stop listening to this noise; the Thalamus closes the door)
 Sensory Input Pathways:
-├── Visual: Thalamus (LGN) → Occipital Lobe → Temporal/Frontal
-├── Auditory: Thalamus (MGN) → Temporal Lobe → Frontal
-└── Somatosensory: Thalamus (VPL/VPM) → Parietal Lobe → Frontal
+├── Visual: Thalamus (LGN) -> Occipital Lobe -> Temporal/Frontal
+├── Auditory: Thalamus (MGN) -> Temporal Lobe -> Frontal
+└── Somatosensory: Thalamus (VPL/VPM) -> Parietal Lobe -> Frontal
 Processing Hierarchy:
-├── Primary Sensory Areas (Layer IV) → Association Areas (Layers II/III)
-├── Association Areas → Integration Centers (All Layers)
-└── Integration Centers → Motor Planning (Frontal Layer V)
+├── Primary Sensory Areas (Layer IV) -> Association Areas (Layers II/III)
+├── Association Areas -> Integration Centers (All Layers)
+└── Integration Centers -> Motor Planning (Frontal Layer V)
 ```
 
 ### 8. Sensorimotor Loops & Coordination _(Parietal, Cerebellum)_
