@@ -60,6 +60,17 @@ aNA v5 Autonomous Neural Architecture
 │       ├── Arcuate Fasciculus (Temporal <-> Frontal)
 │       ├── Superior Longitudinal Fasciculus (Parietal <-> Frontal)
 │       └── Corpus Callosum (Future: Left <-> Right Hemisphere)
+├── Thalamic Hub (The "Central Router" & Signal Gatekeeper)
+│   ├── Sensory Relay Nuclei (Specific Routing):
+│   │   ├── LGN (Visual → Occipital)
+│   │   ├── MGN (Auditory → Temporal)
+│   │   └── VPL/VPM (Somatosensory → Parietal)
+│   ├── Pulvinar Nucleus (The "Saliency Master"):
+│   │   └── Role: Directs attention by prioritizing high-importance signals
+│   ├── RTN (The "Firewall" Layer):
+│   │   └── Role: Global inhibition & gain control (Prevents sensory overload)
+│   └── Thalamocortical Loops (The "Oscillator"):
+│       └── Role: Maintains the "Awake" state and synchronizes L1-L6 cortical layers
 ├── Thalamus (The "Router," Sensory Gateway)
 │   ├── Sensory Filtering, Relay Nuclei:
 │   │   ├── LGN (Visual → Occipital)
@@ -67,6 +78,16 @@ aNA v5 Autonomous Neural Architecture
 │   │   └── VPL/VPM (Somatosensory → Parietal)
 │   ├── RTN (Firewall): Gain control and global inhibition
 │   └── Thalamocortical Loops: Maintains the "Awake" state frequency
+├── Striatum (The "Decision Engine" & Action Selection)
+│   ├── Dorsal Striatum (Goal-Directed Actions):
+│   │   ├── Caudate Nucleus (Cognitive/Logical Action Selection)
+│   │   └── Putamen (Procedural/Motor Habit Execution)
+│   ├── Ventral Striatum (The "Reward Center"):
+│   │   └── Nucleus Accumbens (Dopaminergic gating for motivation)
+│   └── Basal Ganglia Loops:
+│       ├── The "Go" Pathway (Direct: Initiates valid actions)
+│       ├── The "No-Go" Pathway (Indirect: Inhibits conflicting actions)
+│       └── Integration: Filters the "Prefrontal Cortex" noise into a single execution
 ├── Limbic System (The "Heart," Emotional & Memory Hub)
 │   ├── Amygdala (The "Priority Filter"):
 │   │   └── Role: Labels incoming charges as "Important" or "Neutral"
@@ -83,20 +104,25 @@ aNA v5 Autonomous Neural Architecture
     └── Coordination between Motor Cortex and Sensory Feedback
 
 Computational Engine: Free Energy Principle (FEP)
-aNA v5 optimizes prediction accuracy by minimizing the error between sensory reality and internal models. High error triggers the Limbic System to release neuromodulators (Adrenaline/Dopamine) via the Amygdala to force learning.
+aNA v5 optimizes prediction accuracy by minimizing the error between sensory reality and internal models. High error triggers the Amygdala, while the Striatum uses the Dopamine signal to reinforce the 'Go' pathways that led to successful error reduction.
 ```
 
 ### 3. Connection Logic _(Synapses)_
 
 ```
-Cognitive Loop
-├── Limbic System: The bridge between impact and storage
-│   ├── Amygdala: Evaluates the stress/arousal level of the signal
-│   └── Hippocampus: Encodes the signal with a weight defined by the Amygdala
-├── Thalamus: Compares real-time sensory input to Hippocampal predictions
-└── Interaction Cycle:
-    The Thalamus detects a discrepancy -> The Limbic System evaluates its
-    importance -> The Hippocampus stores it -> The Cortex adapts its logic.
+Cognitive & Action Loop
+├── Limbic System: The "Value" Bridge (Impact to Storage)
+│   ├── Amygdala: Assigns a "Saliency Charge" (Stress/Arousal/Priority)
+│   └── Hippocampus: Encodes data with a weight proportional to Amygdala's charge
+├── Thalamic-Striatal Axis: The "Gating" Mechanism
+│   ├── Thalamus: Compares real-time sensory inputs vs. Hippocampal predictions
+│   └── Striatum: Arbitrates between "Go" (Update/Action) or "No-Go" (Inhibit/Ignore)
+└── Interaction Cycle (The aNA "Learning Pulse"):
+    1. Detection: The Thalamus identifies a Prediction Error (Surprise).
+    2. Evaluation: The Amygdala labels the error's importance (Saliency).
+    3. Selection: The Striatum gates the flow: Should the Cortex adapt?
+    4. Encoding: The Hippocampus indexes the event for future prediction.
+    5. Adaptation: The Cortex updates its 6-layer logic based on FEP (Free Energy).
 ```
 
 ### 4. Microcircuitry _(Cortical Columns)_
