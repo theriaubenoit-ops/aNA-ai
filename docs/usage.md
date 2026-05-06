@@ -58,9 +58,9 @@ _Parce qu'un système complexe nécessite une perspective claire, ce tableau de 
 
 ## The test scripts (The Validation Laboratory) / _Les scripts test (Le Laboratoire de Validation)_
 
-In the spirit of _"dividing each difficulty into as many parts as possible,"_ our test suite is the project's true _scientific laboratory_. These small scripts isolate and verify _each organ (such as the neocortex, cortical columns, and basal neurons) independently_. It is the perfect _sandbox:_ come here to break things, test new hypotheses, or understand the behavior of an isolated function without risking the entire organism. This is where innovation begins in total safety!
+In the spirit of _"dividing each difficulty into as many parts as possible,"_ our test suite is the project's true _scientific laboratory_. These small scripts isolate and verify _each organ (such as the neocortex, cortical columns and base neurons) independently_. It is the perfect _sandbox:_ come here to break things, test new hypotheses, or understand the behavior of an isolated function without risking the entire organism. This is where innovation begins in total safety!
 
-_Dans l'esprit de décomposer chaque complexité en ses parties les plus simples, notre suite de tests est le véritable laboratoire scientifique du projet. Ces petits scripts isolent et vérifient chaque organe (comme le neocortex, les colonnes corticale et les neurones de base) de manière totalement indépendante. C'est le bac à sable parfait : venez y briser des choses, tester de nouvelles hypothèses, ou comprendre le comportement d'une fonction isolée sans risquer d'affecter l'organisme entier. C'est ici que l'innovation commence en toute sécurité !_
+_Dans l'esprit de décomposer chaque complexité en ses parties les plus simples, notre suite de tests est le véritable laboratoire scientifique du projet. Ces petits scripts isolent et vérifient chaque organe (comme le neocortex, les colonnes corticales et les neurones de la base) de manière totalement indépendante. C'est le bac à sable parfait : venez y briser des choses, tester de nouvelles hypothèses, ou comprendre le comportement d'une fonction isolée sans risquer d'affecter l'organisme entier. C'est ici que l'innovation commence en toute sécurité !_
 
 ![ ](/docs/assets/spacer16x16.png)
 
@@ -237,4 +237,4 @@ _Dans l'esprit de décomposer chaque complexité en ses parties les plus simples
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-05_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-06_
