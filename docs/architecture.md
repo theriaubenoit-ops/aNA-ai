@@ -104,7 +104,8 @@ aNA v5 Autonomous Neural Architecture
     └── Coordination between Motor Cortex and Sensory Feedback
 
 Computational Engine: Free Energy Principle (FEP)
-aNA v5 optimizes prediction accuracy by minimizing the error between sensory reality and internal models. High error triggers the Amygdala, while the Striatum uses the Dopamine signal to reinforce the 'Go' pathways that led to successful error reduction.
+aNA v5 optimizes prediction accuracy by minimizing the error between sensory reality and internal models.
+High error triggers the Amygdala, while the Striatum uses the Dopamine signal to reinforce the 'Go' pathways that led to successful error reduction.
 ```
 
 ### 3. Connection Logic _(Synapses)_
