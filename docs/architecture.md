@@ -35,7 +35,7 @@ aNA v5 Autonomous Neural Architecture
 └── Registry (The Genome)
 ```
 
-### 2. Processing Unit (Neurons)
+### 2. Processing Unit _(Neurons)_
 
 ```
 ├── Cerebral Cortex (The "Thinking" Shell, 4 Lobes + 6 Layers)
@@ -86,7 +86,7 @@ Computational Engine: Free Energy Principle (FEP)
 aNA v5 optimizes prediction accuracy by minimizing the error between sensory reality and internal models. High error triggers the Limbic System to release neuromodulators (Adrenaline/Dopamine) via the Amygdala to force learning.
 ```
 
-### 3. Connection Logic (Synapses)
+### 3. Connection Logic _(Synapses)_
 
 ```
 Cognitive Loop
@@ -99,7 +99,7 @@ Cognitive Loop
     importance -> The Hippocampus stores it -> The Cortex adapts its logic.
 ```
 
-### 4. Microcircuitry (Cortical Columns)
+### 4. Microcircuitry _(Cortical Columns)_
 
 ```
 Cortical Layer Dynamics (Each Lobe contains 6 Cortical Layers)
@@ -111,7 +111,7 @@ Cortical Layer Dynamics (Each Lobe contains 6 Cortical Layers)
 └── Layer VI: Multiform (Thalamic Regulatory Loop - Gain Control)
 ```
 
-### 5. Macro-scale Structure (Lobes & Nuclei)
+### 5. Macro-scale Structure _(Lobes & Nuclei)_
 
 ```
 ├── Frontal Lobe System
@@ -136,7 +136,7 @@ Cortical Layer Dynamics (Each Lobe contains 6 Cortical Layers)
     └── Color and Shape Recognition
 ```
 
-### 6. Memory Systems (Hippocampus, Cortex)
+### 6. Memory Systems _(Hippocampus, Cortex)_
 
 ```
 ├── Inter-lobar Communication
@@ -154,7 +154,7 @@ Cortical Layer Dynamics (Each Lobe contains 6 Cortical Layers)
     └── Hippocampus ↔ Parietal Lobe (Spatial Memory)
 ```
 
-### 7. Executive Control & Attention (Frontal, Amygdala)
+### 7. Executive Control & Attention _(Frontal, Amygdala)_
 
 ```
 Dynamic Processing Flow:
@@ -170,7 +170,7 @@ Processing Hierarchy:
 └── Integration Centers → Motor Planning (Frontal Layer V)
 ```
 
-### 8. Sensorimotor Loops & Coordination (Parietal, Cerebellum)
+### 8. Sensorimotor Loops & Coordination _(Parietal, Cerebellum)_
 
 ```
 ├── Occipital Lobe (Posterior “What” and “Where”)
@@ -191,7 +191,7 @@ Processing Hierarchy:
     - Tertiary: Decision Making
 ```
 
-### 9. Neuromodulation (Chemical Gain)
+### 9. Neuromodulation _(Chemical Gain)_
 
 ```
 ├── NO (Nitric Oxide) -> Volumetric Retrograde Signaling
@@ -218,7 +218,7 @@ Processing Hierarchy:
 
 ![ ](/docs/assets/spacer64x64.png)
 
-# 🔭 Architecture overview (Road map)
+# 🔭 Architecture overview _(Road map)_
 
 ```
 ├── docs/
@@ -305,4 +305,4 @@ Processing Hierarchy:
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-05_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-06_
