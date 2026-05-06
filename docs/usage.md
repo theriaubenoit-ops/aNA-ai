@@ -28,6 +28,10 @@ If the [installation](/docs/INSTALLATION.md) is complete, you can now run the _P
 
 ## Main
 
+Think of this script as the brainstem of the project. This is where aNA's architecture comes to life, where the various neurological components are instantiated, and where the main execution loop begins. For any contributor, it is the perfect starting point to observe how information flows through the structure. Feel free to explore this file, inject new stimuli, or modify initialization parameters to see how the overall organism responds.
+
+_Considérez ce script comme le tronc cérébral du projet. C'est ici que l'architecture d'aNA prend vie, que les différentes composantes neurologiques sont instanciées et que la boucle d'exécution principale s'amorce. Pour tout contributeur, c'est le point de départ idéal pour observer comment le flux d'information voyage à travers la structure. N'hésitez pas à explorer ce fichier, à y injecter de nouveaux stimuli ou à modifier les paramètres d'initialisation pour voir comment l'organisme global réagit._
+
 - [ ] ☄️ In progress - Global Workspace / _Espace de travail global_:
 
   ```
@@ -39,6 +43,10 @@ If the [installation](/docs/INSTALLATION.md) is complete, you can now run the _P
 
 ## Dashboard
 
+Because a complex system requires a clear perspective, this dashboard is your real-time observation interface. It allows you to visualize synaptic activity, limbic system fluctuations, and the AI's metabolic health. Explore this script to understand how raw data is translated into readable signals. We encourage you to play with the code to change perspectives, add your own metrics, or rethink the display: this is your tactical dashboard for watching aNA "think".
+
+_Parce qu'un système complexe nécessite une perspective claire, ce tableau de bord est votre interface d'observation en temps réel. Il permet de visualiser l'activité synaptique, les fluctuations du système limbique et la santé métabolique de l'IA. Explorez ce script pour comprendre comment les données brutes sont traduites en signaux lisibles. Nous vous encourageons à jouer avec le code pour changer de point de vue, ajouter vos propres métriques ou repenser l'affichage : c'est votre tableau de bord tactique pour regarder aNA "penser"._
+
 - [ ] ☄️ To Do - Dashboard / _Tableau de bord_:
 
   ```
@@ -49,6 +57,12 @@ If the [installation](/docs/INSTALLATION.md) is complete, you can now run the _P
 ![ ](/docs/assets/spacer16x16.png)
 
 ## Tests
+
+The `test_\*.py` scripts: The Validation Laboratory
+In the spirit of "dividing each difficulty into as many parts as possible," our test suite is the project's true scientific laboratory. These small scripts isolate and verify each organ (such as the amygdala, base neurons, etc.) independently. It is the perfect sandbox: come here to break things, test new hypotheses, or understand the behavior of an isolated function without risking the entire organism. This is where innovation begins in total safety!
+
+_Les scripts `test_\*.py` : Le Laboratoire de Validation
+Dans l'esprit de décomposer chaque complexité en ses parties les plus simples, notre suite de tests est le véritable laboratoire scientifique du projet. Ces petits scripts isolent et vérifient chaque organe (comme l'amygdale, les neurones de base, etc.) de manière totalement indépendante. C'est le bac à sable parfait : venez y briser des choses, tester de nouvelles hypothèses, ou comprendre le comportement d'une fonction isolée sans risquer d'affecter l'organisme entier. C'est ici que l'innovation commence en toute sécurité !\_
 
 ![ ](/docs/assets/spacer16x16.png)
 
@@ -225,4 +239,4 @@ If the [installation](/docs/INSTALLATION.md) is complete, you can now run the _P
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-05_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-06_
