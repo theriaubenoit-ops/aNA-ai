@@ -203,6 +203,12 @@ _Dans l'esprit de décomposer chaque complexité en ses parties les plus simples
 
 ![ ](/docs/assets/spacer16x16.png)
 
+![img](/docs/assets/test_256x256.gif)
+
+###### _Find many test files in `tests/`_
+
+![ ](/docs/assets/spacer16x16.png)
+
 ## Demonstrations
 
 - [ ] To Do - Launch _Web-based interfaces_ (e.g., "http://localhost:8000/examples/basic-demo.html").
@@ -214,12 +220,6 @@ _Dans l'esprit de décomposer chaque complexité en ses parties les plus simples
 ☄️ _Spotlight_
 
 ###### _\*Each measurement presented is a digital bridge to biological reality, designed to synthesize the fundamental principles of living systems._
-
-![ ](/docs/assets/spacer16x16.png)
-
-![img](/docs/assets/test_256x256.gif)
-
-###### _Find many test files in `tests/`_
 
 ![ ](/docs/assets/spacer16x16.png)
 
@@ -237,4 +237,4 @@ _Dans l'esprit de décomposer chaque complexité en ses parties les plus simples
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-06_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-05_
