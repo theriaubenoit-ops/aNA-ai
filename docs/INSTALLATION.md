@@ -26,7 +26,7 @@ To ensure optimal configuration of _aNA IA_'s neural architecture, this section 
 
 ### Common First Steps
 
-Before jumping into OS-specific guides, ensure you have the following ready _(See below instructions)_:
+Before jumping into OS-specific guides, ensure you have the following ready _(See the instructions)_:
 
 - **Git** : Be sure to clone/download the latest version of the Code _aNA-ai.git_.
 - **Python 3.10+** : You had the core engine.

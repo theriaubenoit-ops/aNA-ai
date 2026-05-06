@@ -26,7 +26,7 @@ Pour garantir une configuration optimale de l'architecture neuronale d'_aNA IA_,
 
 ### Premières étapes communes
 
-Avant de commencer, assurez-vous d'avoir les éléments suivants à portée de main *Voir les instructions ci-dessous* :
+Avant de commencer, assurez-vous d'avoir les éléments suivants à portée de main *(Voir les instructions)* :
 
 - **Git** : Assurez-vous de cloner _aNA-ai.git_.
 - **Python 3.10+** : Vous disposez du moteur de base.
