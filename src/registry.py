@@ -1,10 +1,16 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-aNA v5.3 - The Centralized Genome of aNA
+"""        __     __     ____
+       __ /\  `  /\ \   /\ __`\         A I   i n s p i r e d   b y
+     /´__`\ \ \` ` \ \ \ \ \/_\ \       n a t u r a l   p l a s t i c i t y
+    /\ \/\ \ \ \`` `  \\ \ \___/\ \
+    \ \_/.\_\ \_\ `` \_\ \_\    \ \_\   A u t o n o m o u s   N e u r a l
+     \/_/\/_/\/_/  `\/_/\/_/     \/_/   A r c h i t e c t u r e 
+
+aNA v5.4 - The Centralized Genome of aNA
 Description: This module acts as the organism's genetic fingerprint. It catalogs and initializes all the "Organs" (Thalamus, Hippocampus, Cortex), enabling consistent instantiation and seamless communication between subcortical and cortical systems. Without this registry, the organism loses its unified structure and its ability to maintain global homeostasis.
 
-aNA v5.3 - Le Génome Centralisé d'aNA (FR)
+aNA v5.4 - Le Génome Centralisé d'aNA (FR)
 Description :  Ce module agit comme l'empreinte génétique de l'organisme. Il répertorie et initialise l'ensemble des "Organes" (Thalamus, Hippocampe, Cortex) permettant une instanciation cohérente et une communication fluide entre les systèmes subcorticaux et corticaux. Sans ce registre, l'organisme perd sa structure unifiée et sa capacité à maintenir une homéostasie globale.
 
 Architecture, concept and supervision: Benoit Theriault
