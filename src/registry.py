@@ -3,9 +3,9 @@
 """        __     __     ____
        __ /\  `  /\ \   /\ __`\         A I   i n s p i r e d   b y
      /´__`\ \ \` ` \ \ \ \ \/_\ \       n a t u r a l   p l a s t i c i t y
-    /\ \/\ \ \ \`` `  \\ \ \___/\ \
-    \ \_/.\_\ \_\ `` \_\ \_\    \ \_\   A u t o n o m o u s   N e u r a l
-     \/_/\/_/\/_/  `\/_/\/_/     \/_/   A r c h i t e c t u r e 
+    /\ \/\ \ \ \`` `  \\ \  ____  \
+    \ \_/.\_\ \_\ `` \_\ \_\____/`\_\   A u t o n o m o u s   N e u r a l
+     \/_/\/_/\/_/  `\/_/\/_/     \/_/   A r c h i t e c t u r e
 
 aNA v5.4 - The Centralized Genome of aNA
 Description: This module acts as the organism's genetic fingerprint. It catalogs and initializes all the "Organs" (Thalamus, Hippocampus, Cortex), enabling consistent instantiation and seamless communication between subcortical and cortical systems. Without this registry, the organism loses its unified structure and its ability to maintain global homeostasis.
