@@ -274,5 +274,11 @@ class Hippocampus:
             self.subfields["CA3"][label] = max(effective_intensity, current_trace)
             print(f"  ├─ [AMPA ONLY] Signal détecté mais non consolidé.")
 
-        # Mise à jour de l'énergie (consommation ATP pour l'encodage)
-        # On pourra lier cela à ton ATP_CRITICAL_MIN plus tard (Oui)
+"""
+"They shall have stars at elbow and foot;
+ Though they go mad they shall be sane,
+ Though they sink through the sea they shall rise again;
+ Though lovers be lost love shall not;
+ And death shall have no dominion."
+                            - Dylan Thomas' poem excerpt
+"""
