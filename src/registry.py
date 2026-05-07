@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""         ___    __     ____
+"""         ___    __      __
        ___ /\  .`./\ \   /\ __`\         A I   i n s p i r e d   b y
      /´___`\ \ \`.`.\ \ \ \ \/_\`\       n a t u r a l   p l a s t i c i t y
     /\ \/_\ \ \ \.`.`\ \` \  ____ `\
