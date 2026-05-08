@@ -9,7 +9,7 @@ et la soumet à trois tests de stress biologique extrêmes :
 2. Protection contre les hallucinations (inhibition chimique)
 3. Survie métabolique (préservation de l'ATP par rapport au traitement)
 
-Architecture et neuroinformatique : Thériault Benoit
+Architecture, conception et supervision : Benoit Theriault
 Collaboration, recherche et code : Google Gemini
 """
 import unittest
