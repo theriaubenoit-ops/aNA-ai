@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Thalamic Hub (Multimodal Sensory Integrator) for aNA AI Project v5.3
+Thalamic Hub (Multimodal Sensory Integrator) for aNA AI Project v5.4
 
 Communicates with:
 Input: (<- InputGateways: Visual, Auditory, Haptic)
@@ -50,6 +50,17 @@ class ThalamicHub:
     async def route_sensory_input(self, origin: str, payload: Dict[str, Any]):
         config = get_config()
         target_nucleus = self._map_origin_to_nucleus(origin)
+
+        # --- LA SUTURE PHYSIQUE ---
+        # On récupère le gain calculé par le feedback L6 du cycle précédent
+        active_gain = self.core.last_cortical_gain
+        
+        # On applique ce gain à l'intensité du signal
+        base_intensity = payload.get("intensity", 0.5)
+        effective_intensity = base_intensity * active_gain
+        
+        # Mise à jour du payload pour le Cortex (L4 recevra moins d'excitation)
+        payload["intensity"] = effective_intensity
         
         # Récupération du poids sensoriel (ex: visual=0.5)
         sensory_type = origin.replace("input_", "")
@@ -77,7 +88,7 @@ class ThalamicHub:
         
         # 5. Simulation de la projection corticale
         self.sensory_buffers[target_nucleus] = payload
-        print(f" [Thalamic Hub] Signal from {origin} routed to {target_nucleus} (Gain: {thalamic_gain:.2f})")
+        print(f" [Thalamic Hub] Signal {origin} -> {target_nucleus} | Gain L6: {active_gain:.2f} | Intensity: {effective_intensity:.2f}")
         
         return result
     
