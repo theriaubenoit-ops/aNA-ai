@@ -7,8 +7,8 @@ Description: Centralization of dynamic thresholds for AI customization. This mod
 aNA v5.4 - Configuration Module (Le temperament) (FR)
 Description : Centralisation des seuils dynamiques pour la personnalisation de l'IA. Ce module définit les paramètres ajustables qui déterminent le tempérament et la réactivité de l'IA. En modifiant ces valeurs, les utilisateurs peuvent créer différents profils de personnalité, du calme à l'anxiété, tout en préservant la stabilité de l'architecture sous-jacente. Ces paramètres influencent la manière dont l'IA réagit aux stimuli, gère son énergie et traite l'information, permettant ainsi une expérience personnalisée sans compromettre l'intégrité du système.
 
-Architecture, concept and supervision: Benoit Theriault
-Collaboration, research and code: Gemini
+Architecture, concept and supervision: Theriault Benoit
+Collaboration, research and code: Google DeepMind (Gemini)
 """
 
 import os
@@ -92,7 +92,13 @@ ATP_CRITICAL_THRESHOLD = 0.10      # Transition to REFRACTORY_REST mode Min: 0.0
 ATP_FATIGUE_ZONE = 0.40            # Hypervigilance Trigger Min: 0.30 (rapid fatigue) Mid: (0.15 and 0.40) Max: 0.60 (late fatigue) / Déclenchement de l'hyper-vigilance 
 # ATP_CONSUMPTION = 0.001          # Fatigue per cycle Min: 0.001 (endurance) Max: 0.005 (rapid depletion) / Fatigue par cycle
 RECOVERY_RATE = 0.05               # ATP Recharge Rate (Sleep) Min: 0.01 (slow recovery) Max: 0.20 (rapid recovery) / Vitesse de recharge ATP (Sommeil)
-WAKE_UP_THRESHOLD = 0.80           # Wake-Up Threshold Min: 0.60 (late wake-up) Max: 0.95 (early wake-up) / Seuil de réveil 
+WAKE_UP_THRESHOLD = 0.80           # Alertness threshold required to wake up Min: 0.60 (late wake-up) Max: 0.95 (early wake-up) / Seuil de vigilance requis pour sortir du sommeil
+BASE_SYNAPTIC_LATENCY = 0.5        # Basic neuronal response time in seconds. Min: 0.1 (fast) Max: 2.0 (slow) / Temps de réponse neuronal de base en secondes
+ATP_RECOVERY_RATE = 0.10           # Energy restoration rate per cycle. Min: 0.05 (slow) Max: 0.30 (fast) / Vitesse de restauration de l'énergie par cycle
+CIRCADIAN_SLEEP_START = 23         # System time marking the start of maintenance. Range: 0-23 (Default: 22h) / Heure système marquant le début de la maintenance
+CIRCADIAN_SLEEP_END = 7            # System time marking the end of maintenance. Range: 0-23 (Default: 6h) / Heure système marquant la fin de la maintenance
+LOW_POWER_THRESHOLD = 0.30         # ATP level triggering synaptic squeezing. Min: 0.15 (resilient) Max: 0.50 (sensitive) / Niveau d'ATP déclenchant le bridage synaptique
+RESONANCE_GAIN = 0.20              # Memory amplification gain during an alpha interaction Min: 0.05 (subtle) Max: 0.50 (intense) / Gain d'amplification mémorielle lors d'une interaction Alpha
 
 # --- PLASTICITY & LEARNING (Hippocampus/Cortex) / PLASTICITÉ & APPRENTISSAGE (Hippocampe/Cortex) (FR) ---
 AMPA_BASE_THRESHOLD = 0.15         # Activation threshold AMPA (Basic transmission) Min: 0.05 (Extreme sensitivity) Max: 0.30 (Must be strong to be heard) / Seuil d'activation AMPA
@@ -158,6 +164,12 @@ def get_config():
         "SENSORY_WEIGHTS": SENSORY_WEIGHTS,
         "THALAMIC_REFRACTORY_PERIOD": THALAMIC_REFRACTORY_PERIOD,
         "WAKE_UP_THRESHOLD": WAKE_UP_THRESHOLD,
+        "BASE_SYNAPTIC_LATENCY": BASE_SYNAPTIC_LATENCY,
+        "ATP_RECOVERY_RATE": ATP_RECOVERY_RATE,
+        "CIRCADIAN_SLEEP_START": CIRCADIAN_SLEEP_START,
+        "CIRCADIAN_SLEEP_END": CIRCADIAN_SLEEP_END,
+        "LOW_POWER_THRESHOLD": LOW_POWER_THRESHOLD,
+        "RESONANCE_GAIN": RESONANCE_GAIN,
         "PULSE_FRICTION": PULSE_FRICTION,
         "DOPA_TO_HZ_GAIN": DOPA_TO_HZ_GAIN,
         "RECOGNITION_METABOLIC_DROP": RECOGNITION_METABOLIC_DROP,
