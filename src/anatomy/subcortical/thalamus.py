@@ -52,6 +52,7 @@ class Thalamus:
 
         self.striatum = striatum or Striatum()
         self.last_cortical_gain = 1.0
+        self.total_time_saved = 0.0
         
         # 1. Seuils Métaboliques (config.py)
         self.base_bpm = self.config.get("THALAMUS_BASE_BPM", 72.0)
@@ -175,3 +176,14 @@ class Thalamus:
         # On stocke le gain pour le Hub
         self.last_cortical_gain = float(np.clip(target_gain, 0.1, 1.0))
         return self.last_cortical_gain
+    
+    def get_synaptic_latency(self) -> float:
+        """Calcule la latence et met à jour le log d'économie."""
+        base_latency = self.config.get("BASE_SYNAPTIC_LATENCY", 0.5)
+        current_latency = base_latency * self.last_cortical_gain
+        
+        # Calcul de l'économie sur ce cycle
+        saved_this_cycle = base_latency - current_latency
+        self.total_time_saved += saved_this_cycle
+        
+        return current_latency
