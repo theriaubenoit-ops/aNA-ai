@@ -43,7 +43,7 @@ def create_ascii_header():
     print("▓░                                                 _    _    _  ░▓▒▓  ░▓\n")
 
 async def run_thalamo_cortical_loop():
-    print(f"--- Intégration Systémique aNA v5.4 ---")
+    print(f"--- Intégration Systémique aNA ---")
     
     # 1. Initialisation du Génome
     config = get_config()
