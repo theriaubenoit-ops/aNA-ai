@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Cortical Lobe Base Implementation for aNA AI Project v5.3
+Cortical Lobe Base Implementation for aNA AI Project v5.4
 
 Communicates with: Input: (<- Thalamus IV) | Input/Output: (<-> Hippocampus) | Output: (-> Thalamus VI Feedback)
 
@@ -424,6 +424,7 @@ class CorticalColumns(CorticalLobe):
         Traitement : Cascade L4 -> L2/3 -> L5 avec modulation chimique.
         """
         config = get_config()
+
         if neuromodulators:
             self.layer1.integrate_neuromodulators(neuromodulators)
         
@@ -447,13 +448,13 @@ class CorticalColumns(CorticalLobe):
         prediction_error = await hippo_unit.evaluate_prediction(signal_data)
         
         # Plus il y a de trauma, plus le score de reconnaissance est "marqué"
-        recognition_score = (1.0 - prediction_error) * current_efficiency
-        self.layers["L6"] = min(1.0, recognition_score)
-        
+        recognition_score = 1.0 - prediction_error
+
+        self.l6_state = min(1.0, recognition_score)
+
         return {
-            "recognition": self.layers["L6"],
-            "l6_feedback": self.layers["L6"],
-            "is_traumatized": nora > 0.6
+            "recognition": recognition_score,
+            "l6_feedback": self.l6_state
         }
 
 
@@ -519,7 +520,7 @@ class SimplifiedCorticalColumn:
         # Simulation de l'activité neuronale lors du passage du signal
         for n in self.neurons:
             # On simule un cycle d'update pour que la myéline progresse si le neurone "tire"
-            n.is_firing = True # William s'active
+            n.is_firing = True # aNA s'active
             n._update_myelination()
             n.is_firing = False
             
