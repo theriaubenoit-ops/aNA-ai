@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-aNA AI Project v5.4 - Bridge Thalamo Cortical implementation
+Projet aNA IA v5.4 - Bridge Thalamo Cortical implementation
 
 Description: ...
 
-Architecture, concept and supervision: Benoit Theriault
-Collaboration, research and code: Google Gemini
+Architecture, conception et supervision : Benoit Theriault
+Collaboration, recherche et code : Google Gemini
 """
 
 import unittest
