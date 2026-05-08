@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Thalamus implementation for aNA AI Project v5.3 - Clean Version
+Thalamus implementation for aNA AI Project v5.4 - Clean Version
 
 Communicates with:
 Input: (<- Thalamic Hub: Routed sensory payloads & Gating instructions)
@@ -26,6 +26,7 @@ Collaboration, research and code: Gemini, Cline
 import os
 import sys
 import asyncio
+import numpy as np
 from typing import Dict, Any
 from unittest import result
 
@@ -42,7 +43,7 @@ from src.anatomy.limbic.limbic_system import LimbicSystem
 from src.anatomy.subcortical.striatum import Striatum
 
 class Thalamus: 
-    def __init__(self, striatum: Striatum = None, limbicsystem: LimbicSystem = None, hippocampus: Hippocampus = None, pulse: Pulse = None, neuromodulator: Neuromodulator = None):
+    def __init__(self, *, striatum: Striatum = None, limbicsystem: LimbicSystem = None, hippocampus: Hippocampus = None, pulse: Pulse = None, neuromodulator: Neuromodulator = None):
         """
         Initialisation de l'organe central.
         """ 
@@ -50,6 +51,7 @@ class Thalamus:
         self.limbic_system = limbicsystem or LimbicSystem()
 
         self.striatum = striatum or Striatum()
+        self.last_cortical_gain = 1.0
         
         # 1. Seuils Métaboliques (config.py)
         self.base_bpm = self.config.get("THALAMUS_BASE_BPM", 72.0)
@@ -148,11 +150,12 @@ class Thalamus:
         result = {
             "bpm": new_bpm,
             "arousal": arousal_status,
-            "atp": self.pulse.atp, # ajout ? 
+            "atp": self.pulse.atp,
+            "gain": self.system_strain, # Ou votre variable de gain actuelle
             "status": "PROJECTED_TO_CORTEX"
         }
         return result
-    
+        
     def calculate_bpm(self, arousal_status: bool) -> float:
         # 1. On récupère l'ATP actuel du Pulse
         atp = self.pulse.atp 
@@ -165,16 +168,10 @@ class Thalamus:
         
         return self.base_bpm * metabolic_stress * emotional_surge
     
-    # Pas de mock pour L6, à refaire avec cortical_column.py ! 
     def apply_cortical_feedback(self, current_gain: float, l6_signal: float, config: dict) -> float:
-        """
-        Simule le feedback de la couche 6 du cortex (L6) qui module l'entrée thalamique.
-        """
-        # On récupère le facteur d'influence depuis la config ou 0.1 par défaut
-        feedback_factor = config.get("CORTICAL_FEEDBACK_STRENGTH", 0.1)
+        inhibition_strength = config.get("CORTICAL_INHIBITION", 0.8)
+        target_gain = 1.0 - (l6_signal * inhibition_strength)
         
-        # Le feedback L6 ajuste le signal : il peut l'amplifier ou le réduire
-        # On simule une intégration simple : signal_actuel + (gain * influence)
-        new_l6_signal = l6_signal + (current_gain * feedback_factor)
-        
-        return min(new_l6_signal, 1.0) # On plafonne à 1.0 pour la stabilité
+        # On stocke le gain pour le Hub
+        self.last_cortical_gain = float(np.clip(target_gain, 0.1, 1.0))
+        return self.last_cortical_gain
