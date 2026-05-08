@@ -50,10 +50,12 @@ class ThalamicHub:
     async def route_sensory_input(self, origin: str, payload: Dict[str, Any]):
         config = get_config()
         target_nucleus = self._map_origin_to_nucleus(origin)
+        latency = self.core.get_synaptic_latency()
 
         # --- LA SUTURE PHYSIQUE ---
         # On récupère le gain calculé par le feedback L6 du cycle précédent
         active_gain = self.core.last_cortical_gain
+        payload["intensity"] = payload.get("intensity", 0.5) * active_gain
         
         # On applique ce gain à l'intensité du signal
         base_intensity = payload.get("intensity", 0.5)
@@ -81,14 +83,15 @@ class ThalamicHub:
         if self.core.current_bpm < 60: # Mode économie d'énergieinput_auditory
              await asyncio.sleep(0.1)
 
+        await asyncio.sleep(latency)
+
         # 4. Envoi au Thalamus Core pour traitement et impact sur le BPM
-        # result = await self.core.process_payload(payload, l6_feedback=0.5)
-        # result = await self.core.process_payload(payload, self.core.neuromod, l6_feedback=0.5)
         result = await self.core.process_payload(payload, self.core.neurom, l6_feedback=0.5)
         
         # 5. Simulation de la projection corticale
         self.sensory_buffers[target_nucleus] = payload
-        print(f" [Thalamic Hub] Signal {origin} -> {target_nucleus} | Gain L6: {active_gain:.2f} | Intensity: {effective_intensity:.2f}")
+        print(f" [Thalamic Hub] Signal {origin} -> {target_nucleus} | Gain L6: {active_gain:.2f} | Intensity: {effective_intensity:.2f} | traité en {latency:.3f}s (Attention: {self.core.last_cortical_gain:.2f})")
+        print(f" [MÉTABOLISME] Économie cumulée : {self.core.total_time_saved:.3f}s ⚡")
         
         return result
     
