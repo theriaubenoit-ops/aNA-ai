@@ -19,8 +19,8 @@ Key Changes:
 - Registry-dependent: Uses ORGANS for structural awareness.
 - Focused on Pulse modulation and Gating logic.
 
-Architecture, concept and supervision: Benoit Theriault
-Collaboration, research and code: Gemini, Cline
+Architecture, concept and supervision: Theriault Benoit
+Collaboration, research and code: Google DeepMind (Gemini)
 """
 
 import os
@@ -53,6 +53,9 @@ class Thalamus:
         self.striatum = striatum or Striatum()
         self.last_cortical_gain = 1.0
         self.total_time_saved = 0.0
+
+        self.synaptic_atp = 1.0  # Réservoir d'énergie (100%)
+        self.is_burned_out = False # État de fatigue extrême
         
         # 1. Seuils Métaboliques (config.py)
         self.base_bpm = self.config.get("THALAMUS_BASE_BPM", 72.0)
@@ -173,17 +176,87 @@ class Thalamus:
         inhibition_strength = config.get("CORTICAL_INHIBITION", 0.8)
         target_gain = 1.0 - (l6_signal * inhibition_strength)
         
-        # On stocke le gain pour le Hub
+        # --- GESTION DE LA FATIGUE (ATP) ---
+        if target_gain >= 0.8:
+            # Stress élevé (Nouveauté constante) : Consommation d'ATP
+            self.synaptic_atp -= 0.05 
+        else:
+            # Habituation (Calme) : Récupération d'ATP
+            self.synaptic_atp += 0.02
+            
+        # Plafonnement de l'ATP entre 0.0 et 1.0
+        self.synaptic_atp = max(0.0, min(1.0, self.synaptic_atp))
+        
+        # --- DÉCLENCHEMENT DU BURNOUT ---
+        if self.synaptic_atp <= 0.1:
+            self.is_burned_out = True # Le système lâche prise
+        elif self.synaptic_atp >= 0.7:
+            self.is_burned_out = False # Récupération suffisante
+            
+        # --- EFFET DE LA FATIGUE SUR LE GAIN ---
+        if self.is_burned_out:
+            # Forçage du gain à une valeur très basse pour "ignorer" le monde
+            # C'est un mécanisme de défense biologique.
+            target_gain = 0.15 
+            
         self.last_cortical_gain = float(np.clip(target_gain, 0.1, 1.0))
         return self.last_cortical_gain
     
     def get_synaptic_latency(self) -> float:
-        """Calcule la latence et met à jour le log d'économie."""
         base_latency = self.config.get("BASE_SYNAPTIC_LATENCY", 0.5)
-        current_latency = base_latency * self.last_cortical_gain
         
-        # Calcul de l'économie sur ce cycle
-        saved_this_cycle = base_latency - current_latency
+        # --- EFFET DE LA FATIGUE SUR LA VITESSE ---
+        if self.is_burned_out:
+            # En Burnout, le système est dans le "brouillard mental"
+            # La latence explose (ex: 1.5x la base)
+            current_latency = base_latency * 1.5
+            saved_this_cycle = 0.0 # Aucune économie d'énergie possible
+        else:
+            current_latency = base_latency * self.last_cortical_gain
+            saved_this_cycle = base_latency - current_latency
+            
         self.total_time_saved += saved_this_cycle
-        
         return current_latency
+    
+    def apply_rest_protocol(self, cycles: int = 1):
+        """
+        Simule une phase de repos pour reconstituer les stocks d'ATP.
+        """
+        recovery_rate = self.config.get("ATP_RECOVERY_RATE", 0.15) # Remboursement rapide
+        
+        # On recharge l'ATP
+        self.synaptic_atp += (recovery_rate * cycles)
+        self.synaptic_atp = min(1.0, self.synaptic_atp)
+        
+        # Sortie du burnout si le crédit est suffisant
+        if self.synaptic_atp >= 0.8:
+            self.is_burned_out = False
+            
+        print(f" [MÉTABOLISME] Repos en cours... ATP: {self.synaptic_atp:.2f}")
+
+    def is_tired(self) -> bool:
+        """Évalue si le crédit ATP est passé sous un seuil critique."""
+        return self.synaptic_atp < 0.3 or self.is_burned_out
+
+    def activate_low_power_mode(self):
+        """
+        Force un mode d'économie d'énergie.
+        Réduit le gain maximum possible pour protéger les circuits.
+        """
+        # On bride le gain maximum à 0.4 tant qu'on est fatigué
+        self.last_cortical_gain = min(self.last_cortical_gain, 0.4)
+        print(" [SYSTÈME] Mode économie synaptique : Latence augmentée. ")
+
+    def check_circadian_cycle(self, current_hour: int):
+        """
+        Détermine si l'organisme doit être en Éveil ou en Repos.
+        Paramètres configurables (ex: 16h/8h).
+        """
+        start_sleep = self.config.get("CIRCADIAN_SLEEP_START", 22) # 22h
+        end_sleep = self.config.get("CIRCADIAN_SLEEP_END", 6)      # 6h
+        
+        # Logique simple de cycle circadien
+        if current_hour >= start_sleep or current_hour < end_sleep:
+            self.apply_rest_protocol(cycles=1)
+            return "SLEEP"
+        return "AWAKE"
