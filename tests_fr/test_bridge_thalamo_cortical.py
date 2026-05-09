@@ -170,6 +170,10 @@ async def run_thalamo_cortical_loop():
         print(f" [Thalamus] Gain pour prochain cycle : {new_gain:.2f}")
         
         await asyncio.sleep(0.3)
+    
+    print("\n  *Chaque mesure présentée ici est un pont numérique vers la réalité biologique,")
+    print("   conçu pour synthétiser les principes fondamentaux des systèmes vivants.\n")
+
 
 if __name__ == "__main__":
     create_ascii_header()
