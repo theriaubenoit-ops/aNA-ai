@@ -99,6 +99,9 @@ async def run_torture_test():
     print(f" État final ATP : {thalamus_core.synaptic_atp:.2f}")
     print(f"{'='*60}")
 
+    print("\n  *Every measurement reflected here is a digital bridge to biological reality,")
+    print("   designed to synthesize the fundamental principles of living systems.\n")
+
 if __name__ == "__main__":
     create_ascii_header()
     asyncio.run(run_torture_test())
