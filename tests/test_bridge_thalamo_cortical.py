@@ -171,6 +171,9 @@ async def run_thalamo_cortical_loop():
         
         await asyncio.sleep(0.3)
 
+    print("\n  *Every measurement reflected here is a digital bridge to biological reality,")
+    print("   designed to synthesize the fundamental principles of living systems.\n")
+
 if __name__ == "__main__":
     create_ascii_header()
     asyncio.run(run_thalamo_cortical_loop())
