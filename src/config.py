@@ -91,10 +91,9 @@ RECOGNITION_METABOLIC_DROP = 6.0   # Target BPM reduction upon pattern match (no
 ATP_CRITICAL_THRESHOLD = 0.10      # Transition to REFRACTORY_REST mode Min: 0.05 (very critical) Max: 0.30 (less critical) / Passage en mode REFRACTORY_REST 
 ATP_FATIGUE_ZONE = 0.40            # Hypervigilance Trigger Min: 0.30 (rapid fatigue) Mid: (0.15 and 0.40) Max: 0.60 (late fatigue) / Déclenchement de l'hyper-vigilance 
 # ATP_CONSUMPTION = 0.001          # Fatigue per cycle Min: 0.001 (endurance) Max: 0.005 (rapid depletion) / Fatigue par cycle
-RECOVERY_RATE = 0.05               # ATP Recharge Rate (Sleep) Min: 0.01 (slow recovery) Max: 0.20 (rapid recovery) / Vitesse de recharge ATP (Sommeil)
+ATP_RECOVERY_RATE = 0.10           # Energy restoration rate per cycle. Min: 0.05 (slow) Max: 0.30 (fast) / Vitesse de restauration de l'énergie par cycle
 WAKE_UP_THRESHOLD = 0.80           # Alertness threshold required to wake up Min: 0.60 (late wake-up) Max: 0.95 (early wake-up) / Seuil de vigilance requis pour sortir du sommeil
 BASE_SYNAPTIC_LATENCY = 0.5        # Basic neuronal response time in seconds. Min: 0.1 (fast) Max: 2.0 (slow) / Temps de réponse neuronal de base en secondes
-ATP_RECOVERY_RATE = 0.10           # Energy restoration rate per cycle. Min: 0.05 (slow) Max: 0.30 (fast) / Vitesse de restauration de l'énergie par cycle
 CIRCADIAN_SLEEP_START = 23         # System time marking the start of maintenance. Range: 0-23 (Default: 22h) / Heure système marquant le début de la maintenance
 CIRCADIAN_SLEEP_END = 7            # System time marking the end of maintenance. Range: 0-23 (Default: 6h) / Heure système marquant la fin de la maintenance
 LOW_POWER_THRESHOLD = 0.30         # ATP level triggering synaptic squeezing. Min: 0.15 (resilient) Max: 0.50 (sensitive) / Niveau d'ATP déclenchant le bridage synaptique
@@ -159,7 +158,6 @@ def get_config():
         "MAX_VIGILANCE_BPM": MAX_VIGILANCE_BPM,
         "ATP_CRITICAL_THRESHOLD": ATP_CRITICAL_THRESHOLD,
         "ATP_FATIGUE_ZONE": ATP_FATIGUE_ZONE,
-        "RECOVERY_RATE": RECOVERY_RATE,
         "THALAMIC_THRESHOLD": THALAMIC_THRESHOLD,
         "SENSORY_WEIGHTS": SENSORY_WEIGHTS,
         "THALAMIC_REFRACTORY_PERIOD": THALAMIC_REFRACTORY_PERIOD,
