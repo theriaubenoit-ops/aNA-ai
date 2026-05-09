@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Neuron implementation for aNA AI Project v5.3 - The fundamental unit of the aNA architecture
+Neuron implementation for aNA AI Project v5.4 - The fundamental unit of the aNA architecture
 
 Communicates with: Input: (<- Synapses) | Output: (-> Axon / Post-synaptic targets)
 
