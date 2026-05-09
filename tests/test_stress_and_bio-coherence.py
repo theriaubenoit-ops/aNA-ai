@@ -5,7 +5,8 @@ aNA AI Project v5.3 -  Test Metabolic Stress and Bio-coherence
 
 Description: This test aims to validate the biological consistency of the Neuromodulator and Neuron implementation by simulating metabolic stress scenarios (energy depletion) and chemical stress scenarios (norepinephrine injection). We will verify that the neuron reacts appropriately to these conditions, notably by ceasing firing when energy is depleted and increasing its plasticity in response to a noradrenergic alert.
 
-Architecture and neuroinformatics: Theriault Benoit
+Architecture, concept and supervision: Benoit Theriault
+Collaboration, research and code: Google DeepMind (Gemini)
 """
 import unittest
 import numpy as np

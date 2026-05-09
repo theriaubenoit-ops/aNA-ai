@@ -5,7 +5,8 @@ aNA AI Project v5.3 - Test Amygdala
 
 Description: This test checks the amygdala's responses to different levels of stimulus, simulating threat and calm scenarios. The goal is to ensure that the activation and return-to-homeostasis mechanisms are functioning correctly, by measuring adrenaline and cortisol levels. The test covers baseline arousal, high threat response, and homeostasis reset.
 
-Architecture and neuroinformatics: Theriault Benoit
+Architecture, concept and supervision: Benoit Theriault
+Collaboration, research and code: Google DeepMind (Gemini)
 """
 
 import unittest

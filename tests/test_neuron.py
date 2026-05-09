@@ -9,8 +9,8 @@ and submits it to three extreme biological stress tests:
 2. Saliance Guard (Anti-Hallucination via chemical clamping)
 3. Metabolic Survival (ATP preservation over processing)
 
-Architecture, concept and supervision: Benoit Theriault
-Collaboration, research and code: Google Gemini
+Architecture, concept and supervision: Theriault Benoit
+Collaboration, research and code: Google DeepMind (Gemini)
 """
 import unittest
 import numpy as np

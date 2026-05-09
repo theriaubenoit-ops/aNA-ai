@@ -5,7 +5,8 @@ aNA AI Project v5.3 - Test Thalamus
 
 Description: This test is designed to validate the core functionalities of the thalamus module in complete isolation. It simulates a simple data stream to verify that the thalamus processes inputs correctly, integrates feedback from the hippocampus, and modulates outputs based on chemical states. The test covers sensory processing, thalamo-cortical gain modulation, and the influence of neuromodulators on thalamic function.
 
-Architecture and neuroinformatics: Theriault Benoit
+Architecture, concept and supervision: Benoit Theriault
+Collaboration, research and code: Google DeepMind (Gemini)
 """
 import unittest
 import numpy as np

@@ -6,7 +6,8 @@ aNA AI Project v5.3 - NMDA Coincidence Detection Test
 Description: Validates the magnesium block mechanism and LTP.
 Tests if a memory is pruned when below NMDA threshold and persists when above it.
 
-Architecture and neuroinformatics: Theriault Benoit
+Architecture, concept and supervision: Benoit Theriault
+Collaboration, research and code: Google DeepMind (Gemini)
 """
 import unittest
 import numpy as np

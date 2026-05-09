@@ -5,7 +5,8 @@ aNA AI Project v5.3 - Test Cortical Column
 
 Description: This test is designed to validate the core functionalities of the cortical column module in complete isolation. It simulates a simple data stream to verify that the cortical column processes inputs correctly, learns patterns, and can retrieve them based on context. The test covers feedforward processing, lateral inhibition, and feedback mechanisms.
 
-Architecture and neuroinformatics: Theriault Benoit
+Architecture, concept and supervision: Benoit Theriault
+Collaboration, research and code: Google DeepMind (Gemini)
 """
 import unittest
 import numpy as np
