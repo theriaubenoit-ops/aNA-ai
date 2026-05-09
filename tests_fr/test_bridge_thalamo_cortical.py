@@ -1,11 +1,15 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Projet aNA IA v5.4 - Bridge Thalamo Cortical implementation
+Projet aNA IA v5.4 - Implantation corticale de Bridge Thalamo
 
-Description: ...
+Description: Ce script valide la synchronisation bidirectionnelle entre le centre thalamique 
+et le néocortex. Il teste la modulation dynamique du gain de la rétroaction de la couche 6 (L6), 
+simulant ainsi la façon dont le cerveau filtre le bruit sensoriel par le biais 
+de prédictions descendantes. Il garantit que le système concentre ses ressources 
+sur les stimuli inattendus tout en maintenant un traitement rapide des schémas connus.
 
-Architecture, conception et supervision : Benoit Theriault
+Architecture, conception et supervision : Theriault Benoit
 Collaboration, recherche et code : Google Gemini
 """
 

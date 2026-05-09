@@ -7,6 +7,7 @@ Description: This test is designed to validate the core functionalities of the h
 Unit Test for the Hippocampus - Isolated Version
 
 Architecture et neuroinformatique : Thériault Benoit
+Collaboration, recherche et code : Google DeepMind (Gemini)
 """
 import unittest
 import numpy as np

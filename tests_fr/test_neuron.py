@@ -9,8 +9,8 @@ et la soumet à trois tests de stress biologique extrêmes :
 2. Protection contre les hallucinations (inhibition chimique)
 3. Survie métabolique (préservation de l'ATP par rapport au traitement)
 
-Architecture, conception et supervision : Benoit Theriault
-Collaboration, recherche et code : Google Gemini
+Architecture et neuroinformatique : Thériault Benoit
+Collaboration, recherche et code : Google DeepMind (Gemini)
 """
 import unittest
 import numpy as np

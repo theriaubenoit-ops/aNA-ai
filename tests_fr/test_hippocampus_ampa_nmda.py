@@ -7,6 +7,7 @@ Description: Valide le mécanisme de blocage du magnésium et la potentialisatio
 Vérifie si la mémoire est élaguée en dessous du seuil NMDA et persiste au-dessus.
 
 Architecture et neuroinformatique : Thériault Benoit
+Collaboration, recherche et code : Google DeepMind (Gemini)
 """
 import unittest
 import numpy as np

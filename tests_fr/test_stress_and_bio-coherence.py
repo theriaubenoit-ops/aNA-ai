@@ -6,6 +6,7 @@ Projet aNA IA v5.3 -  Test du stress métabolique et de la biocohérence
 Description: Ce test vise à valider la cohérence biologique de l'implémentation du neuromodulateur et du neurone en simulant des scénarios de stress métabolique (épuisement énergétique) et de stress chimique (injection de noradrénaline). Nous vérifierons que le neurone réagit de manière appropriée à ces conditions, notamment en cessant son activité en cas d'épuisement énergétique et en augmentant sa plasticité en réponse à une stimulation noradrénergique.
 
 Architecture et neuroinformatique : Thériault Benoit
+Collaboration, recherche et code : Google DeepMind (Gemini)
 """
 import unittest
 import numpy as np

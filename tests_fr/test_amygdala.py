@@ -6,6 +6,7 @@ Projet aNA IA v5.2 - Module : Test de l'amygdale
 Description : Ce test vérifie les réponses de l'amygdale à différents niveaux de stimulus, simulant des scénarios de menace et de calme. L’objectif est de s’assurer du bon fonctionnement des mécanismes d’activation et de retour à l’homéostasie, en mesurant les niveaux d’adrénaline et de cortisol. Le test couvre l'éveil de base, la réponse aux menaces élevées et la réinitialisation de l'homéostasie.
 
 Architecture et neuroinformatique : Thériault Benoit
+Collaboration, recherche et code : Google DeepMind (Gemini)
 """
 import unittest
 import numpy as np
