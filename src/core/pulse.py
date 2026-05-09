@@ -45,8 +45,8 @@ class Pulse:
         config = get_config()
         
         if self.is_refractory:
-            # Utilise RECOVERY_RATE (0.05) au lieu de l'ancien METABOLISM
-            self.atp = min(1.0, self.atp + (config["RECOVERY_RATE"] * dt))
+            # Utilise ATP_RECOVERY_RATE (0.05) au lieu de l'ancien METABOLISM
+            self.atp = min(1.0, self.atp + (config["ATP_RECOVERY_RATE"] * dt))
             if self.atp >= config["WAKE_UP_THRESHOLD"]:
                 self.is_refractory = False
         else:
