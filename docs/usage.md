@@ -112,7 +112,7 @@ _Dans l'esprit de décomposer chaque complexité en ses parties les plus simples
   python3 tests_fr/test_stress_and_bio-coherence.py
   ```
 
-- [ ] Single Neuron Electrophysiology / _Électrophysiologie neuronale unique_:
+- [ ] ☄️ Single Neuron Electrophysiology / _Électrophysiologie neuronale unique_:
 
   ```
   python3 tests/test_neuron.py
@@ -135,6 +135,20 @@ _Dans l'esprit de décomposer chaque complexité en ses parties les plus simples
   ```
   python3 tests/test_thalamus.py
   python3 tests_fr/test_thalamus.py
+  ```
+
+- [ ] ☄️ Thalamo-Cortical Feedback & Prediction / _Rétroaction thalamo-corticale et prédiction_:
+
+  ```
+  python3 tests/test_bridge_thalamo_cortical.py
+  python3 tests_fr/test_bridge_thalamo_cortical.py
+  ```
+
+- [ ] ☄️ Metabolic Resilience & Homeostatic Stress / _Résilience métabolique et stress homéostatique_:
+
+  ```
+  python3 tests/test_metabolic_endurance.py
+  python3 tests_fr/test_metabolic_endurance.py
   ```
 
 - [ ] To Do - Executive Gating & Action Selection / _Sélection des actions et contrôle d'accès exécutif_:
