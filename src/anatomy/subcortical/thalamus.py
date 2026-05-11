@@ -7,6 +7,7 @@ Communicates with:
 Input: (<- Thalamic Hub: Routed sensory payloads & Gating instructions)
 Input: (<- Hippocampus: Contextual memory states)
 Input: (<- Amygdala: Emotional urgency & Saliency)
+Input: (<- Striatum: The Action Selector)
 Input/Output: (<-> Cortical Columns L4/L6: Direct metabolic feedback)
 Output: (-> Pulse/BPM: Heart rate frequency modulation)
 Output: (-> Neuromodulator: Global chemical gain & ATP management)
