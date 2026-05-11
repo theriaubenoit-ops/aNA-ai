@@ -12,9 +12,12 @@ Collaboration, research and code: Gemini
 """
 
 import numpy as np
+import sys
+import os
 from typing import Dict, List, Tuple, Optional
 from dataclasses import dataclass
 from enum import Enum
+
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 from src.anatomy.base.neuron import Neuron, NeuronConfig
