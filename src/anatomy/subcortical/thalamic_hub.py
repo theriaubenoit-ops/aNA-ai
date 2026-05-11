@@ -57,7 +57,7 @@ class ThalamicHub:
         state = self.core.check_circadian_cycle(current_hour)
 
         if state == "SLEEP":
-            print(" [METABOLISM] ANA is in maintenance phase (Sleep). Signal ignored or minimally processed.")
+            print(" [METABOLISM] aNA is in maintenance phase (Sleep). Signal ignored or minimally processed.")
             return {"status": "SLEEPING", "gain": 0.1}
         
         if self.core.is_tired():
