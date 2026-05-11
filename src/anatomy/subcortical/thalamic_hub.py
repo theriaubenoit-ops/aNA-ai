@@ -7,6 +7,7 @@ Communicates with:
 Input: (<- InputGateways: Visual, Auditory, Haptic)
 Input: (<- Hippocampus: Pattern Completion/Recall)
 Input: (<- Amygdala: Emotional Saliency/Urgency)
+Input: (<- Striatum: The Action Selector)
 Input/Output: (<-> Cortical Columns: Feedback L6 / Feedforward L4)
 Output: (-> Thalamus Core: BPM & Metabolic modulation)
 Output: (-> Neuromodulator: Synaptic Gain & Plasticity)
