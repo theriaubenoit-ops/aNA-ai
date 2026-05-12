@@ -7,7 +7,7 @@
      /\ \.\ \.\ \.\ \.\ \.\ \/\ \.\ \
      \.\_\.\_\.\_\.\_\.\_\.\_\.\_\.\_\
       \/_/\/_/\/_/\/_/\/_/\/_/\/_/\/_/
-    a N A    A I    P e r s o n a l i t y
+        a N A    A I    P e r s o n a
 
 aNA v5.4 - Configuration Module (Temperament)
 Description: Centralization of dynamic thresholds for AI customization. This module defines the adjustable parameters that shape the AI's temperament and responsiveness. By modifying these values, users can create different personality profiles, from calm to anxious, while maintaining the underlying architecture's stability. These parameters influence how the AI reacts to stimuli, manages energy, and processes information, allowing for a personalized experience without compromising the system's integrity.
