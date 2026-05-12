@@ -1,6 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
+"""            __
+        __    /\ \  __          __
+       /\ \  _\.\ \/\ \  __    /\ \
+      _\.\ \/\ \.\ \.\ \/\ \  _\.\ \
+     /\ \.\ \.\ \.\ \.\ \.\ \/\ \.\ \
+     \.\_\.\_\.\_\.\_\.\_\.\_\.\_\.\_\
+      \/_/\/_/\/_/\/_/\/_/\/_/\/_/\/_/
+    a N A    A I    P e r s o n a l i t y
+
 aNA v5.4 - Configuration Module (Temperament)
 Description: Centralization of dynamic thresholds for AI customization. This module defines the adjustable parameters that shape the AI's temperament and responsiveness. By modifying these values, users can create different personality profiles, from calm to anxious, while maintaining the underlying architecture's stability. These parameters influence how the AI reacts to stimuli, manages energy, and processes information, allowing for a personalized experience without compromising the system's integrity.
 
@@ -30,7 +38,8 @@ PROFILES = {
         "ATP_CONSUMPTION": 0.001,
         "THRESHOLD_NMDA": 0.08,
         "MYELIN_EFFICIENCY_COEFF": 2.5,
-        "BASE_BPM": 62.0
+        "BASE_BPM": 62.0,
+        "MAX_BPM": 112.0
     },
     "ANALYSIS_reflection": {   # Analyse (réflexion)
         "title": "The Thinker (Problem Solving)",
@@ -39,16 +48,18 @@ PROFILES = {
         "ATP_CONSUMPTION": 0.003,
         "THRESHOLD_NMDA": 0.15,
         "MYELIN_EFFICIENCY_COEFF": 1.8,
-        "BASE_BPM": 72.0
+        "BASE_BPM": 72.0,
+        "MAX_BPM": 124.0
     },
     "RESEARCH_curiosity": {    # Recherche (curiosité)
         "title": "The Explorer (Innovation and Survival)",
         "AMYGDALA_SENSITIVITY": 1.8,
-        "THALAMIC_THRESHOLD": 0.05, 
+        "THALAMIC_THRESHOLD": 0.05, # test min  0.1
         "ATP_CONSUMPTION": 0.006,
         "THRESHOLD_NMDA": 0.40,
         "MYELIN_EFFICIENCY_COEFF": 1.2,
-        "BASE_BPM": 85.0
+        "BASE_BPM": 85.0,
+        "MAX_BPM": 136.0  
     },
     "REST_meditation": {       # Repos (méditation)
         "title": "Active Maintenance (Recovery)",
@@ -57,7 +68,8 @@ PROFILES = {
         "ATP_CONSUMPTION": -0.05,
         "THRESHOLD_NMDA": 0.70,
         "MYELIN_EFFICIENCY_COEFF": 1.0,
-        "BASE_BPM": 55.0
+        "BASE_BPM": 55.0,
+        "MAX_BPM": 108.0
     },
     "VOID_spare": {            # Espace libre
         "title": "Open profile (Future expansion)",
@@ -110,7 +122,7 @@ THALAMUS_DECAY_FACTOR = 0.15       # Speed ​​of return to rest (0.1 = 10% pe
 PULSE_FRICTION = 0.93              # Heart rate damping Min: 0.80 (unstable) Default: 0.93 Max: 0.99 (ultra-stable) / Amortissement du rythme cardiaque 
 DOPA_TO_HZ_GAIN = 20.0             # Dopamine sensitivity Min: 5.0 (low sensitivity) Default: 20.0 Max: 50.0 (hyper-reactive) / Sensibilité à la dopamine 
 # BASE_BPM = 65.0                    # Cruising Heart Rate Min: 60.0 (deep sleep) Default: 65.0 Max: 100.0 (alert) / Rythme de croisière 
-MAX_BPM = 136.0                    # Excitation limit Min: 100.0 (little emotional reactivity) Default: 136.0 Max: 170.0 (alert) / Limite d'excitation
+# MAX_BPM = 136.0                    # Excitation limit Min: 100.0 (little emotional reactivity) Default: 136.0 Max: 170.0 (alert) / Limite d'excitation
 THALAMUS_BASE_BPM = 72.0           # Resting heart rate (target) Min: 60.0 (deep sleep) Default: 72.0 Max: 100.0 (alert) / Rythme cardiaque de repos (cible)
 THALAMUS_MAX_BPM = 150.0           # Absolute safety ceiling Min: 120.0 (high stress) Default: 150.0 Max: 180.0 (critical limit) / Plafond absolu de sécurité 
 MAX_VIGILANCE_BPM = 200.0          # Absolute safety ceiling Min: 170.0 (intense stress) Default: 200.0 Max: 200.0 (extreme emergency) / Plafond de sécurité absolue
