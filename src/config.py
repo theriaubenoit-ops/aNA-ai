@@ -82,8 +82,8 @@ THALAMIC_THRESHOLD        = selected["THALAMIC_THRESHOLD"]
 ATP_CONSUMPTION           = selected["ATP_CONSUMPTION"]
 THRESHOLD_NMDA            = selected["THRESHOLD_NMDA"]
 MYELIN_EFFICIENCY_COEFF   = selected["MYELIN_EFFICIENCY_COEFF"]
-BASE_BPM   = selected["BASE_BPM"]
-MAX_BPM   = selected["MAX_BPM"]
+BASE_BPM                  = selected["BASE_BPM"]
+MAX_BPM                   = selected["MAX_BPM"]
 
 # -  -  -  -  -  -  -  -  -  -  -  -  -  -   ARCHITECTURAL MANIFESTO / MANIFESTE ARCHITECTURAL (FR)  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  
 # -  "The inclusion of these specific biological modules is not a stylistic choice, but a mechanical necessity.                                -
