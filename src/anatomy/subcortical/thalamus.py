@@ -145,8 +145,8 @@ class Thalamus:
         
         # Injection directe dans le Neuromodulateur
         self.neurom.inject_chemicals("amygdala", {
-            "norepinephrine": emotional_state["cortisol"], # Utilise 'norepinephrine' pour la cohérence !
-            "dopamine": emotional_state.get("adrenaline", 0.1) 
+            "norepinephrine": emotional_state.get("adrenaline", 0.1), # L'adrénaline de l'amygdale devient l'alerte (NE)
+            "cortisol": emotional_state.get("cortisol", 0.0)
         })
 
         # 3. MISE À JOUR DU PULSE
