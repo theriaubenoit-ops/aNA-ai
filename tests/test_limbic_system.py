@@ -20,7 +20,6 @@ if ROOT_DIR not in sys.path:
 
 from unittest.mock import AsyncMock, MagicMock
 from unittest import IsolatedAsyncioTestCase
-from asrc.natomy.limbic.limbic_system import LimbicSystem
 from src.anatomy.limbic.limbic_system import LimbicSystem
 
 def create_ascii_header():
