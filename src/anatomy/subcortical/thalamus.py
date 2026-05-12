@@ -59,10 +59,12 @@ class Thalamus:
         self.is_burned_out = False # État de fatigue extrême
         
         # 1. Seuils Métaboliques (config.py)
-        self.base_bpm = self.config.get("THALAMUS_BASE_BPM", 72.0)
-        self.max_bpm = self.config.get("THALAMUS_MAX_BPM", 150.0)
-        self.atp_critical = self.config.get("ATP_CRITICAL_THRESHOLD", 0.20)
+        self.critical_bpm = self.config.get("CRITICAL_VIGILANCE_BPM", 200.0)
+        self.base_bpm = self.config.get("BASE_BPM", 65.0) # Le rythme de croisière physique
+        self.vigilance_factor = self.config.get("THALAMUS_VIGILANCE_FACTOR", 0.72) # Le multiplicateur attentionnel
         self.decay_factor = self.config.get("THALAMUS_DECAY_FACTOR", 0.15)
+        
+        self.atp_critical = self.config.get("ATP_CRITICAL_THRESHOLD", 0.20)
 
         # 2. Architecture des Noyaux (registry.py)
         self.nuclei = ORGANS["THALAMUS"]["NUCLEI"]
@@ -96,11 +98,11 @@ class Thalamus:
         
         # Le feedback L6 agit comme un frein : plus on comprend, plus on se calme.
         frein = l6_feedback * config.get("L6_GAIN", 0.8)
-        target_bpm = self.base_bpm * (excitation / (1.0 + frein))
+        target_bpm = self.base_bpm * (1.0 + self.vigilance_factor) * (excitation / (1.0 + frein))
         
         # Sécurités biologiques (Bradycardie / Tachycardie)
         min_allowed = config.get("BRADYCARDIA_BPM", 45.0)
-        max_allowed = config.get("MAX_VIGILANCE_BPM", 200.0)
+        max_allowed = config.get("CRITICAL_VIGILANCE_BPM", 200.0)
         
         self.current_bpm = max(min_allowed, min(max_allowed, target_bpm))
         return self.current_bpm
