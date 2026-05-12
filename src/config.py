@@ -24,6 +24,7 @@ ACTIVE_PROFILE = "LEARNING_memorization"
 
 PROFILES = {
     "LEARNING_memorization": { # Apprentissage (mémorisation)
+        "title": "The Sponge (Learning and Consolidation)",
         "AMYGDALA_SENSITIVITY": 0.3,
         "THALAMIC_THRESHOLD": 0.45,
         "ATP_CONSUMPTION": 0.001,
@@ -32,6 +33,7 @@ PROFILES = {
         "BASE_BPM": 62.0
     },
     "ANALYSIS_reflection": {   # Analyse (réflexion)
+        "title": "The Thinker (Problem Solving)",
         "AMYGDALA_SENSITIVITY": 0.8,
         "THALAMIC_THRESHOLD": 0.25,
         "ATP_CONSUMPTION": 0.003,
@@ -40,6 +42,7 @@ PROFILES = {
         "BASE_BPM": 72.0
     },
     "RESEARCH_curiosity": {    # Recherche (curiosité)
+        "title": "The Explorer (Innovation and Survival)",
         "AMYGDALA_SENSITIVITY": 1.8,
         "THALAMIC_THRESHOLD": 0.05, 
         "ATP_CONSUMPTION": 0.006,
@@ -48,6 +51,7 @@ PROFILES = {
         "BASE_BPM": 85.0
     },
     "REST_meditation": {       # Repos (méditation)
+        "title": "Active Maintenance (Recovery)",
         "AMYGDALA_SENSITIVITY": 0.1,
         "THALAMIC_THRESHOLD": 0.80, 
         "ATP_CONSUMPTION": -0.05,
@@ -56,6 +60,7 @@ PROFILES = {
         "BASE_BPM": 55.0
     },
     "VOID_spare": {            # Espace libre
+        "title": "Open profile (Future expansion)",
         # Reserved for future development / Réservé pour une évolution ultérieure
     }
 }
