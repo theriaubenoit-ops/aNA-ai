@@ -28,28 +28,35 @@ PROFILES = {
         "THALAMIC_THRESHOLD": 0.45,
         "ATP_CONSUMPTION": 0.001,
         "THRESHOLD_NMDA": 0.08,
-        "MYELIN_EFFICIENCY_COEFF": 2.5
+        "MYELIN_EFFICIENCY_COEFF": 2.5,
+        "BASE_BPM": 62.0
     },
     "ANALYSIS_reflection": {   # Analyse (réflexion)
         "AMYGDALA_SENSITIVITY": 0.8,
         "THALAMIC_THRESHOLD": 0.25,
         "ATP_CONSUMPTION": 0.003,
         "THRESHOLD_NMDA": 0.15,
-        "MYELIN_EFFICIENCY_COEFF": 1.8
+        "MYELIN_EFFICIENCY_COEFF": 1.8,
+        "BASE_BPM": 72.0
     },
     "RESEARCH_curiosity": {    # Recherche (curiosité)
         "AMYGDALA_SENSITIVITY": 1.8,
         "THALAMIC_THRESHOLD": 0.05, 
         "ATP_CONSUMPTION": 0.006,
         "THRESHOLD_NMDA": 0.40,
-        "MYELIN_EFFICIENCY_COEFF": 1.2
+        "MYELIN_EFFICIENCY_COEFF": 1.2,
+        "BASE_BPM": 85.0
     },
     "REST_meditation": {       # Repos (méditation)
         "AMYGDALA_SENSITIVITY": 0.1,
         "THALAMIC_THRESHOLD": 0.80, 
         "ATP_CONSUMPTION": -0.05,
         "THRESHOLD_NMDA": 0.70,
-        "MYELIN_EFFICIENCY_COEFF": 1.0
+        "MYELIN_EFFICIENCY_COEFF": 1.0,
+        "BASE_BPM": 55.0
+    },
+    "VOID_spare": {            # Espace libre
+        # Reserved for future development / Réservé pour une évolution ultérieure
     }
 }
 selected = PROFILES[ACTIVE_PROFILE]
@@ -97,7 +104,7 @@ THALAMUS_DECAY_FACTOR = 0.15       # Speed ​​of return to rest (0.1 = 10% pe
 # Cardiac parameters (Pulse) / Paramètres cardiaques (pulsation)
 PULSE_FRICTION = 0.93              # Heart rate damping Min: 0.80 (unstable) Default: 0.93 Max: 0.99 (ultra-stable) / Amortissement du rythme cardiaque 
 DOPA_TO_HZ_GAIN = 20.0             # Dopamine sensitivity Min: 5.0 (low sensitivity) Default: 20.0 Max: 50.0 (hyper-reactive) / Sensibilité à la dopamine 
-BASE_BPM = 65.0                    # Cruising Heart Rate Min: 60.0 (deep sleep) Default: 65.0 Max: 100.0 (alert) / Rythme de croisière 
+# BASE_BPM = 65.0                    # Cruising Heart Rate Min: 60.0 (deep sleep) Default: 65.0 Max: 100.0 (alert) / Rythme de croisière 
 MAX_BPM = 136.0                    # Excitation limit Min: 100.0 (little emotional reactivity) Default: 136.0 Max: 170.0 (alert) / Limite d'excitation
 THALAMUS_BASE_BPM = 72.0           # Resting heart rate (target) Min: 60.0 (deep sleep) Default: 72.0 Max: 100.0 (alert) / Rythme cardiaque de repos (cible)
 THALAMUS_MAX_BPM = 150.0           # Absolute safety ceiling Min: 120.0 (high stress) Default: 150.0 Max: 180.0 (critical limit) / Plafond absolu de sécurité 
