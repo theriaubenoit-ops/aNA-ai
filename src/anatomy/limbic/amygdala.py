@@ -1,14 +1,17 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Amygdala implementation for aNA AI Project v5.3
+Amygdala implementation for aNA AI Project v5.4
 
-Communicates with: Input: (<- Thalamus / Cortex) | Output: (-> Pulse / Adrenaline) (-> Hippocampus)
+Communicates with: 
+Input: (<- Thalamus / Cortex)
+Output: (-> Pulse / Adrenaline)
+Output: (-> Hippocampus)
 
-Description: This module implements the Amygdala with its key nuclei (BLA, CEA, MEA) for emotional processing, fear learning, and social behavior. It integrates with the ChemicalCore for neuromodulatory influences, particularly dopamine (Motivation), norepinephrine (Stress), and serotonin (Mood). The Amygdala processes sensory and emotional inputs to modulate memory persistence in the Hippocampus and orchestrate fear responses via the Central Amygdala.
+Description: This module implements the Amygdala with its key nuclei (BLA, CEA, MEA) for emotional processing, fear learning, and social behavior. It integrates with the ChemicalCore for neuromodulatory influences, particularly adrenaline (motor activation and survival), norepinephrine (Stress), and serotonin (Mood). The Amygdala processes sensory and emotional inputs to modulate memory persistence in the Hippocampus and orchestrate fear responses via the Central Amygdala.
 
-Architecture, concept and supervision: Benoit Theriault
-Collaboration, research and code: Gemini
+Architecture, concept and supervision: Theriault Benoit
+Collaboration, research and code: Google DeepMind (Gemini)
 """
 
 import numpy as np
@@ -52,6 +55,7 @@ class BasolateralAmygdala:
         
         self._initialize_neurons()
         self.fear_memory_strength = 0.0
+        self.fear_learning_rate = 0.1
         self.conditioned_stimuli = {}
     
     def _initialize_neurons(self):
@@ -99,9 +103,9 @@ class BasolateralAmygdala:
             # Emotional valence modulates activity
             input_signal *= (1.0 + emotional_valence * 0.5)
             
-            # Dopamine enhances fear learning
-            if 'dopamine' in neuromodulators:
-                input_signal *= (1.0 + neuromodulators['dopamine'] * 0.4)
+            # adrenaline enhances fear learning
+            if 'adrenaline' in neuromodulators:
+                input_signal *= (1.0 + neuromodulators['adrenaline'] * 0.4)
             
             # Norepinephrine enhances emotional salience
             if 'norepinephrine' in neuromodulators:
@@ -272,9 +276,9 @@ class MedialAmygdala:
             if 'vasopressin' in neuromodulators:
                 input_signal *= (1.0 + neuromodulators['vasopressin'] * 0.3)
             
-            # Dopamine modulates social reward
-            if 'dopamine' in neuromodulators:
-                input_signal *= (1.0 + neuromodulators['dopamine'] * 0.2)
+            # adrenaline modulates social reward
+            if 'adrenaline' in neuromodulators:
+                input_signal *= (1.0 + neuromodulators['adrenaline'] * 0.2)
             
             neuron.receive_input(input_signal, neuromodulators)
             neuron.update(0, neuromodulators)
@@ -411,7 +415,8 @@ class Amygdala:
 
         return {
             "cortisol": self._internal_activity,
-            "adrenaline": self.c_e_a.autonomic_activation if self.c_e_a else 0.05
+            "adrenaline": self.c_e_a.autonomic_activation, # On nomme clairement l'adrénaline
+            "norepinephrine": self.bla.fear_learning_rate   # La noradrénaline pour la vigilance
         }
     
     def get_adrenaline_level(self):
