@@ -32,9 +32,19 @@ _Thank you for being part of this journey to bring **aNA** to life!_
 
 ![ ](/docs/assets/spacer32x32.png)
 
-## v5.4: To Do _(...) — In progress_
+## v5.4: Tests Validation _(Scientific Accuracy) — In progress_
 
-...
+**The Triple-Test Validation Framework**
+To ensure both _scientific accuracy_ and _technical robustness_, **aNA** _v5.4_ is validated through _three core experimental scripts_:
+
+**☄️ Unit Precision _([test_neuron(.py)](/tests/test_neuron.py))_**
+Explores the atomic level of the project. It validates the _NMDA_-inspired memory suture, ensuring that traces are not just _"saved"_ but biologically integrated through simulated _Long-Term Potentiation (LTP)_.
+
+**☄️ Structural Communication _([test_bridge_thalamo_cortical(.py)](/tests/test_bridge_thalamo_cortical.py))_**
+Validates the dynamic dialogue between the _Thalamic Hub_ and the Neocortex. It demonstrates how _Layer 6 (L6) Feedback_ provides top-down modulation, allowing the system to filter out up to _90%_ of predictable sensory _noise_.
+
+**☄️ Global Homeostasis _([test_metabolic_endurance(.py)](/tests/test_metabolic_endurance.py))_**
+The ultimate _stress test_. This script monitors the decay and recovery of _virtual ATP_. It proves that the system can autonomously switch to a _"Meditative Communication" (Alpha State)_ where it remains receptive to user guidance through _resonate()_ without interrupting its metabolic recovery.
 
 ![ ](/docs/assets/spacer16x16.png)
 
