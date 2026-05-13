@@ -41,7 +41,7 @@ To ensure both _scientific accuracy_ and _technical robustness_, **aNA** _v5.4_ 
 Explores the atomic level of the project. It validates the _NMDA_-inspired memory suture, ensuring that traces are not just _"saved"_ but biologically integrated through simulated _Long-Term Potentiation (LTP)_.
 
 **☄️ Structural Communication _([test_bridge_thalamo_cortical(.py)](/tests/test_bridge_thalamo_cortical.py))_**
-Validates the dynamic dialogue between the _Thalamic Hub_ and the Neocortex. It demonstrates how _Layer 6 (L6) Feedback_ provides top-down modulation, allowing the system to filter out up to _90%_ of predictable sensory _noise_.
+Validates the dynamic dialogue between the _[thalamic_hub(.py)](/src/anatomy/subcortical/thalamic_hub.py)_ and the _[neocortex(.py)](/src/anatomy/cortical/neocortex.py)_. It demonstrates how _Layer 6 (L6) Feedback_ provides top-down modulation, allowing the system to filter out up to _90%_ of predictable sensory _noise_.
 
 **☄️ Global Homeostasis _([test_metabolic_endurance(.py)](/tests/test_metabolic_endurance.py))_**
 The ultimate _stress test_. This script monitors the decay and recovery of _virtual ATP_. It proves that the system can autonomously switch to a _"Meditative Communication" (Alpha State)_ where it remains receptive to user guidance through _resonate()_ without interrupting its metabolic recovery.
