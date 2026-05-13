@@ -129,6 +129,14 @@ python3 tests/test_cortical_column.py
 - **[Cerebellum(.py)](/src/anatomy/subcortical/cerebellum.py) _(Timing Engine & Output Calibration)_:** This unit specializes in _fine-tuning motor_ and _cognitive outputs_. In **aNA**, it ensures that the _"Thinking Shell" ([neocortex(.py)](/src/anatomy/cortical/neocortex.py))_ functions with perfect _mathematical synchronization_.
   - **Key role:** It acts as a _calibration layer_ for fluid, real-time interactions. While the _[pulse(.py)](/src/core/pulse.py)_ provides the _basic rhythm_, the _[cerebellum(.py)](/src/anatomy/subcortical/cerebellum.py)_ corrects _micro-timing errors_ to prevent _jitter_ in _data processing_ and _system response_.
 
+![ ](/docs/assets/spacer16x16.png)
+
+> ##"The human brain doesn't speak in _'tokens'_. Beyond its _plasticity_ and _low cost_, it doesn't fear _noise_. Why not take more inspiration from it?"
+>
+> _—Benoit Theriault_
+
+![ ](/docs/assets/spacer16x16.png)
+
 ### The Thinking Shell _(Processing & Memory)_
 
 - **[Neocortex(.py)](/src/anatomy/cortical/neocortex.py) _(The "Thinking" Shell)_:** The structural integration of the _4 Lobes_ and _6 Cortical Layers_. While the _[neocortex(.py)](/src/anatomy/cortical/neocortex.py)_ handles complex reasoning and prediction, the _[cerebellum(.py)](/src/anatomy/subcortical/cerebellum.py) (in **aNA**)_ fine-tunes _motor outputs_ and timing, ensuring the system’s actions are fluid and mathematically synchronized.
@@ -192,4 +200,4 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-05_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-12_
