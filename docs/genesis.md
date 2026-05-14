@@ -55,7 +55,7 @@ Beyond multilingual support, aNA implements a biological approach to symbolic re
 **From "Aa" to "Zz":** Neural synchronization of case-invariant structures.
 Biological Paradigm: In the human brain, the Visual Word Form Area (VWFA) learns to recognize letters regardless of their case or font. By presenting "Aa" as a single stimulus, we simulate this perceptual constancy.
 
-**Haptic Association:** Each pair is linked to a unique signature in _tests/media_haptic/_. This allows the Cerebellum to calibrate the timing of recognition for both uppercase and lowercase simultaneously.
+**Haptic Association:** Each pair is linked to a unique signature in _[media_haptic(/)](/tests/media_haptic/)_. This allows the Cerebellum to calibrate the timing of recognition for both uppercase and lowercase simultaneously.
 
 **Reduced Cognitive Friction:** Grouping 52 symbols into 26 functional units optimizes the _Hippocampus_ storage and speeds up _Thalamic_ routing, mimicking the efficiency of a high-cognitive profile.
 
