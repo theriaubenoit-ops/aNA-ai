@@ -46,7 +46,7 @@ The **aNA** _(v5 and beyond) architecture_ is built on the principle of _biologi
 
 > ## "_Intelligence_ does not reside in the quantity of _transistors mobilized_, but in the _accuracy_ of the _information flow_."
 >
-> _—Benoit Theriault_
+> _—Theriault Benoit_
 
 ![ ](/docs/assets/spacer16x16.png)
 
@@ -92,7 +92,7 @@ python3 tests/test_limbic_system.py
 
 ### 2. [Cortical Column(.py)](/src/anatomy/cortical/cortical_column.py) Cascade _(Test)_
 
-Validation of the _6-layer_ signal flow (L4 → L2/3 → L5) with real-time precision monitoring.
+Validation of the _6-layer_ signal flow (L4 -> L2/3 -> L5) with real-time precision monitoring.
 
 - **The L6 Feedback Loop _([cortical_column(.py)](/src/anatomy/cortical/cortical_column.py) Layer 6)_** This is what allows the _[neocortex(.py)](/src/anatomy/cortical/neocortex.py)_ to _“say”_ to the _[thalamus(.py)](/src/anatomy/subcortical/thalamus.py)_: _“I recognized this signal, you can lower the volume (gain)”_. This is the basis of the selective attention.
 
@@ -133,7 +133,7 @@ python3 tests/test_cortical_column.py
 
 > ## "The human brain doesn't speak in _'tokens'_. Beyond its _plasticity_ and _low cost_, it doesn't fear _noise_. Why not take more inspiration from it?"
 >
-> _—Benoit Theriault_
+> _—Theriault Benoit_
 
 ![ ](/docs/assets/spacer16x16.png)
 
