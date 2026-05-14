@@ -2,7 +2,7 @@
 
 # "Whatever the approach, we must find a simple way of thinking, within a concept that must remain complex."
 
-_— Benoit Theriault_
+_— Theriault Benoit_
 
 ![ ](/docs/assets/spacer32x32.png)
 
