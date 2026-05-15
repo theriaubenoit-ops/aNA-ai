@@ -16,7 +16,7 @@ Description: Centralization of dynamic thresholds for AI customization and authe
 Description (FR) : Centralisation des seuils dynamiques pour la personnalisation et l'alignement authentique. Ce module définit les paramètres ajustables qui déterminent la Persona, le tempérament et la réactivité de l'IA. Il assure un « Alignement Authentique » entre la vision de l'utilisateur et le comportement homéostatique de l'IA. En modifiant ces valeurs, les réactions du système sont synchronisées avec le réalisme biologique, permettant un alignement fonctionnel et une expérience personnalisée sans compromettre l'intégrité de l'architecture.
 
 Architecture, concept and supervision: Theriault Benoit
-Collaboration, research and code: Google DeepMind (Gemini)
+Collaboration, research and code: Gemini
 """
 
 import os
@@ -54,7 +54,7 @@ PROFILES = {
     "RESEARCH_curiosity": {    # Recherche (curiosité)
         "title": "The Explorer (Innovation and Survival)",
         "AMYGDALA_SENSITIVITY": 1.8,
-        "THALAMIC_THRESHOLD": 0.05, # test min  0.1
+        "THALAMIC_THRESHOLD": 0.05, # test min 0.1
         "ATP_CONSUMPTION": 0.006,
         "THRESHOLD_NMDA": 0.40,
         "MYELIN_EFFICIENCY_COEFF": 1.2,
