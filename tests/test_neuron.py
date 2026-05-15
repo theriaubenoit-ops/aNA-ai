@@ -61,11 +61,11 @@ class TestNeuronV54(unittest.TestCase):
         self.assertTrue(self.neuron.is_firing)
         
         # On vérifie que la plasticité ou la myéline a progressé
-        self.assertGreater(self.neuron.myelin_level, 0.0)
+        self.assertGreater(self.neuron.myelination_level, 0.0)
         self.assertGreater(self.neuron.activity_counter, 0)
         
         print(f" -> Discharge successful. Activity counter: {self.neuron.activity_counter}")
-        print(f" -> Reinforced structure (Myelination): {self.neuron.myelin_level:.4f}")
+        print(f" -> Reinforced structure (Myelination): {self.neuron.myelination_level:.4f}")
 
     def test_02_saliance_guard(self):
         """Scénario B : La Garde de la Saliance (Protection contre l'hallucination chimique)"""
