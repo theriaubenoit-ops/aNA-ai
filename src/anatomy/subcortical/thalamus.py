@@ -50,7 +50,7 @@ class Thalamus:
         """ 
         self.config = get_config()
         self.limbic_system = limbicsystem or LimbicSystem()
-
+        
         self.striatum = striatum or Striatum()
         self.last_cortical_gain = 1.0
         self.total_time_saved = 0.0
@@ -91,17 +91,36 @@ class Thalamus:
         # 1. Calcul des composants de la formule
         effective_current = input_signal * conductivity
         
-        rtn_base = self.config.get("RTN_BASE_INHIBITION", 0.3)
-        # Plus le BPM est élevé (vigilance), plus l'inhibition baisse (ratio < 1)
-        dynamic_inhibition = rtn_base * (self.base_bpm / self.current_bpm)
+        # 1. Récupération de la vitalité (ATP) via le module Pulse
+        # On utilise self.pulse.atp (votre réserve réelle)
+        atp_reserve = getattr(self.pulse, 'atp', 1.0)
+
+        # 2. Calcul de l'inhibition dynamique
+        # Plus l'ATP est bas, plus l'inhibition chute (on laisse passer plus de signaux)
+        rtn_base = self.config.get("RTN_BASE_INHIBITION", 0.1)
+        
+        # Si ATP = 1.0 (Rassasié) -> Inhibition = 0.1
+        # Si ATP = 0.3 (Affamé) -> Inhibition = 0.03 (La porte s'ouvre toute seule !)
+        dynamic_inhibition = rtn_base * atp_reserve * (self.base_bpm / self.pulse.bpm)
+
+        # 3. Diagnostic de survie
+        if atp_reserve < 0.5:
+            print(f" [SURVIVAL MODE] Vitality Low ({atp_reserve:.2f}). Thalamic Gating lowered.")
+        
+        # Dans thalamus.py, après l'appel au striatum
+        if striatal_decision["is_allowed"]:
+            if striatal_decision.get("drive", 0) > 0.4:
+                print(f" [STRIATUM] Action validée par instinct de survie (Drive: {striatal_decision['drive']:.2f})")
+            else:
+                print(f" [STRIATUM] Action validée par intention corticale.")
         
         # 2. Le PRINT de vérification (Diagnostic)
-        print(f"\n [DIAGNOSTIC RTN]")
-        print(f"  ├─ Input Signal  : {input_signal:.4f}")
-        print(f"  ├─ Conductivity  : {conductivity:.4f}")
-        print(f"  ├─ Eff. Current  : {effective_current:.4f}")
-        print(f"  ├─ RTN Threshold : {dynamic_inhibition:.4f} (Base: {rtn_base})")
-        print(f"  └─ Gate Open     : {'YES' if effective_current > dynamic_inhibition else 'NO'}")
+        # print(f"\n [DIAGNOSTIC RTN]")
+        # print(f"  ├─ Input Signal  : {input_signal:.4f}")
+        # print(f"  ├─ Conductivity  : {conductivity:.4f}")
+        # print(f"  ├─ Eff. Current  : {effective_current:.4f}")
+        # print(f"  ├─ RTN Threshold : {dynamic_inhibition:.4f} (Base: {rtn_base})")
+        # print(f"  └─ Gate Open     : {'YES' if effective_current > dynamic_inhibition else 'NO'}")
 
         # 3. La décision
         return effective_current > dynamic_inhibition
@@ -159,10 +178,12 @@ class Thalamus:
             return {"status": "REFRACTORY_REST", "gain": 0.0}
         
         # Appel au Striatum pour obtenir l'autorisation (Action Selection)
+        chemical_matrix = neurom.get_matrix() 
+
         striatal_decision = self.striatum.process_selection(
-            cortical_intent=l6_feedback, 
-            limbic_pulse=neurom.get_matrix(),
-            atp_level=self.pulse.atp
+            l6_feedback, 
+            chemical_matrix, # On envoie le dictionnaire, pas l'objet complet
+            self.pulse.atp
         )
         if not striatal_decision["is_allowed"]:
             return {"status": "ACTION_BLOCKED_BY_STRIATUM", "gain": 0.0}
@@ -171,8 +192,8 @@ class Thalamus:
         
         label = stimulus.get("signal_label", "unknown")
         cond = stimulus.get("conductivity", self.config.get("BASE_CONDUCTIVITY", 0.7))
-        target_nucleus = stimulus.get("target", "MD")
-        chemistry = neurom.get_matrix()
+        # target_nucleus = stimulus.get("target", "MD")
+        # chemistry = neurom.get_matrix()
 
         intensity = stimulus.get("intensity", 0.0)
 
