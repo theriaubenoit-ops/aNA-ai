@@ -104,13 +104,20 @@ async def test_sensory_cascade():
         await thalamus.hippo.consolidate_and_prune()
 
     print("\n" + "="*50)
-    print(" ☀️ PHASE 3: AWAKENING AND WISDOM")
+    print(" ☀️ PHASE 3: AWAKENING WITH MOTIVATION BOOST")
+    # print("="*50)
+
+    thalamus.pulse.inject_stimulus(0.5) 
+    print(f" [STIMULUS] Injection systémique : +0.5 Dopamine")
     print("="*50)
+
+    # result = await thalamus.process_payload(stimulus_A, neurom, l6_feedback=0.8)
     
     heart.atp = 1.0
     heart.is_refractory = False
     heart.bpm = 110.0 
-    result_sagesse = await thalamus.process_payload(stimulus, neurom, l6_feedback=l6_mock)
+    # result_sagesse = await thalamus.process_payload(stimulus, neurom, l6_feedback=l6_mock)
+    result_sagesse = await thalamus.process_payload(stimulus, neurom, l6_feedback=0.8)
     if "bpm" in result_sagesse:
         print(f"  [Result] BPM after consolidation: {result_sagesse['bpm']:.2f} BPM")
     else:
