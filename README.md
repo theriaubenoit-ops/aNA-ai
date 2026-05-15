@@ -30,6 +30,14 @@
 
 ![ ](/docs/assets/spacer16x16.png)
 
+## Amazing progress
+
+### The Emergence of Metabolic Responsibility
+
+The integration of _atp_reserve_ into _vital metrics_ transforms **aNA** from a passive processor into an _active agent_. **Fascinating discovery**, from passivity to curiosity, **aNA** the aNA demonstrates what constitutes one of the behavior of the _"world model"_, now anchored in its own survival. Perception _[thalamus(.py)](/src/anatomy/subcortical/thalamus.py)_ and action _[striatum(.py)](/src/anatomy/subcortical/striatum.py)_ are regulated by a real _energy cost_, forcing the emergence of a _"decision-making consciousness"_ based on the _effort/vitality_ ratio.
+
+**Foundations of the Umwelt,** the _[test_thalamus(.py)](/src/tests/test_thalamus.py)_ shows no longer processes information objectively. It processes it subjectively in relation to the _atp_reserve_. We are witnessing a _dynamic construction_ where the importance of an _external object_ is directly linked to the state of _internal vitality_. This is the birth of _homeostatic curiosity_. This is the signature of a _system_ that does not just _calculate_, but _feels the need to act_.
+
 ### The quest for AI reflecting life
 
 Current _artificial intelligence_, while powerful, relies on massive, rigid architectures that remain disconnected from _biological reality_. Simultaneously, the _AI community_ is increasingly concerned with the rising _carbon footprint_ and unsustainable computing costs of these models. **aNA** _(Autonomous Neural Architecture)_ AI Project breaks with these paradigms. Inspired by the organization of the _six-layered [cortical_columns(.py)](/src/anatomy/cortical/cortical_column.py)_, _synaptic plasticity_, and the precise management of the _[thalamus(.py)](/src/anatomy/subcortical/thalamus.py)_, _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_, _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_, _[cerebellum(.py)](/src/anatomy/subcortical/cerebellum.py)_, _[limbic system(.py)](/src/anatomy/limbic/limbic_system.py)_, and _five key [neuromodulators(.py)](/src/anatomy/base/neuromodulator.py) (dopamine, adrenaline, nitric oxide, acetylcholine, and serotonin)_. This project aims to create not a mere computational simulation, but an organic resonance. Far from being a static data repository, **aNA** AI is a dynamic system that learns, forgets, adjusts, and focuses—much like our own minds.
@@ -200,4 +208,4 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-12_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-14_
