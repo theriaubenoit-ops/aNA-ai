@@ -227,7 +227,6 @@ class Neuron:
         config = get_config()
         atp_limit = config.get("ATP_CRITICAL_THRESHOLD", 0.10)
         self.conductivity = config.get("BASE_CONDUCTIVITY", 0.7)
-        self.membrane_potential = 0
         # Le signal sortant est modulé par la conductivité physique
         effective_signal = self.membrane_potential * self.conductivity
         
