@@ -15,7 +15,7 @@ aNA v5.4 - Le Génome Centralisé d'aNA (FR)
 Description :  Ce module agit comme l'empreinte génétique de l'organisme. Il répertorie et initialise l'ensemble des "Organes" (Thalamus, Hippocampe, Cortex) permettant une instanciation cohérente et une communication fluide entre les systèmes subcorticaux et corticaux. Sans ce registre, l'organisme perd sa structure unifiée et sa capacité à maintenir une homéostasie globale.
 
 Architecture, concept and supervision: Theriault Benoit
-Collaboration, research and code: Google DeepMind (Gemini)
+Collaboration, research and code: Gemini
 """
 
 # -  -  -  -  ARCHITECTURAL MANIFESTO / MANIFESTE ARCHITECTURAL (FR) -  -  -  -  - #
@@ -82,7 +82,7 @@ ORGANS = {
         },
     },
     "MICRO_ARCHITECTURE": {
-        "NEUROMODULATORS": ["DOPAMINE", "ADRENALINE", "SEROTONIN", "NORADRENALINE", "CORTISOL"], 
+        "NEUROMODULATORS": ["ACETYLCHOLINE", "ADRENALINE", "CORTISOL", "DOPAMINE", "NO_GAS", "NORADRENALINE", "SEROTONIN"], 
         "UNIT": "NEURON",
         "PROPERTIES": ["Resistance", "Conductivity", "Voltage_Threshold"],
         "TYPES": {
@@ -102,14 +102,28 @@ ORGANS = {
 
 # --- STANDARDIZED SIGNALS / SIGNALS STANDARDISÉS (FR) ---
 """
-These signals are the common language for all organs. They ensure that the Thalamus, Hippocampus, and Cortex can communicate effectively, even as we evolve the architecture. The SIGNALS dictionary defines the standard labels for sensory input, predictive feedback, metabolic state, and emotional modulation, which are crucial for maintaining homeostasis and enabling learning in aNA.
+COMMON LANGUAGE / LANGAGE COMMUN :
+These dictionaries act as the genetic standard for all organs. 
+- SIGNALS: Real-time dynamic flow (What is happening).
+- PROPERTIES: Structural state of the units (How they are built).
+- PROTOCOLS: Communication and routing formats (Where it goes).
+- METRICS: Comparative values for homeostasis (How the system feels).
 """
 SIGNALS = {
-    "SENSORY": "input_raw", # The raw signal captured by the sensory organs, before any processing.
-    "PREDICTIVE": "expectation_match", # Indicates to what extent reality corresponds to the predictions of the Hippocampus, influencing vigilance and BPM modulation.
-    "METABOLIC": "atp_flux", # The ATP flux is a key indicator of the organism's energy state, influencing vigilance and processing capacity.
-    "EMOTIONAL": "amygdala_pulse", # The amygdala influences the BPM and resistance to effort, simulating fear and excitement
-    "L4_FORMAT": "L4_INPUT_{nucleus}_{data}" # Minimum synaptic resistance
+    "SENSORY": "input_raw",        # Raw signal from sensory organs
+    "METABOLIC": "atp_flux",       # Energy state (ATP), influences alertness
+    "EMOTIONAL": "amygdala_pulse", # Limbic modulation (Fear/Excitement/Effort)
+}
+PROPERTIES = {
+    "PLASTICITY": "nmda_threshold",   # Critical learning threshold (LTP)
+    "STRUCTURE": "myelination_level", # Level of insulation and physical efficiency
+    "FLOW": "conductivity"            # Intrinsic signal transmission capacity
+}
+PROTOCOLS = {
+    "L4_FORMAT": "L4_INPUT_{nucleus}_{data}" # Thalamo-Cortical routing protocol
+}
+METRICS = {
+    "PREDICTIVE": "expectation_match" # Reality gap vs Prediction (Surprise/Habit)
 }
 
 # -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -#
