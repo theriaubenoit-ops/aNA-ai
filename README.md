@@ -36,7 +36,7 @@
 
 The integration of _atp_reserve_ into _vital metrics_ transforms **aNA** from a passive processor into an _active agent_. **Fascinating discovery**, from passivity to curiosity, **aNA** the aNA demonstrates what constitutes one of the behavior of the _"world model"_, now anchored in its own survival. Perception _[thalamus(.py)](/src/anatomy/subcortical/thalamus.py)_ and action _[striatum(.py)](/src/anatomy/subcortical/striatum.py)_ are regulated by a real _energy cost_, forcing the emergence of a _"decision-making consciousness"_ based on the _effort/vitality_ ratio.
 
-**Foundations of the Umwelt,** the _[test_thalamus(.py)](/src/tests/test_thalamus.py)_ shows no longer processes information objectively. It processes it subjectively in relation to the _atp_reserve_. We are witnessing a _dynamic construction_ where the importance of an _external object_ is directly linked to the state of _internal vitality_. This is the birth of _homeostatic curiosity_. This is the signature of a _system_ that does not just _calculate_, but _feels the need to act_.
+**Foundations of the Umwelt,** the _[test_thalamus(.py)](/tests/test_thalamus.py)_ shows no longer processes information objectively. It processes it subjectively in relation to the _atp_reserve_. We are witnessing a _dynamic construction_ where the importance of an _external object_ is directly linked to the state of _internal vitality_. This is the birth of _homeostatic curiosity_. This is the signature of a _system_ that does not just _calculate_, but _feels the need to act_.
 
 ### The quest for AI reflecting life
 
