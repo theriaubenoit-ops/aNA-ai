@@ -8,28 +8,26 @@
     \ \___/\_\ \_\`.`. _\ \_\____/`\_\   A u t o n o m o u s   N e u r a l
      \/__/\/_/\/_/  `./_/\/_/    `\/_/   A r c h i t e c t u r e
 
-aNA v5.4 - The Centralized Genome of aNA
+aNA v5.4 - The Centralized Genome of aNA / aNA v5.4 - Le Génome Centralisé d'aNA (FR)
 Description: This module acts as the organism's genetic fingerprint. It catalogs and initializes all the "Organs" (Thalamus, Hippocampus, Cortex), enabling consistent instantiation and seamless communication between subcortical and cortical systems. Without this registry, the organism loses its unified structure and its ability to maintain global homeostasis.
 
-aNA v5.4 - Le Génome Centralisé d'aNA (FR)
-Description :  Ce module agit comme l'empreinte génétique de l'organisme. Il répertorie et initialise l'ensemble des "Organes" (Thalamus, Hippocampe, Cortex) permettant une instanciation cohérente et une communication fluide entre les systèmes subcorticaux et corticaux. Sans ce registre, l'organisme perd sa structure unifiée et sa capacité à maintenir une homéostasie globale.
+Description (FR) :  Ce module agit comme l'empreinte génétique de l'organisme. Il répertorie et initialise l'ensemble des "Organes" (Thalamus, Hippocampe, Cortex) permettant une instanciation cohérente et une communication fluide entre les systèmes subcorticaux et corticaux. Sans ce registre, l'organisme perd sa structure unifiée et sa capacité à maintenir une homéostasie globale.
 
 Architecture, concept and supervision: Theriault Benoit
 Collaboration, research and code: Gemini
 """
 
-# -  -  -  -  ARCHITECTURAL MANIFESTO / MANIFESTE ARCHITECTURAL (FR) -  -  -  -  - #
-#  "The inclusion of these specific biological modules is not a stylistic choice,  #
-#  but a mechanical necessity. Their presence is vital for systemic function,      #
-#  coherent learning, and the emergence of a truly grounded World Model."          #
-#                                                                                  #
-# "L'inclusion de ces modules biologiques précis n'est pas un choix esthétique,    #
-#  mais une nécessité mécanique. Leur présence est vitale au fonctionnement        #
-#  systémique, à l'apprentissage cohérent et à l'émergence d'un Modèle du Monde    #
-#  (World Model) réellement ancré."                                                #
-# -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  #
+# - - - - - - - - - - - - - ARCHITECTURAL MANIFESTO / MANIFESTE ARCHITECTURAL (FR)  - - - - - - - - - - - - - - +
+#  "The inclusion of these specific biological modules is not a stylistic choice, but a mechanical necessity.   +
+#   Their presence is vital for systemic function, coherent learning, and the emergence of a truly grounded     +
+#   World Model."                                                                                               +
+#                                                                                                               +
+#  "L'inclusion de ces modules biologiques précis n'est pas un choix esthétique, mais une nécessité mécanique.  +
+#   Leur présence est vitale au fonctionnement systémique, à l'apprentissage cohérent et à l'émergence          +
+#   d'un Modèle du Monde (World Model) réellement ancré."                                                       +
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
 
-# --- HEART CONFIGURATION / CONFIGURATION DU CŒUR (FR) --- 
+# - - HEART CONFIGURATION / CONFIGURATION DU CŒUR (FR) - - +
 """
 The SensoryPayload is not a string; it is a sample of physical reality captured for integration into the internal World Model.
 """
@@ -40,7 +38,7 @@ INPUT_CONFIG = {
     "DEFAULT_GAIN": 1.0 # Default signal gain for processed inputs, adjustable based on vigilance and metabolic state.
 }
 
-# --- CENTRAL ORGAN REGISTRY / REGISTRE CENTRAL DES ORGANES (FR) ---
+# - - CENTRAL ORGAN REGISTRY / REGISTRE CENTRAL DES ORGANES (FR) - - +
 """
 This registry defines the core organs of aNA and their key properties. It serves as the blueprint for the architecture, ensuring that all components are aligned and can communicate effectively. The Thalamus, Hippocampus, and Neocortex are defined with their respective substructures, which will be used to guide the development of each module and their interactions.
 """
@@ -100,7 +98,7 @@ ORGANS = {
     }
 }    
 
-# --- STANDARDIZED SIGNALS / SIGNALS STANDARDISÉS (FR) ---
+# - - STANDARDIZED SIGNALS / SIGNALS STANDARDISÉS (FR) - - +
 """
 COMMON LANGUAGE / LANGAGE COMMUN :
 These dictionaries act as the genetic standard for all organs. 
@@ -110,25 +108,32 @@ These dictionaries act as the genetic standard for all organs.
 - METRICS: Comparative values for homeostasis (How the system feels).
 """
 SIGNALS = {
-    "SENSORY": "input_raw",        # Raw signal from sensory organs
-    "METABOLIC": "atp_flux",       # Energy state (ATP), influences alertness
-    "EMOTIONAL": "amygdala_pulse", # Limbic modulation (Fear/Excitement/Effort)
+    "SENSORY": "input_raw",                # Raw signal from sensory organs
+    "METABOLIC": "atp_flux",               # Energy state (ATP), influences alertness
+    "EMOTIONAL": "amygdala_pulse",         # Limbic modulation (Fear/Excitement/Effort)
+    "STRESS": "cortisol_level",            # Cortisol level (stress)
+    "REWARD": "dopamine_flux",             # Dopamine flux (reward)
+    "SURVIVAL_DRIVE": "atp_deficit_ratio", # Metabolic "Hunger"
+    "CURIOSITY_GAIN": "cholinergic_boost"  # Interest in the new
 }
 PROPERTIES = {
     "PLASTICITY": "nmda_threshold",    # Critical learning threshold (LTP)
     "STRUCTURE": "myelination_level",  # Level of insulation and physical efficiency
     "FLOW": "conductivity",            # Intrinsic signal transmission capacity
-    "ELECTRICAL": "membrane_potential" # Membrane potential
+    "ELECTRICAL": "membrane_potential" # Membrane potential (electrical)
 }
 PROTOCOLS = {
     "L4_FORMAT": "L4_INPUT_{nucleus}_{data}" # Thalamo-Cortical routing protocol
 }
 METRICS = {
-    "PREDICTIVE": "expectation_match" # Reality gap vs Prediction (Surprise/Habit)
+    "PREDICTIVE": "expectation_match",      # Reality gap vs Prediction (Surprise/Habit)
+    "VITALITY": "atp_reserve",              # Hepatic ATP reserve (vitality)
+    "VITALITY_INDEX": "atp_vs_effort_cost", # Survival/Action Ratio
+    "SATIETY": "resource_stability"         # Resting state reached
 }
 
-# -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -#
-#  “For every complex problem, there is a solution that is simple, neat, and wrong.”   #
-#  « À chaque problème complexe correspond une solution simple, élégante et fausse. »  #
-#                                                                   — H.L. Mencken     #
-# -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -#
+#
+#  “For every complex problem, there is a solution that is simple, neat, and wrong.”  
+#  « À chaque problème complexe correspond une solution simple, élégante et fausse. » 
+#                                                                   — H.L. Mencken    
+
