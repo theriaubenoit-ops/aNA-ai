@@ -36,7 +36,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')
 
 # from src.registry import SIGNALS, ORGANS
 from src.config import get_config
-from src.registry import ORGANS
+from src.registry import ORGANS, SIGNALS, PROPERTIES, PROTOCOLS, METRICS
 from src.anatomy.limbic.hippocampus import Hippocampus
 from src.core.pulse import Pulse
 from src.anatomy.base.neuromodulator import Neuromodulator
@@ -60,7 +60,7 @@ class Thalamus:
         
         # 1. Seuils Métaboliques (config.py)
         self.critical_bpm = self.config.get("CRITICAL_VIGILANCE_BPM", 200.0)
-        self.base_bpm = self.config.get("BASE_BPM", 65.0) # Le rythme de croisière physique
+        self.base_bpm = self.config.get("BASE_BPM", 65) # Le rythme de croisière physique
         self.vigilance_factor = self.config.get("THALAMUS_VIGILANCE_FACTOR", 0.72) # Le multiplicateur attentionnel
         self.decay_factor = self.config.get("THALAMUS_DECAY_FACTOR", 0.15)
         
@@ -81,6 +81,30 @@ class Thalamus:
         self.current_bpm = self.base_bpm
         self.system_strain = 0.0
         self.is_autonomous = False
+
+    def calculate_rtn_gate(self, input_signal: float, conductivity: float) -> bool:
+        """
+        Détermine la saillance réelle du signal.
+        Le RTN agit comme un filtre qui ne laisse passer que le courant effectif 
+        supérieur à l'inhibition dynamique.
+        """
+        # 1. Calcul des composants de la formule
+        effective_current = input_signal * conductivity
+        
+        rtn_base = self.config.get("RTN_BASE_INHIBITION", 0.3)
+        # Plus le BPM est élevé (vigilance), plus l'inhibition baisse (ratio < 1)
+        dynamic_inhibition = rtn_base * (self.base_bpm / self.current_bpm)
+        
+        # 2. Le PRINT de vérification (Diagnostic)
+        print(f"\n [DIAGNOSTIC RTN]")
+        print(f"  ├─ Input Signal  : {input_signal:.4f}")
+        print(f"  ├─ Conductivity  : {conductivity:.4f}")
+        print(f"  ├─ Eff. Current  : {effective_current:.4f}")
+        print(f"  ├─ RTN Threshold : {dynamic_inhibition:.4f} (Base: {rtn_base})")
+        print(f"  └─ Gate Open     : {'YES' if effective_current > dynamic_inhibition else 'NO'}")
+
+        # 3. La décision
+        return effective_current > dynamic_inhibition
 
     def get_current_bpm(self, l6_feedback: float) -> float:
         """
@@ -106,12 +130,30 @@ class Thalamus:
         
         self.current_bpm = max(min_allowed, min(max_allowed, target_bpm))
         return self.current_bpm
+    
+    def calculate_rtn_gate(self, input_signal: float, conductivity: float) -> bool:
+        """ Calcule si le signal est assez fort pour franchir le RTN. """
+        effective_current = input_signal * conductivity
+        rtn_base = self.config.get("RTN_BASE_INHIBITION", 0.1) # Votre log montrait 0.1
+        
+        # Seuil dynamique (Vigilance)
+        dynamic_inhibition = rtn_base * (self.base_bpm / self.current_bpm)
+        
+        return effective_current > dynamic_inhibition
 
     async def process_payload(self, stimulus: Dict[str, Any], neurom: Neuromodulator, l6_feedback: float = 0.5):
         """
         Point d'entrée principal avec modulation limbique réelle.
         """
+        # --- INITIALISATION INDISPENSABLE ---
+        result = {}
         config = get_config()
+
+        # On synchronise l'état interne avec le langage commun d'aNA
+        current_metabolic_state = {
+            SIGNALS["METABOLIC"]: self.synaptic_atp,
+            "is_burned_out": self.is_burned_out
+        }
 
         if self.pulse.is_refractory:
             return {"status": "REFRACTORY_REST", "gain": 0.0}
@@ -128,8 +170,27 @@ class Thalamus:
         self.rtn_inhibition = self.config.get("RTN_BASE_INHIBITION") + striatal_decision["rtn_modulator"]
         
         label = stimulus.get("signal_label", "unknown")
-        intensity = stimulus.get("intensity", 0.5)
+        cond = stimulus.get("conductivity", self.config.get("BASE_CONDUCTIVITY", 0.7))
+        target_nucleus = stimulus.get("target", "MD")
         chemistry = neurom.get_matrix()
+
+        intensity = stimulus.get("intensity", 0.0)
+
+        # Appel du Diagnostic RTN
+        is_salient = self.calculate_rtn_gate(intensity, cond)
+
+        if is_salient:
+            # LE DÉBLOCAGE : On utilise le gain mémorisé (ou le feedback L6)
+            # On s'assure que current_gain n'est pas 0.0
+            current_gain = max(self.last_cortical_gain, l6_feedback, 0.5)
+            
+            result['intensity'] = intensity * cond * current_gain
+            result['gain'] = current_gain
+            result['status'] = "PROJECTED_TO_CORTEX"
+        else:
+            result['intensity'] = 0.0
+            result['gain'] = 0.0
+            result['status'] = "FILTERED_BY_RTN"
 
         # 1. ÉVALUATION LIMBIQUE RÉELLE (The Real Thing)
         # Le LimbicSystem traite l'expérience via l'Amygdale et l'Hippocampe
@@ -150,17 +211,25 @@ class Thalamus:
         })
 
         # 3. MISE À JOUR DU PULSE
+        # On utilise les clés officielles du registre pour l'état métabolique
+        current_metabolic_state = {
+            SIGNALS["METABOLIC"]: self.synaptic_atp,
+            "is_burned_out": self.is_burned_out,
+            "potential_state": PROPERTIES["ELECTRICAL"] # On expose que l'état électrique est monitoré
+        }
         # Le BPM est maintenant influencé par la véritable adrénaline de l'amygdale
         new_bpm = self.calculate_bpm(arousal_status)
         self.pulse.update_frequency(new_bpm)
 
-        result = {
+        result.update({
             "bpm": new_bpm,
             "arousal": arousal_status,
             "atp": self.pulse.atp,
-            "gain": self.system_strain, # Ou votre variable de gain actuelle
-            "status": "PROJECTED_TO_CORTEX"
-        }
+            # "gain": self.system_strain, 
+            # "status": "PROJECTED_TO_CORTEX",
+            "metabolism": current_metabolic_state
+        })
+        # result["metabolism"] = current_metabolic_state
         return result
         
     def calculate_bpm(self, arousal_status: bool) -> float:
