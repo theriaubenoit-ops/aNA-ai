@@ -103,7 +103,7 @@ class Neuron:
         
         # Structural state
         self.synaptic_strength = 1.0
-        self.myelin_level = config.get("MAX_MYELIN_DENSITY", 0.0)
+        self.myelination_level = config.get("MAX_MYELIN_DENSITY", 0.0)
         self.plasticity = 0.5
         
         # Activity tracking
@@ -173,7 +173,7 @@ class Neuron:
             True if connection is possible
         """
         distance = self.calculate_distance(other_neuron)
-        max_distance = self.config.dendritic_radius * (1 + self.myelin_level)
+        max_distance = self.config.dendritic_radius * (1 + self.myelination_level)
         return distance <= max_distance
     
     def receive_input(self, input_strength: float, neuromodulators: Dict[str, float]):
@@ -227,6 +227,7 @@ class Neuron:
         config = get_config()
         atp_limit = config.get("ATP_CRITICAL_THRESHOLD", 0.10)
         self.conductivity = config.get("BASE_CONDUCTIVITY", 0.7)
+        self.membrane_potential = 0
         # Le signal sortant est modulé par la conductivité physique
         effective_signal = self.membrane_potential * self.conductivity
         
@@ -335,7 +336,7 @@ class Neuron:
 
         if self.is_firing:
             # 2. Calcul de l'impact (La myéline facilite l'ouverture NMDA)
-            impact_signal = self.plasticity * (1.0 + self.myelin_level + (ne_boost * 0.5))
+            impact_signal = self.plasticity * (1.0 + self.myelination_level + (ne_boost * 0.5))
             
             if impact_signal > self.config.nmda_threshold:
                 # Consolidation forte (LTP) boostée par la Dopamine
@@ -364,11 +365,11 @@ class Neuron:
         if self.is_firing: 
             # On ignore le last_spike_time pour ce test
             increment = 0.01  # On revient à une valeur plus réaliste
-            self.myelin_level += increment
+            self.myelination_level += increment
             
             # Cap à 1.0 (Conductivité max +50%)
-            if self.myelin_level > 1.0:
-                self.myelin_level = 1.0
+            if self.myelination_level > 1.0:
+                self.myelination_level = 1.0
     
     def get_output_strength(self) -> float:
         """
@@ -380,7 +381,7 @@ class Neuron:
         
         # 1. Facteur de Conductivité (Concept Benoit Theriault)
         # La myélinisation augmente la vitesse et la force de conduction.
-        conductivité_myéline = 1.0 + (self.myelin_level * 0.5)
+        conductivité_myéline = 1.0 + (self.myelination_level * 0.5)
         
         # 2. Facteur Métabolique (Vitalité)
         # Un niveau d'énergie bas affaiblit physiquement le signal de sortie.
@@ -405,7 +406,7 @@ class Neuron:
         self.last_spike_time = -1
         self.activity_counter = 0
         self.plasticity = 0.5
-        self.myelin_level = 0.0
+        self.myelination_level = 0.0
 
     def _recover_passive_energy(self):
         """
