@@ -52,7 +52,7 @@ class TestNeuronV54(unittest.TestCase):
         print("\n[SCENARIO A: HOMEOSTASIS AND MYELINATION]")
         
         # On s'assure que le neurone part d'un état stable
-        self.neuron.energy_level = 1.0
+        self.neuron.atp_flux = 1.0
         
         # Stimulation
         self.neuron.receive_input(40.0, {}) # Augmenté pour garantir le passage du seuil
@@ -61,11 +61,11 @@ class TestNeuronV54(unittest.TestCase):
         self.assertTrue(self.neuron.is_firing)
         
         # On vérifie que la plasticité ou la myéline a progressé
-        self.assertGreater(self.neuron.myelination_level, 0.0)
+        self.assertGreater(self.neuron.myelin_level, 0.0)
         self.assertGreater(self.neuron.activity_counter, 0)
         
-        print(f" -> Décharge réussie. Compteur d'activité : {self.neuron.activity_counter}")
-        print(f" -> Structure renforcée (Myélinisation) : {self.neuron.myelination_level:.4f}")
+        print(f" -> Discharge successful. Activity counter: {self.neuron.activity_counter}")
+        print(f" -> Reinforced structure (Myelination): {self.neuron.myelin_level:.4f}")
 
     def test_02_saliance_guard(self):
         """Scénario B : La Garde de la Saliance (Protection contre l'hallucination chimique)"""
@@ -85,9 +85,9 @@ class TestNeuronV54(unittest.TestCase):
         # Calcul de la déformation
         diff = potentiel_chimique - potentiel_pur
         
-        print(f" -> Potentiel pur (sans chimie) : {potentiel_pur:.2f} mV")
-        print(f" -> Potentiel sous cocktail chimique : {potentiel_chimique:.2f} mV")
-        print(f" -> Déformation chimique contenue : +{diff:.2f} mV")
+        print(f" -> Pure potential (without chemistry): {potentiel_pur:.2f} mV")
+        print(f" -> Potential under chemical cocktail:: {potentiel_chimique:.2f} mV")
+        print(f" -> Chemical deformation contained: +{diff:.2f} mV")
         
         # Le mécanisme de Saliance doit limiter l'impact chimique pour protéger le pattern
         self.assertLess(diff, 15.0) 
@@ -98,7 +98,7 @@ class TestNeuronV54(unittest.TestCase):
         print("\n[SCENARIO C: METABOLIC EXHAUSTION]")
         
         # On force un état d'épuisement extrême (sous le seuil de Low Power)
-        self.neuron.energy_level = 0.05 
+        self.neuron.atp_flux = 0.05 
         
         # On tente de forcer une décharge avec un stimulus massif
         self.neuron.receive_input(100.0, {})
@@ -108,10 +108,10 @@ class TestNeuronV54(unittest.TestCase):
         self.assertFalse(self.neuron.is_firing)
         
         # La pompe de récupération doit être active malgré l'absence de décharge
-        self.assertGreater(self.neuron.energy_level, 0.05)
+        self.assertGreater(self.neuron.atp_flux, 0.05)
         
-        print(" -> Action annulée : Le neurone refuse la décharge par mesure de survie.")
-        print(f" -> Mode survie actif. Régénération ATP en cours : {self.neuron.energy_level:.4f}.")
+        print(" -> Action canceled: The neuron refuses the discharge as a survival measure.")
+        print(f" -> Active survival mode. ATP regeneration in progress: {self.neuron.atp_flux:.4f}.")
 
 if __name__ == '__main__':
     create_ascii_header()
