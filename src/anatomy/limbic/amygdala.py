@@ -11,7 +11,7 @@ Output: (-> Hippocampus)
 Description: This module implements the Amygdala with its key nuclei (BLA, CEA, MEA) for emotional processing, fear learning, and social behavior. It integrates with the ChemicalCore for neuromodulatory influences, particularly adrenaline (motor activation and survival), norepinephrine (Stress), and serotonin (Mood). The Amygdala processes sensory and emotional inputs to modulate memory persistence in the Hippocampus and orchestrate fear responses via the Central Amygdala.
 
 Architecture, concept and supervision: Theriault Benoit
-Collaboration, research and code: Google DeepMind (Gemini)
+Collaboration, research and code: Gemini, Cline
 """
 
 import numpy as np

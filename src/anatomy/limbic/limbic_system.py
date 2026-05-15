@@ -10,7 +10,7 @@ Output: (-> Pulse/BPM) (-> Neuromodulator Core)
 
 Description: This module acts as the emotional and mnestic hub of aNA. It orchestrates the bidirectional flow between the Amygdala (Threat/Arousal) and the Hippocampus (Context/Memory). By integrating these signals, the Limbic System provides a value-based filter for the Thalamus and influences the global Pulse (BPM), ensuring that the organism's metabolic state is aligned with its internal emotional landscape and past experiences.
 
-Architecture, concept and supervision: Benoit Theriault
+Architecture, concept and supervision: Theriault Benoit
 Collaboration, research and code: Gemini
 """
 

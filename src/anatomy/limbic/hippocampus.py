@@ -3,11 +3,13 @@
 """
 Hippocampus implementation for aNA AI Project v5.3
 
-Communicates with: Input: (<- Cortex / Amygdala) | Output: (-> Thalamus) (-> Cortical Storage)
+Communicates with:
+Input: (<- Cortex / Amygdala)
+Output: (-> Thalamus) (-> Cortical Storage)
 
 Description: This module implements the Hippocampus with its subfields (DG, CA1-CA4) for memory encoding, consolidation, and retrieval. It includes mechanisms for synaptic plasticity (LTP/LTD), emotional modulation of memory strength, and a novel "CA4" subfield for long-term trace stabilization.
 
-Architecture, concept and supervision: Benoit Theriault
+Architecture, concept and supervision: Theriault Benoit
 Collaboration, research and code: Gemini, Cline
 """
 
@@ -215,7 +217,7 @@ class Hippocampus:
                 
             # 2. Refroidissement des Traces Acides :
             # Si c'est un souvenir de danger (présent dans CA4), on baisse son 
-            # intensité dans CA3 pour que William ne soit plus en 'panique' au réveil.
+            # intensité dans CA3 pour que aNA ne soit plus en 'panique' au réveil.
             if label in self.subfields["CA4"]:
                 # On rapproche la trace de son plancher de survie (Sagesse > Peur)
                 target_floor = self.subfields["CA4"][label]
