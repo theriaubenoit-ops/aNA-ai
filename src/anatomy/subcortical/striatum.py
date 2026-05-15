@@ -34,26 +34,49 @@ class Striatum:
         self.config = get_config()
         self.action_history = []
         
-    def process_selection(self, cortical_intent: float, limbic_pulse: Dict[str, float], atp_level: float):
+    def process_selection(self, cortical_intent: float, neurom: Any, atp_level: float): #  limbic_pulse: Dict[str, float]
         """
-        Détermine si une action est autorisée.
-        Input: Layer V output, Neuromodulator Matrix, Current ATP.
+        Détermine si une action est autorisée selon l'équilibre Effort/Besoin.
         """
-        # 1. Calcul du coût de l'effort (Innovation bio-rythmique)
-        effort_barrier = np.exp(2.0 * (1.0 - atp_level)) - 1.0
+        # 1. LA NOUVELLE BARRIÈRE (Parabolique, plus douce)
+        # Au lieu de l'exponentielle qui bloquait tout à 0.8 ATP
+        effort_barrier = (1.0 - atp_level) ** 2
         
-        # 2. Pondération par la Dopamine (Motivation)
-        dopa = limbic_pulse.get("dopamine", 0.0)
+        # 2. LE SURVIVAL DRIVE (L'instinct de faim)
+        # Plus l'ATP est bas, plus l'organisme "pousse" pour survivre
+        survival_drive = (1.0 - atp_level) * 0.5
         
-        # 3. La règle d'or d'aNA : (Intention * Motivation) - Fatigue
-        action_potential = (cortical_intent * (1.0 + dopa)) - effort_barrier
+        # 3. Récupération de la motivation chimique
+        # dopa = limbic_pulse.get("dopamine", 0.0)
+        if hasattr(neurom, 'state'):
+            # C'est l'objet Neuromodulator complet
+            dopa = neurom.state.dopamine
+        elif isinstance(neurom, dict):
+            # C'est déjà la matrice chimique (dictionnaire)
+            dopa = neurom.get("dopamine", 0.1)
+        else:
+            # Valeur de secours si rien ne correspond
+            dopa = 0.1
         
-        # 4. Décision de Gating (Seuil Thalamique)
+        # 4. LE CALCUL DU POTENTIEL (La règle d'or d'aNA v5.4)
+        # On booste l'intention par la dopamine ET l'instinct de survie
+        action_potential = (cortical_intent * (1.0 + dopa + survival_drive)) - effort_barrier
+        
+        # 5. DÉCISION
         threshold = self.config.get("THALAMIC_THRESHOLD", 0.35)
         is_allowed = action_potential > threshold
-        
+
+        if not is_allowed:
+            # Si l'action est refusée, on augmente l'inhibition du RTN (verrouillage)
+            rtn_modulator = 0.0 if is_allowed else max(0.1, 0.5 - action_potential)
+        else:
+            # Si l'action est permise, on ne rajoute pas d'inhibition
+            rtn_modulator = 0.0
+
         return {
             "is_allowed": is_allowed,
-            "rtn_modulator": -0.2 if is_allowed else 0.0, # Libération du Thalamus
-            "potential": action_potential
+            "potential": action_potential,
+            "barrier": effort_barrier,
+            "drive": survival_drive,
+            "rtn_modulator": rtn_modulator
         }
