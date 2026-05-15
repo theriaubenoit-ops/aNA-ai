@@ -15,7 +15,7 @@ Description: This class represents a single neuron with:
 - Integration with neuromodulator systems
 
 Architecture, concept and supervision: Theriault Benoit
-Collaboration, research and code: Google DeepMind (Gemini), GPT
+Collaboration, research and code: Gemini, GPT
 """
 import numpy as np
 from typing import Tuple, Optional, Dict, Any

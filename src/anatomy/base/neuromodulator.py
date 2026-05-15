@@ -11,7 +11,7 @@ Output: (-> Thalamic Gain)
 Description: This module implements the Neuromodulator as a centralized system for managing neuromodulatory influences across the brain. It replaces the legacy spatial diffusion model with a more biologically plausible chemical matrix that modulates the activity of the Thalamus and Cortex based on inputs from the Limbic System (notably the Amygdala). The Neuromodulator tracks key neurotransmitters (dopamine, acetylcholine, serotonin, norepinephrine, cortisol) and applies homeostatic decay to simulate natural recapture processes.
 
 Architecture, concept and supervision: Theriault Benoit
-Collaboration, research and code: Google DeepMind (Gemini)
+Collaboration, research and code: Gemini
 """
 
 import os
