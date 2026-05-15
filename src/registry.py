@@ -52,7 +52,7 @@ ORGANS = {
         "METHODS": ["route_signal", "process_incoming"] 
     },
     "THALAMUS": { # The Thalamus adjusts the BPM according to the gap between the internal prediction and the sensory reality, thus simulating the understanding of the consequences.
-        "NUCLEI": ["MGN", "LGN", "MD", "RTN"]
+        "NUCLEI": ["MGN", "LGN", "MD", "RTN"] # MGN (Medial, Unicode), LGN (Lateral), MD (Mediodorsal) and RTN (Reticulated, Inhibitor "barrier guard").
     },
     "HIPPOCAMPUS": { # The Hippocampus uses the sequence_map to generate spatio-temporal predictions, reducing metabolic surprise (Vigilance) in the face of a stable environment.
         "SUBFIELDS": ["DG", "CA3", "CA1", "CA2", "CA4"]
@@ -115,9 +115,10 @@ SIGNALS = {
     "EMOTIONAL": "amygdala_pulse", # Limbic modulation (Fear/Excitement/Effort)
 }
 PROPERTIES = {
-    "PLASTICITY": "nmda_threshold",   # Critical learning threshold (LTP)
-    "STRUCTURE": "myelination_level", # Level of insulation and physical efficiency
-    "FLOW": "conductivity"            # Intrinsic signal transmission capacity
+    "PLASTICITY": "nmda_threshold",    # Critical learning threshold (LTP)
+    "STRUCTURE": "myelination_level",  # Level of insulation and physical efficiency
+    "FLOW": "conductivity",            # Intrinsic signal transmission capacity
+    "ELECTRICAL": "membrane_potential" # Membrane potential
 }
 PROTOCOLS = {
     "L4_FORMAT": "L4_INPUT_{nucleus}_{data}" # Thalamo-Cortical routing protocol
