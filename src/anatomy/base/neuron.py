@@ -3,7 +3,9 @@
 """
 Neuron implementation for aNA AI Project v5.4 - The fundamental unit of the aNA architecture
 
-Communicates with: Input: (<- Synapses) | Output: (-> Axon / Post-synaptic targets)
+Communicates with: 
+Input: (<- Synapses) 
+Output: (-> Axon / Post-synaptic targets)
 
 Description: This class represents a single neuron with:
 - 3D spatial positioning and relationships
@@ -12,8 +14,8 @@ Description: This class represents a single neuron with:
 - Layer-specific properties for cortical organization
 - Integration with neuromodulator systems
 
-Architecture, concept and supervision: Benoit Theriault
-Collaboration, research and code: Gemini, GPT
+Architecture, concept and supervision: Theriault Benoit
+Collaboration, research and code: Google DeepMind (Gemini), GPT
 """
 import numpy as np
 from typing import Tuple, Optional, Dict, Any
@@ -70,7 +72,7 @@ class Neuron:
     - Integration with neuromodulatory systems
     """
     
-    def __init__(self, position: np.ndarray, config: Optional[NeuronConfig] = None):
+    def __init__(self, position: np.ndarray, config: Optional[NeuronConfig] = None, **kwargs):
         """
         Initialize a neuron with 3D position and configuration.
         
@@ -80,6 +82,8 @@ class Neuron:
         """
         self.position = np.array(position, dtype=float)
         self.config = config or NeuronConfig()
+
+        self.extra_data = kwargs
 
         # Synaptic properties
         self.ampa_receptors = 0.1  # Sensibilité de base
@@ -212,10 +216,21 @@ class Neuron:
         
         return input_strength * modulation_finale
     
-    def update(self, time_step: int, neuromodulators: Dict[str, float] = None):
+    def update(self, time_step: int, neuromodulators: Dict[str, float] = None, **kwargs):
         """
         Version v5.3.1 - Intégration de la garde métabolique
         """
+        nm = neuromodulators or {}
+
+        dopamine = nm.get("dopamine", 0.1)
+        acetylcholine = nm.get("acetylcholine", 0.1)
+        norepinephrine = nm.get("norepinephrine", 0.1)
+        # On peut même prévoir l'adrénaline ici !
+        adrenaline = nm.get("adrenaline", 0.0)
+
+        self._update_electrical_dynamics(dopamine, acetylcholine)
+        self._update_metabolism(norepinephrine)
+
         # 1. GARDE : Si l'énergie est sous le seuil critique (ex: 0.1),
         # le neurone entre en état de "Sommeil Métabolique".
         if self.energy_level < self.config.min_energy_threshold:
@@ -252,7 +267,20 @@ class Neuron:
         if len(self.spike_history) > 100:  # Keep last 100 spikes
             self.spike_history.pop(0)
     
+    def _update_electrical_dynamics(self, dopamine: float, acetylcholine: float):
+        """Ajuste la sensibilité électrique selon la chimie."""
+        # La dopamine réduit le bruit (augmente la précision)
+        # L'acétylcholine stabilise le potentiel de repos
+        boost = (dopamine * 0.2) + (acetylcholine * 0.1)
+        self.membrane_potential += boost
+        # On évite que la chimie ne fasse feu d'elle-même
+        self.membrane_potential = min(self.membrane_potential, self.config.threshold_potential - 1)
 
+    def _update_metabolism(self, norepinephrine: float):
+        """La noradrénaline booste la récupération d'ATP (mode survie/alerte)."""
+        if norepinephrine > 0.5:
+            # On accélère la pompe à ATP si on est en état d'alerte
+            self.energy_level = min(1.0, self.energy_level + (self.config.energy_recovery_rate * norepinephrine))
 
     def _update_energy(self):
         """Modèle de respiration métabolique aNA v5.3.2"""
