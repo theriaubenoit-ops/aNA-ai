@@ -30,7 +30,8 @@ from src.registry import ORGANS
 @dataclass
 class NeuronConfig:
     """Configuration avancée pour la simulation AMPA/NMDA et Myéline"""
-    
+    config = get_config()
+
     # Plasticité AMPA/NMDA (LTP)
     learning_rate: float = 0.02       # Pas d'apprentissage de base (AMPA)
     nmda_threshold: float = 0.4      # Seuil pour activer la mémoire profonde
@@ -48,7 +49,7 @@ class NeuronConfig:
     base_energy_consumption: float = 0.01 # Métabolisme
     firing_energy_cost: float = 0.1 # Métabolisme
     energy_recovery_rate: float = 0.005 # Métabolisme
-    min_energy_threshold: float = 0.1
+    atp_critical_min: float = config.get("ATP_CRITICAL_MIN", 0.10) # 0.1
     
     # Structural properties
     dendritic_radius: float = 50.0  # micrometers
@@ -82,6 +83,7 @@ class Neuron:
         """
         self.position = np.array(position, dtype=float)
         self.config = config or NeuronConfig()
+        config = get_config()
 
         self.extra_data = kwargs
 
@@ -96,12 +98,12 @@ class Neuron:
         self.is_firing = False
         
         # Energy state
-        self.energy_level = 1.0  # Normalized 0.0 to 1.0
+        self.atp_flux = 1.0  # 1.0 Normalized 0.0 to 1.0
         self.energy_consumed = 0.0
         
         # Structural state
         self.synaptic_strength = 1.0
-        self.myelination_level = 0.0
+        self.myelin_level = config.get("MAX_MYELIN_DENSITY", 0.0)
         self.plasticity = 0.5
         
         # Activity tracking
@@ -109,13 +111,15 @@ class Neuron:
         self.last_spike_time = -1
         self.activity_counter = 0
         
-        # Neuromodulator sensitivity [Double? See neuromodulator.py]
+        # Neuromodulator sensitivity 
         self.neuromodulator_sensitivity = {
-            'dopamine': 1.0,
             'acetylcholine': 1.0,
-            'serotonin': 1.0,
-            'norepinephrine': 1.0,
-            'no_gas': 1.0
+            'adrenaline': 1.0,
+            'cortisol': 1.0,
+            'dopamine': 1.0,
+            'no_gas': 1.0,
+            'noradrenaline': 1.0, # or norepinephrine
+            'serotonin': 1.0
         }
         
         # Layer-specific properties
@@ -169,7 +173,7 @@ class Neuron:
             True if connection is possible
         """
         distance = self.calculate_distance(other_neuron)
-        max_distance = self.config.dendritic_radius * (1 + self.myelination_level)
+        max_distance = self.config.dendritic_radius * (1 + self.myelin_level)
         return distance <= max_distance
     
     def receive_input(self, input_strength: float, neuromodulators: Dict[str, float]):
@@ -180,7 +184,7 @@ class Neuron:
             input_strength: Raw synaptic input strength
             neuromodulators: Current neuromodulator levels in the local environment
         """
-        if self.refractory_timer > 0 or self.energy_level < self.config.min_energy_threshold:
+        if self.refractory_timer > 0 or self.atp_flux < self.config.atp_critical_min:
             return
         
         # Apply neuromodulator effects
@@ -220,6 +224,12 @@ class Neuron:
         """
         Version v5.3.1 - Intégration de la garde métabolique
         """
+        config = get_config()
+        atp_limit = config.get("ATP_CRITICAL_THRESHOLD", 0.10)
+        self.conductivity = config.get("BASE_CONDUCTIVITY", 0.7)
+        # Le signal sortant est modulé par la conductivité physique
+        effective_signal = self.membrane_potential * self.conductivity
+        
         nm = neuromodulators or {}
 
         dopamine = nm.get("dopamine", 0.1)
@@ -233,11 +243,15 @@ class Neuron:
 
         # 1. GARDE : Si l'énergie est sous le seuil critique (ex: 0.1),
         # le neurone entre en état de "Sommeil Métabolique".
-        if self.energy_level < self.config.min_energy_threshold:
+        if self.atp_flux < atp_limit:
             self.is_firing = False
-            self.membrane_potential = self.config.resting_potential # Reset électrique
-            self._update_energy() # On ne fait que tenter de récupérer l'énergie
-            return 
+            # On utilise la config globale pour le potentiel de repos également
+            self.membrane_potential = config.get("RESTING_POTENTIAL", -70.0)
+            
+            # On ne fait que de la récupération passive (anabolisme)
+            # sans aucune dépense (catabolisme)
+            self._recover_passive_energy() 
+            return
 
         # 2. Logique électrique normale si assez d'énergie
         if self.refractory_timer > 0:
@@ -280,7 +294,7 @@ class Neuron:
         """La noradrénaline booste la récupération d'ATP (mode survie/alerte)."""
         if norepinephrine > 0.5:
             # On accélère la pompe à ATP si on est en état d'alerte
-            self.energy_level = min(1.0, self.energy_level + (self.config.energy_recovery_rate * norepinephrine))
+            self.atp_flux = min(1.0, self.atp_flux + (self.config.energy_recovery_rate * norepinephrine))
 
     def _update_energy(self):
         """Modèle de respiration métabolique aNA v5.3.2"""
@@ -294,18 +308,18 @@ class Neuron:
             energy_cost += self.config.firing_energy_cost
         
         # 3. APPLICATION : On retire l'énergie consommée
-        self.energy_level -= (energy_cost * self.config.layer_connectivity_modifier)
+        self.atp_flux -= (energy_cost * self.config.layer_connectivity_modifier)
         
         # 4. GAIN : La "Pompe à Glucose" (Récupération lente)
         if not self.is_firing:
             # Remontée lente suggérée pour l'inaction
-            self.energy_level += 0.015 # 0.014 minimum, pour éviter les problèmes de récupération
+            self.atp_flux += 0.015 # 0.014 minimum, pour éviter les problèmes de récupération
         else:
             # Récupération de base (synthèse ATP standard)
-            self.energy_level += self.config.energy_recovery_rate
+            self.atp_flux += self.config.energy_recovery_rate
         
         # 5. ÉQUILIBRE : Clamp de sécurité entre 0 et 1
-        self.energy_level = max(0.0, min(1.0, self.energy_level))
+        self.atp_flux = max(0.0, min(1.0, self.atp_flux))
     
     def _update_plasticity(self, neuromodulators: dict = None):
         """
@@ -321,7 +335,7 @@ class Neuron:
 
         if self.is_firing:
             # 2. Calcul de l'impact (La myéline facilite l'ouverture NMDA)
-            impact_signal = self.plasticity * (1.0 + self.myelination_level + (ne_boost * 0.5))
+            impact_signal = self.plasticity * (1.0 + self.myelin_level + (ne_boost * 0.5))
             
             if impact_signal > self.config.nmda_threshold:
                 # Consolidation forte (LTP) boostée par la Dopamine
@@ -350,11 +364,11 @@ class Neuron:
         if self.is_firing: 
             # On ignore le last_spike_time pour ce test
             increment = 0.01  # On revient à une valeur plus réaliste
-            self.myelination_level += increment
+            self.myelin_level += increment
             
             # Cap à 1.0 (Conductivité max +50%)
-            if self.myelination_level > 1.0:
-                self.myelination_level = 1.0
+            if self.myelin_level > 1.0:
+                self.myelin_level = 1.0
     
     def get_output_strength(self) -> float:
         """
@@ -366,11 +380,11 @@ class Neuron:
         
         # 1. Facteur de Conductivité (Concept Benoit Theriault)
         # La myélinisation augmente la vitesse et la force de conduction.
-        conductivité_myéline = 1.0 + (self.myelination_level * 0.5)
+        conductivité_myéline = 1.0 + (self.myelin_level * 0.5)
         
         # 2. Facteur Métabolique (Vitalité)
         # Un niveau d'énergie bas affaiblit physiquement le signal de sortie.
-        modulateur_energie = self.energy_level
+        modulateur_energie = self.atp_flux
         
         # 3. Facteur de Plasticité (LTP)
         # Reflète l'efficacité synaptique apprise au fil des cycles.
@@ -385,13 +399,27 @@ class Neuron:
         self.membrane_potential = self.config.resting_potential
         self.refractory_timer = 0
         self.is_firing = False
-        self.energy_level = 1.0
+        self.atp_flux = 1.0
         self.energy_consumed = 0.0
         self.spike_history = []
         self.last_spike_time = -1
         self.activity_counter = 0
         self.plasticity = 0.5
-        self.myelination_level = 0.0
+        self.myelin_level = 0.0
+
+    def _recover_passive_energy(self):
+        """
+        Récupération métabolique sans activité (Anabolisme pur).
+        Le neurone recharge ses réserves d'ATP sans aucune dépense liée au signal.
+        """
+        config = get_config()
+        
+        # On récupère le taux de récupération dans la config
+        # ou on utilise une valeur de base (ex: 0.05)
+        recovery_rate = config.get("METABOLIC_RECOVERY_RATE", 0.05)
+        
+        # Augmentation de l'atp_flux sans dépasser le maximum (1.0)
+        self.atp_flux = min(1.0, self.atp_flux + recovery_rate)
 
 
 class NeuronPopulation:
@@ -453,7 +481,7 @@ class NeuronPopulation:
         """Get average energy level of the population"""
         if not self.neurons:
             return 0.0
-        return np.mean([n.energy_level for n in self.neurons])
+        return np.mean([n.atp_flux for n in self.neurons])
     
     def get_activity_rate(self) -> float:
         """Get percentage of neurons currently firing"""
