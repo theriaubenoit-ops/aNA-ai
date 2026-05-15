@@ -13,7 +13,7 @@ Output: (-> Thalamic Hub - RTN Gating& signal clearance)
 Description: This module implements the Striatum as the central action selector of aNA. It integrates cortical inputs related to potential actions and their predicted outcomes, evaluating them based on learned associations and current neuromodulatory states. The Striatum then selects the most appropriate action, sending motor commands to the output system and gating instructions to the Thalamus to facilitate or inhibit sensory processing based on the selected action.
 
 Architecture, concept and supervision: Theriault Benoit
-Collaboration, research and code: Google DeepMind (Gemini)
+Collaboration, research and code: Gemini
 """
 import numpy as np
 from typing import Dict, Any

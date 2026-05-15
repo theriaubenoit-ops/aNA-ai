@@ -15,7 +15,7 @@ Output: (-> Neuromodulator: Synaptic Gain & Plasticity)
 Description: Centralizes and filters all sensory inputs before cortical projection. The Thalamic Hub applies dynamic attention filters based on the current metabolic state and the saliency of incoming signals. It synchronizes sensory processing with the internal Pulse (BPM) to optimize energy efficiency and ensure that critical information is prioritized. By modulating the gain of sensory inputs, it plays a crucial role in shaping the organism's perception and interaction with its environment.
 
 Architecture, concept and supervision: Theriault Benoit
-Collaboration, research and code: Google DeepMind (Gemini)
+Collaboration, research and code: Gemini
 """
 
 import os

@@ -21,7 +21,7 @@ Key Changes:
 - Focused on Pulse modulation and Gating logic.
 
 Architecture, concept and supervision: Theriault Benoit
-Collaboration, research and code: Google DeepMind (Gemini)
+Collaboration, research and code: Gemini
 """
 
 import os
