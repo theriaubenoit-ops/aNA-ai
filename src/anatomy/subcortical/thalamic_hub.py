@@ -29,7 +29,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')
 
 # from src.registry import SIGNALS, ORGANS
 from src.config import get_config
-from src.registry import ORGANS
+from src.registry import ORGANS, PROTOCOLS, METRICS
 
 class ThalamicHub:
     def __init__(self, thalamus):
@@ -171,13 +171,26 @@ class ThalamicHub:
         # On injecte l'intensité calculée (filtrée) dans le résultat pour le Neocortex
         result['intensity'] = effective_intensity
         result['gain'] = thalamic_gain
-        
+        routing_key = PROTOCOLS["L4_FORMAT"].format(
+            nucleus=target_nucleus, 
+            data="SENSORY_STREAM"
+        )
+                
         # 3. Mise à jour du buffer pour projection corticale
         self.sensory_buffers[target_nucleus] = payload
         
         print(f" [Thalamic Hub] Signal from {origin} routed to {target_nucleus} (Gain: {thalamic_gain:.2f})")
         
-        return result
+        return {
+            routing_key: {
+                "payload": result,
+                "metadata": {
+                    "timestamp": datetime.now().isoformat(),
+                    "gain_applied": thalamic_gain,
+                    "origin": origin
+                }
+            }
+        }
 
     def _map_origin_to_nucleus(self, origin: str) -> str:
         mapping = {
