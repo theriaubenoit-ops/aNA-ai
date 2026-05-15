@@ -3,11 +3,14 @@
 """
 Frontal Lobe implementation for aNA AI Project v5.3
 
-Communicates with: Input: (<- Thalamus) | Input/Output: (<-> Other Cortical Areas) | Output: (-> Motor / Pre-frontal)
+Communicates with:
+Input: (<- Thalamus)
+Input/Output: (<-> Other Cortical Areas)
+Output: (-> Motor / Pre-frontal)
 
 Description: This module implements the Frontal Lobe with its key regions (M1, PFC) for motor planning and executive functions. It integrates with the ChemicalCore for neuromodulatory influences, particularly dopamine (Motivation) and noradrenaline (Trauma). The Frontal Lobe transforms recognition signals from the Temporal Lobe into motor intentions and provides feedback to the Neocortex for action execution.
 
-Architecture, concept and supervision: Benoit Theriault
+Architecture, concept and supervision: Theriault Benoit
 Collaboration, research and code: Gemini, Cline 
 """
 

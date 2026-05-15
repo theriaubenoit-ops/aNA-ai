@@ -3,12 +3,15 @@
 """
 Parietal Lobe implementation for aNA AI Project v5.3
 
-Communicates with: Input: (<- Thalamus) | Input/Output: (<-> Other Cortical Areas) | Output: (-> Motor / Pre-frontal)
+Communicates with:
+Input: (<- Thalamus)
+Input/Output: (<-> Other Cortical Areas)
+Output: (-> Motor / Pre-frontal)
 
 Description: This module implements the Parietal Lobe with its key regions (S1-S2, IPS) for somatosensory and spatial processing. It integrates with the ChemicalCore for neuromodulatory influences, particularly dopamine (Motivation) and noradrenaline (Trauma). The Parietal Lobe processes spatial information, modulates it based on the chemical state, and provides outputs to the Neocortex for synthesis with visual and semantic data.
 
-Architecture, concept and supervision: Benoit Theriault
-Collaboration, research and code: Gemini, Cline 
+Architecture, concept and supervision: Theriault Benoit
+Collaboration, research and code: Gemini, Cline
 """
 
 import asyncio
@@ -51,7 +54,7 @@ class ParietalLobe(CorticalColumns):
         )
         
         # 4. Mise à jour de la carte spatiale interne
-        # On simule un léger drift si William est stressé (Cortisol/Nora)
+        # On simule un léger drift si aNA est stressé (Cortisol/Nora)
         drift = 0.05 * nora
         self.spatial_map["x"] = max(0, min(1, intensity + drift))
         

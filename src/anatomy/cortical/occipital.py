@@ -3,11 +3,14 @@
 """
 Occipital Lobe implementation for aNA AI Project v5.3
 
-Communicates with: Input: (<- Thalamus) | Input/Output: (<-> Other Cortical Areas) | Output: (-> Motor / Pre-frontal)
+Communicates with:
+Input: (<- Thalamus)
+Input/Output: (<-> Other Cortical Areas)
+Output: (-> Motor / Pre-frontal)
 
 Description: This module implements the Occipital Lobe with its key regions (V1-V3) for visual processing. It integrates with the ChemicalCore for neuromodulatory influences, particularly noradrenaline (Trauma) and acetylcholine (Attention). The Occipital Lobe processes visual inputs, modulates them based on the chemical state, and provides feedback to the Thalamus to regulate sensory gating.
 
-Architecture, concept and supervision: Benoit Theriault
+Architecture, concept and supervision: Theriault Benoit
 Collaboration, research and code: Gemini, Cline
 """
 
@@ -53,7 +56,7 @@ class OccipitalLobe(CorticalColumns):
         recognition_level = self.visual_memory.get(stimulus_id, 0.2) # 0.2 si inconnu
         
         # 4. Simulation de l'hyper-focalisation traumatique
-        # Si William est en panique (Nora > 0.6), le signal "brûle" les couches
+        # Si aNA est en panique (Nora > 0.6), le signal "brûle" les couches
         if nora > 0.6:
             effective_impact = intensity * (1.0 + nora) * gain_v1
         else:

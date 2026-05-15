@@ -10,7 +10,7 @@ Output: (-> Thalamus L6 Feedback) (-> Motor Control / Cerebellum)
 
 Description: This module is responsible for the hierarchical processing of sensory information and the generation of complex internal representations. It consists of multiple lobes (Occipital, Temporal, Parietal, Frontal) each containing specialized cortical columns that process different types of information. The Neocortex receives input from the Thalamus and Hippocampus, integrates it with the internal World Model, and produces outputs that influence both perception and action. It also provides feedback to the Thalamus to regulate sensory processing based on the current state of the organism.
 
-Architecture, concept and supervision: Benoit Theriault
+Architecture, concept and supervision: Theriault Benoit
 Collaboration, research and code: Gemini, Cline 
 """
 import os
