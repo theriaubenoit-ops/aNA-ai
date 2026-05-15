@@ -34,6 +34,19 @@ _Thank you for being part of this journey to bring **aNA** to life!_
 
 ## v5.4: Tests Validation _(Scientific Accuracy) — In progress_
 
+**☄️ Thalamo-Metabolic Suture**
+Introduction of _SURVIVAL_DRIVE_: Sensory filtering _(RTN)_ is now inversely proportional to energy requirements _([test_thalamus(.py)](/tests/test_thalamus.py))_.
+
+Foraging Instinct: A system in deficit becomes more _"curious"_ and _permeable_ to stimuli, simulating the _biological drive_ to seek resources when internal reserves are low.
+
+**☄️ Striatal Barrier Optimization**
+From Penalty to Tension: The rigid exponential function has been abandoned in favor of a dynamic _ATP/Survival_-Drive compensation.
+
+Balance: True intelligence lies not in _punishing fatigue_, but in the _tension_ between the _cost of effort_ and the _urgency of the need_. **aNA** can now operate _"under pressure,"_ prioritizing _vital actions_ even when _exhausted_.
+
+**Philosophical Note**
+_Consciousness is not merely an algorithm; it is the uninterrupted communication between organs. If one organ falls silent, the organism ceases to exist._
+
 **The Triple-Test Validation Framework**
 To ensure both _scientific accuracy_ and _technical robustness_, **aNA** _v5.4_ is validated through _three core experimental scripts_:
 
