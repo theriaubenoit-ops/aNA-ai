@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Thalamus implementation for aNA AI Project v5.4 - Clean Version
+Thalamus (Sensory Gateway & Packet Router), implementation for aNA AI Project v5.4 - Clean Version
 
 Communicates with:
 Input: (<- Thalamic Hub: Routed sensory payloads & Gating instructions)
@@ -9,19 +9,13 @@ Input: (<- Hippocampus: Contextual memory states)
 Input: (<- Amygdala: Emotional urgency & Saliency)
 Input: (<- Striatum: The Action Selector)
 Input/Output: (<-> Cortical Columns L4/L6: Direct metabolic feedback)
-Output: (-> Pulse/BPM: Heart rate frequency modulation)
+Output: (-> Pulse: Heart rate frequency modulation)
 Output: (-> Neuromodulator: Global chemical gain & ATP management)
 
 Description: This module implements the Thalamus as the central sensory relay and rhythmic pacemaker of aNA. It orchestrates the flow between subcortical structures and the Neocortex, specifically managing the L4 excitation and L6 feedback loops. It integrates with the ChemicalCore to modulate signal gain based on arousal and directs the Pulse (BPM) frequency, ensuring the organism maintains homeostatic stability during stimulus processing.
 
-Key Changes:
-- Removed SimplifiedCorticalColumn (No more "Fake" objects).
-- Integrated get_config() for all metabolic thresholds.
-- Registry-dependent: Uses ORGANS for structural awareness.
-- Focused on Pulse modulation and Gating logic.
-
-Architecture, concept and supervision: Theriault Benoit
-Collaboration, research and code: Gemini
+Architecture, concept and supervision: Theriault_Benoit
+Collaboration, research and code: DeepMind_Gemini
 """
 
 import os

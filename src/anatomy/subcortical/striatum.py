@@ -1,19 +1,19 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Striatum implementation for aNA AI Project v5.4 - The Action Selector
+Striatum (Executive Gating & Metabolic Arbitration. The Action Selector), implementation for aNA AI Project v5.4
 
 Communicates with: 
-Input: (<- Cortical Inputs - L5/L6 intent & motor plans) 
-Input: (<- Limbic System - consolidated emotional valence & urgency) 
+Input: (<- Cortical Inputs: L5/L6 intent & motor plans) 
+Input: (<- Limbic System: Consolidated emotional valence & urgency) 
 Input: (<- Chemical Matrix (Neuromodulateur))
 Output: (-> Output Gateway)
-Output: (-> Thalamic Hub - RTN Gating& signal clearance)
+Output: (-> Thalamic Hub: RTN Gating& signal clearance)
 
 Description: This module implements the Striatum as the central action selector of aNA. It integrates cortical inputs related to potential actions and their predicted outcomes, evaluating them based on learned associations and current neuromodulatory states. The Striatum then selects the most appropriate action, sending motor commands to the output system and gating instructions to the Thalamus to facilitate or inhibit sensory processing based on the selected action.
 
-Architecture, concept and supervision: Theriault Benoit
-Collaboration, research and code: Gemini
+Architecture, concept and supervision: Theriault_Benoit
+Collaboration, research and code: DeepMind_Gemini
 """
 import numpy as np
 from typing import Dict, Any

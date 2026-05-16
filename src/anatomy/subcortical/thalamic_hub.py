@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Thalamic Hub (Multimodal Sensory Integrator) for aNA AI Project v5.4
+Thalamic Hub (Central Integration & Signal Arbitration. Multimodal Sensory Integrator), implementation for aNA AI Project v5.4
 
 Communicates with:
 Input: (<- InputGateways: Visual, Auditory, Haptic)
@@ -14,8 +14,8 @@ Output: (-> Neuromodulator: Synaptic Gain & Plasticity)
 
 Description: Centralizes and filters all sensory inputs before cortical projection. The Thalamic Hub applies dynamic attention filters based on the current metabolic state and the saliency of incoming signals. It synchronizes sensory processing with the internal Pulse (BPM) to optimize energy efficiency and ensure that critical information is prioritized. By modulating the gain of sensory inputs, it plays a crucial role in shaping the organism's perception and interaction with its environment.
 
-Architecture, concept and supervision: Theriault Benoit
-Collaboration, research and code: Gemini
+Architecture, concept and supervision: Theriault_Benoit
+Collaboration, research and code: DeepMind_Gemini
 """
 
 import os
