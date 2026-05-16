@@ -1,16 +1,18 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Hippocampus implementation for aNA AI Project v5.3
+Hippocampus (Dynamic Buffer & Indexing System), implementation for aNA AI Project v5.3
 
 Communicates with:
-Input: (<- Cortex / Amygdala)
-Output: (-> Thalamus) (-> Cortical Storage)
+Input: (<- Cortex)
+Input: (<- Amygdala: Emotional urgency & Saliency)
+Output: (-> Thalamus: BPM & Metabolic modulation) 
+Output: (-> Cortical Storage)
 
 Description: This module implements the Hippocampus with its subfields (DG, CA1-CA4) for memory encoding, consolidation, and retrieval. It includes mechanisms for synaptic plasticity (LTP/LTD), emotional modulation of memory strength, and a novel "CA4" subfield for long-term trace stabilization.
 
-Architecture, concept and supervision: Theriault Benoit
-Collaboration, research and code: Gemini, Cline
+Architecture, concept and supervision: Theriault_Benoit
+Collaboration, research and code: DeepMind_Gemini, Cline
 """
 
 from typing import Any, Dict

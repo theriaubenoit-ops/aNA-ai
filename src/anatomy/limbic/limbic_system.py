@@ -1,17 +1,20 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Limbic system implementation for aNA AI Project v5.3
+Limbic system (Emotional Valence Engine & Memory Orchestrator), implementation for aNA AI Project v5.3
 
 Communicates with: 
-Input: (<- Thalamus) (<- Cortical L2/3)
-Input/Output: (<-> Amygdala) (<-> Hippocampus)
-Output: (-> Pulse/BPM) (-> Neuromodulator Core)
+Input: (<- Thalamus) 
+Input: (<- Cortical columns: L2/3)
+Input/Output: (<-> Amygdala: Emotional urgency & Saliency) 
+Input/Output: (<-> Hippocampus)
+Output: (-> Pulse) 
+Output: (-> Neuromodulator Core)
 
 Description: This module acts as the emotional and mnestic hub of aNA. It orchestrates the bidirectional flow between the Amygdala (Threat/Arousal) and the Hippocampus (Context/Memory). By integrating these signals, the Limbic System provides a value-based filter for the Thalamus and influences the global Pulse (BPM), ensuring that the organism's metabolic state is aligned with its internal emotional landscape and past experiences.
 
-Architecture, concept and supervision: Theriault Benoit
-Collaboration, research and code: Gemini
+Architecture, concept and supervision: Theriault_Benoit
+Collaboration, research and code: DeepMind_Gemini
 """
 
 import sys
