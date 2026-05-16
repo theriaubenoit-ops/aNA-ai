@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Pulse implementation for aNA AI Project v5.3
+Pulse (The Biological Clock & Heartbeat), implementation for aNA AI Project v5.3
 
 Communicates with: 
 Input: (<- Thalamus)
@@ -10,8 +10,8 @@ Output: (-> Global Metabolism / BPM)
 
 Description: This module simulates the heart's pulse as a dynamic entity influenced by both internal metabolic states and external stimuli. It calculates the current BPM based on a base rate, modulated by dopamine levels (excitement) and ATP levels (fatigue). The module also manages a refractory state to prevent overstimulation, ensuring a more biologically plausible response to inputs.
 
-Architecture, concept and supervision: Theriault Benoit
-Collaboration, research and code: Gemini
+Architecture, concept and supervision: Theriault_Benoit
+Collaboration, research and code: DeepMind_Gemini
 """
 
 import time
