@@ -47,7 +47,7 @@ Because a complex system requires a clear perspective, this _dashboard_ is your 
 
 _Parce qu'un système complexe nécessite une perspective claire, ce tableau de bord est votre interface d'observation en temps réel. Il permet de visualiser l'activité synaptique, les fluctuations du système limbique et la santé métabolique de l'IA. Explorez ce script pour comprendre comment les données brutes sont traduites en signaux lisibles. Nous vous encourageons à jouer avec le code pour changer de point de vue, ajouter vos propres métriques ou repenser l'affichage : c'est votre tableau de bord tactique pour regarder **aNA** "penser"._
 
-- [ ] ☄️ To Do - Dashboard / _Tableau de bord_:
+- [ ] ☄️🖱️ To Do - Dashboard / _Tableau de bord_:
 
   ```
   python3 src/gui/DASHBOARD.py
@@ -98,7 +98,7 @@ _Dans l'esprit de décomposer chaque complexité en ses parties les plus simples
 
 ### 🟠 Metabolic & Rhythmic Foundation
 
-- [ ] ☄️ Neural Oscillations & Temporal Sync / _Oscillations neuronales et synchronisation temporelle_:
+- [ ] ☄️🖱️ Neural Oscillations & Temporal Sync / _Oscillations neuronales et synchronisation temporelle_:
 
   ```
   python3 tests/test_pulse.py
@@ -231,7 +231,7 @@ _Dans l'esprit de décomposer chaque complexité en ses parties les plus simples
 
 ![ ](/docs/assets/spacer16x16.png)
 
-☄️ _Spotlight_
+☄️ _Spotlight_ 🖱️ _Interactive_
 
 ###### _\*Each measurement presented is a digital bridge to biological reality, designed to synthesize the fundamental principles of living systems._
 
