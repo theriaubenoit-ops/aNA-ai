@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-aNA AI Project v5.3 - Test Hippocampus (isolated version)
+aNA AI Project v5.4 - Test Hippocampus (isolated version)
 
 Description: This test is designed to validate the core functionalities of the hippocampus module in complete isolation. It simulates a simple data stream to verify that the hippocampus learns patterns correctly and can retrieve them based on context. The test covers encoding, consolidation, and retrieval processes, as well as the handling of transitions between items.
 Unit Test for the Hippocampus - Isolated Version
 
-Architecture, concept and supervision: Benoit Theriault
-Collaboration, research and code: Google DeepMind (Gemini)
+Architecture, concept and supervision: Theriault_Benoit
+Collaboration, research and code: DeepMind_Gemini
 """
 import unittest
 import numpy as np

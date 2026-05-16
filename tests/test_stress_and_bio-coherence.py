@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-aNA AI Project v5.3 -  Test Metabolic Stress and Bio-coherence
+aNA AI Project v5.4 -  Test Metabolic Stress and Bio-coherence
 
 Description: This test aims to validate the biological consistency of the Neuromodulator and Neuron implementation by simulating metabolic stress scenarios (energy depletion) and chemical stress scenarios (norepinephrine injection). We will verify that the neuron reacts appropriately to these conditions, notably by ceasing firing when energy is depleted and increasing its plasticity in response to a noradrenergic alert.
 
-Architecture, concept and supervision: Benoit Theriault
-Collaboration, research and code: Google DeepMind (Gemini)
+Architecture, concept and supervision: Theriault_Benoit
+Collaboration, research and code: DeepMind_Gemini
 """
 import unittest
 import numpy as np
@@ -58,10 +58,10 @@ async def test_stress_v53():
         neuron.update(i, chemistry.get_matrix())
         
         if i % 10 == 0:
-            print(f"Cycle {i} | Energy: {neuron.energy_level:.2f} | Firing: {neuron.is_firing}")
+            print(f"Cycle {i} | Energy: {neuron.atp_flux:.2f} | Firing: {neuron.is_firing}")
              
     # Vérification : Le neurone DOIT s'arrêter malgré l'input
-    assert neuron.energy_level >= 0.0, "ERREUR : Énergie négative !"
+    assert neuron.atp_flux >= 0.0, "ERREUR : Énergie négative !"
     
     # 3. Phase 2 : Test de Fixation (Limbique + Hippocampe)
     print("\nPhase 2 : Fixation Test via Limbic System...")

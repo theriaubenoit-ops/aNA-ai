@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-aNA AI Project v5.3 - Test Cerebellum 
+aNA AI Project v5.4 - Test Cerebellum 
 
 Description: This test validates the error correction capabilities of the cerebellum. It simulates a motor task where the system must reach a target position, starting with an initial error. The test checks that after processing feedback, the cerebellum computes a correction that reduces the error, and that the inhibitory output from Purkinje cells increases appropriately in response to high error signals.
 
-Architecture, concept and supervision: Benoit Theriault
-Collaboration, research and code: Google DeepMind (Gemini)
+Architecture, concept and supervision: Theriault_Benoit
+Collaboration, research and code: DeepMind_Gemini
 """
 import unittest
 import numpy as np

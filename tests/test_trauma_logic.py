@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-aNA AI Project v5.3 - Test Hippocampus Trauma Logic
+aNA AI Project v5.4 - Test Hippocampus Trauma Logic
 
 Description: This test simulates the trauma logic of the hippocampus by creating a scenario where a neutral experience is followed by a traumatic event, and then simulating the forgetting process over time. The test checks whether the traumatic memory trace persists longer than the neutral one, demonstrating the concept of emotional memory consolidation and persistence.
 
-Architecture, concept and supervision: Benoit Theriault
-Collaboration, research and code: Google DeepMind (Gemini)
+Architecture, concept and supervision: Theriault_Benoit
+Collaboration, research and code: DeepMind_Gemini
 """
 import unittest
 import asyncio

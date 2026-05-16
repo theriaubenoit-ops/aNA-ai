@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-aNA AI Project v5.3 - Test Hub Autonomy
+aNA AI Project v5.4 - Test Hub Autonomy
 
 Description: Validate the complete ThalamicHub flow -> Neocortex (V1) -> L6 Feedback -> Pulse Modulation (BPM) in a standalone scenario. This test simulates a sequence of visual input, observes how the ThalamicHub processes and filters this input, how it is projected to the Neocortex (V1), and how feedback from L6 influences the heart rate via the Pulse. The goal is to ensure that the interactions between these components work coherently and autonomously, without external intervention.
 
-Architecture, concept and supervision: Benoit Theriault
-Collaboration, research and code: Google DeepMind (Gemini)
+Architecture, concept and supervision: Theriault_Benoit
+Collaboration, research and code: DeepMind_Gemini
 """
 
 import unittest

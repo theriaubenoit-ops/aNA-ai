@@ -3,14 +3,13 @@
 """
 aNA AI Project v5.4 - Test Neuron (In Vitro Validation)
 
-Description: Ce script isole l'unité fondamentale d'aNA (le neurone) 
-et la soumet à trois tests de stress biologique alignés sur la v5.4 :
-1. Homéostasie & Myélinisation (Apprentissage de base)
-2. Garde de Saliance (Anti-Hallucination via clamp chimique)
-3. Survie Métabolique (Priorité à l'ATP sur le traitement)
+Description: This script isolates the fundamental unit of aNA (the neuron) and subjects it to three biological stress tests aligned with v5.4:
+1. Homeostasis & Myelination (Basic learning)
+2. Saliance Guard (Anti-Hallucination via chemical clamp)
+3. Metabolic Survival (Priority to ATP over treatment)
 
-Architecture, concept and supervision: Benoit Theriault
-Collaboration, research and code: Google DeepMind (Gemini)
+Architecture, concept and supervision: Theriault_Benoit
+Collaboration, research and code: DeepMind_Gemini
 """
 import unittest
 import numpy as np

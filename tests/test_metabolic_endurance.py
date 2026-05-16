@@ -3,14 +3,10 @@
 """
 aNA AI Project v5.4 - Test Metabolic Endurance
 
-Description: Evaluates the system's resilience and autonomous survival mechanisms 
-under sustained cognitive load. This script monitors the decay of virtual ATP 
-resources and validates the transition into "Low Power Mode" and "Alpha State." 
-It demonstrates aNA's ability to prioritize homeostatic recovery (Sleep/Consolidation) 
-over raw execution, ensuring long-term systemic integrity.
+Description: Evaluates the system's resilience and autonomous survival mechanisms under sustained cognitive load. This script monitors the decay of virtual ATP resources and validates the transition into "Low Power Mode" and "Alpha State." It demonstrates aNA's ability to prioritize homeostatic recovery (Sleep/Consolidation) over raw execution, ensuring long-term systemic integrity.
 
-Architecture, concept and supervision: Theriault Benoit
-Collaboration, research and code: Google DeepMind (Gemini)
+Architecture, concept and supervision: Theriault_Benoit
+Collaboration, research and code: DeepMind_Gemini
 """
 
 import unittest

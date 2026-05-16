@@ -5,8 +5,8 @@ aNA AI Project v5.3 - Test Limbic system
 
 Description: This test suite is designed to validate the core functionalities of the limbic system modules (Amygdala and Hippocampus) in complete isolation. It simulates various scenarios to verify that the amygdala responds appropriately to different stimulus intensities, and that the hippocampus can encode, consolidate, and retrieve patterns correctly. The tests also check the interaction between these two structures in terms of emotional memory processing.
 
-Architecture, concept and supervision: Benoit Theriault
-Collaboration, research and code: Google DeepMind (Gemini)
+Architecture, concept and supervision: Theriault_Benoit
+Collaboration, research and code: DeepMind_Gemini
 """
 import unittest
 import numpy as np

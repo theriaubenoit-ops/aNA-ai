@@ -3,14 +3,10 @@
 """
 aNA AI Project v5.4 - Bridge Thalamo-Cortical implementation
 
-Description: Validates the bidirectional synchronization between the Thalamic Hub 
-and the Neocortex. This script tests the dynamic gain modulation of Layer 6 (L6) 
-feedback, simulating how the brain filters sensory noise through top-down 
-predictions. It ensures that the system focuses resources on unexpected stimuli 
-while maintaining high-speed processing for known patterns.
+Description: Validates the bidirectional synchronization between the Thalamic Hub and the Neocortex. This script tests the dynamic gain modulation of Layer 6 (L6) feedback, simulating how the brain filters sensory noise through top-down predictions. It ensures that the system focuses resources on unexpected stimuli while maintaining high-speed processing for known patterns.
 
-Architecture, concept and supervision: Theriault Benoit
-Collaboration, research and code: Google DeepMind (Gemini)
+Architecture, concept and supervision: Theriault_Benoit
+Collaboration, research and code: DeepMind_Gemini
 """
 
 import unittest
