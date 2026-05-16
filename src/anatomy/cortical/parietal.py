@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Parietal Lobe implementation for aNA AI Project v5.3
+Parietal Lobe (Spatial Mapping & Data Integration), implementation for aNA AI Project v5.3
 
 Communicates with:
 Input: (<- Thalamus)
@@ -10,8 +10,8 @@ Output: (-> Motor / Pre-frontal)
 
 Description: This module implements the Parietal Lobe with its key regions (S1-S2, IPS) for somatosensory and spatial processing. It integrates with the ChemicalCore for neuromodulatory influences, particularly dopamine (Motivation) and noradrenaline (Trauma). The Parietal Lobe processes spatial information, modulates it based on the chemical state, and provides outputs to the Neocortex for synthesis with visual and semantic data.
 
-Architecture, concept and supervision: Theriault Benoit
-Collaboration, research and code: Gemini, Cline
+Architecture, concept and supervision: Theriault_Benoit
+Collaboration, research and code: DeepMind_Gemini, Cline
 """
 
 import asyncio

@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Cortical Lobe Base Implementation for aNA AI Project v5.4
+Cortical Lobe Base (Hierarchical Data Modules), Implementation for aNA AI Project v5.4
 
 Communicates with: 
-Input: (<- Thalamus IV)
-Input/Output: (<-> Hippocampus)
-Output: (-> Thalamus VI Feedback)
+Input: (<- Thalamus: IV)
+Input/Output: (<-> Hippocampus: Pattern Completion/Recall)
+Output: (-> Thalamus: VI Feedback)
 
-This module implements the 6-layer cortical architecture for all brain lobes.
+Description: This module implements the 6-layer cortical architecture for all brain lobes.
 Each lobe processes signals through the biological layers: L4 -> L2/3 -> L5.
 
 Key Features:
@@ -18,8 +18,8 @@ Key Features:
 - Memory access port in L2/3 for future hippocampus integration
 - Real-time precision monitoring for dashboard display
 
-Architecture, concept and supervision: Theriault Benoit
-Collaboration, research and code: Gemini, Cline, GPT
+Architecture, concept and supervision: Theriault_Benoit
+Collaboration, research and code: DeepMind_Gemini, Cline, GPT
 """
 
 import numpy as np

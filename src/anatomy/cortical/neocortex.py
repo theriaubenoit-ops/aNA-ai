@@ -1,17 +1,20 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Neocortex implementation for aNA AI Project v5.3
+Neocortex (The "Thinking" Shell), implementation for aNA AI Project v5.3
 
 Communicates with: 
-Input: (<- Thalamus L4) (<- Hippocampus)
-Input/Output: (<-> Cortical Columns) (<-> Limbic System)
-Output: (-> Thalamus L6 Feedback) (-> Motor Control / Cerebellum)
+Input: (<- Thalamus L4) 
+Input: (<- Hippocampus)
+Input/Output: (<-> Cortical Columns) 
+Input/Output: (<-> Limbic System)
+Output: (-> Thalamus L6 Feedback) 
+Output: (-> Motor Control / Cerebellum)
 
 Description: This module is responsible for the hierarchical processing of sensory information and the generation of complex internal representations. It consists of multiple lobes (Occipital, Temporal, Parietal, Frontal) each containing specialized cortical columns that process different types of information. The Neocortex receives input from the Thalamus and Hippocampus, integrates it with the internal World Model, and produces outputs that influence both perception and action. It also provides feedback to the Thalamus to regulate sensory processing based on the current state of the organism.
 
-Architecture, concept and supervision: Theriault Benoit
-Collaboration, research and code: Gemini, Cline 
+Architecture, concept and supervision: Theriault_Benoit
+Collaboration, research and code: DeepMind_Gemini, Cline 
 """
 import os
 import sys

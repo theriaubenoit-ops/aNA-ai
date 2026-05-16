@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Temporal Lobe implementation for aNA AI Project v5.3
+Temporal Lobe (Semantic Storage & Pattern Recognition), implementation for aNA AI Project v5.3
 
 Communicates with: 
 Input: (<- Thalamus)
@@ -10,8 +10,8 @@ Output: (-> Motor / Pre-frontal)
 
 Description: This module implements the Temporal Lobe with its key regions (IT, Wernicke) for semantic processing and memory integration. It integrates with the ChemicalCore for neuromodulatory influences, particularly acetylcholine (Attention) and serotonin (Perception Stabilization). The Temporal Lobe fuses visual and spatial information to recognize objects and provides feedback to the Frontal Lobe for action planning.
 
-Architecture, concept and supervision: Theriault Benoit
-Collaboration, research and code: Gemini, Cline
+Architecture, concept and supervision: Theriault_Benoit
+Collaboration, research and code: DeepMind_Gemini, Cline
 """
 
 import asyncio
