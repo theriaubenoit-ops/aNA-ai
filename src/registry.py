@@ -13,8 +13,8 @@ Description: This module acts as the organism's genetic fingerprint. It catalogs
 
 Description (FR) :  Ce module agit comme l'empreinte génétique de l'organisme. Il répertorie et initialise l'ensemble des "Organes" (Thalamus, Hippocampe, Cortex) permettant une instanciation cohérente et une communication fluide entre les systèmes subcorticaux et corticaux. Sans ce registre, l'organisme perd sa structure unifiée et sa capacité à maintenir une homéostasie globale.
 
-Architecture, concept and supervision: Theriault Benoit
-Collaboration, research and code: Gemini
+Architecture, concept and supervision: Theriault_Benoit
+Collaboration, research and code: DeepMind_Gemini
 """
 
 # - - - - - - - - - - - - - ARCHITECTURAL MANIFESTO / MANIFESTE ARCHITECTURAL (FR)  - - - - - - - - - - - - - - +
