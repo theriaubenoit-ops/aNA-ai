@@ -3,15 +3,10 @@
 """
 Projet aNA IA v5.4 - Test Endurance Métabolique 
 
-Description: Ce script évalue la résilience du système et ses mécanismes 
-de survie autonomes sous charge cognitive soutenue. Il surveille la diminution des ressources 
-virtuelles d'ATP et valide la transition vers le « mode basse consommation » et l'« état alpha ».
+Description: Ce script évalue la résilience du système et ses mécanismes de survie autonomes sous charge cognitive soutenue. Il surveille la diminution des ressources virtuelles d'ATP et valide la transition vers le « mode basse consommation » et l'« état alpha ». Il démontre la capacité de l'aNA à privilégier la récupération homéostatique (sommeil/consolidation) à l'exécution pure, garantissant ainsi l'intégrité systémique à long terme.
 
-Il démontre la capacité de l'aNA à privilégier la récupération homéostatique (sommeil/consolidation) 
-à l'exécution pure, garantissant ainsi l'intégrité systémique à long terme.
-
-Architecture, conception et supervision : Theriault Benoit
-Collaboration, recherche et code : Google Gemini
+Architecture, conception et supervision : Thériault_Benoit
+Collaboration, recherche et code : DeepMind_Gemini
 """
 
 import unittest

@@ -3,11 +3,10 @@
 """
 Projet aNA IA v5.3 - NMDA Test de détection de coïncidences
 
-Description: Valide le mécanisme de blocage du magnésium et la potentialisation à long terme (LTP).
-Vérifie si la mémoire est élaguée en dessous du seuil NMDA et persiste au-dessus.
+Description: Valide le mécanisme de blocage du magnésium et la potentialisation à long terme (LTP). Vérifie si la mémoire est élaguée en dessous du seuil NMDA et persiste au-dessus.
 
-Architecture et neuroinformatique : Thériault Benoit
-Collaboration, recherche et code : Google DeepMind (Gemini)
+Architecture, conception et supervision : Thériault_Benoit
+Collaboration, recherche et code : DeepMind_Gemini
 """
 import unittest
 import numpy as np

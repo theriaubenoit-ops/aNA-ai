@@ -5,8 +5,8 @@ Projet aNA IA v5.3 - Tester le système limbique
 
 Description : Cette suite de tests est conçue pour valider les fonctionnalités de base des modules du système limbique (Amygdale et Hippocampe) en isolement complet. Il simule divers scénarios pour vérifier que l’amygdale répond de manière appropriée aux différentes intensités de stimulus et que l’hippocampe peut coder, consolider et récupérer correctement les modèles. Les tests vérifient également l’interaction entre ces deux structures en termes de traitement de la mémoire émotionnelle.
 
-Architecture et neuroinformatique : Thériault Benoit
-Collaboration, recherche et code : Google DeepMind (Gemini)
+Architecture, conception et supervision : Thériault_Benoit
+Collaboration, recherche et code : DeepMind_Gemini
 """
 import unittest
 import numpy as np

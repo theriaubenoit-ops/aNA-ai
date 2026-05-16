@@ -5,8 +5,8 @@ Projet aNA IA v5.2 - Test du cervelet
 
 La description: Ce test valide les capacités de correction d'erreurs du cervelet. Il simule une tâche motrice où le système doit atteindre une position cible, en commençant par une erreur initiale. Le test vérifie qu'après avoir traité le feedback, le cervelet calcule une correction qui réduit l'erreur et que le signal inhibiteur des cellules de Purkinje augmente de manière appropriée en réponse à des signaux d'erreur élevés.
 
-Architecture et neuroinformatique : Thériault Benoit
-Collaboration, recherche et code : Google DeepMind (Gemini)
+Architecture, conception et supervision : Thériault_Benoit
+Collaboration, recherche et code : DeepMind_Gemini
 """
 import unittest
 import numpy as np

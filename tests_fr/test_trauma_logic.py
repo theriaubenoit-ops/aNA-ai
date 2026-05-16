@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Project aNA AI v5.2 - Tester la logique des traumatismes de l'hippocampe
+Projet aNA IA v5.2 - Tester la logique des traumatismes de l'hippocampe
 
 La description : Ce test simule la logique traumatique de l'hippocampe en créant un scénario dans lequel une expérience neutre est suivie d'un événement traumatisant, puis en simulant le processus d'oubli au fil du temps. Le test vérifie si la trace mnésique traumatique persiste plus longtemps que la trace neutre, démontrant le concept de consolidation et de persistance de la mémoire émotionnelle.
 
-Architecture et neuroinformatique : Thériault Benoit
-Collaboration, recherche et code : Google DeepMind (Gemini)
+Architecture, conception et supervision : Thériault_Benoit
+Collaboration, recherche et code : DeepMind_Gemini
 """
 import unittest 
 import asyncio

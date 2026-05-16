@@ -3,14 +3,13 @@
 """
 Projet aNA IA v5.4 - Neurone de test (validation in vitro)
 
-Description : Ce script isole l'unité fondamentale de l'aNA (le neurone)
-et la soumet à trois tests de stress biologique extrêmes :
+Description : Ce script isole l'unité fondamentale de l'aNA (le neurone) et la soumet à trois tests de stress biologique extrêmes :
 1. Homéostasie et myélinisation (apprentissage de base)
 2. Protection contre les hallucinations (inhibition chimique)
 3. Survie métabolique (préservation de l'ATP par rapport au traitement)
 
-Architecture et neuroinformatique : Thériault Benoit
-Collaboration, recherche et code : Google DeepMind (Gemini)
+Architecture, conception et supervision : Thériault_Benoit
+Collaboration, recherche et code : DeepMind_Gemini
 """
 import unittest
 import numpy as np
