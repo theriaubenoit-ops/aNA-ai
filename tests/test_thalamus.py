@@ -25,7 +25,7 @@ from src.anatomy.subcortical.thalamus import Thalamus
 from src.anatomy.limbic.hippocampus import Hippocampus
 from src.anatomy.base.neuromodulator import Neuromodulator
 from src.config import get_config
-# from registry import ORGANS
+from src.registry import ORGANS
 
 def create_ascii_header():
     print(f"\033c") 
@@ -108,7 +108,7 @@ async def test_sensory_cascade():
     # print("="*50)
 
     thalamus.pulse.inject_stimulus(0.5) 
-    print(f" [STIMULUS] Injection systémique : +0.5 Dopamine")
+    print(f" [STIMULUS] Systemic injection: +0.5 Dopamine")
     print("="*50)
 
     # result = await thalamus.process_payload(stimulus_A, neurom, l6_feedback=0.8)
@@ -127,5 +127,5 @@ async def test_sensory_cascade():
     print("   designed to synthesize the fundamental principles of living systems.\n")
 
 if __name__ == "__main__":
-    create_ascii_header()  
+    create_ascii_header()
     asyncio.run(test_sensory_cascade())
