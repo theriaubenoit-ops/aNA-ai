@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Neuron implementation for aNA AI Project v5.4 - The fundamental unit of the aNA architecture
+Neuron implementation (Atomic Processing Nodes. The fundamental unit of the architecture) for aNA AI Project v5.4
 
 Communicates with: 
 Input: (<- Synapses) 
@@ -14,8 +14,8 @@ Description: This class represents a single neuron with:
 - Layer-specific properties for cortical organization
 - Integration with neuromodulator systems
 
-Architecture, concept and supervision: Theriault Benoit
-Collaboration, research and code: Gemini, GPT
+Architecture, concept and supervision: Theriault_Benoit
+Collaboration, research and code: DeepMind_Gemini, GPT
 """
 import numpy as np
 from typing import Tuple, Optional, Dict, Any
@@ -59,7 +59,6 @@ class NeuronConfig:
     layer_id: int = 0  # 0-5 for cortical layers I-VI
     layer_threshold_modifier: float = 1.0
     layer_connectivity_modifier: float = 1.0 # Anatomie
-
 
 class Neuron:
     """
