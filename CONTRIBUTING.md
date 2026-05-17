@@ -85,7 +85,7 @@ _By releasing `v5.4.X` increments more frequently, we allow our community to tes
 
 - [ ] Ensure your technical decisions are backed by neuroscientific principles or documented through an ADR (Architecture Decision Record).
 
-- [ ] Maintain our co-authored signature module standards (`Theriault_Benoit` & `DeepMind_Gemini`).
+- [ ] Maintain our authored signature module standards.
 
 - [ ] Open a Pull Request targeting the `development` branch for review.
 
