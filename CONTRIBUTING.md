@@ -81,9 +81,15 @@ _By releasing `v5.4.X` increments more frequently, we allow our community to tes
 
 - [ ] _"Fork"_ the repository: _Copy_ the project to your own _GitHub account_ to start experimenting.
 
-- [ ] _Run src/[tests(/)](/tests/)[test_hippocampus(.py)](/tests/test_hippocampus.py): Watch_ the Predictive Awakening _(A → B)_ in action and _verify_ the synaptic consolidation logic.
+- [ ] Create your feature branch based on the **`development`** branch (never branch off `main`).
 
-- [ ] Propose an _"Issue"_ or _"Discussion"_: If a system reaction seems _biologically incoherent_, _share your observations_ to help us refine the _neural accuracy._
+- [ ] Ensure your technical decisions are backed by neuroscientific principles or documented through an ADR (Architecture Decision Record).
+
+- [ ] Maintain our co-authored signature module standards (`Theriault_Benoit` & `DeepMind_Gemini`).
+
+- [ ] Open a Pull Request targeting the `development` branch for review.
+
+Let's build a rational alternative to brute-force AI, one synapse at a time.
 
 \*_aNA AI Project is a collaborative research initiative, not a software product._
 
