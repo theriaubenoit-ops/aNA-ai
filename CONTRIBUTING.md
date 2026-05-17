@@ -24,7 +24,7 @@ _Shape the future of AI,_
 
 _This is a leap forward in time; what you see here is the future of AI. If you are exploring this project today, it is because you possess the curiosity required to push this innovative concept further. We are currently architecting the next update, but we invite you to share your observations and ideas with us as we continue to grow this vision together._
 
-_We are building an Autonomous Neural Architecture that reflects biological principles rather than statistical shortcuts, toward a _"research collaboration"_ model, where the goal is accuracy. If you wish to engage with this project, we view you not as a "contributor" but as a research partner/observer._
+_We are building an Autonomous Neural Architecture that reflects biological principles rather than statistical shortcuts, toward a _"research collaboration"_ model, where the goal is accuracy. If you wish to engage with this project, we view you not only as a "contributor" but as a research partner/observer._
 
 _Join the **aNA** computational neuroscience community: Be sure to clone/download the latest version of the Code [aNA-ai/](https://github.com/theriaubenoit-ops/aNA-ai/) or/and see [installation](/docs/INSTALLATION.md) or/and read [innovation-lab](/docs/innovation-lab.md)_
 
