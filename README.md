@@ -41,7 +41,7 @@ _By mimicking the organic dynamics of the human brain, this architecture enables
 _Discover our journey, explore the fundamental logic, and help shape the next generation of organic intelligence by consulting our comprehensive documentation._
 
 ```
-                            [ SENSORY INPUT GATEWAYS ] (Visual / Auditory / Haptic)
+                             [ SENSORY INPUT GATEWAYS ] (Visual / Auditory / Haptic)
                                          │
                                          ▼
     [ METABOLIC ENGINE ] ──► [ THALAMIC HUB / STRIATUM ] ◄──► [ LIMBIC RESONANCE ]
