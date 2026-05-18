@@ -32,7 +32,13 @@
 
 _Welcome to the **aNA-ai** repository,_
 
-_We've made incredible progress over the past few months, and there's still a lot of work to be done to reach our goals. **aNA** is an open-source Autonomous Neural Architecture built to break the current tech industry's reliance on unsustainable, energy-intensive brute force. By mimicking the organic dynamics of the human brain, this architecture achieves true cognitive processing without relying on statistical shortcuts or token-based brute force._
+_We've made incredible progress in recent months, but there's still a lot of work to be done to reach our goals._
+
+_**aNA** (Autonomous Neural Architecture) is an open-source architecture designed to break free from the tech industry's current reliance on a brute-force, unsustainable, and energy-intensive approach. It doesn't rely on statistical shortcuts or expensive token-based systems._
+
+_By mimicking the organic dynamics of the human brain, this architecture enables true cognitive processing (plasticity), validates incoming streams, consolidates memory, and treats inconsistency as noise rather than information._
+
+_Discover our journey, explore the fundamental logic, and help shape the next generation of organic intelligence by consulting our comprehensive documentation._
 
 ```
                             [ SENSORY INPUT GATEWAYS ] (Visual / Auditory / Haptic)
@@ -221,4 +227,4 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-14_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-18_
