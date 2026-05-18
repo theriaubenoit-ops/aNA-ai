@@ -43,6 +43,7 @@ _We've made incredible progress over the past few months, and there's still a lo
                                          │
                                          ▼
                                    [ NEOCORTEX ] (6 Cortical Layers)
+```
 
 ### The Emergence of Metabolic Responsibility
 
