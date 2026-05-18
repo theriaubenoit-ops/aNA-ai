@@ -30,7 +30,19 @@
 
 ![ ](/docs/assets/spacer16x16.png)
 
-## Amazing progress
+_Welcome to the **aNA-ai** repository,_
+
+_We've made incredible progress over the past few months, and there's still a lot of work to be done to reach our goals. **aNA** is an open-source Autonomous Neural Architecture built to break the current tech industry's reliance on unsustainable, energy-intensive brute force. By mimicking the organic dynamics of the human brain, this architecture achieves true cognitive processing without relying on statistical shortcuts or token-based brute force._
+
+```
+                            [ SENSORY INPUT GATEWAYS ] (Visual / Auditory / Haptic)
+                                         │
+                                         ▼
+    [ METABOLIC ENGINE ] ──► [ THALAMIC HUB / STRIATUM ] ◄──► [ LIMBIC RESONANCE ]
+      (Pulse / ATP / BPM)      (Sensory Gating & Gain)          (Amygdala & Hippocampus)
+                                         │
+                                         ▼
+                                   [ NEOCORTEX ] (6 Cortical Layers)
 
 ### The Emergence of Metabolic Responsibility
 
