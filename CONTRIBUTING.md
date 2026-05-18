@@ -67,7 +67,7 @@ _By releasing `v5.4.x` increments more frequently, we allow our community to tes
 
 ![ ](/docs/assets/spacer16x16.png)
 
-### How to engage
+## How to engage
 
 **Peer Review & critique:** The most valuable input is the challenge. If you see a logical flaw in our modeling of a _cortical layer_ or a _neuromodulatory_ pathway, point it out. Precision is our primary goal.
 
