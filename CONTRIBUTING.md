@@ -20,7 +20,7 @@
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_Shape the future of AI,_
+**_Shape the future of AI_**
 
 _This is a leap forward in time; what you see here is the future of AI. If you are exploring this project today, it is because you possess the curiosity required to push this innovative concept further. We are currently architecting the next update, but we invite you to share your observations and ideas with us as we continue to grow this vision together._
 
