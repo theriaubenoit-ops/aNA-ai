@@ -63,7 +63,7 @@ Instead of sudden, massive evolutionary leaps (e.g., jumping directly from `v5.4
 - **y (Minor - e.g., `v5.4`):** Integration of major new functional blocks (e.g., transitioning to a full _Prefrontal cortex_ orchestration system).
 - **z (Patch/Feature - e.g., `v5.4.1`):** Micro-releases, fast feature deployments, optimization of specific algorithms (like tuning the _AMPA/NMDA_ trace decay rates), or documentation updates.
 
-_By releasing `v5.4.X` increments more frequently, we allow our community to test specific subcortical features without waiting for the next global milestone._
+_By releasing `v5.4.x` increments more frequently, we allow our community to test specific subcortical features without waiting for the next global milestone._
 
 ![ ](/docs/assets/spacer16x16.png)
 
