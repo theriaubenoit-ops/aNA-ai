@@ -28,6 +28,21 @@ The **aNA** AI project was born from a simple intuition: _artificial intelligenc
 
 Conceived in the crucible of initial exchanges with language models _(GPT)_, _v1_ aimed to translate abstract questions into tangible logic. This was a period of intense maturation, but also a major revelation regarding the necessary complexity of the structure. A _"long march"_ where the pursuit of precision gradually took precedence over rapid deployment.
 
+![ ](/docs/assets/spacer16x16.png)
+
+```
+                             [ SENSORY INPUT GATEWAYS ] (Visual / Auditory / Haptic)
+                                         │
+                                         ▼
+    [ METABOLIC ENGINE ] ──► [ THALAMIC HUB / STRIATUM ] ◄──► [ LIMBIC RESONANCE ]
+      (Pulse / ATP / BPM)      (Sensory Gating & Gain)          (Amygdala & Hippocampus)
+                                         │
+                                         ▼
+                                   [ NEOCORTEX ] (6 Cortical Layers)
+```
+
+![ ](/docs/assets/spacer16x16.png)
+
 ### The turning point _(Collaboration v3-v5 Python)_
 
 The introduction of structured collaboration with AI agents _(Gemini and Cline)_ marked a radical shift. We abandoned statistical imitation to delve into the intricacies of neurobiology. Each class, each variable, each cortical layer was conceived as a faithful transposition of the principles of living organisms.
@@ -93,4 +108,4 @@ Between behavioral _psychology, ethical engineering, philosophy_, and _neuroinfo
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-14_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-19_
