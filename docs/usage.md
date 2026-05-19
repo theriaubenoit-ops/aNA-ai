@@ -20,7 +20,7 @@
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_**Ready? / Prêt ?**_
+_**Are you ready? / Êtes vous prêt ?**_
 
 _If the [installation](/docs/INSTALLATION.md) is complete, you can now run the Python scripts. Congratulations, you are ready for the "Action" phase._
 
