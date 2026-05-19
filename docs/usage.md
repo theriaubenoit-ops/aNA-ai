@@ -20,9 +20,9 @@
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_**Congratulations! / Félicitations !**_
+_**Ready? / Prêt ? **_
 
-_If the [installation](/docs/INSTALLATION.md) is complete, you can now run the Python scripts. You are ready for the "Action" phase. / Si l'[installation](/docs/INSTALLATION_fr.md) est complétée, vous pouvez maintenant lancer les scripts Python. Vous êtes prèt pour la phase « Action »_
+_If the [installation](/docs/INSTALLATION.md) is complete, you can now run the Python scripts. Congratulations, you are ready for the "Action" phase. / Si l'[installation](/docs/INSTALLATION_fr.md) est complétée, vous pouvez maintenant lancer les scripts Python. Félicitations, vous êtes prèt pour la phase « Action »_
 
 ![ ](/docs/assets/spacer16x16.png)
 
