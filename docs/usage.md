@@ -20,9 +20,8 @@
 
 ![ ](/docs/assets/spacer16x16.png)
 
-## Congratulations! You are ready for the _"Action"_ phase / _Félicitations ! Vous êtes prèt pour la phase « Action »_
-
-If the [installation](/docs/INSTALLATION.md) is complete, you can now run the _Python scripts_. / _Si l'[installation](/docs/INSTALLATION_fr.md) est complétée, vous pouvez maintenant lancer les scripts Python._
+> [!NOTE]
+> _If the [installation](/docs/INSTALLATION.md) is complete, you can now run the Python scripts. Congratulations! You are ready for the "Action" phase. / Si l'[installation](/docs/INSTALLATION_fr.md) est complétée, vous pouvez maintenant lancer les scripts Python. Félicitations ! Vous êtes prèt pour la phase « Action »_
 
 ![ ](/docs/assets/spacer16x16.png)
 
@@ -251,4 +250,4 @@ _Dans l'esprit de décomposer chaque complexité en ses parties les plus simples
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-05_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-19_
