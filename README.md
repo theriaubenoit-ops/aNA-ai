@@ -38,7 +38,9 @@ _**aNA** (Autonomous Neural Architecture) is an open-source architecture designe
 
 _By mimicking the organic dynamics of the human brain, this architecture enables true cognitive processing (plasticity), validates incoming streams, consolidates memory, and treats inconsistency as noise rather than information._
 
-_Discover our journey, explore the fundamental logic, and help shape the next generation of organic intelligence by consulting our comprehensive documentation._
+_Discover our journey, explore the fundamental logic, and help shape the next generation of organic intelligence._
+
+![ ](/docs/assets/spacer16x16.png)
 
 ```
                              [ SENSORY INPUT GATEWAYS ] (Visual / Auditory / Haptic)
@@ -229,4 +231,4 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-18_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-19_
