@@ -20,9 +20,9 @@ English instructions: [installation (en)](/docs/INSTALLATION.md)
 
 ![ ](/docs/assets/spacer16x16.png)
 
-## Guide d'Installation Multi-Plateforme
+_Pour assurer une configuration optimale de l'architecture neuronale de **aNA** IA, cette section vous aide à configurer son environnement en fonction de votre système. Ceci est votre guide d'installation multiplateforme. Veuillez lire les principes communs et de base ensuite sélectionner le guide correspondant à votre système d'exploitation._
 
-Pour garantir une configuration optimale de l'architecture neuronale d'_aNA IA_, cette section vous aide à configurer son environnement en fonction de votre système.
+![ ](/docs/assets/spacer16x16.png)
 
 ### Premières étapes communes
 
@@ -40,13 +40,11 @@ Voici les commandes universelles que vous utiliserez pour naviguer :
 - **`cd ..`**: Retour au dossier parent.
 - **`ls`** _(Mac/Linux)_ ou **`dir`** _(Windows)_: Liste des fichiers présents.
 
-![ ](/docs/assets/spacer16x16.png)
+![ ](/docs/assets/spacer32x32.png)
 
 ## Consultez votre système d'exploitation
 
-Veuillez consulter le guide correspondant à votre système d'exploitation :
-
-![ ](/docs/assets/spacer32x32.png)
+![ ](/docs/assets/spacer16x16.png)
 
 # 🪟 Windows _(PC)_
 
