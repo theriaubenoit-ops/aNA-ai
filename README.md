@@ -38,7 +38,7 @@ _**aNA** (Autonomous Neural Architecture) is an open-source architecture designe
 
 _By mimicking the organic dynamics of the human brain, this architecture enables true cognitive processing (plasticity), validates incoming streams, consolidates memory, and treats inconsistency as noise rather than information._
 
-_Discover our journey, explore the fundamental logic, and help shape the next generation of organic intelligence._
+_Discover our journey, explore the fundamental logic, and help shape the next generation of a more organic intelligence._
 
 ![ ](/docs/assets/spacer16x16.png)
 
