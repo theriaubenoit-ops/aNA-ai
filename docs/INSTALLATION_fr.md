@@ -1,4 +1,4 @@
-Usage and tests🚀 Quick links: [ReadMe](/README.md), Installation, [Contributing](/CONTRIBUTING.md), [Innovation-Lab](/docs/innovation-lab.md), [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), [Architecture](/docs/architecture.md)
+🚀 Quick links: [ReadMe](/README.md), Installation, [Usage](/docs/usage.md), [Contributing](/CONTRIBUTING.md), [Innovation-Lab](/docs/innovation-lab.md), [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), [Architecture](/docs/architecture.md)
 
 English instructions: [installation (en)](/docs/INSTALLATION.md)
 
@@ -12,7 +12,7 @@ English instructions: [installation (en)](/docs/INSTALLATION.md)
 ▒▒▒▒▒▒▒▓▓▓▓▓████▓▓░                 ░░▒▒▒▓█▓░▓▓█▓▓ ░▒▓  ▒▓▓▓▓▓█▓▓▓█▓▒▒▒▓▓▒░░░░▒▓█▓▓▓▓▓▒▓▒▒▒▒▒▒▒░░░░░░░░░░░░░░▒▒▒▒▒
 ▒▒▓▒▓▓▓▓█████▓▒                         ░▒▒▓░ ▓██▓                ▒▓▒▒░░▒▓▒░░▒▓███▓█▓▓▓▓▓▓▓▓▓▓▓▒▓▒▒▒▒▒▒▒▒▒▒▓▒▓▓▓▓▓
 ▓▓▓█████▓░                                    ░░▒▒ _    _    _ ░▒░▒▒▒▓▒▓▒▓▒▓█▓███▒▓▓▓▓▓▓▓▓▓▓▓▓▓█▓██▓▓▓▓▓█▓████████
-▓███▓▒  IA inspirée de la plasticité naturelle ✴️  a    N    A  ▒▓█▒▓ ▒▓█▒Architecture Neuronale Autonome v5.3 ▒▓▓
+▓███▓▒  IA inspirée de la plasticité naturelle ✴️  a    N    A  ▒▓█▒▓ ▒▓█▒Architecture Neuronale Autonome v5.4 ▒▓▓
 ▓░                                                 _    _    _  ░▓▒▓  ░▓
 ```
 
@@ -20,13 +20,13 @@ English instructions: [installation (en)](/docs/INSTALLATION.md)
 
 ![ ](/docs/assets/spacer16x16.png)
 
-## Guide d'Installation Multi-Plateforme
+_Pour assurer une configuration optimale de l'architecture neuronale de **aNA-IA**, cette section vous aide à configurer son environnement en fonction de votre système. Ceci est votre guide d'installation multiplateforme. Veuillez lire les principes communs et de base ensuite sélectionner le guide correspondant à votre système d'exploitation._
 
-Pour garantir une configuration optimale de l'architecture neuronale d'_aNA IA_, cette section vous aide à configurer son environnement en fonction de votre système.
+![ ](/docs/assets/spacer16x16.png)
 
 ### Premières étapes communes
 
-Avant de commencer, assurez-vous d'avoir les éléments suivants à portée de main *Voir les instructions ci-dessous* :
+Avant de commencer, assurez-vous d'avoir les éléments suivants à portée de main *(Voir les instructions)* :
 
 - **Git** : Assurez-vous de cloner _aNA-ai.git_.
 - **Python 3.10+** : Vous disposez du moteur de base.
@@ -40,13 +40,11 @@ Voici les commandes universelles que vous utiliserez pour naviguer :
 - **`cd ..`**: Retour au dossier parent.
 - **`ls`** _(Mac/Linux)_ ou **`dir`** _(Windows)_: Liste des fichiers présents.
 
-![ ](/docs/assets/spacer16x16.png)
+![ ](/docs/assets/spacer32x32.png)
 
 ## Consultez votre système d'exploitation
 
-Veuillez consulter le guide correspondant à votre système d'exploitation :
-
-![ ](/docs/assets/spacer32x32.png)
+![ ](/docs/assets/spacer16x16.png)
 
 # 🪟 Windows _(PC)_
 

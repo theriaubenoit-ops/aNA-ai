@@ -5,7 +5,8 @@ Projet aNA IA v5.2 - Tester le système limbique
 
 Description : Ce test valide l’intégration du module Neocortex au sein de l’architecture aNA. Il vérifie que Neocortex est correctement instancié à partir du registre central et qu’il peut traiter un signal simulé à travers ses différentes couches. Le test garantit que Neocortex peut communiquer avec le thalamus (via la rétroaction de la couche 6) et qu’il peut gérer les influences neuromodulatrices pendant le traitement.
 
-Architecture et neuroinformatique : Thériault Benoit
+Architecture, conception et supervision : Thériault_Benoit
+Collaboration, recherche et code : DeepMind_Gemini
 """
 
 import unittest

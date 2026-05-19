@@ -1,18 +1,22 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-aNA AI Project v5.3 - Test Neuron
+aNA AI Project v5.4 - Test Neuron (In Vitro Validation)
 
-Description: This test is designed to validate the core functionalities of the neurone module in complete isolation. It simulates a simple data stream to verify that the neurone processes inputs correctly, learns patterns, and can retrieve them based on context. The test covers feedforward processing, lateral inhibition, and feedback mechanisms.
+Description: This script isolates the fundamental unit of aNA (the neuron) and subjects it to three biological stress tests aligned with v5.4:
+1. Homeostasis & Myelination (Basic learning)
+2. Saliance Guard (Anti-Hallucination via chemical clamp)
+3. Metabolic Survival (Priority to ATP over treatment)
 
-Architecture and neuroinformatics: Theriault Benoit
+Architecture, concept and supervision: Theriault_Benoit
+Collaboration, research and code: DeepMind_Gemini
 """
 import unittest
 import numpy as np
 import os
 import sys
 
-# The project root is defined dynamically.
+# Définition dynamique du root pour l'import des modules
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 if ROOT_DIR not in sys.path:
     sys.path.insert(0, ROOT_DIR)
@@ -28,50 +32,85 @@ def create_ascii_header():
     print("▒▒▒▒▒▒▒▓▓▓▓▓████▓▓░                 ░░▒▒▒▓█▓░▓▓█▓▓ ░▒▓  ▒▓▓▓▓▓█▓▓▓█▓▒▒▒▓▓▒░░░░▒▓█▓▓▓▓▓▒▓▒▒▒▒▒▒▒░░░░░░░░░░░░░░▒▒▒▒▒")
     print("▒▒▓▒▓▓▓▓█████▓▒                         ░▒▒▓░ ▓██▓                ▒▓▒▒░░▒▓▒░░▒▓███▓█▓▓▓▓▓▓▓▓▓▓▓▒▓▒▒▒▒▒▒▒▒▒▒▓▒▓▓▓▓▓")
     print("▓▓▓█████▓░                                    ░░▒▒ _    _    _ ░▒░▒▒▒▓▒▓▒▓▒▓█▓███▓▒▓▓▓▓▓▓▓▓▓▓▓▓█▓██▓▓▓▓▓█▓████████")
-    print("▓███▓▒      AI inspired by natural plasticity  ✴️  a    N    A  ▒▓█▒▓ ▒▓█▒Autonomous Neural Architecture v5.3  ▒▓▓")
+    print("▓███▓▒      AI inspired by natural plasticity  ✴️  a    N    A  ▒▓█▒▓ ▒▓█▒Autonomous Neural Architecture v5.4  ▒▓▓")
     print("▓░                                                 _    _    _  ░▓▒▓  ░▓\n")
 
-class TestNeuron(unittest.TestCase):
+class TestNeuronV54(unittest.TestCase):
     def setUp(self):
-        # Standard configuration for a pyramidal neuron
-        self.config = NeuronConfig(
-            layer_id=1,
-            threshold_potential=-52.0,  # Typical threshold
-            base_energy_consumption=0.01,
-            firing_energy_cost=0.1
-        )
+        """
+        Initialisation v5.4 : Le neurone récupère ses constantes 
+        directement depuis le profil actif dans config.py.
+        """
         self.position = np.array([0.0, 0.0, 0.0])
+        # On teste ici un neurone de la couche IV (Gateway sensoriel)
+        self.config = NeuronConfig(layer_id=4)
         self.neuron = Neuron(self.position, self.config)
 
-    def test_initial_state(self):
-        """Check that the neuron starts at rest"""
-        print("\n[NEURON TEST: INITIAL STATE]")
-        self.assertFalse(self.neuron.is_firing)
-        self.assertGreater(self.neuron.energy_level, 0.9)
-        print(" -> A resting neuron, charged with energy.")
-
-    def test_threshold_activation(self):
-        """Check if the neuron fires after reaching the threshold"""
-        print("\n[NEURON TEST: ACTIVATION THRESHOLD]")
-        # We are sending a strong signal
-        self.neuron.receive_input(60.0, {}) 
+    def test_01_homeostasis_and_plasticity(self):
+        """Scénario A : Le Rythme de Croisière (Métabolisme et Myéline)"""
+        print("\n[SCENARIO A: HOMEOSTASIS AND MYELINATION]")
+        
+        # On s'assure que le neurone part d'un état stable
+        self.neuron.atp_flux = 1.0
+        
+        # Stimulation
+        self.neuron.receive_input(40.0, {}) # Augmenté pour garantir le passage du seuil
         self.neuron.update(time_step=1, neuromodulators={})
         
         self.assertTrue(self.neuron.is_firing)
-        print(f" -> Successful discharge! Potential reaches the threshold of {self.config.threshold_potential} mV.")
-
-    def test_energy_depletion(self):
-        """Check that the activity consumes energy."""
-        print("\n[NEURON TEST: ENERGY CONSUMPTION]")
-        initial_energy = self.neuron.energy_level
         
-        # We fire several times
-        for _ in range(5):
-            self.neuron.receive_input(100.0, {})
-            self.neuron.update(time_step=1, neuromodulators={})
-            
-        self.assertLess(self.neuron.energy_level, initial_energy)
-        print(f" -> Residual energy: {self.neuron.energy_level:.2f} (Consumption validated).")
+        # On vérifie que la plasticité ou la myéline a progressé
+        self.assertGreater(self.neuron.myelination_level, 0.0)
+        self.assertGreater(self.neuron.activity_counter, 0)
+        
+        print(f" -> Discharge successful. Activity counter: {self.neuron.activity_counter}")
+        print(f" -> Reinforced structure (Myelination): {self.neuron.myelination_level:.4f}")
+
+    def test_02_saliance_guard(self):
+        """Scénario B : La Garde de la Saliance (Protection contre l'hallucination chimique)"""
+        print("\n[SCENARIO B: GUARDING SALIANCE]")
+        
+        # Neurone de contrôle : Signal fort sans bruit chimique
+        neuron_control = Neuron(self.position, self.config)
+        neuron_control.receive_input(20.0, {})
+        potentiel_pur = neuron_control.membrane_potential
+        
+        # Neurone test : Même signal, mais avec cocktail chimique extrême (Dopamine + Noradrénaline)
+        neuron_chem = Neuron(self.position, self.config)
+        cocktail = {'dopamine': 1.0, 'norepinephrine': 1.0}
+        neuron_chem.receive_input(20.0, cocktail)
+        potentiel_chimique = neuron_chem.membrane_potential
+        
+        # Calcul de la déformation
+        diff = potentiel_chimique - potentiel_pur
+        
+        print(f" -> Pure potential (without chemistry): {potentiel_pur:.2f} mV")
+        print(f" -> Potential under chemical cocktail:: {potentiel_chimique:.2f} mV")
+        print(f" -> Chemical deformation contained: +{diff:.2f} mV")
+        
+        # Le mécanisme de Saliance doit limiter l'impact chimique pour protéger le pattern
+        self.assertLess(diff, 15.0) 
+        print(" -> Garde confirmée : Le neurone protège le signal fort contre la saturation chimique.")
+
+    def test_03_metabolic_survival(self):
+        """Scénario C : L'Épuisement Métabolique (La survie avant la fonction)"""
+        print("\n[SCENARIO C: METABOLIC EXHAUSTION]")
+        
+        # On force un état d'épuisement extrême (sous le seuil de Low Power)
+        self.neuron.atp_flux = 0.05 
+        
+        # On tente de forcer une décharge avec un stimulus massif
+        self.neuron.receive_input(100.0, {})
+        self.neuron.update(time_step=2, neuromodulators={})
+        
+        # Le neurone DOIT REFUSER de décharger pour préserver son intégrité
+        self.assertFalse(self.neuron.is_firing)
+        
+        # La pompe de récupération doit être active malgré l'absence de décharge
+        self.assertGreater(self.neuron.atp_flux, 0.05)
+        
+        print(" -> Action canceled: The neuron refuses the discharge as a survival measure.")
+        print(f" -> Active survival mode. ATP regeneration in progress: {self.neuron.atp_flux:.4f}.")
 
 if __name__ == '__main__':
     create_ascii_header()

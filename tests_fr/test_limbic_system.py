@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Projet aNA IA v5.2 - Tester le système limbique
+Projet aNA IA v5.3 - Tester le système limbique
 
 Description : Cette suite de tests est conçue pour valider les fonctionnalités de base des modules du système limbique (Amygdale et Hippocampe) en isolement complet. Il simule divers scénarios pour vérifier que l’amygdale répond de manière appropriée aux différentes intensités de stimulus et que l’hippocampe peut coder, consolider et récupérer correctement les modèles. Les tests vérifient également l’interaction entre ces deux structures en termes de traitement de la mémoire émotionnelle.
 
-Architecture et neuroinformatique : Thériault Benoit
+Architecture, conception et supervision : Thériault_Benoit
+Collaboration, recherche et code : DeepMind_Gemini
 """
 import unittest
 import numpy as np
@@ -19,7 +20,6 @@ if ROOT_DIR not in sys.path:
 
 from unittest.mock import AsyncMock, MagicMock
 from unittest import IsolatedAsyncioTestCase
-from src.anatomy.limbic.limbic_system import LimbicSystem
 from src.anatomy.limbic.limbic_system import LimbicSystem
 
 def create_ascii_header():

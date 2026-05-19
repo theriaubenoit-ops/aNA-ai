@@ -1,4 +1,4 @@
-🚀 Quick links: [ReadMe](/README.md), [Installation](/docs/INSTALLATION.md), Contributing, [Innovation-Lab](/docs/innovation-lab.md), [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), [Architecture](/docs/architecture.md)
+🚀 Quick links: [ReadMe](/README.md), [Installation](/docs/INSTALLATION.md), [Usage](/docs/usage.md), Contributing, [Innovation-Lab](/docs/innovation-lab.md), [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), [Architecture](/docs/architecture.md)
 
 ![ ](/docs/assets/spacer16x16.png)
 
@@ -12,7 +12,7 @@
 ▒▒▒▒▒▒▒▓▓▓▓▓████▓▓░                 ░░▒▒▒▓█▓░▓▓█▓▓ ░▒▓  ▒▓▓▓▓▓█▓▓▓█▓▒▒▒▓▓▒░░░░▒▓█▓▓▓▓▓▒▓▒▒▒▒▒▒▒░░░░░░░░░░░░░░▒▒▒▒▒
 ▒▒▓▒▓▓▓▓█████▓▒                         ░▒▒▓░ ▓██▓                ▒▓▒▒░░▒▓▒░░▒▓███▓█▓▓▓▓▓▓▓▓▓▓▓▒▓▒▒▒▒▒▒▒▒▒▒▓▒▓▓▓▓▓
 ▓▓▓█████▓░                                    ░░▒▒ _    _    _ ░▒░▒▒▒▓▒▓▒▓▒▓█▓███▒▓▓▓▓▓▓▓▓▓▓▓▓▓█▓██▓▓▓▓▓█▓████████
-▓███▓▒      AI inspired by natural plasticity  ✴️  a    N    A  ▒▓█▒▓ ▒▓█▒Autonomous Neural Architecture v5.3  ▒▓▓
+▓███▓▒      AI inspired by natural plasticity  ✴️  a    N    A  ▒▓█▒▓ ▒▓█▒Autonomous Neural Architecture v5.4  ▒▓▓
 ▓░                                                 _    _    _  ░▓▒▓  ░▓
 ```
 
@@ -20,11 +20,54 @@
 
 ![ ](/docs/assets/spacer16x16.png)
 
-**aNA** AI Project is a collaborative research initiative, not a software product.
+**_Shape the future of AI_**
 
-We are building an _Autonomous Neural Architecture_ that reflects biological principles rather than statistical shortcuts. If you wish to engage with this project, we view you not as a _"contributor"_ but as a research partner/observer.
+_This is a leap forward in time; what you see here is the future of AI. If you are exploring this project today, it is because you possess the curiosity required to push this innovative concept further. We are currently architecting the next update, but we invite you to share your observations and ideas with us as we continue to grow this vision together._
 
-### How to engage
+_We are building an Autonomous Neural Architecture that reflects biological principles rather than statistical shortcuts, toward a _"research collaboration"_ model, where the goal is accuracy. If you wish to engage with this project, we view you not only as a "contributor" but as a research partner/observer._
+
+_Join the **aNA** computational neuroscience community: Be sure to clone/download the latest version of the Code [aNA-ai/](https://github.com/theriaubenoit-ops/aNA-ai/) or/and see [installation](/docs/INSTALLATION.md) or/and read [innovation-lab](/docs/innovation-lab.md)_
+
+![ ](/docs/assets/spacer16x16.png)
+
+## Development Workflow & Contribution Guidelines
+
+Welcome to the _**aNA-ai**_ repository. As this bio-inspired movement grows, we are structuring our development cycle to best mimic biological evolution: balancing the absolute stability of the organism with the necessary plasticity of innovation.
+
+To maintain scientific accuracy and high architectural integrity, we implement a strict two-branch ecosystem and an incremental release cycle. Our development workflow is bio-adapted from **Trunk-Based Development _(TBD)_**.
+
+We focus on short-lived iterations, frequent micro-releases, and continuous integration to maintain high architectural plasticity without sacrificing the stability of the core organism.
+
+![ ](/docs/assets/spacer16x16.png)
+
+## The Branch Architecture
+
+### 1. `main` | The Stable Phenotype
+
+- **Purpose:** This is the production-ready, _bulletproof_ version of **aNA**. Every commit here represents a validated, fully functional milestone.
+- **Access:** This branch is locked for direct commits. It only ingests code via thoroughly tested Pull Requests coming from the development branch.
+- **Downloads:** If you are looking to download, deploy, or demo **aNA** in a stable state, always pull from `main`.
+
+### 2. `development` | The Synaptic Plasticity Zone
+
+- **Purpose:** This is our sandbox for testing, brainstorming, and technical investigation. This is where new biological modules _(PFC orchestration, thalamic gating refinements, metabolic tweaks)_ are wired and stress-tested.
+- **State:** Expect ongoing work, experimental logs, and fluid code structures here.
+
+![ ](/docs/assets/spacer16x16.png)
+
+## Evolutionary Versioning (x.y.z)
+
+Instead of sudden, massive evolutionary leaps (e.g., jumping directly from `v5.4` to `v5.5`), **aNA** evolves through frequent, incremental micro-mutations:
+
+- **x (Major - e.g., `v5.0`):** Complete structural overhauls or foundational paradigm shifts in the architecture.
+- **y (Minor - e.g., `v5.4`):** Integration of major new functional blocks (e.g., transitioning to a full _Prefrontal cortex_ orchestration system).
+- **z (Patch/Feature - e.g., `v5.4.1`):** Micro-releases, fast feature deployments, optimization of specific algorithms (like tuning the _AMPA/NMDA_ trace decay rates), or documentation updates.
+
+_By releasing `v5.4.x` increments more frequently, we allow our community to test specific subcortical features without waiting for the next global milestone._
+
+![ ](/docs/assets/spacer16x16.png)
+
+## How to engage
 
 **Peer Review & critique:** The most valuable input is the challenge. If you see a logical flaw in our modeling of a _cortical layer_ or a _neuromodulatory_ pathway, point it out. Precision is our primary goal.
 
@@ -34,23 +77,21 @@ We are building an _Autonomous Neural Architecture_ that reflects biological pri
 
 **Documentation consistency:** Any change must update the relevant documentation. An undocumented feature is, for our research purposes, a non-existent one.
 
-### Our shared ethos
-
-We are moving away from the "open-source contribution" model—where the goal is often quantity—toward a _"research collaboration"_ model, where the goal is accuracy. We are documenting a trajectory toward a more harmonious coexistence between biological and digital systems.
-
-### _Shape the future of AI!_
-
-**This is a leap forward in time; what you see here is the _future of AI_. If you are exploring this project today, it is because you possess the curiosity required to push this innovative concept further. We are currently _architecting_ the _next major update_, but we invite you to share your _observations_ and _ideas_ with us as we continue to grow this vision together.**
-
-Join the **aNA** _computational neuroscience_ community: Be sure to clone/download the latest version of the Code _[aNA-ai/](https://github.com/theriaubenoit-ops/aNA-ai/)_ or/and see [installation](/docs/INSTALLATION.md) or/and read [innovation-lab](/docs/innovation-lab.md)
-
 ### First Steps for Research Collaborators
 
 - [ ] _"Fork"_ the repository: _Copy_ the project to your own _GitHub account_ to start experimenting.
 
-- [ ] _Run src/[tests(/)](/tests/)[test_hippocampus(.py)](/tests/test_hippocampus.py): Watch_ the Predictive Awakening _(A → B)_ in action and _verify_ the synaptic consolidation logic.
+- [ ] Create your feature branch based on the **`development`** branch (never branch off `main`).
 
-- [ ] Propose an _"Issue"_ or _"Discussion"_: If a system reaction seems _biologically incoherent_, _share your observations_ to help us refine the _neural accuracy_.
+- [ ] Ensure your technical decisions are backed by neuroscientific principles or documented through an ADR (Architecture Decision Record).
+
+- [ ] Maintain our authored signature module standards.
+
+- [ ] Open a Pull Request targeting the `development` branch for review.
+
+Let's build a rational alternative to brute-force AI, one synapse at a time.
+
+\*_aNA AI Project is a collaborative research initiative, not a software product._
 
 ![ ](/docs/assets/spacer32x32.png)
 
@@ -127,7 +168,7 @@ def test_integration():
 
 # Future horizons: The potential of ✴️*aNA* AI
 
-The **aNA** AI project is _a leap toward the future of organic computation_. Aligning with _biological evolution_, we _unlock_ several strategic frontiers, More than just a _codebase_; it is a _sandbox_ for exploration at the intersection of _biology_ and _computation_. By contributing to this project, you are helping to _unlock_ several key areas that will have a real positive impact on our entire society:
+The **aNA** AI project is _a leap toward the future of organic computation_. Aligning with _biological evolution_, we are _unlocking_ several strategic frontiers. More than just a _codebase_; it is a _sandbox_ for exploration at the intersection of _biology_ and _computation_. By contributing to this project, you are helping to open key areas that will have a real positive impact on our entire society:
 
 - **☄️ Authentic AI Personas through Neurochemical Temperament:**
   **aNA** moves beyond static _"system prompts"_ to create truly _consistent AI identities_. By utilizing the _([config(.py)](/src/config.py))_ as a _neurochemical tuning center_, we can define a _100% consistent personality_ based on _biological thresholds_:
@@ -173,4 +214,4 @@ The **aNA** AI project is _a leap toward the future of organic computation_. Ali
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-01_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-17_

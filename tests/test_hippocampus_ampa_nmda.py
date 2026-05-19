@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-aNA AI Project v5.3 - NMDA Coincidence Detection Test
+aNA AI Project v5.4 - NMDA Coincidence Detection Test
 
-Description: Validates the magnesium block mechanism and LTP.
-Tests if a memory is pruned when below NMDA threshold and persists when above it.
+Description: Validates the magnesium block mechanism and LTP. Tests if a memory is pruned when below NMDA threshold and persists when above it.
 
-Architecture and neuroinformatics: Theriault Benoit
+Architecture, concept and supervision: Theriault_Benoit
+Collaboration, research and code: DeepMind_Gemini
 """
 import unittest
 import numpy as np

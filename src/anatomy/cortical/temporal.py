@@ -1,14 +1,17 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Temporal Lobe implementation for aNA AI Project v5.3
+Temporal Lobe (Semantic Storage & Pattern Recognition), implementation for aNA AI Project v5.3
 
-Communicates with: Input: (<- Thalamus) | Input/Output: (<-> Other Cortical Areas) | Output: (-> Motor / Pre-frontal)
+Communicates with: 
+Input: (<- Thalamus)
+Input/Output: (<-> Other Cortical Areas)
+Output: (-> Motor / Pre-frontal)
 
 Description: This module implements the Temporal Lobe with its key regions (IT, Wernicke) for semantic processing and memory integration. It integrates with the ChemicalCore for neuromodulatory influences, particularly acetylcholine (Attention) and serotonin (Perception Stabilization). The Temporal Lobe fuses visual and spatial information to recognize objects and provides feedback to the Frontal Lobe for action planning.
 
-Architecture, concept and supervision: Benoit Theriault
-Collaboration, research and code: Gemini, Cline 
+Architecture, concept and supervision: Theriault_Benoit
+Collaboration, research and code: DeepMind_Gemini, Cline
 """
 
 import asyncio
@@ -45,7 +48,7 @@ class TemporalLobe(CorticalColumns):
                         (spatial_data.get("spatial_certainty", 0.0) * 0.3)
         
         # 3. Appel à la couche L2/3 (Porte de la Mémoire)
-        # C'est ici que William 'compare' avec ses souvenirs (Hippocampe)
+        # C'est ici que aNA 'compare' avec ses souvenirs (Hippocampe)
         results = await self.process_input(
             signal_data=f"sem_{fusion_signal:.2f}",
             hippo_unit=None # Sera injecté par le LimbicSystem global

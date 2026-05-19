@@ -5,7 +5,8 @@ aNA AI Project v5.3 - Test Neocortex Integration
 
 Description: This test validates the integration of the Neocortex module within the aNA architecture. It checks that the Neocortex is correctly instantiated based on the central registry and that it can process a simulated signal through its layers. The test ensures that the Neocortex can communicate with the Thalamus (via Layer 6 feedback) and that it can handle neuromodulatory influences during processing.
 
-Architecture and neuroinformatics: Theriault Benoit
+Architecture, concept and supervision: Theriault_Benoit
+Collaboration, research and code: DeepMind_Gemini
 """
 
 import unittest

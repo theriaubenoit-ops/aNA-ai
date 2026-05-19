@@ -1,4 +1,4 @@
-🚀 Quick links: [ReadMe](/README.md), [Installation](/docs/INSTALLATION.md), [Contributing](/CONTRIBUTING.md), [Innovation-Lab](/docs/innovation-lab.md), [Philosophy](/docs/philosophy.md), Genisis, [Architecture](/docs/architecture.md)
+🚀 Quick links: [ReadMe](/README.md), [Installation](/docs/INSTALLATION.md), [Usage](/docs/usage.md), [Contributing](/CONTRIBUTING.md), [Innovation-Lab](/docs/innovation-lab.md), [Philosophy](/docs/philosophy.md), Genisis, [Architecture](/docs/architecture.md)
 
 ![ ](/docs/assets/spacer16x16.png)
 
@@ -12,7 +12,7 @@
 ▒▒▒▒▒▒▒▓▓▓▓▓████▓▓░                 ░░▒▒▒▓█▓░▓▓█▓▓ ░▒▓  ▒▓▓▓▓▓█▓▓▓█▓▒▒▒▓▓▒░░░░▒▓█▓▓▓▓▓▒▓▒▒▒▒▒▒▒░░░░░░░░░░░░░░▒▒▒▒▒
 ▒▒▓▒▓▓▓▓█████▓▒                         ░▒▒▓░ ▓██▓                ▒▓▒▒░░▒▓▒░░▒▓███▓█▓▓▓▓▓▓▓▓▓▓▓▒▓▒▒▒▒▒▒▒▒▒▒▓▒▓▓▓▓▓
 ▓▓▓█████▓░                                    ░░▒▒ _    _    _ ░▒░▒▒▒▓▒▓▒▓▒▓█▓███▒▓▓▓▓▓▓▓▓▓▓▓▓▓█▓██▓▓▓▓▓█▓████████
-▓███▓▒      AI inspired by natural plasticity  ✴️  a    N    A  ▒▓█▒▓ ▒▓█▒Autonomous Neural Architecture v5.3  ▒▓▓
+▓███▓▒      AI inspired by natural plasticity  ✴️  a    N    A  ▒▓█▒▓ ▒▓█▒Autonomous Neural Architecture v5.4  ▒▓▓
 ▓░                                                 _    _    _  ░▓▒▓  ░▓
 ```
 
@@ -20,13 +20,32 @@
 
 ![ ](/docs/assets/spacer16x16.png)
 
+_This section traces the origin, evolutionary trajectory, and philosophical foundations of the aNA project. From the initial impulse of simple neural concepts to the current implementation of advanced bio-inspired structures (such as pattern invariance and homeostatic regulation), it documents the shift from statistical imitation to a true local cognitive architecture anchored in the rigor of neuroscience._
+
+![ ](/docs/assets/spacer16x16.png)
+
 ### Traces of thought
 
-The **aNA** AI project was born from a simple intuition: _artificial intelligence_ should not be a mere matter of probabilities, but a matter of organization and structure.
+The **aNA** AI project was born from a simple intuition: _artificial intelligence_ should not be a mere matter of a simple question of control and probabilities, but a matter of logical organization and a guided structure.
 
 ### The initial impulse _(Laboratory v1-v2 JavaScript/Python)_
 
-Conceived in the crucible of initial exchanges with language models _(GPT)_, _v1_ aimed to translate abstract questions into tangible logic. This was a period of intense maturation, a _"long march"_ where the pursuit of precision gradually took precedence over rapid deployment.
+Conceived in the crucible of initial exchanges with language models _(GPT)_, _v1_ aimed to translate abstract questions into tangible logic. This was a period of intense maturation, but also a major revelation regarding the necessary complexity of the structure. A _"long march"_ where the pursuit of precision gradually took precedence over rapid deployment.
+
+![ ](/docs/assets/spacer16x16.png)
+
+```
+                             [ SENSORY INPUT GATEWAYS ] (Visual / Auditory / Haptic)
+                                         │
+                                         ▼
+    [ METABOLIC ENGINE ] ──► [ THALAMIC HUB / STRIATUM ] ◄──► [ LIMBIC RESONANCE ]
+      (Pulse / ATP / BPM)      (Sensory Gating & Gain)          (Amygdala & Hippocampus)
+                                         │
+                                         ▼
+                                   [ NEOCORTEX ] (6 Cortical Layers)
+```
+
+![ ](/docs/assets/spacer16x16.png)
 
 ### The turning point _(Collaboration v3-v5 Python)_
 
@@ -34,11 +53,11 @@ The introduction of structured collaboration with AI agents _(Gemini and Cline)_
 
 ### Current state
 
-The code deployed today is the result of a constant dialogue between human intention and digital rigor. The _"Dashboard"_, more than just a monitor, is a window into this collaboration. It demonstrates that with a suitable architecture, the machine can become a faithful reflection of biological ingenuity.
+The code deployed today is the result of a constant dialogue between human intention and digital rigor. The _"Dashboard"_, more than just a monitor, is a window into this rigorous collaboration. It demonstrates that with a suitable architecture, the machine can become a faithful reflection of biological ingenuity.
 
-### Invitation
+### _Invitation_
 
-This project is an exploration at the threshold of _cortical_ memory. We are not building a product; we are documenting a trajectory. Your participation, through your reading or feedback, contributes to the precision of this research.
+_This project is an exploration at the threshold of cortical memory. We are not building a product; we are documenting a trajectory. Your participation, through your reading or feedback, contributes to the precision and ongoing refinement of this research._
 
 ![ ](/docs/assets/spacer32x32.png)
 
@@ -55,9 +74,9 @@ Beyond multilingual support, aNA implements a biological approach to symbolic re
 **From "Aa" to "Zz":** Neural synchronization of case-invariant structures.
 Biological Paradigm: In the human brain, the Visual Word Form Area (VWFA) learns to recognize letters regardless of their case or font. By presenting "Aa" as a single stimulus, we simulate this perceptual constancy.
 
-**Haptic Association:** Each pair is linked to a unique signature in the haptic_registry.txt. This allows the Cerebellum to calibrate the timing of recognition for both uppercase and lowercase simultaneously.
+**Haptic Association:** Each pair is linked to a unique signature in _[media_haptic(/)](/tests/media_haptic/)_. This allows the _[cerebellum(.py)](/src/anatomy/subcortical/cerebellum.py)_ to calibrate the timing of recognition for both uppercase and lowercase simultaneously.
 
-**Reduced Cognitive Friction:** Grouping 52 symbols into 26 functional units optimizes the Hippocampus storage and speeds up Thalamic routing, mimicking the efficiency of a high-cognitive profile.
+**Reduced Cognitive Friction:** Grouping 52 symbols into 26 functional units optimizes the _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_ storage and speeds up _[thalamic hub(.py)](/src/anatomy/subcortical/thalamic_hub.py)_ routing, mimicking the efficiency of a high-cognitive profile.
 
 ![ ](/docs/assets/spacer16x16.png)
 
@@ -85,7 +104,7 @@ Throughout his career, _**Benoit**_ has honed a rigorous approach through close 
 
 This constant pursuit of form and structure is fueled by a profound fascination for _neural processes_ and creative research. An expert in programming and design systems, he presents the **aNA** project as a culmination of this journey: an allegory that translates the elegance of _living mechanisms_ into the _digital world_.
 
-Between behavioral _psychology, ethical engineering_, and _neuroinformatics_, his work offers a new interpretation of _Artificial Intelligence_: an _architecture_ cultivated with the _same intention, depth, and precision_ as the _human brain_.
+Between behavioral _psychology, ethical engineering, philosophy_, and _neuroinformatics_, his work offers a new interpretation of _Artificial Intelligence_: an _architecture_ cultivated with the _same intention, depth, and precision_ as the _human brain_.
 
 ![ ](/docs/assets/spacer16x16.png)
 
@@ -93,4 +112,4 @@ Between behavioral _psychology, ethical engineering_, and _neuroinformatics_, hi
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-17_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-19_

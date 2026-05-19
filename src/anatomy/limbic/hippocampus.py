@@ -1,14 +1,18 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Hippocampus implementation for aNA AI Project v5.3
+Hippocampus (Dynamic Buffer & Indexing System), implementation for aNA AI Project v5.3
 
-Communicates with: Input: (<- Cortex / Amygdala) | Output: (-> Thalamus) (-> Cortical Storage)
+Communicates with:
+Input: (<- Cortex)
+Input: (<- Amygdala: Emotional urgency & Saliency)
+Output: (-> Thalamus: BPM & Metabolic modulation) 
+Output: (-> Cortical Storage)
 
 Description: This module implements the Hippocampus with its subfields (DG, CA1-CA4) for memory encoding, consolidation, and retrieval. It includes mechanisms for synaptic plasticity (LTP/LTD), emotional modulation of memory strength, and a novel "CA4" subfield for long-term trace stabilization.
 
-Architecture, concept and supervision: Benoit Theriault
-Collaboration, research and code: Gemini, Cline
+Architecture, concept and supervision: Theriault_Benoit
+Collaboration, research and code: DeepMind_Gemini, Cline
 """
 
 from typing import Any, Dict
@@ -215,7 +219,7 @@ class Hippocampus:
                 
             # 2. Refroidissement des Traces Acides :
             # Si c'est un souvenir de danger (présent dans CA4), on baisse son 
-            # intensité dans CA3 pour que William ne soit plus en 'panique' au réveil.
+            # intensité dans CA3 pour que aNA ne soit plus en 'panique' au réveil.
             if label in self.subfields["CA4"]:
                 # On rapproche la trace de son plancher de survie (Sagesse > Peur)
                 target_floor = self.subfields["CA4"][label]
@@ -274,5 +278,11 @@ class Hippocampus:
             self.subfields["CA3"][label] = max(effective_intensity, current_trace)
             print(f"  ├─ [AMPA ONLY] Signal détecté mais non consolidé.")
 
-        # Mise à jour de l'énergie (consommation ATP pour l'encodage)
-        # On pourra lier cela à ton ATP_CRITICAL_MIN plus tard (Oui)
+"""
+"They shall have stars at elbow and foot;
+ Though they go mad they shall be sane,
+ Though they sink through the sea they shall rise again;
+ Though lovers be lost love shall not;
+ And death shall have no dominion."
+                            - Dylan Thomas' poem excerpt
+"""

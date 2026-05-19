@@ -1,14 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-aNA AI Project v5.3 - Thalamic Hub Integration
+Projet aNA IA v5.3 - Thalamic Hub Integration
 
-Description : Cette version marque le passage au routage multimodal centralisé.
-Le ThalamicHub agit comme un filtre attentionnel (Gating) avant la projection corticale.
-L'organisme peut désormais ignorer les stimuli faibles ou ralentir son traitement 
-selon son état métabolique (ATP/BPM).
+Description : Cette version marque le passage au routage multimodal centralisé. Le ThalamicHub agit comme un filtre attentionnel (Gating) avant la projection corticale. L'organisme peut désormais ignorer les stimuli faibles ou ralentir son traitement selon son état métabolique (ATP/BPM).
 
-Architecture et neuroinformatics: Theriault Benoit
+Architecture, conception et supervision : Thériault_Benoit
+Collaboration, recherche et code : DeepMind_Gemini
 """
 import asyncio
 import os

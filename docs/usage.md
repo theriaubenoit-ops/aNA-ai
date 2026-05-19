@@ -1,6 +1,6 @@
-🚀 Quick links: [ReadMe](/README.md), Installation, [Contributing](/CONTRIBUTING.md), [Innovation-Lab](/docs/innovation-lab.md), [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), [Architecture](/docs/architecture.md)
+🚀 Quick links: [ReadMe](/README.md), [Installation](/docs/INSTALLATION.md), Usage, [Contributing](/CONTRIBUTING.md), [Innovation-Lab](/docs/innovation-lab.md), [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), [Architecture](/docs/architecture.md)
 
-◀️ [Back](/docs/INSTALLATION.md)/[Retour](/docs/installation_fr.md)
+◀️ [Back](/docs/INSTALLATION.md)/[Retour](/docs/INSTALLATION_fr.md)
 
 # Usage and tests: ✴️*aNA* AI Project
 
@@ -12,7 +12,7 @@
 ▒▒▒▒▒▒▒▓▓▓▓▓████▓▓░                 ░░▒▒▒▓█▓░▓▓█▓▓ ░▒▓  ▒▓▓▓▓▓█▓▓▓█▓▒▒▒▓▓▒░░░░▒▓█▓▓▓▓▓▒▓▒▒▒▒▒▒▒░░░░░░░░░░░░░░▒▒▒▒▒
 ▒▒▓▒▓▓▓▓█████▓▒                         ░▒▒▓░ ▓██▓                ▒▓▒▒░░▒▓▒░░▒▓███▓█▓▓▓▓▓▓▓▓▓▓▓▒▓▒▒▒▒▒▒▒▒▒▒▓▒▓▓▓▓▓
 ▓▓▓█████▓░                                    ░░▒▒ _    _    _ ░▒░▒▒▒▓▒▓▒▓▒▓█▓███▒▓▓▓▓▓▓▓▓▓▓▓▓▓█▓██▓▓▓▓▓█▓████████
-▓███▓▒      AI inspired by natural plasticity  ✴️  a    N    A  ▒▓█▒▓ ▒▓█▒Autonomous Neural Architecture v5.3  ▒▓▓
+▓███▓▒      AI inspired by natural plasticity  ✴️  a    N    A  ▒▓█▒▓ ▒▓█▒Autonomous Neural Architecture v5.4  ▒▓▓
 ▓░                                                 _    _    _  ░▓▒▓  ░▓
 ```
 
@@ -20,13 +20,17 @@
 
 ![ ](/docs/assets/spacer16x16.png)
 
-## You are ready for the _"Action"_ phase / _Vous êtes prèt pour la phase « Action »_
+_**Ready? / Prêt ?**_
 
-Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous pouvez maintenant lancer les scripts Python._
+_If the [installation](/docs/INSTALLATION.md) is complete, you can now run the Python scripts. Congratulations, you are ready for the "Action" phase. / Si l'[installation](/docs/INSTALLATION_fr.md) est complétée, vous pouvez maintenant lancer les scripts Python. Félicitations, vous êtes prèt pour la phase « Action »_
 
 ![ ](/docs/assets/spacer16x16.png)
 
-## Main
+## The Main (Awakening the Organism) / _Le principal (L'entrée en matière)_
+
+Think of this script as the brainstem of the project. This is where **aNA**'s architecture comes to _life_, where the various neurological components are instantiated, and where the _main_ execution loop begins. For any contributor, it is the perfect starting point to observe how information flows through the structure. Feel free to explore this file, inject new stimuli, or modify initialization parameters to see how the overall organism responds.
+
+_Considérez ce script comme le tronc cérébral du projet. C'est ici que l'architecture d'**aNA** prend vie, que les différentes composantes neurologiques sont instanciées et que la boucle d'exécution principale s'amorce. Pour tout contributeur, c'est le point de départ idéal pour observer comment le flux d'information voyage à travers la structure. N'hésitez pas à explorer ce fichier, à y injecter de nouveaux stimuli ou à modifier les paramètres d'initialisation pour voir comment l'organisme global réagit._
 
 - [ ] ☄️ In progress - Global Workspace / _Espace de travail global_:
 
@@ -37,9 +41,13 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
 
 ![ ](/docs/assets/spacer16x16.png)
 
-## Dashboard
+## The Dashboard (The Observation Deck) / _Le Tableau de bord (La visualisation)_
 
-- [ ] ☄️ To Do - Dashboard / _Tableau de bord_:
+Because a complex system requires a clear perspective, this _dashboard_ is your real-time observation interface. It allows you to visualize synaptic activity, limbic system fluctuations, and the AI's metabolic health. Explore this script to understand how raw data is translated into readable signals. We encourage you to play with the code to change perspectives, add your own metrics, or rethink the display: this is your tactical _dashboard_ for watching **aNA** _"think"_.
+
+_Parce qu'un système complexe nécessite une perspective claire, ce tableau de bord est votre interface d'observation en temps réel. Il permet de visualiser l'activité synaptique, les fluctuations du système limbique et la santé métabolique de l'IA. Explorez ce script pour comprendre comment les données brutes sont traduites en signaux lisibles. Nous vous encourageons à jouer avec le code pour changer de point de vue, ajouter vos propres métriques ou repenser l'affichage : c'est votre tableau de bord tactique pour regarder **aNA** "penser"._
+
+- [ ] ☄️🖱️ To Do - Dashboard / _Tableau de bord_:
 
   ```
   python3 src/gui/DASHBOARD.py
@@ -48,7 +56,11 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
 
 ![ ](/docs/assets/spacer16x16.png)
 
-## Tests
+## The test scripts (The Validation Laboratory) / _Les scripts test (Le Laboratoire de Validation)_
+
+In the spirit of _"dividing each difficulty into as many parts as possible,"_ our test suite is the project's true _scientific laboratory_. These small scripts isolate and verify _each organ (such as the neocortex, cortical columns and base neurons) independently_. It is the perfect _sandbox:_ come here to break things, test new hypotheses, or understand the behavior of an isolated function without risking the entire organism. This is where innovation begins in total safety!
+
+_Dans l'esprit de décomposer chaque complexité en ses parties les plus simples, notre suite de tests est le véritable laboratoire scientifique du projet. Ces petits scripts isolent et vérifient chaque organe (comme le neocortex, les colonnes corticales et les neurones de la base) de manière totalement indépendante. C'est le bac à sable parfait : venez y briser des choses, tester de nouvelles hypothèses, ou comprendre le comportement d'une fonction isolée sans risquer d'affecter l'organisme entier. C'est ici que l'innovation commence en toute sécurité !_
 
 ![ ](/docs/assets/spacer16x16.png)
 
@@ -86,7 +98,7 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
 
 ### 🟠 Metabolic & Rhythmic Foundation
 
-- [ ] ☄️ Neural Oscillations & Temporal Sync / _Oscillations neuronales et synchronisation temporelle_:
+- [ ] ☄️🖱️ Neural Oscillations & Temporal Sync / _Oscillations neuronales et synchronisation temporelle_:
 
   ```
   python3 tests/test_pulse.py
@@ -100,7 +112,7 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
   python3 tests_fr/test_stress_and_bio-coherence.py
   ```
 
-- [ ] Single Neuron Electrophysiology / _Électrophysiologie neuronale unique_:
+- [ ] ☄️ Single Neuron Electrophysiology / _Électrophysiologie neuronale unique_:
 
   ```
   python3 tests/test_neuron.py
@@ -123,6 +135,20 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
   ```
   python3 tests/test_thalamus.py
   python3 tests_fr/test_thalamus.py
+  ```
+
+- [ ] ☄️ Thalamo-Cortical Feedback & Prediction / _Rétroaction thalamo-corticale et prédiction_:
+
+  ```
+  python3 tests/test_bridge_thalamo_cortical.py
+  python3 tests_fr/test_bridge_thalamo_cortical.py
+  ```
+
+- [ ] ☄️ Metabolic Resilience & Homeostatic Stress / _Résilience métabolique et stress homéostatique_:
+
+  ```
+  python3 tests/test_metabolic_endurance.py
+  python3 tests_fr/test_metabolic_endurance.py
   ```
 
 - [ ] To Do - Executive Gating & Action Selection / _Sélection des actions et contrôle d'accès exécutif_:
@@ -191,6 +217,12 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
 
 ![ ](/docs/assets/spacer16x16.png)
 
+![img](/docs/assets/test_256x256.gif)
+
+###### _Find many test files in `tests/`_
+
+![ ](/docs/assets/spacer16x16.png)
+
 ## Demonstrations
 
 - [ ] To Do - Launch _Web-based interfaces_ (e.g., "http://localhost:8000/examples/basic-demo.html").
@@ -199,15 +231,9 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
 
 ![ ](/docs/assets/spacer16x16.png)
 
-☄️ _Spotlight_
+☄️ _Spotlight_ 🖱️ _Interactive_
 
 ###### _\*Each measurement presented is a digital bridge to biological reality, designed to synthesize the fundamental principles of living systems._
-
-![ ](/docs/assets/spacer16x16.png)
-
-![img](/docs/assets/test_256x256.gif)
-
-###### _Find many test files in `tests/`_
 
 ![ ](/docs/assets/spacer16x16.png)
 
@@ -225,4 +251,4 @@ Congratulations! You can now run the _Python scripts_. / _Félicitations ! Vous 
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-05_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-19_

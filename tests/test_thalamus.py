@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-aNA AI Project v5.3 - Test Thalamus 
+aNA AI Project v5.4 - Test Thalamus 
 
 Description: This test is designed to validate the core functionalities of the thalamus module in complete isolation. It simulates a simple data stream to verify that the thalamus processes inputs correctly, integrates feedback from the hippocampus, and modulates outputs based on chemical states. The test covers sensory processing, thalamo-cortical gain modulation, and the influence of neuromodulators on thalamic function.
 
-Architecture and neuroinformatics: Theriault Benoit
+Architecture, concept and supervision: Theriault_Benoit
+Collaboration, research and code: DeepMind_Gemini
 """
 import unittest
 import numpy as np
@@ -24,7 +25,7 @@ from src.anatomy.subcortical.thalamus import Thalamus
 from src.anatomy.limbic.hippocampus import Hippocampus
 from src.anatomy.base.neuromodulator import Neuromodulator
 from src.config import get_config
-# from registry import ORGANS
+from src.registry import ORGANS
 
 def create_ascii_header():
     print(f"\033c") 
@@ -103,13 +104,20 @@ async def test_sensory_cascade():
         await thalamus.hippo.consolidate_and_prune()
 
     print("\n" + "="*50)
-    print(" ☀️ PHASE 3: AWAKENING AND WISDOM")
+    print(" ☀️ PHASE 3: AWAKENING WITH MOTIVATION BOOST")
+    # print("="*50)
+
+    thalamus.pulse.inject_stimulus(0.5) 
+    print(f" [STIMULUS] Systemic injection: +0.5 Dopamine")
     print("="*50)
+
+    # result = await thalamus.process_payload(stimulus_A, neurom, l6_feedback=0.8)
     
     heart.atp = 1.0
     heart.is_refractory = False
     heart.bpm = 110.0 
-    result_sagesse = await thalamus.process_payload(stimulus, neurom, l6_feedback=l6_mock)
+    # result_sagesse = await thalamus.process_payload(stimulus, neurom, l6_feedback=l6_mock)
+    result_sagesse = await thalamus.process_payload(stimulus, neurom, l6_feedback=0.8)
     if "bpm" in result_sagesse:
         print(f"  [Result] BPM after consolidation: {result_sagesse['bpm']:.2f} BPM")
     else:
@@ -119,5 +127,5 @@ async def test_sensory_cascade():
     print("   designed to synthesize the fundamental principles of living systems.\n")
 
 if __name__ == "__main__":
-    create_ascii_header()  
+    create_ascii_header()
     asyncio.run(test_sensory_cascade())

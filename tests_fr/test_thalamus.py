@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Project aNA AI v5.2 - Test Thalamus
+Projet aNA IA v5.2 - Test Thalamus
 
 Description : Ce test est conçu pour valider les fonctionnalités de base du module thalamus en isolement complet. Il simule un flux de données simple pour vérifier que le thalamus traite correctement les entrées, intègre les commentaires de l'hippocampe et module les sorties en fonction des états chimiques. Le test couvre le traitement sensoriel, la modulation du gain thalamo-cortical et l'influence des neuromodulateurs sur la fonction thalamique.
 
-Architecture et neuroinformatique : Thériault Benoit
+Architecture, conception et supervision : Thériault_Benoit
+Collaboration, recherche et code : DeepMind_Gemini
 """
 import unittest
 import numpy as np
@@ -25,7 +26,7 @@ from src.anatomy.limbic.hippocampus import Hippocampus
 from src.anatomy.base.neuromodulator import Neuromodulator
 from src.config import get_config
 from src.registry import ORGANS
-    
+
 def create_ascii_header():
     print(f"\033c") 
     print("░              ░ ░░░▒▒▓▒▓▒▒▒▒▒░░▒▒░▒▒▒▓▒▓▒                                                                     ░ ░")
@@ -108,12 +109,18 @@ async def test_sensory_cascade():
 
     print("\n" + "="*50)
     print(" ☀️ PHASE 3 : LE RÉVEIL ET LA SAGESSE")
+    # print("="*50)
+    thalamus.pulse.inject_stimulus(0.5) 
+    print(f" [STIMULUS] Injection systémique : +0.5 Dopamine")
     print("="*50)
+
+    # result = await thalamus.process_payload(stimulus_A, neurom, l6_feedback=0.8)
     
     heart.atp = 1.0
     heart.is_refractory = False
-    heart.bpm = 110.0
-    result_sagesse = await thalamus.process_payload(stimulus, neurom, l6_feedback=l6_mock)
+    heart.bpm = 110.0 
+    # result_sagesse = await thalamus.process_payload(stimulus, neurom, l6_feedback=l6_mock)
+    result_sagesse = await thalamus.process_payload(stimulus, neurom, l6_feedback=0.8)
     if "bpm" in result_sagesse:
     
         print(f"  [Résultat] BPM après consolidation: {result_sagesse['bpm']:.2f} BPM")

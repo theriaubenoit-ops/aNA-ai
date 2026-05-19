@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Neuron implementation for aNA AI Project v5.3 - The fundamental unit of the aNA architecture
+Neuron implementation (Atomic Processing Nodes. The fundamental unit of the architecture) for aNA AI Project v5.4
 
-Communicates with: Input: (<- Synapses) | Output: (-> Axon / Post-synaptic targets)
+Communicates with: 
+Input: (<- Synapses) 
+Output: (-> Axon / Post-synaptic targets)
 
 Description: This class represents a single neuron with:
 - 3D spatial positioning and relationships
@@ -12,8 +14,8 @@ Description: This class represents a single neuron with:
 - Layer-specific properties for cortical organization
 - Integration with neuromodulator systems
 
-Architecture, concept and supervision: Benoit Theriault
-Collaboration, research and code: Gemini, GPT
+Architecture, concept and supervision: Theriault_Benoit
+Collaboration, research and code: DeepMind_Gemini, GPT
 """
 import numpy as np
 from typing import Tuple, Optional, Dict, Any
@@ -22,13 +24,14 @@ import os
 import sys
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
-from config import get_config
-from registry import ORGANS
+from src.config import get_config
+from src.registry import ORGANS
 
 @dataclass
 class NeuronConfig:
     """Configuration avancée pour la simulation AMPA/NMDA et Myéline"""
-    
+    config = get_config()
+
     # Plasticité AMPA/NMDA (LTP)
     learning_rate: float = 0.02       # Pas d'apprentissage de base (AMPA)
     nmda_threshold: float = 0.4      # Seuil pour activer la mémoire profonde
@@ -46,7 +49,7 @@ class NeuronConfig:
     base_energy_consumption: float = 0.01 # Métabolisme
     firing_energy_cost: float = 0.1 # Métabolisme
     energy_recovery_rate: float = 0.005 # Métabolisme
-    min_energy_threshold: float = 0.1
+    atp_critical_min: float = config.get("ATP_CRITICAL_MIN", 0.10) # 0.1
     
     # Structural properties
     dendritic_radius: float = 50.0  # micrometers
@@ -56,7 +59,6 @@ class NeuronConfig:
     layer_id: int = 0  # 0-5 for cortical layers I-VI
     layer_threshold_modifier: float = 1.0
     layer_connectivity_modifier: float = 1.0 # Anatomie
-
 
 class Neuron:
     """
@@ -70,7 +72,7 @@ class Neuron:
     - Integration with neuromodulatory systems
     """
     
-    def __init__(self, position: np.ndarray, config: Optional[NeuronConfig] = None):
+    def __init__(self, position: np.ndarray, config: Optional[NeuronConfig] = None, **kwargs):
         """
         Initialize a neuron with 3D position and configuration.
         
@@ -80,6 +82,9 @@ class Neuron:
         """
         self.position = np.array(position, dtype=float)
         self.config = config or NeuronConfig()
+        config = get_config()
+
+        self.extra_data = kwargs
 
         # Synaptic properties
         self.ampa_receptors = 0.1  # Sensibilité de base
@@ -92,12 +97,12 @@ class Neuron:
         self.is_firing = False
         
         # Energy state
-        self.energy_level = 1.0  # Normalized 0.0 to 1.0
+        self.atp_flux = 1.0  # 1.0 Normalized 0.0 to 1.0
         self.energy_consumed = 0.0
         
         # Structural state
         self.synaptic_strength = 1.0
-        self.myelination_level = 0.0
+        self.myelination_level = config.get("MAX_MYELIN_DENSITY", 0.0)
         self.plasticity = 0.5
         
         # Activity tracking
@@ -105,13 +110,15 @@ class Neuron:
         self.last_spike_time = -1
         self.activity_counter = 0
         
-        # Neuromodulator sensitivity [Double? See neuromodulator.py]
+        # Neuromodulator sensitivity 
         self.neuromodulator_sensitivity = {
-            'dopamine': 1.0,
             'acetylcholine': 1.0,
-            'serotonin': 1.0,
-            'norepinephrine': 1.0,
-            'no_gas': 1.0
+            'adrenaline': 1.0,
+            'cortisol': 1.0,
+            'dopamine': 1.0,
+            'no_gas': 1.0,
+            'noradrenaline': 1.0, # or norepinephrine
+            'serotonin': 1.0
         }
         
         # Layer-specific properties
@@ -176,7 +183,7 @@ class Neuron:
             input_strength: Raw synaptic input strength
             neuromodulators: Current neuromodulator levels in the local environment
         """
-        if self.refractory_timer > 0 or self.energy_level < self.config.min_energy_threshold:
+        if self.refractory_timer > 0 or self.atp_flux < self.config.atp_critical_min:
             return
         
         # Apply neuromodulator effects
@@ -212,17 +219,38 @@ class Neuron:
         
         return input_strength * modulation_finale
     
-    def update(self, time_step: int, neuromodulators: Dict[str, float] = None):
+    def update(self, time_step: int, neuromodulators: Dict[str, float] = None, **kwargs):
         """
         Version v5.3.1 - Intégration de la garde métabolique
         """
+        config = get_config()
+        atp_limit = config.get("ATP_CRITICAL_THRESHOLD", 0.10)
+        self.conductivity = config.get("BASE_CONDUCTIVITY", 0.7)
+        # Le signal sortant est modulé par la conductivité physique
+        effective_signal = self.membrane_potential * self.conductivity
+        
+        nm = neuromodulators or {}
+
+        dopamine = nm.get("dopamine", 0.1)
+        acetylcholine = nm.get("acetylcholine", 0.1)
+        norepinephrine = nm.get("norepinephrine", 0.1)
+        # On peut même prévoir l'adrénaline ici !
+        adrenaline = nm.get("adrenaline", 0.0)
+
+        self._update_electrical_dynamics(dopamine, acetylcholine)
+        self._update_metabolism(norepinephrine)
+
         # 1. GARDE : Si l'énergie est sous le seuil critique (ex: 0.1),
         # le neurone entre en état de "Sommeil Métabolique".
-        if self.energy_level < self.config.min_energy_threshold:
+        if self.atp_flux < atp_limit:
             self.is_firing = False
-            self.membrane_potential = self.config.resting_potential # Reset électrique
-            self._update_energy() # On ne fait que tenter de récupérer l'énergie
-            return 
+            # On utilise la config globale pour le potentiel de repos également
+            self.membrane_potential = config.get("RESTING_POTENTIAL", -70.0)
+            
+            # On ne fait que de la récupération passive (anabolisme)
+            # sans aucune dépense (catabolisme)
+            self._recover_passive_energy() 
+            return
 
         # 2. Logique électrique normale si assez d'énergie
         if self.refractory_timer > 0:
@@ -252,7 +280,20 @@ class Neuron:
         if len(self.spike_history) > 100:  # Keep last 100 spikes
             self.spike_history.pop(0)
     
+    def _update_electrical_dynamics(self, dopamine: float, acetylcholine: float):
+        """Ajuste la sensibilité électrique selon la chimie."""
+        # La dopamine réduit le bruit (augmente la précision)
+        # L'acétylcholine stabilise le potentiel de repos
+        boost = (dopamine * 0.2) + (acetylcholine * 0.1)
+        self.membrane_potential += boost
+        # On évite que la chimie ne fasse feu d'elle-même
+        self.membrane_potential = min(self.membrane_potential, self.config.threshold_potential - 1)
 
+    def _update_metabolism(self, norepinephrine: float):
+        """La noradrénaline booste la récupération d'ATP (mode survie/alerte)."""
+        if norepinephrine > 0.5:
+            # On accélère la pompe à ATP si on est en état d'alerte
+            self.atp_flux = min(1.0, self.atp_flux + (self.config.energy_recovery_rate * norepinephrine))
 
     def _update_energy(self):
         """Modèle de respiration métabolique aNA v5.3.2"""
@@ -266,18 +307,18 @@ class Neuron:
             energy_cost += self.config.firing_energy_cost
         
         # 3. APPLICATION : On retire l'énergie consommée
-        self.energy_level -= (energy_cost * self.config.layer_connectivity_modifier)
+        self.atp_flux -= (energy_cost * self.config.layer_connectivity_modifier)
         
         # 4. GAIN : La "Pompe à Glucose" (Récupération lente)
         if not self.is_firing:
             # Remontée lente suggérée pour l'inaction
-            self.energy_level += 0.015 # 0.014 minimum, pour éviter les problèmes de récupération
+            self.atp_flux += 0.015 # 0.014 minimum, pour éviter les problèmes de récupération
         else:
             # Récupération de base (synthèse ATP standard)
-            self.energy_level += self.config.energy_recovery_rate
+            self.atp_flux += self.config.energy_recovery_rate
         
         # 5. ÉQUILIBRE : Clamp de sécurité entre 0 et 1
-        self.energy_level = max(0.0, min(1.0, self.energy_level))
+        self.atp_flux = max(0.0, min(1.0, self.atp_flux))
     
     def _update_plasticity(self, neuromodulators: dict = None):
         """
@@ -342,7 +383,7 @@ class Neuron:
         
         # 2. Facteur Métabolique (Vitalité)
         # Un niveau d'énergie bas affaiblit physiquement le signal de sortie.
-        modulateur_energie = self.energy_level
+        modulateur_energie = self.atp_flux
         
         # 3. Facteur de Plasticité (LTP)
         # Reflète l'efficacité synaptique apprise au fil des cycles.
@@ -357,13 +398,27 @@ class Neuron:
         self.membrane_potential = self.config.resting_potential
         self.refractory_timer = 0
         self.is_firing = False
-        self.energy_level = 1.0
+        self.atp_flux = 1.0
         self.energy_consumed = 0.0
         self.spike_history = []
         self.last_spike_time = -1
         self.activity_counter = 0
         self.plasticity = 0.5
         self.myelination_level = 0.0
+
+    def _recover_passive_energy(self):
+        """
+        Récupération métabolique sans activité (Anabolisme pur).
+        Le neurone recharge ses réserves d'ATP sans aucune dépense liée au signal.
+        """
+        config = get_config()
+        
+        # On récupère le taux de récupération dans la config
+        # ou on utilise une valeur de base (ex: 0.05)
+        recovery_rate = config.get("METABOLIC_RECOVERY_RATE", 0.05)
+        
+        # Augmentation de l'atp_flux sans dépasser le maximum (1.0)
+        self.atp_flux = min(1.0, self.atp_flux + recovery_rate)
 
 
 class NeuronPopulation:
@@ -425,7 +480,7 @@ class NeuronPopulation:
         """Get average energy level of the population"""
         if not self.neurons:
             return 0.0
-        return np.mean([n.energy_level for n in self.neurons])
+        return np.mean([n.atp_flux for n in self.neurons])
     
     def get_activity_rate(self) -> float:
         """Get percentage of neurons currently firing"""

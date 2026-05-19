@@ -1,14 +1,18 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Cerebellum implementation for aNA AI Project v5.3
+Cerebellum (Timing Engine & Output Calibration), implementation for aNA AI Project v5.3
 
-Communicates with: Input: (<- Cortex / Thalamus) | Output: (-> Motor Outputs / Feedback Loop)
+Communicates with:
+Input: (<- Cortex)
+Input: (<- Thalamus: BPM & Metabolic modulatio)
+Output: (-> Outputs Motor)
+Output: (-> Feedback Loop)
 
 Description: This module implements the Cerebellum with its key layers (Granule, Purkinje, Molecular) and deep nuclei for motor coordination, cognitive processing, and error correction. It integrates with the ChemicalCore for neuromodulatory influences, particularly norepinephrine (Arousal) and serotonin (Mood). The Cerebellum processes mossy fiber and climbing fiber inputs to modulate motor output and cognitive functions through its inhibitory control of the deep nuclei.
 
-Architecture, concept and supervision: Benoit Theriault
-Collaboration, research and code: Gemini
+Architecture, concept and supervision: Theriault_Benoit
+Collaboration, research and code: DeepMind_Gemini, Cline
 """
 
 import os

@@ -1,4 +1,4 @@
-🚀 Quick links: [ReadMe](/README.md), [Installation](/docs/INSTALLATION.md), [Contributing](/CONTRIBUTING.md), Innovation-Lab, [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), [Architecture](/docs/architecture.md)
+🚀 Quick links: [ReadMe](/README.md), [Installation](/docs/INSTALLATION.md), [Usage](/docs/usage.md), [Contributing](/CONTRIBUTING.md), Innovation-Lab, [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), [Architecture](/docs/architecture.md)
 
 ![ ](/docs/assets/spacer16x16.png)
 
@@ -12,7 +12,7 @@
 ▒▒▒▒▒▒▒▓▓▓▓▓████▓▓░                 ░░▒▒▒▓█▓░▓▓█▓▓ ░▒▓  ▒▓▓▓▓▓█▓▓▓█▓▒▒▒▓▓▒░░░░▒▓█▓▓▓▓▓▒▓▒▒▒▒▒▒▒░░░░░░░░░░░░░░▒▒▒▒▒
 ▒▒▓▒▓▓▓▓█████▓▒                         ░▒▒▓░ ▓██▓                ▒▓▒▒░░▒▓▒░░▒▓███▓█▓▓▓▓▓▓▓▓▓▓▓▒▓▒▒▒▒▒▒▒▒▒▒▓▒▓▓▓▓▓
 ▓▓▓█████▓░                                    ░░▒▒ _    _    _ ░▒░▒▒▒▓▒▓▒▓▒▓█▓███▒▓▓▓▓▓▓▓▓▓▓▓▓▓█▓██▓▓▓▓▓█▓████████
-▓███▓▒      AI inspired by natural plasticity  ✴️  a    N    A  ▒▓█▒▓ ▒▓█▒Autonomous Neural Architecture v5.3  ▒▓▓
+▓███▓▒      AI inspired by natural plasticity  ✴️  a    N    A  ▒▓█▒▓ ▒▓█▒Autonomous Neural Architecture v5.4  ▒▓▓
 ▓░                                                 _    _    _  ░▓▒▓  ░▓
 ```
 
@@ -32,7 +32,36 @@ _Thank you for being part of this journey to bring **aNA** to life!_
 
 ![ ](/docs/assets/spacer32x32.png)
 
-## v5.3: The Thalamic Hub _(At The Gate of Consciousness) — In progress_
+## v5.4: Tests Validation _(Scientific Accuracy) — In progress_
+
+**☄️ Thalamo-Metabolic Suture**
+Introduction of _SURVIVAL_DRIVE_: Sensory filtering _(RTN)_ is now inversely proportional to energy requirements _([test_thalamus(.py)](/tests/test_thalamus.py))_.
+
+Foraging Instinct: A system in deficit becomes more _"curious"_ and _permeable_ to stimuli, simulating the _biological drive_ to seek resources when internal reserves are low.
+
+**☄️ Striatal Barrier Optimization**
+From Penalty to Tension: The rigid exponential function has been abandoned in favor of a dynamic _ATP/Survival_-Drive compensation.
+
+Balance: True intelligence lies not in _punishing fatigue_, but in the _tension_ between the _cost of effort_ and the _urgency of the need_. **aNA** can now operate _"under pressure,"_ prioritizing _vital actions_ even when _exhausted_.
+
+**Philosophical Note**
+_Consciousness is not merely an algorithm; it is the uninterrupted communication between organs. If one organ falls silent, the organism ceases to exist._
+
+**The Triple-Test Validation Framework**
+To ensure both _scientific accuracy_ and _technical robustness_, **aNA** _v5.4_ is validated through _three core experimental scripts_:
+
+**☄️ Unit Precision _([test_neuron(.py)](/tests/test_neuron.py))_**
+Explores the atomic level of the project. It validates the _NMDA_-inspired memory suture, ensuring that traces are not just _"saved"_ but biologically integrated through simulated _Long-Term Potentiation (LTP)_.
+
+**☄️ Structural Communication _([test_bridge_thalamo_cortical(.py)](/tests/test_bridge_thalamo_cortical.py))_**
+Validates the dynamic dialogue between the _[thalamic_hub(.py)](/src/anatomy/subcortical/thalamic_hub.py)_ and the _[neocortex(.py)](/src/anatomy/cortical/neocortex.py)_. It demonstrates how _Layer 6 (L6) Feedback_ provides top-down modulation, allowing the system to filter out up to _90%_ of predictable sensory _noise_.
+
+**☄️ Global Homeostasis _([test_metabolic_endurance(.py)](/tests/test_metabolic_endurance.py))_**
+The ultimate _stress test_. This script monitors the decay and recovery of _virtual ATP_. It proves that the system can autonomously switch to a _"Meditative Communication" (Alpha State)_ where it remains receptive to user guidance through _resonate()_ without interrupting its metabolic recovery.
+
+![ ](/docs/assets/spacer16x16.png)
+
+### v5.3: The Thalamic Hub _(At The Gate of Consciousness)_
 
 In the **aNA** AI Project, the _[thalamic_hub(.py)](/src/anatomy/subcortical/thalamic_hub.py)_ acts as the central multimodal sensory integrator. Unlike traditional _AI data routers_, the **Hub** operates as a biological _"Gate,"_ simulating the **thalamocortical loops** that define _human focus_ and situational awareness.
 

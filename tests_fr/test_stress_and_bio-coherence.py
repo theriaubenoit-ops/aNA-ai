@@ -5,7 +5,8 @@ Projet aNA IA v5.3 -  Test du stress métabolique et de la biocohérence
 
 Description: Ce test vise à valider la cohérence biologique de l'implémentation du neuromodulateur et du neurone en simulant des scénarios de stress métabolique (épuisement énergétique) et de stress chimique (injection de noradrénaline). Nous vérifierons que le neurone réagit de manière appropriée à ces conditions, notamment en cessant son activité en cas d'épuisement énergétique et en augmentant sa plasticité en réponse à une stimulation noradrénergique.
 
-Architecture et neuroinformatique : Thériault Benoit
+Architecture, conception et supervision : Thériault_Benoit
+Collaboration, recherche et code : DeepMind_Gemini
 """
 import unittest
 import numpy as np
@@ -57,10 +58,10 @@ async def test_stress_v53():
         neuron.update(i, chemistry.get_matrix())
         
         if i % 10 == 0:
-            print(f"Cycle {i} | Énergie: {neuron.energy_level:.2f} | Activité: {neuron.is_firing}")
+            print(f"Cycle {i} | Énergie: {neuron.atp_flux:.2f} | Activité: {neuron.is_firing}")
             
     # Vérification : Le neurone DOIT s'arrêter malgré l'input
-    assert neuron.energy_level >= 0.0, "ERREUR : Énergie négative !"
+    assert neuron.atp_flux >= 0.0, "ERREUR : Énergie négative !"
     
     # 3. Phase 2 : Test de Fixation (Limbique + Hippocampe)
     print("\nPhase 2 : Test de Fixation via Système Limbique...")

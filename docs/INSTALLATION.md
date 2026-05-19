@@ -1,4 +1,4 @@
-🚀 Quick links: [ReadMe](/README.md), Installation, [Contributing](/CONTRIBUTING.md), [Innovation-Lab](/docs/innovation-lab.md), [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), [Architecture](/docs/architecture.md)
+🚀 Quick links: [ReadMe](/README.md), Installation, [Usage](/docs/usage.md), [Contributing](/CONTRIBUTING.md), [Innovation-Lab](/docs/innovation-lab.md), [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), [Architecture](/docs/architecture.md)
 
 Instructions française : [installation (fr)](/docs/INSTALLATION_fr.md)
 
@@ -12,7 +12,7 @@ Instructions française : [installation (fr)](/docs/INSTALLATION_fr.md)
 ▒▒▒▒▒▒▒▓▓▓▓▓████▓▓░                 ░░▒▒▒▓█▓░▓▓█▓▓ ░▒▓  ▒▓▓▓▓▓█▓▓▓█▓▒▒▒▓▓▒░░░░▒▓█▓▓▓▓▓▒▓▒▒▒▒▒▒▒░░░░░░░░░░░░░░▒▒▒▒▒
 ▒▒▓▒▓▓▓▓█████▓▒                         ░▒▒▓░ ▓██▓                ▒▓▒▒░░▒▓▒░░▒▓███▓█▓▓▓▓▓▓▓▓▓▓▓▒▓▒▒▒▒▒▒▒▒▒▒▓▒▓▓▓▓▓
 ▓▓▓█████▓░                                    ░░▒▒ _    _    _ ░▒░▒▒▒▓▒▓▒▓▒▓█▓███▒▓▓▓▓▓▓▓▓▓▓▓▓▓█▓██▓▓▓▓▓█▓████████
-▓███▓▒      AI inspired by natural plasticity  ✴️  a    N    A  ▒▓█▒▓ ▒▓█▒Autonomous Neural Architecture v5.3  ▒▓▓
+▓███▓▒      AI inspired by natural plasticity  ✴️  a    N    A  ▒▓█▒▓ ▒▓█▒Autonomous Neural Architecture v5.4  ▒▓▓
 ▓░                                                 _    _    _  ░▓▒▓  ░▓
 ```
 
@@ -20,13 +20,13 @@ Instructions française : [installation (fr)](/docs/INSTALLATION_fr.md)
 
 ![ ](/docs/assets/spacer16x16.png)
 
-## Multi-Platform Installation Guide
+_To ensure optimal configuration of **aNA IA**'s neural architecture, this section helps you to configure its environment according to your system. This is your multi-platform installation Guide. Please read the common and basic then select the guide corresponding to your operating system._
 
-To ensure optimal configuration of _aNA IA_'s neural architecture, this section helps you to configure its environment according to your system.
+![ ](/docs/assets/spacer16x16.png)
 
 ### Common First Steps
 
-Before jumping into OS-specific guides, ensure you have the following ready _(See below instructions)_:
+Before jumping into OS-specific guides, ensure you have the following ready _(See the instructions)_:
 
 - **Git** : Be sure to clone/download the latest version of the Code _aNA-ai.git_.
 - **Python 3.10+** : You had the core engine.
@@ -44,9 +44,7 @@ Here are the universal commands you will use to navigate:
 
 ## Choose your OS
 
-Please select the guide corresponding to your operating system:
-
-![ ](/docs/assets/spacer32x32.png)
+![ ](/docs/assets/spacer16x16.png)
 
 # 🪟 Windows _(PC)_
 
@@ -142,4 +140,4 @@ Once installed, you can verify the _"heartbeat"_ of the project by running a bas
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-04_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-19_

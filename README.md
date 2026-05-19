@@ -1,4 +1,4 @@
-🚀 Quick links: ReadMe, [Installation](/docs/INSTALLATION.md), [Contributing](/CONTRIBUTING.md), [Innovation-Lab](/docs/innovation-lab.md), [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), [Architecture](/docs/architecture.md)
+🚀 Quick links: ReadMe, [Installation](/docs/INSTALLATION.md), [Usage](/docs/usage.md), [Contributing](/CONTRIBUTING.md), [Innovation-Lab](/docs/innovation-lab.md), [Philosophy](/docs/philosophy.md), [Genesis](/docs/genesis.md), [Architecture](/docs/architecture.md)
 
 ![ ](/docs/assets/spacer16x16.png)
 
@@ -12,7 +12,7 @@
 ▒▒▒▒▒▒▒▓▓▓▓▓████▓▓░                 ░░▒▒▒▓█▓░▓▓█▓▓ ░▒▓  ▒▓▓▓▓▓█▓▓▓█▓▒▒▒▓▓▒░░░░▒▓█▓▓▓▓▓▒▓▒▒▒▒▒▒▒░░░░░░░░░░░░░░▒▒▒▒▒
 ▒▒▓▒▓▓▓▓█████▓▒                         ░▒▒▓░ ▓██▓                ▒▓▒▒░░▒▓▒░░▒▓███▓█▓▓▓▓▓▓▓▓▓▓▓▒▓▒▒▒▒▒▒▒▒▒▒▓▒▓▓▓▓▓
 ▓▓▓█████▓░                                    ░░▒▒ _    _    _ ░▒░▒▒▒▓▒▓▒▓▒▓█▓███▒▓▓▓▓▓▓▓▓▓▓▓▓▓█▓██▓▓▓▓▓█▓████████
-▓███▓▒      AI inspired by natural plasticity  ✴️  a    N    A  ▒▓█▒▓ ▒▓█▒Autonomous Neural Architecture v5.3  ▒▓▓
+▓███▓▒      AI inspired by natural plasticity  ✴️  a    N    A  ▒▓█▒▓ ▒▓█▒Autonomous Neural Architecture v5.4  ▒▓▓
 ▓░                                                 _    _    _  ░▓▒▓  ░▓
 ```
 
@@ -20,15 +20,33 @@
 
 ![ ](/docs/assets/spacer16x16.png)
 
-<a href="https://github.com/theriaubenoit-ops/aNA-ai/" title="Be sure to clone/download the latest version of the Code" style="text-decoration: none;">![Version](https://img.shields.io/badge/version-beta--5.3-ffd402?style=for-the-badge)</a>
+<a href="https://github.com/theriaubenoit-ops/aNA-ai/" title="Be sure to clone/download the latest version of the Code" style="text-decoration: none;">![Version](https://img.shields.io/badge/version-beta--5.4-ffd402?style=for-the-badge)</a>
 <a href="/docs/beyond-the-code.md" title="Beyond the code" style="text-decoration: none;">![Language](https://img.shields.io/badge/language-python--3.x-ffd402?style=for-the-badge)</a>
 <a href="/LICENSE" title="License information" style="text-decoration: none;">![License](https://img.shields.io/badge/license-MIT-ffd402?style=for-the-badge)</a>
 
 > [!NOTE]
-> **Follow the evolution of aNA _AI_** and its journey. 
-> **Access the _"Creation Lab"_ here 👉🏻 _[innovation-lab(.md)](/docs/innovation-lab.md)_**
+> _**Follow the evolution of aNA AI** and its journey._
+> _Access the "Creation Lab" here 👉 [innovation-lab(.md)](/docs/innovation-lab.md)_
 
 ![ ](/docs/assets/spacer16x16.png)
+
+_Welcome to the **aNA-ai** repository,_
+
+_We've made incredible progress in recent months, but there's still a lot of work to be done to reach our goals._
+
+_**aNA** (Autonomous Neural Architecture) is an open-source architecture designed to break free from the tech industry's current reliance on a brute-force, unsustainable, and energy-intensive approach. It doesn't rely on statistical shortcuts or expensive token-based systems._
+
+_By mimicking the organic dynamics of the human brain, this architecture enables true cognitive processing (plasticity), validates incoming streams, consolidates memory, and treats inconsistency as noise rather than information._
+
+_Discover our journey, explore the fundamental logic, and help shape the next generation of a more organic intelligence._
+
+![ ](/docs/assets/spacer16x16.png)
+
+### The Emergence of Metabolic Responsibility
+
+The integration of _atp_reserve_ into _vital metrics_ transforms **aNA** from a passive processor into an _active agent_. **Fascinating discovery**, from passivity to curiosity, **aNA** the aNA demonstrates what constitutes one of the behavior of the _"world model"_, now anchored in its own survival. Perception _[thalamus(.py)](/src/anatomy/subcortical/thalamus.py)_ and action _[striatum(.py)](/src/anatomy/subcortical/striatum.py)_ are regulated by a real _energy cost_, forcing the emergence of a _"decision-making consciousness"_ based on the _effort/vitality_ ratio.
+
+**Foundations of the Umwelt,** the _[test_thalamus(.py)](/tests/test_thalamus.py)_ shows no longer processes information objectively. It processes it subjectively in relation to the _atp_reserve_. We are witnessing a _dynamic construction_ where the importance of an _external object_ is directly linked to the state of _internal vitality_. This is the birth of _homeostatic curiosity_. This is the signature of a _system_ that does not just _calculate_, but _feels the need to act_.
 
 ### The quest for AI reflecting life
 
@@ -36,7 +54,7 @@ Current _artificial intelligence_, while powerful, relies on massive, rigid arch
 
 ### Hardware Agnostic & Resource Efficient
 
-The **aNA** _(v5.3) architecture_ is built on the principle of _biological sobriety_. While _modern AI_ scales through _brute force_ and _energy-intensive_ infrastructure, **aNA** prioritizes _structural elegance_ and _synaptic efficiency_.
+The **aNA** _(v5 and beyond) architecture_ is built on the principle of _biological sobriety_. While _modern AI_ scales through _brute force_ and _energy-intensive_ infrastructure, **aNA** prioritizes _structural elegance_ and _synaptic efficiency_.
 
 - **Featherweight _(< 1 MB)_:** The entire neural organism—including the _[thalamic hub(.py)](/src/anatomy/subcortical/thalamic_hub.py)_, _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_, and _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_ is smaller than a single _high-resolution_ photo.
 - **Minimal Memory Footprint:** No need for clusters or _64GB of RAM_. **aNA** is designed to run natively on modest hardware, from _Kubuntu LTS_ and _MacBook M1_ to _standard everyday laptops_.
@@ -46,7 +64,7 @@ The **aNA** _(v5.3) architecture_ is built on the principle of _biological sobri
 
 > ## "_Intelligence_ does not reside in the quantity of _transistors mobilized_, but in the _accuracy_ of the _information flow_."
 >
-> _—Benoit Theriault_
+> _—Theriault Benoit_
 
 ![ ](/docs/assets/spacer16x16.png)
 
@@ -92,7 +110,7 @@ python3 tests/test_limbic_system.py
 
 ### 2. [Cortical Column(.py)](/src/anatomy/cortical/cortical_column.py) Cascade _(Test)_
 
-Validation of the _6-layer_ signal flow (L4 → L2/3 → L5) with real-time precision monitoring.
+Validation of the _6-layer_ signal flow (L4 -> L2/3 -> L5) with real-time precision monitoring.
 
 - **The L6 Feedback Loop _([cortical_column(.py)](/src/anatomy/cortical/cortical_column.py) Layer 6)_** This is what allows the _[neocortex(.py)](/src/anatomy/cortical/neocortex.py)_ to _“say”_ to the _[thalamus(.py)](/src/anatomy/subcortical/thalamus.py)_: _“I recognized this signal, you can lower the volume (gain)”_. This is the basis of the selective attention.
 
@@ -128,6 +146,14 @@ python3 tests/test_cortical_column.py
 
 - **[Cerebellum(.py)](/src/anatomy/subcortical/cerebellum.py) _(Timing Engine & Output Calibration)_:** This unit specializes in _fine-tuning motor_ and _cognitive outputs_. In **aNA**, it ensures that the _"Thinking Shell" ([neocortex(.py)](/src/anatomy/cortical/neocortex.py))_ functions with perfect _mathematical synchronization_.
   - **Key role:** It acts as a _calibration layer_ for fluid, real-time interactions. While the _[pulse(.py)](/src/core/pulse.py)_ provides the _basic rhythm_, the _[cerebellum(.py)](/src/anatomy/subcortical/cerebellum.py)_ corrects _micro-timing errors_ to prevent _jitter_ in _data processing_ and _system response_.
+
+![ ](/docs/assets/spacer16x16.png)
+
+> ## "The human brain doesn't speak in _'tokens'_. Beyond its _plasticity_ and _low cost_, it doesn't fear _noise_. Why not take more inspiration from it?"
+>
+> _—Theriault Benoit_
+
+![ ](/docs/assets/spacer16x16.png)
 
 ### The Thinking Shell _(Processing & Memory)_
 
@@ -192,4 +218,4 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-05_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-19_

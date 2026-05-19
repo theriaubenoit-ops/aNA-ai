@@ -3,12 +3,10 @@
 """
 aNA AI Project v5.3 - Thalamic Hub Integration
 
-Description: This version marks the transition to centralized multimodal routing.
-The ThalamicHub acts as an attentional filter (gating) before cortical projection.
-The organism can now ignore weak stimuli or slow down its processing
-depending on its metabolic state (ATP/BPM).
+Description: This version marks the transition to centralized multimodal routing. The ThalamicHub acts as an attentional filter (gating) before cortical projection.The organism can now ignore weak stimuli or slow down its processing depending on its metabolic state (ATP/BPM).
 
-Architecture and neuroinformatics: Benoit Theriault
+Architecture, concept and supervision: Theriault_Benoit
+Collaboration, research and code: DeepMind_Gemini
 """
 import asyncio
 import os

@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Cortical Lobe Base Implementation for aNA AI Project v5.3
+Cortical Lobe Base (Hierarchical Data Modules), Implementation for aNA AI Project v5.4
 
-Communicates with: Input: (<- Thalamus IV) | Input/Output: (<-> Hippocampus) | Output: (-> Thalamus VI Feedback)
+Communicates with: 
+Input: (<- Thalamus: IV)
+Input/Output: (<-> Hippocampus: Pattern Completion/Recall)
+Output: (-> Thalamus: VI Feedback)
 
-This module implements the 6-layer cortical architecture for all brain lobes.
-Each lobe processes signals through the biological layers: L4 → L2/3 → L5.
+Description: This module implements the 6-layer cortical architecture for all brain lobes.
+Each lobe processes signals through the biological layers: L4 -> L2/3 -> L5.
 
 Key Features:
 - 6-layer cortical organization (L1, L2/3, L4, L5, L6)
@@ -15,8 +18,8 @@ Key Features:
 - Memory access port in L2/3 for future hippocampus integration
 - Real-time precision monitoring for dashboard display
 
-Architecture, concept and supervision: Benoit Theriault
-Collaboration, research and code: Gemini, Cline
+Architecture, concept and supervision: Theriault_Benoit
+Collaboration, research and code: DeepMind_Gemini, Cline, GPT
 """
 
 import numpy as np
@@ -424,6 +427,7 @@ class CorticalColumns(CorticalLobe):
         Traitement : Cascade L4 -> L2/3 -> L5 avec modulation chimique.
         """
         config = get_config()
+
         if neuromodulators:
             self.layer1.integrate_neuromodulators(neuromodulators)
         
@@ -447,13 +451,13 @@ class CorticalColumns(CorticalLobe):
         prediction_error = await hippo_unit.evaluate_prediction(signal_data)
         
         # Plus il y a de trauma, plus le score de reconnaissance est "marqué"
-        recognition_score = (1.0 - prediction_error) * current_efficiency
-        self.layers["L6"] = min(1.0, recognition_score)
-        
+        recognition_score = 1.0 - prediction_error
+
+        self.l6_state = min(1.0, recognition_score)
+
         return {
-            "recognition": self.layers["L6"],
-            "l6_feedback": self.layers["L6"],
-            "is_traumatized": nora > 0.6
+            "recognition": recognition_score,
+            "l6_feedback": self.l6_state
         }
 
 
@@ -519,7 +523,7 @@ class SimplifiedCorticalColumn:
         # Simulation de l'activité neuronale lors du passage du signal
         for n in self.neurons:
             # On simule un cycle d'update pour que la myéline progresse si le neurone "tire"
-            n.is_firing = True # William s'active
+            n.is_firing = True # aNA s'active
             n._update_myelination()
             n.is_firing = False
             

@@ -5,7 +5,8 @@ Projet aNA IA v5.3 - Test d'Autonomie du Hub
 
 Description: Valider le flux complet ThalamicHub -> Neocortex (V1) -> Feedback L6 -> Modulation du Pulse (BPM) dans un scénario autonome. Ce test simule une séquence d'entrée visuelle, observe comment le ThalamicHub traite et filtre cette entrée, comment elle est projetée vers le Neocortex (V1), et comment le feedback de L6 influence le rythme cardiaque via le Pulse. L'objectif est de s'assurer que les interactions entre ces composants fonctionnent de manière cohérente et autonome, sans intervention externe.
 
-Architecture et neuroinformatique : Thériault Benoit
+Architecture, conception et supervision : Thériault_Benoit
+Collaboration, recherche et code : DeepMind_Gemini
 """
 
 import unittest

@@ -5,7 +5,8 @@ aNA AI Project v5.3 - Test Limbic system
 
 Description: This test suite is designed to validate the core functionalities of the limbic system modules (Amygdala and Hippocampus) in complete isolation. It simulates various scenarios to verify that the amygdala responds appropriately to different stimulus intensities, and that the hippocampus can encode, consolidate, and retrieve patterns correctly. The tests also check the interaction between these two structures in terms of emotional memory processing.
 
-Architecture and neuroinformatics: Theriault Benoit
+Architecture, concept and supervision: Theriault_Benoit
+Collaboration, research and code: DeepMind_Gemini
 """
 import unittest
 import numpy as np
@@ -19,7 +20,6 @@ if ROOT_DIR not in sys.path:
 
 from unittest.mock import AsyncMock, MagicMock
 from unittest import IsolatedAsyncioTestCase
-from asrc.natomy.limbic.limbic_system import LimbicSystem
 from src.anatomy.limbic.limbic_system import LimbicSystem
 
 def create_ascii_header():

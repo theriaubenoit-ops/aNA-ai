@@ -1,14 +1,17 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Neuromodulator implementation for aNA AI Project v5.3
+Neuromodulator (Global State Tags), implementation for aNA AI Project v5.4
 
-Communicates with: Input: (<- Amygdala) | Output: (-> Neuron Receptors) (-> Thalamic Gain)
+Communicates with: 
+Input: (<- Amygdala)
+Output: (-> Neuron Receptors) 
+Output: (-> Thalamic Gain)
 
 Description: This module implements the Neuromodulator as a centralized system for managing neuromodulatory influences across the brain. It replaces the legacy spatial diffusion model with a more biologically plausible chemical matrix that modulates the activity of the Thalamus and Cortex based on inputs from the Limbic System (notably the Amygdala). The Neuromodulator tracks key neurotransmitters (dopamine, acetylcholine, serotonin, norepinephrine, cortisol) and applies homeostatic decay to simulate natural recapture processes.
 
-Architecture, concept and supervision: Benoit Theriault
-Collaboration, research and code: Gemini
+Architecture, concept and supervision: Theriault_Benoit
+Collaboration, research and code: DeepMind_Gemini
 """
 
 import os
@@ -45,22 +48,32 @@ class Neuromodulator:
             "cortisol": 0.99       
         }
 
-    def inject_chemicals(self, source_name: str, chemical_data: Dict[str, float]):
+    def inject_chemicals(self, source_name: str, chemical_data: Dict[str, float], **kwargs):
         """
         Entrée universelle pour l'Amygdale, le Striatum et le Cortex (v5.3.2).
+        Injection résiliente : accepte n'importe quelle donnée, ne traite que ce qu'elle reconnaît. (v5.4)
         """
         # 1. Norepinephrine (Alerte / Amygdale)
         if "norepinephrine" in chemical_data:
-            self.state.norepinephrine = max(self.state.norepinephrine, chemical_data["norepinephrine"])
-            
+            # On peut aussi absorber l'adrénaline ici si elle arrive de l'amygdale
+            val = chemical_data.get("norepinephrine", 0.0) + chemical_data.get("adrenaline", 0.0)
+            self.state.norepinephrine = max(self.state.norepinephrine, min(1.0, val))
+                
         # 2. Dopamine (Récompense / Striatum ou Amygdale)
         if "dopamine" in chemical_data:
             # On peut imaginer une sommation pour la dopamine (cumul de succès)
-            self.state.dopamine = min(1.0, self.state.dopamine + chemical_data["dopamine"])
+            self.state.dopamine = min(1.0, self.state.dopamine + chemical_data.get("dopamine", 0.0))
 
         # 3. Acetylcholine (Attention / Cortex ou Thalamus)
         if "acetylcholine" in chemical_data:
-            self.state.acetylcholine = min(1.0, self.state.acetylcholine + chemical_data["acetylcholine"])
+            self.state.acetylcholine = min(1.0, self.state.acetylcholine + chemical_data.get("acetylcholine", 0.0))
+
+        # 4. Cortisol (Stress chronique / Fatigue)
+        if "cortisol" in chemical_data:
+            self.state.cortisol = max(self.state.cortisol, chemical_data.get("cortisol", 0.0))
+
+        # kwargs permet d'ignorer tout le reste (le "bruit") sans erreur
+        pass
 
     def apply_homeostasis(self):
         """Simule la recapture (Cycle du Pulse)"""
