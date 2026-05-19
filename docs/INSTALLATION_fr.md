@@ -20,8 +20,7 @@ English instructions: [installation (en)](/docs/INSTALLATION.md)
 
 ![ ](/docs/assets/spacer16x16.png)
 
-> [!NOTE]
-> _Pour assurer une configuration optimale de l'architecture neuronale de **aNA-IA**, cette section vous aide à configurer son environnement en fonction de votre système. Ceci est votre guide d'installation multiplateforme. Veuillez lire les principes communs et de base ensuite sélectionner le guide correspondant à votre système d'exploitation._
+_Pour assurer une configuration optimale de l'architecture neuronale de **aNA-IA**, cette section vous aide à configurer son environnement en fonction de votre système. Ceci est votre guide d'installation multiplateforme. Veuillez lire les principes communs et de base ensuite sélectionner le guide correspondant à votre système d'exploitation._
 
 ![ ](/docs/assets/spacer16x16.png)
 
