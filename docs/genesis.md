@@ -20,6 +20,11 @@
 
 ![ ](/docs/assets/spacer16x16.png)
 
+> [!NOTE]
+> _Trace the origin, evolutionary trajectory and philosophical foundations of the **aNA** project. From the initial impulse on the simple neuronal side to the current implementation of much more complete bio-inspired structures (such as the processing of invariants or homeostatic regulation), from a statistical imitation to a true local cognitive architecture, anchored in the rigor of neuroscience._
+
+![ ](/docs/assets/spacer16x16.png)
+
 ### Traces of thought
 
 The **aNA** AI project was born from a simple intuition: _artificial intelligence_ should not be a mere matter of a simple question of control and probabilities, but a matter of logical organization and a guided structure.
