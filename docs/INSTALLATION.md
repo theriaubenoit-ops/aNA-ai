@@ -20,7 +20,7 @@ Instructions française : [installation (fr)](/docs/INSTALLATION_fr.md)
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_This is your multi-platform installation Guide. To ensure optimal configuration of **aNA IA**'s neural architecture, this section helps you to configure its environment according to your system. Please read the common and basic then select the guide corresponding to your operating system._
+_This is your multi-platform installation Guide. To ensure optimal configuration of **aNA** AI's neural architecture, this section helps you to configure its environment according to your system. Please read the common and basic then select the guide corresponding to your operating system._
 
 ![ ](/docs/assets/spacer16x16.png)
 
