@@ -32,7 +32,11 @@ _Thank you for being part of this journey to bring **aNA** to life!_
 
 ![ ](/docs/assets/spacer32x32.png)
 
-## v5.4: Tests Validation _(Scientific Accuracy) — In progress_
+## v5.4.1: Tests Validation _(To Do) — In progress_
+
+![ ](/docs/assets/spacer16x16.png)
+
+### v5.4: Tests Validation _(Scientific Accuracy)_
 
 **☄️ Thalamo-Metabolic Suture**
 Introduction of _SURVIVAL_DRIVE_: Sensory filtering _(RTN)_ is now inversely proportional to energy requirements _([test_thalamus(.py)](/tests/test_thalamus.py))_.
@@ -248,4 +252,4 @@ The strength of the **aNA** architecture lies in its departure from traditional 
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-05_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-20_
