@@ -218,4 +218,4 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-19_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-20_
