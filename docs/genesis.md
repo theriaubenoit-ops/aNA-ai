@@ -49,7 +49,7 @@ Conceived in the crucible of initial exchanges with language models _(GPT)_, _v1
 
 ### The turning point _(Collaboration v3-v5 Python)_
 
-The introduction of structured collaboration with AI agents _(Gemini and Cline)_ marked a radical shift. We abandoned statistical imitation to delve into the intricacies of neurobiology. Each class, each variable, each cortical layer was conceived as a faithful transposition of the principles of living organisms.
+The introduction of structured collaboration with AI agents _DeepMind (Gemini) and Cline (KatCoderPro)_ marked a radical shift. We abandoned statistical imitation to delve into the intricacies of neurobiology. Each class, each variable, each cortical layer was conceived as a faithful transposition of the principles of living organisms.
 
 ### Current state
 
