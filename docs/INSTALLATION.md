@@ -20,7 +20,7 @@ Instructions française : [installation (fr)](/docs/INSTALLATION_fr.md)
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_To ensure optimal configuration of **aNA IA**'s neural architecture, this section helps you to configure its environment according to your system. This is your multi-platform installation Guide. Please read the common and basic then select the guide corresponding to your operating system._
+_This is your multi-platform installation Guide. To ensure optimal configuration of **aNA IA**'s neural architecture, this section helps you to configure its environment according to your system. Please read the common and basic then select the guide corresponding to your operating system._
 
 ![ ](/docs/assets/spacer16x16.png)
 
@@ -140,4 +140,4 @@ Once installed, you can verify the _"heartbeat"_ of the project by running a bas
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-19_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-20_
