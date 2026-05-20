@@ -32,7 +32,7 @@ _Join the **aNA** computational neuroscience community: Be sure to clone/downloa
 
 ## Development Workflow & Contribution Guidelines
 
-Welcome to the _**aNA-ai**_ repository. As this bio-inspired movement grows, we are structuring our development cycle to best mimic biological evolution: balancing the absolute stability of the organism with the necessary plasticity of innovation.
+Ready to do more with _**aNA-ai**_ repository? As this bio-inspired movement grows, we are structuring our development cycle to best mimic biological evolution: balancing the absolute stability of the organism with the necessary plasticity of innovation.
 
 To maintain scientific accuracy and high architectural integrity, we implement a strict two-branch ecosystem and an incremental release cycle. Our development workflow is bio-adapted from **Trunk-Based Development _(TBD)_**.
 
@@ -214,4 +214,4 @@ The **aNA** AI project is _a leap toward the future of organic computation_. Ali
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-17_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-20_
