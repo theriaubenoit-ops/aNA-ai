@@ -20,7 +20,7 @@ English instructions: [installation (en)](/docs/INSTALLATION.md)
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_Pour assurer une configuration optimale de l'architecture neuronale de **aNA-IA**, cette section vous aide à configurer son environnement en fonction de votre système. Ceci est votre guide d'installation multiplateforme. Veuillez lire les principes communs et de base ensuite sélectionner le guide correspondant à votre système d'exploitation._
+_Ceci est votre guide d'installation multiplateforme. Pour assurer une configuration optimale de l'architecture neuronale de **aNA-IA**, cette section vous aide à configurer son environnement en fonction de votre système. Veuillez lire les principes communs et de base ensuite sélectionner le guide correspondant à votre système d'exploitation._
 
 ![ ](/docs/assets/spacer16x16.png)
 
@@ -140,4 +140,4 @@ Une fois installé, vous pouvez vérifier le _« pouls »_ du projet en exécuta
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-04_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-20_
