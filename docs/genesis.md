@@ -20,7 +20,7 @@
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_This section traces the origin, evolutionary trajectory, and philosophical foundations of the aNA project. From the initial impulse of simple neural concepts to the current implementation of advanced bio-inspired structures (such as pattern invariance and homeostatic regulation), it documents the shift from statistical imitation to a true local cognitive architecture anchored in the rigor of neuroscience._
+_This section traces the origin, evolutionary trajectory, and philosophical foundations of the **aNA** AI Project. From the initial impulse of simple neural concepts to the current implementation of advanced bio-inspired structures (such as pattern invariance and homeostatic regulation), it documents the shift from statistical imitation to a true local cognitive architecture anchored in the rigor of neuroscience._
 
 ![ ](/docs/assets/spacer16x16.png)
 
@@ -69,7 +69,7 @@ _This project is an exploration at the threshold of cortical memory. We are not 
 
 ### Natural Language Acquisition & Pattern Invariance
 
-Beyond multilingual support, aNA implements a biological approach to symbolic recognition. Rather than treating characters as isolated data points, the system processes them as invariant pairs.
+Beyond multilingual support, **aNA** implements a biological approach to symbolic recognition. Rather than treating characters as isolated data points, the system processes them as invariant pairs.
 
 **From "Aa" to "Zz":** Neural synchronization of case-invariant structures.
 Biological Paradigm: In the human brain, the Visual Word Form Area (VWFA) learns to recognize letters regardless of their case or font. By presenting "Aa" as a single stimulus, we simulate this perceptual constancy.
@@ -92,7 +92,7 @@ def apply_serotonin_stabilization(neural_network, matrix):
         print("⚖️ Serotonin active: Homeostatic balance maintained.")
 ```
 
-###### _This module regulates the network's "gain" and sensitivity. It is the chemical thermostat that allows aNA to remain stable and focused, regardless of the intensity of the information flow._
+###### _This module regulates the network's "gain" and sensitivity. It is the chemical thermostat that allows **aNA** to remain stable and focused, regardless of the intensity of the information flow._
 
 ![ ](/docs/assets/spacer64x64.png)
 
@@ -112,4 +112,4 @@ Between behavioral _psychology, ethical engineering, philosophy_, and _neuroinfo
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-19_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-20_
