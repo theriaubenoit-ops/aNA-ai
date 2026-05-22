@@ -189,7 +189,7 @@ As we move toward **v5.4**, the _[thalamic_hub(.py)](/src/anatomy/subcortical/th
 
 ![ ](/docs/assets/spacer64x64.png)
 
-# ✴️*aNA* AI v5.0 and beyond
+# ✴️*aNA AI* v5.0 and beyond
 
 The strength of the **aNA** architecture lies in its departure from traditional static _AI_ models. By implementing bio-inspired mechanisms, we have achieved a system that prioritizes survival and relevance over raw data volume.
 
