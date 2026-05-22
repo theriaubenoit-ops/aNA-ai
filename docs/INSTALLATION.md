@@ -2,7 +2,7 @@
 
 Instructions française : [installation (fr)](/docs/INSTALLATION_fr.md)
 
-# Installation: ✴️*aNA* AI Project
+# Installation: ✴️*aNA AI* Project
 
 ```
 ░              ░ ░░░▒▒▓▒▓▒▒▒▒▒░░▒▒░▒▒▒▓▒▓▒                                                                     ░ ░
