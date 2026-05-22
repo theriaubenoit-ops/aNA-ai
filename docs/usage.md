@@ -66,7 +66,7 @@ _Dans l'esprit de décomposer chaque complexité en ses parties les plus simples
 
 ![ ](/docs/assets/spacer16x16.png)
 
-### 🔴 Cognitive Core & Memory
+### 🔴 Cognitive Core & Memory / _Noyau cognitif et mémoire_
 
 - [ ] ☄️ Synaptic Consolidation & Pattern Encoding / _Consolidation synaptique et encodage des schémas_:
 
@@ -98,7 +98,7 @@ _Dans l'esprit de décomposer chaque complexité en ses parties les plus simples
 
 ![ ](/docs/assets/spacer16x16.png)
 
-### 🟠 Metabolic & Rhythmic Foundation
+### 🟠 Metabolic & Rhythmic Foundation / _Fondation métabolique et rythmique_
 
 - [ ] ☄️🖱️ Neural Oscillations & Temporal Sync / _Oscillations neuronales et synchronisation temporelle_:
 
@@ -130,7 +130,7 @@ _Dans l'esprit de décomposer chaque complexité en ses parties les plus simples
 
 ![ ](/docs/assets/spacer16x16.png)
 
-### 🟡 Sensory Control & Action Gating
+### 🟡 Sensory Control & Action Gating / _Contrôle sensoriel et filtrage de l'action_
 
 - [ ] ☄️ Sensory Gating & Signal Routing / _Filtrage sensoriel et routage des signaux_:
 
@@ -183,7 +183,7 @@ _Dans l'esprit de décomposer chaque complexité en ses parties les plus simples
 
 ![ ](/docs/assets/spacer16x16.png)
 
-### 🟢 Emotional & Trauma Logic
+### 🟢 Emotional & Trauma Logic / _Logique émotionnelle et traumatique_
 
 - [ ] Amygdala Alert Response / _Réponse d'alerte de l'amygdale_:
 
@@ -208,7 +208,7 @@ _Dans l'esprit de décomposer chaque complexité en ses parties les plus simples
 
 ![ ](/docs/assets/spacer16x16.png)
 
-### 🔵 Motor Control & Calibration
+### 🔵 Motor Control & Calibration / _Commande et étalonnage des moteurs_
 
 - [ ] Motor Precision & Error Correction / _Précision motrice et correction des erreurs_:
 
@@ -253,4 +253,4 @@ _Dans l'esprit de décomposer chaque complexité en ses parties les plus simples
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-19_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-22_
