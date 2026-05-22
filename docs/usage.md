@@ -229,7 +229,7 @@ _Dans l'esprit de décomposer chaque complexité en ses parties les plus simples
 
 - [ ] To Do - Launch _Web-based interfaces_ (e.g., "http://localhost:8000/examples/basic-demo.html").
 
-  **Note**: To run web demos on local server, use ```python3 -m http.server 8000` from the root directory.
+  **Note**: To run web demos on local server, use `python3 -m http.server 8000` from the root directory.
 
 ![ ](/docs/assets/spacer16x16.png)
 
