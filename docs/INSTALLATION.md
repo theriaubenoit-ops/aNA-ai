@@ -128,7 +128,7 @@ Installing on _Linux_ often requires updating system packages first.
 Once installed, you can verify the _"heartbeat"_ of the project by running a basic neuron test from your terminal:
 `python3 tests/test_neuron.py`
 
-### ⚒️ Troubleshooting (FAQ)
+### ⚒️ Troubleshooting _(FAQ)_
 
 - **"Command not found"**: Make sure Python is installed. On Windows, restart your terminal after installation.
 - **"Permission denied"**: On _Mac_ and _Linux_, add `sudo` before your command if you are not in a virtual environment.
@@ -140,4 +140,4 @@ Once installed, you can verify the _"heartbeat"_ of the project by running a bas
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-20_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-21_
