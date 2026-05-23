@@ -55,7 +55,7 @@ We focus on short-lived iterations, frequent micro-releases, and continuous inte
 
 ![ ](/docs/assets/spacer16x16.png)
 
-## Evolutionary Versioning (x.y.z)
+## Evolutionary Versioning _(x.y.z)_
 
 Instead of sudden, massive evolutionary leaps (e.g., jumping directly from `v5.4` to `v5.5`), **aNA** evolves through frequent, incremental micro-mutations:
 
