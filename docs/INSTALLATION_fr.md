@@ -128,7 +128,7 @@ L'installation sur _Linux_ nécessite souvent de mettre à jour les paquets syst
 Une fois installé, vous pouvez vérifier le _« pouls »_ du projet en exécutant un test neuronal de base depuis votre terminal :
 `python3 tests/test_neuron.py`
 
-### ⚒️ Dépannage (FAQ)
+### ⚒️ Dépannage _(FAQ)_
 
 - **"Command not found"** : Assurez-vous que Python est bien installé. Sur Windows, redémarrez votre terminal après l'installation.
 - **"Permission denied"** : Sur _Mac_ et _Linux_, ajoutez `sudo` devant votre commande si vous n'êtes pas dans un environnement virtuel.
@@ -140,4 +140,4 @@ Une fois installé, vous pouvez vérifier le _« pouls »_ du projet en exécuta
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-20_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-21_
