@@ -225,7 +225,7 @@ _Dans l'esprit de décomposer chaque complexité en ses parties les plus simples
 
 ![ ](/docs/assets/spacer16x16.png)
 
-## Demonstrations
+## Demonstrations / _Démonstrations_
 
 - [ ] To Do - Launch _Web-based interfaces_ (e.g., "http://localhost:8000/examples/basic-demo.html").
 
