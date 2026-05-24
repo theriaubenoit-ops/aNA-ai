@@ -42,7 +42,7 @@ Voici les commandes universelles que vous utiliserez pour naviguer :
 
 ![ ](/docs/assets/spacer32x32.png)
 
-## Consultez votre système d'exploitation
+## Consultez votre _Système Opérateur_
 
 ![ ](/docs/assets/spacer16x16.png)
 
@@ -140,4 +140,4 @@ Une fois installé, vous pouvez vérifier le _« pouls »_ du projet en exécuta
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-21_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-24_
