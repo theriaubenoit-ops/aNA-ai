@@ -42,7 +42,7 @@ Here are the universal commands you will use to navigate:
 
 ![ ](/docs/assets/spacer32x32.png)
 
-## Choose your OS
+## Choose your _Operating System_
 
 ![ ](/docs/assets/spacer16x16.png)
 
@@ -140,4 +140,4 @@ Once installed, you can verify the _"heartbeat"_ of the project by running a bas
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-21_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-24_
