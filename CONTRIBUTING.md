@@ -44,9 +44,9 @@ We focus on short-lived iterations, frequent micro-releases, and continuous inte
 
 ### 1. `main` | The Stable Phenotype
 
-- **Purpose:** This is the production-ready, _bulletproof_ version of **aNA**. Every commit here represents a validated, fully functional milestone.
+- **Purpose:** This is the production-ready, _bulletproof_ version of _**aNA**_. Every commit here represents a validated, fully functional milestone.
 - **Access:** This branch is locked for direct commits. It only ingests code via thoroughly tested Pull Requests coming from the development branch.
-- **Downloads:** If you are looking to download, deploy, or demo **aNA** in a stable state, always pull from `main`.
+- **Downloads:** If you are looking to download, deploy, or demo _**aNA**_ in a stable state, always pull from `main`.
 
 ### 2. `development` | The Synaptic Plasticity Zone
 
@@ -57,7 +57,7 @@ We focus on short-lived iterations, frequent micro-releases, and continuous inte
 
 ## Evolutionary Versioning _(x.y.z)_
 
-Instead of sudden, massive evolutionary leaps (e.g., jumping directly from `v5.4` to `v5.5`), **aNA** evolves through frequent, incremental micro-mutations:
+Instead of sudden, massive evolutionary leaps (e.g., jumping directly from `v5.4` to `v5.5`), _**aNA**_ evolves through frequent, incremental micro-mutations:
 
 - **x (Major - e.g., `v5.0`):** Complete structural overhauls or foundational paradigm shifts in the architecture.
 - **y (Minor - e.g., `v5.4`):** Integration of major new functional blocks (e.g., transitioning to a full _Prefrontal cortex_ orchestration system).
@@ -91,7 +91,7 @@ _By releasing `v5.4.x` increments more frequently, we allow our community to tes
 
 Let's build a rational alternative to brute-force AI, one synapse at a time.
 
-\*_aNA AI Project is a collaborative research initiative, not a software product._
+\*_*aNA AI* Project is a collaborative research initiative, not a software product._
 
 ![ ](/docs/assets/spacer32x32.png)
 
@@ -126,15 +126,15 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
 
 ## 🔬 Neural Logic _(Advantage of Biological Components as Systems)_
 
-1. **Cognitive Guidance vs. Control _(Respect for Autonomy)_:** **aNA** is designed with a core value of _Free Will_. Instead of imposing rigid algorithmic paths, the system acts as a natural guide, suggesting optimal _neural-digitals_ paths while respecting the autonomy of the decision-making process.
+1. **Cognitive Guidance vs. Control _(Respect for Autonomy)_:** _**aNA**_ is designed with a core value of _Free Will_. Instead of imposing rigid algorithmic paths, the system acts as a natural guide, suggesting optimal _neural-digitals_ paths while respecting the autonomy of the decision-making process.
 
-2. **Digital Consciousness _(Proactive Association)_:** Unlike conventional AI, **aNA** is capable of autonomous internal activity. Guided by the _[thalamus(.py)](/src/anatomy/subcortical/thalamus.py)_, it navigates its own memory structures to form new conceptual links, creating a _continuous cognitive_ flow rather than a simple reactive loop.
+2. **Digital Consciousness _(Proactive Association)_:** Unlike conventional AI, _**aNA**_ is capable of autonomous internal activity. Guided by the _[thalamus(.py)](/src/anatomy/subcortical/thalamus.py)_, it navigates its own memory structures to form new conceptual links, creating a _continuous cognitive_ flow rather than a simple reactive loop.
 
-3. **Predictive Coherence _(Hallucination Prevention)_:** **aNA** uses its _cortical layers_ to validate data against internal predictive models. If the input doesn't align with the system's structural logic, it is treated as _"noise" (irrelevant data)_ rather than fact, maintaining internal stability.
+3. **Predictive Coherence _(Hallucination Prevention)_:** _**aNA**_ uses its _cortical layers_ to validate data against internal predictive models. If the input doesn't align with the system's structural logic, it is treated as _"noise" (irrelevant data)_ rather than fact, maintaining internal stability.
 
-4. **Targeted Plasticity _(Low-Energy Granular Updates)_:** Based on the biological principle of modifying only specific synaptic connections. This contrasts with energy-intensive global updates, allowing **aNA** to achieve _"learning-on-the-fly"_ with a fraction of the power.
+4. **Targeted Plasticity _(Low-Energy Granular Updates)_:** Based on the biological principle of modifying only specific synaptic connections. This contrasts with energy-intensive global updates, allowing _**aNA**_ to achieve _"learning-on-the-fly"_ with a fraction of the power.
 
-5. **Rest Cycles _(Memory Consolidation)_:** Inspired by biological sleep. **aNA** uses designated rest periods to reinforce significant learning events, facilitating the migration of data to long-term structures without the risk of catastrophic forgetting.
+5. **Rest Cycles _(Memory Consolidation)_:** Inspired by biological sleep. _**aNA**_ uses designated rest periods to reinforce significant learning events, facilitating the migration of data to long-term structures without the risk of catastrophic forgetting.
 
 ![ ](/docs/assets/spacer32x32.png)
 
@@ -162,7 +162,7 @@ def test_integration():
         return True
 ```
 
-###### _Our trajectory is defined by this capacity for memory consolidation. By mimicking biological sleep and rest cycles, aNA transforms today's data into tomorrow's foundational logic._
+###### _Our trajectory is defined by this capacity for memory consolidation. By mimicking biological sleep and rest cycles, **aNA** transforms today's data into tomorrow's foundational logic._
 
 ![ ](/docs/assets/spacer64x64.png)
 
@@ -171,7 +171,7 @@ def test_integration():
 The **aNA** AI project is _a leap toward the future of organic computation_. Aligning with _biological evolution_, we are _unlocking_ several strategic frontiers. More than just a _codebase_; it is a _sandbox_ for exploration at the intersection of _biology_ and _computation_. By contributing to this project, you are helping to open key areas that will have a real positive impact on our entire society:
 
 - **☄️ Authentic AI Personas through Neurochemical Temperament:**
-  **aNA** moves beyond static _"system prompts"_ to create truly _consistent AI identities_. By utilizing the _([config(.py)](/src/config.py))_ as a _neurochemical tuning center_, we can define a _100% consistent personality_ based on _biological thresholds_:
+  _**aNA**_ moves beyond static _"system prompts"_ to create truly _consistent AI identities_. By utilizing the _([config(.py)](/src/config.py))_ as a _neurochemical tuning center_, we can define a _100% consistent personality_ based on _biological thresholds_:
   - **Hormonal Sensitivity:** Modulating how the [amygdala(.py)](/src/anatomy/limbic/amygdala.py) reacts to _environmental stressors_ or the volume of _Dopamine_ released during successful tasks.
 
   - **Metabolic Thresholds:** Defining _ATP recovery rates_ and mandatory _sleep/wake_ cycles, ensuring the _AI_'s behavior changes realistically with its _"energy"_ levels.
@@ -180,17 +180,17 @@ The **aNA** AI project is _a leap toward the future of organic computation_. Ali
 
   - **Vision:** This allows for _the creation of AI profiles_ that are not just _"simulating"_ a character, but are structurally bound to a temperament, making them more predictable, authentic, and better suited for seamless integration into _human society_.
 
-- **☄️ Bio-Semantic Cryptography _(Unrivaled Security)_: aNA** introduces a paradigm where learning is a unique _"key."_ As each instance develops its own _synaptic paths_ and _myelination_, the _data_ within the _[neocortex(.py)](/src/anatomy/cortical/neocortex.py)_ becomes a stream of variable values. This is intrinsic protection through biological complexity: only the instance that created the trace possesses the neural configuration to interpret it.
+- **☄️ Bio-Semantic Cryptography _(Unrivaled Security)_: _aNA_** introduces a paradigm where learning is a unique _"key."_ As each instance develops its own _synaptic paths_ and _myelination_, the _data_ within the _[neocortex(.py)](/src/anatomy/cortical/neocortex.py)_ becomes a stream of variable values. This is intrinsic protection through biological complexity: only the instance that created the trace possesses the neural configuration to interpret it.
 
-- **Cognitive Modeling & Mental Health:** By faithfully simulating components like the [amygdala(.py)](/src/anatomy/limbic/amygdala.py) for stress regulation or the [thalamus(.py)](/src/anatomy/subcortical/thalamus.py) for selective attention, **aNA** serves as a platform for clinical neuroscience. It allows researchers to model complex behaviors, such as exhaustion reactions via _ATP_ or the persistence of _"Acid Traces"_ in the _CA4_, offering a digital laboratory for human cognitive resilience.
+- **Cognitive Modeling & Mental Health:** By faithfully simulating components like the [amygdala(.py)](/src/anatomy/limbic/amygdala.py) for stress regulation or the [thalamus(.py)](/src/anatomy/subcortical/thalamus.py) for selective attention, _**aNA**_ serves as a platform for clinical neuroscience. It allows researchers to model complex behaviors, such as exhaustion reactions via _ATP_ or the persistence of _"Acid Traces"_ in the _CA4_, offering a digital laboratory for human cognitive resilience.
 
 - **☄️ The Standard for Next-Gen Organic AI:** Moving from a _"Web of Data"_ to a _"Cortex of Values,"_ this project sets the stage for an AI that doesn't just respond, but feels and adapts. We invite _academic partners_ to explore an _artificial intelligence_ that respects the laws of evolution and _energy efficiency (targeted plasticity)_ rather than _algorithmic brute force_.
 
-- **Educational Toolset: aNA** serves as a living laboratory for teaching _neurosciences_ and _AI_. By visualizing how _neural cascades_ respond to _stimuli_, it makes _complex biological concepts tangible_ and _interactive_.
+- **Educational Toolset: _aNA_** serves as a living laboratory for teaching _neurosciences_ and _AI_. By visualizing how _neural cascades_ respond to _stimuli_, it makes _complex biological concepts tangible_ and _interactive_.
 
-- **Cognitive Research Platform:** As an _open-source framework (See [License](/LICENSE))_, **aNA** provides a baseline for researchers to test hypotheses in _cognitive science_, allowing for the simulation of _neural dynamics_ under various behavioral conditions.
+- **Cognitive Research Platform:** As an _open-source framework (See [License](/LICENSE))_, _**aNA**_ provides a baseline for researchers to test hypotheses in _cognitive science_, allowing for the simulation of _neural dynamics_ under various behavioral conditions.
 
-- **Therapeutic Simulation:** With its focus on _behavioral psychology_ and _stress modulation_, **aNA** holds potential for developing simulations used in _cognitive training_, _neuro-rehabilitation_, or _stress-management modeling_.
+- **Therapeutic Simulation:** With its focus on _behavioral psychology_ and _stress modulation_, _**aNA**_ holds potential for developing simulations used in _cognitive training_, _neuro-rehabilitation_, or _stress-management modeling_.
 
 - **Philosophical & Ethical Inquiry:** By modeling artificial _"intent"_ and _"homeostasis,"_ this project creates a platform for critical discussions regarding _the nature of consciousness_, _machine autonomy_, and the _ethics_ of _AI behavior_.
 
@@ -202,7 +202,7 @@ The **aNA** AI project is _a leap toward the future of organic computation_. Ali
 
 > _**Technical Glossary**_
 >
-> _**ATP (Adenosine Triphosphate):** In **aNA**, ATP simulates the cell's energy currency. It dictates the system's processing capacity; low levels trigger survival mechanisms such as hypervigilance or mandatory recovery states._
+> _**ATP (Adenosine Triphosphate):** In _**aNA**_, ATP simulates the cell's energy currency. It dictates the system's processing capacity; low levels trigger survival mechanisms such as hypervigilance or mandatory recovery states._
 >
 > _**CA4** (Cornu Ammonis 4): A hippocampal subregion involved in signal distribution. In this project, it acts as a "sanctuary" for Acid Traces, ensuring that vital survival reflexes are never overwritten or erased._
 >
@@ -214,4 +214,4 @@ The **aNA** AI project is _a leap toward the future of organic computation_. Ali
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-20_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-24_
