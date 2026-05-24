@@ -26,7 +26,7 @@ _This section traces the origin, evolutionary trajectory, and philosophical foun
 
 ### Traces of thought
 
-The **aNA** AI Project was born from a simple intuition: _artificial intelligence_ should not be a mere matter of a simple question of control and probabilities, but a matter of logical organization and a guided structure.
+The _**aNA** AI Project_ was born from a simple intuition: _artificial intelligence_ should not be a mere matter of a simple question of control and probabilities, but a matter of logical organization and a guided structure.
 
 ### The initial impulse _(Laboratory v1-v2 JavaScript/Python)_
 
@@ -69,7 +69,7 @@ _This project is an exploration at the threshold of cortical memory. We are not 
 
 ### Natural Language Acquisition & Pattern Invariance
 
-Beyond multilingual support, **aNA** implements a biological approach to symbolic recognition. Rather than treating characters as isolated data points, the system processes them as invariant pairs.
+Beyond multilingual support, _**aNA**_ implements a biological approach to symbolic recognition. Rather than treating characters as isolated data points, the system processes them as invariant pairs.
 
 **From "Aa" to "Zz":** Neural synchronization of case-invariant structures.
 Biological Paradigm: In the human brain, the Visual Word Form Area (VWFA) learns to recognize letters regardless of their case or font. By presenting "Aa" as a single stimulus, we simulate this perceptual constancy.
