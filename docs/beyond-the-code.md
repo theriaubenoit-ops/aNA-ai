@@ -2,7 +2,7 @@
 
 ![ ](/docs/assets/spacer16x16.png)
 
-# "Whatever the approach, we must find a simple way of thinking, within a concept that must remain complex."
+# _"Whatever the approach, we must find a simple way of thinking, within a concept that must remain complex."_
 
 _— Theriault Benoit_
 
@@ -16,4 +16,4 @@ It is through this _necessary rigor_, proven throughout this project, that an _u
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-16_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-24_
