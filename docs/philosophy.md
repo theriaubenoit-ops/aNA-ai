@@ -20,7 +20,7 @@
 
 ![ ](/docs/assets/spacer16x16.png)
 
-> ## "Nothing is lost, nothing is created, everything is transformed"
+> ## _"Nothing is lost, nothing is created, everything is transformed"_
 >
 > _—Antoine Lavoisier_
 
@@ -81,7 +81,7 @@ def consolidate_memory(self):
 
 ![ ](/docs/assets/spacer32x32.png)
 
-> ## "Divide each difficulty into as many parts as is feasible and necessary to resolve it."
+> ## _"Divide each difficulty into as many parts as is feasible and necessary to resolve it."_
 >
 > _—Rene Descartes_
 
@@ -142,4 +142,4 @@ His work on how adrenal hormones and the _[amygdala(.py)](/src/anatomy/limbic/am
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-04-28_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-24_
