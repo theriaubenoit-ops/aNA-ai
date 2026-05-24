@@ -102,7 +102,7 @@ _**Benoit Theriault**_ works at the intersection of _design, architecture, and s
 
 Throughout his career, _**Benoit**_ has honed a rigorous approach through close collaboration with _architects, engineers, and medical professionals_ across Quebec, Canada, and internationally. He specializes in bridging the gap between _creative vision and technical execution,_ ensuring that every _solution_ is not only functional but _architecturally sound_.
 
-This constant pursuit of form and structure is fueled by a profound fascination for _neural processes_ and creative research. An expert in programming and design systems, he presents the **aNA** AI Project as a culmination of this journey: an allegory that translates the elegance of _living mechanisms_ into the _digital world_.
+This constant pursuit of form and structure is fueled by a profound fascination for _neural processes_ and creative research. An expert in programming and design systems, he presents the _**aNA AI** Project_ as a culmination of this journey: an allegory that translates the elegance of _living mechanisms_ into the _digital world_.
 
 Between behavioral _psychology, ethical engineering, philosophy_, and _neuroinformatics_, his work offers a new interpretation of _Artificial Intelligence_: an _architecture_ cultivated with the _same intention, depth, and precision_ as the _human brain_.
 
