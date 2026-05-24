@@ -118,7 +118,7 @@ def create_sensory_thalamus(position: np.ndarray = None) -> Thalamus:
 
 ![ ](/docs/assets/spacer32x32.png)
 
-> ## "To every action there is always opposed an equal reaction."
+> ## _"To every action there is always opposed an equal reaction."_
 >
 > _—Isaac Newton_
 
