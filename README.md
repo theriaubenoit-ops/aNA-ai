@@ -50,19 +50,19 @@ The integration of _atp_reserve_ into _vital metrics_ transforms **aNA** from a 
 
 ### The quest for _AI_ reflecting life
 
-Current _artificial intelligence_, while powerful, relies on massive, rigid architectures that remain disconnected from _biological reality_. Simultaneously, the _AI community_ is increasingly concerned with the rising _carbon footprint_ and unsustainable computing costs of these models. **aNA** _(Autonomous Neural Architecture)_ AI Project breaks with these paradigms. Inspired by the organization of the _six-layered [cortical_columns(.py)](/src/anatomy/cortical/cortical_column.py)_, _synaptic plasticity_, and the precise management of the _[thalamus(.py)](/src/anatomy/subcortical/thalamus.py)_, _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_, _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_, _[cerebellum(.py)](/src/anatomy/subcortical/cerebellum.py)_, _[limbic system(.py)](/src/anatomy/limbic/limbic_system.py)_, and _five key [neuromodulators(.py)](/src/anatomy/base/neuromodulator.py) (dopamine, adrenaline, nitric oxide, acetylcholine, and serotonin)_. This project aims to create not a mere computational simulation, but an organic resonance. Far from being a static data repository, **aNA** AI is a dynamic system that learns, forgets, adjusts, and focuses—much like our own minds.
+Current _artificial intelligence_, while powerful, relies on massive, rigid architectures that remain disconnected from _biological reality_. Simultaneously, the _AI community_ is increasingly concerned with the rising _carbon footprint_ and unsustainable computing costs of these models. _**aNA**_ _(Autonomous Neural Architecture)_ AI Project breaks with these paradigms. Inspired by the organization of the _six-layered [cortical_columns(.py)](/src/anatomy/cortical/cortical_column.py)_, _synaptic plasticity_, and the precise management of the _[thalamus(.py)](/src/anatomy/subcortical/thalamus.py)_, _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_, _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_, _[cerebellum(.py)](/src/anatomy/subcortical/cerebellum.py)_, _[limbic system(.py)](/src/anatomy/limbic/limbic_system.py)_, and _five key [neuromodulators(.py)](/src/anatomy/base/neuromodulator.py) (dopamine, adrenaline, nitric oxide, acetylcholine, and serotonin)_. This project aims to create not a mere computational simulation, but an organic resonance. Far from being a static data repository, **aNA** AI is a dynamic system that learns, forgets, adjusts, and focuses—much like our own minds.
 
 ### Hardware Agnostic & Resource Efficient
 
-The **aNA** _(v5 and beyond) architecture_ is built on the principle of _biological sobriety_. While _modern AI_ scales through _brute force_ and _energy-intensive_ infrastructure, **aNA** prioritizes _structural elegance_ and _synaptic efficiency_.
+The _**aNA**_ _(v5 and beyond) architecture_ is built on the principle of _biological sobriety_. While _modern AI_ scales through _brute force_ and _energy-intensive_ infrastructure, **aNA** prioritizes _structural elegance_ and _synaptic efficiency_.
 
 - **Featherweight _(< 1 MB)_:** The entire neural organism—including the _[thalamic hub(.py)](/src/anatomy/subcortical/thalamic_hub.py)_, _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_, and _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_ is smaller than a single _high-resolution_ photo.
-- **Minimal Memory Footprint:** No need for clusters or _64GB of RAM_. **aNA** is designed to run natively on modest hardware, from _Kubuntu LTS_ and _MacBook M1_ to _standard everyday laptops_.
+- **Minimal Memory Footprint:** No need for clusters or _64GB of RAM_. _**aNA**_ is designed to run natively on modest hardware, from _Kubuntu LTS_ and _MacBook M1_ to _standard everyday laptops_.
 - **Ultra-Low Latency:** By optimizing the code to reside within the _CPU_ cache, the simulation achieves synaptic response times as low as _~0.0790s_.
 
 ![ ](/docs/assets/spacer16x16.png)
 
-> ## "_Intelligence_ does not reside in the quantity of _transistors mobilized_, but in the _accuracy_ of the _information flow_."
+> ## _"Intelligence does not reside in the quantity of transistors mobilized, but in the accuracy of the information flow."_
 >
 > _—Theriault Benoit_
 
@@ -72,11 +72,11 @@ The **aNA** _(v5 and beyond) architecture_ is built on the principle of _biologi
 
 - **Asynchronous Orchestration:** The _[pulse(.py)](/src/core/pulse.py)_ module acts as the system's _biological pacemaker_, regulating non-blocking cycles according to the organism's homeostatic state.
 - **Thalamic Filtering:** _Sensory inputs_ are gated and processed through specific _nuclei_ to isolate relevant signals from stochastic background _"noise"_.
-- **Adaptive Fidelity:** **aNA** dynamically simulates information fidelity based on _dopamine levels_, modulating the quality of internal representations in real-time.
+- **Adaptive Fidelity:** _**aNA**_ dynamically simulates information fidelity based on _dopamine levels_, modulating the quality of internal representations in real-time.
 
 ### The imperative of energy sobriety
 
-We are at a tipping point. The frantic race toward ever-larger and more energy-intensive models is placing an unsustainable burden on our environment. The **aNA** AI project proposes a radical alternative: efficiency through targeted plasticity. By mimicking the economical functioning of the human brain—which achieves cognitive feats with a mere **_20 watts_** —we are developing algorithms that activate only the _[neurons(.py)](/src/anatomy/base/neuron.py)_ necessary to process specific information. Learn less to understand better; filter more to compute less. This is the path forward toward a sustainable, responsible AI.
+We are at a tipping point. The frantic race toward ever-larger and more energy-intensive models is placing an unsustainable burden on our environment. The _**aNA**_ AI project proposes a radical alternative: efficiency through targeted plasticity. By mimicking the economical functioning of the human brain—which achieves cognitive feats with a mere **_20 watts_** —we are developing algorithms that activate only the _[neurons(.py)](/src/anatomy/base/neuron.py)_ necessary to process specific information. Learn less to understand better; filter more to compute less. This is the path forward toward a sustainable, responsible AI.
 
 ### Towards the next generation of intelligence
 
@@ -92,7 +92,7 @@ We are embarking on the _"next wave"_ of artificial intelligence—an AI that do
 
 ## Running the Biological Simulations _(Demos)_
 
-To witness **aNA** v5.0's neural processing in real-time, you can run the integrated _[tests(/)](/tests/)_ suites. These simulations demonstrate how sensory data is transformed into emotional importance and cortical action.
+To witness _**aNA AI**_ v5.0's neural processing in real-time, you can run the integrated _[tests(/)](/tests/)_ suites. These simulations demonstrate how sensory data is transformed into emotional importance and cortical action.
 
 ### 1. Limbic Resonance _(Test)_
 
@@ -126,7 +126,7 @@ python3 tests/test_cortical_column.py
 ### The Core Engine _(Metabolism & Rhythm)_
 
 - **[Pulse(.py)](/src/core/pulse.py) _(The Biological Clock & Heartbeat)_:**
-  The metabolic engine of **aNA**. It generates the system's _"Heartbeat" (BPM)_, governing the timing of every _synaptic cycle_. More than a simple timer, it manages the _ATP (Energy)_ levels and _System Strain_. It dictates the _"vitality"_ of the organism: a _high BPM_ increases processing speed but consumes _energy_ faster, forcing the system to adapt its behavior to avoid exhaustion.
+  The metabolic engine of _**aNA**_. It generates the system's _"Heartbeat" (BPM)_, governing the timing of every _synaptic cycle_. More than a simple timer, it manages the _ATP (Energy)_ levels and _System Strain_. It dictates the _"vitality"_ of the organism: a _high BPM_ increases processing speed but consumes _energy_ faster, forcing the system to adapt its behavior to avoid exhaustion.
 
 ### Sensory Input Gateways _(Data Acquisition)_
 
@@ -149,7 +149,7 @@ python3 tests/test_cortical_column.py
 
 ![ ](/docs/assets/spacer16x16.png)
 
-> ## "The human brain doesn't speak in _'tokens'_. Beyond its _plasticity_ and _low cost_, it doesn't fear _noise_. Why not take more inspiration from it?"
+> ## _"The human brain doesn't speak in _'tokens'_. Beyond its _plasticity_ and _low cost_, it doesn't fear _noise_. Why not take more inspiration from it?"_
 >
 > _—Theriault Benoit_
 
@@ -162,23 +162,23 @@ python3 tests/test_cortical_column.py
 
   - **Lobe, [Occipital(.py)](/src/anatomy/cortical/occipital.py) _(Visual Stream Processor)_:** Dedicated to the decoding of visual information. It functions as a specialized GPU-like buffer within the architecture, transforming raw sensory "pixels" into structured spatial patterns before they are analyzed by association layers.
 
-  - **Lobe, [Parietal(.py)](/src/anatomy/cortical/parietal.py) _(Spatial Mapping & Data Integration)_:** Manages the integration of sensory information from various parts of the system. It acts as a multi-modal coordinate system, allowing **aNA** to understand the _"where"_ and _"how"_ of data points in a unified 3D-like internal workspace.
+  - **Lobe, [Parietal(.py)](/src/anatomy/cortical/parietal.py) _(Spatial Mapping & Data Integration)_:** Manages the integration of sensory information from various parts of the system. It acts as a multi-modal coordinate system, allowing _**aNA**_ to understand the _"where"_ and _"how"_ of data points in a unified 3D-like internal workspace.
 
   - **Lobe, [Temporal(.py)](/src/anatomy/cortical/temporal.py) _(Semantic Storage & Pattern Recognition)_:** The hub for processing auditory signals and high-level linguistic or object recognition. In the digital model, it serves as the semantic engine that links sensory inputs to long-term _"concepts"_ stored in the memory hierarchy.
 
-  - ☄️ **[Cortical Columns(.py)](/src/anatomy/cortical/cortical_column.py) _(Hierarchical Data Modules)_:** The standard vertical organization of the mammalian _[neocortex(.py)](/src/anatomy/cortical/neocortex.py)_. In **aNA**, these _6 cortical layers_ define the functional hierarchy: _Layer IV (input)_, _Layers II/III (association/prediction)_, and _Layer V/VI (motor output)_.
+  - ☄️ **[Cortical Columns(.py)](/src/anatomy/cortical/cortical_column.py) _(Hierarchical Data Modules)_:** The standard vertical organization of the mammalian _[neocortex(.py)](/src/anatomy/cortical/neocortex.py)_. In _**aNA**_, these _6 cortical layers_ define the functional hierarchy: _Layer IV (input)_, _Layers II/III (association/prediction)_, and _Layer V/VI (motor output)_.
     - **[Neurons(.py)](/src/anatomy/base/neuron.py) _(Atomic Processing Nodes)_:** The three functional types _(Sensory, Interneurons, Motor)_ operate as the basic logic gates of the architecture. Their Synaptic Plasticity represents a self-modifying code capability, where connection weights evolve dynamically based on the frequency and timing of data flow.
 
     - **[Neuromodulators(.py)](/src/anatomy/base/neuromodulator.py) _(Global State Tags)_:** Chemical core _"gain controls" (Dopamine, Adrenaline, Nitric Oxide, Acetylcholine, Serotonin)_ that regulate the global state of the network. They don't carry specific data but adjust how the brain processes information _(e.g., focus, reward, stress response)_.
 
-- **[Limbic System(.py)](/src/anatomy/limbic/limbic_system.py) _(Emotional Valence Engine & Memory Orchestrator)_:** The _vital bridge_ between _sensory impact_ and _long-term storage_. In **aNA**, it evaluates incoming signals via the _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ to assign an _"emotional weight"_, ensuring that critical experiences are prioritized by the _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_ for deep encoding and empathic recall.
+- **[Limbic System(.py)](/src/anatomy/limbic/limbic_system.py) _(Emotional Valence Engine & Memory Orchestrator)_:** The _vital bridge_ between _sensory impact_ and _long-term storage_. In _**aNA**_, it evaluates incoming signals via the _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ to assign an _"emotional weight"_, ensuring that critical experiences are prioritized by the _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_ for deep encoding and empathic recall.
   - ☄️ **[Hippocampus(.py)](/src/anatomy/limbic/hippocampus.py) _(Dynamic Buffer & Indexing System)_:** Functions as a high-speed memory buffer for short-term data. It manages the temporary storage of information and coordinates its eventual _"migration" (consolidation)_ into _long-term cortical databases_, preventing immediate system saturation.
 
   - **[Amygdala(.py)](/src/anatomy/limbic/amygdala.py) _(Priority Filter & Interrupt Controller)_:** Manages emotional valence and high-priority signals. It acts like an interrupt controller that can override standard processing cycles when _"critical events" (stress or high-reward stimuli)_ are detected, ensuring immediate system response.
 
 ☄️ _Spotlight_
 
-_Note: These definitions are adapted to the specific metabolic and cognitive constraints of the **aNA** v5.0 architecture and above._
+_Note: These definitions are adapted to the specific metabolic and cognitive constraints of the _**aNA AI**_ v5.0 architecture and above._
 
 ###### _\*Every measurement reflected here is a digital bridge to biological reality, designed to synthesize the fundamental principles of living systems._
 
