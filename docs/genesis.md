@@ -20,7 +20,7 @@
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_This section traces the origin, evolutionary trajectory, and philosophical foundations of the **aNA** AI Project. From the initial impulse of simple neural concepts to the current implementation of advanced bio-inspired structures (such as pattern invariance and homeostatic regulation), it documents the shift from statistical imitation to a true local cognitive architecture anchored in the rigor of neuroscience._
+_This section traces the origin, evolutionary trajectory, and philosophical foundations of the **aNA AI** Project. From the initial impulse of simple neural concepts to the current implementation of advanced bio-inspired structures (such as pattern invariance and homeostatic regulation), it documents the shift from statistical imitation to a true local cognitive architecture anchored in the rigor of neuroscience._
 
 ![ ](/docs/assets/spacer16x16.png)
 
