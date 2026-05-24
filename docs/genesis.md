@@ -96,7 +96,7 @@ def apply_serotonin_stabilization(neural_network, matrix):
 
 ![ ](/docs/assets/spacer64x64.png)
 
-# 👤 About the Author
+# 👤 About the _Author_
 
 _**Benoit Theriault**_ works at the intersection of _design, architecture, and software engineering._ With a multidisciplinary background—ranging from _large-scale architectural signage_ for major institutions to complex, _high-performance web solutions_—he delivers complete, _innovative ecosystems_ built for _scalability and precision_.
 
