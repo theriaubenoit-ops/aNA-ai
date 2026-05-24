@@ -2,7 +2,7 @@
 
 ![ ](/docs/assets/spacer16x16.png)
 
-# Genesis: The heart of the neural adventure
+# Genesis: The heart of the _neural_ adventure
 
 ```
 ░              ░ ░░░▒▒▓▒▓▒▒▒▒▒░░▒▒░▒▒▒▓▒▓▒                                                                     ░ ░
@@ -112,4 +112,4 @@ Between behavioral _psychology, ethical engineering, philosophy_, and _neuroinfo
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-20_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-24_
