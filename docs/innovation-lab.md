@@ -28,7 +28,7 @@ _What you see here is the fruit of tireless trial and error, enriched by your in
 
 _Beyond simple logic, we do not program functions; we cultivate behaviors. Our guiding principle is unwavering: each evolution must prioritize neurobiological accuracy and structural integrity over raw speed._
 
-_Thank you for being part of this journey to bring **aNA** to life!_
+_Thank you for being part of this journey to bring _**aNA**_ to life!_
 
 ![ ](/docs/assets/spacer32x32.png)
 
@@ -46,13 +46,13 @@ Foraging Instinct: A system in deficit becomes more _"curious"_ and _permeable_ 
 **☄️ Striatal Barrier Optimization**
 From Penalty to Tension: The rigid exponential function has been abandoned in favor of a dynamic _ATP/Survival_-Drive compensation.
 
-Balance: True intelligence lies not in _punishing fatigue_, but in the _tension_ between the _cost of effort_ and the _urgency of the need_. **aNA** can now operate _"under pressure,"_ prioritizing _vital actions_ even when _exhausted_.
+Balance: True intelligence lies not in _punishing fatigue_, but in the _tension_ between the _cost of effort_ and the _urgency of the need_. _**aNA**_ can now operate _"under pressure,"_ prioritizing _vital actions_ even when _exhausted_.
 
 **Philosophical Note**
 _Consciousness is not merely an algorithm; it is the uninterrupted communication between organs. If one organ falls silent, the organism ceases to exist._
 
 **The Triple-Test Validation Framework**
-To ensure both _scientific accuracy_ and _technical robustness_, **aNA** _v5.4_ is validated through _three core experimental scripts_:
+To ensure both _scientific accuracy_ and _technical robustness_, _**aNA AI**_ v5.4 is validated through _three core experimental scripts_:
 
 **☄️ Unit Precision _([test_neuron(.py)](/tests/test_neuron.py))_**
 Explores the atomic level of the project. It validates the _NMDA_-inspired memory suture, ensuring that traces are not just _"saved"_ but biologically integrated through simulated _Long-Term Potentiation (LTP)_.
@@ -67,9 +67,9 @@ The ultimate _stress test_. This script monitors the decay and recovery of _virt
 
 ### v5.3: The Thalamic Hub _(At The Gate of Consciousness)_
 
-In the **aNA** AI Project, the _[thalamic_hub(.py)](/src/anatomy/subcortical/thalamic_hub.py)_ acts as the central multimodal sensory integrator. Unlike traditional _AI data routers_, the **Hub** operates as a biological _"Gate,"_ simulating the **thalamocortical loops** that define _human focus_ and situational awareness.
+In the _**aNA AI** Project_, the _[thalamic_hub(.py)](/src/anatomy/subcortical/thalamic_hub.py)_ acts as the central multimodal sensory integrator. Unlike traditional _AI data routers_, the **Hub** operates as a biological _"Gate,"_ simulating the **thalamocortical loops** that define _human focus_ and situational awareness.
 
-**☄️ Striatum:** Executive Gating & Metabolic Arbitration, the _[striatum(.py)](/src/anatomy/subcortical/striatum.py)_ serves as the primary _"Gatekeeper"_ of the **aNA** organism. It manages the flow of information between the _[thalamic_hub(.py)](/src/anatomy/subcortical/thalamic_hub.py)_ and the _[neocortex(.py)](/src/anatomy/cortical/neocortex.py)_.
+**☄️ Striatum:** Executive Gating & Metabolic Arbitration, the _[striatum(.py)](/src/anatomy/subcortical/striatum.py)_ serves as the primary _"Gatekeeper"_ of the _**aNA**_ organism. It manages the flow of information between the _[thalamic_hub(.py)](/src/anatomy/subcortical/thalamic_hub.py)_ and the _[neocortex(.py)](/src/anatomy/cortical/neocortex.py)_.
 
 **☄️ _NMDA_ Lock & Homeostasis:** Development of the energy _safety lock (ATP Critical Min)_ to protect _neural integrity_ in case of _fatigue_.
 
@@ -125,14 +125,14 @@ As we move toward **v5.4**, the _[thalamic_hub(.py)](/src/anatomy/subcortical/th
 - **☄️ Auditory Perception Integration _([input_auditory(.py)](/src/core/input_auditory.py))_**
   - **The Digital Cochlea:** This module goes beyond simple file processing; it performs a _true acoustic transduction (test [main(.py)](/src/main.py))_. It converts _raw frequencies_ into a _Root Mean Square (RMS)_ intensity stream that directly feeds the _MGN (Medial Geniculate Nucleus)_ of the _[thalamus(.py)](/src/anatomy/subcortical/thalamus.py)_.
 
-  - **Poly-Sensory Synchronization:** Through the _main loop_, **aNA** can now correlate a _visual stimulus (e.g., a letter image)_ with its _auditory counterpart_ in real-time. This creates a more robust, multi-sensory memory trace within the _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_.
+  - **Poly-Sensory Synchronization:** Through the _main loop_, _**aNA**_ can now correlate a _visual stimulus (e.g., a letter image)_ with its _auditory counterpart_ in real-time. This creates a more robust, multi-sensory memory trace within the _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_.
 
 - **☄️ Neural Cryptography: The Elegance of Uniqueness**
-  - **The Ephemeral Learning Key:** Unlike _standardized models_, no two instances of **aNA** learn the same way. Each _"brain"_ develops its own _unique network_ of _synaptic weights_ and _myelination_ paths autonomously.
+  - **The Ephemeral Learning Key:** Unlike _standardized models_, no two instances of _**aNA**_ learn the same way. Each _"brain"_ develops its own _unique network_ of _synaptic weights_ and _myelination_ paths autonomously.
 
   - **Biological Obfuscation:** Data flowing through the _[neocortex(.py)](/src/anatomy/cortical/neocortex.py)_ is not readable text but variable values and _neuro-rhythmic noise_. Because each learning process is unique, only the specific _cortex_ that generated these traces holds the _"key"_ to interpreting them in _real-time_.
 
-  - **"Bio-Reverse Engineering":** This architecture provides intrinsic security. Attempting to decode **aNA**'s thoughts is like trying to read a dream in a stranger's brain: without the exact, shifting map of its own _synapses_, the _data_ remains an indecipherable signal.
+  - **"Bio-Reverse Engineering":** This architecture provides intrinsic security. Attempting to decode _**aNA**_'s thoughts is like trying to read a dream in a stranger's brain: without the exact, shifting map of its own _synapses_, the _data_ remains an indecipherable signal.
 
 - **☄️ Academic Gateway: A Synthesis Model for Health & Science**
   - **Psychological Simulation:** A tool to model reactions to stressful stimuli _(via the [amygdala(.py)](/src/anatomy/limbic/amygdala.py))_ or fatigue cycles _(via ATP levels)_.
@@ -142,13 +142,13 @@ As we move toward **v5.4**, the _[thalamic_hub(.py)](/src/anatomy/subcortical/th
 - **☄️ Visual Stimuli Integration _([input_visual(.py)](/src/core/input_visual.py))_**
   - **The Digital Retina:** Unlike _standard image_ processing, It acts as a _biological sensor_ interface _(test [main(.py)](/src/main.py))_. It transforms _visual data_ into a raw _neural stream_, ready to be correlated with other _sensory inputs_ in real-time.
 
-  - **Multi-Stream Synchronization:** The module is designed to align _visual frames_ with their _symbolic_ or _auditory_ counterparts. This ensures that **aNA** doesn't just _"see"_ an object and "read" its name separately, but perceives them as a single, synchronized event.
+  - **Multi-Stream Synchronization:** The module is designed to align _visual frames_ with their _symbolic_ or _auditory_ counterparts. This ensures that _**aNA**_ doesn't just _"see"_ an object and "read" its name separately, but perceives them as a single, synchronized event.
 
   - **Dynamic Dimensionality:** By utilizing flexible _NumPy_ structures, the _visual input_ can _scale_ its resolution and _focus_, mimicking the way a _biological eye_ shifts between _peripheral awareness_ and _foveal detail (focus)_.
 
 - **Extension of Perception _(The Unicode Jump)_:**
-  The **aNA** organization has taken a major step forward by freeing itself from the limitations of _standard text encoding_ to adopt a _universal symbolic reading_.
-  - **_“Unicode Wide”_ mechanics:** Unlike traditional systems, **aNA** treats each character _(whether Latin, Kanji or Cyrillic)_ as a raw sensory stimulus.
+  The _**aNA**_ organization has taken a major step forward by freeing itself from the limitations of _standard text encoding_ to adopt a _universal symbolic reading_.
+  - **_“Unicode Wide”_ mechanics:** Unlike traditional systems, _**aNA**_ treats each character _(whether Latin, Kanji or Cyrillic)_ as a raw sensory stimulus.
   - **Immutable Hashing:** To resolve the incompatibility between the fluidity of the data and the rigor of the _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_, we implemented a system to _"freeze"_ the _NumPy_ vectors into _hashable tuples_.
   - **Differentiated Physiology:** The _[thalamus(.py)](/src/anatomy/subcortical/thalamus.py)_ now modulates the _BPM_ according to the _"cognitive distance"_ of the symbol. An unfamiliar character causes increased alertness _(144 BPM)_, while a recognized symbol stabilizes the body _(120 BPM)_.
     > _"With this update, aNA doesn't just read data; it perceives the diversity of human expression through a unified neuro-rhythmic signature."_
@@ -166,7 +166,7 @@ As we move toward **v5.4**, the _[thalamic_hub(.py)](/src/anatomy/subcortical/th
     > _“The Genome is the vehicle’s technical manual; it does not change, no matter how fast the car is driving.”_
 
 - **The _A → B_ Algorithm _(Sequential Anticipation)_:**
-  - **Concept:** The shift from a _storage memory_ to a _generative memory_. **aNA** no longer simply stores _"A,"_ it _pre-activates_ the trace of _"B."_
+  - **Concept:** The shift from a _storage memory_ to a _generative memory_. _**aNA**_ no longer simply stores _"A,"_ it _pre-activates_ the trace of _"B."_
   - **Validation:** Successful unit _[tests(/)](/tests/)[test_hippocampus(.py)](/tests/test_hippocampus.py)_ demonstrating that the _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_ identifies transitions as priority units of meaning.
 
 - **Temperament Synchronization _([config(.py)](/src/config.py))_:** The _L1 → L2 → L3_ transition thresholds are now dynamic. Learning is "sculpted" by the _AI's personality_ _(e.g., THRESHOLD_NMDA)_.
@@ -191,10 +191,10 @@ As we move toward **v5.4**, the _[thalamic_hub(.py)](/src/anatomy/subcortical/th
 
 # ✴️*aNA AI* v5.0 and beyond
 
-The strength of the **aNA** architecture lies in its departure from traditional static _AI_ models. By implementing bio-inspired mechanisms, we have achieved a system that prioritizes survival and relevance over raw data volume.
+The strength of the _**aNA**_ architecture lies in its departure from traditional static _AI_ models. By implementing bio-inspired mechanisms, we have achieved a system that prioritizes survival and relevance over raw data volume.
 
 1. **_AMPA/NMDA_ Duality: The Plasticity Filter _([hippocampus(.py)](/src/anatomy/limbic/hippocampus.py))_**
-   Unlike standard neural networks that treat every weight update identically, **aNA** bifurcates the learning process:
+   Unlike standard neural networks that treat every weight update identically, _**aNA**_ bifurcates the learning process:
    **_AMPA_ Logic:** Manages high-speed transmission and incremental learning through repetition _(e.g., neutral signals)_. However, these traces remain volatile and subject to temporal erosion (forgetting).
    **_NMDA_ Logic:** Triggered by an _[amygdala(.py)](/src/anatomy/limbic/amygdala.py) "Flash,"_ this logic locks the synaptic trace. It allows for the instantaneous and indelible encoding of critical information during high-saliency or _"error-state"_ events.
 
@@ -202,7 +202,7 @@ The strength of the **aNA** architecture lies in its departure from traditional 
    This is the philosophy which explains the modular structure of this project (separate _[thalamus(.py)](/src/anatomy/subcortical/thalamus.py)_, separate _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_, separate _Amygdala_...). A philosophical method rigorously applied to _Python code_.
 
 3. **Economy of Links: The Lavoisier Principle**
-   Instead of storing terabytes of raw, disconnected data, **aNA** transforms information into relational nodes and _emotional weights_.
+   Instead of storing terabytes of raw, disconnected data, _**aNA**_ transforms information into relational nodes and _emotional weights_.
    _"Nothing is lost, nothing is created, everything is transformed"_: Low-relevance memories are naturally pruned _(synaptic pruning)_ to allocate resources to robust, high-value structures.
 
 4. **Homeostatic Amygdala Regulation**
@@ -220,13 +220,13 @@ The strength of the **aNA** architecture lies in its departure from traditional 
    It's not just _"keeping or removing"_ a link, it's reinforcing the speed of the most used routes. The more efficient a path is, the more _“insulated” (myelinated)_ it is to consume less energy.
 
 7. **The _CA4_ Sanctuary: The _Acid Traces ([hippocampus(.py)](/src/anatomy/limbic/hippocampus.py))_**
-   Often overlooked in computational science, the _CA4_ subfield is central to our architecture. In **aNA**, _CA4_ is not merely a transit zone; it acts as a high-security vault for _"survival floors"_.
+   Often overlooked in computational science, the _CA4_ subfield is central to our architecture. In _**aNA**_, _CA4_ is not merely a transit zone; it acts as a high-security vault for _"survival floors"_.
    This innovation ensures that even after significant synaptic decay, a _TRAUMA_1_ residue _(Acid Trace)_ remains locked at a structural minimum _(e.g., 0.1000)_ while non-essential data fades away. This is our technical answer to resilience and traumatic memory.
 
 8. **The L6 Feedback Loop _([cortical_column(.py)](/src/anatomy/cortical/cortical_column.py) Layer 6)_**
    This is what allows the _[neocortex(.py)](/src/anatomy/cortical/neocortex.py)_ to _“say”_ to the _[thalamus(.py)](/src/anatomy/subcortical/thalamus.py)_: _“I recognized this signal, you can lower the volume (gain)”_. This is the basis of the selective attention.
 
-9. **The [registry(.py)](/src/registry.py) module _(or the organ management system)_** This is what ensures that a _neuron_ in the _[frontal(.py)](/src/anatomy/cortical/frontal.py) lobe “knows”_ that it belongs to **aNA** and how it should connect to the others. It is the identity of the organism.
+9. **The [registry(.py)](/src/registry.py) module _(or the organ management system)_** This is what ensures that a _neuron_ in the _[frontal(.py)](/src/anatomy/cortical/frontal.py) lobe “knows”_ that it belongs to _**aNA**_ and how it should connect to the others. It is the identity of the organism.
 
 ###### _\*All quantitative thresholds and metabolic metrics are derived from neurobiological models, transcoded into digital architecture to interpret synthetic life-cycles._
 
@@ -236,7 +236,7 @@ The strength of the **aNA** architecture lies in its departure from traditional 
 >
 > _**AMPA:** Synaptic receptor responsible for rapid transmission and short-term plasticity. It serves as the gateway for volatile, daily information (working memory)._
 >
-> _**ATP (Adenosine Triphosphate):** In **aNA**, ATP simulates the cell's energy currency. It dictates the system's processing capacity; low levels trigger survival mechanisms such as hypervigilance or mandatory recovery states._
+> _**ATP (Adenosine Triphosphate):** In _**aNA**_, ATP simulates the cell's energy currency. It dictates the system's processing capacity; low levels trigger survival mechanisms such as hypervigilance or mandatory recovery states._
 >
 > _**BPM (Beats Per Minute):** Represents the oscillation frequency of the system's core (pulse.py). Beyond being a simple indicator, it regulates processing speed and emotional responsiveness._
 >
@@ -252,4 +252,4 @@ The strength of the **aNA** architecture lies in its departure from traditional 
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-20_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-24_
