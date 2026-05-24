@@ -162,7 +162,7 @@ def test_integration():
         return True
 ```
 
-###### _Our trajectory is defined by this capacity for memory consolidation. By mimicking biological sleep and rest cycles, **aNA** transforms today's data into tomorrow's foundational logic._
+###### _Our trajectory is defined by this capacity for memory consolidation. By mimicking biological sleep and rest cycles, aNA transforms today's data into tomorrow's foundational logic._
 
 ![ ](/docs/assets/spacer64x64.png)
 
