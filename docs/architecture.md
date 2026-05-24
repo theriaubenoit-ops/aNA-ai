@@ -2,7 +2,7 @@
 
 ![ ](/docs/assets/spacer16x16.png)
 
-# Architecture of ✴️*aNA AI Project* v5
+# Architecture of ✴️*aNA AI* Project v5
 
 ```
 ░              ░ ░░░▒▒▓▒▓▒▒▒▒▒░░▒▒░▒▒▒▓▒▓▒                                                                     ░ ░
