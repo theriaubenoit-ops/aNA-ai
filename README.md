@@ -34,7 +34,7 @@ _Welcome to the **aNA-ai** repository,_
 
 _We've made incredible progress in recent months, but there's still a lot of work to be done to reach our goals._
 
-_**aNA** (Autonomous Neural Architecture) is an open-source architecture designed to break free from the tech industry's current reliance on a brute-force, unsustainable, and energy-intensive approach. It doesn't rely on statistical shortcuts or expensive token-based systems._
+_**aNA** (Autonomous Neural Architecture) **AI** is an open-source architecture designed to break free from the tech industry's current reliance on a brute-force, unsustainable, and energy-intensive approach. It doesn't rely on statistical shortcuts or expensive token-based systems._
 
 _By mimicking the organic dynamics of the human brain, this architecture enables true cognitive processing (plasticity), validates incoming streams, consolidates memory, and treats inconsistency as noise rather than information._
 
@@ -149,7 +149,7 @@ python3 tests/test_cortical_column.py
 
 ![ ](/docs/assets/spacer16x16.png)
 
-> ## _"The human brain doesn't speak in _'tokens'_. Beyond its _plasticity_ and _low cost_, it doesn't fear _noise_. Why not take more inspiration from it?"_
+> ## _"The human brain doesn't speak in _'tokens'_. Beyond its \_plasticity_ and _low cost_, it doesn't fear _noise_. Why not take more inspiration from it?"\_
 >
 > _—Theriault Benoit_
 
