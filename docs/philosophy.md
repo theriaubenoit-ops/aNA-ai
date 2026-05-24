@@ -26,25 +26,25 @@
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_The **aNA** (Autonomous Neural Architecture) AI project rejects the paradigm of "raw power" in favor of the elegance and economy observed in biological structures. We are not building a static database; we are fostering a dynamic cognitive process._
+_The **aNA** (Autonomous Neural Architecture) **AI** project rejects the paradigm of "raw power" in favor of the elegance and economy observed in biological structures. We are not building a static database; we are fostering a dynamic cognitive process._
 
 - ☄️ **Hierarchical information reconstruction:**
-  Unlike architectures that rely on massive data storage, **aNA** AI favors a hierarchical processing approach. Information is not _"stored"_ in a static sense; it is reconstructed in real-time, ensuring that each processed bit is validated against established internal models.
+  Unlike architectures that rely on massive data storage, _**aNA AI**_ favors a hierarchical processing approach. Information is not _"stored"_ in a static sense; it is reconstructed in real-time, ensuring that each processed bit is validated against established internal models.
 
 - ☄️ **Synaptic link economy:**
   Robustness is derived from the density and quality of relational links, not model size. We transform information into relational nodes, making the system economically viable and avoiding the redundancy inherent in conventional _"large-scale"_ models.
 
 - ☄️ **Latency & plasticity management:**
-  **aNA** maintains a fine-grained latency state. By keeping response paths dynamic rather than hard-coded, we preserve cognitive flexibility, drastically reducing the need for destructive relearning and allowing for continuous, low-compute evolution.
+  _**aNA**_ maintains a fine-grained latency state. By keeping response paths dynamic rather than hard-coded, we preserve cognitive flexibility, drastically reducing the need for destructive relearning and allowing for continuous, low-compute evolution.
 
 - **Resource efficiency through relational storage:**
-  _Biological brains_ do not store raw volumes; they store relationships. **aNA** mimics this by prioritizing relational structures over volume. This targeted approach allows the system to remain lean, sustainable, and capable of long-term scaling without environmental burden.
+  _Biological brains_ do not store raw volumes; they store relationships. _**aNA**_ mimics this by prioritizing relational structures over volume. This targeted approach allows the system to remain lean, sustainable, and capable of long-term scaling without environmental burden.
 
 - ☄️ **Digital homeostasis _(Background activity)_:**
-  **aNA** operates under the principle of constant internal maintenance. It is never truly _"inactive"_; it maintains a state of digital homeostasis, background-consolidating memories and optimizing connections to remain ready for interaction.
+  _**aNA**_ operates under the principle of constant internal maintenance. It is never truly _"inactive"_; it maintains a state of digital homeostasis, background-consolidating memories and optimizing connections to remain ready for interaction.
 
 - **Open collaboration:**
-  **aNA** is an open-research initiative. We believe that diverse perspectives are essential to understanding and refining this architecture. We invite contribution not as mere labor, but as a collective engagement in the accuracy of this cognitive simulation.
+  _**aNA**_ is an open-research initiative. We believe that diverse perspectives are essential to understanding and refining this architecture. We invite contribution not as mere labor, but as a collective engagement in the accuracy of this cognitive simulation.
 
 - ☄️ **Natural Erasure & Transformation:**
   Based on _Lavoisier’s principle_, information that loses relevance is naturally _"pruned"_ or transformed, preventing the accumulation of _digital noise_.
@@ -55,7 +55,7 @@ _The **aNA** (Autonomous Neural Architecture) AI project rejects the paradigm of
   **NMDA Logic:** High-saliency events, verified by the _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_, trigger _NMDA-gated plasticity_. This process bypasses standard pruning to create permanent _"Acid Traces"_ in the _CA4_ subfield, ensuring that critical survival data remains retrievable despite systemic _"noise"_.
 
 - ☄️ **Emotional Saliency & Acid Traces _(CA4 Protection)_**
-  **aNA** does not treat all information equally. Through a synchronized dialogue between the _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ and the _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_, the system identifies high-impact _emotional events_. While standard data undergoes natural decay (pruning), trauma-related signals trigger a _"Flash NMDA"_ encoding, creating an Acid Trace. This trace is locked into a structural floor within the _CA4_ subfield, ensuring that survival-critical information survives even after long-term synaptic decay.
+  _**aNA**_ does not treat all information equally. Through a synchronized dialogue between the _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ and the _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_, the system identifies high-impact _emotional events_. While standard data undergoes natural decay (pruning), trauma-related signals trigger a _"Flash NMDA"_ encoding, creating an Acid Trace. This trace is locked into a structural floor within the _CA4_ subfield, ensuring that survival-critical information survives even after long-term synaptic decay.
 
 ☄️ _Spotlight_
 
@@ -77,7 +77,7 @@ def consolidate_memory(self):
         print("☑️ Pattern reinforced: Transformation complete.")
 ```
 
-###### _In alignment with Lavoisier, every bit of data in aNA is a resource that evolves and strengthens the system’s function._
+###### _In alignment with Lavoisier, every bit of data in **aNA** is a resource that evolves and strengthens the system’s function._
 
 ![ ](/docs/assets/spacer32x32.png)
 
@@ -92,7 +92,7 @@ def consolidate_memory(self):
 _Thank you for paving the way for future discoveries and innovations in this fascinating field. Your [contributions](/CONTRIBUTING.md) to neuroscience and artificial intelligence are invaluable. Some of your works have inspired me; they allow me to better understand and design more efficient bio-inspired neural networks._
 
 **Associative Robustness** _—[John Hopfield](https://en.wikipedia.org/wiki/John_Hopfield)_:
-We use his principles of recurrent networks to ensure that **aNA** can reconstruct complete ideas from partial or _noisy sensory inputs_.
+We use his principles of recurrent networks to ensure that _**aNA**_ can reconstruct complete ideas from partial or _noisy sensory inputs_.
 
 **Discrete Architecture** _—[Santiago Ramon y Cajal](https://en.wikipedia.org/wiki/Santiago_Ram%C3%B3n_y_Cajal)_:
 His _"Neuron Doctrine"_ is the _DNA_ of our modular approach. We treat each processing node as an independent, discrete entity rather than a monolithic block.
@@ -110,7 +110,7 @@ His focus on low-power hardware-software synergy drives our _Targeted Plasticity
 We implement his _"Free Energy Principle"_ by using cortical layers to validate inputs, ensuring the system minimizes _"noise"_ and internal surprise.
 
 **Rest Cycles** _—[Gyorgy Buzsaki](https://en.wikipedia.org/wiki/Gy%C3%B6rgy_Buzs%C3%A1ki)_:
-His research on _neural oscillations_ justifies our background consolidation phases, where **aNA** stabilizes learning during _"quiet"_ periods.
+His research on _neural oscillations_ justifies our background consolidation phases, where _**aNA**_ stabilizes learning during _"quiet"_ periods.
 
 **Saliency Filtering** _—[Horace Barlow](https://en.wikipedia.org/wiki/Horace_Barlow)_:
 His work on redundancy reduction is implemented in our _[thalamus(.py)](/src/anatomy/subcortical/thalamus.py)_, which acts as a gateway, passing only meaningful _"packets"_ to the _cortex_.
