@@ -32,7 +32,7 @@ _Si l'[installation](/docs/INSTALLATION_fr.md) est complétée, vous pouvez main
 
 Think of this script as the brainstem of the project. This is where _**aNA**_'s architecture comes to _life_, where the various neurological components are instantiated, and where the _main_ execution loop begins. For any contributor, it is the perfect starting point to observe how information flows through the structure. Feel free to explore this file, inject new stimuli, or modify initialization parameters to see how the overall organism responds.
 
-_Considérez ce script comme le tronc cérébral du projet. C'est ici que l'architecture d'_**aNA**_ prend vie, que les différentes composantes neurologiques sont instanciées et que la boucle d'exécution principale s'amorce. Pour tout contributeur, c'est le point de départ idéal pour observer comment le flux d'information voyage à travers la structure. N'hésitez pas à explorer ce fichier, à y injecter de nouveaux stimuli ou à modifier les paramètres d'initialisation pour voir comment l'organisme global réagit._
+_Considérez ce script comme le tronc cérébral du projet. C'est ici que l'architecture d'**aNA** prend vie, que les différentes composantes neurologiques sont instanciées et que la boucle d'exécution principale s'amorce. Pour tout contributeur, c'est le point de départ idéal pour observer comment le flux d'information voyage à travers la structure. N'hésitez pas à explorer ce fichier, à y injecter de nouveaux stimuli ou à modifier les paramètres d'initialisation pour voir comment l'organisme global réagit._
 
 - [ ] ☄️ In progress - Global Workspace / _Espace de travail global_:
 
