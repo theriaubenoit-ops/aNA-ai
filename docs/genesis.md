@@ -71,8 +71,8 @@ _This project is an exploration at the threshold of cortical memory. We are not 
 
 Beyond multilingual support, _**aNA**_ implements a biological approach to symbolic recognition. Rather than treating characters as isolated data points, the system processes them as invariant pairs.
 
-**From "Aa" to "Zz":** Neural synchronization of case-invariant structures.
-Biological Paradigm: In the human brain, the Visual Word Form Area (VWFA) learns to recognize letters regardless of their case or font. By presenting "Aa" as a single stimulus, we simulate this perceptual constancy.
+**From _"Aa"_ to _"Zz"_:** Neural synchronization of case-invariant structures.
+Biological Paradigm: In the human brain, the Visual Word Form Area _(VWFA)_ learns to recognize letters regardless of their case or font. By presenting _"Aa"_ as a single stimulus, we simulate this perceptual constancy.
 
 **Haptic Association:** Each pair is linked to a unique signature in _[media_haptic(/)](/tests/media_haptic/)_. This allows the _[cerebellum(.py)](/src/anatomy/subcortical/cerebellum.py)_ to calibrate the timing of recognition for both uppercase and lowercase simultaneously.
 
