@@ -28,7 +28,7 @@ _What you see here is the fruit of tireless trial and error, enriched by your in
 
 _Beyond simple logic, we do not program functions; we cultivate behaviors. Our guiding principle is unwavering: each evolution must prioritize neurobiological accuracy and structural integrity over raw speed._
 
-_Thank you for being part of this journey to bring _**aNA**_ to life!_
+_Thank you for being part of this journey to bring _**aNA AI**_ to life!_
 
 ![ ](/docs/assets/spacer32x32.png)
 
@@ -125,7 +125,7 @@ As we move toward **v5.4**, the _[thalamic_hub(.py)](/src/anatomy/subcortical/th
 - **☄️ Auditory Perception Integration _([input_auditory(.py)](/src/core/input_auditory.py))_**
   - **The Digital Cochlea:** This module goes beyond simple file processing; it performs a _true acoustic transduction (test [main(.py)](/src/main.py))_. It converts _raw frequencies_ into a _Root Mean Square (RMS)_ intensity stream that directly feeds the _MGN (Medial Geniculate Nucleus)_ of the _[thalamus(.py)](/src/anatomy/subcortical/thalamus.py)_.
 
-  - **Poly-Sensory Synchronization:** Through the _main loop_, _**aNA AI**_ can now correlate a _visual stimulus (e.g., a letter image)_ with its _auditory counterpart_ in real-time. This creates a more robust, multi-sensory memory trace within the _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_.
+  - **Poly-Sensory Synchronization:** Through the _main loop_, _**aNA**_ can now correlate a _visual stimulus (e.g., a letter image)_ with its _auditory counterpart_ in real-time. This creates a more robust, multi-sensory memory trace within the _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_.
 
 - **☄️ Neural Cryptography: The Elegance of Uniqueness**
   - **The Ephemeral Learning Key:** Unlike _standardized models_, no two instances of _**aNA**_ learn the same way. Each _"brain"_ develops its own _unique network_ of _synaptic weights_ and _myelination_ paths autonomously.
@@ -189,7 +189,7 @@ As we move toward **v5.4**, the _[thalamic_hub(.py)](/src/anatomy/subcortical/th
 
 ![ ](/docs/assets/spacer64x64.png)
 
-# ✴️*aNA AI* v5.0 and beyond
+# ✴️*aNA AI* v5 and beyond
 
 The strength of the _**aNA**_ architecture lies in its departure from traditional static _AI_ models. By implementing bio-inspired mechanisms, we have achieved a system that prioritizes survival and relevance over raw data volume.
 
