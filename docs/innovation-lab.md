@@ -125,7 +125,7 @@ As we move toward **v5.4**, the _[thalamic_hub(.py)](/src/anatomy/subcortical/th
 - **☄️ Auditory Perception Integration _([input_auditory(.py)](/src/core/input_auditory.py))_**
   - **The Digital Cochlea:** This module goes beyond simple file processing; it performs a _true acoustic transduction (test [main(.py)](/src/main.py))_. It converts _raw frequencies_ into a _Root Mean Square (RMS)_ intensity stream that directly feeds the _MGN (Medial Geniculate Nucleus)_ of the _[thalamus(.py)](/src/anatomy/subcortical/thalamus.py)_.
 
-  - **Poly-Sensory Synchronization:** Through the _main loop_, _**aNA**_ can now correlate a _visual stimulus (e.g., a letter image)_ with its _auditory counterpart_ in real-time. This creates a more robust, multi-sensory memory trace within the _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_.
+  - **Poly-Sensory Synchronization:** Through the _main loop_, _**aNA AI**_ can now correlate a _visual stimulus (e.g., a letter image)_ with its _auditory counterpart_ in real-time. This creates a more robust, multi-sensory memory trace within the _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_.
 
 - **☄️ Neural Cryptography: The Elegance of Uniqueness**
   - **The Ephemeral Learning Key:** Unlike _standardized models_, no two instances of _**aNA**_ learn the same way. Each _"brain"_ develops its own _unique network_ of _synaptic weights_ and _myelination_ paths autonomously.
@@ -151,7 +151,7 @@ As we move toward **v5.4**, the _[thalamic_hub(.py)](/src/anatomy/subcortical/th
   - **_“Unicode Wide”_ mechanics:** Unlike traditional systems, _**aNA**_ treats each character _(whether Latin, Kanji or Cyrillic)_ as a raw sensory stimulus.
   - **Immutable Hashing:** To resolve the incompatibility between the fluidity of the data and the rigor of the _[hippocampus(.py)](/src/anatomy/limbic/hippocampus.py)_, we implemented a system to _"freeze"_ the _NumPy_ vectors into _hashable tuples_.
   - **Differentiated Physiology:** The _[thalamus(.py)](/src/anatomy/subcortical/thalamus.py)_ now modulates the _BPM_ according to the _"cognitive distance"_ of the symbol. An unfamiliar character causes increased alertness _(144 BPM)_, while a recognized symbol stabilizes the body _(120 BPM)_.
-    > _"With this update, aNA doesn't just read data; it perceives the diversity of human expression through a unified neuro-rhythmic signature."_
+    > _"With this update, **aNA** doesn't just read data; it perceives the diversity of human expression through a unified neuro-rhythmic signature."_
 
 - **☄️ The _Temperament (The Soul in the Machine: [config(.py)](/src/config.py))_:** Adjustable, _neurochemical 'tuning'_ of the _individual_. For the first time, a _100%_ consistent _AI persona_.
   - **Hormonal Sensitivity:** How strongly the _[amygdala(.py)](/src/anatomy/limbic/amygdala.py)_ reacts to a threat or how much _Dopamine_ is released.
