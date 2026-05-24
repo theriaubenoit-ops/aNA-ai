@@ -30,9 +30,9 @@ _Si l'[installation](/docs/INSTALLATION_fr.md) est complétée, vous pouvez main
 
 ## The Main (Awakening the Organism) / _Le principal (L'entrée en matière)_
 
-Think of this script as the brainstem of the project. This is where **aNA**'s architecture comes to _life_, where the various neurological components are instantiated, and where the _main_ execution loop begins. For any contributor, it is the perfect starting point to observe how information flows through the structure. Feel free to explore this file, inject new stimuli, or modify initialization parameters to see how the overall organism responds.
+Think of this script as the brainstem of the project. This is where _**aNA**_'s architecture comes to _life_, where the various neurological components are instantiated, and where the _main_ execution loop begins. For any contributor, it is the perfect starting point to observe how information flows through the structure. Feel free to explore this file, inject new stimuli, or modify initialization parameters to see how the overall organism responds.
 
-_Considérez ce script comme le tronc cérébral du projet. C'est ici que l'architecture d'**aNA** prend vie, que les différentes composantes neurologiques sont instanciées et que la boucle d'exécution principale s'amorce. Pour tout contributeur, c'est le point de départ idéal pour observer comment le flux d'information voyage à travers la structure. N'hésitez pas à explorer ce fichier, à y injecter de nouveaux stimuli ou à modifier les paramètres d'initialisation pour voir comment l'organisme global réagit._
+_Considérez ce script comme le tronc cérébral du projet. C'est ici que l'architecture d'_**aNA**_ prend vie, que les différentes composantes neurologiques sont instanciées et que la boucle d'exécution principale s'amorce. Pour tout contributeur, c'est le point de départ idéal pour observer comment le flux d'information voyage à travers la structure. N'hésitez pas à explorer ce fichier, à y injecter de nouveaux stimuli ou à modifier les paramètres d'initialisation pour voir comment l'organisme global réagit._
 
 - [ ] ☄️ In progress - Global Workspace / _Espace de travail global_:
 
@@ -45,9 +45,9 @@ _Considérez ce script comme le tronc cérébral du projet. C'est ici que l'arch
 
 ## The Dashboard (The Observation Deck) / _Le Tableau de bord (La visualisation)_
 
-Because a complex system requires a clear perspective, this _dashboard_ is your real-time observation interface. It allows you to visualize synaptic activity, limbic system fluctuations, and the AI's metabolic health. Explore this script to understand how raw data is translated into readable signals. We encourage you to play with the code to change perspectives, add your own metrics, or rethink the display: this is your tactical _dashboard_ for watching **aNA** _"think"_.
+Because a complex system requires a clear perspective, this _dashboard_ is your real-time observation interface. It allows you to visualize synaptic activity, limbic system fluctuations, and the AI's metabolic health. Explore this script to understand how raw data is translated into readable signals. We encourage you to play with the code to change perspectives, add your own metrics, or rethink the display: this is your tactical _dashboard_ for watching _**aNA**_ _"think"_.
 
-_Parce qu'un système complexe nécessite une perspective claire, ce tableau de bord est votre interface d'observation en temps réel. Il permet de visualiser l'activité synaptique, les fluctuations du système limbique et la santé métabolique de l'IA. Explorez ce script pour comprendre comment les données brutes sont traduites en signaux lisibles. Nous vous encourageons à jouer avec le code pour changer de point de vue, ajouter vos propres métriques ou repenser l'affichage : c'est votre tableau de bord tactique pour regarder **aNA** "penser"._
+_Parce qu'un système complexe nécessite une perspective claire, ce tableau de bord est votre interface d'observation en temps réel. Il permet de visualiser l'activité synaptique, les fluctuations du système limbique et la santé métabolique de l'IA. Explorez ce script pour comprendre comment les données brutes sont traduites en signaux lisibles. Nous vous encourageons à jouer avec le code pour changer de point de vue, ajouter vos propres métriques ou repenser l'affichage : c'est votre tableau de bord tactique pour regarder _**aNA**_ "penser"._
 
 - [ ] ☄️🖱️ To Do - Dashboard / _Tableau de bord_:
 
@@ -253,4 +253,4 @@ _Dans l'esprit de décomposer chaque complexité en ses parties les plus simples
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-22_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-24_
