@@ -26,7 +26,7 @@ _This section traces the origin, evolutionary trajectory, and philosophical foun
 
 ### Traces of thought
 
-The _**aNA** AI Project_ was born from a simple intuition: _artificial intelligence_ should not be a mere matter of a simple question of control and probabilities, but a matter of logical organization and a guided structure.
+The _**aNA AI** Project_ was born from a simple intuition: _artificial intelligence_ should not be a mere matter of a simple question of control and probabilities, but a matter of logical organization and a guided structure.
 
 ### The initial impulse _(Laboratory v1-v2 JavaScript/Python)_
 
