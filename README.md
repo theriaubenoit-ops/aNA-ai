@@ -149,7 +149,7 @@ python3 tests/test_cortical_column.py
 
 ![ ](/docs/assets/spacer16x16.png)
 
-> ## _"The human brain doesn't speak in _'tokens'_. Beyond its \_plasticity_ and _low cost_, it doesn't fear _noise_. Why not take more inspiration from it?"\_
+> ## _"The human brain doesn't speak in 'tokens'. Beyond its plasticity and low cost, it doesn't fear noise. Why not take more inspiration from it?"_
 >
 > _—Theriault Benoit_
 
