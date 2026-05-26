@@ -26,7 +26,7 @@
 
 > [!NOTE]
 > _**Follow the evolution of aNA AI** and its journey._
-> _Access the "Creation Lab" here 👉 [innovation-lab(.md)](/docs/innovation-lab.md)_
+> _Access the "Creation Lab" 👉 [innovation-lab(.md)](/docs/innovation-lab.md)_
 
 ![ ](/docs/assets/spacer16x16.png)
 
