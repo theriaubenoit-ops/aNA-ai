@@ -2,7 +2,7 @@
 
 ◀️ [Back](/docs/INSTALLATION.md)/[Retour](/docs/INSTALLATION_fr.md)
 
-# $\color{#ffd402}\textsf{Usage and tests:}$ ✴️*aNA AI* Project
+# Usage and tests: ✴️*aNA AI* Project
 
 ```
 ░              ░ ░░░▒▒▓▒▓▒▒▒▒▒░░▒▒░▒▒▒▓▒▓▒                                                                     ░ ░
