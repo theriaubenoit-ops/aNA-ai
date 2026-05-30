@@ -3,7 +3,7 @@
 ![ ](/docs/assets/spacer16x16.png)
 
 
-# <span style="color:#ffd402;">Manifesto:</span> For a more organic and sustainable _AI_
+# Manifesto: For a more organic and sustainable _AI_
 
 
 ```
