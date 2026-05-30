@@ -2,7 +2,7 @@
 
 Instructions française : [installation (fr)](/docs/INSTALLATION_fr.md)
 
-# $\color{#ffd402}\textsf{Installation:}$ ✴️*aNA AI* Project
+# Installation: ✴️*aNA AI* Project
 
 ```
 ░              ░ ░░░▒▒▓▒▓▒▒▒▒▒░░▒▒░▒▒▒▓▒▓▒                                                                     ░ ░
