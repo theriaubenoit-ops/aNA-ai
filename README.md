@@ -3,7 +3,7 @@
 ![ ](/docs/assets/spacer16x16.png)
 
 
-# <span style="color:#ffd402 !important !important;">Manifesto:</span> For a more organic and sustainable _AI_
+# <p style="color:#ffd402;">Manifesto:</p> For a more organic and sustainable _AI_
 
 
 ```
