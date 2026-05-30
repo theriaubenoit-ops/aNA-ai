@@ -2,7 +2,7 @@
 
 ![ ](/docs/assets/spacer16x16.png)
 
-# <span style="color: rgba(255, 212, 2, .66);">Innovation:</span> Creation _Lab_
+# <span style="opacity: 0.5;">Innovation:</span> Creation _Lab_
 
 ```
 ░              ░ ░░░▒▒▓▒▓▒▒▒▒▒░░▒▒░▒▒▒▓▒▓▒                                                                     ░ ░
