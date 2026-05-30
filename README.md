@@ -3,7 +3,7 @@
 ![ ](/docs/assets/spacer16x16.png)
 
 
-# ![Manifesto](https://img.shields.io/badge/Manifesto-%23ffd402?style=flat-square&labelColor=black) For a more organic and sustainable _AI_
+# Manifesto: For a more organic and sustainable _AI_
 
 ```
 ░              ░ ░░░▒▒▓▒▓▒▒▒▒▒░░▒▒░▒▒▒▓▒▓▒                                                                     ░ ░
