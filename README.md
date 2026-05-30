@@ -2,7 +2,7 @@
 
 ![ ](/docs/assets/spacer16x16.png)
 
-# Manifesto: For a more organic and sustainable _AI_
+# $${\color{#fd4023}Manifesto:}$$ For a more organic and sustainable _AI_
 
 ```
 ░              ░ ░░░▒▒▓▒▓▒▒▒▒▒░░▒▒░▒▒▒▓▒▓▒                                                                     ░ ░
