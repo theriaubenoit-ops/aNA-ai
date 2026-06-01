@@ -20,9 +20,9 @@
 
 ![ ](/docs/assets/spacer16x16.png)
 
-> ## _"Nothing is lost, nothing is created, everything is transformed"_
+> ## _"Study the science of art; study the art of science. Learn how to see. Realize that everything connects to everything else."_
 >
-> _—Antoine Lavoisier_
+> _—Leonardo da Vinci_
 
 ![ ](/docs/assets/spacer16x16.png)
 
@@ -142,4 +142,4 @@ His work on how adrenal hormones and the _[amygdala(.py)](/src/anatomy/limbic/am
 
 ![ ](/docs/assets/spacer16x16.png)
 
-_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-05-24_
+_░▒▓ [BT](https://github.com/theriaubenoit-ops/) 2026-06-01_
