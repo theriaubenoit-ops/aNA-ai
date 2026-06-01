@@ -197,6 +197,6 @@ def get_config():
     return {k: v for k, v in globals().items() if k.isupper()}
 
 #
-#  “For every complex problem, there is a solution that is simple, neat, and wrong.” 
-#  « À chaque problème complexe correspond une solution simple, élégante et fausse. » 
-#                                                                   — H.L. Mencken    
+#  "Nothing is lost, nothing is created, everything is transformed."
+#      « Rien ne se perd, rien ne se crée, tout se transforme. »
+#                                               —Antoine Lavoisier
